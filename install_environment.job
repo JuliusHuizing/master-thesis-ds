@@ -12,6 +12,9 @@ module purge
 module load 2023
 module load Anaconda3/2023.07-2
 
+cd $HOME/master-thesis-ds/
+git pull
+
 cd $HOME/master-thesis-ds/repos/dreamgaussian
 
 # Remove the existing conda environment
@@ -29,8 +32,11 @@ export CUDA_HOME=/home/jhuizing/.conda/envs/dreamgaussian
 source activate dreamgaussian
 
 
+conda install cuda -c nvidia
+
 # Install CUDA 11.8 from the nvidia channel
-conda install -c nvidia cudatoolkit=11.8 -y
+# conda install -c nvidia cudatoolkit=11.8 -y
+
 
 
 # Install PyTorch with CUDA 11.8 support
