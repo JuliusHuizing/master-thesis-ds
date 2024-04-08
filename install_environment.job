@@ -21,12 +21,17 @@ conda env remove --name dreamgaussian
 # Explicitly including pip in the environment to ensure it's available for subsequent installations
 conda create --name dreamgaussian python=3.9 pip -y
 
+export CUDA_HOME=/home/jhuizing/.conda/envs/dreamgaussian
+
+
 # Activate the conda environment
 # Note: Using source activate as conda activate is not available on Snellius
 source activate dreamgaussian
 
+
 # Install CUDA 11.8 from the nvidia channel
 conda install -c nvidia cudatoolkit=11.8 -y
+
 
 # Install PyTorch with CUDA 11.8 support
 # Adjusting versions as per compatibility with CUDA 11.8 at the time of writing

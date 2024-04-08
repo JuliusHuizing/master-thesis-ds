@@ -21,7 +21,7 @@ Ensure you clone the repository recursively such that all submodules get loadede
 ```bash
 git clone --recursive https://github.com/JuliusHuizing/master-thesis-ds
 cd master-thesis-ds
-sbatch install_environmnent.job
+sbatch install_environment.job
 ```
 
 
