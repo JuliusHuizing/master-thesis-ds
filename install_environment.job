@@ -15,6 +15,8 @@ module load Anaconda3/2022.05
 cd $HOME/master-thesis-ds/repos/dreamgaussian
 
 conda create --name dreamgaussian
+
+conda init bash
 conda activate dreamgaussian
 
 pip install -r requirements.txt
