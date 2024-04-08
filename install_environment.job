@@ -16,11 +16,14 @@ cd $HOME/master-thesis-ds/repos/dreamgaussian
 
 conda env remove --name dreamgaussian
 
-# We need to define pip as an initial dependency so we can install the rest of the requirements
+# - We need to define pip as an initial dependency so we can install the rest of the requirements
+# - If we do not specify python=3.9, resolving dependencies will fail.
 conda create --name dreamgaussian pip python=3.9
 
 # we cannot use `conda activate` on Snellius; this is the way.
 source activate dreamgaussian
+
+conda install -c nvidia cuda
 
 pip install -r requirements.txt
 
@@ -42,3 +45,7 @@ pip install git+https://github.com/bytedance/MVDream
 
 # To use ImageDream, also install:
 pip install git+https://github.com/bytedance/ImageDream/#subdirectory=extern/ImageDream
+
+
+
+

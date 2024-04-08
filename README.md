@@ -34,6 +34,14 @@ scancel JOBID
 scontrol show job JOBID
 ```
 
+## echo errors:
+```bash
+awk 'tolower($0) ~ /error/ {print; err=1; next} /^[ \t]/ && err {print; next} {err=0}' filename
 
-## Working with Git Submodules
+```
+
+## Refernces:
+- https://servicedesk.surf.nl/wiki/display/WIKI/Software+policy+Snellius#SoftwarepolicySnellius-UseofAnacondaandMinicondaenvironmentsonSnellius
+
+# Working with Git Submodules
 - https://github.blog/2016-02-01-working-with-submodules/
