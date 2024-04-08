@@ -14,18 +14,25 @@ module load Anaconda3/2023.07-2
 
 cd $HOME/master-thesis-ds/repos/dreamgaussian
 
+# Remove the existing conda environment
 conda env remove --name dreamgaussian
 
-# - We need to define pip as an initial dependency so we can install the rest of the requirements
-# - If we do not specify python=3.9, resolving dependencies will fail.
-conda create --name dreamgaussian pip python=3.9
+# Create a new conda environment with Python 3.9
+# Explicitly including pip in the environment to ensure it's available for subsequent installations
+conda create --name dreamgaussian python=3.9 pip -y
 
-# we cannot use `conda activate` on Snellius; this is the way.
+# Activate the conda environment
+# Note: Using source activate as conda activate is not available on Snellius
 source activate dreamgaussian
 
-pip install torch==2.1.0+cu118 torchvision==0.16.0+cu118 torchaudio==2.1.0 -f https://download.pytorch.org/whl/cu118/torch_stable.html
+# Install CUDA 11.8 from the nvidia channel
+conda install -c nvidia cudatoolkit=11.8 -y
 
-# conda install -c nvidia cuda
+# Install PyTorch with CUDA 11.8 support
+# Adjusting versions as per compatibility with CUDA 11.8 at the time of writing
+# These versions may need to be updated depending on the latest releases and compatibility
+conda install pytorch torchvision torchaudio cudatoolkit=11.8 -c pytorch -y
+
 
 pip install -r requirements.txt
 
@@ -51,3 +58,6 @@ pip install git+https://github.com/bytedance/ImageDream/#subdirectory=extern/Ima
 
 
 
+
+
+# pip install torch==2.1.0+cu118 torchvision==0.16.0+cu118 torchaudio==2.1.0 -f https://download.pytorch.org/whl/cu118/torch_stable.html
