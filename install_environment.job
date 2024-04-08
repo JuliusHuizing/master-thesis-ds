@@ -23,7 +23,9 @@ conda create --name dreamgaussian pip python=3.9
 # we cannot use `conda activate` on Snellius; this is the way.
 source activate dreamgaussian
 
-conda install -c nvidia cuda
+pip install torch==2.1.0+cu118 torchvision==0.16.0+cu118 torchaudio==2.1.0 -f https://download.pytorch.org/whl/cu118/torch_stable.html
+
+# conda install -c nvidia cuda
 
 pip install -r requirements.txt
 
