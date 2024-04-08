@@ -26,3 +26,7 @@ scancel JOBID
 ```bash
 scontrol show job JOBID
 ```
+
+
+## Working with Git Submodules
+https://github.blog/2016-02-01-working-with-submodules/
