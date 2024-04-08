@@ -57,6 +57,7 @@ awk 'tolower($0) ~ /error/ {print; err=1; next} /^[ \t]/ && err {print; next} {e
 
 ## References:
 - https://servicedesk.surf.nl/wiki/display/WIKI/Software+policy+Snellius#SoftwarepolicySnellius-UseofAnacondaandMinicondaenvironmentsonSnellius
+- https://stackoverflow.com/questions/53422407/different-cuda-versions-shown-by-nvcc-and-nvidia-smi
 
 # Working with Git Submodules
 - https://github.blog/2016-02-01-working-with-submodules/

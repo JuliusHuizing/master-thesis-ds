@@ -31,8 +31,8 @@ export CUDA_HOME=/home/jhuizing/.conda/envs/dreamgaussian
 # Note: Using source activate as conda activate is not available on Snellius
 source activate dreamgaussian
 
-
-conda install cuda -c nvidia
+# install specicic version to avoid conflicts.
+sudo conda install cuda-version=11.8 -c nvidia
 
 # Install CUDA 11.8 from the nvidia channel
 # conda install -c nvidia cudatoolkit=11.8 -y
