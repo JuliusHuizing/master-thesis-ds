@@ -7,6 +7,13 @@
 ssh -X jhuizing@snellius.surf.nl
 ```
 
+## Set-up
+Ensure you clone the repository recursively such that all submodules get loadeded correctly:
+
+```bash
+git clone --recursive https://github.com/JuliusHuizing/master-thesis-ds
+```
+
 ## Jobs
 
 - Running a job:
@@ -29,4 +36,4 @@ scontrol show job JOBID
 
 
 ## Working with Git Submodules
-https://github.blog/2016-02-01-working-with-submodules/
+- https://github.blog/2016-02-01-working-with-submodules/
