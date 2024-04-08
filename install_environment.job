@@ -15,8 +15,11 @@ module load Anaconda3/2022.05
 cd $HOME/master-thesis-ds/repos/dreamgaussian
 
 conda env remove --name dreamgaussian
-conda create --name dreamgaussian pip
 
+# We need to define pip as an initial dependency so we can install the rest of the requirements
+conda create --name dreamgaussian pip python=3.9
+
+# we cannot use `conda activate` on Snellius; this is the way.
 source activate dreamgaussian
 
 pip install -r requirements.txt
