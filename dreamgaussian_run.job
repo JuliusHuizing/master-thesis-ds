@@ -14,6 +14,8 @@ module load Anaconda3/2022.05
 
 cd $HOME/repos/master-thesis-ds/repos/dreamgaussian
 
+source .venv/bin/activate
+
 ### preprocess
 # background removal and recentering, save rgba at 256x256
 python process.py data/name.jpg
