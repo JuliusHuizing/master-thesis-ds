@@ -12,7 +12,7 @@ module purge
 module load 2022
 module load Anaconda3/2022.05
 
-cd $HOME/repos/master-thesis-ds/repos/dreamgaussian
+cd $HOME/master-thesis-ds/repos/dreamgaussian
 
 source .venv/bin/activate
 
