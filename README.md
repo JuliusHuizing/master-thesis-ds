@@ -13,8 +13,11 @@ Ensure you clone the repository recursively such that all submodules get loadede
 > [!CAUTION]
 > Ideally we would use an environment.yaml file to take care of our dependencies. Unfortunately, DreamGaussian makes use
 > of submodules, which cannot be installed via conda. So we do need to use pip directly.
+
 > [!WARNING]
 > Consider removing the repo altogether before cloning in; installing depenendecies from submodules can fail otherwise.
+>
+
 > [!WARNING]
 > The rasterizatin submodule seems to be causing a lot of dependency problems...
 > https://chat.openai.com/share/3166f123-b5dd-47ac-a548-4d20fd1f6290
