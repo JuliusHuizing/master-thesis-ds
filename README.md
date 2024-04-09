@@ -16,7 +16,13 @@ Ensure you clone the repository recursively such that all submodules get loadede
 
 > [!WARNING]
 > Consider removing the repo altogether before cloning in; installing depenendecies from submodules can fail otherwise.
->
+
+
+> [!WARNING]
+> Although **git submodule** add adds the submodule, it does not automatically load nested submodules. 
+> To do so, run
+> **git submodule update --init --recursive** inside the submodule.
+
 
 > [!WARNING]
 > The rasterizatin submodule seems to be causing a lot of dependency problems...
