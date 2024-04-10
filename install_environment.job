@@ -9,8 +9,10 @@
 #SBATCH --output=slurm_output_%A.out
 
 module purge
-module load 2023
-module load Anaconda3/2023.07-2
+module load 2022
+module load CUDA/11.8.0
+module load Anaconda3/2022.05
+
 
 cd $HOME/master-thesis-ds/
 git pull
@@ -24,19 +26,10 @@ conda env remove --name dreamgaussian
 # Explicitly including pip in the environment to ensure it's available for subsequent installations
 conda create --name dreamgaussian python=3.9 pip -y
 
-export CUDA_HOME=/home/jhuizing/.conda/envs/dreamgaussian
-
 
 # Activate the conda environment
 # Note: Using source activate as conda activate is not available on Snellius
 source activate dreamgaussian
-
-# install specicic version to avoid conflicts.
-sudo conda install cuda-version=11.8 -c nvidia
-
-# Install CUDA 11.8 from the nvidia channel
-# conda install -c nvidia cudatoolkit=11.8 -y
-
 
 
 # Install PyTorch with CUDA 11.8 support
