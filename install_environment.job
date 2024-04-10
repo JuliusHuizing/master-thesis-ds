@@ -22,7 +22,7 @@ git clone --recursive https://github.com/ashawkey/diff-gaussian-rasterization
 
 
 # Remove the existing conda environment
-conda env remove --name dreamgaussian
+# conda env remove --name dreamgaussian
 conda create --name dreamgaussian python=3.7.13 pip -y
 # Activate the conda environment
 # Note: Using source activate as conda activate is not available on Snellius

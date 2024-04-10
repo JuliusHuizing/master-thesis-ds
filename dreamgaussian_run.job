@@ -9,12 +9,18 @@
 #SBATCH --output=slurm_output_%A.out
 
 module purge
+modula load 2021
 module load 2022
-module load CUDA/11.8.0
+module load CUDA/11.6.0
 module load Anaconda3/2022.05
 
 cd $HOME/master-thesis-ds/
-bash pull_changes.sh
+git pull
+
+
+cd $HOME/master-thesis-ds/repos/dreamgaussian
+
+source activate dreamgaussian
 
 ### preprocess
 # background removal and recentering, save rgba at 256x256
@@ -22,34 +28,34 @@ python process.py data/name.jpg
 
 ### training gaussian stage
 # train 500 iters (~1min) and export ckpt & coarse_mesh to logs
-python main.py --config configs/image.yaml input=data/name_rgba.png save_path=name
+# python main.py --config configs/image.yaml input=data/name_rgba.png save_path=name
 
 # gui mode (supports visualizing training)
 python main.py --config configs/image.yaml input=data/name_rgba.png save_path=name gui=True
 
 # load and visualize a saved ckpt
-python main.py --config configs/image.yaml load=logs/name_model.ply gui=True
+# python main.py --config configs/image.yaml load=logs/name_model.ply gui=True
 
 # use an estimated elevation angle if image is not front-view (e.g., common looking-down image can use -30)
-python main.py --config configs/image.yaml input=data/name_rgba.png save_path=name elevation=-30
+# python main.py --config configs/image.yaml input=data/name_rgba.png save_path=name elevation=-30
 
 ### training mesh stage
 # auto load coarse_mesh and refine 50 iters (~1min), export fine_mesh to logs
-python main2.py --config configs/image.yaml input=data/name_rgba.png save_path=name
+# python main2.py --config configs/image.yaml input=data/name_rgba.png save_path=name
 
 # specify coarse mesh path explicity
-python main2.py --config configs/image.yaml input=data/name_rgba.png save_path=name mesh=logs/name_mesh.obj
+# python main2.py --config configs/image.yaml input=data/name_rgba.png save_path=name mesh=logs/name_mesh.obj
 
-# gui mode
+# # gui mode
 python main2.py --config configs/image.yaml input=data/name_rgba.png save_path=name gui=True
 
-# export glb instead of obj
-python main2.py --config configs/image.yaml input=data/name_rgba.png save_path=name mesh_format=glb
+# # export glb instead of obj
+# python main2.py --config configs/image.yaml input=data/name_rgba.png save_path=name mesh_format=glb
 
 ### visualization
 # gui for visualizing mesh
 # `kire` is short for `python -m kiui.render`
-kire logs/name.obj
+# kire logs/name.obj
 
 # save 360 degree video of mesh (can run without gui)
 kire logs/name.obj --save_video name.mp4 --wogui
@@ -61,4 +67,3 @@ kire logs/name.obj --save images/name/ --wogui
 python -m kiui.cli.clip_sim data/name_rgba.png logs/name.obj
 
 
-bash push_changes.sh
