@@ -28,10 +28,10 @@ python process.py data/name.jpg
 
 ### training gaussian stage
 # train 500 iters (~1min) and export ckpt & coarse_mesh to logs
-# python main.py --config configs/image.yaml input=data/name_rgba.png save_path=name
+python main.py --config configs/image.yaml input=data/name_rgba.png save_path=name
 
 # gui mode (supports visualizing training)
-python main.py --config configs/image.yaml input=data/name_rgba.png save_path=name gui=True
+# python main.py --config configs/image.yaml input=data/name_rgba.png save_path=name gui=True
 
 # load and visualize a saved ckpt
 # python main.py --config configs/image.yaml load=logs/name_model.ply gui=True
