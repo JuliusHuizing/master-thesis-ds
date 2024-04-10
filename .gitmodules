@@ -1,6 +1,0 @@
-[submodule "repos/dreamgaussian"]
-	path = repos/dreamgaussian
-	url = https://github.com/JuliusHuizing/dreamgaussian
-[submodule "repos/gaussian-splatting"]
-	path = repos/gaussian-splatting
-	url = https://github.com/JuliusHuizing/gaussian-splatting

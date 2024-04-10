@@ -1,0 +1,49 @@
+name: dreamgaussian
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - cudatoolkit=11.6
+  - plyfile
+  - python=3.7.13
+  - pip=22.3.1
+  - pytorch=1.12.1
+  - torchaudio=0.12.1
+  - torchvision=0.13.1
+  - pip:
+    - ./diff-gaussian-rasterization
+    - ./simple-knn
+    - git+https://github.com/NVlabs/nvdiffrast/
+    - git+https://github.com/ashawkey/kiuikit
+    - git+https://github.com/bytedance/MVDream
+    - git+https://github.com/bytedance/ImageDream/#subdirectory=extern/ImageDream
+    - tqdm
+    - rich
+    - ninja
+    - numpy
+    - pandas
+    - scipy
+    - scikit-learn
+    - matplotlib
+    - opencv
+    - imageio
+    - imageio-ffmpeg
+    - omegaconf
+    - torch  # This is for torch, adjust version as needed
+    - einops
+    - opencv-python  # Sometimes it's better to install opencv-python via pip
+    - plyfile
+    - pygltflib
+    - dearpygui
+    - huggingface_hub
+    - diffusers
+    - accelerate
+    - transformers
+    - xatlas
+    - trimesh
+    - PyMCubes
+    - pymeshlab
+    - rembg[gpu,cli]
+    - gradio
+
