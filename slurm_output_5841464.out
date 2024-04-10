@@ -1,0 +1,211 @@
+/var/spool/slurm/slurmd/job5841464/slurm_script: line 12: modula: command not found
+============================================================================================== 
+Warning! Mixing Conda and module environments may lead to corruption of the
+user environment. 
+We do not recommend users mixing those two environments unless absolutely
+necessary. Note that 
+SURF does not provide any support for Conda environment.
+For more information, please refer to our software policy page:
+https://servicedesk.surf.nl/wiki/display/WIKI/Software+policy+Snellius#SoftwarepolicySnellius-UseofAnacondaandMinicondaenvironmentsonSnellius 
+
+Remember that many packages have already been installed on the system and can
+be loaded using 
+the 'module load <package__name>' command. If you are uncertain if a package is
+already available 
+on the system, please use 'module avail' or 'module spider' to search for it.
+============================================================================================== 
+Already up to date.
+Downloading data from 'https://github.com/danielgatis/rembg/releases/download/v0.0.0/u2net.onnx' to file '/gpfs/home6/jhuizing/.u2net/u2net.onnx'.
+  0%|                                               | 0.00/176M [00:00<?, ?B/s]  3%|█                                     | 4.86M/176M [00:00<00:03, 48.6MB/s]  6%|██▏                                   | 10.1M/176M [00:00<00:03, 50.9MB/s]  9%|███▎                                  | 15.4M/176M [00:00<00:03, 51.8MB/s] 12%|████▍                                 | 20.7M/176M [00:00<00:02, 52.1MB/s] 15%|█████▌                                | 25.9M/176M [00:00<00:02, 52.3MB/s] 18%|██████▋                               | 31.2M/176M [00:00<00:02, 52.5MB/s] 21%|███████▉                              | 36.5M/176M [00:00<00:02, 52.6MB/s] 24%|█████████                             | 41.8M/176M [00:00<00:02, 52.6MB/s] 27%|██████████▏                           | 47.0M/176M [00:00<00:02, 52.6MB/s] 30%|███████████▎                          | 52.3M/176M [00:01<00:02, 52.6MB/s] 33%|████████████▍                         | 57.6M/176M [00:01<00:02, 52.7MB/s] 36%|█████████████▌                        | 62.9M/176M [00:01<00:02, 52.8MB/s] 39%|██████████████▋                       | 68.2M/176M [00:01<00:02, 52.9MB/s] 42%|███████████████▊                      | 73.5M/176M [00:01<00:01, 52.9MB/s] 45%|█████████████████                     | 78.8M/176M [00:01<00:01, 53.0MB/s] 48%|██████████████████▏                   | 84.1M/176M [00:01<00:01, 52.9MB/s] 51%|███████████████████▎                  | 89.4M/176M [00:01<00:01, 52.9MB/s] 54%|████████████████████▍                 | 94.7M/176M [00:01<00:01, 52.9MB/s] 57%|██████████████████████▏                | 100M/176M [00:01<00:01, 52.9MB/s] 60%|███████████████████████▎               | 105M/176M [00:02<00:01, 52.9MB/s] 63%|████████████████████████▌              | 111M/176M [00:02<00:01, 53.0MB/s] 66%|█████████████████████████▋             | 116M/176M [00:02<00:01, 53.0MB/s] 69%|██████████████████████████▊            | 121M/176M [00:02<00:01, 53.0MB/s] 72%|████████████████████████████           | 127M/176M [00:02<00:00, 53.1MB/s] 75%|█████████████████████████████▏         | 132M/176M [00:02<00:00, 53.1MB/s] 78%|██████████████████████████████▍        | 137M/176M [00:02<00:00, 53.0MB/s] 81%|███████████████████████████████▌       | 142M/176M [00:02<00:00, 53.0MB/s] 84%|████████████████████████████████▋      | 148M/176M [00:02<00:00, 53.0MB/s] 87%|█████████████████████████████████▉     | 153M/176M [00:02<00:00, 53.0MB/s] 90%|███████████████████████████████████    | 158M/176M [00:03<00:00, 53.0MB/s] 93%|████████████████████████████████████▎  | 164M/176M [00:03<00:00, 52.9MB/s] 96%|█████████████████████████████████████▍ | 169M/176M [00:03<00:00, 53.0MB/s] 99%|██████████████████████████████████████▋| 174M/176M [00:03<00:00, 53.0MB/s]  0%|                                               | 0.00/176M [00:00<?, ?B/s]100%|███████████████████████████████████████| 176M/176M [00:00<00:00, 1.21TB/s]2024-04-10 13:59:08.749536901 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426627, index: 17, mask: {18, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.761513825 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426628, index: 18, mask: {19, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.783532163 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426630, index: 20, mask: {21, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.784589287 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426677, index: 67, mask: {68, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.785559985 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426674, index: 64, mask: {65, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.786763831 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426659, index: 49, mask: {50, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.787762551 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426637, index: 27, mask: {28, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.786773607 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426665, index: 55, mask: {56, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.786452060 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426661, index: 51, mask: {52, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.786804061 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426676, index: 66, mask: {67, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.786972468 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426678, index: 68, mask: {69, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.787568098 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426666, index: 56, mask: {57, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.786962408 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426672, index: 62, mask: {63, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.786462439 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426662, index: 52, mask: {53, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.811550944 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426673, index: 63, mask: {64, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.811571246 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426669, index: 59, mask: {60, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.811583087 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426663, index: 53, mask: {54, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.811610875 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426646, index: 36, mask: {37, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.811625983 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426668, index: 58, mask: {59, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.787966968 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426664, index: 54, mask: {55, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.788024362 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426639, index: 29, mask: {30, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.788028891 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426635, index: 25, mask: {26, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.798520013 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426645, index: 35, mask: {36, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.788037988 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426643, index: 33, mask: {34, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.788054573 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426657, index: 47, mask: {48, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.788034488 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426634, index: 24, mask: {25, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.788030625 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426636, index: 26, mask: {27, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.788080402 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426644, index: 34, mask: {35, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.788071986 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426641, index: 31, mask: {32, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.788028189 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426631, index: 21, mask: {22, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.788045757 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426658, index: 48, mask: {49, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.788028968 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426642, index: 32, mask: {33, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.788032874 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426632, index: 22, mask: {23, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.788040001 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426648, index: 38, mask: {39, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.788022100 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426633, index: 23, mask: {24, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.788042741 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426653, index: 43, mask: {44, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.788038984 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426640, index: 30, mask: {31, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.788049355 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426652, index: 42, mask: {43, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.788051716 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426654, index: 44, mask: {45, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.788046921 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426655, index: 45, mask: {46, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.811602937 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426667, index: 57, mask: {58, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.788016276 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426675, index: 65, mask: {66, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.788049242 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426649, index: 39, mask: {40, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.847522935 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426629, index: 19, mask: {20, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.848528813 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426679, index: 69, mask: {70, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.824526315 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426647, index: 37, mask: {38, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.788055662 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426650, index: 40, mask: {41, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.825520171 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426660, index: 50, mask: {51, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.788039508 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426656, index: 46, mask: {47, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.788089196 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426651, index: 41, mask: {42, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.825529784 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426671, index: 61, mask: {62, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.825542455 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426670, index: 60, mask: {61, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.869531578 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426638, index: 28, mask: {29, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+2024-04-10 13:59:08.880526980 [E:onnxruntime:Default, env.cc:251 ThreadMain] pthread_setaffinity_np failed for thread: 1426680, index: 70, mask: {71, }, error code: 22 error msg: Invalid argument. Specify the number of threads explicitly so the affinity is not set.
+[ WARN:0@51.324] global loadsave.cpp:248 findDecoder imread_('data/name.jpg'): can't open/read file: check file path/integrity
+
+[INFO] loading image data/name.jpg...
+[INFO] background removal...
+Traceback (most recent call last):
+  File "process.py", line 65, in <module>
+    carved_image = rembg.remove(image, session=session) # [H, W, 4]
+  File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.7/site-packages/rembg/bg.py", line 143, in remove
+    raise ValueError("Input type {} is not supported.".format(type(data)))
+ValueError: Input type <class 'NoneType'> is not supported.
+Traceback (most recent call last):
+  File "main.py", line 6, in <module>
+    import dearpygui.dearpygui as dpg
+  File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.7/site-packages/dearpygui/dearpygui.py", line 22, in <module>
+    import dearpygui._dearpygui as internal_dpg
+ImportError: /lib64/libm.so.6: version `GLIBC_2.29' not found (required by /home/jhuizing/.conda/envs/dreamgaussian/lib/python3.7/site-packages/dearpygui/_dearpygui.so)
+Traceback (most recent call last):
+  File "main2.py", line 6, in <module>
+    import dearpygui.dearpygui as dpg
+  File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.7/site-packages/dearpygui/dearpygui.py", line 22, in <module>
+    import dearpygui._dearpygui as internal_dpg
+ImportError: /lib64/libm.so.6: version `GLIBC_2.29' not found (required by /home/jhuizing/.conda/envs/dreamgaussian/lib/python3.7/site-packages/dearpygui/_dearpygui.so)
+Traceback (most recent call last):
+  File "/home/jhuizing/.conda/envs/dreamgaussian/bin/kire", line 5, in <module>
+    from kiui.render import main
+  File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.7/site-packages/kiui/render.py", line 17, in <module>
+    from kiui.mesh import Mesh
+  File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.7/site-packages/kiui/mesh.py", line 8, in <module>
+    from kiui.op import safe_normalize, dot
+  File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.7/site-packages/kiui/op.py", line 5, in <module>
+    from kiui.typing import *
+  File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.7/site-packages/kiui/typing.py", line 2, in <module>
+    from typing import Sequence, List, Tuple, Dict, Any, Optional, Union, Literal, Callable
+ImportError: cannot import name 'Literal' from 'typing' (/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.7/typing.py)
+Traceback (most recent call last):
+  File "/home/jhuizing/.conda/envs/dreamgaussian/bin/kire", line 5, in <module>
+    from kiui.render import main
+  File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.7/site-packages/kiui/render.py", line 17, in <module>
+    from kiui.mesh import Mesh
+  File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.7/site-packages/kiui/mesh.py", line 8, in <module>
+    from kiui.op import safe_normalize, dot
+  File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.7/site-packages/kiui/op.py", line 5, in <module>
+    from kiui.typing import *
+  File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.7/site-packages/kiui/typing.py", line 2, in <module>
+    from typing import Sequence, List, Tuple, Dict, Any, Optional, Union, Literal, Callable
+ImportError: cannot import name 'Literal' from 'typing' (/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.7/typing.py)
+╭───────────────────── Traceback (most recent call last) ──────────────────────╮
+│ /home/jhuizing/.conda/envs/dreamgaussian/lib/python3.7/runpy.py:193 in       │
+│ _run_module_as_main                                                          │
+│                                                                              │
+│   190 │   if alter_argv:                                                     │
+│   191 │   │   sys.argv[0] = mod_spec.origin                                  │
+│   192 │   return _run_code(code, main_globals, None,                         │
+│ ❱ 193 │   │   │   │   │    "__main__", mod_spec)                             │
+│   194                                                                        │
+│   195 def run_module(mod_name, init_globals=None,                            │
+│   196 │   │   │      run_name=None, alter_sys=False):                        │
+│                                                                              │
+│ /home/jhuizing/.conda/envs/dreamgaussian/lib/python3.7/runpy.py:85 in        │
+│ _run_code                                                                    │
+│                                                                              │
+│    82 │   │   │   │   │      __loader__ = loader,                            │
+│    83 │   │   │   │   │      __package__ = pkg_name,                         │
+│    84 │   │   │   │   │      __spec__ = mod_spec)                            │
+│ ❱  85 │   exec(code, run_globals)                                            │
+│    86 │   return run_globals                                                 │
+│    87                                                                        │
+│    88 def _run_module_code(code, init_globals=None,                          │
+│                                                                              │
+│ /home/jhuizing/.conda/envs/dreamgaussian/lib/python3.7/site-packages/kiui/cl │
+│ i/clip_sim.py:9 in <module>                                                  │
+│                                                                              │
+│     6 from transformers import CLIPModel, CLIPTokenizer, CLIPProcessor       │
+│     7                                                                        │
+│     8 import kiui                                                            │
+│ ❱   9 from kiui.render import GUI                                            │
+│    10                                                                        │
+│    11 class CLIP:                                                            │
+│    12 │   def __init__(self, device, model_name='openai/clip-vit-large-patch │
+│                                                                              │
+│ /home/jhuizing/.conda/envs/dreamgaussian/lib/python3.7/site-packages/kiui/re │
+│ nder.py:17 in <module>                                                       │
+│                                                                              │
+│    14 except Exception as e:                                                 │
+│    15 │   GUI_AVAILABLE = False                                              │
+│    16                                                                        │
+│ ❱  17 from kiui.mesh import Mesh                                             │
+│    18 from kiui.cam import OrbitCamera                                       │
+│    19 from kiui.op import safe_normalize                                     │
+│    20                                                                        │
+│                                                                              │
+│ /home/jhuizing/.conda/envs/dreamgaussian/lib/python3.7/site-packages/kiui/me │
+│ sh.py:8 in <module>                                                          │
+│                                                                              │
+│     5 import numpy as np                                                     │
+│     6 from packaging import version                                          │
+│     7                                                                        │
+│ ❱   8 from kiui.op import safe_normalize, dot                                │
+│     9 from kiui.typing import *                                              │
+│    10                                                                        │
+│    11 class Mesh:                                                            │
+│                                                                              │
+│ /home/jhuizing/.conda/envs/dreamgaussian/lib/python3.7/site-packages/kiui/op │
+│ .py:5 in <module>                                                            │
+│                                                                              │
+│     2 import torch                                                           │
+│     3 import numpy as np                                                     │
+│     4                                                                        │
+│ ❱   5 from kiui.typing import *                                              │
+│     6 from kiui.grid_put import grid_put                                     │
+│     7                                                                        │
+│     8 # torch / numpy math utils                                             │
+│                                                                              │
+│ /home/jhuizing/.conda/envs/dreamgaussian/lib/python3.7/site-packages/kiui/ty │
+│ ping.py:2 in <module>                                                        │
+│                                                                              │
+│   1 # ref: https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html        │
+│ ❱ 2 from typing import Sequence, List, Tuple, Dict, Any, Optional, Union, Li │
+│   3 from torch import Tensor                                                 │
+│   4 from numpy import ndarray                                                │
+│   5                                                                          │
+╰──────────────────────────────────────────────────────────────────────────────╯
+ImportError: cannot import name 'Literal' from 'typing' 
+(/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.7/typing.py)
+
+JOB STATISTICS
+==============
+Job ID: 5841464
+Cluster: snellius
+User/Group: jhuizing/jhuizing
+State: RUNNING
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 00:00:00
+CPU Efficiency: 0.00% of 00:22:48 core-walltime
+Job Wall-clock time: 00:01:16
+Memory Utilized: 0.00 MB (estimated maximum)
+Memory Efficiency: 0.00% of 120.00 GB (120.00 GB/node)
+WARNING: Efficiency statistics may be misleading for RUNNING jobs.
