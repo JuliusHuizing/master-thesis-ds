@@ -10,58 +10,19 @@
 
 module purge
 module load 2022
-module load CUDA/11.8.0
+module load CUDA/11.6.0
 module load Anaconda3/2022.05
-
 
 cd $HOME/master-thesis-ds/
 git pull
 
 cd $HOME/master-thesis-ds/repos/dreamgaussian
+git clone --recursive https://github.com/ashawkey/diff-gaussian-rasterization
 
 # Remove the existing conda environment
 conda env remove --name dreamgaussian
-
-# Create a new conda environment with Python 3.9
-# Explicitly including pip in the environment to ensure it's available for subsequent installations
-conda create --name dreamgaussian python=3.9 pip -y
-
+conda env create -f environment.yml
 
 # Activate the conda environment
 # Note: Using source activate as conda activate is not available on Snellius
 source activate dreamgaussian
-
-
-# Install PyTorch with CUDA 11.8 support
-# Adjusting versions as per compatibility with CUDA 11.8 at the time of writing
-# These versions may need to be updated depending on the latest releases and compatibility
-conda install pytorch torchvision torchaudio cudatoolkit=11.8 -c pytorch -y
-
-
-pip install -r requirements.txt
-
-# a modified gaussian splatting (+ depth, alpha rendering)
-git clone --recursive https://github.com/ashawkey/diff-gaussian-rasterization
-pip install ./diff-gaussian-rasterization
-
-# simple-knn
-pip install ./simple-knn
-
-# nvdiffrast
-pip install git+https://github.com/NVlabs/nvdiffrast/
-
-# kiuikit
-pip install git+https://github.com/ashawkey/kiuikit
-
-# To use MVdream, also install:
-pip install git+https://github.com/bytedance/MVDream
-
-# To use ImageDream, also install:
-pip install git+https://github.com/bytedance/ImageDream/#subdirectory=extern/ImageDream
-
-
-
-
-
-
-# pip install torch==2.1.0+cu118 torchvision==0.16.0+cu118 torchaudio==2.1.0 -f https://download.pytorch.org/whl/cu118/torch_stable.html
