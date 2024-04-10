@@ -9,6 +9,7 @@
 #SBATCH --output=slurm_output_%A.out
 
 module purge
+module load 2021
 module load 2022
 module load CUDA/11.6.0
 module load Anaconda3/2022.05
@@ -19,10 +20,31 @@ git pull
 cd $HOME/master-thesis-ds/repos/dreamgaussian
 git clone --recursive https://github.com/ashawkey/diff-gaussian-rasterization
 
+
 # Remove the existing conda environment
 conda env remove --name dreamgaussian
-conda env create -f environment.yml
-
+conda create --name dreamgaussian python=3.7.13 pip -y
 # Activate the conda environment
 # Note: Using source activate as conda activate is not available on Snellius
 source activate dreamgaussian
+
+pip install -r requirements.txt
+
+# a modified gaussian splatting (+ depth, alpha rendering)
+git clone --recursive https://github.com/ashawkey/diff-gaussian-rasterization
+pip install ./diff-gaussian-rasterization
+
+# simple-knn
+pip install ./simple-knn
+
+# nvdiffrast
+pip install git+https://github.com/NVlabs/nvdiffrast/
+
+# kiuikit
+pip install git+https://github.com/ashawkey/kiuikit
+
+# To use MVdream, also install:
+pip install git+https://github.com/bytedance/MVDream
+
+# To use ImageDream, also install:
+pip install git+https://github.com/bytedance/ImageDream/#subdirectory=extern/ImageDream
