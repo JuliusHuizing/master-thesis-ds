@@ -11,7 +11,7 @@
 module purge
 # module load 2021 // although spider says we need 2021 for cuda 11.6, the partition does not support 2021..
 module load 2022
-module load CUDA/11.6.0
+module load CUDA/11.8.0
 module load Anaconda3/2022.05
 
 cd $HOME/master-thesis-ds/
@@ -19,11 +19,12 @@ git pull
 
 cd $HOME/master-thesis-ds/repos/dreamgaussian
 conda env remove --name dreamgaussian
-conda env create --file environment.yml
+conda create -n dreamgaussian python=3.8 pip
 source activate dreamgaussian
 
-git clone --recursive https://github.com/ashawkey/diff-gaussian-rasterization
-pip install ./diff-gaussian-rasterization
+conda install pytorch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 pytorch-cuda=11.8 -c pytorch -c nvidia
+
+pip install -r requirements.txt
 
 # a modified gaussian splatting (+ depth, alpha rendering)
 git clone --recursive https://github.com/ashawkey/diff-gaussian-rasterization
