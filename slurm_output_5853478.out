@@ -1,0 +1,804 @@
+============================================================================================== 
+Warning! Mixing Conda and module environments may lead to corruption of the
+user environment. 
+We do not recommend users mixing those two environments unless absolutely
+necessary. Note that 
+SURF does not provide any support for Conda environment.
+For more information, please refer to our software policy page:
+https://servicedesk.surf.nl/wiki/display/WIKI/Software+policy+Snellius#SoftwarepolicySnellius-UseofAnacondaandMinicondaenvironmentsonSnellius 
+
+Remember that many packages have already been installed on the system and can
+be loaded using 
+the 'module load <package__name>' command. If you are uncertain if a package is
+already available 
+on the system, please use 'module avail' or 'module spider' to search for it.
+============================================================================================== 
+Already up to date.
+Collecting package metadata (current_repodata.json): ...working... done
+Solving environment: ...working... done
+
+
+==> WARNING: A newer version of conda exists. <==
+  current version: 4.12.0
+  latest version: 24.3.0
+
+Please update conda by running
+
+    $ conda update -n base -c defaults conda
+
+
+
+## Package Plan ##
+
+  environment location: /home/jhuizing/.conda/envs/dreamgaussian
+
+  added / updated specs:
+    - pip
+    - python=3.8
+
+
+The following NEW packages will be INSTALLED:
+
+  _libgcc_mutex      pkgs/main/linux-64::_libgcc_mutex-0.1-main
+  _openmp_mutex      pkgs/main/linux-64::_openmp_mutex-5.1-1_gnu
+  ca-certificates    pkgs/main/linux-64::ca-certificates-2024.3.11-h06a4308_0
+  ld_impl_linux-64   pkgs/main/linux-64::ld_impl_linux-64-2.38-h1181459_1
+  libffi             pkgs/main/linux-64::libffi-3.4.4-h6a678d5_0
+  libgcc-ng          pkgs/main/linux-64::libgcc-ng-11.2.0-h1234567_1
+  libgomp            pkgs/main/linux-64::libgomp-11.2.0-h1234567_1
+  libstdcxx-ng       pkgs/main/linux-64::libstdcxx-ng-11.2.0-h1234567_1
+  ncurses            pkgs/main/linux-64::ncurses-6.4-h6a678d5_0
+  openssl            pkgs/main/linux-64::openssl-3.0.13-h7f8727e_0
+  pip                pkgs/main/linux-64::pip-23.3.1-py38h06a4308_0
+  python             pkgs/main/linux-64::python-3.8.19-h955ad1f_0
+  readline           pkgs/main/linux-64::readline-8.2-h5eee18b_0
+  setuptools         pkgs/main/linux-64::setuptools-68.2.2-py38h06a4308_0
+  sqlite             pkgs/main/linux-64::sqlite-3.41.2-h5eee18b_0
+  tk                 pkgs/main/linux-64::tk-8.6.12-h1ccaba5_0
+  wheel              pkgs/main/linux-64::wheel-0.41.2-py38h06a4308_0
+  xz                 pkgs/main/linux-64::xz-5.4.6-h5eee18b_0
+  zlib               pkgs/main/linux-64::zlib-1.2.13-h5eee18b_0
+
+
+Proceed ([y]/n)? 
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
+#
+# To activate this environment, use
+#
+#     $ conda activate dreamgaussian
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+Collecting package metadata (current_repodata.json): ...working... done
+Solving environment: ...working... failed with initial frozen solve. Retrying with flexible solve.
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... done
+
+
+==> WARNING: A newer version of conda exists. <==
+  current version: 4.12.0
+  latest version: 24.3.0
+
+Please update conda by running
+
+    $ conda update -n base -c defaults conda
+
+
+
+## Package Plan ##
+
+  environment location: /home/jhuizing/.conda/envs/dreamgaussian
+
+  added / updated specs:
+    - pytorch-cuda=11.8
+    - pytorch==2.1.0
+    - torchaudio==2.1.0
+    - torchvision==0.16.0
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    brotli-python-1.0.9        |   py38h6a678d5_7         329 KB
+    certifi-2024.2.2           |   py38h06a4308_0         159 KB
+    cuda-cudart-11.8.89        |                0         197 KB  nvidia
+    cuda-cupti-11.8.87         |                0        25.3 MB  nvidia
+    cuda-libraries-11.8.0      |                0           1 KB  nvidia
+    cuda-nvrtc-11.8.89         |                0        19.1 MB  nvidia
+    cuda-nvtx-11.8.86          |                0          57 KB  nvidia
+    cuda-runtime-11.8.0        |                0           1 KB  nvidia
+    filelock-3.13.1            |   py38h06a4308_0          21 KB
+    gmpy2-2.1.2                |   py38heeb90bb_0         191 KB
+    idna-3.4                   |   py38h06a4308_0          93 KB
+    jinja2-3.1.3               |   py38h06a4308_0         270 KB
+    libcublas-11.11.3.6        |                0       364.0 MB  nvidia
+    libcufft-10.9.0.58         |                0       142.8 MB  nvidia
+    libcusolver-11.4.1.48      |                0        96.5 MB  nvidia
+    libcusparse-11.7.5.86      |                0       176.3 MB  nvidia
+    libnpp-11.8.0.86           |                0       147.8 MB  nvidia
+    libnvjpeg-11.9.0.86        |                0         2.4 MB  nvidia
+    markupsafe-2.1.3           |   py38h5eee18b_0          22 KB
+    mkl-service-2.4.0          |   py38h5eee18b_1          54 KB
+    mkl_fft-1.3.8              |   py38h5eee18b_0         221 KB
+    mkl_random-1.2.4           |   py38hdb19cb5_0         327 KB
+    mpmath-1.3.0               |   py38h06a4308_0         832 KB
+    networkx-3.1               |   py38h06a4308_0         2.7 MB
+    pillow-10.2.0              |   py38h5eee18b_0         766 KB
+    pysocks-1.7.1              |   py38h06a4308_0          31 KB
+    pytorch-2.1.0              |py3.8_cuda11.8_cudnn8.7.0_0        1.46 GB  pytorch
+    pytorch-cuda-11.8          |       h7e8668a_5           3 KB  pytorch
+    pyyaml-6.0.1               |   py38h5eee18b_0         192 KB
+    requests-2.31.0            |   py38h06a4308_1          96 KB
+    sympy-1.12                 |   py38h06a4308_0        10.5 MB
+    torchaudio-2.1.0           |       py38_cu118         6.0 MB  pytorch
+    torchtriton-2.1.0          |             py38        90.9 MB  pytorch
+    torchvision-0.16.0         |       py38_cu118        12.7 MB  pytorch
+    typing_extensions-4.9.0    |   py38h06a4308_1          54 KB
+    urllib3-2.1.0              |   py38h06a4308_1         156 KB
+    ------------------------------------------------------------
+                                           Total:        2.54 GB
+
+The following NEW packages will be INSTALLED:
+
+  blas               pkgs/main/linux-64::blas-1.0-mkl
+  brotli-python      pkgs/main/linux-64::brotli-python-1.0.9-py38h6a678d5_7
+  bzip2              pkgs/main/linux-64::bzip2-1.0.8-h5eee18b_5
+  certifi            pkgs/main/linux-64::certifi-2024.2.2-py38h06a4308_0
+  charset-normalizer pkgs/main/noarch::charset-normalizer-2.0.4-pyhd3eb1b0_0
+  cuda-cudart        nvidia/linux-64::cuda-cudart-11.8.89-0
+  cuda-cupti         nvidia/linux-64::cuda-cupti-11.8.87-0
+  cuda-libraries     nvidia/linux-64::cuda-libraries-11.8.0-0
+  cuda-nvrtc         nvidia/linux-64::cuda-nvrtc-11.8.89-0
+  cuda-nvtx          nvidia/linux-64::cuda-nvtx-11.8.86-0
+  cuda-runtime       nvidia/linux-64::cuda-runtime-11.8.0-0
+  ffmpeg             pytorch/linux-64::ffmpeg-4.3-hf484d3e_0
+  filelock           pkgs/main/linux-64::filelock-3.13.1-py38h06a4308_0
+  freetype           pkgs/main/linux-64::freetype-2.12.1-h4a9f257_0
+  gmp                pkgs/main/linux-64::gmp-6.2.1-h295c915_3
+  gmpy2              pkgs/main/linux-64::gmpy2-2.1.2-py38heeb90bb_0
+  gnutls             pkgs/main/linux-64::gnutls-3.6.15-he1e5248_0
+  idna               pkgs/main/linux-64::idna-3.4-py38h06a4308_0
+  intel-openmp       pkgs/main/linux-64::intel-openmp-2023.1.0-hdb19cb5_46306
+  jinja2             pkgs/main/linux-64::jinja2-3.1.3-py38h06a4308_0
+  jpeg               pkgs/main/linux-64::jpeg-9e-h5eee18b_1
+  lame               pkgs/main/linux-64::lame-3.100-h7b6447c_0
+  lcms2              pkgs/main/linux-64::lcms2-2.12-h3be6417_0
+  lerc               pkgs/main/linux-64::lerc-3.0-h295c915_0
+  libcublas          nvidia/linux-64::libcublas-11.11.3.6-0
+  libcufft           nvidia/linux-64::libcufft-10.9.0.58-0
+  libcufile          nvidia/linux-64::libcufile-1.9.1.3-0
+  libcurand          nvidia/linux-64::libcurand-10.3.5.147-0
+  libcusolver        nvidia/linux-64::libcusolver-11.4.1.48-0
+  libcusparse        nvidia/linux-64::libcusparse-11.7.5.86-0
+  libdeflate         pkgs/main/linux-64::libdeflate-1.17-h5eee18b_1
+  libiconv           pkgs/main/linux-64::libiconv-1.16-h7f8727e_2
+  libidn2            pkgs/main/linux-64::libidn2-2.3.4-h5eee18b_0
+  libjpeg-turbo      pytorch/linux-64::libjpeg-turbo-2.0.0-h9bf148f_0
+  libnpp             nvidia/linux-64::libnpp-11.8.0.86-0
+  libnvjpeg          nvidia/linux-64::libnvjpeg-11.9.0.86-0
+  libpng             pkgs/main/linux-64::libpng-1.6.39-h5eee18b_0
+  libtasn1           pkgs/main/linux-64::libtasn1-4.19.0-h5eee18b_0
+  libtiff            pkgs/main/linux-64::libtiff-4.5.1-h6a678d5_0
+  libunistring       pkgs/main/linux-64::libunistring-0.9.10-h27cfd23_0
+  libwebp-base       pkgs/main/linux-64::libwebp-base-1.3.2-h5eee18b_0
+  llvm-openmp        pkgs/main/linux-64::llvm-openmp-14.0.6-h9e868ea_0
+  lz4-c              pkgs/main/linux-64::lz4-c-1.9.4-h6a678d5_0
+  markupsafe         pkgs/main/linux-64::markupsafe-2.1.3-py38h5eee18b_0
+  mkl                pkgs/main/linux-64::mkl-2023.1.0-h213fc3f_46344
+  mkl-service        pkgs/main/linux-64::mkl-service-2.4.0-py38h5eee18b_1
+  mkl_fft            pkgs/main/linux-64::mkl_fft-1.3.8-py38h5eee18b_0
+  mkl_random         pkgs/main/linux-64::mkl_random-1.2.4-py38hdb19cb5_0
+  mpc                pkgs/main/linux-64::mpc-1.1.0-h10f8cd9_1
+  mpfr               pkgs/main/linux-64::mpfr-4.0.2-hb69a4c5_1
+  mpmath             pkgs/main/linux-64::mpmath-1.3.0-py38h06a4308_0
+  nettle             pkgs/main/linux-64::nettle-3.7.3-hbbd107a_1
+  networkx           pkgs/main/linux-64::networkx-3.1-py38h06a4308_0
+  numpy              pkgs/main/linux-64::numpy-1.24.3-py38hf6e8229_1
+  numpy-base         pkgs/main/linux-64::numpy-base-1.24.3-py38h060ed82_1
+  openh264           pkgs/main/linux-64::openh264-2.1.1-h4ff587b_0
+  openjpeg           pkgs/main/linux-64::openjpeg-2.4.0-h3ad879b_0
+  pillow             pkgs/main/linux-64::pillow-10.2.0-py38h5eee18b_0
+  pysocks            pkgs/main/linux-64::pysocks-1.7.1-py38h06a4308_0
+  pytorch            pytorch/linux-64::pytorch-2.1.0-py3.8_cuda11.8_cudnn8.7.0_0
+  pytorch-cuda       pytorch/linux-64::pytorch-cuda-11.8-h7e8668a_5
+  pytorch-mutex      pytorch/noarch::pytorch-mutex-1.0-cuda
+  pyyaml             pkgs/main/linux-64::pyyaml-6.0.1-py38h5eee18b_0
+  requests           pkgs/main/linux-64::requests-2.31.0-py38h06a4308_1
+  sympy              pkgs/main/linux-64::sympy-1.12-py38h06a4308_0
+  tbb                pkgs/main/linux-64::tbb-2021.8.0-hdb19cb5_0
+  torchaudio         pytorch/linux-64::torchaudio-2.1.0-py38_cu118
+  torchtriton        pytorch/linux-64::torchtriton-2.1.0-py38
+  torchvision        pytorch/linux-64::torchvision-0.16.0-py38_cu118
+  typing_extensions  pkgs/main/linux-64::typing_extensions-4.9.0-py38h06a4308_1
+  urllib3            pkgs/main/linux-64::urllib3-2.1.0-py38h06a4308_1
+  yaml               pkgs/main/linux-64::yaml-0.2.5-h7b6447c_0
+  zstd               pkgs/main/linux-64::zstd-1.5.5-hc292b87_0
+
+
+Proceed ([y]/n)? 
+
+Downloading and Extracting Packages
+cuda-nvtx-11.8.86    | 57 KB     |            |   0% cuda-nvtx-11.8.86    | 57 KB     | ##8        |  28% cuda-nvtx-11.8.86    | 57 KB     | ########## | 100% 
+libcufft-10.9.0.58   | 142.8 MB  |            |   0% libcufft-10.9.0.58   | 142.8 MB  | #2         |  12% libcufft-10.9.0.58   | 142.8 MB  | ##6        |  26% libcufft-10.9.0.58   | 142.8 MB  | ####       |  40% libcufft-10.9.0.58   | 142.8 MB  | #####4     |  54% libcufft-10.9.0.58   | 142.8 MB  | ######8    |  69% libcufft-10.9.0.58   | 142.8 MB  | ########6  |  87% libcufft-10.9.0.58   | 142.8 MB  | ########## | 100% 
+libcusparse-11.7.5.8 | 176.3 MB  |            |   0% libcusparse-11.7.5.8 | 176.3 MB  | 9          |   9% libcusparse-11.7.5.8 | 176.3 MB  | ##8        |  29% libcusparse-11.7.5.8 | 176.3 MB  | ####3      |  44% libcusparse-11.7.5.8 | 176.3 MB  | #####6     |  57% libcusparse-11.7.5.8 | 176.3 MB  | ######7    |  68% libcusparse-11.7.5.8 | 176.3 MB  | ########1  |  81% libcusparse-11.7.5.8 | 176.3 MB  | #########1 |  92% libcusparse-11.7.5.8 | 176.3 MB  | ########## | 100% 
+urllib3-2.1.0        | 156 KB    |            |   0% urllib3-2.1.0        | 156 KB    | ########## | 100% urllib3-2.1.0        | 156 KB    | ########## | 100% 
+cuda-runtime-11.8.0  | 1 KB      |            |   0% cuda-runtime-11.8.0  | 1 KB      | ########## | 100% 
+cuda-cudart-11.8.89  | 197 KB    |            |   0% cuda-cudart-11.8.89  | 197 KB    | ########## | 100% 
+mkl-service-2.4.0    | 54 KB     |            |   0% mkl-service-2.4.0    | 54 KB     | ########## | 100% mkl-service-2.4.0    | 54 KB     | ########## | 100% 
+pillow-10.2.0        | 766 KB    |            |   0% pillow-10.2.0        | 766 KB    | ########## | 100% pillow-10.2.0        | 766 KB    | ########## | 100% 
+sympy-1.12           | 10.5 MB   |            |   0% sympy-1.12           | 10.5 MB   | ########## | 100% sympy-1.12           | 10.5 MB   | ########## | 100% 
+torchtriton-2.1.0    | 90.9 MB   |            |   0% torchtriton-2.1.0    | 90.9 MB   | 7          |   7% torchtriton-2.1.0    | 90.9 MB   | ##         |  21% torchtriton-2.1.0    | 90.9 MB   | ###4       |  34% torchtriton-2.1.0    | 90.9 MB   | #####5     |  55% torchtriton-2.1.0    | 90.9 MB   | #######    |  70% torchtriton-2.1.0    | 90.9 MB   | #########2 |  92% torchtriton-2.1.0    | 90.9 MB   | ########## | 100% 
+mpmath-1.3.0         | 832 KB    |            |   0% mpmath-1.3.0         | 832 KB    | ########## | 100% mpmath-1.3.0         | 832 KB    | ########## | 100% 
+cuda-cupti-11.8.87   | 25.3 MB   |            |   0% cuda-cupti-11.8.87   | 25.3 MB   | ##3        |  24% cuda-cupti-11.8.87   | 25.3 MB   | #########6 |  96% cuda-cupti-11.8.87   | 25.3 MB   | ########## | 100% 
+mkl_random-1.2.4     | 327 KB    |            |   0% mkl_random-1.2.4     | 327 KB    | ########## | 100% mkl_random-1.2.4     | 327 KB    | ########## | 100% 
+certifi-2024.2.2     | 159 KB    |            |   0% certifi-2024.2.2     | 159 KB    | ########## | 100% certifi-2024.2.2     | 159 KB    | ########## | 100% 
+pytorch-2.1.0        | 1.46 GB   |            |   0% pytorch-2.1.0        | 1.46 GB   |            |   1% pytorch-2.1.0        | 1.46 GB   | 1          |   2% pytorch-2.1.0        | 1.46 GB   | 2          |   3% pytorch-2.1.0        | 1.46 GB   | 4          |   5% pytorch-2.1.0        | 1.46 GB   | 5          |   6% pytorch-2.1.0        | 1.46 GB   | 6          |   7% pytorch-2.1.0        | 1.46 GB   | 8          |   8% pytorch-2.1.0        | 1.46 GB   | 9          |  10% pytorch-2.1.0        | 1.46 GB   | #1         |  11% pytorch-2.1.0        | 1.46 GB   | #2         |  13% pytorch-2.1.0        | 1.46 GB   | #4         |  14% pytorch-2.1.0        | 1.46 GB   | #6         |  16% pytorch-2.1.0        | 1.46 GB   | #7         |  18% pytorch-2.1.0        | 1.46 GB   | #9         |  20% pytorch-2.1.0        | 1.46 GB   | ##1        |  21% pytorch-2.1.0        | 1.46 GB   | ##3        |  23% pytorch-2.1.0        | 1.46 GB   | ##4        |  25% pytorch-2.1.0        | 1.46 GB   | ##6        |  26% pytorch-2.1.0        | 1.46 GB   | ##8        |  28% pytorch-2.1.0        | 1.46 GB   | ###        |  30% pytorch-2.1.0        | 1.46 GB   | ###1       |  31% pytorch-2.1.0        | 1.46 GB   | ###2       |  33% pytorch-2.1.0        | 1.46 GB   | ###4       |  34% pytorch-2.1.0        | 1.46 GB   | ###5       |  36% pytorch-2.1.0        | 1.46 GB   | ###7       |  37% pytorch-2.1.0        | 1.46 GB   | ###8       |  39% pytorch-2.1.0        | 1.46 GB   | ###9       |  40% pytorch-2.1.0        | 1.46 GB   | ####1      |  41% pytorch-2.1.0        | 1.46 GB   | ####2      |  42% pytorch-2.1.0        | 1.46 GB   | ####4      |  44% pytorch-2.1.0        | 1.46 GB   | ####6      |  47% pytorch-2.1.0        | 1.46 GB   | ####8      |  48% pytorch-2.1.0        | 1.46 GB   | ####9      |  50% pytorch-2.1.0        | 1.46 GB   | #####1     |  51% pytorch-2.1.0        | 1.46 GB   | #####2     |  53% pytorch-2.1.0        | 1.46 GB   | #####4     |  54% pytorch-2.1.0        | 1.46 GB   | #####5     |  55% pytorch-2.1.0        | 1.46 GB   | #####6     |  57% pytorch-2.1.0        | 1.46 GB   | #####8     |  59% pytorch-2.1.0        | 1.46 GB   | ######     |  60% pytorch-2.1.0        | 1.46 GB   | ######1    |  62% pytorch-2.1.0        | 1.46 GB   | ######2    |  63% pytorch-2.1.0        | 1.46 GB   | ######4    |  64% pytorch-2.1.0        | 1.46 GB   | ######5    |  66% pytorch-2.1.0        | 1.46 GB   | ######7    |  68% pytorch-2.1.0        | 1.46 GB   | ######9    |  69% pytorch-2.1.0        | 1.46 GB   | #######    |  71% pytorch-2.1.0        | 1.46 GB   | #######1   |  72% pytorch-2.1.0        | 1.46 GB   | #######3   |  73% pytorch-2.1.0        | 1.46 GB   | #######4   |  75% pytorch-2.1.0        | 1.46 GB   | #######7   |  77% pytorch-2.1.0        | 1.46 GB   | #######8   |  79% pytorch-2.1.0        | 1.46 GB   | ########   |  81% pytorch-2.1.0        | 1.46 GB   | ########2  |  82% pytorch-2.1.0        | 1.46 GB   | ########3  |  84% pytorch-2.1.0        | 1.46 GB   | ########5  |  85% pytorch-2.1.0        | 1.46 GB   | ########6  |  87% pytorch-2.1.0        | 1.46 GB   | ########8  |  88% pytorch-2.1.0        | 1.46 GB   | ########9  |  90% pytorch-2.1.0        | 1.46 GB   | #########  |  91% pytorch-2.1.0        | 1.46 GB   | #########2 |  92% pytorch-2.1.0        | 1.46 GB   | #########3 |  94% pytorch-2.1.0        | 1.46 GB   | #########4 |  95% pytorch-2.1.0        | 1.46 GB   | #########6 |  96% pytorch-2.1.0        | 1.46 GB   | #########7 |  98% pytorch-2.1.0        | 1.46 GB   | #########9 | 100% pytorch-2.1.0        | 1.46 GB   | ########## | 100% 
+idna-3.4             | 93 KB     |            |   0% idna-3.4             | 93 KB     | ########## | 100% idna-3.4             | 93 KB     | ########## | 100% 
+libcusolver-11.4.1.4 | 96.5 MB   |            |   0% libcusolver-11.4.1.4 | 96.5 MB   | #3         |  13% libcusolver-11.4.1.4 | 96.5 MB   | ####3      |  44% libcusolver-11.4.1.4 | 96.5 MB   | #######1   |  72% libcusolver-11.4.1.4 | 96.5 MB   | #########7 |  97% libcusolver-11.4.1.4 | 96.5 MB   | ########## | 100% 
+networkx-3.1         | 2.7 MB    |            |   0% networkx-3.1         | 2.7 MB    | ########## | 100% networkx-3.1         | 2.7 MB    | ########## | 100% 
+pysocks-1.7.1        | 31 KB     |            |   0% pysocks-1.7.1        | 31 KB     | ########## | 100% pysocks-1.7.1        | 31 KB     | ########## | 100% 
+libnvjpeg-11.9.0.86  | 2.4 MB    |            |   0% libnvjpeg-11.9.0.86  | 2.4 MB    | ########## | 100% libnvjpeg-11.9.0.86  | 2.4 MB    | ########## | 100% 
+typing_extensions-4. | 54 KB     |            |   0% typing_extensions-4. | 54 KB     | ########## | 100% typing_extensions-4. | 54 KB     | ########## | 100% 
+requests-2.31.0      | 96 KB     |            |   0% requests-2.31.0      | 96 KB     | ########## | 100% requests-2.31.0      | 96 KB     | ########## | 100% 
+torchaudio-2.1.0     | 6.0 MB    |            |   0% torchaudio-2.1.0     | 6.0 MB    | ########## | 100% torchaudio-2.1.0     | 6.0 MB    | ########## | 100% 
+libnpp-11.8.0.86     | 147.8 MB  |            |   0% libnpp-11.8.0.86     | 147.8 MB  | #          |  10% libnpp-11.8.0.86     | 147.8 MB  | ###        |  31% libnpp-11.8.0.86     | 147.8 MB  | ####8      |  49% libnpp-11.8.0.86     | 147.8 MB  | ######5    |  65% libnpp-11.8.0.86     | 147.8 MB  | ########6  |  86% libnpp-11.8.0.86     | 147.8 MB  | ########## | 100% 
+brotli-python-1.0.9  | 329 KB    |            |   0% brotli-python-1.0.9  | 329 KB    | ########## | 100% brotli-python-1.0.9  | 329 KB    | ########## | 100% 
+cuda-libraries-11.8. | 1 KB      |            |   0% cuda-libraries-11.8. | 1 KB      | ########## | 100% 
+libcublas-11.11.3.6  | 364.0 MB  |            |   0% libcublas-11.11.3.6  | 364.0 MB  | 3          |   4% libcublas-11.11.3.6  | 364.0 MB  | 9          |   9% libcublas-11.11.3.6  | 364.0 MB  | #4         |  14% libcublas-11.11.3.6  | 364.0 MB  | #8         |  19% libcublas-11.11.3.6  | 364.0 MB  | ##2        |  23% libcublas-11.11.3.6  | 364.0 MB  | ##8        |  28% libcublas-11.11.3.6  | 364.0 MB  | ###2       |  33% libcublas-11.11.3.6  | 364.0 MB  | ###7       |  37% libcublas-11.11.3.6  | 364.0 MB  | ####1      |  42% libcublas-11.11.3.6  | 364.0 MB  | ####6      |  46% libcublas-11.11.3.6  | 364.0 MB  | #####2     |  53% libcublas-11.11.3.6  | 364.0 MB  | #####7     |  58% libcublas-11.11.3.6  | 364.0 MB  | ######3    |  64% libcublas-11.11.3.6  | 364.0 MB  | ######8    |  68% libcublas-11.11.3.6  | 364.0 MB  | #######5   |  76% libcublas-11.11.3.6  | 364.0 MB  | ########4  |  84% libcublas-11.11.3.6  | 364.0 MB  | #########  |  91% libcublas-11.11.3.6  | 364.0 MB  | #########7 |  98% libcublas-11.11.3.6  | 364.0 MB  | ########## | 100% 
+filelock-3.13.1      | 21 KB     |            |   0% filelock-3.13.1      | 21 KB     | ########## | 100% filelock-3.13.1      | 21 KB     | ########## | 100% 
+mkl_fft-1.3.8        | 221 KB    |            |   0% mkl_fft-1.3.8        | 221 KB    | ########## | 100% mkl_fft-1.3.8        | 221 KB    | ########## | 100% 
+gmpy2-2.1.2          | 191 KB    |            |   0% gmpy2-2.1.2          | 191 KB    | ########## | 100% gmpy2-2.1.2          | 191 KB    | ########## | 100% 
+jinja2-3.1.3         | 270 KB    |            |   0% jinja2-3.1.3         | 270 KB    | ########## | 100% jinja2-3.1.3         | 270 KB    | ########## | 100% 
+cuda-nvrtc-11.8.89   | 19.1 MB   |            |   0% cuda-nvrtc-11.8.89   | 19.1 MB   | #######6   |  76% cuda-nvrtc-11.8.89   | 19.1 MB   | ########## | 100% 
+pytorch-cuda-11.8    | 3 KB      |            |   0% pytorch-cuda-11.8    | 3 KB      | ########## | 100% pytorch-cuda-11.8    | 3 KB      | ########## | 100% 
+torchvision-0.16.0   | 12.7 MB   |            |   0% torchvision-0.16.0   | 12.7 MB   | ########## | 100% torchvision-0.16.0   | 12.7 MB   | ########## | 100% 
+markupsafe-2.1.3     | 22 KB     |            |   0% markupsafe-2.1.3     | 22 KB     | ########## | 100% markupsafe-2.1.3     | 22 KB     | ########## | 100% 
+pyyaml-6.0.1         | 192 KB    |            |   0% pyyaml-6.0.1         | 192 KB    | ########## | 100% pyyaml-6.0.1         | 192 KB    | ########## | 100% 
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
+Collecting tqdm (from -r requirements.txt (line 1))
+  Using cached tqdm-4.66.2-py3-none-any.whl.metadata (57 kB)
+Collecting rich (from -r requirements.txt (line 2))
+  Using cached rich-13.7.1-py3-none-any.whl.metadata (18 kB)
+Collecting ninja (from -r requirements.txt (line 3))
+  Using cached ninja-1.11.1.1-py2.py3-none-manylinux1_x86_64.manylinux_2_5_x86_64.whl.metadata (5.3 kB)
+Requirement already satisfied: numpy in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from -r requirements.txt (line 4)) (1.24.3)
+Collecting pandas (from -r requirements.txt (line 5))
+  Using cached pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (18 kB)
+Collecting scipy (from -r requirements.txt (line 6))
+  Using cached scipy-1.10.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (58 kB)
+Collecting scikit-learn (from -r requirements.txt (line 7))
+  Using cached scikit_learn-1.3.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+Collecting matplotlib (from -r requirements.txt (line 8))
+  Using cached matplotlib-3.7.5-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata (5.7 kB)
+Collecting opencv-python (from -r requirements.txt (line 9))
+  Using cached opencv_python-4.9.0.80-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (20 kB)
+Collecting imageio (from -r requirements.txt (line 10))
+  Using cached imageio-2.34.0-py3-none-any.whl.metadata (4.9 kB)
+Collecting imageio-ffmpeg (from -r requirements.txt (line 11))
+  Using cached imageio_ffmpeg-0.4.9-py3-none-manylinux2010_x86_64.whl.metadata (1.7 kB)
+Collecting omegaconf (from -r requirements.txt (line 12))
+  Using cached omegaconf-2.3.0-py3-none-any.whl.metadata (3.9 kB)
+Requirement already satisfied: torch in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from -r requirements.txt (line 14)) (2.1.0)
+Collecting einops (from -r requirements.txt (line 15))
+  Using cached einops-0.7.0-py3-none-any.whl.metadata (13 kB)
+Collecting plyfile (from -r requirements.txt (line 16))
+  Using cached plyfile-1.0.3-py3-none-any.whl.metadata (2.1 kB)
+Collecting pygltflib (from -r requirements.txt (line 17))
+  Using cached pygltflib-1.16.2-py3-none-any.whl
+Collecting dearpygui (from -r requirements.txt (line 20))
+  Using cached dearpygui-1.11.1-cp38-cp38-manylinux1_x86_64.whl.metadata (12 kB)
+Collecting huggingface_hub (from -r requirements.txt (line 23))
+  Using cached huggingface_hub-0.22.2-py3-none-any.whl.metadata (12 kB)
+Collecting diffusers (from -r requirements.txt (line 24))
+  Using cached diffusers-0.27.2-py3-none-any.whl.metadata (18 kB)
+Collecting accelerate (from -r requirements.txt (line 25))
+  Using cached accelerate-0.29.2-py3-none-any.whl.metadata (18 kB)
+Collecting transformers (from -r requirements.txt (line 26))
+  Using cached transformers-4.39.3-py3-none-any.whl.metadata (134 kB)
+Collecting xatlas (from -r requirements.txt (line 29))
+  Using cached xatlas-0.0.9-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+Collecting trimesh (from -r requirements.txt (line 30))
+  Using cached trimesh-4.3.0-py3-none-any.whl.metadata (18 kB)
+Collecting PyMCubes (from -r requirements.txt (line 31))
+  Using cached PyMCubes-0.1.4-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (863 bytes)
+Collecting pymeshlab (from -r requirements.txt (line 32))
+  Using cached pymeshlab-2022.2.post3-cp38-cp38-manylinux1_x86_64.whl.metadata (3.4 kB)
+Collecting gradio (from -r requirements.txt (line 37))
+  Using cached gradio-4.26.0-py3-none-any.whl.metadata (15 kB)
+Collecting rembg[cli,gpu] (from -r requirements.txt (line 34))
+  Using cached rembg-2.0.56-py3-none-any.whl.metadata (15 kB)
+Collecting markdown-it-py>=2.2.0 (from rich->-r requirements.txt (line 2))
+  Using cached markdown_it_py-3.0.0-py3-none-any.whl.metadata (6.9 kB)
+Collecting pygments<3.0.0,>=2.13.0 (from rich->-r requirements.txt (line 2))
+  Using cached pygments-2.17.2-py3-none-any.whl.metadata (2.6 kB)
+Requirement already satisfied: typing-extensions<5.0,>=4.0.0 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from rich->-r requirements.txt (line 2)) (4.9.0)
+Collecting python-dateutil>=2.8.2 (from pandas->-r requirements.txt (line 5))
+  Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting pytz>=2020.1 (from pandas->-r requirements.txt (line 5))
+  Using cached pytz-2024.1-py2.py3-none-any.whl.metadata (22 kB)
+Collecting tzdata>=2022.1 (from pandas->-r requirements.txt (line 5))
+  Using cached tzdata-2024.1-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting joblib>=1.1.1 (from scikit-learn->-r requirements.txt (line 7))
+  Using cached joblib-1.4.0-py3-none-any.whl.metadata (5.4 kB)
+Collecting threadpoolctl>=2.0.0 (from scikit-learn->-r requirements.txt (line 7))
+  Using cached threadpoolctl-3.4.0-py3-none-any.whl.metadata (13 kB)
+Collecting contourpy>=1.0.1 (from matplotlib->-r requirements.txt (line 8))
+  Using cached contourpy-1.1.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.9 kB)
+Collecting cycler>=0.10 (from matplotlib->-r requirements.txt (line 8))
+  Using cached cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting fonttools>=4.22.0 (from matplotlib->-r requirements.txt (line 8))
+  Using cached fonttools-4.51.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (159 kB)
+Collecting kiwisolver>=1.0.1 (from matplotlib->-r requirements.txt (line 8))
+  Using cached kiwisolver-1.4.5-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl.metadata (6.4 kB)
+Collecting packaging>=20.0 (from matplotlib->-r requirements.txt (line 8))
+  Using cached packaging-24.0-py3-none-any.whl.metadata (3.2 kB)
+Requirement already satisfied: pillow>=6.2.0 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from matplotlib->-r requirements.txt (line 8)) (10.2.0)
+Collecting pyparsing>=2.3.1 (from matplotlib->-r requirements.txt (line 8))
+  Using cached pyparsing-3.1.2-py3-none-any.whl.metadata (5.1 kB)
+Collecting importlib-resources>=3.2.0 (from matplotlib->-r requirements.txt (line 8))
+  Using cached importlib_resources-6.4.0-py3-none-any.whl.metadata (3.9 kB)
+Requirement already satisfied: setuptools in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from imageio-ffmpeg->-r requirements.txt (line 11)) (68.2.2)
+Collecting antlr4-python3-runtime==4.9.* (from omegaconf->-r requirements.txt (line 12))
+  Using cached antlr4_python3_runtime-4.9.3-py3-none-any.whl
+Requirement already satisfied: PyYAML>=5.1.0 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from omegaconf->-r requirements.txt (line 12)) (6.0.1)
+Requirement already satisfied: filelock in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from torch->-r requirements.txt (line 14)) (3.13.1)
+Requirement already satisfied: sympy in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from torch->-r requirements.txt (line 14)) (1.12)
+Requirement already satisfied: networkx in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from torch->-r requirements.txt (line 14)) (3.1)
+Requirement already satisfied: jinja2 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from torch->-r requirements.txt (line 14)) (3.1.3)
+Collecting fsspec (from torch->-r requirements.txt (line 14))
+  Using cached fsspec-2024.3.1-py3-none-any.whl.metadata (6.8 kB)
+Collecting dataclasses-json>=0.0.25 (from pygltflib->-r requirements.txt (line 17))
+  Using cached dataclasses_json-0.6.4-py3-none-any.whl.metadata (25 kB)
+Collecting deprecated (from pygltflib->-r requirements.txt (line 17))
+  Using cached Deprecated-1.2.14-py2.py3-none-any.whl.metadata (5.4 kB)
+Requirement already satisfied: requests in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from huggingface_hub->-r requirements.txt (line 23)) (2.31.0)
+Collecting importlib-metadata (from diffusers->-r requirements.txt (line 24))
+  Using cached importlib_metadata-7.1.0-py3-none-any.whl.metadata (4.7 kB)
+Collecting regex!=2019.12.17 (from diffusers->-r requirements.txt (line 24))
+  Using cached regex-2023.12.25-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (40 kB)
+Collecting safetensors>=0.3.1 (from diffusers->-r requirements.txt (line 24))
+  Using cached safetensors-0.4.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.8 kB)
+Collecting psutil (from accelerate->-r requirements.txt (line 25))
+  Using cached psutil-5.9.8-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (21 kB)
+Collecting tokenizers<0.19,>=0.14 (from transformers->-r requirements.txt (line 26))
+  Using cached tokenizers-0.15.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.7 kB)
+Collecting jsonschema (from rembg[cli,gpu]->-r requirements.txt (line 34))
+  Using cached jsonschema-4.21.1-py3-none-any.whl.metadata (7.8 kB)
+Collecting onnxruntime (from rembg[cli,gpu]->-r requirements.txt (line 34))
+  Using cached onnxruntime-1.17.1-cp38-cp38-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (4.3 kB)
+Collecting opencv-python-headless (from rembg[cli,gpu]->-r requirements.txt (line 34))
+  Using cached opencv_python_headless-4.9.0.80-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (20 kB)
+Collecting pooch (from rembg[cli,gpu]->-r requirements.txt (line 34))
+  Using cached pooch-1.8.1-py3-none-any.whl.metadata (9.5 kB)
+Collecting pymatting (from rembg[cli,gpu]->-r requirements.txt (line 34))
+  Using cached PyMatting-1.1.12-py3-none-any.whl.metadata (7.4 kB)
+Collecting scikit-image (from rembg[cli,gpu]->-r requirements.txt (line 34))
+  Using cached scikit_image-0.21.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (14 kB)
+Collecting aiohttp (from rembg[cli,gpu]->-r requirements.txt (line 34))
+  Using cached aiohttp-3.9.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.4 kB)
+Collecting asyncer (from rembg[cli,gpu]->-r requirements.txt (line 34))
+  Using cached asyncer-0.0.5-py3-none-any.whl.metadata (6.7 kB)
+Collecting click (from rembg[cli,gpu]->-r requirements.txt (line 34))
+  Using cached click-8.1.7-py3-none-any.whl.metadata (3.0 kB)
+Collecting fastapi (from rembg[cli,gpu]->-r requirements.txt (line 34))
+  Using cached fastapi-0.110.1-py3-none-any.whl.metadata (24 kB)
+Collecting filetype (from rembg[cli,gpu]->-r requirements.txt (line 34))
+  Using cached filetype-1.2.0-py2.py3-none-any.whl.metadata (6.5 kB)
+Collecting python-multipart (from rembg[cli,gpu]->-r requirements.txt (line 34))
+  Using cached python_multipart-0.0.9-py3-none-any.whl.metadata (2.5 kB)
+Collecting uvicorn (from rembg[cli,gpu]->-r requirements.txt (line 34))
+  Using cached uvicorn-0.29.0-py3-none-any.whl.metadata (6.3 kB)
+Collecting watchdog (from rembg[cli,gpu]->-r requirements.txt (line 34))
+  Using cached watchdog-4.0.0-py3-none-manylinux2014_x86_64.whl.metadata (37 kB)
+Collecting onnxruntime-gpu (from rembg[cli,gpu]->-r requirements.txt (line 34))
+  Using cached onnxruntime_gpu-1.17.1-cp38-cp38-manylinux_2_28_x86_64.whl.metadata (4.3 kB)
+Collecting aiofiles<24.0,>=22.0 (from gradio->-r requirements.txt (line 37))
+  Using cached aiofiles-23.2.1-py3-none-any.whl.metadata (9.7 kB)
+Collecting altair<6.0,>=4.2.0 (from gradio->-r requirements.txt (line 37))
+  Using cached altair-5.3.0-py3-none-any.whl.metadata (9.2 kB)
+Collecting ffmpy (from gradio->-r requirements.txt (line 37))
+  Using cached ffmpy-0.3.2-py3-none-any.whl
+Collecting gradio-client==0.15.1 (from gradio->-r requirements.txt (line 37))
+  Using cached gradio_client-0.15.1-py3-none-any.whl.metadata (7.1 kB)
+Collecting httpx>=0.24.1 (from gradio->-r requirements.txt (line 37))
+  Using cached httpx-0.27.0-py3-none-any.whl.metadata (7.2 kB)
+Requirement already satisfied: markupsafe~=2.0 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from gradio->-r requirements.txt (line 37)) (2.1.3)
+Collecting orjson~=3.0 (from gradio->-r requirements.txt (line 37))
+  Using cached orjson-3.10.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (49 kB)
+Collecting pydantic>=2.0 (from gradio->-r requirements.txt (line 37))
+  Using cached pydantic-2.6.4-py3-none-any.whl.metadata (85 kB)
+Collecting pydub (from gradio->-r requirements.txt (line 37))
+  Using cached pydub-0.25.1-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting ruff>=0.2.2 (from gradio->-r requirements.txt (line 37))
+  Using cached ruff-0.3.5-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (23 kB)
+Collecting semantic-version~=2.0 (from gradio->-r requirements.txt (line 37))
+  Using cached semantic_version-2.10.0-py2.py3-none-any.whl.metadata (9.7 kB)
+Collecting tomlkit==0.12.0 (from gradio->-r requirements.txt (line 37))
+  Using cached tomlkit-0.12.0-py3-none-any.whl.metadata (2.7 kB)
+Collecting typer<1.0,>=0.9 (from typer[all]<1.0,>=0.9; sys_platform != "emscripten"->gradio->-r requirements.txt (line 37))
+  Using cached typer-0.12.3-py3-none-any.whl.metadata (15 kB)
+Collecting websockets<12.0,>=10.0 (from gradio-client==0.15.1->gradio->-r requirements.txt (line 37))
+  Using cached websockets-11.0.3-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.6 kB)
+Collecting toolz (from altair<6.0,>=4.2.0->gradio->-r requirements.txt (line 37))
+  Using cached toolz-0.12.1-py3-none-any.whl.metadata (5.1 kB)
+Collecting marshmallow<4.0.0,>=3.18.0 (from dataclasses-json>=0.0.25->pygltflib->-r requirements.txt (line 17))
+  Using cached marshmallow-3.21.1-py3-none-any.whl.metadata (7.2 kB)
+Collecting typing-inspect<1,>=0.4.0 (from dataclasses-json>=0.0.25->pygltflib->-r requirements.txt (line 17))
+  Using cached typing_inspect-0.9.0-py3-none-any.whl.metadata (1.5 kB)
+Collecting anyio (from httpx>=0.24.1->gradio->-r requirements.txt (line 37))
+  Using cached anyio-4.3.0-py3-none-any.whl.metadata (4.6 kB)
+Requirement already satisfied: certifi in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from httpx>=0.24.1->gradio->-r requirements.txt (line 37)) (2024.2.2)
+Collecting httpcore==1.* (from httpx>=0.24.1->gradio->-r requirements.txt (line 37))
+  Using cached httpcore-1.0.5-py3-none-any.whl.metadata (20 kB)
+Requirement already satisfied: idna in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from httpx>=0.24.1->gradio->-r requirements.txt (line 37)) (3.4)
+Collecting sniffio (from httpx>=0.24.1->gradio->-r requirements.txt (line 37))
+  Using cached sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting h11<0.15,>=0.13 (from httpcore==1.*->httpx>=0.24.1->gradio->-r requirements.txt (line 37))
+  Using cached h11-0.14.0-py3-none-any.whl.metadata (8.2 kB)
+Collecting zipp>=3.1.0 (from importlib-resources>=3.2.0->matplotlib->-r requirements.txt (line 8))
+  Using cached zipp-3.18.1-py3-none-any.whl.metadata (3.5 kB)
+Collecting attrs>=22.2.0 (from jsonschema->rembg[cli,gpu]->-r requirements.txt (line 34))
+  Using cached attrs-23.2.0-py3-none-any.whl.metadata (9.5 kB)
+Collecting jsonschema-specifications>=2023.03.6 (from jsonschema->rembg[cli,gpu]->-r requirements.txt (line 34))
+  Using cached jsonschema_specifications-2023.12.1-py3-none-any.whl.metadata (3.0 kB)
+Collecting pkgutil-resolve-name>=1.3.10 (from jsonschema->rembg[cli,gpu]->-r requirements.txt (line 34))
+  Using cached pkgutil_resolve_name-1.3.10-py3-none-any.whl.metadata (624 bytes)
+Collecting referencing>=0.28.4 (from jsonschema->rembg[cli,gpu]->-r requirements.txt (line 34))
+  Using cached referencing-0.34.0-py3-none-any.whl.metadata (2.8 kB)
+Collecting rpds-py>=0.7.1 (from jsonschema->rembg[cli,gpu]->-r requirements.txt (line 34))
+  Using cached rpds_py-0.18.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich->-r requirements.txt (line 2))
+  Using cached mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Collecting annotated-types>=0.4.0 (from pydantic>=2.0->gradio->-r requirements.txt (line 37))
+  Using cached annotated_types-0.6.0-py3-none-any.whl.metadata (12 kB)
+Collecting pydantic-core==2.16.3 (from pydantic>=2.0->gradio->-r requirements.txt (line 37))
+  Using cached pydantic_core-2.16.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.5 kB)
+Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas->-r requirements.txt (line 5))
+  Using cached six-1.16.0-py2.py3-none-any.whl.metadata (1.8 kB)
+Collecting shellingham>=1.3.0 (from typer<1.0,>=0.9->typer[all]<1.0,>=0.9; sys_platform != "emscripten"->gradio->-r requirements.txt (line 37))
+  Using cached shellingham-1.5.4-py2.py3-none-any.whl.metadata (3.5 kB)
+WARNING: typer 0.12.3 does not provide the extra 'all'
+Collecting aiosignal>=1.1.2 (from aiohttp->rembg[cli,gpu]->-r requirements.txt (line 34))
+  Using cached aiosignal-1.3.1-py3-none-any.whl.metadata (4.0 kB)
+Collecting frozenlist>=1.1.1 (from aiohttp->rembg[cli,gpu]->-r requirements.txt (line 34))
+  Using cached frozenlist-1.4.1-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (12 kB)
+Collecting multidict<7.0,>=4.5 (from aiohttp->rembg[cli,gpu]->-r requirements.txt (line 34))
+  Using cached multidict-6.0.5-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.2 kB)
+Collecting yarl<2.0,>=1.0 (from aiohttp->rembg[cli,gpu]->-r requirements.txt (line 34))
+  Using cached yarl-1.9.4-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (31 kB)
+Collecting async-timeout<5.0,>=4.0 (from aiohttp->rembg[cli,gpu]->-r requirements.txt (line 34))
+  Using cached async_timeout-4.0.3-py3-none-any.whl.metadata (4.2 kB)
+Collecting wrapt<2,>=1.10 (from deprecated->pygltflib->-r requirements.txt (line 17))
+  Using cached wrapt-1.16.0-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.6 kB)
+Collecting starlette<0.38.0,>=0.37.2 (from fastapi->rembg[cli,gpu]->-r requirements.txt (line 34))
+  Using cached starlette-0.37.2-py3-none-any.whl.metadata (5.9 kB)
+Collecting coloredlogs (from onnxruntime->rembg[cli,gpu]->-r requirements.txt (line 34))
+  Using cached coloredlogs-15.0.1-py2.py3-none-any.whl.metadata (12 kB)
+Collecting flatbuffers (from onnxruntime->rembg[cli,gpu]->-r requirements.txt (line 34))
+  Using cached flatbuffers-24.3.25-py2.py3-none-any.whl.metadata (850 bytes)
+Collecting protobuf (from onnxruntime->rembg[cli,gpu]->-r requirements.txt (line 34))
+  Using cached protobuf-5.26.1-cp37-abi3-manylinux2014_x86_64.whl.metadata (592 bytes)
+Collecting platformdirs>=2.5.0 (from pooch->rembg[cli,gpu]->-r requirements.txt (line 34))
+  Using cached platformdirs-4.2.0-py3-none-any.whl.metadata (11 kB)
+Requirement already satisfied: charset-normalizer<4,>=2 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from requests->huggingface_hub->-r requirements.txt (line 23)) (2.0.4)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from requests->huggingface_hub->-r requirements.txt (line 23)) (2.1.0)
+Collecting numba!=0.49.0 (from pymatting->rembg[cli,gpu]->-r requirements.txt (line 34))
+  Using cached numba-0.58.1-cp38-cp38-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.7 kB)
+Collecting tifffile>=2022.8.12 (from scikit-image->rembg[cli,gpu]->-r requirements.txt (line 34))
+  Using cached tifffile-2023.7.10-py3-none-any.whl.metadata (31 kB)
+Collecting PyWavelets>=1.1.1 (from scikit-image->rembg[cli,gpu]->-r requirements.txt (line 34))
+  Using cached PyWavelets-1.4.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.9 kB)
+Collecting lazy_loader>=0.2 (from scikit-image->rembg[cli,gpu]->-r requirements.txt (line 34))
+  Using cached lazy_loader-0.4-py3-none-any.whl.metadata (7.6 kB)
+Requirement already satisfied: mpmath>=0.19 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from sympy->torch->-r requirements.txt (line 14)) (1.3.0)
+Collecting exceptiongroup>=1.0.2 (from anyio->httpx>=0.24.1->gradio->-r requirements.txt (line 37))
+  Using cached exceptiongroup-1.2.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting llvmlite<0.42,>=0.41.0dev0 (from numba!=0.49.0->pymatting->rembg[cli,gpu]->-r requirements.txt (line 34))
+  Using cached llvmlite-0.41.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.8 kB)
+Collecting mypy-extensions>=0.3.0 (from typing-inspect<1,>=0.4.0->dataclasses-json>=0.0.25->pygltflib->-r requirements.txt (line 17))
+  Using cached mypy_extensions-1.0.0-py3-none-any.whl.metadata (1.1 kB)
+Collecting humanfriendly>=9.1 (from coloredlogs->onnxruntime->rembg[cli,gpu]->-r requirements.txt (line 34))
+  Using cached humanfriendly-10.0-py2.py3-none-any.whl.metadata (9.2 kB)
+Using cached tqdm-4.66.2-py3-none-any.whl (78 kB)
+Using cached rich-13.7.1-py3-none-any.whl (240 kB)
+Using cached ninja-1.11.1.1-py2.py3-none-manylinux1_x86_64.manylinux_2_5_x86_64.whl (307 kB)
+Using cached pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)
+Using cached scipy-1.10.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (34.5 MB)
+Using cached scikit_learn-1.3.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (11.1 MB)
+Using cached matplotlib-3.7.5-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (9.2 MB)
+Using cached opencv_python-4.9.0.80-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (62.2 MB)
+Using cached imageio-2.34.0-py3-none-any.whl (313 kB)
+Using cached imageio_ffmpeg-0.4.9-py3-none-manylinux2010_x86_64.whl (26.9 MB)
+Using cached omegaconf-2.3.0-py3-none-any.whl (79 kB)
+Using cached einops-0.7.0-py3-none-any.whl (44 kB)
+Using cached plyfile-1.0.3-py3-none-any.whl (23 kB)
+Using cached dearpygui-1.11.1-cp38-cp38-manylinux1_x86_64.whl (2.8 MB)
+Using cached huggingface_hub-0.22.2-py3-none-any.whl (388 kB)
+Using cached diffusers-0.27.2-py3-none-any.whl (2.0 MB)
+Using cached accelerate-0.29.2-py3-none-any.whl (297 kB)
+Using cached transformers-4.39.3-py3-none-any.whl (8.8 MB)
+Using cached xatlas-0.0.9-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (229 kB)
+Using cached trimesh-4.3.0-py3-none-any.whl (693 kB)
+Using cached PyMCubes-0.1.4-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (276 kB)
+Using cached pymeshlab-2022.2.post3-cp38-cp38-manylinux1_x86_64.whl (59.2 MB)
+Using cached gradio-4.26.0-py3-none-any.whl (17.1 MB)
+Using cached gradio_client-0.15.1-py3-none-any.whl (313 kB)
+Using cached tomlkit-0.12.0-py3-none-any.whl (37 kB)
+Using cached aiofiles-23.2.1-py3-none-any.whl (15 kB)
+Using cached altair-5.3.0-py3-none-any.whl (857 kB)
+Using cached contourpy-1.1.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (301 kB)
+Using cached cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Using cached dataclasses_json-0.6.4-py3-none-any.whl (28 kB)
+Using cached fonttools-4.51.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.7 MB)
+Using cached fsspec-2024.3.1-py3-none-any.whl (171 kB)
+Using cached httpx-0.27.0-py3-none-any.whl (75 kB)
+Using cached httpcore-1.0.5-py3-none-any.whl (77 kB)
+Using cached importlib_resources-6.4.0-py3-none-any.whl (38 kB)
+Using cached joblib-1.4.0-py3-none-any.whl (301 kB)
+Using cached jsonschema-4.21.1-py3-none-any.whl (85 kB)
+Using cached kiwisolver-1.4.5-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl (1.2 MB)
+Using cached markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
+Using cached orjson-3.10.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (144 kB)
+Using cached packaging-24.0-py3-none-any.whl (53 kB)
+Using cached pydantic-2.6.4-py3-none-any.whl (394 kB)
+Using cached pydantic_core-2.16.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+Using cached pygments-2.17.2-py3-none-any.whl (1.2 MB)
+Using cached pyparsing-3.1.2-py3-none-any.whl (103 kB)
+Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Using cached python_multipart-0.0.9-py3-none-any.whl (22 kB)
+Using cached pytz-2024.1-py2.py3-none-any.whl (505 kB)
+Using cached regex-2023.12.25-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (777 kB)
+Using cached ruff-0.3.5-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (8.7 MB)
+Using cached safetensors-0.4.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.3 MB)
+Using cached semantic_version-2.10.0-py2.py3-none-any.whl (15 kB)
+Using cached threadpoolctl-3.4.0-py3-none-any.whl (17 kB)
+Using cached tokenizers-0.15.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.6 MB)
+Using cached typer-0.12.3-py3-none-any.whl (47 kB)
+Using cached click-8.1.7-py3-none-any.whl (97 kB)
+Using cached tzdata-2024.1-py2.py3-none-any.whl (345 kB)
+Using cached uvicorn-0.29.0-py3-none-any.whl (60 kB)
+Using cached aiohttp-3.9.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.3 MB)
+Using cached asyncer-0.0.5-py3-none-any.whl (8.4 kB)
+Using cached Deprecated-1.2.14-py2.py3-none-any.whl (9.6 kB)
+Using cached fastapi-0.110.1-py3-none-any.whl (91 kB)
+Using cached filetype-1.2.0-py2.py3-none-any.whl (19 kB)
+Using cached importlib_metadata-7.1.0-py3-none-any.whl (24 kB)
+Using cached onnxruntime-1.17.1-cp38-cp38-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.8 MB)
+Using cached onnxruntime_gpu-1.17.1-cp38-cp38-manylinux_2_28_x86_64.whl (192.1 MB)
+Using cached opencv_python_headless-4.9.0.80-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (49.6 MB)
+Using cached pooch-1.8.1-py3-none-any.whl (62 kB)
+Using cached psutil-5.9.8-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (288 kB)
+Using cached pydub-0.25.1-py2.py3-none-any.whl (32 kB)
+Using cached PyMatting-1.1.12-py3-none-any.whl (52 kB)
+Using cached rembg-2.0.56-py3-none-any.whl (32 kB)
+Using cached scikit_image-0.21.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.9 MB)
+Using cached watchdog-4.0.0-py3-none-manylinux2014_x86_64.whl (82 kB)
+Using cached aiosignal-1.3.1-py3-none-any.whl (7.6 kB)
+Using cached annotated_types-0.6.0-py3-none-any.whl (12 kB)
+Using cached anyio-4.3.0-py3-none-any.whl (85 kB)
+Using cached async_timeout-4.0.3-py3-none-any.whl (5.7 kB)
+Using cached attrs-23.2.0-py3-none-any.whl (60 kB)
+Using cached frozenlist-1.4.1-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (240 kB)
+Using cached h11-0.14.0-py3-none-any.whl (58 kB)
+Using cached jsonschema_specifications-2023.12.1-py3-none-any.whl (18 kB)
+Using cached lazy_loader-0.4-py3-none-any.whl (12 kB)
+Using cached marshmallow-3.21.1-py3-none-any.whl (49 kB)
+Using cached mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Using cached multidict-6.0.5-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (129 kB)
+Using cached numba-0.58.1-cp38-cp38-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (3.7 MB)
+Using cached pkgutil_resolve_name-1.3.10-py3-none-any.whl (4.7 kB)
+Using cached platformdirs-4.2.0-py3-none-any.whl (17 kB)
+Using cached PyWavelets-1.4.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (6.9 MB)
+Using cached referencing-0.34.0-py3-none-any.whl (26 kB)
+Using cached rpds_py-0.18.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.1 MB)
+Using cached shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+Using cached sniffio-1.3.1-py3-none-any.whl (10 kB)
+Using cached starlette-0.37.2-py3-none-any.whl (71 kB)
+Using cached tifffile-2023.7.10-py3-none-any.whl (220 kB)
+Using cached typing_inspect-0.9.0-py3-none-any.whl (8.8 kB)
+Using cached websockets-11.0.3-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (130 kB)
+Using cached wrapt-1.16.0-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (83 kB)
+Using cached yarl-1.9.4-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (308 kB)
+Using cached zipp-3.18.1-py3-none-any.whl (8.2 kB)
+Using cached coloredlogs-15.0.1-py2.py3-none-any.whl (46 kB)
+Using cached flatbuffers-24.3.25-py2.py3-none-any.whl (26 kB)
+Using cached protobuf-5.26.1-cp37-abi3-manylinux2014_x86_64.whl (302 kB)
+Using cached toolz-0.12.1-py3-none-any.whl (56 kB)
+Using cached exceptiongroup-1.2.0-py3-none-any.whl (16 kB)
+Using cached humanfriendly-10.0-py2.py3-none-any.whl (86 kB)
+Using cached llvmlite-0.41.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (43.6 MB)
+Using cached mypy_extensions-1.0.0-py3-none-any.whl (4.7 kB)
+Installing collected packages: pytz, pydub, ninja, flatbuffers, filetype, ffmpy, antlr4-python3-runtime, zipp, xatlas, wrapt, websockets, watchdog, tzdata, trimesh, tqdm, toolz, tomlkit, tifffile, threadpoolctl, sniffio, six, shellingham, semantic-version, scipy, safetensors, ruff, rpds-py, regex, PyWavelets, python-multipart, pyparsing, pymeshlab, pygments, pydantic-core, psutil, protobuf, plyfile, platformdirs, pkgutil-resolve-name, packaging, orjson, opencv-python-headless, opencv-python, omegaconf, mypy-extensions, multidict, mdurl, llvmlite, kiwisolver, joblib, imageio-ffmpeg, imageio, humanfriendly, h11, fsspec, frozenlist, fonttools, exceptiongroup, einops, dearpygui, cycler, contourpy, click, attrs, async-timeout, annotated-types, aiofiles, yarl, uvicorn, typing-inspect, scikit-learn, referencing, python-dateutil, PyMCubes, pydantic, pooch, marshmallow, markdown-it-py, lazy_loader, importlib-resources, importlib-metadata, huggingface_hub, httpcore, deprecated, coloredlogs, anyio, aiosignal, tokenizers, starlette, scikit-image, rich, pandas, onnxruntime-gpu, onnxruntime, numba, matplotlib, jsonschema-specifications, httpx, diffusers, dataclasses-json, asyncer, aiohttp, accelerate, typer, transformers, pymatting, pygltflib, jsonschema, gradio-client, fastapi, rembg, altair, gradio
+Successfully installed PyMCubes-0.1.4 PyWavelets-1.4.1 accelerate-0.29.2 aiofiles-23.2.1 aiohttp-3.9.3 aiosignal-1.3.1 altair-5.3.0 annotated-types-0.6.0 antlr4-python3-runtime-4.9.3 anyio-4.3.0 async-timeout-4.0.3 asyncer-0.0.5 attrs-23.2.0 click-8.1.7 coloredlogs-15.0.1 contourpy-1.1.1 cycler-0.12.1 dataclasses-json-0.6.4 dearpygui-1.11.1 deprecated-1.2.14 diffusers-0.27.2 einops-0.7.0 exceptiongroup-1.2.0 fastapi-0.110.1 ffmpy-0.3.2 filetype-1.2.0 flatbuffers-24.3.25 fonttools-4.51.0 frozenlist-1.4.1 fsspec-2024.3.1 gradio-4.26.0 gradio-client-0.15.1 h11-0.14.0 httpcore-1.0.5 httpx-0.27.0 huggingface_hub-0.22.2 humanfriendly-10.0 imageio-2.34.0 imageio-ffmpeg-0.4.9 importlib-metadata-7.1.0 importlib-resources-6.4.0 joblib-1.4.0 jsonschema-4.21.1 jsonschema-specifications-2023.12.1 kiwisolver-1.4.5 lazy_loader-0.4 llvmlite-0.41.1 markdown-it-py-3.0.0 marshmallow-3.21.1 matplotlib-3.7.5 mdurl-0.1.2 multidict-6.0.5 mypy-extensions-1.0.0 ninja-1.11.1.1 numba-0.58.1 omegaconf-2.3.0 onnxruntime-1.17.1 onnxruntime-gpu-1.17.1 opencv-python-4.9.0.80 opencv-python-headless-4.9.0.80 orjson-3.10.0 packaging-24.0 pandas-2.0.3 pkgutil-resolve-name-1.3.10 platformdirs-4.2.0 plyfile-1.0.3 pooch-1.8.1 protobuf-5.26.1 psutil-5.9.8 pydantic-2.6.4 pydantic-core-2.16.3 pydub-0.25.1 pygltflib-1.16.2 pygments-2.17.2 pymatting-1.1.12 pymeshlab-2022.2.post3 pyparsing-3.1.2 python-dateutil-2.9.0.post0 python-multipart-0.0.9 pytz-2024.1 referencing-0.34.0 regex-2023.12.25 rembg-2.0.56 rich-13.7.1 rpds-py-0.18.0 ruff-0.3.5 safetensors-0.4.2 scikit-image-0.21.0 scikit-learn-1.3.2 scipy-1.10.1 semantic-version-2.10.0 shellingham-1.5.4 six-1.16.0 sniffio-1.3.1 starlette-0.37.2 threadpoolctl-3.4.0 tifffile-2023.7.10 tokenizers-0.15.2 tomlkit-0.12.0 toolz-0.12.1 tqdm-4.66.2 transformers-4.39.3 trimesh-4.3.0 typer-0.12.3 typing-inspect-0.9.0 tzdata-2024.1 uvicorn-0.29.0 watchdog-4.0.0 websockets-11.0.3 wrapt-1.16.0 xatlas-0.0.9 yarl-1.9.4 zipp-3.18.1
+fatal: destination path 'diff-gaussian-rasterization' already exists and is not an empty directory.
+Processing ./diff-gaussian-rasterization
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Building wheels for collected packages: diff-gaussian-rasterization
+  Building wheel for diff-gaussian-rasterization (setup.py): started
+  Building wheel for diff-gaussian-rasterization (setup.py): finished with status 'done'
+  Created wheel for diff-gaussian-rasterization: filename=diff_gaussian_rasterization-0.0.0-cp38-cp38-linux_x86_64.whl size=3799865 sha256=82657978a156848d45703634fe7ee471d7c39670c6848b6c17331bc62f338a7a
+  Stored in directory: /gpfs/home6/jhuizing/.cache/pip/wheels/9d/b0/51/6c8ea0c996d6eb23cfb6db39a1bc446898a9820f7e4a18311b
+Successfully built diff-gaussian-rasterization
+Installing collected packages: diff-gaussian-rasterization
+Successfully installed diff-gaussian-rasterization-0.0.0
+Processing ./simple-knn
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Building wheels for collected packages: simple-knn
+  Building wheel for simple-knn (setup.py): started
+  Building wheel for simple-knn (setup.py): finished with status 'done'
+  Created wheel for simple-knn: filename=simple_knn-0.0.0-cp38-cp38-linux_x86_64.whl size=3716371 sha256=a812170c1a873cdee2d84eb3081dd3a5810346a38d5c10837a5140c27d7c8fff
+  Stored in directory: /gpfs/home6/jhuizing/.cache/pip/wheels/0e/64/f9/3c527f67e77c4ad52812e8a012ec4b84aaa41365f4539493d4
+Successfully built simple-knn
+Installing collected packages: simple-knn
+Successfully installed simple-knn-0.0.0
+Collecting git+https://github.com/NVlabs/nvdiffrast/
+  Cloning https://github.com/NVlabs/nvdiffrast/ to /gpfs/scratch1/nodespecific/gcn55/jhuizing.5853478/pip-req-build-i5cy2mhg
+  Running command git clone --filter=blob:none --quiet https://github.com/NVlabs/nvdiffrast/ /gpfs/scratch1/nodespecific/gcn55/jhuizing.5853478/pip-req-build-i5cy2mhg
+  Resolved https://github.com/NVlabs/nvdiffrast/ to commit c5caf7bdb8a2448acc491a9faa47753972edd380
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Requirement already satisfied: numpy in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from nvdiffrast==0.3.1) (1.24.3)
+Building wheels for collected packages: nvdiffrast
+  Building wheel for nvdiffrast (setup.py): started
+  Building wheel for nvdiffrast (setup.py): finished with status 'done'
+  Created wheel for nvdiffrast: filename=nvdiffrast-0.3.1-py3-none-any.whl size=137845 sha256=b6eff609d76685fb31542c21f26e2144d3c963889717b13aa547beb72131edd1
+  Stored in directory: /gpfs/scratch1/nodespecific/gcn55/jhuizing.5853478/pip-ephem-wheel-cache-jqo4g2d3/wheels/36/6d/8c/1e420551a8e968c4610e89456cef5929624d5e3cf64a7fa546
+Successfully built nvdiffrast
+Installing collected packages: nvdiffrast
+Successfully installed nvdiffrast-0.3.1
+Collecting git+https://github.com/ashawkey/kiuikit
+  Cloning https://github.com/ashawkey/kiuikit to /gpfs/scratch1/nodespecific/gcn55/jhuizing.5853478/pip-req-build-0mfm2ag4
+  Running command git clone --filter=blob:none --quiet https://github.com/ashawkey/kiuikit /gpfs/scratch1/nodespecific/gcn55/jhuizing.5853478/pip-req-build-0mfm2ag4
+  Resolved https://github.com/ashawkey/kiuikit to commit e40f20ce1bbce62317a75afaeb132c5a7a18e34a
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Requirement already satisfied: lazy_loader in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from kiui==0.2.7) (0.4)
+Collecting varname (from kiui==0.2.7)
+  Using cached varname-0.13.0-py3-none-any.whl.metadata (12 kB)
+Collecting objprint (from kiui==0.2.7)
+  Using cached objprint-0.2.3-py3-none-any.whl.metadata (25 kB)
+Requirement already satisfied: packaging in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from lazy_loader->kiui==0.2.7) (24.0)
+Collecting executing<3.0,>=2.0 (from varname->kiui==0.2.7)
+  Using cached executing-2.0.1-py2.py3-none-any.whl.metadata (9.0 kB)
+Using cached objprint-0.2.3-py3-none-any.whl (39 kB)
+Using cached varname-0.13.0-py3-none-any.whl (24 kB)
+Using cached executing-2.0.1-py2.py3-none-any.whl (24 kB)
+Building wheels for collected packages: kiui
+  Building wheel for kiui (setup.py): started
+  Building wheel for kiui (setup.py): finished with status 'done'
+  Created wheel for kiui: filename=kiui-0.2.7-py3-none-any.whl size=3080307 sha256=02f29b87ce8a75c61718d2da094148d5e1545173567fcef202b20013d3868568
+  Stored in directory: /gpfs/scratch1/nodespecific/gcn55/jhuizing.5853478/pip-ephem-wheel-cache-4oundh9t/wheels/6a/86/1e/7b2623c4ca62abee9e4926bc81cd417dfaca44b292253802c3
+Successfully built kiui
+Installing collected packages: objprint, executing, varname, kiui
+Successfully installed executing-2.0.1 kiui-0.2.7 objprint-0.2.3 varname-0.13.0
+Collecting git+https://github.com/bytedance/MVDream
+  Cloning https://github.com/bytedance/MVDream to /gpfs/scratch1/nodespecific/gcn55/jhuizing.5853478/pip-req-build-t_cpfpua
+  Running command git clone --filter=blob:none --quiet https://github.com/bytedance/MVDream /gpfs/scratch1/nodespecific/gcn55/jhuizing.5853478/pip-req-build-t_cpfpua
+  Resolved https://github.com/bytedance/MVDream to commit 618f84476c88e04adaf588133be2830142b9956d
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Requirement already satisfied: torch in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from mvdream==0.0.1) (2.1.0)
+Requirement already satisfied: numpy in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from mvdream==0.0.1) (1.24.3)
+Requirement already satisfied: tqdm in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from mvdream==0.0.1) (4.66.2)
+Requirement already satisfied: omegaconf in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from mvdream==0.0.1) (2.3.0)
+Requirement already satisfied: einops in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from mvdream==0.0.1) (0.7.0)
+Requirement already satisfied: huggingface_hub in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from mvdream==0.0.1) (0.22.2)
+Requirement already satisfied: transformers in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from mvdream==0.0.1) (4.39.3)
+Collecting open-clip-torch (from mvdream==0.0.1)
+  Using cached open_clip_torch-2.24.0-py3-none-any.whl.metadata (30 kB)
+Requirement already satisfied: filelock in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from huggingface_hub->mvdream==0.0.1) (3.13.1)
+Requirement already satisfied: fsspec>=2023.5.0 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from huggingface_hub->mvdream==0.0.1) (2024.3.1)
+Requirement already satisfied: packaging>=20.9 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from huggingface_hub->mvdream==0.0.1) (24.0)
+Requirement already satisfied: pyyaml>=5.1 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from huggingface_hub->mvdream==0.0.1) (6.0.1)
+Requirement already satisfied: requests in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from huggingface_hub->mvdream==0.0.1) (2.31.0)
+Requirement already satisfied: typing-extensions>=3.7.4.3 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from huggingface_hub->mvdream==0.0.1) (4.9.0)
+Requirement already satisfied: antlr4-python3-runtime==4.9.* in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from omegaconf->mvdream==0.0.1) (4.9.3)
+Requirement already satisfied: torchvision in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from open-clip-torch->mvdream==0.0.1) (0.16.0)
+Requirement already satisfied: regex in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from open-clip-torch->mvdream==0.0.1) (2023.12.25)
+Collecting ftfy (from open-clip-torch->mvdream==0.0.1)
+  Using cached ftfy-6.2.0-py3-none-any.whl.metadata (7.3 kB)
+Collecting sentencepiece (from open-clip-torch->mvdream==0.0.1)
+  Using cached sentencepiece-0.2.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.7 kB)
+Requirement already satisfied: protobuf in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from open-clip-torch->mvdream==0.0.1) (5.26.1)
+Collecting timm (from open-clip-torch->mvdream==0.0.1)
+  Using cached timm-0.9.16-py3-none-any.whl.metadata (38 kB)
+Requirement already satisfied: sympy in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from torch->mvdream==0.0.1) (1.12)
+Requirement already satisfied: networkx in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from torch->mvdream==0.0.1) (3.1)
+Requirement already satisfied: jinja2 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from torch->mvdream==0.0.1) (3.1.3)
+Requirement already satisfied: tokenizers<0.19,>=0.14 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from transformers->mvdream==0.0.1) (0.15.2)
+Requirement already satisfied: safetensors>=0.4.1 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from transformers->mvdream==0.0.1) (0.4.2)
+Collecting wcwidth<0.3.0,>=0.2.12 (from ftfy->open-clip-torch->mvdream==0.0.1)
+  Using cached wcwidth-0.2.13-py2.py3-none-any.whl.metadata (14 kB)
+Requirement already satisfied: MarkupSafe>=2.0 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from jinja2->torch->mvdream==0.0.1) (2.1.3)
+Requirement already satisfied: charset-normalizer<4,>=2 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from requests->huggingface_hub->mvdream==0.0.1) (2.0.4)
+Requirement already satisfied: idna<4,>=2.5 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from requests->huggingface_hub->mvdream==0.0.1) (3.4)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from requests->huggingface_hub->mvdream==0.0.1) (2.1.0)
+Requirement already satisfied: certifi>=2017.4.17 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from requests->huggingface_hub->mvdream==0.0.1) (2024.2.2)
+Requirement already satisfied: mpmath>=0.19 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from sympy->torch->mvdream==0.0.1) (1.3.0)
+Requirement already satisfied: pillow!=8.3.*,>=5.3.0 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from torchvision->open-clip-torch->mvdream==0.0.1) (10.2.0)
+Using cached open_clip_torch-2.24.0-py3-none-any.whl (1.5 MB)
+Using cached ftfy-6.2.0-py3-none-any.whl (54 kB)
+Using cached sentencepiece-0.2.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.3 MB)
+Using cached timm-0.9.16-py3-none-any.whl (2.2 MB)
+Using cached wcwidth-0.2.13-py2.py3-none-any.whl (34 kB)
+Building wheels for collected packages: mvdream
+  Building wheel for mvdream (setup.py): started
+  Building wheel for mvdream (setup.py): finished with status 'done'
+  Created wheel for mvdream: filename=mvdream-0.0.1-py3-none-any.whl size=40719 sha256=9e5843722f56aebcf982840ed21102ba5e003536a4e7d309a07585f25bebb32d
+  Stored in directory: /gpfs/scratch1/nodespecific/gcn55/jhuizing.5853478/pip-ephem-wheel-cache-jry1q_i0/wheels/32/9e/0b/584126b0b54d1e15d47bf042d47cd63b296aa3244d99c43e27
+Successfully built mvdream
+Installing collected packages: wcwidth, sentencepiece, ftfy, timm, open-clip-torch, mvdream
+Successfully installed ftfy-6.2.0 mvdream-0.0.1 open-clip-torch-2.24.0 sentencepiece-0.2.0 timm-0.9.16 wcwidth-0.2.13
+Collecting git+https://github.com/bytedance/ImageDream/#subdirectory=extern/ImageDream
+  Cloning https://github.com/bytedance/ImageDream/ to /gpfs/scratch1/nodespecific/gcn55/jhuizing.5853478/pip-req-build-tkzxn4s5
+  Running command git clone --filter=blob:none --quiet https://github.com/bytedance/ImageDream/ /gpfs/scratch1/nodespecific/gcn55/jhuizing.5853478/pip-req-build-tkzxn4s5
+  Resolved https://github.com/bytedance/ImageDream/ to commit 26c3972e586f0c8d2f6c6b297aa9d792d06abebb
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Requirement already satisfied: torch in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from imagedream==0.0.1) (2.1.0)
+Requirement already satisfied: numpy in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from imagedream==0.0.1) (1.24.3)
+Requirement already satisfied: tqdm in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from imagedream==0.0.1) (4.66.2)
+Requirement already satisfied: omegaconf in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from imagedream==0.0.1) (2.3.0)
+Requirement already satisfied: einops in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from imagedream==0.0.1) (0.7.0)
+Requirement already satisfied: huggingface_hub in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from imagedream==0.0.1) (0.22.2)
+Requirement already satisfied: transformers in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from imagedream==0.0.1) (4.39.3)
+Requirement already satisfied: open-clip-torch in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from imagedream==0.0.1) (2.24.0)
+Requirement already satisfied: filelock in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from huggingface_hub->imagedream==0.0.1) (3.13.1)
+Requirement already satisfied: fsspec>=2023.5.0 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from huggingface_hub->imagedream==0.0.1) (2024.3.1)
+Requirement already satisfied: packaging>=20.9 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from huggingface_hub->imagedream==0.0.1) (24.0)
+Requirement already satisfied: pyyaml>=5.1 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from huggingface_hub->imagedream==0.0.1) (6.0.1)
+Requirement already satisfied: requests in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from huggingface_hub->imagedream==0.0.1) (2.31.0)
+Requirement already satisfied: typing-extensions>=3.7.4.3 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from huggingface_hub->imagedream==0.0.1) (4.9.0)
+Requirement already satisfied: antlr4-python3-runtime==4.9.* in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from omegaconf->imagedream==0.0.1) (4.9.3)
+Requirement already satisfied: torchvision in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from open-clip-torch->imagedream==0.0.1) (0.16.0)
+Requirement already satisfied: regex in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from open-clip-torch->imagedream==0.0.1) (2023.12.25)
+Requirement already satisfied: ftfy in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from open-clip-torch->imagedream==0.0.1) (6.2.0)
+Requirement already satisfied: sentencepiece in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from open-clip-torch->imagedream==0.0.1) (0.2.0)
+Requirement already satisfied: protobuf in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from open-clip-torch->imagedream==0.0.1) (5.26.1)
+Requirement already satisfied: timm in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from open-clip-torch->imagedream==0.0.1) (0.9.16)
+Requirement already satisfied: sympy in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from torch->imagedream==0.0.1) (1.12)
+Requirement already satisfied: networkx in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from torch->imagedream==0.0.1) (3.1)
+Requirement already satisfied: jinja2 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from torch->imagedream==0.0.1) (3.1.3)
+Requirement already satisfied: tokenizers<0.19,>=0.14 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from transformers->imagedream==0.0.1) (0.15.2)
+Requirement already satisfied: safetensors>=0.4.1 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from transformers->imagedream==0.0.1) (0.4.2)
+Requirement already satisfied: wcwidth<0.3.0,>=0.2.12 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from ftfy->open-clip-torch->imagedream==0.0.1) (0.2.13)
+Requirement already satisfied: MarkupSafe>=2.0 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from jinja2->torch->imagedream==0.0.1) (2.1.3)
+Requirement already satisfied: charset-normalizer<4,>=2 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from requests->huggingface_hub->imagedream==0.0.1) (2.0.4)
+Requirement already satisfied: idna<4,>=2.5 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from requests->huggingface_hub->imagedream==0.0.1) (3.4)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from requests->huggingface_hub->imagedream==0.0.1) (2.1.0)
+Requirement already satisfied: certifi>=2017.4.17 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from requests->huggingface_hub->imagedream==0.0.1) (2024.2.2)
+Requirement already satisfied: mpmath>=0.19 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from sympy->torch->imagedream==0.0.1) (1.3.0)
+Requirement already satisfied: pillow!=8.3.*,>=5.3.0 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages (from torchvision->open-clip-torch->imagedream==0.0.1) (10.2.0)
+Building wheels for collected packages: imagedream
+  Building wheel for imagedream (setup.py): started
+  Building wheel for imagedream (setup.py): finished with status 'done'
+  Created wheel for imagedream: filename=imagedream-0.0.1-py3-none-any.whl size=44637 sha256=08e2086de586bd3cb2b2e93f69a3e3ddca2a025db4c6291c056189b3471a0163
+  Stored in directory: /gpfs/scratch1/nodespecific/gcn55/jhuizing.5853478/pip-ephem-wheel-cache-st74wad6/wheels/a3/f9/82/35f49e8054bb90cb5fd3d060ff2adc22c37fb69b8f5f0aa416
+Successfully built imagedream
+Installing collected packages: imagedream
+Successfully installed imagedream-0.0.1
+
+JOB STATISTICS
+==============
+Job ID: 5853478
+Cluster: snellius
+User/Group: jhuizing/jhuizing
+State: RUNNING
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 00:00:00
+CPU Efficiency: 0.00% of 07:43:30 core-walltime
+Job Wall-clock time: 00:25:45
+Memory Utilized: 0.00 MB (estimated maximum)
+Memory Efficiency: 0.00% of 120.00 GB (120.00 GB/node)
+WARNING: Efficiency statistics may be misleading for RUNNING jobs.
