@@ -24,10 +24,7 @@ dependencies:
     - imageio
     - imageio-ffmpeg
     - omegaconf
-
-    - torch
     - einops
-    - plyfile
     - pygltflib
 
     # for gui
