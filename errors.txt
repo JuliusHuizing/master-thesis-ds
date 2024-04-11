@@ -81,3 +81,10 @@ using cuda 12.1.1 with python 3.8 will complain about cuda version not set durin
 note that the nightly of cuda 11.6 is indeed deprecated, explaining previous error when trying to install
 that one: https://pytorch.org/blog/deprecation-cuda-python-support/
 
+errors:
+
+https://github.com/pytorch/pytorch/blob/main/RELEASE.md#release-compatibility-matrix
+
+
+when not specifying python version, installation process will default to 3.12, causing this error:
+https://stackoverflow.com/questions/77364550/attributeerror-module-pkgutil-has-no-attribute-impimporter-did-you-mean
