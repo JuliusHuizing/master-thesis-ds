@@ -88,3 +88,5 @@ https://github.com/pytorch/pytorch/blob/main/RELEASE.md#release-compatibility-ma
 
 when not specifying python version, installation process will default to 3.12, causing this error:
 https://stackoverflow.com/questions/77364550/attributeerror-module-pkgutil-has-no-attribute-impimporter-did-you-mean
+
+specifying python 3.9 cannot resolve dependencies for specified torch version...
