@@ -1,3 +1,83 @@
    RuntimeError:
       The detected CUDA version (11.8) mismatches the version that was used to compile
       PyTorch (12.1). Please make sure to use the same CUDA versions.
+
+
+ERROR: Could not find a version that satisfies the requirement opencv (from versions: none)
+ERROR: No matching distribution found for opencv
+WARNING: There was an error checking the latest version of pip.
+
+
+
+when settigng python to 3.7, installation succeeds; but run fails; python 3.7 does not have Literal from Typing.
+When settign python to 3.8 (which supports Literal), installation fails:
+
+× python setup.py bdist_wheel did not run successfully.
+  │ exit code: 1
+  ╰─> [53 lines of output]
+      running bdist_wheel
+      running build
+      running build_py
+      creating build
+      creating build/lib.linux-x86_64-cpython-38
+      creating build/lib.linux-x86_64-cpython-38/diff_gaussian_rasterization
+      copying diff_gaussian_rasterization/__init__.py -> build/lib.linux-x86_64-cpython-38/diff_gaussian_rasterization
+      running build_ext
+      Traceback (most recent call last):
+        File "<string>", line 2, in <module>
+        File "<pip-setuptools-caller>", line 34, in <module>
+        File "/gpfs/home6/jhuizing/master-thesis-ds/repos/dreamgaussian/diff-gaussian-rasterization/setup.py", line 17, in <module>
+          setup(
+        File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages/setuptools/__init__.py", line 103, in setup
+          return distutils.core.setup(**attrs)
+        File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages/setuptools/_distutils/core.py", line 185, in setup
+          return run_commands(dist)
+        File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages/setuptools/_distutils/core.py", line 201, in run_commands
+          dist.run_commands()
+        File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages/setuptools/_distutils/dist.py", line 969, in run_commands
+          self.run_command(cmd)
+        File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages/setuptools/dist.py", line 989, in run_command
+          super().run_command(command)
+        File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages/setuptools/_distutils/dist.py", line 988, in run_command
+          cmd_obj.run()
+        File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages/wheel/bdist_wheel.py", line 364, in run
+          self.run_command("build")
+        File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages/setuptools/_distutils/cmd.py", line 318, in run_command
+          self.distribution.run_command(command)
+        File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages/setuptools/dist.py", line 989, in run_command
+          super().run_command(command)
+        File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages/setuptools/_distutils/dist.py", line 988, in run_command
+          cmd_obj.run()
+        File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages/setuptools/_distutils/command/build.py", line 131, in run
+          self.run_command(cmd_name)
+        File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages/setuptools/_distutils/cmd.py", line 318, in run_command
+          self.distribution.run_command(command)
+        File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages/setuptools/dist.py", line 989, in run_command
+          super().run_command(command)
+        File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages/setuptools/_distutils/dist.py", line 988, in run_command
+          cmd_obj.run()
+        File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages/setuptools/command/build_ext.py", line 88, in run
+          _build_ext.run(self)
+        File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages/setuptools/_distutils/command/build_ext.py", line 345, in run
+          self.build_extensions()
+        File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages/torch/utils/cpp_extension.py", line 523, in build_extensions
+          _check_cuda_version(compiler_name, compiler_version)
+        File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages/torch/utils/cpp_extension.py", line 414, in _check_cuda_version
+          raise RuntimeError(CUDA_MISMATCH_MESSAGE.format(cuda_str_version, torch.version.cuda))
+      RuntimeError:
+      The detected CUDA version (11.6) mismatches the version that was used to compile
+      PyTorch (12.1). Please make sure to use the same CUDA versions.
+
+
+
+
+
+
+using cuda 12.1.1 (as 3dgs repo suggests) let dream gaussian setup fail altogether.
+
+
+using cuda 12.1.1 with python 3.8 will complain about cuda version not set during env install.
+
+note that the nightly of cuda 11.6 is indeed deprecated, explaining previous error when trying to install
+that one: https://pytorch.org/blog/deprecation-cuda-python-support/
+
