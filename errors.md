@@ -216,3 +216,15 @@ Why would you even define requirements if your code does not comply...? Jeez.
 
 
 
+We can fix this by running
+
+```bash
+pip install pymeshlab==0.2
+```
+
+after activivating the env but before running the training loop. However, now we get:
+
+
+```error
+AttributeError: 'pymeshlab.pmeshlab.MeshSet' object has no attribute 'meshing_remove_unreferenced_vertices'
+```
