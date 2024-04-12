@@ -19,6 +19,6 @@ git pull
 cd $HOME/master-thesis-ds/repos/dreamgaussian
 git clone --recursive https://github.com/ashawkey/diff-gaussian-rasterization
 
-conda remove -n dreamgaussianconda
-conda create -f environment.yml
-conda activate dreamgaussianconda
+conda env remove -n dreamgaussianconda
+conda env create -f environment.yml
+source activate dreamgaussianconda
