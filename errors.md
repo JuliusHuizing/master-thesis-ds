@@ -228,3 +228,24 @@ after activivating the env but before running the training loop. However, now we
 ```error
 AttributeError: 'pymeshlab.pmeshlab.MeshSet' object has no attribute 'meshing_remove_unreferenced_vertices'
 ```
+
+running "conda update pymeshlab" instead does not work as it will complain the conda env does not have that package installed, prob bc we installed everything using pip??
+
+
+running "conda install pymeshlabl" will give:
+
+```error
+PackagesNotFoundError: The following packages are not available from current channels:
+
+  - pymeshlab
+
+Current channels:
+
+  - https://repo.anaconda.com/pkgs/main/linux-64
+  - https://repo.anaconda.com/pkgs/main/noarch
+  - https://repo.anaconda.com/pkgs/r/linux-64
+  - https://repo.anaconda.com/pkgs/r/noarch
+
+```
+
+running "pip install pymeshlab=2022.02" will...
