@@ -1,0 +1,107 @@
+***************************************************************************************************** 
+* WARNING: The 2021 software stack is not available on the 'genoa' partition.
+Please use the 2022 * 
+* software stack. * 
+* * 
+* If you have any question, please contact us via
+http://servicedesk.surfsara.nl. * 
+***************************************************************************************************** 
+============================================================================================== 
+Warning! Mixing Conda and module environments may lead to corruption of the
+user environment. 
+We do not recommend users mixing those two environments unless absolutely
+necessary. Note that 
+SURF does not provide any support for Conda environment.
+For more information, please refer to our software policy page:
+https://servicedesk.surf.nl/wiki/display/WIKI/Software+policy+Snellius#SoftwarepolicySnellius-UseofAnacondaandMinicondaenvironmentsonSnellius 
+
+Remember that many packages have already been installed on the system and can
+be loaded using 
+the 'module load <package__name>' command. If you are uncertain if a package is
+already available 
+on the system, please use 'module avail' or 'module spider' to search for it.
+============================================================================================== 
+hint: Pulling without specifying how to reconcile divergent branches is
+hint: discouraged. You can squelch this message by running one of the following
+hint: commands sometime before your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge (the default strategy)
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+Already up to date.
+[INFO] loading image data/name.jpg...
+[INFO] background removal...
+[INFO] recenter...
+Traceback (most recent call last):
+  File "main.py", line 6, in <module>
+    import dearpygui.dearpygui as dpg
+  File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages/dearpygui/dearpygui.py", line 22, in <module>
+    import dearpygui._dearpygui as internal_dpg
+ImportError: /lib64/libm.so.6: version `GLIBC_2.29' not found (required by /home/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages/dearpygui/_dearpygui.so)
+Traceback (most recent call last):
+  File "main2.py", line 6, in <module>
+    import dearpygui.dearpygui as dpg
+  File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages/dearpygui/dearpygui.py", line 22, in <module>
+    import dearpygui._dearpygui as internal_dpg
+ImportError: /lib64/libm.so.6: version `GLIBC_2.29' not found (required by /home/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages/dearpygui/_dearpygui.so)
+Traceback (most recent call last):
+  File "/home/jhuizing/.conda/envs/dreamgaussian/bin/kire", line 8, in <module>
+    sys.exit(main())
+  File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages/kiui/render.py", line 431, in main
+    gui = GUI(opt)
+  File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages/kiui/render.py", line 44, in __init__
+    self.mesh = Mesh.load(opt.mesh, front_dir=opt.front_dir)
+  File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages/kiui/mesh.py", line 96, in load
+    mesh = cls.load_obj(path, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages/kiui/mesh.py", line 182, in load_obj
+    with open(path, "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'logs/name.obj'
+Traceback (most recent call last):
+  File "/home/jhuizing/.conda/envs/dreamgaussian/bin/kire", line 8, in <module>
+    sys.exit(main())
+  File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages/kiui/render.py", line 431, in main
+    gui = GUI(opt)
+  File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages/kiui/render.py", line 44, in __init__
+    self.mesh = Mesh.load(opt.mesh, front_dir=opt.front_dir)
+  File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages/kiui/mesh.py", line 96, in load
+    mesh = cls.load_obj(path, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages/kiui/mesh.py", line 182, in load_obj
+    with open(path, "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'logs/name.obj'
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Loading checkpoint shards:  50%|█████     | 1/2 [00:16<00:16, 16.93s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:17<00:00,  7.17s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:17<00:00,  8.64s/it]
+Traceback (most recent call last):
+  File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages/kiui/cli/clip_sim.py", line 66, in <module>
+    gui = GUI(opt)
+  File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages/kiui/render.py", line 44, in __init__
+    self.mesh = Mesh.load(opt.mesh, front_dir=opt.front_dir)
+  File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages/kiui/mesh.py", line 96, in load
+    mesh = cls.load_obj(path, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages/kiui/mesh.py", line 182, in load_obj
+    with open(path, "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'logs/name.obj'
+
+JOB STATISTICS
+==============
+Job ID: 5855709
+Cluster: snellius
+User/Group: jhuizing/jhuizing
+State: RUNNING
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 00:00:00
+CPU Efficiency: 0.00% of 00:41:24 core-walltime
+Job Wall-clock time: 00:02:18
+Memory Utilized: 0.00 MB (estimated maximum)
+Memory Efficiency: 0.00% of 120.00 GB (120.00 GB/node)
+WARNING: Efficiency statistics may be misleading for RUNNING jobs.
