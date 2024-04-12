@@ -248,4 +248,8 @@ Current channels:
 
 ```
 
-running "pip install pymeshlab=2022.02" will...
+running "pip install pymeshlab==2022.02" will give error again:
+
+```error
+AttributeError: module 'pymeshlab' has no attribute 'PercentageValue'
+```
