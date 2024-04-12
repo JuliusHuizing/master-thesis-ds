@@ -185,3 +185,8 @@ FileNotFoundError: [Errno 2] N
 Stackoverflow suggests this can be solved by using conda-forage... but
 When trying to isntall via conda environment, solving environment takes forever:
 https://stackoverflow.com/questions/63734508/stuck-at-solving-environment-on-anaconda
+
+
+We could actually solve it by removing all references to dearpygui in main.py (main2.py still todo);
+It is just likely that a non-gui system like snellius us running a disto of ubuntu that does not support 
+dearpy gui dependencies.
