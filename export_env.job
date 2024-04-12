@@ -13,4 +13,6 @@ module load 2022
 module load Anaconda3/2022.05
 
 cd $HOME/master-thesis-ds/repos/dreamgaussian
-conda env export > environment.yml
+conda env export > environment_snellius_specific.yml
+conda env export --no-builds | grep -v "prefix" > environment_no_builds.yml
+conda list -e > conda_requirements.txt
