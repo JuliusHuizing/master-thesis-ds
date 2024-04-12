@@ -92,3 +92,60 @@ https://stackoverflow.com/questions/77364550/attributeerror-module-pkgutil-has-n
 specifying python 3.9 cannot resolve dependencies for specified torch version...
 
 python 3.8 cannot find matching scipy version.
+
+https://github.com/dreamgaussian/dreamgaussian/issues/
+
+
+
+this works:
+
+```bash
+#!/bin/bash
+
+#SBATCH --partition=gpu
+#SBATCH --gpus=1
+#SBATCH --job-name=InstallEnvironment
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=18
+#SBATCH --time=04:00:00
+#SBATCH --output=slurm_output_%A.out
+
+module purge
+# module load 2021 // although spider says we need 2021 for cuda 11.6, the partition does not support 2021..
+module load 2022
+module load CUDA/11.8.0
+module load Anaconda3/2022.05
+
+cd $HOME/master-thesis-ds/
+git pull
+
+cd $HOME/master-thesis-ds/repos/dreamgaussian
+# conda env remove --name dreamgaussian
+conda create -n dreamgaussian python=3.8 pip
+source activate dreamgaussian
+
+conda install pytorch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 pytorch-cuda=11.8 -c pytorch -c nvidia
+
+pip install -r requirements.txt
+
+# a modified gaussian splatting (+ depth, alpha rendering)
+git clone --recursive https://github.com/ashawkey/diff-gaussian-rasterization
+pip install ./diff-gaussian-rasterization
+
+# simple-knn
+pip install ./simple-knn
+
+# nvdiffrast
+pip install git+https://github.com/NVlabs/nvdiffrast/
+
+# kiuikit
+pip install git+https://github.com/ashawkey/kiuikit
+
+# To use MVdream, also install:
+pip install git+https://github.com/bytedance/MVDream
+
+# To use ImageDream, also install:
+pip install git+https://github.com/bytedance/ImageDream/#subdirectory=extern/ImageDream
+
+
+```
