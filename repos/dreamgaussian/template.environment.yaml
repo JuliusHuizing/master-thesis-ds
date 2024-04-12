@@ -1,0 +1,52 @@
+name: dreamgaussianconda
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+  - nvidia
+dependencies:
+  - cudatoolkit=11.8
+  - python=3.8
+  - pytorch==2.1.0
+  - torchvision==0.16.0
+  - torchaudio==2.1.0
+  - pytorch-cuda=11.8
+  - pip
+  - pip:
+    - tqdm
+    - rich
+    - ninja
+    - numpy
+    - pandas
+    - scipy
+    - scikit-learn
+    - matplotlib
+    - opencv-python
+    - imageio
+    - imageio-ffmpeg
+    - omegaconf
+    - pygltflib
+    - dearpygui
+    - huggingface_hub
+    - diffusers
+    - accelerate
+    - transformers
+    - xatlas
+    - trimesh
+    - PyMCubes
+    - pymeshlab
+    - rembg[gpu,cli]
+    - gradio
+    - plyfile
+    # a modified gaussian splatting (+ depth, alpha rendering)
+    -  ./diff-gaussian-rasterization
+# simple-knn
+    - ./simple-knn
+# nvdiffrast
+    - git+https://github.com/NVlabs/nvdiffrast/
+# kiuikit
+    - git+https://github.com/ashawkey/kiuikit
+# To use MVdream, also install:
+    - git+https://github.com/bytedance/MVDream
+# To use ImageDream, also install:
+    - git+https://github.com/bytedance/ImageDream/#subdirectory=extern/ImageDream
