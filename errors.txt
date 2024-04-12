@@ -190,3 +190,29 @@ https://stackoverflow.com/questions/63734508/stuck-at-solving-environment-on-ana
 We could actually solve it by removing all references to dearpygui in main.py (main2.py still todo);
 It is just likely that a non-gui system like snellius us running a disto of ubuntu that does not support 
 dearpy gui dependencies.
+
+
+Now we run into: 
+```error:
+Traceback (most recent call last):
+  File "main.py", line 616, in <module>
+    gui.train(opt.iters)
+  File "main.py", line 597, in train
+    self.save_model(mode='geo+tex')
+  File "/home/jhuizing/.conda/envs/dreamgaussian/lib/python3.8/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "main.py", line 404, in save_model
+    mesh = self.renderer.gaussians.extract_mesh(path, self.opt.density_thresh)
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/dreamgaussian/gs_renderer.py", line 309, in extract_mesh
+    vertices, triangles = clean_mesh(vertices, triangles, remesh=True, remesh_size=0.015)
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/dreamgaussian/mesh_utils.py", line 113, in clean_mesh
+    threshold=pml.PercentageValue(v_pct)
+AttributeError: module 'pymeshlab' has no attribute 'PercentageValue'
+```
+we do not seem to be the only one: https://github.com/dreamgaussian/dreamgaussian/issues/35
+
+
+Why would you even define requirements if your code does not comply...? Jeez.
+
+
+
