@@ -268,3 +268,12 @@ Mesh creation seems to succeed, but then loading mesh at next step gives runtime
 AttributeError: 'Namespace' object has no attribute 'ssaa'
 
 ```
+
+
+This is a bug, recently introduced, in the kiui package. We can fix this by ensuring we use a version before the bug was introduced. With the conda env activated, run:
+
+```bash
+pip install kiui==0.2.2
+```
+
+and hey, we can finally compute clip scores.
