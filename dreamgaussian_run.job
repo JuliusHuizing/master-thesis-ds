@@ -20,8 +20,7 @@ git pull
 
 cd $HOME/master-thesis-ds/repos/dreamgaussian
 
-source activate dreamgaussian
-pip install pymeshlab==0.2
+source activate dreamgaussianV2
 ### preprocess
 # background removal and recentering, save rgba at 256x256
 python process.py data/name.jpg
