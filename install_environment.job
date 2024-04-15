@@ -19,8 +19,8 @@ git pull
 
 cd $HOME/master-thesis-ds/repos/dreamgaussian
 # conda env remove --name dreamgaussian
-conda create -n dreamgaussian python=3.8 pip
-source activate dreamgaussian
+conda create -n dreamgaussianV2 python=3.8 pip
+source activate dreamgaussianV2
 
 conda install pytorch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 pytorch-cuda=11.8 -c pytorch -c nvidia
 
