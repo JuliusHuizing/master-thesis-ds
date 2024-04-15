@@ -1,0 +1,59 @@
+============================================================================================== 
+Warning! Mixing Conda and module environments may lead to corruption of the
+user environment. 
+We do not recommend users mixing those two environments unless absolutely
+necessary. Note that 
+SURF does not provide any support for Conda environment.
+For more information, please refer to our software policy page:
+https://servicedesk.surf.nl/wiki/display/WIKI/Software+policy+Snellius#SoftwarepolicySnellius-UseofAnacondaandMinicondaenvironmentsonSnellius 
+
+Remember that many packages have already been installed on the system and can
+be loaded using 
+the 'module load <package__name>' command. If you are uncertain if a package is
+already available 
+on the system, please use 'module avail' or 'module spider' to search for it.
+============================================================================================== 
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+Requirement already satisfied: kiui in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (0.2.7)
+Requirement already satisfied: lazy-loader in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from kiui) (0.4)
+Requirement already satisfied: varname in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from kiui) (0.13.0)
+Requirement already satisfied: objprint in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from kiui) (0.2.3)
+Requirement already satisfied: packaging in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from lazy-loader->kiui) (24.0)
+Requirement already satisfied: executing<3.0,>=2.0 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from varname->kiui) (2.0.1)
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Loading checkpoint shards:  50%|█████     | 1/2 [00:16<00:16, 16.24s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:16<00:00,  6.77s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:16<00:00,  8.19s/it][INFO] load obj mesh: use texture from: logs/name_albedo.png
+[INFO] load obj mesh: load texture: (1024, 1024, 3)
+[INFO] load mesh, v: torch.Size([66968, 3]), f: torch.Size([100000, 3])
+[INFO] load mesh, vn: torch.Size([66968, 3]), fn: torch.Size([100000, 3])
+[INFO] load mesh, vt: torch.Size([66968, 2]), ft: torch.Size([100000, 3])
+
+  0%|          | 0/1 [00:00<?, ?it/s]
+  0%|          | 0/8 [00:00<?, ?it/s][A  0%|          | 0/8 [00:00<?, ?it/s]
+  0%|          | 0/1 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/runpy.py", line 194, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/runpy.py", line 87, in _run_code
+    exec(code, run_globals)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/kiui/cli/clip_sim.py", line 86, in <module>
+    gui.step()
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/kiui/render.py", line 105, in step
+    H, W = int(self.opt.ssaa * self.H), int(self.opt.ssaa * self.W)
+AttributeError: 'Namespace' object has no attribute 'ssaa'
+
+JOB STATISTICS
+==============
+Job ID: 5910733
+Cluster: snellius
+User/Group: jhuizing/jhuizing
+State: RUNNING
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 00:00:00
+CPU Efficiency: 0.00% of 00:14:06 core-walltime
+Job Wall-clock time: 00:00:47
+Memory Utilized: 0.00 MB (estimated maximum)
+Memory Efficiency: 0.00% of 120.00 GB (120.00 GB/node)
+WARNING: Efficiency statistics may be misleading for RUNNING jobs.

@@ -1,0 +1,65 @@
+============================================================================================== 
+Warning! Mixing Conda and module environments may lead to corruption of the
+user environment. 
+We do not recommend users mixing those two environments unless absolutely
+necessary. Note that 
+SURF does not provide any support for Conda environment.
+For more information, please refer to our software policy page:
+https://servicedesk.surf.nl/wiki/display/WIKI/Software+policy+Snellius#SoftwarepolicySnellius-UseofAnacondaandMinicondaenvironmentsonSnellius 
+
+Remember that many packages have already been installed on the system and can
+be loaded using 
+the 'module load <package__name>' command. If you are uncertain if a package is
+already available 
+on the system, please use 'module avail' or 'module spider' to search for it.
+============================================================================================== 
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+Collecting kiui==0.2.2
+  Downloading kiui-0.2.2-py3-none-any.whl.metadata (5.3 kB)
+Requirement already satisfied: lazy-loader in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from kiui==0.2.2) (0.4)
+Requirement already satisfied: varname in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from kiui==0.2.2) (0.13.0)
+Requirement already satisfied: objprint in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from kiui==0.2.2) (0.2.3)
+Requirement already satisfied: packaging in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from lazy-loader->kiui==0.2.2) (24.0)
+Requirement already satisfied: executing<3.0,>=2.0 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from varname->kiui==0.2.2) (2.0.1)
+Downloading kiui-0.2.2-py3-none-any.whl (1.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 8.9 MB/s eta 0:00:00
+Installing collected packages: kiui
+  Attempting uninstall: kiui
+    Found existing installation: kiui 0.2.7
+    Uninstalling kiui-0.2.7:
+      Successfully uninstalled kiui-0.2.7
+Successfully installed kiui-0.2.2
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Loading checkpoint shards:  50%|█████     | 1/2 [00:15<00:15, 15.41s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:15<00:00,  6.54s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:15<00:00,  7.87s/it][load_obj] use texture from: logs/name_albedo.png
+[load_obj] load texture: (1024, 1024, 3)
+[Mesh loading] v: torch.Size([66968, 3]), f: torch.Size([100000, 3])
+[Mesh loading] vn: torch.Size([66968, 3]), fn: torch.Size([100000, 3])
+
+  0%|          | 0/1 [00:00<?, ?it/s]
+  0%|          | 0/8 [00:00<?, ?it/s][A
+ 12%|█▎        | 1/8 [00:01<00:11,  1.63s/it][A
+ 25%|██▌       | 2/8 [00:01<00:04,  1.36it/s][A
+ 38%|███▊      | 3/8 [00:01<00:02,  2.22it/s][A
+ 50%|█████     | 4/8 [00:01<00:01,  3.17it/s][A
+ 62%|██████▎   | 5/8 [00:02<00:00,  4.16it/s][A
+ 75%|███████▌  | 6/8 [00:02<00:00,  5.11it/s][A
+ 88%|████████▊ | 7/8 [00:02<00:00,  5.98it/s][A
+100%|██████████| 8/8 [00:02<00:00,  6.71it/s][A100%|██████████| 8/8 [00:02<00:00,  3.34it/s]
+100%|██████████| 1/1 [00:02<00:00,  2.39s/it]100%|██████████| 1/1 [00:02<00:00,  2.39s/it]
+0.6832368820905685
+
+JOB STATISTICS
+==============
+Job ID: 5915570
+Cluster: snellius
+User/Group: jhuizing/jhuizing
+State: COMPLETED (exit code 0)
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 00:02:09
+CPU Efficiency: 13.27% of 00:16:12 core-walltime
+Job Wall-clock time: 00:00:54
+Memory Utilized: 12.85 GB
+Memory Efficiency: 10.71% of 120.00 GB

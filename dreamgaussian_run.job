@@ -21,13 +21,14 @@ git pull
 cd $HOME/master-thesis-ds/repos/dreamgaussian
 
 source activate dreamgaussianV2
+pip install kiui==0.2.2
 ### preprocess
 # background removal and recentering, save rgba at 256x256
-python process.py data/name.jpg
+# python process.py data/name.jpg
 
 ### training gaussian stage
 # train 500 iters (~1min) and export ckpt & coarse_mesh to logs
-python main.py --config configs/image.yaml input=data/name_rgba.png save_path=name
+# python main.py --config configs/image.yaml input=data/name_rgba.png save_path=name
 
 # gui mode (supports visualizing training)
 # python main.py --config configs/image.yaml input=data/name_rgba.png save_path=name gui=True
@@ -46,7 +47,7 @@ python main.py --config configs/image.yaml input=data/name_rgba.png save_path=na
 # python main2.py --config configs/image.yaml input=data/name_rgba.png save_path=name mesh=logs/name_mesh.obj
 
 # # gui mode
-python main2.py --config configs/image.yaml input=data/name_rgba.png save_path=name gui=False
+# python main2.py --config configs/image.yaml input=data/name_rgba.png save_path=name gui=False
 
 # # export glb instead of obj
 # python main2.py --config configs/image.yaml input=data/name_rgba.png save_path=name mesh_format=glb
@@ -57,10 +58,10 @@ python main2.py --config configs/image.yaml input=data/name_rgba.png save_path=n
 # kire logs/name.obj
 
 # save 360 degree video of mesh (can run without gui)
-kire logs/name.obj --save_video name.mp4 --wogui
+# kire logs/name.obj --save_video name.mp4 --wogui
 
 # save 8 view images of mesh (can run without gui)
-kire logs/name.obj --save images/name/ --wogui
+# kire logs/name.obj --save images/name/ --wogui
 
 ### evaluation of CLIP-similarity
 python -m kiui.cli.clip_sim data/name_rgba.png logs/name.obj
