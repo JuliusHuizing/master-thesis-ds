@@ -259,3 +259,12 @@ we can fix all pyhmeshlab related errors by doing a clean install of the environ
 
 >! NOTE: probably everything would also be fixed by using pymeshlab 2023.12, as defined in the dreamgaussian requirements.lock.txt. However, it seems we cannot easily install that version of Pymeshlab on our particular partition (genoa) of Snellius... But also not sure what pymeshlab version we are actually using now... ow do we check that?#TODO. 
 
+
+
+Mesh creation seems to succeed, but then loading mesh at next step gives runtime error:
+
+```error
+
+AttributeError: 'Namespace' object has no attribute 'ssaa'
+
+```
