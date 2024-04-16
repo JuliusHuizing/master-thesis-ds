@@ -1,0 +1,387 @@
+============================================================================================== 
+Warning! Mixing Conda and module environments may lead to corruption of the
+user environment. 
+We do not recommend users mixing those two environments unless absolutely
+necessary. Note that 
+SURF does not provide any support for Conda environment.
+For more information, please refer to our software policy page:
+https://servicedesk.surf.nl/wiki/display/WIKI/Software+policy+Snellius#SoftwarepolicySnellius-UseofAnacondaandMinicondaenvironmentsonSnellius 
+
+Remember that many packages have already been installed on the system and can
+be loaded using 
+the 'module load <package__name>' command. If you are uncertain if a package is
+already available 
+on the system, please use 'module avail' or 'module spider' to search for it.
+============================================================================================== 
+Already up to date.
+/var/spool/slurm/slurmd/job5925991/slurm_script: line 19: cd: /home/jhuizing/master-thesis-ds/repos/lgm: No such file or directory
+Collecting package metadata (current_repodata.json): ...working... done
+Solving environment: ...working... done
+
+
+==> WARNING: A newer version of conda exists. <==
+  current version: 4.12.0
+  latest version: 24.3.0
+
+Please update conda by running
+
+    $ conda update -n base -c defaults conda
+
+
+
+## Package Plan ##
+
+  environment location: /home/jhuizing/.conda/envs/lgm
+
+  added / updated specs:
+    - pip
+    - python=3.8
+
+
+The following NEW packages will be INSTALLED:
+
+  _libgcc_mutex      pkgs/main/linux-64::_libgcc_mutex-0.1-main
+  _openmp_mutex      pkgs/main/linux-64::_openmp_mutex-5.1-1_gnu
+  ca-certificates    pkgs/main/linux-64::ca-certificates-2024.3.11-h06a4308_0
+  ld_impl_linux-64   pkgs/main/linux-64::ld_impl_linux-64-2.38-h1181459_1
+  libffi             pkgs/main/linux-64::libffi-3.4.4-h6a678d5_0
+  libgcc-ng          pkgs/main/linux-64::libgcc-ng-11.2.0-h1234567_1
+  libgomp            pkgs/main/linux-64::libgomp-11.2.0-h1234567_1
+  libstdcxx-ng       pkgs/main/linux-64::libstdcxx-ng-11.2.0-h1234567_1
+  ncurses            pkgs/main/linux-64::ncurses-6.4-h6a678d5_0
+  openssl            pkgs/main/linux-64::openssl-3.0.13-h7f8727e_0
+  pip                pkgs/main/linux-64::pip-23.3.1-py38h06a4308_0
+  python             pkgs/main/linux-64::python-3.8.19-h955ad1f_0
+  readline           pkgs/main/linux-64::readline-8.2-h5eee18b_0
+  setuptools         pkgs/main/linux-64::setuptools-68.2.2-py38h06a4308_0
+  sqlite             pkgs/main/linux-64::sqlite-3.41.2-h5eee18b_0
+  tk                 pkgs/main/linux-64::tk-8.6.12-h1ccaba5_0
+  wheel              pkgs/main/linux-64::wheel-0.41.2-py38h06a4308_0
+  xz                 pkgs/main/linux-64::xz-5.4.6-h5eee18b_0
+  zlib               pkgs/main/linux-64::zlib-1.2.13-h5eee18b_0
+
+
+Proceed ([y]/n)? 
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
+#
+# To activate this environment, use
+#
+#     $ conda activate lgm
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+Looking in indexes: https://download.pytorch.org/whl/cu118
+Collecting torch==2.1.0
+  Downloading https://download.pytorch.org/whl/cu118/torch-2.1.0%2Bcu118-cp38-cp38-linux_x86_64.whl (2325.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 GB 2.3 MB/s eta 0:00:00
+Collecting torchvision==0.16.0
+  Downloading https://download.pytorch.org/whl/cu118/torchvision-0.16.0%2Bcu118-cp38-cp38-linux_x86_64.whl (6.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.2/6.2 MB 55.8 MB/s eta 0:00:00
+Collecting torchaudio==2.1.0
+  Downloading https://download.pytorch.org/whl/cu118/torchaudio-2.1.0%2Bcu118-cp38-cp38-linux_x86_64.whl (3.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 111.4 MB/s eta 0:00:00
+Collecting filelock (from torch==2.1.0)
+  Downloading https://download.pytorch.org/whl/filelock-3.9.0-py3-none-any.whl (9.7 kB)
+Collecting typing-extensions (from torch==2.1.0)
+  Downloading https://download.pytorch.org/whl/typing_extensions-4.8.0-py3-none-any.whl (31 kB)
+Collecting sympy (from torch==2.1.0)
+  Downloading https://download.pytorch.org/whl/sympy-1.12-py3-none-any.whl (5.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.7/5.7 MB 114.0 MB/s eta 0:00:00
+Collecting networkx (from torch==2.1.0)
+  Downloading https://download.pytorch.org/whl/networkx-3.2.1-py3-none-any.whl (1.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 121.7 MB/s eta 0:00:00
+Collecting jinja2 (from torch==2.1.0)
+  Downloading https://download.pytorch.org/whl/Jinja2-3.1.2-py3-none-any.whl (133 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 133.1/133.1 kB 25.3 MB/s eta 0:00:00
+Collecting fsspec (from torch==2.1.0)
+  Downloading https://download.pytorch.org/whl/fsspec-2023.4.0-py3-none-any.whl (153 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 154.0/154.0 kB 30.2 MB/s eta 0:00:00
+Collecting triton==2.1.0 (from torch==2.1.0)
+  Downloading https://download.pytorch.org/whl/triton-2.1.0-0-cp38-cp38-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (89.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 89.2/89.2 MB 45.0 MB/s eta 0:00:00
+Collecting numpy (from torchvision==0.16.0)
+  Downloading https://download.pytorch.org/whl/numpy-1.24.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (17.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 17.3/17.3 MB 94.0 MB/s eta 0:00:00
+Collecting requests (from torchvision==0.16.0)
+  Downloading https://download.pytorch.org/whl/requests-2.28.1-py3-none-any.whl (62 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.8/62.8 kB 13.1 MB/s eta 0:00:00
+Collecting pillow!=8.3.*,>=5.3.0 (from torchvision==0.16.0)
+  Downloading https://download.pytorch.org/whl/pillow-10.2.0-cp38-cp38-manylinux_2_28_x86_64.whl (4.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 157.5 MB/s eta 0:00:00
+Collecting MarkupSafe>=2.0 (from jinja2->torch==2.1.0)
+  Downloading https://download.pytorch.org/whl/MarkupSafe-2.1.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (25 kB)
+INFO: pip is looking at multiple versions of networkx to determine which version is compatible with other requirements. This could take a while.
+Collecting networkx (from torch==2.1.0)
+  Downloading https://download.pytorch.org/whl/networkx-3.0-py3-none-any.whl (2.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 135.6 MB/s eta 0:00:00
+Collecting charset-normalizer<3,>=2 (from requests->torchvision==0.16.0)
+  Downloading https://download.pytorch.org/whl/charset_normalizer-2.1.1-py3-none-any.whl (39 kB)
+Collecting idna<4,>=2.5 (from requests->torchvision==0.16.0)
+  Downloading https://download.pytorch.org/whl/idna-3.4-py3-none-any.whl (61 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.5/61.5 kB 11.2 MB/s eta 0:00:00
+Collecting urllib3<1.27,>=1.21.1 (from requests->torchvision==0.16.0)
+  Downloading https://download.pytorch.org/whl/urllib3-1.26.13-py2.py3-none-any.whl (140 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 140.6/140.6 kB 35.6 MB/s eta 0:00:00
+Collecting certifi>=2017.4.17 (from requests->torchvision==0.16.0)
+  Downloading https://download.pytorch.org/whl/certifi-2022.12.7-py3-none-any.whl (155 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 155.3/155.3 kB 32.2 MB/s eta 0:00:00
+Collecting mpmath>=0.19 (from sympy->torch==2.1.0)
+  Downloading https://download.pytorch.org/whl/mpmath-1.3.0-py3-none-any.whl (536 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 73.5 MB/s eta 0:00:00
+Installing collected packages: mpmath, urllib3, typing-extensions, sympy, pillow, numpy, networkx, MarkupSafe, idna, fsspec, filelock, charset-normalizer, certifi, triton, requests, jinja2, torch, torchvision, torchaudio
+Successfully installed MarkupSafe-2.1.3 certifi-2022.12.7 charset-normalizer-2.1.1 filelock-3.9.0 fsspec-2023.4.0 idna-3.4 jinja2-3.1.2 mpmath-1.3.0 networkx-3.0 numpy-1.24.1 pillow-10.2.0 requests-2.28.1 sympy-1.12 torch-2.1.0+cu118 torchaudio-2.1.0+cu118 torchvision-0.16.0+cu118 triton-2.1.0 typing-extensions-4.8.0 urllib3-1.26.13
+Looking in indexes: https://download.pytorch.org/whl/cu118
+Collecting xformers
+  Downloading https://download.pytorch.org/whl/cu118/xformers-0.0.25.post1%2Bcu118-cp38-cp38-manylinux2014_x86_64.whl (222.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 222.7/222.7 MB 17.2 MB/s eta 0:00:00
+Requirement already satisfied: numpy in /gpfs/home6/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages (from xformers) (1.24.1)
+Collecting torch==2.2.2 (from xformers)
+  Downloading https://download.pytorch.org/whl/cu118/torch-2.2.2%2Bcu118-cp38-cp38-linux_x86_64.whl (819.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 819.2/819.2 MB 5.7 MB/s eta 0:00:00
+Requirement already satisfied: filelock in /gpfs/home6/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages (from torch==2.2.2->xformers) (3.9.0)
+Requirement already satisfied: typing-extensions>=4.8.0 in /gpfs/home6/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages (from torch==2.2.2->xformers) (4.8.0)
+Requirement already satisfied: sympy in /gpfs/home6/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages (from torch==2.2.2->xformers) (1.12)
+Requirement already satisfied: networkx in /gpfs/home6/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages (from torch==2.2.2->xformers) (3.0)
+Requirement already satisfied: jinja2 in /gpfs/home6/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages (from torch==2.2.2->xformers) (3.1.2)
+Requirement already satisfied: fsspec in /gpfs/home6/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages (from torch==2.2.2->xformers) (2023.4.0)
+Collecting nvidia-cuda-nvrtc-cu11==11.8.89 (from torch==2.2.2->xformers)
+  Downloading https://download.pytorch.org/whl/cu118/nvidia_cuda_nvrtc_cu11-11.8.89-py3-none-manylinux1_x86_64.whl (23.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 23.2/23.2 MB 79.5 MB/s eta 0:00:00
+Collecting nvidia-cuda-runtime-cu11==11.8.89 (from torch==2.2.2->xformers)
+  Downloading https://download.pytorch.org/whl/cu118/nvidia_cuda_runtime_cu11-11.8.89-py3-none-manylinux1_x86_64.whl (875 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 875.6/875.6 kB 90.4 MB/s eta 0:00:00
+Collecting nvidia-cuda-cupti-cu11==11.8.87 (from torch==2.2.2->xformers)
+  Downloading https://download.pytorch.org/whl/cu118/nvidia_cuda_cupti_cu11-11.8.87-py3-none-manylinux1_x86_64.whl (13.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.1/13.1 MB 171.6 MB/s eta 0:00:00
+Collecting nvidia-cudnn-cu11==8.7.0.84 (from torch==2.2.2->xformers)
+  Downloading https://download.pytorch.org/whl/cu118/nvidia_cudnn_cu11-8.7.0.84-py3-none-manylinux1_x86_64.whl (728.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 728.5/728.5 MB 7.0 MB/s eta 0:00:00
+Collecting nvidia-cublas-cu11==11.11.3.6 (from torch==2.2.2->xformers)
+  Downloading https://download.pytorch.org/whl/cu118/nvidia_cublas_cu11-11.11.3.6-py3-none-manylinux1_x86_64.whl (417.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 417.9/417.9 MB 11.5 MB/s eta 0:00:00
+Collecting nvidia-cufft-cu11==10.9.0.58 (from torch==2.2.2->xformers)
+  Downloading https://download.pytorch.org/whl/cu118/nvidia_cufft_cu11-10.9.0.58-py3-none-manylinux1_x86_64.whl (168.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 168.4/168.4 MB 28.9 MB/s eta 0:00:00
+Collecting nvidia-curand-cu11==10.3.0.86 (from torch==2.2.2->xformers)
+  Downloading https://download.pytorch.org/whl/cu118/nvidia_curand_cu11-10.3.0.86-py3-none-manylinux1_x86_64.whl (58.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.1/58.1 MB 44.1 MB/s eta 0:00:00
+Collecting nvidia-cusolver-cu11==11.4.1.48 (from torch==2.2.2->xformers)
+  Downloading https://download.pytorch.org/whl/cu118/nvidia_cusolver_cu11-11.4.1.48-py3-none-manylinux1_x86_64.whl (128.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 128.2/128.2 MB 28.7 MB/s eta 0:00:00
+Collecting nvidia-cusparse-cu11==11.7.5.86 (from torch==2.2.2->xformers)
+  Downloading https://download.pytorch.org/whl/cu118/nvidia_cusparse_cu11-11.7.5.86-py3-none-manylinux1_x86_64.whl (204.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 204.1/204.1 MB 24.9 MB/s eta 0:00:00
+Collecting nvidia-nccl-cu11==2.19.3 (from torch==2.2.2->xformers)
+  Downloading https://download.pytorch.org/whl/cu118/nvidia_nccl_cu11-2.19.3-py3-none-manylinux1_x86_64.whl (135.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 135.3/135.3 MB 35.3 MB/s eta 0:00:00
+Collecting nvidia-nvtx-cu11==11.8.86 (from torch==2.2.2->xformers)
+  Downloading https://download.pytorch.org/whl/cu118/nvidia_nvtx_cu11-11.8.86-py3-none-manylinux1_x86_64.whl (99 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 99.1/99.1 kB 8.6 MB/s eta 0:00:00
+Collecting triton==2.2.0 (from torch==2.2.2->xformers)
+  Downloading https://download.pytorch.org/whl/triton-2.2.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (167.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 167.9/167.9 MB 28.8 MB/s eta 0:00:00
+Requirement already satisfied: MarkupSafe>=2.0 in /gpfs/home6/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages (from jinja2->torch==2.2.2->xformers) (2.1.3)
+Requirement already satisfied: mpmath>=0.19 in /gpfs/home6/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages (from sympy->torch==2.2.2->xformers) (1.3.0)
+Installing collected packages: triton, nvidia-nvtx-cu11, nvidia-nccl-cu11, nvidia-cusparse-cu11, nvidia-curand-cu11, nvidia-cufft-cu11, nvidia-cuda-runtime-cu11, nvidia-cuda-nvrtc-cu11, nvidia-cuda-cupti-cu11, nvidia-cublas-cu11, nvidia-cusolver-cu11, nvidia-cudnn-cu11, torch, xformers
+  Attempting uninstall: triton
+    Found existing installation: triton 2.1.0
+    Uninstalling triton-2.1.0:
+      Successfully uninstalled triton-2.1.0
+  Attempting uninstall: torch
+    Found existing installation: torch 2.1.0+cu118
+    Uninstalling torch-2.1.0+cu118:
+      Successfully uninstalled torch-2.1.0+cu118
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+torchaudio 2.1.0+cu118 requires torch==2.1.0, but you have torch 2.2.2+cu118 which is incompatible.
+torchvision 0.16.0+cu118 requires torch==2.1.0, but you have torch 2.2.2+cu118 which is incompatible.
+Successfully installed nvidia-cublas-cu11-11.11.3.6 nvidia-cuda-cupti-cu11-11.8.87 nvidia-cuda-nvrtc-cu11-11.8.89 nvidia-cuda-runtime-cu11-11.8.89 nvidia-cudnn-cu11-8.7.0.84 nvidia-cufft-cu11-10.9.0.58 nvidia-curand-cu11-10.3.0.86 nvidia-cusolver-cu11-11.4.1.48 nvidia-cusparse-cu11-11.7.5.86 nvidia-nccl-cu11-2.19.3 nvidia-nvtx-cu11-11.8.86 torch-2.2.2+cu118 triton-2.2.0 xformers-0.0.25.post1+cu118
+Cloning into 'diff-gaussian-rasterization'...
+Submodule 'third_party/glm' (https://github.com/g-truc/glm.git) registered for path 'third_party/glm'
+Cloning into '/gpfs/home6/jhuizing/master-thesis-ds/diff-gaussian-rasterization/third_party/glm'...
+Submodule path 'third_party/glm': checked out '5c46b9c07008ae65cb81ab79cd677ecc1934b903'
+Processing ./diff-gaussian-rasterization
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Building wheels for collected packages: diff-gaussian-rasterization
+  Building wheel for diff-gaussian-rasterization (setup.py): started
+  Building wheel for diff-gaussian-rasterization (setup.py): finished with status 'error'
+  error: subprocess-exited-with-error
+  
+  × python setup.py bdist_wheel did not run successfully.
+  │ exit code: 1
+  ╰─> [134 lines of output]
+      running bdist_wheel
+      running build
+      running build_py
+      creating build
+      creating build/lib.linux-x86_64-cpython-38
+      creating build/lib.linux-x86_64-cpython-38/diff_gaussian_rasterization
+      copying diff_gaussian_rasterization/__init__.py -> build/lib.linux-x86_64-cpython-38/diff_gaussian_rasterization
+      running build_ext
+      /home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/utils/cpp_extension.py:425: UserWarning: There are no g++ version bounds defined for CUDA version 11.8
+        warnings.warn(f'There are no {compiler_name} version bounds defined for CUDA version {cuda_str_version}')
+      building 'diff_gaussian_rasterization._C' extension
+      creating /gpfs/home6/jhuizing/master-thesis-ds/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-38
+      creating /gpfs/home6/jhuizing/master-thesis-ds/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-38/cuda_rasterizer
+      Emitting ninja build file /gpfs/home6/jhuizing/master-thesis-ds/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-38/build.ninja...
+      Compiling objects...
+      Allowing ninja to set a default number of workers... (overridable by setting the environment variable MAX_JOBS=N)
+      [1/5] /sw/arch/RHEL8/EB_production/2022/software/CUDA/11.8.0/bin/nvcc --generate-dependencies-with-compile --dependency-output /gpfs/home6/jhuizing/master-thesis-ds/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-38/rasterize_points.o.d -I/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include -I/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/torch/csrc/api/include -I/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/TH -I/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/THC -I/sw/arch/RHEL8/EB_production/2022/software/CUDA/11.8.0/include -I/home/jhuizing/.conda/envs/lgm/include/python3.8 -c -c /gpfs/home6/jhuizing/master-thesis-ds/diff-gaussian-rasterization/rasterize_points.cu -o /gpfs/home6/jhuizing/master-thesis-ds/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-38/rasterize_points.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -I/gpfs/home6/jhuizing/master-thesis-ds/diff-gaussian-rasterization/third_party/glm/ -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=0 -gencode=arch=compute_80,code=compute_80 -gencode=arch=compute_80,code=sm_80 -std=c++17
+      FAILED: /gpfs/home6/jhuizing/master-thesis-ds/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-38/rasterize_points.o
+      /sw/arch/RHEL8/EB_production/2022/software/CUDA/11.8.0/bin/nvcc --generate-dependencies-with-compile --dependency-output /gpfs/home6/jhuizing/master-thesis-ds/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-38/rasterize_points.o.d -I/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include -I/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/torch/csrc/api/include -I/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/TH -I/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/THC -I/sw/arch/RHEL8/EB_production/2022/software/CUDA/11.8.0/include -I/home/jhuizing/.conda/envs/lgm/include/python3.8 -c -c /gpfs/home6/jhuizing/master-thesis-ds/diff-gaussian-rasterization/rasterize_points.cu -o /gpfs/home6/jhuizing/master-thesis-ds/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-38/rasterize_points.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -I/gpfs/home6/jhuizing/master-thesis-ds/diff-gaussian-rasterization/third_party/glm/ -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=0 -gencode=arch=compute_80,code=compute_80 -gencode=arch=compute_80,code=sm_80 -std=c++17
+      In file included from /home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/c10/util/TypeList.h:3,
+                       from /home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/c10/util/Metaprogramming.h:3,
+                       from /home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/c10/core/DispatchKeySet.h:4,
+                       from /home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/c10/core/Backend.h:5,
+                       from /home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/c10/core/Layout.h:3,
+                       from /home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:12,
+                       from /home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/ATen/core/Tensor.h:3,
+                       from /home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/ATen/Tensor.h:3,
+                       from /home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+                       from /home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+                       from /home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/torch/csrc/autograd/variable.h:6,
+                       from /home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/torch/csrc/autograd/autograd.h:3,
+                       from /home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/torch/csrc/api/include/torch/autograd.h:3,
+                       from /home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/torch/csrc/api/include/torch/all.h:7,
+                       from /home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/torch/extension.h:5,
+                       from /gpfs/home6/jhuizing/master-thesis-ds/diff-gaussian-rasterization/rasterize_points.cu:13:
+      /home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/c10/util/C++17.h:16:2: error: #error "You're trying to build PyTorch with a too old version of GCC. We need GCC 9 or later."
+       #error \
+        ^~~~~
+      [2/5] /sw/arch/RHEL8/EB_production/2022/software/CUDA/11.8.0/bin/nvcc --generate-dependencies-with-compile --dependency-output /gpfs/home6/jhuizing/master-thesis-ds/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-38/cuda_rasterizer/backward.o.d -I/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include -I/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/torch/csrc/api/include -I/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/TH -I/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/THC -I/sw/arch/RHEL8/EB_production/2022/software/CUDA/11.8.0/include -I/home/jhuizing/.conda/envs/lgm/include/python3.8 -c -c /gpfs/home6/jhuizing/master-thesis-ds/diff-gaussian-rasterization/cuda_rasterizer/backward.cu -o /gpfs/home6/jhuizing/master-thesis-ds/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-38/cuda_rasterizer/backward.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -I/gpfs/home6/jhuizing/master-thesis-ds/diff-gaussian-rasterization/third_party/glm/ -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=0 -gencode=arch=compute_80,code=compute_80 -gencode=arch=compute_80,code=sm_80 -std=c++17
+      /gpfs/home6/jhuizing/master-thesis-ds/diff-gaussian-rasterization/cuda_rasterizer/auxiliary.h(151): warning #177-D: variable "p_proj" was declared but never referenced
+      
+      [3/5] /sw/arch/RHEL8/EB_production/2022/software/CUDA/11.8.0/bin/nvcc --generate-dependencies-with-compile --dependency-output /gpfs/home6/jhuizing/master-thesis-ds/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-38/cuda_rasterizer/forward.o.d -I/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include -I/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/torch/csrc/api/include -I/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/TH -I/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/THC -I/sw/arch/RHEL8/EB_production/2022/software/CUDA/11.8.0/include -I/home/jhuizing/.conda/envs/lgm/include/python3.8 -c -c /gpfs/home6/jhuizing/master-thesis-ds/diff-gaussian-rasterization/cuda_rasterizer/forward.cu -o /gpfs/home6/jhuizing/master-thesis-ds/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-38/cuda_rasterizer/forward.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -I/gpfs/home6/jhuizing/master-thesis-ds/diff-gaussian-rasterization/third_party/glm/ -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=0 -gencode=arch=compute_80,code=compute_80 -gencode=arch=compute_80,code=sm_80 -std=c++17
+      /gpfs/home6/jhuizing/master-thesis-ds/diff-gaussian-rasterization/cuda_rasterizer/auxiliary.h(151): warning #177-D: variable "p_proj" was declared but never referenced
+      
+      [4/5] /sw/arch/RHEL8/EB_production/2022/software/CUDA/11.8.0/bin/nvcc --generate-dependencies-with-compile --dependency-output /gpfs/home6/jhuizing/master-thesis-ds/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-38/cuda_rasterizer/rasterizer_impl.o.d -I/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include -I/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/torch/csrc/api/include -I/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/TH -I/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/THC -I/sw/arch/RHEL8/EB_production/2022/software/CUDA/11.8.0/include -I/home/jhuizing/.conda/envs/lgm/include/python3.8 -c -c /gpfs/home6/jhuizing/master-thesis-ds/diff-gaussian-rasterization/cuda_rasterizer/rasterizer_impl.cu -o /gpfs/home6/jhuizing/master-thesis-ds/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-38/cuda_rasterizer/rasterizer_impl.o -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr --compiler-options ''"'"'-fPIC'"'"'' -I/gpfs/home6/jhuizing/master-thesis-ds/diff-gaussian-rasterization/third_party/glm/ -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=0 -gencode=arch=compute_80,code=compute_80 -gencode=arch=compute_80,code=sm_80 -std=c++17
+      /gpfs/home6/jhuizing/master-thesis-ds/diff-gaussian-rasterization/cuda_rasterizer/auxiliary.h(151): warning #177-D: variable "p_proj" was declared but never referenced
+      
+      [5/5] c++ -MMD -MF /gpfs/home6/jhuizing/master-thesis-ds/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-38/ext.o.d -pthread -B /home/jhuizing/.conda/envs/lgm/compiler_compat -Wl,--sysroot=/ -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -I/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include -I/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/torch/csrc/api/include -I/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/TH -I/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/THC -I/sw/arch/RHEL8/EB_production/2022/software/CUDA/11.8.0/include -I/home/jhuizing/.conda/envs/lgm/include/python3.8 -c -c /gpfs/home6/jhuizing/master-thesis-ds/diff-gaussian-rasterization/ext.cpp -o /gpfs/home6/jhuizing/master-thesis-ds/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-38/ext.o -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=0 -std=c++17
+      FAILED: /gpfs/home6/jhuizing/master-thesis-ds/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-38/ext.o
+      c++ -MMD -MF /gpfs/home6/jhuizing/master-thesis-ds/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-38/ext.o.d -pthread -B /home/jhuizing/.conda/envs/lgm/compiler_compat -Wl,--sysroot=/ -Wsign-compare -DNDEBUG -g -fwrapv -O3 -Wall -Wstrict-prototypes -fPIC -I/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include -I/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/torch/csrc/api/include -I/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/TH -I/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/THC -I/sw/arch/RHEL8/EB_production/2022/software/CUDA/11.8.0/include -I/home/jhuizing/.conda/envs/lgm/include/python3.8 -c -c /gpfs/home6/jhuizing/master-thesis-ds/diff-gaussian-rasterization/ext.cpp -o /gpfs/home6/jhuizing/master-thesis-ds/diff-gaussian-rasterization/build/temp.linux-x86_64-cpython-38/ext.o -DTORCH_API_INCLUDE_EXTENSION_H '-DPYBIND11_COMPILER_TYPE="_gcc"' '-DPYBIND11_STDLIB="_libstdcpp"' '-DPYBIND11_BUILD_ABI="_cxxabi1011"' -DTORCH_EXTENSION_NAME=_C -D_GLIBCXX_USE_CXX11_ABI=0 -std=c++17
+      cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+      In file included from /home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/c10/util/TypeList.h:3,
+                       from /home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/c10/util/Metaprogramming.h:3,
+                       from /home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/c10/core/DispatchKeySet.h:4,
+                       from /home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/c10/core/Backend.h:5,
+                       from /home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/c10/core/Layout.h:3,
+                       from /home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/ATen/core/TensorBody.h:12,
+                       from /home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/ATen/core/Tensor.h:3,
+                       from /home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/ATen/Tensor.h:3,
+                       from /home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/torch/csrc/autograd/function_hook.h:3,
+                       from /home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/torch/csrc/autograd/cpp_hook.h:2,
+                       from /home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/torch/csrc/autograd/variable.h:6,
+                       from /home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/torch/csrc/autograd/autograd.h:3,
+                       from /home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/torch/csrc/api/include/torch/autograd.h:3,
+                       from /home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/torch/csrc/api/include/torch/all.h:7,
+                       from /home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/torch/extension.h:5,
+                       from /gpfs/home6/jhuizing/master-thesis-ds/diff-gaussian-rasterization/ext.cpp:12:
+      /home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/include/c10/util/C++17.h:16:2: error: #error "You're trying to build PyTorch with a too old version of GCC. We need GCC 9 or later."
+       #error \
+        ^~~~~
+      ninja: build stopped: subcommand failed.
+      Traceback (most recent call last):
+        File "/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/utils/cpp_extension.py", line 2096, in _run_ninja_build
+          subprocess.run(
+        File "/home/jhuizing/.conda/envs/lgm/lib/python3.8/subprocess.py", line 516, in run
+          raise CalledProcessError(retcode, process.args,
+      subprocess.CalledProcessError: Command '['ninja', '-v']' returned non-zero exit status 1.
+      
+      The above exception was the direct cause of the following exception:
+      
+      Traceback (most recent call last):
+        File "<string>", line 2, in <module>
+        File "<pip-setuptools-caller>", line 34, in <module>
+        File "/gpfs/home6/jhuizing/master-thesis-ds/diff-gaussian-rasterization/setup.py", line 17, in <module>
+          setup(
+        File "/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/setuptools/__init__.py", line 103, in setup
+          return distutils.core.setup(**attrs)
+        File "/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/setuptools/_distutils/core.py", line 185, in setup
+          return run_commands(dist)
+        File "/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/setuptools/_distutils/core.py", line 201, in run_commands
+          dist.run_commands()
+        File "/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/setuptools/_distutils/dist.py", line 969, in run_commands
+          self.run_command(cmd)
+        File "/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/setuptools/dist.py", line 989, in run_command
+          super().run_command(command)
+        File "/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/setuptools/_distutils/dist.py", line 988, in run_command
+          cmd_obj.run()
+        File "/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/wheel/bdist_wheel.py", line 364, in run
+          self.run_command("build")
+        File "/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/setuptools/_distutils/cmd.py", line 318, in run_command
+          self.distribution.run_command(command)
+        File "/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/setuptools/dist.py", line 989, in run_command
+          super().run_command(command)
+        File "/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/setuptools/_distutils/dist.py", line 988, in run_command
+          cmd_obj.run()
+        File "/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/setuptools/_distutils/command/build.py", line 131, in run
+          self.run_command(cmd_name)
+        File "/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/setuptools/_distutils/cmd.py", line 318, in run_command
+          self.distribution.run_command(command)
+        File "/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/setuptools/dist.py", line 989, in run_command
+          super().run_command(command)
+        File "/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/setuptools/_distutils/dist.py", line 988, in run_command
+          cmd_obj.run()
+        File "/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/setuptools/command/build_ext.py", line 88, in run
+          _build_ext.run(self)
+        File "/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/setuptools/_distutils/command/build_ext.py", line 345, in run
+          self.build_extensions()
+        File "/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/utils/cpp_extension.py", line 871, in build_extensions
+          build_ext.build_extensions(self)
+        File "/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/setuptools/_distutils/command/build_ext.py", line 467, in build_extensions
+          self._build_extensions_serial()
+        File "/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/setuptools/_distutils/command/build_ext.py", line 493, in _build_extensions_serial
+          self.build_extension(ext)
+        File "/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/setuptools/command/build_ext.py", line 249, in build_extension
+          _build_ext.build_extension(self, ext)
+        File "/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/setuptools/_distutils/command/build_ext.py", line 548, in build_extension
+          objects = self.compiler.compile(
+        File "/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/utils/cpp_extension.py", line 684, in unix_wrap_ninja_compile
+          _write_ninja_file_and_compile_objects(
+        File "/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/utils/cpp_extension.py", line 1774, in _write_ninja_file_and_compile_objects
+          _run_ninja_build(
+        File "/home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/torch/utils/cpp_extension.py", line 2112, in _run_ninja_build
+          raise RuntimeError(message) from e
+      RuntimeError: Error compiling objects for extension
+      [end of output]
+  
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+  ERROR: Failed building wheel for diff-gaussian-rasterization
+  Running setup.py clean for diff-gaussian-rasterization
+Failed to build diff-gaussian-rasterization
+ERROR: Could not build wheels for diff-gaussian-rasterization, which is required to install pyproject.toml-based projects
+Collecting git+https://github.com/NVlabs/nvdiffrast
+  Cloning https://github.com/NVlabs/nvdiffrast to /gpfs/scratch1/nodespecific/gcn53/jhuizing.5925991/pip-req-build-4hbsz1rs
+  Running command git clone --filter=blob:none --quiet https://github.com/NVlabs/nvdiffrast /gpfs/scratch1/nodespecific/gcn53/jhuizing.5925991/pip-req-build-4hbsz1rs
+  Resolved https://github.com/NVlabs/nvdiffrast to commit c5caf7bdb8a2448acc491a9faa47753972edd380
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Requirement already satisfied: numpy in /gpfs/home6/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages (from nvdiffrast==0.3.1) (1.24.1)
+Building wheels for collected packages: nvdiffrast
+  Building wheel for nvdiffrast (setup.py): started
+  Building wheel for nvdiffrast (setup.py): finished with status 'done'
+  Created wheel for nvdiffrast: filename=nvdiffrast-0.3.1-py3-none-any.whl size=137845 sha256=bb5b27e59877625f10ddbd4d5a56b06070999bccbc149bd0e39c9a26c4a6fd5d
+  Stored in directory: /gpfs/scratch1/nodespecific/gcn53/jhuizing.5925991/pip-ephem-wheel-cache-7hmq97pd/wheels/fc/3b/ef/dbb73f9a785d542f7844f4c048eea89f8e556f6fe3f2cc056b
+Successfully built nvdiffrast
+Installing collected packages: nvdiffrast
+Successfully installed nvdiffrast-0.3.1
+ERROR: Could not open requirements file: [Errno 2] No such file or directory: 'requirements.txt'
+
+JOB STATISTICS
+==============
+Job ID: 5925991
+Cluster: snellius
+User/Group: jhuizing/jhuizing
+State: FAILED (exit code 1)
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 00:03:14
+CPU Efficiency: 4.83% of 01:06:54 core-walltime
+Job Wall-clock time: 00:03:43
+Memory Utilized: 103.84 MB
+Memory Efficiency: 0.08% of 120.00 GB

@@ -16,8 +16,8 @@ module load Anaconda3/2022.05
 cd $HOME/master-thesis-ds/
 git pull
 
-cd $HOME/master-thesis-ds/repos/lgm
-# conda env remove --name dreamgaussian
+cd $HOME/master-thesis-ds/repos/LGM
+conda env remove --name lgm
 conda create -n lgm python=3.8 pip
 source activate lgm
 
