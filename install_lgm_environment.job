@@ -13,7 +13,6 @@ module load 2022
 module load CUDA/11.8.0
 module load Anaconda3/2022.05
 
-set -e
 cd $HOME/master-thesis-ds/
 
 git pull || true # do not exit if pull fails for some reason.
@@ -23,15 +22,17 @@ conda env remove --name lgm
 conda create -n lgm python=3.8 pip
 source activate lgm
 
-conda install pytorch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 pytorch-cuda=11.8 -c pytorch -c nvidia
 
-pip install -U xformers --index-url https://download.pytorch.org/whl/cu118
-# a modified gaussian splatting (+ depth, alpha rendering)
+conda install pytorch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 pytorch-cuda=11.8 -c pytorch -c nvidia
 git clone --recursive https://github.com/ashawkey/diff-gaussian-rasterization
 pip install ./diff-gaussian-rasterization
 
+
 # for mesh extraction
 pip install git+https://github.com/NVlabs/nvdiffrast
+
+pip install -U xformers --index-url https://download.pytorch.org/whl/cu118
+
 
 # other requirements
 pip install -r requirements.txt
