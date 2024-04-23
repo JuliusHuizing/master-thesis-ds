@@ -54,9 +54,7 @@ class GUI:
         self.overlay_input_img = False
         self.overlay_input_img_ratio = 0.5
 
-        # input text
-        self.prompt = ""
-        self.negative_prompt = ""
+      
 
         # training stuff
         self.training = False
@@ -68,11 +66,7 @@ class GUI:
         if self.opt.input is not None:
             self.load_input(self.opt.input)
         
-        # override prompt from cmdline
-        if self.opt.prompt is not None:
-            self.prompt = self.opt.prompt
-        if self.opt.negative_prompt is not None:
-            self.negative_prompt = self.opt.negative_prompt
+       
 
         # override if provide a checkpoint
         if self.opt.load is not None:
@@ -80,15 +74,6 @@ class GUI:
         else:
             # initialize gaussians to a blob
             self.renderer.initialize(num_pts=self.opt.num_pts)
-
-        if self.gui:
-            dpg.create_context()
-            self.register_dpg()
-            self.test_step()
-
-    def __del__(self):
-        if self.gui:
-            dpg.destroy_context()
 
     def seed_everything(self):
         try:
@@ -131,26 +116,7 @@ class GUI:
             self.cam.far,
         )
 
-        self.enable_sd = self.opt.lambda_sd > 0 and self.prompt != ""
         self.enable_zero123 = self.opt.lambda_zero123 > 0 and self.input_img is not None
-
-        # lazy load guidance model
-        if self.guidance_sd is None and self.enable_sd:
-            if self.opt.mvdream:
-                print(f"[INFO] loading MVDream...")
-                from guidance.mvdream_utils import MVDream
-                self.guidance_sd = MVDream(self.device)
-                print(f"[INFO] loaded MVDream!")
-            elif self.opt.imagedream:
-                print(f"[INFO] loading ImageDream...")
-                from guidance.imagedream_utils import ImageDream
-                self.guidance_sd = ImageDream(self.device)
-                print(f"[INFO] loaded ImageDream!")
-            else:
-                print(f"[INFO] loading SD...")
-                from guidance.sd_utils import StableDiffusion
-                self.guidance_sd = StableDiffusion(self.device)
-                print(f"[INFO] loaded SD!")
 
         if self.guidance_zero123 is None and self.enable_zero123:
             print(f"[INFO] loading zero123...")
@@ -171,13 +137,6 @@ class GUI:
 
         # prepare embeddings
         with torch.no_grad():
-
-            if self.enable_sd:
-                if self.opt.imagedream:
-                    self.guidance_sd.get_image_text_embeds(self.input_img_torch, [self.prompt], [self.negative_prompt])
-                else:
-                    self.guidance_sd.get_text_embeds([self.prompt], [self.negative_prompt])
-
             if self.enable_zero123:
                 self.guidance_zero123.get_img_embeds(self.input_img_torch)
 
@@ -240,33 +199,12 @@ class GUI:
                 image = out["image"].unsqueeze(0) # [1, 3, H, W] in [0, 1]
                 images.append(image)
 
-                # enable mvdream training
-                if self.opt.mvdream or self.opt.imagedream:
-                    for view_i in range(1, 4):
-                        pose_i = orbit_camera(self.opt.elevation + ver, hor + 90 * view_i, self.opt.radius + radius)
-                        poses.append(pose_i)
-
-                        cur_cam_i = MiniCam(pose_i, render_resolution, render_resolution, self.cam.fovy, self.cam.fovx, self.cam.near, self.cam.far)
-
-                        # bg_color = torch.tensor([0.5, 0.5, 0.5], dtype=torch.float32, device="cuda")
-                        out_i = self.renderer.render(cur_cam_i, bg_color=bg_color)
-
-                        image = out_i["image"].unsqueeze(0) # [1, 3, H, W] in [0, 1]
-                        images.append(image)
+             
                     
             images = torch.cat(images, dim=0)
             poses = torch.from_numpy(np.stack(poses, axis=0)).to(self.device)
 
-            # import kiui
-            # print(hor, ver)
-            # kiui.vis.plot_image(images)
-
-            # guidance loss
-            if self.enable_sd:
-                if self.opt.mvdream or self.opt.imagedream:
-                    loss = loss + self.opt.lambda_sd * self.guidance_sd.train_step(images, poses, step_ratio=step_ratio if self.opt.anneal_timestep else None)
-                else:
-                    loss = loss + self.opt.lambda_sd * self.guidance_sd.train_step(images, step_ratio=step_ratio if self.opt.anneal_timestep else None)
+            
 
             if self.enable_zero123:
                 loss = loss + self.opt.lambda_zero123 * self.guidance_zero123.train_step(images, vers, hors, radii, step_ratio=step_ratio if self.opt.anneal_timestep else None, default_elevation=self.opt.elevation)
@@ -295,13 +233,6 @@ class GUI:
         self.need_update = True
 
   
-
-        # dynamic train steps (no need for now)
-        # max allowed train time per-frame is 500 ms
-        # full_t = t / self.train_steps * 16
-        # train_steps = min(16, max(4, int(16 * 500 / full_t)))
-        # if train_steps > self.train_steps * 1.2 or train_steps < self.train_steps * 0.8:
-        #     self.train_steps = train_steps
 
     @torch.no_grad()
     def test_step(self):
@@ -387,12 +318,6 @@ class GUI:
         # bgr to rgb
         self.input_img = self.input_img[..., ::-1].copy()
 
-        # load prompt
-        file_prompt = file.replace("_rgba.png", "_caption.txt")
-        if os.path.exists(file_prompt):
-            print(f'[INFO] load prompt from {file_prompt}...')
-            with open(file_prompt, "r") as f:
-                self.prompt = f.read().strip()
 
     @torch.no_grad()
     def save_model(self, mode='geo', texture_size=1024):
@@ -535,53 +460,6 @@ class GUI:
             self.renderer.gaussians.save_ply(path)
 
         print(f"[INFO] save model to {path}.")
-
-    def register_dpg(self):
-      
-
-
-
-
-       
-
-        ### register camera handler
-
-        def callback_camera_drag_rotate_or_draw_mask(sender, app_data):
-         
-
-            dx = app_data[1]
-            dy = app_data[2]
-
-            self.cam.orbit(dx, dy)
-            self.need_update = True
-
-        def callback_camera_wheel_scale(sender, app_data):
-          
-
-            delta = app_data
-
-            self.cam.scale(delta)
-            self.need_update = True
-
-        def callback_camera_drag_pan(sender, app_data):
-           
-
-            dx = app_data[1]
-            dy = app_data[2]
-
-            self.cam.pan(dx, dy)
-            self.need_update = True
-
-        def callback_set_mouse_loc(sender, app_data):
-      
-
-            # just the pixel coordinate in image
-            self.mouse_loc = np.array(app_data)
-
-   
-
- 
-
 
 
     def render(self):
