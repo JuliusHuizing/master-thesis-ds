@@ -17,6 +17,7 @@ from mesh import Mesh, safe_normalize
 
 import argparse
 from omegaconf import OmegaConf
+import os
 
 class GUI:
     def __init__(self, opt):
@@ -205,10 +206,14 @@ class GUI:
                         
             images = torch.cat(images, dim=0)
              # Save images
+             
+              # Inside the train_step method
+            save_dir = "artificial_images"
+            os.makedirs(save_dir, exist_ok=True) 
             for i in range(images.shape[0]):
-                save_path = os.path.join(self.opt.artimdir, f'rendered_image_{self.step}_{i}.jpg')
+                save_path = os.path.join(save_dir, f'rendered_image_{self.step}_{i}.jpg')
                 image_np = (images[i].permute(1, 2, 0).cpu().numpy() * 255).astype(np.uint8)
-                cv2.imwrite(save_path, cv2.cvtColor(image_np, cv2.COLOR_RGB2BGR)) 
+                cv2.imwrite(save_path, cv2.cvtColor(image_np, cv2.COLOR_RGB2BGR))
                 
             poses = torch.from_numpy(np.stack(poses, axis=0)).to(self.device)
 
@@ -422,11 +427,12 @@ class GUI:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", required=True, help="path to the yaml config file")
-    parser.add_argument("--artimdir", default="artificial_images", help="directory to save artistic images")
 
     args, extras = parser.parse_known_args()
 
     # override default config from cli
     opt = OmegaConf.merge(OmegaConf.load(args.config), OmegaConf.from_cli(extras))
+   
+    
     gui = GUI(opt)
     gui.train(opt.iters)
