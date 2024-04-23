@@ -486,7 +486,7 @@ class GUI:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", required=True, help="path to the yaml config file")
-    parser.add_argument("--artimdir", default="~/tmp-images/", help="directory to save artistic images")
+    parser.add_argument("--artimdir", default="artificial_images", help="directory to save artistic images")
 
     args, extras = parser.parse_known_args()
 
