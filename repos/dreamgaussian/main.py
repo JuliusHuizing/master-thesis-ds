@@ -212,7 +212,7 @@ class GUI:
             os.makedirs(save_dir, exist_ok=True) 
             for i in range(images.shape[0]):
                 save_path = os.path.join(save_dir, f'rendered_image_{self.step}_{i}.jpg')
-                image_np = (images[i].permute(1, 2, 0).cpu().numpy() * 255).astype(np.uint8)
+                image_np = (images[i].permute(1, 2, 0).cpu().detach().numpy() * 255).astype(np.uint8)
                 cv2.imwrite(save_path, cv2.cvtColor(image_np, cv2.COLOR_RGB2BGR))
                 
             poses = torch.from_numpy(np.stack(poses, axis=0)).to(self.device)
