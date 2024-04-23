@@ -1,0 +1,117 @@
+============================================================================================== 
+Warning! Mixing Conda and module environments may lead to corruption of the
+user environment. 
+We do not recommend users mixing those two environments unless absolutely
+necessary. Note that 
+SURF does not provide any support for Conda environment.
+For more information, please refer to our software policy page:
+https://servicedesk.surf.nl/wiki/display/WIKI/Software+policy+Snellius#SoftwarepolicySnellius-UseofAnacondaandMinicondaenvironmentsonSnellius 
+
+Remember that many packages have already been installed on the system and can
+be loaded using 
+the 'module load <package__name>' command. If you are uncertain if a package is
+already available 
+on the system, please use 'module avail' or 'module spider' to search for it.
+============================================================================================== 
+Already up to date.
+Requirement already satisfied: kiui==0.2.2 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (0.2.2)
+Requirement already satisfied: lazy-loader in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from kiui==0.2.2) (0.4)
+Requirement already satisfied: varname in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from kiui==0.2.2) (0.13.0)
+Requirement already satisfied: objprint in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from kiui==0.2.2) (0.2.3)
+Requirement already satisfied: packaging in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from lazy-loader->kiui==0.2.2) (24.0)
+Requirement already satisfied: executing<3.0,>=2.0 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from varname->kiui==0.2.2) (2.0.1)
+[INFO] loading image data/name.jpg...
+[INFO] background removal...
+[INFO] recenter...
+Keyword arguments {'trust_remote_code': True} are not expected by Zero123Pipeline and will be ignored.
+[INFO] load image from data/name_rgba.png...
+Number of points at initialisation :  5000
+[INFO] loading zero123...
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]Loading pipeline components...:  17%|█▋        | 1/6 [00:00<00:02,  1.82it/s]Loading pipeline components...:  50%|█████     | 3/6 [00:00<00:00,  4.84it/s]Loading pipeline components...: 100%|██████████| 6/6 [00:01<00:00,  5.96it/s]Loading pipeline components...: 100%|██████████| 6/6 [00:01<00:00,  5.17it/s]
+[INFO] loaded zero123!
+  0%|          | 0/500 [00:00<?, ?it/s]  0%|          | 0/500 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "main.py", line 432, in <module>
+    gui.train(opt.iters)
+  File "main.py", line 414, in train
+    self.train_step()
+  File "main.py", line 209, in train_step
+    save_path = os.path.join(self.opt.artimdir, f'rendered_image_{self.step}_{i}.jpg')
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/omegaconf/dictconfig.py", line 355, in __getattr__
+    self._format_and_raise(
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/omegaconf/base.py", line 231, in _format_and_raise
+    format_and_raise(
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/omegaconf/_utils.py", line 899, in format_and_raise
+    _raise(ex, cause)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/omegaconf/_utils.py", line 797, in _raise
+    raise ex.with_traceback(sys.exc_info()[2])  # set env var OC_CAUSE=1 for full trace
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/omegaconf/dictconfig.py", line 351, in __getattr__
+    return self._get_impl(
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/omegaconf/dictconfig.py", line 442, in _get_impl
+    node = self._get_child(
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/omegaconf/basecontainer.py", line 73, in _get_child
+    child = self._get_node(
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/omegaconf/dictconfig.py", line 480, in _get_node
+    raise ConfigKeyError(f"Missing key {key!s}")
+omegaconf.errors.ConfigAttributeError: Missing key artimdir
+    full_key: artimdir
+    object_type=dict
+[load_obj] use texture from: logs/name_mesh_albedo.png
+[load_obj] load texture: (1024, 1024, 3)
+[Mesh loading] v: torch.Size([66661, 3]), f: torch.Size([100000, 3])
+[Mesh loading] vn: torch.Size([66661, 3]), fn: torch.Size([100000, 3])
+Keyword arguments {'trust_remote_code': True} are not expected by Zero123Pipeline and will be ignored.
+[INFO] load image from data/name_rgba.png...
+[INFO] loading zero123...
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]Loading pipeline components...:  17%|█▋        | 1/6 [00:00<00:00,  7.22it/s]Loading pipeline components...: 100%|██████████| 6/6 [00:00<00:00, 11.93it/s]Loading pipeline components...: 100%|██████████| 6/6 [00:00<00:00, 11.53it/s]
+[INFO] loaded zero123!
+  0%|          | 0/50 [00:00<?, ?it/s]  2%|▏         | 1/50 [00:01<01:34,  1.93s/it]  4%|▍         | 2/50 [00:02<00:47,  1.00it/s]  6%|▌         | 3/50 [00:02<00:32,  1.43it/s]  8%|▊         | 4/50 [00:02<00:25,  1.79it/s] 10%|█         | 5/50 [00:03<00:21,  2.08it/s] 12%|█▏        | 6/50 [00:03<00:19,  2.31it/s] 14%|█▍        | 7/50 [00:03<00:16,  2.54it/s] 16%|█▌        | 8/50 [00:04<00:15,  2.73it/s] 18%|█▊        | 9/50 [00:04<00:14,  2.86it/s] 20%|██        | 10/50 [00:04<00:13,  2.96it/s] 22%|██▏       | 11/50 [00:05<00:12,  3.03it/s] 24%|██▍       | 12/50 [00:05<00:12,  3.09it/s] 26%|██▌       | 13/50 [00:05<00:11,  3.13it/s] 28%|██▊       | 14/50 [00:06<00:11,  3.26it/s] 30%|███       | 15/50 [00:06<00:10,  3.35it/s] 32%|███▏      | 16/50 [00:06<00:09,  3.42it/s] 34%|███▍      | 17/50 [00:06<00:09,  3.47it/s] 36%|███▌      | 18/50 [00:07<00:09,  3.50it/s] 38%|███▊      | 19/50 [00:07<00:08,  3.53it/s] 40%|████      | 20/50 [00:07<00:08,  3.67it/s] 42%|████▏     | 21/50 [00:07<00:07,  3.77it/s] 44%|████▍     | 22/50 [00:08<00:07,  3.85it/s] 46%|████▌     | 23/50 [00:08<00:06,  3.91it/s] 48%|████▊     | 24/50 [00:08<00:06,  3.95it/s] 50%|█████     | 25/50 [00:08<00:06,  3.98it/s] 52%|█████▏    | 26/50 [00:09<00:05,  4.01it/s] 54%|█████▍    | 27/50 [00:09<00:05,  4.18it/s] 56%|█████▌    | 28/50 [00:09<00:05,  4.31it/s] 58%|█████▊    | 29/50 [00:09<00:04,  4.41it/s] 60%|██████    | 30/50 [00:10<00:04,  4.48it/s] 62%|██████▏   | 31/50 [00:10<00:04,  4.53it/s] 64%|██████▍   | 32/50 [00:10<00:03,  4.57it/s] 66%|██████▌   | 33/50 [00:10<00:03,  4.60it/s] 68%|██████▊   | 34/50 [00:10<00:03,  4.83it/s] 70%|███████   | 35/50 [00:11<00:02,  5.01it/s] 72%|███████▏  | 36/50 [00:11<00:02,  5.13it/s] 74%|███████▍  | 37/50 [00:11<00:02,  5.21it/s] 76%|███████▌  | 38/50 [00:11<00:02,  5.28it/s] 78%|███████▊  | 39/50 [00:11<00:02,  5.34it/s] 80%|████████  | 40/50 [00:11<00:01,  5.68it/s] 82%|████████▏ | 41/50 [00:12<00:01,  5.93it/s] 84%|████████▍ | 42/50 [00:12<00:01,  6.13it/s] 86%|████████▌ | 43/50 [00:12<00:01,  6.26it/s] 88%|████████▊ | 44/50 [00:12<00:00,  6.36it/s] 90%|█████████ | 45/50 [00:12<00:00,  6.45it/s] 92%|█████████▏| 46/50 [00:12<00:00,  6.51it/s] 94%|█████████▍| 47/50 [00:12<00:00,  6.94it/s] 96%|█████████▌| 48/50 [00:13<00:00,  7.32it/s] 98%|█████████▊| 49/50 [00:13<00:00,  7.61it/s]100%|██████████| 50/50 [00:13<00:00,  7.73it/s]100%|██████████| 50/50 [00:13<00:00,  3.74it/s]
+[INFO] save model to logs/name.obj.
+[load_obj] use texture from: logs/name_albedo.png
+[load_obj] load texture: (1024, 1024, 3)
+[Mesh loading] v: torch.Size([66661, 3]), f: torch.Size([100000, 3])
+[Mesh loading] vn: torch.Size([66661, 3]), fn: torch.Size([100000, 3])
+  0%|          | 0/1 [00:00<?, ?it/s]
+  0%|          | 0/120 [00:00<?, ?it/s][A
+  1%|          | 1/120 [00:00<00:34,  3.41it/s][A
+ 17%|█▋        | 20/120 [00:00<00:01, 63.62it/s][A
+ 32%|███▎      | 39/120 [00:00<00:00, 102.85it/s][A
+ 48%|████▊     | 58/120 [00:00<00:00, 128.26it/s][A
+ 65%|██████▌   | 78/120 [00:00<00:00, 149.42it/s][A
+ 82%|████████▏ | 98/120 [00:00<00:00, 163.51it/s][A
+ 99%|█████████▉| 119/120 [00:00<00:00, 174.84it/s][A100%|██████████| 120/120 [00:00<00:00, 130.73it/s]
+100%|██████████| 1/1 [00:00<00:00,  1.09it/s]100%|██████████| 1/1 [00:00<00:00,  1.09it/s]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Loading checkpoint shards:  50%|█████     | 1/2 [00:15<00:15, 15.93s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:16<00:00,  6.76s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:16<00:00,  8.13s/it][load_obj] use texture from: logs/name_albedo.png
+[load_obj] load texture: (1024, 1024, 3)
+[Mesh loading] v: torch.Size([66661, 3]), f: torch.Size([100000, 3])
+[Mesh loading] vn: torch.Size([66661, 3]), fn: torch.Size([100000, 3])
+
+  0%|          | 0/1 [00:00<?, ?it/s]
+  0%|          | 0/8 [00:00<?, ?it/s][A
+ 12%|█▎        | 1/8 [00:00<00:05,  1.30it/s][A
+ 25%|██▌       | 2/8 [00:00<00:02,  2.62it/s][A
+ 38%|███▊      | 3/8 [00:00<00:01,  3.87it/s][A
+ 50%|█████     | 4/8 [00:01<00:00,  5.00it/s][A
+ 62%|██████▎   | 5/8 [00:01<00:00,  5.98it/s][A
+ 75%|███████▌  | 6/8 [00:01<00:00,  6.78it/s][A
+ 88%|████████▊ | 7/8 [00:01<00:00,  7.42it/s][A
+100%|██████████| 8/8 [00:01<00:00,  7.90it/s][A100%|██████████| 8/8 [00:01<00:00,  5.20it/s]
+100%|██████████| 1/1 [00:01<00:00,  1.54s/it]100%|██████████| 1/1 [00:01<00:00,  1.54s/it]
+0.7257167547941208
+
+JOB STATISTICS
+==============
+Job ID: 6022364
+Cluster: snellius
+User/Group: jhuizing/jhuizing
+State: RUNNING
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 00:00:00
+CPU Efficiency: 0.00% of 00:30:18 core-walltime
+Job Wall-clock time: 00:01:41
+Memory Utilized: 0.00 MB (estimated maximum)
+Memory Efficiency: 0.00% of 120.00 GB (120.00 GB/node)
+WARNING: Efficiency statistics may be misleading for RUNNING jobs.

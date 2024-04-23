@@ -1,0 +1,99 @@
+============================================================================================== 
+Warning! Mixing Conda and module environments may lead to corruption of the
+user environment. 
+We do not recommend users mixing those two environments unless absolutely
+necessary. Note that 
+SURF does not provide any support for Conda environment.
+For more information, please refer to our software policy page:
+https://servicedesk.surf.nl/wiki/display/WIKI/Software+policy+Snellius#SoftwarepolicySnellius-UseofAnacondaandMinicondaenvironmentsonSnellius 
+
+Remember that many packages have already been installed on the system and can
+be loaded using 
+the 'module load <package__name>' command. If you are uncertain if a package is
+already available 
+on the system, please use 'module avail' or 'module spider' to search for it.
+============================================================================================== 
+Already up to date.
+Requirement already satisfied: kiui==0.2.2 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (0.2.2)
+Requirement already satisfied: lazy-loader in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from kiui==0.2.2) (0.4)
+Requirement already satisfied: varname in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from kiui==0.2.2) (0.13.0)
+Requirement already satisfied: objprint in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from kiui==0.2.2) (0.2.3)
+Requirement already satisfied: packaging in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from lazy-loader->kiui==0.2.2) (24.0)
+Requirement already satisfied: executing<3.0,>=2.0 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from varname->kiui==0.2.2) (2.0.1)
+[INFO] loading image data/name.jpg...
+[INFO] background removal...
+[INFO] recenter...
+Keyword arguments {'trust_remote_code': True} are not expected by Zero123Pipeline and will be ignored.
+[INFO] load image from data/name_rgba.png...
+Number of points at initialisation :  5000
+[INFO] loading zero123...
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]Loading pipeline components...:  33%|███▎      | 2/6 [00:00<00:00, 10.71it/s]Loading pipeline components...:  67%|██████▋   | 4/6 [00:00<00:00,  4.99it/s]Loading pipeline components...: 100%|██████████| 6/6 [00:01<00:00,  4.38it/s]Loading pipeline components...: 100%|██████████| 6/6 [00:01<00:00,  4.76it/s]
+[INFO] loaded zero123!
+  0%|          | 0/500 [00:00<?, ?it/s]  0%|          | 0/500 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "main.py", line 438, in <module>
+    gui.train(opt.iters)
+  File "main.py", line 419, in train
+    self.train_step()
+  File "main.py", line 215, in train_step
+    image_np = (images[i].permute(1, 2, 0).cpu().numpy() * 255).astype(np.uint8)
+RuntimeError: Can't call numpy() on Tensor that requires grad. Use tensor.detach().numpy() instead.
+[load_obj] use texture from: logs/name_mesh_albedo.png
+[load_obj] load texture: (1024, 1024, 3)
+[Mesh loading] v: torch.Size([66661, 3]), f: torch.Size([100000, 3])
+[Mesh loading] vn: torch.Size([66661, 3]), fn: torch.Size([100000, 3])
+Keyword arguments {'trust_remote_code': True} are not expected by Zero123Pipeline and will be ignored.
+[INFO] load image from data/name_rgba.png...
+[INFO] loading zero123...
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]Loading pipeline components...:  33%|███▎      | 2/6 [00:00<00:00,  6.52it/s]Loading pipeline components...:  50%|█████     | 3/6 [00:00<00:00,  6.68it/s]Loading pipeline components...: 100%|██████████| 6/6 [00:00<00:00, 11.65it/s]
+[INFO] loaded zero123!
+  0%|          | 0/50 [00:00<?, ?it/s]  2%|▏         | 1/50 [00:02<01:40,  2.06s/it]  4%|▍         | 2/50 [00:02<00:50,  1.06s/it]  6%|▌         | 3/50 [00:02<00:34,  1.36it/s]  8%|▊         | 4/50 [00:03<00:26,  1.72it/s] 10%|█         | 5/50 [00:03<00:22,  2.01it/s] 12%|█▏        | 6/50 [00:03<00:19,  2.23it/s] 14%|█▍        | 7/50 [00:04<00:17,  2.46it/s] 16%|█▌        | 8/50 [00:04<00:15,  2.64it/s] 18%|█▊        | 9/50 [00:04<00:14,  2.79it/s] 20%|██        | 10/50 [00:05<00:13,  2.89it/s] 22%|██▏       | 11/50 [00:05<00:13,  2.96it/s] 24%|██▍       | 12/50 [00:05<00:12,  3.02it/s] 26%|██▌       | 13/50 [00:06<00:12,  3.05it/s] 28%|██▊       | 14/50 [00:06<00:11,  3.17it/s] 30%|███       | 15/50 [00:06<00:10,  3.27it/s] 32%|███▏      | 16/50 [00:06<00:10,  3.35it/s] 34%|███▍      | 17/50 [00:07<00:09,  3.38it/s] 36%|███▌      | 18/50 [00:07<00:09,  3.42it/s] 38%|███▊      | 19/50 [00:07<00:08,  3.45it/s] 40%|████      | 20/50 [00:08<00:08,  3.59it/s] 42%|████▏     | 21/50 [00:08<00:07,  3.69it/s] 44%|████▍     | 22/50 [00:08<00:07,  3.78it/s] 46%|████▌     | 23/50 [00:08<00:07,  3.83it/s] 48%|████▊     | 24/50 [00:09<00:06,  3.86it/s] 50%|█████     | 25/50 [00:09<00:06,  3.90it/s] 52%|█████▏    | 26/50 [00:09<00:06,  3.92it/s] 54%|█████▍    | 27/50 [00:09<00:05,  4.08it/s] 56%|█████▌    | 28/50 [00:09<00:05,  4.23it/s] 58%|█████▊    | 29/50 [00:10<00:04,  4.31it/s] 60%|██████    | 30/50 [00:10<00:04,  4.40it/s] 62%|██████▏   | 31/50 [00:10<00:04,  4.44it/s] 64%|██████▍   | 32/50 [00:10<00:04,  4.48it/s] 66%|██████▌   | 33/50 [00:11<00:03,  4.51it/s] 68%|██████▊   | 34/50 [00:11<00:03,  4.72it/s] 70%|███████   | 35/50 [00:11<00:03,  4.90it/s] 72%|███████▏  | 36/50 [00:11<00:02,  5.02it/s] 74%|███████▍  | 37/50 [00:11<00:02,  5.12it/s] 76%|███████▌  | 38/50 [00:11<00:02,  5.17it/s] 78%|███████▊  | 39/50 [00:12<00:02,  5.23it/s] 80%|████████  | 40/50 [00:12<00:01,  5.54it/s] 82%|████████▏ | 41/50 [00:12<00:01,  5.77it/s] 84%|████████▍ | 42/50 [00:12<00:01,  6.00it/s] 86%|████████▌ | 43/50 [00:12<00:01,  6.11it/s] 88%|████████▊ | 44/50 [00:12<00:00,  6.21it/s] 90%|█████████ | 45/50 [00:13<00:00,  6.31it/s] 92%|█████████▏| 46/50 [00:13<00:00,  6.34it/s] 94%|█████████▍| 47/50 [00:13<00:00,  6.77it/s] 96%|█████████▌| 48/50 [00:13<00:00,  7.13it/s] 98%|█████████▊| 49/50 [00:13<00:00,  7.40it/s]100%|██████████| 50/50 [00:13<00:00,  7.65it/s]100%|██████████| 50/50 [00:13<00:00,  3.64it/s]
+[INFO] save model to logs/name.obj.
+[load_obj] use texture from: logs/name_albedo.png
+[load_obj] load texture: (1024, 1024, 3)
+[Mesh loading] v: torch.Size([66661, 3]), f: torch.Size([100000, 3])
+[Mesh loading] vn: torch.Size([66661, 3]), fn: torch.Size([100000, 3])
+  0%|          | 0/1 [00:00<?, ?it/s]
+  0%|          | 0/120 [00:00<?, ?it/s][A
+  1%|          | 1/120 [00:00<00:41,  2.84it/s][A
+ 16%|█▌        | 19/120 [00:00<00:01, 53.42it/s][A
+ 30%|███       | 36/120 [00:00<00:00, 85.95it/s][A
+ 43%|████▎     | 52/120 [00:00<00:00, 106.75it/s][A
+ 57%|█████▊    | 69/120 [00:00<00:00, 123.98it/s][A
+ 71%|███████   | 85/120 [00:00<00:00, 133.58it/s][A
+ 84%|████████▍ | 101/120 [00:00<00:00, 136.55it/s][A
+ 97%|█████████▋| 116/120 [00:01<00:00, 138.73it/s][A100%|██████████| 120/120 [00:01<00:00, 108.20it/s]
+100%|██████████| 1/1 [00:01<00:00,  1.11s/it]100%|██████████| 1/1 [00:01<00:00,  1.11s/it]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Loading checkpoint shards:  50%|█████     | 1/2 [00:15<00:15, 15.11s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:15<00:00,  6.42s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:15<00:00,  7.73s/it][load_obj] use texture from: logs/name_albedo.png
+[load_obj] load texture: (1024, 1024, 3)
+[Mesh loading] v: torch.Size([66661, 3]), f: torch.Size([100000, 3])
+[Mesh loading] vn: torch.Size([66661, 3]), fn: torch.Size([100000, 3])
+
+  0%|          | 0/1 [00:00<?, ?it/s]
+  0%|          | 0/8 [00:00<?, ?it/s][A
+ 12%|█▎        | 1/8 [00:03<00:05,  1.28it/s][A
+ 25%|██▌       | 2/8 [00:03<00:10,  1.69s/it][A
+ 38%|███▊      | 3/8 [00:03<00:04,  1.03it/s][A
+ 50%|█████     | 4/8 [00:03<00:02,  1.58it/s][A
+ 62%|██████▎   | 5/8 [00:04<00:01,  2.25it/s][A
+ 75%|███████▌  | 6/8 [00:04<00:01,  1.61it/s][A
+ 88%|████████▊ | 7/8 [00:06<00:00,  2.20it/s][A
+100%|██████████| 8/8 [00:06<00:00,  1.07s/it][A100%|██████████| 8/8 [00:06<00:00,  1.16it/s]
+100%|██████████| 1/1 [00:06<00:00,  6.91s/it]100%|██████████| 1/1 [00:06<00:00,  6.91s/it]
+0.7196721285581589
+
+JOB STATISTICS
+==============
+Job ID: 6022639
+Cluster: snellius
+User/Group: jhuizing/jhuizing
+State: COMPLETED (exit code 0)
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 00:03:18
+CPU Efficiency: 9.32% of 00:35:24 core-walltime
+Job Wall-clock time: 00:01:58
+Memory Utilized: 17.67 GB
+Memory Efficiency: 14.73% of 120.00 GB
