@@ -285,13 +285,20 @@ class GUI:
             )
 
             # display input_image
-            if self.overlay_input_img and self.input_img is not None:
-                self.buffer_image = (
-                    self.buffer_image * (1 - self.overlay_input_img_ratio)
-                    + self.input_img * self.overlay_input_img_ratio
-                )
+           
+            self.buffer_image = (
+                self.buffer_image * (1 - self.overlay_input_img_ratio)
+                + self.input_img * self.overlay_input_img_ratio
+            )
+            
+             # Save image
+            save_path = os.path.join(self.opt.artimdir, 'rendered_image.jpg')
+            cv2.imwrite(save_path, cv2.cvtColor(self.buffer_image * 255, cv2.COLOR_RGB2BGR))
 
             self.need_update = False
+            
+            
+       
 
         ender.record()
         torch.cuda.synchronize()
@@ -481,6 +488,7 @@ class GUI:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", required=True, help="path to the yaml config file")
+    parser.add_argument("--artimdir", default="~/tmp/", help="directory to save artificial images")
     args, extras = parser.parse_known_args()
 
     # override default config from cli
