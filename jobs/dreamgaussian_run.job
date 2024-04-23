@@ -24,11 +24,11 @@ source activate dreamgaussianV2
 pip install kiui==0.2.2
 ### preprocess
 # background removal and recentering, save rgba at 256x256
-# python process.py data/name.jpg
+python process.py data/name.jpg
 
 ### training gaussian stage
 # train 500 iters (~1min) and export ckpt & coarse_mesh to logs
-# python main.py --config configs/image.yaml input=data/name_rgba.png save_path=name
+python main.py --config configs/image.yaml input=data/name_rgba.png save_path=name
 
 # gui mode (supports visualizing training)
 # python main.py --config configs/image.yaml input=data/name_rgba.png save_path=name gui=True
@@ -41,7 +41,7 @@ pip install kiui==0.2.2
 
 ### training mesh stage
 # auto load coarse_mesh and refine 50 iters (~1min), export fine_mesh to logs
-# python main2.py --config configs/image.yaml input=data/name_rgba.png save_path=name
+python main2.py --config configs/image.yaml input=data/name_rgba.png save_path=name
 
 # specify coarse mesh path explicity
 # python main2.py --config configs/image.yaml input=data/name_rgba.png save_path=name mesh=logs/name_mesh.obj
@@ -58,7 +58,7 @@ pip install kiui==0.2.2
 # kire logs/name.obj
 
 # save 360 degree video of mesh (can run without gui)
-# kire logs/name.obj --save_video name.mp4 --wogui
+kire logs/name.obj --save_video name.mp4 --wogui
 
 # save 8 view images of mesh (can run without gui)
 # kire logs/name.obj --save images/name/ --wogui
