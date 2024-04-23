@@ -15,6 +15,9 @@ from gs_renderer import Renderer, MiniCam
 from grid_put import mipmap_linear_grid_put_2d
 from mesh import Mesh, safe_normalize
 
+import argparse
+from omegaconf import OmegaConf
+
 class GUI:
     def __init__(self, opt):
         self.opt = opt  # shared with the trainer's opt to support in-place modification of rendering parameters.
@@ -598,19 +601,11 @@ class GUI:
         
 
 if __name__ == "__main__":
-    import argparse
-    from omegaconf import OmegaConf
-
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", required=True, help="path to the yaml config file")
     args, extras = parser.parse_known_args()
 
     # override default config from cli
     opt = OmegaConf.merge(OmegaConf.load(args.config), OmegaConf.from_cli(extras))
-
     gui = GUI(opt)
-
-    # if opt.gui:
-    #     gui.render()
-    # else:
     gui.train(opt.iters)
