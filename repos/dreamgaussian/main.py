@@ -285,21 +285,19 @@ class GUI:
             )
 
             # display input_image
-           
-            self.buffer_image = (
-                self.buffer_image * (1 - self.overlay_input_img_ratio)
-                + self.input_img * self.overlay_input_img_ratio
-            )
-            
-             # Save image
-            save_path = os.path.join(self.opt.artimdir, 'rendered_image.jpg')
-            cv2.imwrite(save_path, cv2.cvtColor(self.buffer_image * 255, cv2.COLOR_RGB2BGR))
+            if self.overlay_input_img and self.input_img is not None:
+                self.buffer_image = (
+                    self.buffer_image * (1 - self.overlay_input_img_ratio)
+                    + self.input_img * self.overlay_input_img_ratio
+                )
 
             self.need_update = False
             
-            
-       
-
+            # save artificial images
+            os.makedirs(self.opt.artimdir, exist_ok=True)  # Ensure directory exists
+            save_path = os.path.join(self.opt.artimdir, 'rendered_image.jpg')
+            cv2.imwrite(save_path, cv2.cvtColor(self.buffer_image * 255, cv2.COLOR_RGB2BGR))
+        
         ender.record()
         torch.cuda.synchronize()
         t = starter.elapsed_time(ender)
@@ -488,7 +486,8 @@ class GUI:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", required=True, help="path to the yaml config file")
-    parser.add_argument("--artimdir", default="~/tmp/", help="directory to save artificial images")
+    parser.add_argument("--artimdir", default="~/tmp-images/", help="directory to save artistic images")
+
     args, extras = parser.parse_known_args()
 
     # override default config from cli
