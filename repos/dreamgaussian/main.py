@@ -198,10 +198,18 @@ class GUI:
 
                 image = out["image"].unsqueeze(0) # [1, 3, H, W] in [0, 1]
                 images.append(image)
+                
+                
 
-             
-                    
+           
+                        
             images = torch.cat(images, dim=0)
+             # Save images
+            for i in range(images.shape[0]):
+                save_path = os.path.join(self.opt.artimdir, f'rendered_image_{self.step}_{i}.jpg')
+                image_np = (images[i].permute(1, 2, 0).cpu().numpy() * 255).astype(np.uint8)
+                cv2.imwrite(save_path, cv2.cvtColor(image_np, cv2.COLOR_RGB2BGR)) 
+                
             poses = torch.from_numpy(np.stack(poses, axis=0)).to(self.device)
 
             
@@ -232,79 +240,7 @@ class GUI:
 
         self.need_update = True
 
-  
 
-    @torch.no_grad()
-    def test_step(self):
-        # ignore if no need to update
-        if not self.need_update:
-            return
-
-        starter = torch.cuda.Event(enable_timing=True)
-        ender = torch.cuda.Event(enable_timing=True)
-        starter.record()
-
-        # should update image
-        if self.need_update:
-            # render image
-
-            cur_cam = MiniCam(
-                self.cam.pose,
-                self.W,
-                self.H,
-                self.cam.fovy,
-                self.cam.fovx,
-                self.cam.near,
-                self.cam.far,
-            )
-
-            out = self.renderer.render(cur_cam, self.gaussain_scale_factor)
-
-            buffer_image = out[self.mode]  # [3, H, W]
-
-            if self.mode in ['depth', 'alpha']:
-                buffer_image = buffer_image.repeat(3, 1, 1)
-                if self.mode == 'depth':
-                    buffer_image = (buffer_image - buffer_image.min()) / (buffer_image.max() - buffer_image.min() + 1e-20)
-
-            buffer_image = F.interpolate(
-                buffer_image.unsqueeze(0),
-                size=(self.H, self.W),
-                mode="bilinear",
-                align_corners=False,
-            ).squeeze(0)
-
-            self.buffer_image = (
-                buffer_image.permute(1, 2, 0)
-                .contiguous()
-                .clamp(0, 1)
-                .contiguous()
-                .detach()
-                .cpu()
-                .numpy()
-            )
-
-            # display input_image
-            if self.overlay_input_img and self.input_img is not None:
-                self.buffer_image = (
-                    self.buffer_image * (1 - self.overlay_input_img_ratio)
-                    + self.input_img * self.overlay_input_img_ratio
-                )
-
-            self.need_update = False
-            
-            # save artificial images
-            os.makedirs(self.opt.artimdir, exist_ok=True)  # Ensure directory exists
-            save_path = os.path.join(self.opt.artimdir, 'rendered_image.jpg')
-            cv2.imwrite(save_path, cv2.cvtColor(self.buffer_image * 255, cv2.COLOR_RGB2BGR))
-        
-        ender.record()
-        torch.cuda.synchronize()
-        t = starter.elapsed_time(ender)
-
-    # buffer must be contiguous, else seg fault!
-
-    
     def load_input(self, file):
         # load image
         print(f'[INFO] load image from {file}...')
