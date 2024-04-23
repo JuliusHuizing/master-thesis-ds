@@ -5,8 +5,9 @@ import torch
 import torch.nn.functional as F
 from tqdm import tqdm
 
-from cam_utils import orbit_camera, MiniCam
-from gs_renderer import Renderer
+from cam_utils import orbit_camera
+
+from gs_renderer import Renderer, MiniCam
 from rembg import remove as rembg_remove
 
 class Trainer:
