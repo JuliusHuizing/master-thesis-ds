@@ -4,16 +4,21 @@ import numpy as np
 import torch
 import torch.nn.functional as F
 from tqdm import tqdm
+import logging
 
 from cam_utils import orbit_camera
-
 from gs_renderer import Renderer, MiniCam
 from rembg import remove as rembg_remove
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 class Trainer:
     def __init__(self, opt):
         self.opt = opt
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        
+        logging.info("Initializing the training environment")
         
         # Load and prepare image
         self.input_img, self.input_mask = self.load_input(opt.input)
@@ -21,12 +26,14 @@ class Trainer:
         # Renderer setup
         self.renderer = Renderer(sh_degree=opt.sh_degree).to(self.device)
         if opt.load:
+            logging.info(f"Loading model from {opt.load}")
             self.renderer.initialize(opt.load)
         else:
+            logging.info("Initializing renderer with new parameters")
             self.renderer.initialize(num_pts=opt.num_pts)
 
     def load_input(self, file_path):
-        print(f'[INFO] Loading image from {file_path}...')
+        logging.info(f'Loading image from {file_path}...')
         img = cv2.imread(file_path, cv2.IMREAD_UNCHANGED)
         img = cv2.resize(img, (self.opt.W, self.opt.H), interpolation=cv2.INTER_AREA)
         img = img.astype(np.float32) / 255.0
@@ -41,12 +48,15 @@ class Trainer:
         return img, mask
 
     def train(self, iters=500):
+        logging.info(f"Starting training for {iters} iterations")
         for _ in tqdm(range(iters), desc="Training"):
             self.train_step()
 
     def train_step(self):
+        logging.debug("Starting a new training step")
         self.renderer.optimizer.zero_grad()
         loss = self.compute_loss()
+        logging.debug(f"Computed loss: {loss.item()}")
         loss.backward()
         self.renderer.optimizer.step()
 
@@ -59,10 +69,14 @@ class Trainer:
         image_loss = F.mse_loss(output['image'], torch.from_numpy(self.input_img).to(self.device))
         mask_loss = F.mse_loss(output['alpha'], torch.from_numpy(self.input_mask).to(self.device))
         
-        return image_loss + mask_loss
+        total_loss = image_loss + mask_loss
+        logging.debug(f"Image loss: {image_loss.item()}, Mask loss: {mask_loss.item()}")
+        return total_loss
 
     def save_model(self):
-        self.renderer.save_ply(os.path.join(self.opt.outdir, f"{self.opt.save_path}_model.ply"))
+        model_path = os.path.join(self.opt.outdir, f"{self.opt.save_path}_model.ply")
+        logging.info(f"Saving model to {model_path}")
+        self.renderer.save_ply(model_path)
 
 if __name__ == "__main__":
     import argparse
