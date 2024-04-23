@@ -9,10 +9,19 @@ import logging
 from cam_utils import orbit_camera
 from gs_renderer import Renderer, MiniCam
 from rembg import remove as rembg_remove
+import sys
+
+import argparse
+from omegaconf import OmegaConf
 
 # Configure logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.StreamHandler(sys.stdout)  # Ensures logs are output to standard output
+    ]
+)
 class Trainer:
     def __init__(self, opt):
         self.opt = opt
@@ -78,14 +87,16 @@ class Trainer:
         logging.info(f"Saving model to {model_path}")
         self.renderer.save_ply(model_path)
 
-if __name__ == "__main__":
-    import argparse
-    from omegaconf import OmegaConf
 
+def parse_args():
     parser = argparse.ArgumentParser(description="Train a model from an image to 3D")
     parser.add_argument("--config", type=str, required=True, help="Path to the yaml config file")
-    args = parser.parse_args()
-    
+    parser.add_argument("--input", type=str, required=True, help="Input image file path")
+    parser.add_argument("--save_path", type=str, required=True, help="Base path for saving output files")
+    return parser.parse_args()
+
+if __name__ == "__main__":
+    args = parse_args()
     opt = OmegaConf.load(args.config)
     trainer = Trainer(opt)
     trainer.train(opt.iters)
