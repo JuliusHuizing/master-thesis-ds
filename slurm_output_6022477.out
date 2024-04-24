@@ -1,91 +1,0 @@
-============================================================================================== 
-Warning! Mixing Conda and module environments may lead to corruption of the
-user environment. 
-We do not recommend users mixing those two environments unless absolutely
-necessary. Note that 
-SURF does not provide any support for Conda environment.
-For more information, please refer to our software policy page:
-https://servicedesk.surf.nl/wiki/display/WIKI/Software+policy+Snellius#SoftwarepolicySnellius-UseofAnacondaandMinicondaenvironmentsonSnellius 
-
-Remember that many packages have already been installed on the system and can
-be loaded using 
-the 'module load <package__name>' command. If you are uncertain if a package is
-already available 
-on the system, please use 'module avail' or 'module spider' to search for it.
-============================================================================================== 
-error: cannot pull with rebase: You have unstaged changes.
-error: please commit or stash them.
-Requirement already satisfied: kiui==0.2.2 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (0.2.2)
-Requirement already satisfied: lazy-loader in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from kiui==0.2.2) (0.4)
-Requirement already satisfied: varname in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from kiui==0.2.2) (0.13.0)
-Requirement already satisfied: objprint in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from kiui==0.2.2) (0.2.3)
-Requirement already satisfied: packaging in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from lazy-loader->kiui==0.2.2) (24.0)
-Requirement already satisfied: executing<3.0,>=2.0 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from varname->kiui==0.2.2) (2.0.1)
-[INFO] loading image data/name.jpg...
-[INFO] background removal...
-[INFO] recenter...
-Traceback (most recent call last):
-  File "main.py", line 430, in <module>
-    opt = OmegaConf.merge(OmegaConf.load(args.config), OmegaConf.load(args.artimdir), OmegaConf.from_cli(extras))
-  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/omegaconf/omegaconf.py", line 189, in load
-    with io.open(os.path.abspath(file_), "r", encoding="utf-8") as f:
-IsADirectoryError: [Errno 21] Is a directory: '/gpfs/home6/jhuizing/master-thesis-ds/repos/dreamgaussian/logs'
-[load_obj] use texture from: logs/name_mesh_albedo.png
-[load_obj] load texture: (1024, 1024, 3)
-[Mesh loading] v: torch.Size([66661, 3]), f: torch.Size([100000, 3])
-[Mesh loading] vn: torch.Size([66661, 3]), fn: torch.Size([100000, 3])
-Keyword arguments {'trust_remote_code': True} are not expected by Zero123Pipeline and will be ignored.
-[INFO] load image from data/name_rgba.png...
-[INFO] loading zero123...
-Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]Loading pipeline components...:  50%|█████     | 3/6 [00:00<00:00, 12.42it/s]Loading pipeline components...:  83%|████████▎ | 5/6 [00:00<00:00, 12.14it/s]Loading pipeline components...: 100%|██████████| 6/6 [00:00<00:00,  6.89it/s]
-[INFO] loaded zero123!
-  0%|          | 0/50 [00:00<?, ?it/s]  2%|▏         | 1/50 [00:01<01:02,  1.27s/it]  4%|▍         | 2/50 [00:01<00:34,  1.37it/s]  6%|▌         | 3/50 [00:01<00:26,  1.81it/s]  8%|▊         | 4/50 [00:02<00:21,  2.12it/s] 10%|█         | 5/50 [00:02<00:19,  2.35it/s] 12%|█▏        | 6/50 [00:03<00:17,  2.51it/s] 14%|█▍        | 7/50 [00:03<00:15,  2.70it/s] 16%|█▌        | 8/50 [00:03<00:14,  2.83it/s] 18%|█▊        | 9/50 [00:03<00:13,  2.94it/s] 20%|██        | 10/50 [00:04<00:13,  3.01it/s] 22%|██▏       | 11/50 [00:04<00:12,  3.07it/s] 24%|██▍       | 12/50 [00:04<00:12,  3.10it/s] 26%|██▌       | 13/50 [00:05<00:11,  3.13it/s] 28%|██▊       | 14/50 [00:05<00:11,  3.25it/s] 30%|███       | 15/50 [00:05<00:10,  3.34it/s] 32%|███▏      | 16/50 [00:06<00:10,  3.40it/s] 34%|███▍      | 17/50 [00:06<00:09,  3.45it/s] 36%|███▌      | 18/50 [00:06<00:09,  3.48it/s] 38%|███▊      | 19/50 [00:06<00:08,  3.51it/s] 40%|████      | 20/50 [00:07<00:08,  3.66it/s] 42%|████▏     | 21/50 [00:07<00:07,  3.77it/s] 44%|████▍     | 22/50 [00:07<00:07,  3.84it/s] 46%|████▌     | 23/50 [00:07<00:06,  3.90it/s] 48%|████▊     | 24/50 [00:08<00:06,  3.95it/s] 50%|█████     | 25/50 [00:08<00:06,  3.97it/s] 52%|█████▏    | 26/50 [00:08<00:06,  4.00it/s] 54%|█████▍    | 27/50 [00:08<00:05,  4.17it/s] 56%|█████▌    | 28/50 [00:09<00:05,  4.30it/s] 58%|█████▊    | 29/50 [00:09<00:04,  4.40it/s] 60%|██████    | 30/50 [00:09<00:04,  4.47it/s] 62%|██████▏   | 31/50 [00:09<00:04,  4.51it/s] 64%|██████▍   | 32/50 [00:09<00:03,  4.55it/s] 66%|██████▌   | 33/50 [00:10<00:03,  4.58it/s] 68%|██████▊   | 34/50 [00:10<00:03,  4.81it/s] 70%|███████   | 35/50 [00:10<00:03,  4.98it/s] 72%|███████▏  | 36/50 [00:10<00:02,  5.11it/s] 74%|███████▍  | 37/50 [00:10<00:02,  5.20it/s] 76%|███████▌  | 38/50 [00:11<00:02,  5.26it/s] 78%|███████▊  | 39/50 [00:11<00:02,  5.31it/s] 80%|████████  | 40/50 [00:11<00:01,  5.64it/s] 82%|████████▏ | 41/50 [00:11<00:01,  5.89it/s] 84%|████████▍ | 42/50 [00:11<00:01,  6.07it/s] 86%|████████▌ | 43/50 [00:11<00:01,  6.21it/s] 88%|████████▊ | 44/50 [00:11<00:00,  6.32it/s] 90%|█████████ | 45/50 [00:12<00:00,  6.39it/s] 92%|█████████▏| 46/50 [00:12<00:00,  6.45it/s] 94%|█████████▍| 47/50 [00:12<00:00,  6.92it/s] 96%|█████████▌| 48/50 [00:12<00:00,  7.29it/s] 98%|█████████▊| 49/50 [00:12<00:00,  7.53it/s]100%|██████████| 50/50 [00:12<00:00,  7.74it/s]100%|██████████| 50/50 [00:12<00:00,  3.92it/s]
-[INFO] save model to logs/name.obj.
-[load_obj] use texture from: logs/name_albedo.png
-[load_obj] load texture: (1024, 1024, 3)
-[Mesh loading] v: torch.Size([66661, 3]), f: torch.Size([100000, 3])
-[Mesh loading] vn: torch.Size([66661, 3]), fn: torch.Size([100000, 3])
-  0%|          | 0/1 [00:00<?, ?it/s]
-  0%|          | 0/120 [00:00<?, ?it/s][A
-  1%|          | 1/120 [00:00<00:38,  3.13it/s][A
- 14%|█▍        | 17/120 [00:00<00:02, 51.40it/s][A
- 28%|██▊       | 34/120 [00:00<00:00, 87.51it/s][A
- 44%|████▍     | 53/120 [00:00<00:00, 116.09it/s][A
- 57%|█████▊    | 69/120 [00:00<00:00, 128.62it/s][A
- 72%|███████▏  | 86/120 [00:00<00:00, 138.85it/s][A
- 85%|████████▌ | 102/120 [00:00<00:00, 144.64it/s][A
- 98%|█████████▊| 118/120 [00:01<00:00, 148.49it/s][A100%|██████████| 120/120 [00:01<00:00, 114.23it/s]
-100%|██████████| 1/1 [00:01<00:00,  1.05s/it]100%|██████████| 1/1 [00:01<00:00,  1.05s/it]
-Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
-  return self.fget.__get__(instance, owner)()
-Loading checkpoint shards:  50%|█████     | 1/2 [00:17<00:17, 17.07s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:17<00:00,  7.19s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:17<00:00,  8.67s/it][load_obj] use texture from: logs/name_albedo.png
-[load_obj] load texture: (1024, 1024, 3)
-[Mesh loading] v: torch.Size([66661, 3]), f: torch.Size([100000, 3])
-[Mesh loading] vn: torch.Size([66661, 3]), fn: torch.Size([100000, 3])
-
-  0%|          | 0/1 [00:00<?, ?it/s]
-  0%|          | 0/8 [00:00<?, ?it/s][A
- 12%|█▎        | 1/8 [00:00<00:05,  1.20it/s][A
- 25%|██▌       | 2/8 [00:00<00:02,  2.44it/s][A
- 38%|███▊      | 3/8 [00:01<00:01,  3.66it/s][A
- 50%|█████     | 4/8 [00:01<00:00,  4.79it/s][A
- 62%|██████▎   | 5/8 [00:01<00:00,  5.78it/s][A
- 75%|███████▌  | 6/8 [00:01<00:00,  6.58it/s][A
- 88%|████████▊ | 7/8 [00:01<00:00,  6.65it/s][A
-100%|██████████| 8/8 [00:01<00:00,  7.26it/s][A100%|██████████| 8/8 [00:01<00:00,  4.86it/s]
-100%|██████████| 1/1 [00:01<00:00,  1.65s/it]100%|██████████| 1/1 [00:01<00:00,  1.65s/it]
-0.7272489666938782
-
-JOB STATISTICS
-==============
-Job ID: 6022477
-Cluster: snellius
-User/Group: jhuizing/jhuizing
-State: COMPLETED (exit code 0)
-Nodes: 1
-Cores per node: 18
-CPU Utilized: 00:03:04
-CPU Efficiency: 10.65% of 00:28:48 core-walltime
-Job Wall-clock time: 00:01:36
-Memory Utilized: 1.73 GB
-Memory Efficiency: 1.44% of 120.00 GB
