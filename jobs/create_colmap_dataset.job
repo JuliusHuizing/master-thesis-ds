@@ -1,45 +1,27 @@
 #!/bin/bash
+#!/bin/bash
 
 #SBATCH --partition=gpu
 #SBATCH --gpus=1
-#SBATCH --job-name=RunDreamGaussian
+#SBATCH --job-name=InstallEnvironment
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=18
 #SBATCH --time=04:00:00
 #SBATCH --output=slurm_output_%A.out
 
 module purge
-# module load 2021
+# module load 2021 // although spider says we need 2021 for cuda 11.6, the partition does not support 2021..
 module load 2022
 module load CUDA/11.8.0
 module load Anaconda3/2022.05
+module load ImageMagick/7.1.1-15-GCCcore-12.3.0
 
-cd $HOME/master-thesis-ds/
-git pull
+cd $HOME/master-thesis-ds/repos/gaussian-splatting
 
+conda activate colmap
 
-cd $HOME/master-thesis-ds/repos/dreamgaussian
-
-source activate dreamgaussianV2
-pip install kiui==0.2.2
-### preprocess
-# background removal and recentering, save rgba at 256x256
-python process.py data/name.jpg
-
-### training gaussian stage
-# train 500 iters (~1min) and export ckpt & coarse_mesh to logs
-python main.py --config configs/image.yaml input=data/name_rgba.png save_path=name
+python convert.py -s $HOME/master-thesis-ds/colmap --skip_matching
 
 
-python main2.py --config configs/image.yaml input=data/name_rgba.png save_path=name
-
-# save 360 degree video of mesh (can run without gui)
-kire logs/name.obj --save_video name.mp4 --wogui
-
-# save 8 view images of mesh (can run without gui)
-# kire logs/name.obj --save images/name/ --wogui
-
-### evaluation of CLIP-similarity
-python -m kiui.cli.clip_sim data/name_rgba.png logs/name.obj
 
 
