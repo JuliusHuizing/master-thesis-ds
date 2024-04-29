@@ -20,7 +20,7 @@ cd $HOME/master-thesis-ds/repos/gaussian-splatting
 
 source activate colmap
 
-python convert.py -s $HOME/master-thesis-ds/colmap --skip_matching
+python convert.py -s $HOME/master-thesis-ds/colmap
 
 
 
