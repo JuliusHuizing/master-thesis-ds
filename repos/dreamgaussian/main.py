@@ -68,7 +68,6 @@ class GUI:
             self.load_input(self.opt.input)
         
        
-
         # override if provide a checkpoint
         if self.opt.load is not None:
             self.renderer.initialize(self.opt.load)            
@@ -204,16 +203,16 @@ class GUI:
 
            
                         
-            images = torch.cat(images, dim=0)
-             # Save images
+            # images = torch.cat(images, dim=0)
+            #  # Save images
              
-              # Inside the train_step method
-            save_dir = "artificial_images"
-            os.makedirs(save_dir, exist_ok=True) 
-            for i in range(images.shape[0]):
-                save_path = os.path.join(save_dir, f'rendered_image_{self.step}_{i}.jpg')
-                image_np = (images[i].permute(1, 2, 0).cpu().detach().numpy() * 255).astype(np.uint8)
-                cv2.imwrite(save_path, cv2.cvtColor(image_np, cv2.COLOR_RGB2BGR))
+            #   # Inside the train_step method
+            # save_dir = "random_views"
+            # os.makedirs(save_dir, exist_ok=True) 
+            # for i in range(images.shape[0]):
+            #     save_path = os.path.join(save_dir, f'rendered_image_{self.step}_{i}.jpg')
+            #     image_np = (images[i].permute(1, 2, 0).cpu().detach().numpy() * 255).astype(np.uint8)
+            #     cv2.imwrite(save_path, cv2.cvtColor(image_np, cv2.COLOR_RGB2BGR))
                 
             poses = torch.from_numpy(np.stack(poses, axis=0)).to(self.device)
 
@@ -238,6 +237,9 @@ class GUI:
                 
                 if self.step % self.opt.opacity_reset_interval == 0:
                     self.renderer.gaussians.reset_opacity()
+                    
+                    
+                    
 
         ender.record()
         torch.cuda.synchronize()
@@ -420,8 +422,25 @@ class GUI:
             # do a last prune
             self.renderer.gaussians.prune(min_opacity=0.01, extent=1, max_screen_size=1)
         # save
+        
         self.save_model(mode='model')
         self.save_model(mode='geo+tex')
+        
+        print(f"[INFO] saving random images!")
+        save_dir = "tmp_random_images"
+        os.makedirs(save_dir, exist_ok=True) 
+        for i in range(100):
+            # Randomize camera settings or use predefined random settings
+            ver = np.random.randint(-45, 45)  # Example vertical angle range
+            hor = np.random.randint(0, 360)  # Example horizontal angle range
+            pose = orbit_camera(self.opt.elevation + ver, hor, self.opt.radius)
+            cur_cam = MiniCam(pose, self.opt.ref_size, self.opt.ref_size, self.cam.fovy, self.cam.fovx, self.cam.near, self.cam.far)
+            image = self.renderer.render(cur_cam)["image"].unsqueeze(0)  # Render image
+            # Convert tensor to numpy array and save
+            image_np = (image.squeeze().cpu().numpy() * 255).astype(np.uint8)
+            image_np = cv2.cvtColor(image_np, cv2.COLOR_RGB2BGR)  # Convert RGB to BGR for OpenCV
+            cv2.imwrite(os.path.join(save_dir, f'rendered_image_{self.step}_{i}.jpg'), image_np)
+
         
 
 if __name__ == "__main__":
