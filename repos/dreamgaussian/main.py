@@ -203,7 +203,7 @@ class GUI:
 
            
                         
-            # images = torch.cat(images, dim=0)
+            images = torch.cat(images, dim=0)
             #  # Save images
              
             #   # Inside the train_step method
