@@ -85,3 +85,24 @@ awk 'tolower($0) ~ /error/ {print; err=1; next} /^[ \t]/ && err {print; next} {e
 
 > [!CAUTION]
 > Negative potential consequences of an action.
+
+
+
+
+## Creating a Colmap Dataset
+The API of SuGaR requires a colmap dataset.
+We can use the convert.py script of the original 3DGS paper to create a Colmap dataset from a collection of images, but these images need to: 
+
+- [X] have the same resolution
+  - For this, we can simply delete the lower res images
+- [ ] be of sufficient resolution and have enough overlap for the algorithm to find a good initial pair, otherwise you'll get the error:
+
+```error
+Finding good initial image pair
+==============================================================================
+I20240429 12:16:33.909912 22618458595328 incremental_mapper.cc:404] => No good initial image pair found.
+I20240429 12:16:33.909923 22618458595328 timer.cc:91] Elapsed time: 0.000 [minutes]
+E20240429 12:16:33.912605 22620776206336 sfm.cc:266] failed to create sparse model
+ERROR:root:Mapper failed with code 256. Exiting.
+
+```
