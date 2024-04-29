@@ -475,3 +475,10 @@ Traceback (most recent call last):
 ImportError: /home/jhuizing/.conda/envs/sugar2/lib/python3.9/site-packages/pytorch3d/_C.cpython-39-x86_64-linux-gnu.so: undefined symbol: _ZN2at4_ops10zeros_like4callERKNS_6TensorEN3c108optionalINS5_10ScalarTypeEEENS6_INS5_6LayoutEEENS6_INS5_6DeviceEEENS6_IbEENS6_INS5_12MemoryFormatEEE
 ```
 
+
+
+perhaps check:
+https://github.com/facebookresearch/pytorch3d/issues/1207
+
+
+using python 3.8 leads to a failure when trying to solve the envrionment...
