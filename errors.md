@@ -454,3 +454,24 @@ Traceback (most recent call last):
     from . import _C
 ImportError: /home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/diff_gaussian_rasterization/_C.cpython-38-x86_64-linux-gnu.so: undefined symbol: _ZN2at4_ops5zeros4callEN3c108ArrayRefINS2_6SymIntEEENS2_8optionalINS2_10ScalarTypeEEENS6_INS2_6LayoutEEENS6_INS2_6DeviceEEENS6_IbEE
 ```
+
+
+Sugars env can be isntalled without errors, but get this runtime error when running the instlal_sugar_job:
+
+```error
+Traceback (most recent call last):
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/train.py", line 3, in <module>
+    from sugar_trainers.coarse_density import coarse_training_with_density_regularization
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/sugar_trainers/coarse_density.py", line 5, in <module>
+    from pytorch3d.loss import mesh_laplacian_smoothing, mesh_normal_consistency
+  File "/home/jhuizing/.conda/envs/sugar2/lib/python3.9/site-packages/pytorch3d/loss/__init__.py", line 8, in <module>
+    from .chamfer import chamfer_distance
+  File "/home/jhuizing/.conda/envs/sugar2/lib/python3.9/site-packages/pytorch3d/loss/chamfer.py", line 11, in <module>
+    from pytorch3d.ops.knn import knn_gather, knn_points
+  File "/home/jhuizing/.conda/envs/sugar2/lib/python3.9/site-packages/pytorch3d/ops/__init__.py", line 7, in <module>
+    from .ball_query import ball_query
+  File "/home/jhuizing/.conda/envs/sugar2/lib/python3.9/site-packages/pytorch3d/ops/ball_query.py", line 10, in <module>
+    from pytorch3d import _C
+ImportError: /home/jhuizing/.conda/envs/sugar2/lib/python3.9/site-packages/pytorch3d/_C.cpython-39-x86_64-linux-gnu.so: undefined symbol: _ZN2at4_ops10zeros_like4callERKNS_6TensorEN3c108optionalINS5_10ScalarTypeEEENS6_INS5_6LayoutEEENS6_INS5_6DeviceEEENS6_IbEENS6_INS5_12MemoryFormatEEE
+```
+

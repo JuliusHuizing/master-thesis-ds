@@ -21,7 +21,7 @@ PATH_TO_CHECKPOINT=$HOME/master-thesis-ds/repos/dreamgaussian/logs/
 cd $HOME/master-thesis-ds/
 git pull
 
-source activate sugar
+source activate sugarpy38
 
 cd $HOME/master-thesis-ds/repos/SuGaR
 
