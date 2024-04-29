@@ -437,7 +437,7 @@ class GUI:
             cur_cam = MiniCam(pose, self.opt.ref_size, self.opt.ref_size, self.cam.fovy, self.cam.fovx, self.cam.near, self.cam.far)
             image = self.renderer.render(cur_cam)["image"].unsqueeze(0)  # Render image
             # Convert tensor to numpy array and save
-            image_np = (image.squeeze().cpu().numpy() * 255).astype(np.uint8)
+            image_np = (image.squeeze().cpu().detach().numpy() * 255).astype(np.uint8)
             image_np = cv2.cvtColor(image_np, cv2.COLOR_RGB2BGR)  # Convert RGB to BGR for OpenCV
             cv2.imwrite(os.path.join(save_dir, f'rendered_image_{self.step}_{i}.jpg'), image_np)
 
