@@ -430,15 +430,22 @@ class GUI:
         save_dir = "tmp_random_images"
         os.makedirs(save_dir, exist_ok=True) 
         for i in range(100):
-            # Randomize camera settings or use predefined random settings
+             # Render random view
             ver = np.random.randint(-45, 45)  # Example vertical angle range
             hor = np.random.randint(0, 360)  # Example horizontal angle range
             pose = orbit_camera(self.opt.elevation + ver, hor, self.opt.radius)
             cur_cam = MiniCam(pose, self.opt.ref_size, self.opt.ref_size, self.cam.fovy, self.cam.fovx, self.cam.near, self.cam.far)
-            image = self.renderer.render(cur_cam)["image"].unsqueeze(0)  # Render image
-            # Convert tensor to numpy array and save
-            image_np = (image.squeeze().cpu().detach().numpy() * 255).astype(np.uint8)
-            image_np = cv2.cvtColor(image_np, cv2.COLOR_RGB2BGR)  # Convert RGB to BGR for OpenCV
+            out = self.renderer.render(cur_cam)
+            image = out["image"].unsqueeze(0)  # Ensure it's [1, 3, H, W]
+
+            # Convert to numpy and ensure correct shape [H, W, 3], detach from computation graph
+            image_np = image.squeeze(0).permute(1, 2, 0).cpu().detach().numpy()
+            image_np = (image_np * 255).astype(np.uint8)  # Scale to [0, 255] and convert to uint8
+
+            # Convert RGB to BGR
+            image_np = cv2.cvtColor(image_np, cv2.COLOR_RGB2BGR)
+
+            # Save image
             cv2.imwrite(os.path.join(save_dir, f'rendered_image_{self.step}_{i}.jpg'), image_np)
 
         
