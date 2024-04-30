@@ -1,0 +1,1066 @@
+============================================================================================== 
+Warning! Mixing Conda and module environments may lead to corruption of the
+user environment. 
+We do not recommend users mixing those two environments unless absolutely
+necessary. Note that 
+SURF does not provide any support for Conda environment.
+For more information, please refer to our software policy page:
+https://servicedesk.surf.nl/wiki/display/WIKI/Software+policy+Snellius#SoftwarepolicySnellius-UseofAnacondaandMinicondaenvironmentsonSnellius 
+
+Remember that many packages have already been installed on the system and can
+be loaded using 
+the 'module load <package__name>' command. If you are uncertain if a package is
+already available 
+on the system, please use 'module avail' or 'module spider' to search for it.
+============================================================================================== 
+Current branch creat-colmap-dataset is up to date.
+Optimizing /home/jhuizing/master-thesis-ds/output3/
+Output folder: /home/jhuizing/master-thesis-ds/output3/ [30/04 15:43:01]
+Tensorboard not available: not logging progress [30/04 15:43:01]
+Reading camera 1/3Reading camera 2/3Reading camera 3/3 [30/04 15:43:01]
+Converting point3d.bin to .ply, will happen only the first time you open the scene. [30/04 15:43:01]
+Loading Training Cameras [30/04 15:43:01]
+Loading Test Cameras [30/04 15:43:02]
+Number of points at initialisation :  784 [30/04 15:43:02]
+Training progress:   0%|          | 0/7000 [00:00<?, ?it/s]Training progress:   0%|          | 0/7000 [00:00<?, ?it/s, Loss=0.2119840]Training progress:   0%|          | 10/7000 [00:00<03:41, 31.57it/s, Loss=0.2119840]Training progress:   0%|          | 10/7000 [00:00<03:41, 31.57it/s, Loss=0.1804099]Training progress:   0%|          | 20/7000 [00:00<03:41, 31.57it/s, Loss=0.1538536]Training progress:   0%|          | 30/7000 [00:00<03:40, 31.57it/s, Loss=0.1430952]Training progress:   1%|          | 40/7000 [00:00<01:04, 108.10it/s, Loss=0.1430952]Training progress:   1%|          | 40/7000 [00:00<01:04, 108.10it/s, Loss=0.1328946]Training progress:   1%|          | 50/7000 [00:00<01:04, 108.10it/s, Loss=0.1296141]Training progress:   1%|          | 60/7000 [00:00<01:04, 108.10it/s, Loss=0.1179555]Training progress:   1%|          | 70/7000 [00:00<00:44, 155.54it/s, Loss=0.1179555]Training progress:   1%|          | 70/7000 [00:00<00:44, 155.54it/s, Loss=0.1187934]Training progress:   1%|          | 80/7000 [00:00<00:44, 155.54it/s, Loss=0.1128288]Training progress:   1%|▏         | 90/7000 [00:00<00:44, 155.54it/s, Loss=0.1075729]Training progress:   1%|▏         | 100/7000 [00:00<00:37, 185.83it/s, Loss=0.1075729]Training progress:   1%|▏         | 100/7000 [00:00<00:37, 185.83it/s, Loss=0.1111793]Training progress:   2%|▏         | 110/7000 [00:00<00:37, 185.83it/s, Loss=0.1087794]Training progress:   2%|▏         | 120/7000 [00:00<00:37, 185.83it/s, Loss=0.1089995]Training progress:   2%|▏         | 130/7000 [00:00<00:33, 206.29it/s, Loss=0.1089995]Training progress:   2%|▏         | 130/7000 [00:00<00:33, 206.29it/s, Loss=0.1059498]Training progress:   2%|▏         | 140/7000 [00:00<00:33, 206.29it/s, Loss=0.1022784]Training progress:   2%|▏         | 150/7000 [00:00<00:33, 206.29it/s, Loss=0.1021743]Training progress:   2%|▏         | 160/7000 [00:00<00:31, 220.08it/s, Loss=0.1021743]Training progress:   2%|▏         | 160/7000 [00:00<00:31, 220.08it/s, Loss=0.1024535]Training progress:   2%|▏         | 170/7000 [00:00<00:31, 220.08it/s, Loss=0.0980718]Training progress:   3%|▎         | 180/7000 [00:01<00:30, 220.08it/s, Loss=0.0967453]Training progress:   3%|▎         | 190/7000 [00:01<00:29, 228.43it/s, Loss=0.0967453]Training progress:   3%|▎         | 190/7000 [00:01<00:29, 228.43it/s, Loss=0.0980686]Training progress:   3%|▎         | 200/7000 [00:01<00:29, 228.43it/s, Loss=0.0949520]Training progress:   3%|▎         | 210/7000 [00:01<00:29, 228.43it/s, Loss=0.0963214]Training progress:   3%|▎         | 220/7000 [00:01<00:28, 235.08it/s, Loss=0.0963214]Training progress:   3%|▎         | 220/7000 [00:01<00:28, 235.08it/s, Loss=0.0941989]Training progress:   3%|▎         | 230/7000 [00:01<00:28, 235.08it/s, Loss=0.0910512]Training progress:   3%|▎         | 240/7000 [00:01<00:28, 235.08it/s, Loss=0.0924869]Training progress:   4%|▎         | 250/7000 [00:01<00:27, 241.38it/s, Loss=0.0924869]Training progress:   4%|▎         | 250/7000 [00:01<00:27, 241.38it/s, Loss=0.0906017]Training progress:   4%|▎         | 260/7000 [00:01<00:27, 241.38it/s, Loss=0.0887790]Training progress:   4%|▍         | 270/7000 [00:01<00:27, 241.38it/s, Loss=0.0884035]Training progress:   4%|▍         | 280/7000 [00:01<00:27, 245.46it/s, Loss=0.0884035]Training progress:   4%|▍         | 280/7000 [00:01<00:27, 245.46it/s, Loss=0.0868306]Training progress:   4%|▍         | 290/7000 [00:01<00:27, 245.46it/s, Loss=0.0843960]Training progress:   4%|▍         | 300/7000 [00:01<00:27, 245.46it/s, Loss=0.0826080]Training progress:   4%|▍         | 310/7000 [00:01<00:26, 248.72it/s, Loss=0.0826080]Training progress:   4%|▍         | 310/7000 [00:01<00:26, 248.72it/s, Loss=0.0819380]Training progress:   5%|▍         | 320/7000 [00:01<00:26, 248.72it/s, Loss=0.0809006]Training progress:   5%|▍         | 330/7000 [00:01<00:26, 248.72it/s, Loss=0.0793349]Training progress:   5%|▍         | 340/7000 [00:01<00:26, 251.13it/s, Loss=0.0793349]Training progress:   5%|▍         | 340/7000 [00:01<00:26, 251.13it/s, Loss=0.0807226]Training progress:   5%|▌         | 350/7000 [00:01<00:26, 251.13it/s, Loss=0.0793600]Training progress:   5%|▌         | 360/7000 [00:01<00:26, 251.13it/s, Loss=0.0811313]Training progress:   5%|▌         | 370/7000 [00:01<00:26, 252.96it/s, Loss=0.0811313]Training progress:   5%|▌         | 370/7000 [00:01<00:26, 252.96it/s, Loss=0.0776576]Training progress:   5%|▌         | 380/7000 [00:01<00:26, 252.96it/s, Loss=0.0774437]Training progress:   6%|▌         | 390/7000 [00:01<00:26, 252.96it/s, Loss=0.0786327]Training progress:   6%|▌         | 400/7000 [00:01<00:25, 254.49it/s, Loss=0.0786327]Training progress:   6%|▌         | 400/7000 [00:01<00:25, 254.49it/s, Loss=0.0777069]Training progress:   6%|▌         | 410/7000 [00:01<00:25, 254.49it/s, Loss=0.0765163]Training progress:   6%|▌         | 420/7000 [00:01<00:25, 254.49it/s, Loss=0.0748441]Training progress:   6%|▌         | 430/7000 [00:01<00:25, 255.49it/s, Loss=0.0748441]Training progress:   6%|▌         | 430/7000 [00:02<00:25, 255.49it/s, Loss=0.0742493]Training progress:   6%|▋         | 440/7000 [00:02<00:25, 255.49it/s, Loss=0.0747362]Training progress:   6%|▋         | 450/7000 [00:02<00:25, 255.49it/s, Loss=0.0748374]Training progress:   7%|▋         | 460/7000 [00:02<00:25, 255.88it/s, Loss=0.0748374]Training progress:   7%|▋         | 460/7000 [00:02<00:25, 255.88it/s, Loss=0.0725987]Training progress:   7%|▋         | 470/7000 [00:02<00:25, 255.88it/s, Loss=0.0731001]Training progress:   7%|▋         | 480/7000 [00:02<00:25, 255.88it/s, Loss=0.0727893]Training progress:   7%|▋         | 490/7000 [00:02<00:25, 256.40it/s, Loss=0.0727893]Training progress:   7%|▋         | 490/7000 [00:02<00:25, 256.40it/s, Loss=0.0713554]Training progress:   7%|▋         | 500/7000 [00:02<00:25, 256.40it/s, Loss=0.0711337]Training progress:   7%|▋         | 510/7000 [00:02<00:25, 256.40it/s, Loss=0.0700410]Training progress:   7%|▋         | 520/7000 [00:02<00:25, 256.85it/s, Loss=0.0700410]Training progress:   7%|▋         | 520/7000 [00:02<00:25, 256.85it/s, Loss=0.0695072]Training progress:   8%|▊         | 530/7000 [00:02<00:25, 256.85it/s, Loss=0.0693445]Training progress:   8%|▊         | 540/7000 [00:02<00:25, 256.85it/s, Loss=0.0703893]Training progress:   8%|▊         | 550/7000 [00:02<00:25, 257.32it/s, Loss=0.0703893]Training progress:   8%|▊         | 550/7000 [00:02<00:25, 257.32it/s, Loss=0.0691858]Training progress:   8%|▊         | 560/7000 [00:02<00:25, 257.32it/s, Loss=0.0686000]Training progress:   8%|▊         | 570/7000 [00:02<00:24, 257.32it/s, Loss=0.0689961]Training progress:   8%|▊         | 580/7000 [00:02<00:24, 257.69it/s, Loss=0.0689961]Training progress:   8%|▊         | 580/7000 [00:02<00:24, 257.69it/s, Loss=0.0686137]Training progress:   8%|▊         | 590/7000 [00:02<00:24, 257.69it/s, Loss=0.0677983]Training progress:   9%|▊         | 600/7000 [00:02<00:24, 257.69it/s, Loss=0.0992318]Training progress:   9%|▊         | 610/7000 [00:02<00:28, 225.90it/s, Loss=0.0992318]Training progress:   9%|▊         | 610/7000 [00:02<00:28, 225.90it/s, Loss=0.0773597]Training progress:   9%|▉         | 620/7000 [00:02<00:28, 225.90it/s, Loss=0.0704865]Training progress:   9%|▉         | 630/7000 [00:02<00:28, 225.90it/s, Loss=0.0671180]Training progress:   9%|▉         | 640/7000 [00:02<00:27, 234.88it/s, Loss=0.0671180]Training progress:   9%|▉         | 640/7000 [00:02<00:27, 234.88it/s, Loss=0.0646592]Training progress:   9%|▉         | 650/7000 [00:02<00:27, 234.88it/s, Loss=0.0629540]Training progress:   9%|▉         | 660/7000 [00:02<00:26, 234.88it/s, Loss=0.0606210]Training progress:  10%|▉         | 670/7000 [00:02<00:26, 242.17it/s, Loss=0.0606210]Training progress:  10%|▉         | 670/7000 [00:02<00:26, 242.17it/s, Loss=0.0594663]Training progress:  10%|▉         | 680/7000 [00:03<00:26, 242.17it/s, Loss=0.0585733]Training progress:  10%|▉         | 690/7000 [00:03<00:26, 242.17it/s, Loss=0.0575262]Training progress:  10%|█         | 700/7000 [00:03<00:25, 247.59it/s, Loss=0.0575262]Training progress:  10%|█         | 700/7000 [00:03<00:25, 247.59it/s, Loss=0.0904281]Training progress:  10%|█         | 710/7000 [00:03<00:25, 247.59it/s, Loss=0.0717886]Training progress:  10%|█         | 720/7000 [00:03<00:25, 247.59it/s, Loss=0.0614170]Training progress:  10%|█         | 730/7000 [00:03<00:24, 250.90it/s, Loss=0.0614170]Training progress:  10%|█         | 730/7000 [00:03<00:24, 250.90it/s, Loss=0.0565734]Training progress:  11%|█         | 740/7000 [00:03<00:24, 250.90it/s, Loss=0.0534937]Training progress:  11%|█         | 750/7000 [00:03<00:24, 250.90it/s, Loss=0.0506577]Training progress:  11%|█         | 760/7000 [00:03<00:24, 256.61it/s, Loss=0.0506577]Training progress:  11%|█         | 760/7000 [00:03<00:24, 256.61it/s, Loss=0.0491388]Training progress:  11%|█         | 770/7000 [00:03<00:24, 256.61it/s, Loss=0.0479883]Training progress:  11%|█         | 780/7000 [00:03<00:24, 256.61it/s, Loss=0.0465618]Training progress:  11%|█▏        | 790/7000 [00:03<00:23, 259.97it/s, Loss=0.0465618]Training progress:  11%|█▏        | 790/7000 [00:03<00:23, 259.97it/s, Loss=0.0458082]Training progress:  11%|█▏        | 800/7000 [00:03<00:23, 259.97it/s, Loss=0.0782264]Training progress:  12%|█▏        | 810/7000 [00:03<00:23, 259.97it/s, Loss=0.0568605]Training progress:  12%|█▏        | 820/7000 [00:03<00:23, 260.23it/s, Loss=0.0568605]Training progress:  12%|█▏        | 820/7000 [00:03<00:23, 260.23it/s, Loss=0.0475672]Training progress:  12%|█▏        | 830/7000 [00:03<00:23, 260.23it/s, Loss=0.0436518]Training progress:  12%|█▏        | 840/7000 [00:03<00:23, 260.23it/s, Loss=0.0401169]Training progress:  12%|█▏        | 850/7000 [00:03<00:23, 264.45it/s, Loss=0.0401169]Training progress:  12%|█▏        | 850/7000 [00:03<00:23, 264.45it/s, Loss=0.0384413]Training progress:  12%|█▏        | 860/7000 [00:03<00:23, 264.45it/s, Loss=0.0377656]Training progress:  12%|█▏        | 870/7000 [00:03<00:23, 264.45it/s, Loss=0.0353602]Training progress:  13%|█▎        | 880/7000 [00:03<00:22, 267.42it/s, Loss=0.0353602]Training progress:  13%|█▎        | 880/7000 [00:03<00:22, 267.42it/s, Loss=0.0360805]Training progress:  13%|█▎        | 890/7000 [00:03<00:22, 267.42it/s, Loss=0.0345555]Training progress:  13%|█▎        | 900/7000 [00:03<00:22, 267.42it/s, Loss=0.0647309]Training progress:  13%|█▎        | 910/7000 [00:03<00:22, 266.21it/s, Loss=0.0647309]Training progress:  13%|█▎        | 910/7000 [00:03<00:22, 266.21it/s, Loss=0.0449865]Training progress:  13%|█▎        | 920/7000 [00:03<00:22, 266.21it/s, Loss=0.0372202]Training progress:  13%|█▎        | 930/7000 [00:03<00:22, 266.21it/s, Loss=0.0329241]Training progress:  13%|█▎        | 940/7000 [00:03<00:22, 268.02it/s, Loss=0.0329241]Training progress:  13%|█▎        | 940/7000 [00:04<00:22, 268.02it/s, Loss=0.0302431]Training progress:  14%|█▎        | 950/7000 [00:04<00:22, 268.02it/s, Loss=0.0290655]Training progress:  14%|█▎        | 960/7000 [00:04<00:22, 268.02it/s, Loss=0.0266864]Training progress:  14%|█▍        | 970/7000 [00:04<00:22, 269.39it/s, Loss=0.0266864]Training progress:  14%|█▍        | 970/7000 [00:04<00:22, 269.39it/s, Loss=0.0263320]Training progress:  14%|█▍        | 980/7000 [00:04<00:22, 269.39it/s, Loss=0.0261939]Training progress:  14%|█▍        | 990/7000 [00:04<00:22, 269.39it/s, Loss=0.0260431]Training progress:  14%|█▍        | 1000/7000 [00:04<00:22, 270.22it/s, Loss=0.0260431]Training progress:  14%|█▍        | 1000/7000 [00:04<00:22, 270.22it/s, Loss=0.0504598]Training progress:  14%|█▍        | 1010/7000 [00:04<00:22, 270.22it/s, Loss=0.0339754]Training progress:  15%|█▍        | 1020/7000 [00:04<00:22, 270.22it/s, Loss=0.0276995]Training progress:  15%|█▍        | 1030/7000 [00:04<00:22, 266.04it/s, Loss=0.0276995]Training progress:  15%|█▍        | 1030/7000 [00:04<00:22, 266.04it/s, Loss=0.0248034]Training progress:  15%|█▍        | 1040/7000 [00:04<00:22, 266.04it/s, Loss=0.0230350]Training progress:  15%|█▌        | 1050/7000 [00:04<00:22, 266.04it/s, Loss=0.0218479]Training progress:  15%|█▌        | 1060/7000 [00:04<00:22, 267.49it/s, Loss=0.0218479]Training progress:  15%|█▌        | 1060/7000 [00:04<00:22, 267.49it/s, Loss=0.0213488]Training progress:  15%|█▌        | 1070/7000 [00:04<00:22, 267.49it/s, Loss=0.0199445]Training progress:  15%|█▌        | 1080/7000 [00:04<00:22, 267.49it/s, Loss=0.0190456]Training progress:  16%|█▌        | 1090/7000 [00:04<00:22, 268.44it/s, Loss=0.0190456]Training progress:  16%|█▌        | 1090/7000 [00:04<00:22, 268.44it/s, Loss=0.0185506]Training progress:  16%|█▌        | 1100/7000 [00:04<00:21, 268.44it/s, Loss=0.0412787]Training progress:  16%|█▌        | 1110/7000 [00:04<00:21, 268.44it/s, Loss=0.0263506]Training progress:  16%|█▌        | 1120/7000 [00:04<00:22, 266.02it/s, Loss=0.0263506]Training progress:  16%|█▌        | 1120/7000 [00:04<00:22, 266.02it/s, Loss=0.0216087]Training progress:  16%|█▌        | 1130/7000 [00:04<00:22, 266.02it/s, Loss=0.0189115]Training progress:  16%|█▋        | 1140/7000 [00:04<00:22, 266.02it/s, Loss=0.0172544]Training progress:  16%|█▋        | 1150/7000 [00:04<00:21, 267.33it/s, Loss=0.0172544]Training progress:  16%|█▋        | 1150/7000 [00:04<00:21, 267.33it/s, Loss=0.0156448]Training progress:  17%|█▋        | 1160/7000 [00:04<00:21, 267.33it/s, Loss=0.0155289]Training progress:  17%|█▋        | 1170/7000 [00:04<00:21, 267.33it/s, Loss=0.0152027]Training progress:  17%|█▋        | 1180/7000 [00:04<00:21, 268.33it/s, Loss=0.0152027]Training progress:  17%|█▋        | 1180/7000 [00:04<00:21, 268.33it/s, Loss=0.0142435]Training progress:  17%|█▋        | 1190/7000 [00:04<00:21, 268.33it/s, Loss=0.0140459]Training progress:  17%|█▋        | 1200/7000 [00:04<00:21, 268.33it/s, Loss=0.0311005]Training progress:  17%|█▋        | 1210/7000 [00:04<00:21, 264.99it/s, Loss=0.0311005]Training progress:  17%|█▋        | 1210/7000 [00:05<00:21, 264.99it/s, Loss=0.0207301]Training progress:  17%|█▋        | 1220/7000 [00:05<00:21, 264.99it/s, Loss=0.0166522]Training progress:  18%|█▊        | 1230/7000 [00:05<00:21, 264.99it/s, Loss=0.0147599]Training progress:  18%|█▊        | 1240/7000 [00:05<00:21, 265.79it/s, Loss=0.0147599]Training progress:  18%|█▊        | 1240/7000 [00:05<00:21, 265.79it/s, Loss=0.0139367]Training progress:  18%|█▊        | 1250/7000 [00:05<00:21, 265.79it/s, Loss=0.0120845]Training progress:  18%|█▊        | 1260/7000 [00:05<00:21, 265.79it/s, Loss=0.0110905]Training progress:  18%|█▊        | 1270/7000 [00:05<00:21, 266.15it/s, Loss=0.0110905]Training progress:  18%|█▊        | 1270/7000 [00:05<00:21, 266.15it/s, Loss=0.0112504]Training progress:  18%|█▊        | 1280/7000 [00:05<00:21, 266.15it/s, Loss=0.0106674]Training progress:  18%|█▊        | 1290/7000 [00:05<00:21, 266.15it/s, Loss=0.0113851]Training progress:  19%|█▊        | 1300/7000 [00:05<00:21, 266.64it/s, Loss=0.0113851]Training progress:  19%|█▊        | 1300/7000 [00:05<00:21, 266.64it/s, Loss=0.0241749]Training progress:  19%|█▊        | 1310/7000 [00:05<00:21, 266.64it/s, Loss=0.0160845]Training progress:  19%|█▉        | 1320/7000 [00:05<00:21, 266.64it/s, Loss=0.0131153]Training progress:  19%|█▉        | 1330/7000 [00:05<00:21, 263.15it/s, Loss=0.0131153]Training progress:  19%|█▉        | 1330/7000 [00:05<00:21, 263.15it/s, Loss=0.0111940]Training progress:  19%|█▉        | 1340/7000 [00:05<00:21, 263.15it/s, Loss=0.0107289]Training progress:  19%|█▉        | 1350/7000 [00:05<00:21, 263.15it/s, Loss=0.0100747]Training progress:  19%|█▉        | 1360/7000 [00:05<00:21, 264.55it/s, Loss=0.0100747]Training progress:  19%|█▉        | 1360/7000 [00:05<00:21, 264.55it/s, Loss=0.0087611]Training progress:  20%|█▉        | 1370/7000 [00:05<00:21, 264.55it/s, Loss=0.0091937]Training progress:  20%|█▉        | 1380/7000 [00:05<00:21, 264.55it/s, Loss=0.0089733]Training progress:  20%|█▉        | 1390/7000 [00:05<00:21, 265.66it/s, Loss=0.0089733]Training progress:  20%|█▉        | 1390/7000 [00:05<00:21, 265.66it/s, Loss=0.0078203]Training progress:  20%|██        | 1400/7000 [00:05<00:21, 265.66it/s, Loss=0.0198345]Training progress:  20%|██        | 1410/7000 [00:05<00:21, 265.66it/s, Loss=0.0125565]Training progress:  20%|██        | 1420/7000 [00:05<00:21, 262.30it/s, Loss=0.0125565]Training progress:  20%|██        | 1420/7000 [00:05<00:21, 262.30it/s, Loss=0.0102798]Training progress:  20%|██        | 1430/7000 [00:05<00:21, 262.30it/s, Loss=0.0086733]Training progress:  21%|██        | 1440/7000 [00:05<00:21, 262.30it/s, Loss=0.0086209]Training progress:  21%|██        | 1450/7000 [00:05<00:21, 263.38it/s, Loss=0.0086209]Training progress:  21%|██        | 1450/7000 [00:05<00:21, 263.38it/s, Loss=0.0078671]Training progress:  21%|██        | 1460/7000 [00:05<00:21, 263.38it/s, Loss=0.0079490]Training progress:  21%|██        | 1470/7000 [00:06<00:20, 263.38it/s, Loss=0.0067631]Training progress:  21%|██        | 1480/7000 [00:06<00:20, 263.96it/s, Loss=0.0067631]Training progress:  21%|██        | 1480/7000 [00:06<00:20, 263.96it/s, Loss=0.0070163]Training progress:  21%|██▏       | 1490/7000 [00:06<00:20, 263.96it/s, Loss=0.0071711]Training progress:  21%|██▏       | 1500/7000 [00:06<00:20, 263.96it/s, Loss=0.0163286]Training progress:  22%|██▏       | 1510/7000 [00:06<00:21, 260.51it/s, Loss=0.0163286]Training progress:  22%|██▏       | 1510/7000 [00:06<00:21, 260.51it/s, Loss=0.0117810]Training progress:  22%|██▏       | 1520/7000 [00:06<00:21, 260.51it/s, Loss=0.0095832]Training progress:  22%|██▏       | 1530/7000 [00:06<00:20, 260.51it/s, Loss=0.0079372]Training progress:  22%|██▏       | 1540/7000 [00:06<00:20, 261.44it/s, Loss=0.0079372]Training progress:  22%|██▏       | 1540/7000 [00:06<00:20, 261.44it/s, Loss=0.0075185]Training progress:  22%|██▏       | 1550/7000 [00:06<00:20, 261.44it/s, Loss=0.0071047]Training progress:  22%|██▏       | 1560/7000 [00:06<00:20, 261.44it/s, Loss=0.0060242]Training progress:  22%|██▏       | 1570/7000 [00:06<00:20, 261.73it/s, Loss=0.0060242]Training progress:  22%|██▏       | 1570/7000 [00:06<00:20, 261.73it/s, Loss=0.0059885]Training progress:  23%|██▎       | 1580/7000 [00:06<00:20, 261.73it/s, Loss=0.0063857]Training progress:  23%|██▎       | 1590/7000 [00:06<00:20, 261.73it/s, Loss=0.0061909]Training progress:  23%|██▎       | 1600/7000 [00:06<00:20, 262.34it/s, Loss=0.0061909]Training progress:  23%|██▎       | 1600/7000 [00:06<00:20, 262.34it/s, Loss=0.0115662]Training progress:  23%|██▎       | 1610/7000 [00:06<00:20, 262.34it/s, Loss=0.0084740]Training progress:  23%|██▎       | 1620/7000 [00:06<00:20, 262.34it/s, Loss=0.0071098]Training progress:  23%|██▎       | 1630/7000 [00:06<00:20, 258.18it/s, Loss=0.0071098]Training progress:  23%|██▎       | 1630/7000 [00:06<00:20, 258.18it/s, Loss=0.0064683]Training progress:  23%|██▎       | 1640/7000 [00:06<00:20, 258.18it/s, Loss=0.0061965]Training progress:  24%|██▎       | 1650/7000 [00:06<00:20, 258.18it/s, Loss=0.0058027]Training progress:  24%|██▎       | 1660/7000 [00:06<00:20, 258.64it/s, Loss=0.0058027]Training progress:  24%|██▎       | 1660/7000 [00:06<00:20, 258.64it/s, Loss=0.0059271]Training progress:  24%|██▍       | 1670/7000 [00:06<00:20, 258.64it/s, Loss=0.0055872]Training progress:  24%|██▍       | 1680/7000 [00:06<00:20, 258.64it/s, Loss=0.0054062]Training progress:  24%|██▍       | 1690/7000 [00:06<00:20, 258.91it/s, Loss=0.0054062]Training progress:  24%|██▍       | 1690/7000 [00:06<00:20, 258.91it/s, Loss=0.0049210]Training progress:  24%|██▍       | 1700/7000 [00:06<00:20, 258.91it/s, Loss=0.0088593]Training progress:  24%|██▍       | 1710/7000 [00:06<00:20, 258.91it/s, Loss=0.0066290]Training progress:  25%|██▍       | 1720/7000 [00:06<00:20, 255.44it/s, Loss=0.0066290]Training progress:  25%|██▍       | 1720/7000 [00:06<00:20, 255.44it/s, Loss=0.0055985]Training progress:  25%|██▍       | 1730/7000 [00:07<00:20, 255.44it/s, Loss=0.0054787]Training progress:  25%|██▍       | 1740/7000 [00:07<00:20, 255.44it/s, Loss=0.0052925]Training progress:  25%|██▌       | 1750/7000 [00:07<00:20, 256.48it/s, Loss=0.0052925]Training progress:  25%|██▌       | 1750/7000 [00:07<00:20, 256.48it/s, Loss=0.0053217]Training progress:  25%|██▌       | 1760/7000 [00:07<00:20, 256.48it/s, Loss=0.0045211]Training progress:  25%|██▌       | 1770/7000 [00:07<00:20, 256.48it/s, Loss=0.0048490]Training progress:  25%|██▌       | 1780/7000 [00:07<00:20, 257.18it/s, Loss=0.0048490]Training progress:  25%|██▌       | 1780/7000 [00:07<00:20, 257.18it/s, Loss=0.0046397]Training progress:  26%|██▌       | 1790/7000 [00:07<00:20, 257.18it/s, Loss=0.0047355]Training progress:  26%|██▌       | 1800/7000 [00:07<00:20, 257.18it/s, Loss=0.0080958]Training progress:  26%|██▌       | 1810/7000 [00:07<00:20, 253.38it/s, Loss=0.0080958]Training progress:  26%|██▌       | 1810/7000 [00:07<00:20, 253.38it/s, Loss=0.0058945]Training progress:  26%|██▌       | 1820/7000 [00:07<00:20, 253.38it/s, Loss=0.0057154]Training progress:  26%|██▌       | 1830/7000 [00:07<00:20, 253.38it/s, Loss=0.0055896]Training progress:  26%|██▋       | 1840/7000 [00:07<00:20, 254.20it/s, Loss=0.0055896]Training progress:  26%|██▋       | 1840/7000 [00:07<00:20, 254.20it/s, Loss=0.0054733]Training progress:  26%|██▋       | 1850/7000 [00:07<00:20, 254.20it/s, Loss=0.0049495]Training progress:  27%|██▋       | 1860/7000 [00:07<00:20, 254.20it/s, Loss=0.0048675]Training progress:  27%|██▋       | 1870/7000 [00:07<00:20, 254.75it/s, Loss=0.0048675]Training progress:  27%|██▋       | 1870/7000 [00:07<00:20, 254.75it/s, Loss=0.0049177]Training progress:  27%|██▋       | 1880/7000 [00:07<00:20, 254.75it/s, Loss=0.0043135]Training progress:  27%|██▋       | 1890/7000 [00:07<00:20, 254.75it/s, Loss=0.0040071]Training progress:  27%|██▋       | 1900/7000 [00:07<00:19, 255.15it/s, Loss=0.0040071]Training progress:  27%|██▋       | 1900/7000 [00:07<00:19, 255.15it/s, Loss=0.0063978]Training progress:  27%|██▋       | 1910/7000 [00:07<00:19, 255.15it/s, Loss=0.0053189]Training progress:  27%|██▋       | 1920/7000 [00:07<00:19, 255.15it/s, Loss=0.0041812]Training progress:  28%|██▊       | 1930/7000 [00:07<00:20, 251.11it/s, Loss=0.0041812]Training progress:  28%|██▊       | 1930/7000 [00:07<00:20, 251.11it/s, Loss=0.0042490]Training progress:  28%|██▊       | 1940/7000 [00:07<00:20, 251.11it/s, Loss=0.0039865]Training progress:  28%|██▊       | 1950/7000 [00:07<00:20, 251.11it/s, Loss=0.0042589]Training progress:  28%|██▊       | 1960/7000 [00:07<00:19, 252.43it/s, Loss=0.0042589]Training progress:  28%|██▊       | 1960/7000 [00:07<00:19, 252.43it/s, Loss=0.0039527]Training progress:  28%|██▊       | 1970/7000 [00:07<00:19, 252.43it/s, Loss=0.0040165]Training progress:  28%|██▊       | 1980/7000 [00:08<00:19, 252.43it/s, Loss=0.0042532]Training progress:  28%|██▊       | 1990/7000 [00:08<00:19, 253.44it/s, Loss=0.0042532]Training progress:  28%|██▊       | 1990/7000 [00:08<00:19, 253.44it/s, Loss=0.0038525]Training progress:  29%|██▊       | 2000/7000 [00:08<00:19, 253.44it/s, Loss=0.0064302]Training progress:  29%|██▊       | 2010/7000 [00:08<00:19, 253.44it/s, Loss=0.0049006]Training progress:  29%|██▉       | 2020/7000 [00:08<00:19, 249.72it/s, Loss=0.0049006]Training progress:  29%|██▉       | 2020/7000 [00:08<00:19, 249.72it/s, Loss=0.0041375]Training progress:  29%|██▉       | 2030/7000 [00:08<00:19, 249.72it/s, Loss=0.0039840]Training progress:  29%|██▉       | 2040/7000 [00:08<00:19, 249.72it/s, Loss=0.0037898]Training progress:  29%|██▉       | 2050/7000 [00:08<00:19, 250.78it/s, Loss=0.0037898]Training progress:  29%|██▉       | 2050/7000 [00:08<00:19, 250.78it/s, Loss=0.0039883]Training progress:  29%|██▉       | 2060/7000 [00:08<00:19, 250.78it/s, Loss=0.0036827]Training progress:  30%|██▉       | 2070/7000 [00:08<00:19, 250.78it/s, Loss=0.0033776]Training progress:  30%|██▉       | 2080/7000 [00:08<00:19, 251.65it/s, Loss=0.0033776]Training progress:  30%|██▉       | 2080/7000 [00:08<00:19, 251.65it/s, Loss=0.0035008]Training progress:  30%|██▉       | 2090/7000 [00:08<00:19, 251.65it/s, Loss=0.0036610]Training progress:  30%|███       | 2100/7000 [00:08<00:19, 251.65it/s, Loss=0.0056567]Training progress:  30%|███       | 2110/7000 [00:08<00:19, 248.52it/s, Loss=0.0056567]Training progress:  30%|███       | 2110/7000 [00:08<00:19, 248.52it/s, Loss=0.0043140]Training progress:  30%|███       | 2120/7000 [00:08<00:19, 248.52it/s, Loss=0.0041222]Training progress:  30%|███       | 2130/7000 [00:08<00:19, 248.52it/s, Loss=0.0036615]Training progress:  31%|███       | 2140/7000 [00:08<00:19, 249.54it/s, Loss=0.0036615]Training progress:  31%|███       | 2140/7000 [00:08<00:19, 249.54it/s, Loss=0.0037302]Training progress:  31%|███       | 2150/7000 [00:08<00:19, 249.54it/s, Loss=0.0034703]Training progress:  31%|███       | 2160/7000 [00:08<00:19, 249.54it/s, Loss=0.0034596]Training progress:  31%|███       | 2170/7000 [00:08<00:19, 250.43it/s, Loss=0.0034596]Training progress:  31%|███       | 2170/7000 [00:08<00:19, 250.43it/s, Loss=0.0032412]Training progress:  31%|███       | 2180/7000 [00:08<00:19, 250.43it/s, Loss=0.0034687]Training progress:  31%|███▏      | 2190/7000 [00:08<00:19, 250.43it/s, Loss=0.0035093]Training progress:  31%|███▏      | 2200/7000 [00:08<00:19, 251.02it/s, Loss=0.0035093]Training progress:  31%|███▏      | 2200/7000 [00:08<00:19, 251.02it/s, Loss=0.0041494]Training progress:  32%|███▏      | 2210/7000 [00:08<00:19, 251.02it/s, Loss=0.0037444]Training progress:  32%|███▏      | 2220/7000 [00:08<00:19, 251.02it/s, Loss=0.0032756]Training progress:  32%|███▏      | 2230/7000 [00:08<00:19, 247.54it/s, Loss=0.0032756]Training progress:  32%|███▏      | 2230/7000 [00:09<00:19, 247.54it/s, Loss=0.0031870]Training progress:  32%|███▏      | 2240/7000 [00:09<00:19, 247.54it/s, Loss=0.0030771]Training progress:  32%|███▏      | 2250/7000 [00:09<00:19, 247.54it/s, Loss=0.0033334]Training progress:  32%|███▏      | 2260/7000 [00:09<00:19, 248.42it/s, Loss=0.0033334]Training progress:  32%|███▏      | 2260/7000 [00:09<00:19, 248.42it/s, Loss=0.0034040]Training progress:  32%|███▏      | 2270/7000 [00:09<00:19, 248.42it/s, Loss=0.0032238]Training progress:  33%|███▎      | 2280/7000 [00:09<00:19, 248.42it/s, Loss=0.0033708]Training progress:  33%|███▎      | 2290/7000 [00:09<00:18, 249.01it/s, Loss=0.0033708]Training progress:  33%|███▎      | 2290/7000 [00:09<00:18, 249.01it/s, Loss=0.0031753]Training progress:  33%|███▎      | 2300/7000 [00:09<00:18, 249.01it/s, Loss=0.0038875]Training progress:  33%|███▎      | 2310/7000 [00:09<00:18, 249.01it/s, Loss=0.0029500]Training progress:  33%|███▎      | 2320/7000 [00:09<00:19, 245.46it/s, Loss=0.0029500]Training progress:  33%|███▎      | 2320/7000 [00:09<00:19, 245.46it/s, Loss=0.0030551]Training progress:  33%|███▎      | 2330/7000 [00:09<00:19, 245.46it/s, Loss=0.0032534]Training progress:  33%|███▎      | 2340/7000 [00:09<00:18, 245.46it/s, Loss=0.0026561]Training progress:  34%|███▎      | 2350/7000 [00:09<00:18, 246.39it/s, Loss=0.0026561]Training progress:  34%|███▎      | 2350/7000 [00:09<00:18, 246.39it/s, Loss=0.0033268]Training progress:  34%|███▎      | 2360/7000 [00:09<00:18, 246.39it/s, Loss=0.0029974]Training progress:  34%|███▍      | 2370/7000 [00:09<00:18, 246.39it/s, Loss=0.0032676]Training progress:  34%|███▍      | 2380/7000 [00:09<00:18, 246.66it/s, Loss=0.0032676]Training progress:  34%|███▍      | 2380/7000 [00:09<00:18, 246.66it/s, Loss=0.0029870]Training progress:  34%|███▍      | 2390/7000 [00:09<00:18, 246.66it/s, Loss=0.0032073]Training progress:  34%|███▍      | 2400/7000 [00:09<00:18, 246.66it/s, Loss=0.0038438]Training progress:  34%|███▍      | 2410/7000 [00:09<00:18, 244.04it/s, Loss=0.0038438]Training progress:  34%|███▍      | 2410/7000 [00:09<00:18, 244.04it/s, Loss=0.0032302]Training progress:  35%|███▍      | 2420/7000 [00:09<00:18, 244.04it/s, Loss=0.0029251]Training progress:  35%|███▍      | 2430/7000 [00:09<00:18, 244.04it/s, Loss=0.0032049]Training progress:  35%|███▍      | 2440/7000 [00:09<00:18, 244.90it/s, Loss=0.0032049]Training progress:  35%|███▍      | 2440/7000 [00:09<00:18, 244.90it/s, Loss=0.0028805]Training progress:  35%|███▌      | 2450/7000 [00:09<00:18, 244.90it/s, Loss=0.0030281]Training progress:  35%|███▌      | 2460/7000 [00:09<00:18, 244.90it/s, Loss=0.0030908]Training progress:  35%|███▌      | 2470/7000 [00:09<00:18, 246.15it/s, Loss=0.0030908]Training progress:  35%|███▌      | 2470/7000 [00:09<00:18, 246.15it/s, Loss=0.0032308]Training progress:  35%|███▌      | 2480/7000 [00:10<00:18, 246.15it/s, Loss=0.0031058]Training progress:  36%|███▌      | 2490/7000 [00:10<00:18, 246.15it/s, Loss=0.0030436]Training progress:  36%|███▌      | 2500/7000 [00:10<00:18, 246.91it/s, Loss=0.0030436]Training progress:  36%|███▌      | 2500/7000 [00:10<00:18, 246.91it/s, Loss=0.0038396]Training progress:  36%|███▌      | 2510/7000 [00:10<00:18, 246.91it/s, Loss=0.0032026]Training progress:  36%|███▌      | 2520/7000 [00:10<00:18, 246.91it/s, Loss=0.0031975]Training progress:  36%|███▌      | 2530/7000 [00:10<00:18, 243.91it/s, Loss=0.0031975]Training progress:  36%|███▌      | 2530/7000 [00:10<00:18, 243.91it/s, Loss=0.0028282]Training progress:  36%|███▋      | 2540/7000 [00:10<00:18, 243.91it/s, Loss=0.0030818]Training progress:  36%|███▋      | 2550/7000 [00:10<00:18, 243.91it/s, Loss=0.0028120]Training progress:  37%|███▋      | 2560/7000 [00:10<00:18, 244.70it/s, Loss=0.0028120]Training progress:  37%|███▋      | 2560/7000 [00:10<00:18, 244.70it/s, Loss=0.0030119]Training progress:  37%|███▋      | 2570/7000 [00:10<00:18, 244.70it/s, Loss=0.0029599]Training progress:  37%|███▋      | 2580/7000 [00:10<00:18, 244.70it/s, Loss=0.0029967]Training progress:  37%|███▋      | 2590/7000 [00:10<00:17, 245.38it/s, Loss=0.0029967]Training progress:  37%|███▋      | 2590/7000 [00:10<00:17, 245.38it/s, Loss=0.0025855]Training progress:  37%|███▋      | 2600/7000 [00:10<00:17, 245.38it/s, Loss=0.0033469]Training progress:  37%|███▋      | 2610/7000 [00:10<00:17, 245.38it/s, Loss=0.0032168]Training progress:  37%|███▋      | 2620/7000 [00:10<00:18, 242.50it/s, Loss=0.0032168]Training progress:  37%|███▋      | 2620/7000 [00:10<00:18, 242.50it/s, Loss=0.0031752]Training progress:  38%|███▊      | 2630/7000 [00:10<00:18, 242.50it/s, Loss=0.0029113]Training progress:  38%|███▊      | 2640/7000 [00:10<00:17, 242.50it/s, Loss=0.0030142]Training progress:  38%|███▊      | 2650/7000 [00:10<00:17, 243.61it/s, Loss=0.0030142]Training progress:  38%|███▊      | 2650/7000 [00:10<00:17, 243.61it/s, Loss=0.0030407]Training progress:  38%|███▊      | 2660/7000 [00:10<00:17, 243.61it/s, Loss=0.0031271]Training progress:  38%|███▊      | 2670/7000 [00:10<00:17, 243.61it/s, Loss=0.0025342]Training progress:  38%|███▊      | 2680/7000 [00:10<00:17, 244.38it/s, Loss=0.0025342]Training progress:  38%|███▊      | 2680/7000 [00:10<00:17, 244.38it/s, Loss=0.0028396]Training progress:  38%|███▊      | 2690/7000 [00:10<00:17, 244.38it/s, Loss=0.0026485]Training progress:  39%|███▊      | 2700/7000 [00:10<00:17, 244.38it/s, Loss=0.0033663]Training progress:  39%|███▊      | 2710/7000 [00:10<00:17, 241.66it/s, Loss=0.0033663]Training progress:  39%|███▊      | 2710/7000 [00:10<00:17, 241.66it/s, Loss=0.0030411]Training progress:  39%|███▉      | 2720/7000 [00:11<00:17, 241.66it/s, Loss=0.0030284]Training progress:  39%|███▉      | 2730/7000 [00:11<00:17, 241.66it/s, Loss=0.0028043]Training progress:  39%|███▉      | 2740/7000 [00:11<00:17, 242.73it/s, Loss=0.0028043]Training progress:  39%|███▉      | 2740/7000 [00:11<00:17, 242.73it/s, Loss=0.0026306]Training progress:  39%|███▉      | 2750/7000 [00:11<00:17, 242.73it/s, Loss=0.0026578]Training progress:  39%|███▉      | 2760/7000 [00:11<00:17, 242.73it/s, Loss=0.0028891]Training progress:  40%|███▉      | 2770/7000 [00:11<00:17, 243.43it/s, Loss=0.0028891]Training progress:  40%|███▉      | 2770/7000 [00:11<00:17, 243.43it/s, Loss=0.0028185]Training progress:  40%|███▉      | 2780/7000 [00:11<00:17, 243.43it/s, Loss=0.0028254]Training progress:  40%|███▉      | 2790/7000 [00:11<00:17, 243.43it/s, Loss=0.0026798]Training progress:  40%|████      | 2800/7000 [00:11<00:17, 243.95it/s, Loss=0.0026798]Training progress:  40%|████      | 2800/7000 [00:11<00:17, 243.95it/s, Loss=0.0033546]Training progress:  40%|████      | 2810/7000 [00:11<00:17, 243.95it/s, Loss=0.0030568]Training progress:  40%|████      | 2820/7000 [00:11<00:17, 243.95it/s, Loss=0.0028051]Training progress:  40%|████      | 2830/7000 [00:11<00:17, 240.60it/s, Loss=0.0028051]Training progress:  40%|████      | 2830/7000 [00:11<00:17, 240.60it/s, Loss=0.0027470]Training progress:  41%|████      | 2840/7000 [00:11<00:17, 240.60it/s, Loss=0.0028129]Training progress:  41%|████      | 2850/7000 [00:11<00:17, 240.60it/s, Loss=0.0028820]Training progress:  41%|████      | 2860/7000 [00:11<00:17, 241.35it/s, Loss=0.0028820]Training progress:  41%|████      | 2860/7000 [00:11<00:17, 241.35it/s, Loss=0.0028608]Training progress:  41%|████      | 2870/7000 [00:11<00:17, 241.35it/s, Loss=0.0027198]Training progress:  41%|████      | 2880/7000 [00:11<00:17, 241.35it/s, Loss=0.0027696]Training progress:  41%|████▏     | 2890/7000 [00:11<00:16, 241.95it/s, Loss=0.0027696]Training progress:  41%|████▏     | 2890/7000 [00:11<00:16, 241.95it/s, Loss=0.0027755]Training progress:  41%|████▏     | 2900/7000 [00:11<00:16, 241.95it/s, Loss=0.0036683]Training progress:  42%|████▏     | 2910/7000 [00:11<00:16, 241.95it/s, Loss=0.0031486]Training progress:  42%|████▏     | 2920/7000 [00:11<00:17, 239.42it/s, Loss=0.0031486]Training progress:  42%|████▏     | 2920/7000 [00:11<00:17, 239.42it/s, Loss=0.0028503]Training progress:  42%|████▏     | 2930/7000 [00:11<00:16, 239.42it/s, Loss=0.0029365]Training progress:  42%|████▏     | 2940/7000 [00:11<00:16, 239.42it/s, Loss=0.0023606]Training progress:  42%|████▏     | 2950/7000 [00:11<00:16, 240.66it/s, Loss=0.0023606]Training progress:  42%|████▏     | 2950/7000 [00:11<00:16, 240.66it/s, Loss=0.0028052]Training progress:  42%|████▏     | 2960/7000 [00:12<00:16, 240.66it/s, Loss=0.0026154]Training progress:  42%|████▏     | 2970/7000 [00:12<00:16, 240.66it/s, Loss=0.0026030]Training progress:  43%|████▎     | 2980/7000 [00:12<00:16, 241.77it/s, Loss=0.0026030]Training progress:  43%|████▎     | 2980/7000 [00:12<00:16, 241.77it/s, Loss=0.0026732]Training progress:  43%|████▎     | 2990/7000 [00:12<00:16, 241.77it/s, Loss=0.0025247]Training progress:  43%|████▎     | 3000/7000 [00:12<00:16, 241.77it/s, Loss=0.2223363]Training progress:  43%|████▎     | 3010/7000 [00:12<00:16, 239.55it/s, Loss=0.2223363]Training progress:  43%|████▎     | 3010/7000 [00:12<00:16, 239.55it/s, Loss=0.0451386]Training progress:  43%|████▎     | 3020/7000 [00:12<00:16, 239.55it/s, Loss=0.0243185]Training progress:  43%|████▎     | 3030/7000 [00:12<00:16, 239.55it/s, Loss=0.0146637]Training progress:  43%|████▎     | 3040/7000 [00:12<00:16, 241.88it/s, Loss=0.0146637]Training progress:  43%|████▎     | 3040/7000 [00:12<00:16, 241.88it/s, Loss=0.0105448]Training progress:  44%|████▎     | 3050/7000 [00:12<00:16, 241.88it/s, Loss=0.0086295]Training progress:  44%|████▎     | 3060/7000 [00:12<00:16, 241.88it/s, Loss=0.0074052]Training progress:  44%|████▍     | 3070/7000 [00:12<00:16, 244.42it/s, Loss=0.0074052]Training progress:  44%|████▍     | 3070/7000 [00:12<00:16, 244.42it/s, Loss=0.0062169]Training progress:  44%|████▍     | 3080/7000 [00:12<00:16, 244.42it/s, Loss=0.0057912]Training progress:  44%|████▍     | 3090/7000 [00:12<00:15, 244.42it/s, Loss=0.0056666]Training progress:  44%|████▍     | 3100/7000 [00:12<00:15, 246.08it/s, Loss=0.0056666]Training progress:  44%|████▍     | 3100/7000 [00:12<00:15, 246.08it/s, Loss=0.0136141]Training progress:  44%|████▍     | 3110/7000 [00:12<00:15, 246.08it/s, Loss=0.0090045]Training progress:  45%|████▍     | 3120/7000 [00:12<00:15, 246.08it/s, Loss=0.0064602]Training progress:  45%|████▍     | 3130/7000 [00:12<00:15, 247.03it/s, Loss=0.0064602]Training progress:  45%|████▍     | 3130/7000 [00:12<00:15, 247.03it/s, Loss=0.0056677]Training progress:  45%|████▍     | 3140/7000 [00:12<00:15, 247.03it/s, Loss=0.0052776]Training progress:  45%|████▌     | 3150/7000 [00:12<00:15, 247.03it/s, Loss=0.0050248]Training progress:  45%|████▌     | 3160/7000 [00:12<00:15, 250.93it/s, Loss=0.0050248]Training progress:  45%|████▌     | 3160/7000 [00:12<00:15, 250.93it/s, Loss=0.0041510]Training progress:  45%|████▌     | 3170/7000 [00:12<00:15, 250.93it/s, Loss=0.0044666]Training progress:  45%|████▌     | 3180/7000 [00:12<00:15, 250.93it/s, Loss=0.0043981]Training progress:  46%|████▌     | 3190/7000 [00:12<00:15, 253.66it/s, Loss=0.0043981]Training progress:  46%|████▌     | 3190/7000 [00:12<00:15, 253.66it/s, Loss=0.0044385]Training progress:  46%|████▌     | 3200/7000 [00:12<00:14, 253.66it/s, Loss=0.0091811]Training progress:  46%|████▌     | 3210/7000 [00:13<00:14, 253.66it/s, Loss=0.0058252]Training progress:  46%|████▌     | 3220/7000 [00:13<00:14, 252.01it/s, Loss=0.0058252]Training progress:  46%|████▌     | 3220/7000 [00:13<00:14, 252.01it/s, Loss=0.0053039]Training progress:  46%|████▌     | 3230/7000 [00:13<00:14, 252.01it/s, Loss=0.0045206]Training progress:  46%|████▋     | 3240/7000 [00:13<00:14, 252.01it/s, Loss=0.0044093]Training progress:  46%|████▋     | 3250/7000 [00:13<00:14, 254.14it/s, Loss=0.0044093]Training progress:  46%|████▋     | 3250/7000 [00:13<00:14, 254.14it/s, Loss=0.0037798]Training progress:  47%|████▋     | 3260/7000 [00:13<00:14, 254.14it/s, Loss=0.0039857]Training progress:  47%|████▋     | 3270/7000 [00:13<00:14, 254.14it/s, Loss=0.0040088]Training progress:  47%|████▋     | 3280/7000 [00:13<00:14, 255.67it/s, Loss=0.0040088]Training progress:  47%|████▋     | 3280/7000 [00:13<00:14, 255.67it/s, Loss=0.0037073]Training progress:  47%|████▋     | 3290/7000 [00:13<00:14, 255.67it/s, Loss=0.0033427]Training progress:  47%|████▋     | 3300/7000 [00:13<00:14, 255.67it/s, Loss=0.0057859]Training progress:  47%|████▋     | 3310/7000 [00:13<00:14, 253.10it/s, Loss=0.0057859]Training progress:  47%|████▋     | 3310/7000 [00:13<00:14, 253.10it/s, Loss=0.0046497]Training progress:  47%|████▋     | 3320/7000 [00:13<00:14, 253.10it/s, Loss=0.0043838]Training progress:  48%|████▊     | 3330/7000 [00:13<00:14, 253.10it/s, Loss=0.0034005]Training progress:  48%|████▊     | 3340/7000 [00:13<00:14, 254.18it/s, Loss=0.0034005]Training progress:  48%|████▊     | 3340/7000 [00:13<00:14, 254.18it/s, Loss=0.0034242]Training progress:  48%|████▊     | 3350/7000 [00:13<00:14, 254.18it/s, Loss=0.0036053]Training progress:  48%|████▊     | 3360/7000 [00:13<00:14, 254.18it/s, Loss=0.0032799]Training progress:  48%|████▊     | 3370/7000 [00:13<00:14, 255.40it/s, Loss=0.0032799]Training progress:  48%|████▊     | 3370/7000 [00:13<00:14, 255.40it/s, Loss=0.0031918]Training progress:  48%|████▊     | 3380/7000 [00:13<00:14, 255.40it/s, Loss=0.0034399]Training progress:  48%|████▊     | 3390/7000 [00:13<00:14, 255.40it/s, Loss=0.0035437]Training progress:  49%|████▊     | 3400/7000 [00:13<00:14, 256.26it/s, Loss=0.0035437]Training progress:  49%|████▊     | 3400/7000 [00:13<00:14, 256.26it/s, Loss=0.0049210]Training progress:  49%|████▊     | 3410/7000 [00:13<00:14, 256.26it/s, Loss=0.0040613]Training progress:  49%|████▉     | 3420/7000 [00:13<00:13, 256.26it/s, Loss=0.0035797]Training progress:  49%|████▉     | 3430/7000 [00:13<00:14, 252.83it/s, Loss=0.0035797]Training progress:  49%|████▉     | 3430/7000 [00:13<00:14, 252.83it/s, Loss=0.0033442]Training progress:  49%|████▉     | 3440/7000 [00:13<00:14, 252.83it/s, Loss=0.0034094]Training progress:  49%|████▉     | 3450/7000 [00:13<00:14, 252.83it/s, Loss=0.0032400]Training progress:  49%|████▉     | 3460/7000 [00:13<00:13, 253.40it/s, Loss=0.0032400]Training progress:  49%|████▉     | 3460/7000 [00:13<00:13, 253.40it/s, Loss=0.0028705]Training progress:  50%|████▉     | 3470/7000 [00:14<00:13, 253.40it/s, Loss=0.0030816]Training progress:  50%|████▉     | 3480/7000 [00:14<00:13, 253.40it/s, Loss=0.0030099]Training progress:  50%|████▉     | 3490/7000 [00:14<00:13, 254.41it/s, Loss=0.0030099]Training progress:  50%|████▉     | 3490/7000 [00:14<00:13, 254.41it/s, Loss=0.0029835]Training progress:  50%|█████     | 3500/7000 [00:14<00:13, 254.41it/s, Loss=0.0040582]Training progress:  50%|█████     | 3510/7000 [00:14<00:13, 254.41it/s, Loss=0.0029988]Training progress:  50%|█████     | 3520/7000 [00:14<00:13, 251.57it/s, Loss=0.0029988]Training progress:  50%|█████     | 3520/7000 [00:14<00:13, 251.57it/s, Loss=0.0028652]Training progress:  50%|█████     | 3530/7000 [00:14<00:13, 251.57it/s, Loss=0.0030618]Training progress:  51%|█████     | 3540/7000 [00:14<00:13, 251.57it/s, Loss=0.0028148]Training progress:  51%|█████     | 3550/7000 [00:14<00:13, 253.19it/s, Loss=0.0028148]Training progress:  51%|█████     | 3550/7000 [00:14<00:13, 253.19it/s, Loss=0.0025276]Training progress:  51%|█████     | 3560/7000 [00:14<00:13, 253.19it/s, Loss=0.0028898]Training progress:  51%|█████     | 3570/7000 [00:14<00:13, 253.19it/s, Loss=0.0024009]Training progress:  51%|█████     | 3580/7000 [00:14<00:13, 254.31it/s, Loss=0.0024009]Training progress:  51%|█████     | 3580/7000 [00:14<00:13, 254.31it/s, Loss=0.0023765]Training progress:  51%|█████▏    | 3590/7000 [00:14<00:13, 254.31it/s, Loss=0.0028557]Training progress:  51%|█████▏    | 3600/7000 [00:14<00:13, 254.31it/s, Loss=0.0032175]Training progress:  52%|█████▏    | 3610/7000 [00:14<00:13, 251.36it/s, Loss=0.0032175]Training progress:  52%|█████▏    | 3610/7000 [00:14<00:13, 251.36it/s, Loss=0.0028722]Training progress:  52%|█████▏    | 3620/7000 [00:14<00:13, 251.36it/s, Loss=0.0029763]Training progress:  52%|█████▏    | 3630/7000 [00:14<00:13, 251.36it/s, Loss=0.0024073]Training progress:  52%|█████▏    | 3640/7000 [00:14<00:13, 252.60it/s, Loss=0.0024073]Training progress:  52%|█████▏    | 3640/7000 [00:14<00:13, 252.60it/s, Loss=0.0029470]Training progress:  52%|█████▏    | 3650/7000 [00:14<00:13, 252.60it/s, Loss=0.0027021]Training progress:  52%|█████▏    | 3660/7000 [00:14<00:13, 252.60it/s, Loss=0.0027147]Training progress:  52%|█████▏    | 3670/7000 [00:14<00:13, 253.37it/s, Loss=0.0027147]Training progress:  52%|█████▏    | 3670/7000 [00:14<00:13, 253.37it/s, Loss=0.0025907]Training progress:  53%|█████▎    | 3680/7000 [00:14<00:13, 253.37it/s, Loss=0.0026277]Training progress:  53%|█████▎    | 3690/7000 [00:14<00:13, 253.37it/s, Loss=0.0022137]Training progress:  53%|█████▎    | 3700/7000 [00:14<00:12, 254.00it/s, Loss=0.0022137]Training progress:  53%|█████▎    | 3700/7000 [00:14<00:12, 254.00it/s, Loss=0.0028624]Training progress:  53%|█████▎    | 3710/7000 [00:14<00:12, 254.00it/s, Loss=0.0028320]Training progress:  53%|█████▎    | 3720/7000 [00:15<00:12, 254.00it/s, Loss=0.0029114]Training progress:  53%|█████▎    | 3730/7000 [00:15<00:13, 250.62it/s, Loss=0.0029114]Training progress:  53%|█████▎    | 3730/7000 [00:15<00:13, 250.62it/s, Loss=0.0026419]Training progress:  53%|█████▎    | 3740/7000 [00:15<00:13, 250.62it/s, Loss=0.0028509]Training progress:  54%|█████▎    | 3750/7000 [00:15<00:12, 250.62it/s, Loss=0.0027665]Training progress:  54%|█████▎    | 3760/7000 [00:15<00:12, 251.91it/s, Loss=0.0027665]Training progress:  54%|█████▎    | 3760/7000 [00:15<00:12, 251.91it/s, Loss=0.0025768]Training progress:  54%|█████▍    | 3770/7000 [00:15<00:12, 251.91it/s, Loss=0.0026292]Training progress:  54%|█████▍    | 3780/7000 [00:15<00:12, 251.91it/s, Loss=0.0024936]Training progress:  54%|█████▍    | 3790/7000 [00:15<00:12, 252.96it/s, Loss=0.0024936]Training progress:  54%|█████▍    | 3790/7000 [00:15<00:12, 252.96it/s, Loss=0.0026772]Training progress:  54%|█████▍    | 3800/7000 [00:15<00:12, 252.96it/s, Loss=0.0032064]Training progress:  54%|█████▍    | 3810/7000 [00:15<00:12, 252.96it/s, Loss=0.0027779]Training progress:  55%|█████▍    | 3820/7000 [00:15<00:12, 250.11it/s, Loss=0.0027779]Training progress:  55%|█████▍    | 3820/7000 [00:15<00:12, 250.11it/s, Loss=0.0024855]Training progress:  55%|█████▍    | 3830/7000 [00:15<00:12, 250.11it/s, Loss=0.0026284]Training progress:  55%|█████▍    | 3840/7000 [00:15<00:12, 250.11it/s, Loss=0.0024857]Training progress:  55%|█████▌    | 3850/7000 [00:15<00:12, 251.63it/s, Loss=0.0024857]Training progress:  55%|█████▌    | 3850/7000 [00:15<00:12, 251.63it/s, Loss=0.0024017]Training progress:  55%|█████▌    | 3860/7000 [00:15<00:12, 251.63it/s, Loss=0.0026259]Training progress:  55%|█████▌    | 3870/7000 [00:15<00:12, 251.63it/s, Loss=0.0027450]Training progress:  55%|█████▌    | 3880/7000 [00:15<00:12, 252.62it/s, Loss=0.0027450]Training progress:  55%|█████▌    | 3880/7000 [00:15<00:12, 252.62it/s, Loss=0.0026254]Training progress:  56%|█████▌    | 3890/7000 [00:15<00:12, 252.62it/s, Loss=0.0021637]Training progress:  56%|█████▌    | 3900/7000 [00:15<00:12, 252.62it/s, Loss=0.0027508]Training progress:  56%|█████▌    | 3910/7000 [00:15<00:12, 249.80it/s, Loss=0.0027508]Training progress:  56%|█████▌    | 3910/7000 [00:15<00:12, 249.80it/s, Loss=0.0026977]Training progress:  56%|█████▌    | 3920/7000 [00:15<00:12, 249.80it/s, Loss=0.0025522]Training progress:  56%|█████▌    | 3930/7000 [00:15<00:12, 249.80it/s, Loss=0.0021344]Training progress:  56%|█████▋    | 3940/7000 [00:15<00:12, 251.00it/s, Loss=0.0021344]Training progress:  56%|█████▋    | 3940/7000 [00:15<00:12, 251.00it/s, Loss=0.0025377]Training progress:  56%|█████▋    | 3950/7000 [00:15<00:12, 251.00it/s, Loss=0.0023456]Training progress:  57%|█████▋    | 3960/7000 [00:15<00:12, 251.00it/s, Loss=0.0023924]Training progress:  57%|█████▋    | 3970/7000 [00:15<00:12, 251.88it/s, Loss=0.0023924]Training progress:  57%|█████▋    | 3970/7000 [00:16<00:12, 251.88it/s, Loss=0.0021440]Training progress:  57%|█████▋    | 3980/7000 [00:16<00:11, 251.88it/s, Loss=0.0022166]Training progress:  57%|█████▋    | 3990/7000 [00:16<00:11, 251.88it/s, Loss=0.0024630]Training progress:  57%|█████▋    | 4000/7000 [00:16<00:11, 252.47it/s, Loss=0.0024630]Training progress:  57%|█████▋    | 4000/7000 [00:16<00:11, 252.47it/s, Loss=0.0027179]Training progress:  57%|█████▋    | 4010/7000 [00:16<00:11, 252.47it/s, Loss=0.0022987]Training progress:  57%|█████▋    | 4020/7000 [00:16<00:11, 252.47it/s, Loss=0.0024751]Training progress:  58%|█████▊    | 4030/7000 [00:16<00:11, 249.00it/s, Loss=0.0024751]Training progress:  58%|█████▊    | 4030/7000 [00:16<00:11, 249.00it/s, Loss=0.0021283]Training progress:  58%|█████▊    | 4040/7000 [00:16<00:11, 249.00it/s, Loss=0.0024555]Training progress:  58%|█████▊    | 4050/7000 [00:16<00:11, 249.00it/s, Loss=0.0024971]Training progress:  58%|█████▊    | 4060/7000 [00:16<00:11, 250.15it/s, Loss=0.0024971]Training progress:  58%|█████▊    | 4060/7000 [00:16<00:11, 250.15it/s, Loss=0.0026168]Training progress:  58%|█████▊    | 4070/7000 [00:16<00:11, 250.15it/s, Loss=0.0022278]Training progress:  58%|█████▊    | 4080/7000 [00:16<00:11, 250.15it/s, Loss=0.0020604]Training progress:  58%|█████▊    | 4090/7000 [00:16<00:11, 251.13it/s, Loss=0.0020604]Training progress:  58%|█████▊    | 4090/7000 [00:16<00:11, 251.13it/s, Loss=0.0019924]Training progress:  59%|█████▊    | 4100/7000 [00:16<00:11, 251.13it/s, Loss=0.0024722]Training progress:  59%|█████▊    | 4110/7000 [00:16<00:11, 251.13it/s, Loss=0.0023455]Training progress:  59%|█████▉    | 4120/7000 [00:16<00:11, 247.36it/s, Loss=0.0023455]Training progress:  59%|█████▉    | 4120/7000 [00:16<00:11, 247.36it/s, Loss=0.0022453]Training progress:  59%|█████▉    | 4130/7000 [00:16<00:11, 247.36it/s, Loss=0.0020287]Training progress:  59%|█████▉    | 4140/7000 [00:16<00:11, 247.36it/s, Loss=0.0022781]Training progress:  59%|█████▉    | 4150/7000 [00:16<00:11, 248.82it/s, Loss=0.0022781]Training progress:  59%|█████▉    | 4150/7000 [00:16<00:11, 248.82it/s, Loss=0.0019024]Training progress:  59%|█████▉    | 4160/7000 [00:16<00:11, 248.82it/s, Loss=0.0021398]Training progress:  60%|█████▉    | 4170/7000 [00:16<00:11, 248.82it/s, Loss=0.0018418]Training progress:  60%|█████▉    | 4180/7000 [00:16<00:11, 249.89it/s, Loss=0.0018418]Training progress:  60%|█████▉    | 4180/7000 [00:16<00:11, 249.89it/s, Loss=0.0023729]Training progress:  60%|█████▉    | 4190/7000 [00:16<00:11, 249.89it/s, Loss=0.0022730]Training progress:  60%|██████    | 4200/7000 [00:16<00:11, 249.89it/s, Loss=0.0023037]Training progress:  60%|██████    | 4210/7000 [00:16<00:11, 247.02it/s, Loss=0.0023037]Training progress:  60%|██████    | 4210/7000 [00:16<00:11, 247.02it/s, Loss=0.0022072]Training progress:  60%|██████    | 4220/7000 [00:17<00:11, 247.02it/s, Loss=0.0021252]Training progress:  60%|██████    | 4230/7000 [00:17<00:11, 247.02it/s, Loss=0.0023258]Training progress:  61%|██████    | 4240/7000 [00:17<00:11, 248.61it/s, Loss=0.0023258]Training progress:  61%|██████    | 4240/7000 [00:17<00:11, 248.61it/s, Loss=0.0023008]Training progress:  61%|██████    | 4250/7000 [00:17<00:11, 248.61it/s, Loss=0.0019612]Training progress:  61%|██████    | 4260/7000 [00:17<00:11, 248.61it/s, Loss=0.0022004]Training progress:  61%|██████    | 4270/7000 [00:17<00:10, 249.55it/s, Loss=0.0022004]Training progress:  61%|██████    | 4270/7000 [00:17<00:10, 249.55it/s, Loss=0.0022064]Training progress:  61%|██████    | 4280/7000 [00:17<00:10, 249.55it/s, Loss=0.0023467]Training progress:  61%|██████▏   | 4290/7000 [00:17<00:10, 249.55it/s, Loss=0.0019093]Training progress:  61%|██████▏   | 4300/7000 [00:17<00:10, 250.28it/s, Loss=0.0019093]Training progress:  61%|██████▏   | 4300/7000 [00:17<00:10, 250.28it/s, Loss=0.0021113]Training progress:  62%|██████▏   | 4310/7000 [00:17<00:10, 250.28it/s, Loss=0.0022056]Training progress:  62%|██████▏   | 4320/7000 [00:17<00:10, 250.28it/s, Loss=0.0018660]Training progress:  62%|██████▏   | 4330/7000 [00:17<00:10, 247.13it/s, Loss=0.0018660]Training progress:  62%|██████▏   | 4330/7000 [00:17<00:10, 247.13it/s, Loss=0.0018241]Training progress:  62%|██████▏   | 4340/7000 [00:17<00:10, 247.13it/s, Loss=0.0021137]Training progress:  62%|██████▏   | 4350/7000 [00:17<00:10, 247.13it/s, Loss=0.0016883]Training progress:  62%|██████▏   | 4360/7000 [00:17<00:10, 248.50it/s, Loss=0.0016883]Training progress:  62%|██████▏   | 4360/7000 [00:17<00:10, 248.50it/s, Loss=0.0022413]Training progress:  62%|██████▏   | 4370/7000 [00:17<00:10, 248.50it/s, Loss=0.0020850]Training progress:  63%|██████▎   | 4380/7000 [00:17<00:10, 248.50it/s, Loss=0.0022034]Training progress:  63%|██████▎   | 4390/7000 [00:17<00:10, 249.59it/s, Loss=0.0022034]Training progress:  63%|██████▎   | 4390/7000 [00:17<00:10, 249.59it/s, Loss=0.0022235]Training progress:  63%|██████▎   | 4400/7000 [00:17<00:10, 249.59it/s, Loss=0.0023040]Training progress:  63%|██████▎   | 4410/7000 [00:17<00:10, 249.59it/s, Loss=0.0022276]Training progress:  63%|██████▎   | 4420/7000 [00:17<00:10, 246.92it/s, Loss=0.0022276]Training progress:  63%|██████▎   | 4420/7000 [00:17<00:10, 246.92it/s, Loss=0.0020701]Training progress:  63%|██████▎   | 4430/7000 [00:17<00:10, 246.92it/s, Loss=0.0021731]Training progress:  63%|██████▎   | 4440/7000 [00:17<00:10, 246.92it/s, Loss=0.0017545]Training progress:  64%|██████▎   | 4450/7000 [00:17<00:10, 248.31it/s, Loss=0.0017545]Training progress:  64%|██████▎   | 4450/7000 [00:17<00:10, 248.31it/s, Loss=0.0022685]Training progress:  64%|██████▎   | 4460/7000 [00:17<00:10, 248.31it/s, Loss=0.0019737]Training progress:  64%|██████▍   | 4470/7000 [00:18<00:10, 248.31it/s, Loss=0.0018541]Training progress:  64%|██████▍   | 4480/7000 [00:18<00:10, 249.29it/s, Loss=0.0018541]Training progress:  64%|██████▍   | 4480/7000 [00:18<00:10, 249.29it/s, Loss=0.0019402]Training progress:  64%|██████▍   | 4490/7000 [00:18<00:10, 249.29it/s, Loss=0.0019537]Training progress:  64%|██████▍   | 4500/7000 [00:18<00:10, 249.29it/s, Loss=0.0019878]Training progress:  64%|██████▍   | 4510/7000 [00:18<00:10, 246.52it/s, Loss=0.0019878]Training progress:  64%|██████▍   | 4510/7000 [00:18<00:10, 246.52it/s, Loss=0.0019891]Training progress:  65%|██████▍   | 4520/7000 [00:18<00:10, 246.52it/s, Loss=0.0019141]Training progress:  65%|██████▍   | 4530/7000 [00:18<00:10, 246.52it/s, Loss=0.0020512]Training progress:  65%|██████▍   | 4540/7000 [00:18<00:09, 247.66it/s, Loss=0.0020512]Training progress:  65%|██████▍   | 4540/7000 [00:18<00:09, 247.66it/s, Loss=0.0020125]Training progress:  65%|██████▌   | 4550/7000 [00:18<00:09, 247.66it/s, Loss=0.0019951]Training progress:  65%|██████▌   | 4560/7000 [00:18<00:09, 247.66it/s, Loss=0.0017118]Training progress:  65%|██████▌   | 4570/7000 [00:18<00:09, 248.41it/s, Loss=0.0017118]Training progress:  65%|██████▌   | 4570/7000 [00:18<00:09, 248.41it/s, Loss=0.0019930]Training progress:  65%|██████▌   | 4580/7000 [00:18<00:09, 248.41it/s, Loss=0.0020833]Training progress:  66%|██████▌   | 4590/7000 [00:18<00:09, 248.41it/s, Loss=0.0021237]Training progress:  66%|██████▌   | 4600/7000 [00:18<00:09, 249.12it/s, Loss=0.0021237]Training progress:  66%|██████▌   | 4600/7000 [00:18<00:09, 249.12it/s, Loss=0.0021542]Training progress:  66%|██████▌   | 4610/7000 [00:18<00:09, 249.12it/s, Loss=0.0021487]Training progress:  66%|██████▌   | 4620/7000 [00:18<00:09, 249.12it/s, Loss=0.0021103]Training progress:  66%|██████▌   | 4630/7000 [00:18<00:09, 245.96it/s, Loss=0.0021103]Training progress:  66%|██████▌   | 4630/7000 [00:18<00:09, 245.96it/s, Loss=0.0018884]Training progress:  66%|██████▋   | 4640/7000 [00:18<00:09, 245.96it/s, Loss=0.0021503]Training progress:  66%|██████▋   | 4650/7000 [00:18<00:09, 245.96it/s, Loss=0.0021040]Training progress:  67%|██████▋   | 4660/7000 [00:18<00:09, 247.26it/s, Loss=0.0021040]Training progress:  67%|██████▋   | 4660/7000 [00:18<00:09, 247.26it/s, Loss=0.0021008]Training progress:  67%|██████▋   | 4670/7000 [00:18<00:09, 247.26it/s, Loss=0.0019453]Training progress:  67%|██████▋   | 4680/7000 [00:18<00:09, 247.26it/s, Loss=0.0020204]Training progress:  67%|██████▋   | 4690/7000 [00:18<00:09, 248.11it/s, Loss=0.0020204]Training progress:  67%|██████▋   | 4690/7000 [00:18<00:09, 248.11it/s, Loss=0.0020689]Training progress:  67%|██████▋   | 4700/7000 [00:18<00:09, 248.11it/s, Loss=0.0021671]Training progress:  67%|██████▋   | 4710/7000 [00:19<00:09, 248.11it/s, Loss=0.0018151]Training progress:  67%|██████▋   | 4720/7000 [00:19<00:09, 245.43it/s, Loss=0.0018151]Training progress:  67%|██████▋   | 4720/7000 [00:19<00:09, 245.43it/s, Loss=0.0021449]Training progress:  68%|██████▊   | 4730/7000 [00:19<00:09, 245.43it/s, Loss=0.0020526]Training progress:  68%|██████▊   | 4740/7000 [00:19<00:09, 245.43it/s, Loss=0.0020169]Training progress:  68%|██████▊   | 4750/7000 [00:19<00:09, 246.86it/s, Loss=0.0020169]Training progress:  68%|██████▊   | 4750/7000 [00:19<00:09, 246.86it/s, Loss=0.0016235]Training progress:  68%|██████▊   | 4760/7000 [00:19<00:09, 246.86it/s, Loss=0.0019581]Training progress:  68%|██████▊   | 4770/7000 [00:19<00:09, 246.86it/s, Loss=0.0021253]Training progress:  68%|██████▊   | 4780/7000 [00:19<00:08, 247.13it/s, Loss=0.0021253]Training progress:  68%|██████▊   | 4780/7000 [00:19<00:08, 247.13it/s, Loss=0.0021740]Training progress:  68%|██████▊   | 4790/7000 [00:19<00:08, 247.13it/s, Loss=0.0019890]Training progress:  69%|██████▊   | 4800/7000 [00:19<00:08, 247.13it/s, Loss=0.0023901]Training progress:  69%|██████▊   | 4810/7000 [00:19<00:08, 244.64it/s, Loss=0.0023901]Training progress:  69%|██████▊   | 4810/7000 [00:19<00:08, 244.64it/s, Loss=0.0019740]Training progress:  69%|██████▉   | 4820/7000 [00:19<00:08, 244.64it/s, Loss=0.0020210]Training progress:  69%|██████▉   | 4830/7000 [00:19<00:08, 244.64it/s, Loss=0.0017309]Training progress:  69%|██████▉   | 4840/7000 [00:19<00:08, 245.81it/s, Loss=0.0017309]Training progress:  69%|██████▉   | 4840/7000 [00:19<00:08, 245.81it/s, Loss=0.0019064]Training progress:  69%|██████▉   | 4850/7000 [00:19<00:08, 245.81it/s, Loss=0.0020220]Training progress:  69%|██████▉   | 4860/7000 [00:19<00:08, 245.81it/s, Loss=0.0019556]Training progress:  70%|██████▉   | 4870/7000 [00:19<00:08, 246.82it/s, Loss=0.0019556]Training progress:  70%|██████▉   | 4870/7000 [00:19<00:08, 246.82it/s, Loss=0.0017232]Training progress:  70%|██████▉   | 4880/7000 [00:19<00:08, 246.82it/s, Loss=0.0017826]Training progress:  70%|██████▉   | 4890/7000 [00:19<00:08, 246.82it/s, Loss=0.0020437]Training progress:  70%|███████   | 4900/7000 [00:19<00:08, 247.42it/s, Loss=0.0020437]Training progress:  70%|███████   | 4900/7000 [00:19<00:08, 247.42it/s, Loss=0.0020330]Training progress:  70%|███████   | 4910/7000 [00:19<00:08, 247.42it/s, Loss=0.0020403]Training progress:  70%|███████   | 4920/7000 [00:19<00:08, 247.42it/s, Loss=0.0018438]Training progress:  70%|███████   | 4930/7000 [00:19<00:08, 244.41it/s, Loss=0.0018438]Training progress:  70%|███████   | 4930/7000 [00:19<00:08, 244.41it/s, Loss=0.0018581]Training progress:  71%|███████   | 4940/7000 [00:19<00:08, 244.41it/s, Loss=0.0020677]Training progress:  71%|███████   | 4950/7000 [00:19<00:08, 244.41it/s, Loss=0.0017063]Training progress:  71%|███████   | 4960/7000 [00:19<00:08, 245.57it/s, Loss=0.0017063]Training progress:  71%|███████   | 4960/7000 [00:20<00:08, 245.57it/s, Loss=0.0018563]Training progress:  71%|███████   | 4970/7000 [00:20<00:08, 245.57it/s, Loss=0.0017982]Training progress:  71%|███████   | 4980/7000 [00:20<00:08, 245.57it/s, Loss=0.0019565]Training progress:  71%|███████▏  | 4990/7000 [00:20<00:08, 246.27it/s, Loss=0.0019565]Training progress:  71%|███████▏  | 4990/7000 [00:20<00:08, 246.27it/s, Loss=0.0018636]Training progress:  71%|███████▏  | 5000/7000 [00:20<00:08, 246.27it/s, Loss=0.0022828]Training progress:  72%|███████▏  | 5010/7000 [00:20<00:08, 246.27it/s, Loss=0.0025195]Training progress:  72%|███████▏  | 5020/7000 [00:20<00:08, 243.60it/s, Loss=0.0025195]Training progress:  72%|███████▏  | 5020/7000 [00:20<00:08, 243.60it/s, Loss=0.0020491]Training progress:  72%|███████▏  | 5030/7000 [00:20<00:08, 243.60it/s, Loss=0.0019787]Training progress:  72%|███████▏  | 5040/7000 [00:20<00:08, 243.60it/s, Loss=0.0017713]Training progress:  72%|███████▏  | 5050/7000 [00:20<00:07, 245.07it/s, Loss=0.0017713]Training progress:  72%|███████▏  | 5050/7000 [00:20<00:07, 245.07it/s, Loss=0.0017944]Training progress:  72%|███████▏  | 5060/7000 [00:20<00:07, 245.07it/s, Loss=0.0018937]Training progress:  72%|███████▏  | 5070/7000 [00:20<00:07, 245.07it/s, Loss=0.0017265]Training progress:  73%|███████▎  | 5080/7000 [00:20<00:07, 246.19it/s, Loss=0.0017265]Training progress:  73%|███████▎  | 5080/7000 [00:20<00:07, 246.19it/s, Loss=0.0020320]Training progress:  73%|███████▎  | 5090/7000 [00:20<00:07, 246.19it/s, Loss=0.0019703]Training progress:  73%|███████▎  | 5100/7000 [00:20<00:07, 246.19it/s, Loss=0.0022469]Training progress:  73%|███████▎  | 5110/7000 [00:20<00:07, 243.56it/s, Loss=0.0022469]Training progress:  73%|███████▎  | 5110/7000 [00:20<00:07, 243.56it/s, Loss=0.0021931]Training progress:  73%|███████▎  | 5120/7000 [00:20<00:07, 243.56it/s, Loss=0.0020002]Training progress:  73%|███████▎  | 5130/7000 [00:20<00:07, 243.56it/s, Loss=0.0020347]Training progress:  73%|███████▎  | 5140/7000 [00:20<00:07, 244.64it/s, Loss=0.0020347]Training progress:  73%|███████▎  | 5140/7000 [00:20<00:07, 244.64it/s, Loss=0.0019246]Training progress:  74%|███████▎  | 5150/7000 [00:20<00:07, 244.64it/s, Loss=0.0018897]Training progress:  74%|███████▎  | 5160/7000 [00:20<00:07, 244.64it/s, Loss=0.0018009]Training progress:  74%|███████▍  | 5170/7000 [00:20<00:07, 245.55it/s, Loss=0.0018009]Training progress:  74%|███████▍  | 5170/7000 [00:20<00:07, 245.55it/s, Loss=0.0019374]Training progress:  74%|███████▍  | 5180/7000 [00:20<00:07, 245.55it/s, Loss=0.0017356]Training progress:  74%|███████▍  | 5190/7000 [00:20<00:07, 245.55it/s, Loss=0.0016083]Training progress:  74%|███████▍  | 5200/7000 [00:20<00:07, 246.20it/s, Loss=0.0016083]Training progress:  74%|███████▍  | 5200/7000 [00:21<00:07, 246.20it/s, Loss=0.0021481]Training progress:  74%|███████▍  | 5210/7000 [00:21<00:07, 246.20it/s, Loss=0.0018791]Training progress:  75%|███████▍  | 5220/7000 [00:21<00:07, 246.20it/s, Loss=0.0019592]Training progress:  75%|███████▍  | 5230/7000 [00:21<00:07, 243.01it/s, Loss=0.0019592]Training progress:  75%|███████▍  | 5230/7000 [00:21<00:07, 243.01it/s, Loss=0.0016820]Training progress:  75%|███████▍  | 5240/7000 [00:21<00:07, 243.01it/s, Loss=0.0018315]Training progress:  75%|███████▌  | 5250/7000 [00:21<00:07, 243.01it/s, Loss=0.0017264]Training progress:  75%|███████▌  | 5260/7000 [00:21<00:07, 244.16it/s, Loss=0.0017264]Training progress:  75%|███████▌  | 5260/7000 [00:21<00:07, 244.16it/s, Loss=0.0019256]Training progress:  75%|███████▌  | 5270/7000 [00:21<00:07, 244.16it/s, Loss=0.0018503]Training progress:  75%|███████▌  | 5280/7000 [00:21<00:07, 244.16it/s, Loss=0.0016483]Training progress:  76%|███████▌  | 5290/7000 [00:21<00:06, 244.74it/s, Loss=0.0016483]Training progress:  76%|███████▌  | 5290/7000 [00:21<00:06, 244.74it/s, Loss=0.0017430]Training progress:  76%|███████▌  | 5300/7000 [00:21<00:06, 244.74it/s, Loss=0.0021944]Training progress:  76%|███████▌  | 5310/7000 [00:21<00:06, 244.74it/s, Loss=0.0020015]Training progress:  76%|███████▌  | 5320/7000 [00:21<00:06, 242.19it/s, Loss=0.0020015]Training progress:  76%|███████▌  | 5320/7000 [00:21<00:06, 242.19it/s, Loss=0.0017175]Training progress:  76%|███████▌  | 5330/7000 [00:21<00:06, 242.19it/s, Loss=0.0018494]Training progress:  76%|███████▋  | 5340/7000 [00:21<00:06, 242.19it/s, Loss=0.0018505]Training progress:  76%|███████▋  | 5350/7000 [00:21<00:06, 243.56it/s, Loss=0.0018505]Training progress:  76%|███████▋  | 5350/7000 [00:21<00:06, 243.56it/s, Loss=0.0020078]Training progress:  77%|███████▋  | 5360/7000 [00:21<00:06, 243.56it/s, Loss=0.0018306]Training progress:  77%|███████▋  | 5370/7000 [00:21<00:06, 243.56it/s, Loss=0.0015985]Training progress:  77%|███████▋  | 5380/7000 [00:21<00:06, 244.47it/s, Loss=0.0015985]Training progress:  77%|███████▋  | 5380/7000 [00:21<00:06, 244.47it/s, Loss=0.0016013]Training progress:  77%|███████▋  | 5390/7000 [00:21<00:06, 244.47it/s, Loss=0.0017775]Training progress:  77%|███████▋  | 5400/7000 [00:21<00:06, 244.47it/s, Loss=0.0018834]Training progress:  77%|███████▋  | 5410/7000 [00:21<00:06, 241.52it/s, Loss=0.0018834]Training progress:  77%|███████▋  | 5410/7000 [00:21<00:06, 241.52it/s, Loss=0.0019015]Training progress:  77%|███████▋  | 5420/7000 [00:21<00:06, 241.52it/s, Loss=0.0017663]Training progress:  78%|███████▊  | 5430/7000 [00:21<00:06, 241.52it/s, Loss=0.0015642]Training progress:  78%|███████▊  | 5440/7000 [00:21<00:06, 243.04it/s, Loss=0.0015642]Training progress:  78%|███████▊  | 5440/7000 [00:21<00:06, 243.04it/s, Loss=0.0018724]Training progress:  78%|███████▊  | 5450/7000 [00:22<00:06, 243.04it/s, Loss=0.0016731]Training progress:  78%|███████▊  | 5460/7000 [00:22<00:06, 243.04it/s, Loss=0.0018825]Training progress:  78%|███████▊  | 5470/7000 [00:22<00:06, 244.34it/s, Loss=0.0018825]Training progress:  78%|███████▊  | 5470/7000 [00:22<00:06, 244.34it/s, Loss=0.0016347]Training progress:  78%|███████▊  | 5480/7000 [00:22<00:06, 244.34it/s, Loss=0.0018000]Training progress:  78%|███████▊  | 5490/7000 [00:22<00:06, 244.34it/s, Loss=0.0017803]Training progress:  79%|███████▊  | 5500/7000 [00:22<00:06, 245.15it/s, Loss=0.0017803]Training progress:  79%|███████▊  | 5500/7000 [00:22<00:06, 245.15it/s, Loss=0.0018480]Training progress:  79%|███████▊  | 5510/7000 [00:22<00:06, 245.15it/s, Loss=0.0016733]Training progress:  79%|███████▉  | 5520/7000 [00:22<00:06, 245.15it/s, Loss=0.0016491]Training progress:  79%|███████▉  | 5530/7000 [00:22<00:06, 242.20it/s, Loss=0.0016491]Training progress:  79%|███████▉  | 5530/7000 [00:22<00:06, 242.20it/s, Loss=0.0018592]Training progress:  79%|███████▉  | 5540/7000 [00:22<00:06, 242.20it/s, Loss=0.0018123]Training progress:  79%|███████▉  | 5550/7000 [00:22<00:05, 242.20it/s, Loss=0.0015367]Training progress:  79%|███████▉  | 5560/7000 [00:22<00:05, 243.20it/s, Loss=0.0015367]Training progress:  79%|███████▉  | 5560/7000 [00:22<00:05, 243.20it/s, Loss=0.0015085]Training progress:  80%|███████▉  | 5570/7000 [00:22<00:05, 243.20it/s, Loss=0.0015996]Training progress:  80%|███████▉  | 5580/7000 [00:22<00:05, 243.20it/s, Loss=0.0014160]Training progress:  80%|███████▉  | 5590/7000 [00:22<00:05, 244.08it/s, Loss=0.0014160]Training progress:  80%|███████▉  | 5590/7000 [00:22<00:05, 244.08it/s, Loss=0.0016695]Training progress:  80%|████████  | 5600/7000 [00:22<00:05, 244.08it/s, Loss=0.0016737]Training progress:  80%|████████  | 5610/7000 [00:22<00:05, 244.08it/s, Loss=0.0017376]Training progress:  80%|████████  | 5620/7000 [00:22<00:05, 241.41it/s, Loss=0.0017376]Training progress:  80%|████████  | 5620/7000 [00:22<00:05, 241.41it/s, Loss=0.0015008]Training progress:  80%|████████  | 5630/7000 [00:22<00:05, 241.41it/s, Loss=0.0018097]Training progress:  81%|████████  | 5640/7000 [00:22<00:05, 241.41it/s, Loss=0.0019144]Training progress:  81%|████████  | 5650/7000 [00:22<00:05, 242.66it/s, Loss=0.0019144]Training progress:  81%|████████  | 5650/7000 [00:22<00:05, 242.66it/s, Loss=0.0017625]Training progress:  81%|████████  | 5660/7000 [00:22<00:05, 242.66it/s, Loss=0.0016956]Training progress:  81%|████████  | 5670/7000 [00:22<00:05, 242.66it/s, Loss=0.0016502]Training progress:  81%|████████  | 5680/7000 [00:22<00:05, 243.22it/s, Loss=0.0016502]Training progress:  81%|████████  | 5680/7000 [00:22<00:05, 243.22it/s, Loss=0.0016861]Training progress:  81%|████████▏ | 5690/7000 [00:23<00:05, 243.22it/s, Loss=0.0015776]Training progress:  81%|████████▏ | 5700/7000 [00:23<00:05, 243.22it/s, Loss=0.0018839]Training progress:  82%|████████▏ | 5710/7000 [00:23<00:05, 240.59it/s, Loss=0.0018839]Training progress:  82%|████████▏ | 5710/7000 [00:23<00:05, 240.59it/s, Loss=0.0016571]Training progress:  82%|████████▏ | 5720/7000 [00:23<00:05, 240.59it/s, Loss=0.0015813]Training progress:  82%|████████▏ | 5730/7000 [00:23<00:05, 240.59it/s, Loss=0.0013634]Training progress:  82%|████████▏ | 5740/7000 [00:23<00:05, 241.95it/s, Loss=0.0013634]Training progress:  82%|████████▏ | 5740/7000 [00:23<00:05, 241.95it/s, Loss=0.0016485]Training progress:  82%|████████▏ | 5750/7000 [00:23<00:05, 241.95it/s, Loss=0.0016484]Training progress:  82%|████████▏ | 5760/7000 [00:23<00:05, 241.95it/s, Loss=0.0013636]Training progress:  82%|████████▏ | 5770/7000 [00:23<00:05, 242.94it/s, Loss=0.0013636]Training progress:  82%|████████▏ | 5770/7000 [00:23<00:05, 242.94it/s, Loss=0.0018085]Training progress:  83%|████████▎ | 5780/7000 [00:23<00:05, 242.94it/s, Loss=0.0015633]Training progress:  83%|████████▎ | 5790/7000 [00:23<00:04, 242.94it/s, Loss=0.0014615]Training progress:  83%|████████▎ | 5800/7000 [00:23<00:04, 243.64it/s, Loss=0.0014615]Training progress:  83%|████████▎ | 5800/7000 [00:23<00:04, 243.64it/s, Loss=0.0018753]Training progress:  83%|████████▎ | 5810/7000 [00:23<00:04, 243.64it/s, Loss=0.0019108]Training progress:  83%|████████▎ | 5820/7000 [00:23<00:04, 243.64it/s, Loss=0.0015886]Training progress:  83%|████████▎ | 5830/7000 [00:23<00:04, 241.00it/s, Loss=0.0015886]Training progress:  83%|████████▎ | 5830/7000 [00:23<00:04, 241.00it/s, Loss=0.0018546]Training progress:  83%|████████▎ | 5840/7000 [00:23<00:04, 241.00it/s, Loss=0.0017581]Training progress:  84%|████████▎ | 5850/7000 [00:23<00:04, 241.00it/s, Loss=0.0016895]Training progress:  84%|████████▎ | 5860/7000 [00:23<00:04, 242.15it/s, Loss=0.0016895]Training progress:  84%|████████▎ | 5860/7000 [00:23<00:04, 242.15it/s, Loss=0.0017683]Training progress:  84%|████████▍ | 5870/7000 [00:23<00:04, 242.15it/s, Loss=0.0017745]Training progress:  84%|████████▍ | 5880/7000 [00:23<00:04, 242.15it/s, Loss=0.0014486]Training progress:  84%|████████▍ | 5890/7000 [00:23<00:04, 242.95it/s, Loss=0.0014486]Training progress:  84%|████████▍ | 5890/7000 [00:23<00:04, 242.95it/s, Loss=0.0015988]Training progress:  84%|████████▍ | 5900/7000 [00:23<00:04, 242.95it/s, Loss=0.0019543]Training progress:  84%|████████▍ | 5910/7000 [00:23<00:04, 242.95it/s, Loss=0.0014569]Training progress:  85%|████████▍ | 5920/7000 [00:23<00:04, 240.14it/s, Loss=0.0014569]Training progress:  85%|████████▍ | 5920/7000 [00:23<00:04, 240.14it/s, Loss=0.0016911]Training progress:  85%|████████▍ | 5930/7000 [00:24<00:04, 240.14it/s, Loss=0.0017792]Training progress:  85%|████████▍ | 5940/7000 [00:24<00:04, 240.14it/s, Loss=0.0017995]Training progress:  85%|████████▌ | 5950/7000 [00:24<00:04, 241.28it/s, Loss=0.0017995]Training progress:  85%|████████▌ | 5950/7000 [00:24<00:04, 241.28it/s, Loss=0.0015790]Training progress:  85%|████████▌ | 5960/7000 [00:24<00:04, 241.28it/s, Loss=0.0014915]Training progress:  85%|████████▌ | 5970/7000 [00:24<00:04, 241.28it/s, Loss=0.0015948]Training progress:  85%|████████▌ | 5980/7000 [00:24<00:04, 242.09it/s, Loss=0.0015948]Training progress:  85%|████████▌ | 5980/7000 [00:24<00:04, 242.09it/s, Loss=0.0014547]Training progress:  86%|████████▌ | 5990/7000 [00:24<00:04, 242.09it/s, Loss=0.0015264]Training progress:  86%|████████▌ | 6000/7000 [00:24<00:04, 242.09it/s, Loss=0.2138915]Training progress:  86%|████████▌ | 6010/7000 [00:24<00:04, 239.89it/s, Loss=0.2138915]Training progress:  86%|████████▌ | 6010/7000 [00:24<00:04, 239.89it/s, Loss=0.0398594]Training progress:  86%|████████▌ | 6020/7000 [00:24<00:04, 239.89it/s, Loss=0.0193052]Training progress:  86%|████████▌ | 6030/7000 [00:24<00:04, 239.89it/s, Loss=0.0114888]Training progress:  86%|████████▋ | 6040/7000 [00:24<00:03, 240.78it/s, Loss=0.0114888]Training progress:  86%|████████▋ | 6040/7000 [00:24<00:03, 240.78it/s, Loss=0.0081431]Training progress:  86%|████████▋ | 6050/7000 [00:24<00:03, 240.78it/s, Loss=0.0063314]Training progress:  87%|████████▋ | 6060/7000 [00:24<00:03, 240.78it/s, Loss=0.0053309]Training progress:  87%|████████▋ | 6070/7000 [00:24<00:03, 241.66it/s, Loss=0.0053309]Training progress:  87%|████████▋ | 6070/7000 [00:24<00:03, 241.66it/s, Loss=0.0043783]Training progress:  87%|████████▋ | 6080/7000 [00:24<00:03, 241.66it/s, Loss=0.0042778]Training progress:  87%|████████▋ | 6090/7000 [00:24<00:03, 241.66it/s, Loss=0.0040677]Training progress:  87%|████████▋ | 6100/7000 [00:24<00:03, 242.23it/s, Loss=0.0040677]Training progress:  87%|████████▋ | 6100/7000 [00:24<00:03, 242.23it/s, Loss=0.0066737]Training progress:  87%|████████▋ | 6110/7000 [00:24<00:03, 242.23it/s, Loss=0.0049572]Training progress:  87%|████████▋ | 6120/7000 [00:24<00:03, 242.23it/s, Loss=0.0036895]Training progress:  88%|████████▊ | 6130/7000 [00:24<00:03, 240.32it/s, Loss=0.0036895]Training progress:  88%|████████▊ | 6130/7000 [00:24<00:03, 240.32it/s, Loss=0.0034496]Training progress:  88%|████████▊ | 6140/7000 [00:24<00:03, 240.32it/s, Loss=0.0035385]Training progress:  88%|████████▊ | 6150/7000 [00:24<00:03, 240.32it/s, Loss=0.0032531]Training progress:  88%|████████▊ | 6160/7000 [00:24<00:03, 241.43it/s, Loss=0.0032531]Training progress:  88%|████████▊ | 6160/7000 [00:24<00:03, 241.43it/s, Loss=0.0028070]Training progress:  88%|████████▊ | 6170/7000 [00:25<00:03, 241.43it/s, Loss=0.0030359]Training progress:  88%|████████▊ | 6180/7000 [00:25<00:03, 241.43it/s, Loss=0.0024678]Training progress:  88%|████████▊ | 6190/7000 [00:25<00:03, 242.73it/s, Loss=0.0024678]Training progress:  88%|████████▊ | 6190/7000 [00:25<00:03, 242.73it/s, Loss=0.0026942]Training progress:  89%|████████▊ | 6200/7000 [00:25<00:03, 242.73it/s, Loss=0.0041420]Training progress:  89%|████████▊ | 6210/7000 [00:25<00:03, 242.73it/s, Loss=0.0029171]Training progress:  89%|████████▉ | 6220/7000 [00:25<00:03, 240.54it/s, Loss=0.0029171]Training progress:  89%|████████▉ | 6220/7000 [00:25<00:03, 240.54it/s, Loss=0.0030100]Training progress:  89%|████████▉ | 6230/7000 [00:25<00:03, 240.54it/s, Loss=0.0025792]Training progress:  89%|████████▉ | 6240/7000 [00:25<00:03, 240.54it/s, Loss=0.0027062]Training progress:  89%|████████▉ | 6250/7000 [00:25<00:03, 242.25it/s, Loss=0.0027062]Training progress:  89%|████████▉ | 6250/7000 [00:25<00:03, 242.25it/s, Loss=0.0022700]Training progress:  89%|████████▉ | 6260/7000 [00:25<00:03, 242.25it/s, Loss=0.0025259]Training progress:  90%|████████▉ | 6270/7000 [00:25<00:03, 242.25it/s, Loss=0.0026229]Training progress:  90%|████████▉ | 6280/7000 [00:25<00:02, 243.28it/s, Loss=0.0026229]Training progress:  90%|████████▉ | 6280/7000 [00:25<00:02, 243.28it/s, Loss=0.0027287]Training progress:  90%|████████▉ | 6290/7000 [00:25<00:02, 243.28it/s, Loss=0.0024767]Training progress:  90%|█████████ | 6300/7000 [00:25<00:02, 243.28it/s, Loss=0.0025674]Training progress:  90%|█████████ | 6310/7000 [00:25<00:02, 240.64it/s, Loss=0.0025674]Training progress:  90%|█████████ | 6310/7000 [00:25<00:02, 240.64it/s, Loss=0.0022668]Training progress:  90%|█████████ | 6320/7000 [00:25<00:02, 240.64it/s, Loss=0.0023253]Training progress:  90%|█████████ | 6330/7000 [00:25<00:02, 240.64it/s, Loss=0.0020717]Training progress:  91%|█████████ | 6340/7000 [00:25<00:02, 241.85it/s, Loss=0.0020717]Training progress:  91%|█████████ | 6340/7000 [00:25<00:02, 241.85it/s, Loss=0.0023766]Training progress:  91%|█████████ | 6350/7000 [00:25<00:02, 241.85it/s, Loss=0.0023042]Training progress:  91%|█████████ | 6360/7000 [00:25<00:02, 241.85it/s, Loss=0.0023334]Training progress:  91%|█████████ | 6370/7000 [00:25<00:02, 242.91it/s, Loss=0.0023334]Training progress:  91%|█████████ | 6370/7000 [00:25<00:02, 242.91it/s, Loss=0.0020379]Training progress:  91%|█████████ | 6380/7000 [00:25<00:02, 242.91it/s, Loss=0.0021670]Training progress:  91%|█████████▏| 6390/7000 [00:25<00:02, 242.91it/s, Loss=0.0021791]Training progress:  91%|█████████▏| 6400/7000 [00:25<00:02, 243.57it/s, Loss=0.0021791]Training progress:  91%|█████████▏| 6400/7000 [00:25<00:02, 243.57it/s, Loss=0.0023672]Training progress:  92%|█████████▏| 6410/7000 [00:25<00:02, 243.57it/s, Loss=0.0020194]Training progress:  92%|█████████▏| 6420/7000 [00:26<00:02, 243.57it/s, Loss=0.0021826]Training progress:  92%|█████████▏| 6430/7000 [00:26<00:02, 241.09it/s, Loss=0.0021826]Training progress:  92%|█████████▏| 6430/7000 [00:26<00:02, 241.09it/s, Loss=0.0020129]Training progress:  92%|█████████▏| 6440/7000 [00:26<00:02, 241.09it/s, Loss=0.0022669]Training progress:  92%|█████████▏| 6450/7000 [00:26<00:02, 241.09it/s, Loss=0.0017929]Training progress:  92%|█████████▏| 6460/7000 [00:26<00:02, 242.51it/s, Loss=0.0017929]Training progress:  92%|█████████▏| 6460/7000 [00:26<00:02, 242.51it/s, Loss=0.0021318]Training progress:  92%|█████████▏| 6470/7000 [00:26<00:02, 242.51it/s, Loss=0.0020452]Training progress:  93%|█████████▎| 6480/7000 [00:26<00:02, 242.51it/s, Loss=0.0021420]Training progress:  93%|█████████▎| 6490/7000 [00:26<00:02, 243.84it/s, Loss=0.0021420]Training progress:  93%|█████████▎| 6490/7000 [00:26<00:02, 243.84it/s, Loss=0.0021435]Training progress:  93%|█████████▎| 6500/7000 [00:26<00:02, 243.84it/s, Loss=0.0021677]Training progress:  93%|█████████▎| 6510/7000 [00:26<00:02, 243.84it/s, Loss=0.0018532]Training progress:  93%|█████████▎| 6520/7000 [00:26<00:01, 240.94it/s, Loss=0.0018532]Training progress:  93%|█████████▎| 6520/7000 [00:26<00:01, 240.94it/s, Loss=0.0018704]Training progress:  93%|█████████▎| 6530/7000 [00:26<00:01, 240.94it/s, Loss=0.0018108]Training progress:  93%|█████████▎| 6540/7000 [00:26<00:01, 240.94it/s, Loss=0.0016797]Training progress:  94%|█████████▎| 6550/7000 [00:26<00:01, 242.11it/s, Loss=0.0016797]Training progress:  94%|█████████▎| 6550/7000 [00:26<00:01, 242.11it/s, Loss=0.0020955]Training progress:  94%|█████████▎| 6560/7000 [00:26<00:01, 242.11it/s, Loss=0.0020249]Training progress:  94%|█████████▍| 6570/7000 [00:26<00:01, 242.11it/s, Loss=0.0020574]Training progress:  94%|█████████▍| 6580/7000 [00:26<00:01, 243.17it/s, Loss=0.0020574]Training progress:  94%|█████████▍| 6580/7000 [00:26<00:01, 243.17it/s, Loss=0.0020830]Training progress:  94%|█████████▍| 6590/7000 [00:26<00:01, 243.17it/s, Loss=0.0019582]Training progress:  94%|█████████▍| 6600/7000 [00:26<00:01, 243.17it/s, Loss=0.0021273]Training progress:  94%|█████████▍| 6610/7000 [00:26<00:01, 240.82it/s, Loss=0.0021273]Training progress:  94%|█████████▍| 6610/7000 [00:26<00:01, 240.82it/s, Loss=0.0017617]Training progress:  95%|█████████▍| 6620/7000 [00:26<00:01, 240.82it/s, Loss=0.0020686]Training progress:  95%|█████████▍| 6630/7000 [00:26<00:01, 240.82it/s, Loss=0.0018592]Training progress:  95%|█████████▍| 6640/7000 [00:26<00:01, 241.75it/s, Loss=0.0018592]Training progress:  95%|█████████▍| 6640/7000 [00:26<00:01, 241.75it/s, Loss=0.0020322]Training progress:  95%|█████████▌| 6650/7000 [00:26<00:01, 241.75it/s, Loss=0.0019798]Training progress:  95%|█████████▌| 6660/7000 [00:27<00:01, 241.75it/s, Loss=0.0017468]Training progress:  95%|█████████▌| 6670/7000 [00:27<00:01, 242.53it/s, Loss=0.0017468]Training progress:  95%|█████████▌| 6670/7000 [00:27<00:01, 242.53it/s, Loss=0.0020151]Training progress:  95%|█████████▌| 6680/7000 [00:27<00:01, 242.53it/s, Loss=0.0019379]Training progress:  96%|█████████▌| 6690/7000 [00:27<00:01, 242.53it/s, Loss=0.0016364]Training progress:  96%|█████████▌| 6700/7000 [00:27<00:01, 243.22it/s, Loss=0.0016364]Training progress:  96%|█████████▌| 6700/7000 [00:27<00:01, 243.22it/s, Loss=0.0019315]Training progress:  96%|█████████▌| 6710/7000 [00:27<00:01, 243.22it/s, Loss=0.0019717]Training progress:  96%|█████████▌| 6720/7000 [00:27<00:01, 243.22it/s, Loss=0.0015667]Training progress:  96%|█████████▌| 6730/7000 [00:27<00:01, 240.56it/s, Loss=0.0015667]Training progress:  96%|█████████▌| 6730/7000 [00:27<00:01, 240.56it/s, Loss=0.0018804]Training progress:  96%|█████████▋| 6740/7000 [00:27<00:01, 240.56it/s, Loss=0.0017993]Training progress:  96%|█████████▋| 6750/7000 [00:27<00:01, 240.56it/s, Loss=0.0019542]Training progress:  97%|█████████▋| 6760/7000 [00:27<00:00, 241.93it/s, Loss=0.0019542]Training progress:  97%|█████████▋| 6760/7000 [00:27<00:00, 241.93it/s, Loss=0.0017207]Training progress:  97%|█████████▋| 6770/7000 [00:27<00:00, 241.93it/s, Loss=0.0017665]Training progress:  97%|█████████▋| 6780/7000 [00:27<00:00, 241.93it/s, Loss=0.0019304]Training progress:  97%|█████████▋| 6790/7000 [00:27<00:00, 242.93it/s, Loss=0.0019304]Training progress:  97%|█████████▋| 6790/7000 [00:27<00:00, 242.93it/s, Loss=0.0019279]Training progress:  97%|█████████▋| 6800/7000 [00:27<00:00, 242.93it/s, Loss=0.0018450]Training progress:  97%|█████████▋| 6810/7000 [00:27<00:00, 242.93it/s, Loss=0.0018826]Training progress:  97%|█████████▋| 6820/7000 [00:27<00:00, 240.39it/s, Loss=0.0018826]Training progress:  97%|█████████▋| 6820/7000 [00:27<00:00, 240.39it/s, Loss=0.0019278]Training progress:  98%|█████████▊| 6830/7000 [00:27<00:00, 240.39it/s, Loss=0.0019505]Training progress:  98%|█████████▊| 6840/7000 [00:27<00:00, 240.39it/s, Loss=0.0018900]Training progress:  98%|█████████▊| 6850/7000 [00:27<00:00, 241.89it/s, Loss=0.0018900]Training progress:  98%|█████████▊| 6850/7000 [00:27<00:00, 241.89it/s, Loss=0.0019288]Training progress:  98%|█████████▊| 6860/7000 [00:27<00:00, 241.89it/s, Loss=0.0018744]Training progress:  98%|█████████▊| 6870/7000 [00:27<00:00, 241.89it/s, Loss=0.0019027]Training progress:  98%|█████████▊| 6880/7000 [00:27<00:00, 243.05it/s, Loss=0.0019027]Training progress:  98%|█████████▊| 6880/7000 [00:27<00:00, 243.05it/s, Loss=0.0018411]Training progress:  98%|█████████▊| 6890/7000 [00:27<00:00, 243.05it/s, Loss=0.0018943]Training progress:  99%|█████████▊| 6900/7000 [00:28<00:00, 243.05it/s, Loss=0.0022726]Training progress:  99%|█████████▊| 6910/7000 [00:28<00:00, 240.73it/s, Loss=0.0022726]Training progress:  99%|█████████▊| 6910/7000 [00:28<00:00, 240.73it/s, Loss=0.0017613]Training progress:  99%|█████████▉| 6920/7000 [00:28<00:00, 240.73it/s, Loss=0.0017155]Training progress:  99%|█████████▉| 6930/7000 [00:28<00:00, 240.73it/s, Loss=0.0016933]Training progress:  99%|█████████▉| 6940/7000 [00:28<00:00, 241.51it/s, Loss=0.0016933]Training progress:  99%|█████████▉| 6940/7000 [00:28<00:00, 241.51it/s, Loss=0.0018999]Training progress:  99%|█████████▉| 6950/7000 [00:28<00:00, 241.51it/s, Loss=0.0018285]Training progress:  99%|█████████▉| 6960/7000 [00:28<00:00, 241.51it/s, Loss=0.0014349]Training progress: 100%|█████████▉| 6970/7000 [00:28<00:00, 242.62it/s, Loss=0.0014349]Training progress: 100%|█████████▉| 6970/7000 [00:28<00:00, 242.62it/s, Loss=0.0019704]Training progress: 100%|█████████▉| 6980/7000 [00:28<00:00, 242.62it/s, Loss=0.0017416]Training progress: 100%|█████████▉| 6990/7000 [00:28<00:00, 242.62it/s, Loss=0.0015652]Training progress: 100%|██████████| 7000/7000 [00:28<00:00, 243.45it/s, Loss=0.0015652]Training progress: 100%|██████████| 7000/7000 [00:28<00:00, 246.59it/s, Loss=0.0015652]
+
+[ITER 7000] Evaluating train: L1 0.0014892094070091844 PSNR 53.34045562744141 [30/04 15:43:30]
+
+[ITER 7000] Saving Gaussians [30/04 15:43:30]
+
+Training complete. [30/04 15:43:30]
+Will export a UV-textured mesh as an .obj file.
+Will export a ply file with the refined 3D Gaussians at the end of the training.
+Changing sh_levels to match the loaded model: 4
+-----Parsed parameters-----
+Source path: /home/jhuizing/master-thesis-ds/colmap3
+   > Content: 7
+Gaussian Splatting checkpoint path: /home/jhuizing/master-thesis-ds/output3/
+   > Content: 4
+SUGAR checkpoint path: ./output/coarse/colmap3/sugarcoarse_3Dgs7000_densityestim02_sdfnorm02/
+Iteration to load: 7000
+Output directory: ./output/coarse/colmap3
+SDF estimation factor: 0.2
+SDF better normal factor: 0.2
+Eval split: True
+White background: False
+---------------------------
+Using device: 0
+|===========================================================================|
+|                  PyTorch CUDA memory summary, device ID 0                 |
+|---------------------------------------------------------------------------|
+|            CUDA OOMs: 0            |        cudaMalloc retries: 0         |
+|===========================================================================|
+|        Metric         | Cur Usage  | Peak Usage | Tot Alloc  | Tot Freed  |
+|---------------------------------------------------------------------------|
+| Allocated memory      |      0 B   |      0 B   |      0 B   |      0 B   |
+|       from large pool |      0 B   |      0 B   |      0 B   |      0 B   |
+|       from small pool |      0 B   |      0 B   |      0 B   |      0 B   |
+|---------------------------------------------------------------------------|
+| Active memory         |      0 B   |      0 B   |      0 B   |      0 B   |
+|       from large pool |      0 B   |      0 B   |      0 B   |      0 B   |
+|       from small pool |      0 B   |      0 B   |      0 B   |      0 B   |
+|---------------------------------------------------------------------------|
+| Requested memory      |      0 B   |      0 B   |      0 B   |      0 B   |
+|       from large pool |      0 B   |      0 B   |      0 B   |      0 B   |
+|       from small pool |      0 B   |      0 B   |      0 B   |      0 B   |
+|---------------------------------------------------------------------------|
+| GPU reserved memory   |      0 B   |      0 B   |      0 B   |      0 B   |
+|       from large pool |      0 B   |      0 B   |      0 B   |      0 B   |
+|       from small pool |      0 B   |      0 B   |      0 B   |      0 B   |
+|---------------------------------------------------------------------------|
+| Non-releasable memory |      0 B   |      0 B   |      0 B   |      0 B   |
+|       from large pool |      0 B   |      0 B   |      0 B   |      0 B   |
+|       from small pool |      0 B   |      0 B   |      0 B   |      0 B   |
+|---------------------------------------------------------------------------|
+| Allocations           |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Active allocs         |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| GPU reserved segments |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Non-releasable allocs |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Oversize allocations  |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Oversize GPU segments |       0    |       0    |       0    |       0    |
+|===========================================================================|
+
+
+Loading config /home/jhuizing/master-thesis-ds/output3/...
+Performing train/eval split...
+Found image extension .jpg
+2 training images detected.
+The model has been trained for 7000 steps.
+
+Camera resolution scaled to 160 x 160
+Initializing model from trained 3DGS...
+Point cloud generated. Number of points: 29990
+Use min to initialize scales.
+Initialized radiuses for 3D Gauss Rasterizer
+Initializing 3D gaussians from 3D gaussians...
+
+SuGaR model has been initialized.
+SuGaR()
+Number of parameters: 1769410
+Checkpoints will be saved in ./output/coarse/colmap3/sugarcoarse_3Dgs7000_densityestim02_sdfnorm02/
+
+Model parameters:
+_points
+torch.Size([29990, 3])
+True
+all_densities
+torch.Size([29990, 1])
+True
+_scales
+torch.Size([29990, 3])
+True
+_quaternions
+torch.Size([29990, 4])
+True
+_sh_coordinates_dc
+torch.Size([29990, 1, 3])
+True
+_sh_coordinates_rest
+torch.Size([29990, 15, 3])
+True
+Using camera spatial extent as spatial_lr_scale: 4.1371253490448
+Optimizer initialized.
+Optimization parameters:
+OptimizationParams(
+            iterations=15000,
+            position_lr_init=0.00016,
+            position_lr_final=1.6e-06,
+            position_lr_delay_mult=0.01,
+            position_lr_max_steps=30000,
+            feature_lr=0.0025,
+            opacity_lr=0.05,
+            scaling_lr=0.005,
+            rotation_lr=0.001,
+            )
+Optimizable parameters:
+points 0.0006619400558471681
+sh_coordinates_dc 0.0025
+sh_coordinates_rest 0.000125
+all_densities 0.05
+scales 0.005
+quaternions 0.001
+Densifier initialized.
+Using loss function: l1+dssim
+Starting regularization...
+
+-------------------
+Iteration: 7000
+loss: 0.001194  [ 7000/15000] computed in 0.005940930048624674 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -16.85031509399414   46.540714263916016   11.123176574707031   19.458538055419922
+Scaling factors:   1.8737867435447697e-07   0.6728922128677368   0.05275765061378479   0.08275455981492996
+Quaternions:   -0.9971619248390198   1.0   0.2180919647216797   0.4499306380748749
+Sh coordinates dc:   -2.0656790733337402   4.855618000030518   0.01059351023286581   1.0053906440734863
+Sh coordinates rest:   -0.5423253178596497   0.6749976277351379   -0.0007789451046846807   0.03806300461292267
+Opacities:   0.004657781682908535   0.9999998807907104   0.29792705178260803   0.26735690236091614
+
+---INFO---
+Starting entropy regularization.
+
+---INFO---
+Resetting neighbors...
+
+-------------------
+Iteration: 7050
+loss: 0.023279  [ 7050/15000] computed in 0.008539108435312907 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -16.85031509399414   46.539390563964844   11.123030662536621   19.45846939086914
+Scaling factors:   1.8833698334219662e-07   0.7331905961036682   0.05438057705760002   0.08445685356855392
+Quaternions:   -0.9977993965148926   1.0   0.21784988045692444   0.45004791021347046
+Sh coordinates dc:   -2.0656790733337402   4.864223480224609   0.02007858268916607   1.0074797868728638
+Sh coordinates rest:   -0.5475059747695923   0.6769406199455261   -0.00046662590466439724   0.03819135203957558
+Opacities:   0.0006827171891927719   1.0   0.2635667622089386   0.361698716878891
+
+-------------------
+Iteration: 7100
+loss: 0.015132  [ 7100/15000] computed in 0.007434725761413574 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -16.85031509399414   46.53925704956055   11.122893333435059   19.458425521850586
+Scaling factors:   1.884131535234701e-07   0.8476955890655518   0.055645085871219635   0.08621599525213242
+Quaternions:   -0.9974712133407593   1.0   0.21756011247634888   0.4501880705356598
+Sh coordinates dc:   -2.0656790733337402   4.8770647048950195   0.027301352471113205   1.0110599994659424
+Sh coordinates rest:   -0.5536863803863525   0.6800013184547424   -0.00021818144887220114   0.03835755214095116
+Opacities:   0.00027359460364095867   1.0   0.25228986144065857   0.3925616443157196
+
+-------------------
+Iteration: 7150
+loss: 0.009855  [ 7150/15000] computed in 0.007425872484842936 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -16.85031509399414   46.53925704956055   11.122840881347656   19.458410263061523
+Scaling factors:   1.8838890980532597e-07   0.9537407159805298   0.05641145631670952   0.08758419007062912
+Quaternions:   -0.997458279132843   1.0   0.21735623478889465   0.45028653740882874
+Sh coordinates dc:   -2.0656790733337402   4.874574661254883   0.03127894550561905   1.0132696628570557
+Sh coordinates rest:   -0.5567452907562256   0.6825876235961914   -7.64643118600361e-05   0.038511719554662704
+Opacities:   0.0001544502447359264   1.0   0.24752189218997955   0.40249621868133545
+
+-------------------
+Iteration: 7200
+loss: 0.009114  [ 7200/15000] computed in 0.007408793767293294 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -16.85031509399414   46.53925704956055   11.122817993164062   19.458402633666992
+Scaling factors:   1.8835403636785486e-07   1.0854443311691284   0.05693899840116501   0.08877293020486832
+Quaternions:   -0.9974582195281982   1.0   0.2172294557094574   0.4503477215766907
+Sh coordinates dc:   -2.0656790733337402   4.860889434814453   0.033795733004808426   1.0147734880447388
+Sh coordinates rest:   -0.5585485696792603   0.6854919791221619   1.5180096852418501e-05   0.03864923119544983
+Opacities:   0.00010086989641422406   1.0   0.24497926235198975   0.4069436192512512
+
+-------------------
+Iteration: 7250
+loss: 0.006775  [ 7250/15000] computed in 0.007370102405548096 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -16.85031509399414   46.53925704956055   11.122817039489746   19.458398818969727
+Scaling factors:   1.8835027049135533e-07   1.2322404384613037   0.05732601881027222   0.08979495614767075
+Quaternions:   -0.9974582195281982   1.0   0.21714718639850616   0.4503873884677887
+Sh coordinates dc:   -2.0656790733337402   4.85209846496582   0.03551066294312477   1.015897512435913
+Sh coordinates rest:   -0.5615412592887878   0.6854110360145569   7.498168270103633e-05   0.03877315670251846
+Opacities:   7.170460594352335e-05   1.0   0.24342121183872223   0.40932363271713257
+
+-------------------
+Iteration: 7300
+loss: 0.006037  [ 7300/15000] computed in 0.007360867659250895 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -16.85031509399414   46.53925704956055   11.122822761535645   19.458396911621094
+Scaling factors:   1.8835027049135533e-07   1.454565167427063   0.0576387420296669   0.09071657061576843
+Quaternions:   -0.9974582195281982   1.0   0.21708619594573975   0.45041677355766296
+Sh coordinates dc:   -2.0656790733337402   4.860236644744873   0.03685387223958969   1.0168640613555908
+Sh coordinates rest:   -0.5644158720970154   0.6876540184020996   0.00012058418360538781   0.038890540599823
+Opacities:   5.389737634686753e-05   1.0   0.24239668250083923   0.4108242988586426
+
+-------------------
+Iteration: 7350
+loss: 0.005504  [ 7350/15000] computed in 0.007359254360198975 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -16.85031509399414   46.53925704956055   11.12282943725586   19.458393096923828
+Scaling factors:   1.8835027049135533e-07   1.6113983392715454   0.0578906275331974   0.09149472415447235
+Quaternions:   -0.9974582195281982   1.0   0.2170238196849823   0.45044684410095215
+Sh coordinates dc:   -2.0656790733337402   4.8663330078125   0.037999313324689865   1.017757773399353
+Sh coordinates rest:   -0.5675294995307922   0.6897526979446411   0.00015946576604619622   0.03900650888681412
+Opacities:   4.21559379901737e-05   1.0   0.24163846671581268   0.4118470251560211
+
+-------------------
+Iteration: 7400
+loss: 0.005916  [ 7400/15000] computed in 0.007353754838307699 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -16.85031509399414   46.53925704956055   11.122836112976074   19.458393096923828
+Scaling factors:   1.8835027049135533e-07   1.7632811069488525   0.058108191937208176   0.09220239520072937
+Quaternions:   -0.9974582195281982   1.0   0.21696454286575317   0.45047542452812195
+Sh coordinates dc:   -2.0656790733337402   4.874946117401123   0.039116594940423965   1.0186771154403687
+Sh coordinates rest:   -0.5707446336746216   0.6905312538146973   0.00019583092944230884   0.03912069648504257
+Opacities:   3.3969281503232196e-05   1.0   0.24110256135463715   0.4125343859195709
+
+-------------------
+Iteration: 7450
+loss: 0.005559  [ 7450/15000] computed in 0.007362202803293864 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -16.85031509399414   46.53925704956055   11.122838020324707   19.458389282226562
+Scaling factors:   1.8835027049135533e-07   1.8831532001495361   0.05829388648271561   0.09281585365533829
+Quaternions:   -0.9974582195281982   1.0   0.21690770983695984   0.45050275325775146
+Sh coordinates dc:   -2.0656790733337402   4.868521213531494   0.0401453971862793   1.0195399522781372
+Sh coordinates rest:   -0.5737519860267639   0.6908471584320068   0.00023029606381896883   0.03923184052109718
+Opacities:   2.8012547772959806e-05   1.0   0.2406846582889557   0.4130471348762512
+
+---INFO---
+Resetting neighbors...
+
+-------------------
+Iteration: 7500
+loss: 0.004475  [ 7500/15000] computed in 0.007504204909006755 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -16.85031509399414   46.53925704956055   11.122841835021973   19.458389282226562
+Scaling factors:   1.8835027049135533e-07   1.9415075778961182   0.058457862585783005   0.09335336834192276
+Quaternions:   -0.9974582195281982   1.0   0.21685799956321716   0.4505266845226288
+Sh coordinates dc:   -2.0656790733337402   4.851880073547363   0.04115920886397362   1.0204174518585205
+Sh coordinates rest:   -0.5751266479492188   0.6912146210670471   0.00026356024318374693   0.039344288408756256
+Opacities:   2.3531425540568307e-05   1.0   0.2403719127178192   0.4134490191936493
+
+-------------------
+Iteration: 7550
+loss: 0.005063  [ 7550/15000] computed in 0.0073921402295430505 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -16.85031509399414   46.53925704956055   11.122843742370605   19.458389282226562
+Scaling factors:   1.8835027049135533e-07   1.9726492166519165   0.058609042316675186   0.09385933727025986
+Quaternions:   -0.9974582195281982   1.0   0.2167969048023224   0.45055606961250305
+Sh coordinates dc:   -2.0656790733337402   4.830522060394287   0.0421130545437336   1.0212860107421875
+Sh coordinates rest:   -0.5757893323898315   0.6920349597930908   0.0002948417095467448   0.03945605829358101
+Opacities:   2.006629074458033e-05   1.0   0.2401135414838791   0.413766086101532
+
+-------------------
+Iteration: 7600
+loss: 0.004122  [ 7600/15000] computed in 0.00740127166112264 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -16.85031509399414   46.53925704956055   11.122844696044922   19.45838737487793
+Scaling factors:   1.8835027049135533e-07   2.0044057369232178   0.05874592065811157   0.09433314204216003
+Quaternions:   -0.9974582195281982   1.0   0.21675366163253784   0.45057687163352966
+Sh coordinates dc:   -2.0656790733337402   4.81549596786499   0.04306662827730179   1.022135615348816
+Sh coordinates rest:   -0.5753440856933594   0.6923776268959045   0.00032581339473836124   0.039569027721881866
+Opacities:   1.7330354239675216e-05   1.0   0.2398984730243683   0.41402024030685425
+
+-------------------
+Iteration: 7650
+loss: 0.003970  [ 7650/15000] computed in 0.007439188162485759 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -16.85031509399414   46.53925704956055   11.122844696044922   19.458389282226562
+Scaling factors:   1.8835027049135533e-07   2.0337300300598145   0.05887594446539879   0.09479667991399765
+Quaternions:   -0.9974582195281982   1.0   0.2167177051305771   0.4505941867828369
+Sh coordinates dc:   -2.0656790733337402   4.785830020904541   0.04397083446383476   1.0229861736297607
+Sh coordinates rest:   -0.5749587416648865   0.6926640272140503   0.0003557710733730346   0.039680905640125275
+Opacities:   1.5125584468478337e-05   1.0   0.2397259771823883   0.4142360985279083
+
+-------------------
+Iteration: 7700
+loss: 0.003793  [ 7700/15000] computed in 0.007457812627156575 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -16.85031509399414   46.53925704956055   11.122842788696289   19.45838737487793
+Scaling factors:   1.8835027049135533e-07   2.0465476512908936   0.05899704992771149   0.09523939341306686
+Quaternions:   -0.9974582195281982   1.0   0.21668440103530884   0.4506101906299591
+Sh coordinates dc:   -2.0656790733337402   4.777049541473389   0.04486457630991936   1.0238617658615112
+Sh coordinates rest:   -0.5744113326072693   0.6938915848731995   0.00038534175837412477   0.03979240357875824
+Opacities:   1.3322120139491744e-05   1.0   0.2395743578672409   0.4144299030303955
+
+-------------------
+Iteration: 7750
+loss: 0.004379  [ 7750/15000] computed in 0.0074687321980794275 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -16.85031509399414   46.53925704956055   11.122841835021973   19.45838737487793
+Scaling factors:   1.8835027049135533e-07   2.0627832412719727   0.05912004038691521   0.09569647163152695
+Quaternions:   -0.9974582195281982   1.0   0.2166481912136078   0.4506275951862335
+Sh coordinates dc:   -2.0656790733337402   4.744407653808594   0.04572303965687752   1.0247482061386108
+Sh coordinates rest:   -0.5741171836853027   0.6947143077850342   0.0004135705530643463   0.03990429639816284
+Opacities:   1.1826164154626895e-05   1.0   0.23943974077701569   0.4145907461643219
+
+-------------------
+Iteration: 7800
+loss: 0.004274  [ 7800/15000] computed in 0.0075125455856323246 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -16.85031509399414   46.53925704956055   11.122841835021973   19.45838737487793
+Scaling factors:   1.8835027049135533e-07   2.0556766986846924   0.059236690402030945   0.09614714235067368
+Quaternions:   -0.9974582195281982   1.0   0.21661846339702606   0.450641930103302
+Sh coordinates dc:   -2.0656790733337402   4.724303245544434   0.04657039791345596   1.025580644607544
+Sh coordinates rest:   -0.5738336443901062   0.6951821446418762   0.000441955664427951   0.04001655802130699
+Opacities:   1.0571337952569593e-05   1.0   0.23932334780693054   0.41473326086997986
+
+-------------------
+Iteration: 7850
+loss: 0.004321  [ 7850/15000] computed in 0.0074800888697306315 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -16.85031509399414   46.53925704956055   11.122843742370605   19.45838737487793
+Scaling factors:   1.8835027049135533e-07   2.0655875205993652   0.05934523418545723   0.09658442437648773
+Quaternions:   -0.9974582195281982   1.0   0.21658025681972504   0.4506602883338928
+Sh coordinates dc:   -2.0656790733337402   4.700101852416992   0.04742393270134926   1.0264345407485962
+Sh coordinates rest:   -0.5736675262451172   0.6958305835723877   0.0004699577111750841   0.0401269905269146
+Opacities:   9.506382411927916e-06   1.0   0.23921671509742737   0.4148707091808319
+
+-------------------
+Iteration: 7900
+loss: 0.004138  [ 7900/15000] computed in 0.007462231318155924 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -16.85031509399414   46.53925704956055   11.122844696044922   19.45838737487793
+Scaling factors:   1.8835027049135533e-07   2.0865917205810547   0.05944338068366051   0.0969991385936737
+Quaternions:   -0.9974582195281982   1.0   0.21655017137527466   0.45067474246025085
+Sh coordinates dc:   -2.0656790733337402   4.694722652435303   0.04822796210646629   1.0272526741027832
+Sh coordinates rest:   -0.5736398100852966   0.6967782378196716   0.0004962105886079371   0.04023656249046326
+Opacities:   8.594864084443543e-06   1.0   0.23913685977458954   0.41499385237693787
+
+-------------------
+Iteration: 7950
+loss: 0.003364  [ 7950/15000] computed in 0.007487678527832031 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -16.85031509399414   46.53925704956055   11.122848510742188   19.458383560180664
+Scaling factors:   1.8835027049135533e-07   2.077962875366211   0.05953533574938774   0.0974048376083374
+Quaternions:   -0.9974582195281982   1.0   0.21652814745903015   0.4506853222846985
+Sh coordinates dc:   -2.0656790733337402   4.703643798828125   0.04903143644332886   1.0280581712722778
+Sh coordinates rest:   -0.5735445618629456   0.6978676915168762   0.0005225585191510618   0.040346067398786545
+Opacities:   7.808244845364243e-06   1.0   0.23905542492866516   0.4151058495044708
+
+---INFO---
+Resetting neighbors...
+
+-------------------
+Iteration: 8000
+loss: 0.003300  [ 8000/15000] computed in 0.007551423708597819 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -16.85031509399414   46.53925704956055   11.122847557067871   19.458385467529297
+Scaling factors:   1.8835027049135533e-07   2.079897880554199   0.05962229147553444   0.09779062122106552
+Quaternions:   -0.9974582195281982   1.0   0.21650494635105133   0.4506964385509491
+Sh coordinates dc:   -2.0656790733337402   4.735657215118408   0.04983406141400337   1.0288995504379272
+Sh coordinates rest:   -0.5734605193138123   0.6990711688995361   0.0005485189612954855   0.04045689478516579
+Opacities:   7.124146122805541e-06   1.0   0.23898614943027496   0.41519707441329956
+
+-------------------
+Iteration: 8050
+loss: 0.003873  [ 8050/15000] computed in 0.007470285892486573 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -16.85031509399414   46.53925704956055   11.122845649719238   19.458383560180664
+Scaling factors:   1.8835027049135533e-07   2.098543882369995   0.05970821529626846   0.09816919267177582
+Quaternions:   -0.9974582195281982   1.0   0.21647314727306366   0.450711727142334
+Sh coordinates dc:   -2.0656790733337402   4.730184555053711   0.050613075494766235   1.0297356843948364
+Sh coordinates rest:   -0.5733929872512817   0.7005658745765686   0.0005738199106417596   0.040565989911556244
+Opacities:   6.5252543208771385e-06   1.0   0.23891420662403107   0.4152786433696747
+
+-------------------
+Iteration: 8100
+loss: 0.003184  [ 8100/15000] computed in 0.007445387045542399 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -16.85031509399414   46.53925704956055   11.122843742370605   19.45838165283203
+Scaling factors:   1.8835027049135533e-07   2.1241204738616943   0.05978626757860184   0.09853271394968033
+Quaternions:   -0.9974582195281982   1.0   0.21644942462444305   0.4507231116294861
+Sh coordinates dc:   -2.0656790733337402   4.665931224822998   0.05138077959418297   1.0305753946304321
+Sh coordinates rest:   -0.5733366012573242   0.701649010181427   0.0005990167264826596   0.0406743623316288
+Opacities:   5.998063898005057e-06   1.0   0.23883973062038422   0.41534850001335144
+
+-------------------
+Iteration: 8150
+loss: 0.003112  [ 8150/15000] computed in 0.00744168758392334 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -16.85031509399414   46.53925704956055   11.122844696044922   19.45838165283203
+Scaling factors:   1.8835027049135533e-07   2.1580862998962402   0.05986790359020233   0.09889780730009079
+Quaternions:   -0.9977297186851501   1.0   0.21641796827316284   0.45073822140693665
+Sh coordinates dc:   -2.0656790733337402   4.626385688781738   0.052152056246995926   1.0314315557479858
+Sh coordinates rest:   -0.5733088850975037   0.7028018236160278   0.0006238414207473397   0.04078524932265282
+Opacities:   5.531145234272117e-06   1.0   0.2387755960226059   0.4154086410999298
+
+-------------------
+Iteration: 8200
+loss: 0.003662  [ 8200/15000] computed in 0.007453747590382894 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -16.85031509399414   46.53925704956055   11.122844696044922   19.45838165283203
+Scaling factors:   1.8835027049135533e-07   2.230717182159424   0.05995027720928192   0.09927289932966232
+Quaternions:   -0.9984362721443176   1.0   0.21638229489326477   0.45075535774230957
+Sh coordinates dc:   -2.06752610206604   4.626385688781738   0.05291607230901718   1.0322895050048828
+Sh coordinates rest:   -0.5732870101928711   0.7040143609046936   0.0006486019701696932   0.040896374732255936
+Opacities:   5.1155384426238015e-06   1.0   0.23871324956417084   0.4154664874076843
+
+-------------------
+Iteration: 8250
+loss: 0.003636  [ 8250/15000] computed in 0.007455861568450928 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -16.85031509399414   46.53925704956055   11.122847557067871   19.45838165283203
+Scaling factors:   1.8835027049135533e-07   2.2484209537506104   0.0600317046046257   0.09963393211364746
+Quaternions:   -0.9987801313400269   1.0   0.21635016798973083   0.450770765542984
+Sh coordinates dc:   -2.067563772201538   4.626385688781738   0.05366260185837746   1.033128261566162
+Sh coordinates rest:   -0.5732808113098145   0.7048307657241821   0.0006727913860231638   0.04100806266069412
+Opacities:   4.744041689264122e-06   1.0   0.2386540323495865   0.415520578622818
+
+-------------------
+Iteration: 8300
+loss: 0.003588  [ 8300/15000] computed in 0.007451947530110677 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -16.85031509399414   46.53925704956055   11.12285041809082   19.45838165283203
+Scaling factors:   1.8835027049135533e-07   2.298790693283081   0.06010948121547699   0.09999844431877136
+Quaternions:   -0.9994527101516724   1.0   0.21631579101085663   0.4507872760295868
+Sh coordinates dc:   -2.067563772201538   4.626385688781738   0.054386772215366364   1.034014344215393
+Sh coordinates rest:   -0.5732833743095398   0.7057862877845764   0.0006966567016206682   0.041118595749139786
+Opacities:   4.4104781409259886e-06   1.0   0.2386002540588379   0.415569931268692
+
+-------------------
+Iteration: 8350
+loss: 0.003532  [ 8350/15000] computed in 0.007440292835235595 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -16.85031509399414   46.53925704956055   11.12285041809082   19.458383560180664
+Scaling factors:   1.8835027049135533e-07   2.2821033000946045   0.060183871537446976   0.10031801462173462
+Quaternions:   -0.9997363090515137   1.0   0.2162913680076599   0.45079898834228516
+Sh coordinates dc:   -2.067563772201538   4.626385688781738   0.05511820688843727   1.0348803997039795
+Sh coordinates rest:   -0.5732832551002502   0.7067873477935791   0.0007205326692201197   0.041228361427783966
+Opacities:   4.109757355763577e-06   1.0   0.23854441940784454   0.4156189262866974
+
+-------------------
+Iteration: 8400
+loss: 0.002916  [ 8400/15000] computed in 0.0074640432993570965 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -16.85031509399414   46.53925704956055   11.122848510742188   19.458383560180664
+Scaling factors:   1.8835027049135533e-07   2.3244762420654297   0.06025606393814087   0.10066569596529007
+Quaternions:   -0.999586284160614   1.0   0.21627120673656464   0.45080867409706116
+Sh coordinates dc:   -2.067563772201538   4.626385688781738   0.05584587901830673   1.035730004310608
+Sh coordinates rest:   -0.5732835531234741   0.7080575823783875   0.0007442842470481992   0.04133710265159607
+Opacities:   3.837667009065626e-06   1.0   0.23849962651729584   0.4156652092933655
+
+-------------------
+Iteration: 8450
+loss: 0.002862  [ 8450/15000] computed in 0.007441886266072591 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -16.85031509399414   46.53925704956055   11.122848510742188   19.45838737487793
+Scaling factors:   1.8835027049135533e-07   2.4360668659210205   0.060325052589178085   0.10101757198572159
+Quaternions:   -0.9992678165435791   1.0   0.21624726057052612   0.4508201479911804
+Sh coordinates dc:   -2.067563772201538   4.626385688781738   0.05656425282359123   1.036629319190979
+Sh coordinates rest:   -0.5732835531234741   0.7093456387519836   0.000767829071264714   0.04144900664687157
+Opacities:   3.5908090012526372e-06   1.0   0.2384573370218277   0.41570812463760376
+
+---INFO---
+Resetting neighbors...
+
+-------------------
+Iteration: 8500
+loss: 0.003377  [ 8500/15000] computed in 0.007535175482432047 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -16.85031509399414   46.53925704956055   11.122847557067871   19.458389282226562
+Scaling factors:   1.8835027049135533e-07   2.534255027770996   0.060395825654268265   0.10139592736959457
+Quaternions:   -0.998940646648407   1.0   0.21622727811336517   0.45082977414131165
+Sh coordinates dc:   -2.067563772201538   4.661997318267822   0.057287897914648056   1.037514090538025
+Sh coordinates rest:   -0.5732835531234741   0.7106434106826782   0.0007906914106570184   0.04156223312020302
+Opacities:   3.3659080145298503e-06   1.0   0.23841485381126404   0.4157514274120331
+
+-------------------
+Iteration: 8550
+loss: 0.003365  [ 8550/15000] computed in 0.007446380456288656 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -16.85031509399414   46.53925704956055   11.122848510742188   19.458391189575195
+Scaling factors:   1.8835027049135533e-07   2.659548044204712   0.06046276167035103   0.10174515843391418
+Quaternions:   -0.9984963536262512   1.0   0.21620722115039825   0.4508393704891205
+Sh coordinates dc:   -2.067563772201538   4.716604232788086   0.057999711483716965   1.0384002923965454
+Sh coordinates rest:   -0.5732835531234741   0.7124189734458923   0.0008126159082166851   0.04167470708489418
+Opacities:   3.1605977710569277e-06   1.0   0.23836994171142578   0.41579365730285645
+
+-------------------
+Iteration: 8600
+loss: 0.002799  [ 8600/15000] computed in 0.007460093498229981 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -16.85031509399414   46.53925704956055   11.122848510742188   19.458393096923828
+Scaling factors:   1.8835027049135533e-07   2.7171030044555664   0.06052253022789955   0.10204965621232986
+Quaternions:   -0.9978976249694824   1.0   0.21618886291980743   0.45084816217422485
+Sh coordinates dc:   -2.067563772201538   4.772377014160156   0.0586828850209713   1.039255142211914
+Sh coordinates rest:   -0.5732835531234741   0.7141453623771667   0.0008344826055690646   0.04178747907280922
+Opacities:   2.972512675114558e-06   1.0   0.2383328229188919   0.41583341360092163
+
+-------------------
+Iteration: 8650
+loss: 0.002751  [ 8650/15000] computed in 0.007448259989420573 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -16.85031509399414   46.53925704956055   11.122847557067871   19.458393096923828
+Scaling factors:   1.8835027049135533e-07   2.753997564315796   0.06058841198682785   0.10240906476974487
+Quaternions:   -0.9975852370262146   1.0   0.21617145836353302   0.4508565068244934
+Sh coordinates dc:   -2.067563772201538   4.831088066101074   0.0593874529004097   1.0401296615600586
+Sh coordinates rest:   -0.5732835531234741   0.7160248756408691   0.0008568643825128675   0.041899364441633224
+Opacities:   2.7998496534564765e-06   1.0   0.23829732835292816   0.41587033867836
+
+-------------------
+Iteration: 8700
+loss: 0.003234  [ 8700/15000] computed in 0.00744549830754598 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -16.85031509399414   46.53925704956055   11.122847557067871   19.458396911621094
+Scaling factors:   1.8835027049135533e-07   2.7927141189575195   0.06064877286553383   0.10274581611156464
+Quaternions:   -0.9974582195281982   1.0   0.2161504030227661   0.45086660981178284
+Sh coordinates dc:   -2.067563772201538   4.886011123657227   0.060091692954301834   1.04103422164917
+Sh coordinates rest:   -0.5732835531234741   0.7175295352935791   0.0008793945307843387   0.04201294109225273
+Opacities:   2.640895218064543e-06   1.0   0.23826460540294647   0.41590452194213867
+
+-------------------
+Iteration: 8750
+loss: 0.003211  [ 8750/15000] computed in 0.007445474465688069 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -16.85031509399414   46.53925704956055   11.122847557067871   19.458396911621094
+Scaling factors:   1.8835027049135533e-07   2.792038917541504   0.06070578098297119   0.1030513197183609
+Quaternions:   -0.9974582195281982   1.0   0.21612541377544403   0.4508785903453827
+Sh coordinates dc:   -2.067563772201538   4.940632343292236   0.060768973082304   1.0419358015060425
+Sh coordinates rest:   -0.5732835531234741   0.7193689942359924   0.0009006094187498093   0.04212803393602371
+Opacities:   2.4943149128375808e-06   1.0   0.23823365569114685   0.415935754776001
+
+-------------------
+Iteration: 8800
+loss: 0.003175  [ 8800/15000] computed in 0.007463936010996501 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -16.85031509399414   46.53925704956055   11.122848510742188   19.458398818969727
+Scaling factors:   1.8835027049135533e-07   2.8103320598602295   0.060759928077459335   0.10329679399728775
+Quaternions:   -0.9974582195281982   1.0   0.2161017209291458   0.4508899450302124
+Sh coordinates dc:   -2.067563772201538   4.990866661071777   0.06144773215055466   1.0428465604782104
+Sh coordinates rest:   -0.5732835531234741   0.7211818099021912   0.0009217121987603605   0.04224257171154022
+Opacities:   2.358828623982845e-06   1.0   0.23820416629314423   0.4159674346446991
+
+-------------------
+Iteration: 8850
+loss: 0.003156  [ 8850/15000] computed in 0.007445001602172851 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -16.85031509399414   46.53925704956055   11.122849464416504   19.458398818969727
+Scaling factors:   1.8835027049135533e-07   2.794494390487671   0.060817889869213104   0.10356872528791428
+Quaternions:   -0.9974582195281982   1.0   0.2160768359899521   0.4509018659591675
+Sh coordinates dc:   -2.067563772201538   5.042280673980713   0.06212699040770531   1.043753981590271
+Sh coordinates rest:   -0.5732835531234741   0.722181499004364   0.0009433620725758374   0.042356256395578384
+Opacities:   2.233294253528584e-06   1.0   0.23817390203475952   0.4159979224205017
+
+-------------------
+Iteration: 8900
+loss: 0.002645  [ 8900/15000] computed in 0.007452861467997233 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -16.85031509399414   46.53925704956055   11.122848510742188   19.45840072631836
+Scaling factors:   1.8835027049135533e-07   2.7999839782714844   0.06086510047316551   0.103770911693573
+Quaternions:   -0.9974582195281982   1.0   0.21605023741722107   0.4509146213531494
+Sh coordinates dc:   -2.067563772201538   5.089965343475342   0.06279167532920837   1.0446596145629883
+Sh coordinates rest:   -0.5758789777755737   0.723377525806427   0.0009644856327213347   0.04247131198644638
+Opacities:   2.11682549888792e-06   1.0   0.23814591765403748   0.4160277247428894
+
+-------------------
+Iteration: 8950
+loss: 0.003103  [ 8950/15000] computed in 0.007471855481465658 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -16.85031509399414   46.53925704956055   11.122848510742188   19.45840072631836
+Scaling factors:   1.8835027049135533e-07   2.7940187454223633   0.060918089002370834   0.10401524603366852
+Quaternions:   -0.9974582195281982   1.0   0.21602104604244232   0.45092859864234924
+Sh coordinates dc:   -2.067563772201538   5.137737274169922   0.06346392631530762   1.0455998182296753
+Sh coordinates rest:   -0.5792286396026611   0.7243683338165283   0.0009860312566161156   0.042586714029312134
+Opacities:   2.0084428342670435e-06   1.0   0.23812058568000793   0.41605344414711
+
+---INFO---
+Stopping entropy regularization.
+
+---INFO---
+Resetting neighbors...
+
+-------------------
+Iteration: 9000
+loss: 0.001996  [ 9000/15000] computed in 0.007560439904530843 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -16.85031509399414   46.53925704956055   11.122848510742188   19.45840072631836
+Scaling factors:   1.8835027049135533e-07   2.779698371887207   0.06096852943301201   0.10422693938016891
+Quaternions:   -0.9974582195281982   1.0   0.21599537134170532   0.450940877199173
+Sh coordinates dc:   -2.067563772201538   5.182987213134766   0.0641273707151413   1.046522855758667
+Sh coordinates rest:   -0.582249104976654   0.7254273295402527   0.0010077683255076408   0.04270182177424431
+Opacities:   1.9078061086474918e-06   1.0   0.2380957305431366   0.41607630252838135
+
+Pruning gaussians with low-opacity for further optimization...
+Pruning finished: 7002 gaussians left.
+
+---INFO---
+Starting SDF regularization.
+
+---INFO---
+Starting SDF estimation loss.
+
+---INFO---
+Starting SDF better normal loss.
+
+-------------------
+Iteration: 9050
+loss: 0.096578  [ 9050/15000] computed in 0.12987637122472126 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -10.60454273223877   46.248538970947266   11.291104316711426   19.39684295654297
+Scaling factors:   4.347802473603224e-07   2.1973888874053955   0.06565438210964203   0.1018536165356636
+Quaternions:   -0.9931097030639648   0.9998682737350464   0.20245490968227386   0.4571864604949951
+Sh coordinates dc:   -1.9695451259613037   4.687588691711426   0.0007969212019816041   1.1023259162902832
+Sh coordinates rest:   -0.5283557772636414   0.5798391103744507   -0.0002765252720564604   0.045154597610235214
+Opacities:   0.01190204918384552   1.0   0.9796224236488342   0.11436347663402557
+Number of gaussians used for sampling in SDF regularization: tensor(5455, device='cuda:0')
+
+-------------------
+Iteration: 9100
+loss: 0.079254  [ 9100/15000] computed in 0.1293208122253418 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -10.604958534240723   46.245113372802734   11.291125297546387   19.39690589904785
+Scaling factors:   4.399535384891351e-07   2.649301528930664   0.06586140394210815   0.10705091059207916
+Quaternions:   -0.9897568821907043   0.9998704791069031   0.19986779987812042   0.4583234190940857
+Sh coordinates dc:   -1.9802485704421997   4.666440010070801   0.0030998277943581343   1.1063361167907715
+Sh coordinates rest:   -0.5299656987190247   0.5812455415725708   -0.00020227138884365559   0.045493099838495255
+Opacities:   0.0035614867229014635   1.0   0.978027880191803   0.12221792340278625
+Number of gaussians used for sampling in SDF regularization: tensor(5459, device='cuda:0')
+
+-------------------
+Iteration: 9150
+loss: 0.072271  [ 9150/15000] computed in 0.129350483417511 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -10.604843139648438   46.231815338134766   11.291152954101562   19.396944046020508
+Scaling factors:   5.75876583752688e-07   3.0163135528564453   0.0662771612405777   0.11296405643224716
+Quaternions:   -0.9955007433891296   0.9997928142547607   0.19816842675209045   0.45906078815460205
+Sh coordinates dc:   -2.0044002532958984   4.706686973571777   0.005013998597860336   1.1096118688583374
+Sh coordinates rest:   -0.5284436941146851   0.5847502946853638   -0.00013727090845350176   0.04581311345100403
+Opacities:   0.0028645845595747232   1.0   0.9775422811508179   0.12464533001184464
+Number of gaussians used for sampling in SDF regularization: tensor(5455, device='cuda:0')
+
+-------------------
+Iteration: 9200
+loss: 0.068078  [ 9200/15000] computed in 0.1294425368309021 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -10.604584693908691   46.229862213134766   11.291152954101562   19.396961212158203
+Scaling factors:   5.963321427771007e-07   4.038269996643066   0.06669454276561737   0.11890985816717148
+Quaternions:   -0.9922446012496948   0.9999809861183167   0.1967160403728485   0.4596850574016571
+Sh coordinates dc:   -2.005101442337036   4.810306549072266   0.006764327175915241   1.112453579902649
+Sh coordinates rest:   -0.5240110158920288   0.5888040661811829   -8.799859642749652e-05   0.046137500554323196
+Opacities:   0.0007245764136314392   1.0   0.9768086671829224   0.12740860879421234
+Number of gaussians used for sampling in SDF regularization: tensor(5454, device='cuda:0')
+
+-------------------
+Iteration: 9250
+loss: 0.065343  [ 9250/15000] computed in 0.1294501503308614 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -10.604187965393066   46.231056213378906   11.291145324707031   19.3969669342041
+Scaling factors:   4.103329729332472e-07   5.095693588256836   0.06719667464494705   0.12520621716976166
+Quaternions:   -0.9891928434371948   0.9999105334281921   0.19569231569766998   0.4601217806339264
+Sh coordinates dc:   -2.0051043033599854   4.922892093658447   0.008008645847439766   1.1148955821990967
+Sh coordinates rest:   -0.5233736038208008   0.59282386302948   -5.188460272620432e-05   0.04645722359418869
+Opacities:   0.0001435479789506644   1.0   0.9761719703674316   0.12961696088314056
+Number of gaussians used for sampling in SDF regularization: tensor(5305, device='cuda:0')
+
+-------------------
+Iteration: 9300
+loss: 0.063235  [ 9300/15000] computed in 0.1293509840965271 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -10.603304862976074   46.23349380493164   11.291131973266602   19.3969783782959
+Scaling factors:   1.6605707742201048e-07   5.9541916847229   0.06770909577608109   0.13147692382335663
+Quaternions:   -0.9891069531440735   0.9998363852500916   0.1946902871131897   0.46054670214653015
+Sh coordinates dc:   -2.0051043033599854   5.011448383331299   0.009032323956489563   1.1168925762176514
+Sh coordinates rest:   -0.5212557315826416   0.5967009663581848   -2.059987309621647e-05   0.04675225913524628
+Opacities:   0.00013427500380203128   1.0   0.9756699800491333   0.13170082867145538
+Number of gaussians used for sampling in SDF regularization: tensor(5309, device='cuda:0')
+
+-------------------
+Iteration: 9350
+loss: 0.061709  [ 9350/15000] computed in 0.12948050896326702 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -10.602347373962402   46.23634338378906   11.291115760803223   19.39698600769043
+Scaling factors:   1.0334867539540937e-07   6.874949932098389   0.06824095547199249   0.13817915320396423
+Quaternions:   -0.9909445643424988   0.9997904896736145   0.1940176635980606   0.4608304798603058
+Sh coordinates dc:   -2.0051043033599854   5.086823463439941   0.009968667291104794   1.1188409328460693
+Sh coordinates rest:   -0.5186522603034973   0.6002236008644104   4.627419457392534e-06   0.04704046994447708
+Opacities:   0.00012580653128679842   1.0   0.9753597974777222   0.133301243185997
+Number of gaussians used for sampling in SDF regularization: tensor(5464, device='cuda:0')
+
+-------------------
+Iteration: 9400
+loss: 0.060306  [ 9400/15000] computed in 0.12932148377100627 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -10.60122013092041   46.239688873291016   11.291114807128906   19.397001266479492
+Scaling factors:   7.066975626912608e-08   7.875738620758057   0.06876920163631439   0.14555701613426208
+Quaternions:   -0.9945129752159119   0.9998332262039185   0.19344012439250946   0.46107321977615356
+Sh coordinates dc:   -2.0051043033599854   5.160916328430176   0.010883004404604435   1.1207661628723145
+Sh coordinates rest:   -0.5162869095802307   0.6034343838691711   2.7475771275931038e-05   0.04733269661664963
+Opacities:   0.00012494348629843444   1.0   0.9749178886413574   0.13452237844467163
+Number of gaussians used for sampling in SDF regularization: tensor(5469, device='cuda:0')
+
+-------------------
+Iteration: 9450
+loss: 0.059215  [ 9450/15000] computed in 0.1293863534927368 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -10.600031852722168   46.24271774291992   11.291117668151855   19.397014617919922
+Scaling factors:   5.191655105818427e-08   8.703642845153809   0.06923457235097885   0.1526660919189453
+Quaternions:   -0.9957306385040283   0.9998104572296143   0.19292998313903809   0.46128690242767334
+Sh coordinates dc:   -2.0068306922912598   5.205090045928955   0.01175739523023367   1.1225965023040771
+Sh coordinates rest:   -0.5140854120254517   0.6062953472137451   5.0005717639578506e-05   0.04762795940041542
+Opacities:   0.00012498888827394694   1.0   0.974132239818573   0.13735052943229675
+Number of gaussians used for sampling in SDF regularization: tensor(5475, device='cuda:0')
+
+---INFO---
+Resetting neighbors...
+
+-------------------
+Iteration: 9500
+loss: 0.060704  [ 9500/15000] computed in 0.12934213081995646 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -10.598912239074707   46.24177551269531   11.291126251220703   19.397022247314453
+Scaling factors:   3.924289870838038e-08   9.760244369506836   0.06970392167568207   0.1603022664785385
+Quaternions:   -0.9955234527587891   0.9998921751976013   0.19251716136932373   0.46145936846733093
+Sh coordinates dc:   -2.006925106048584   5.239508628845215   0.012495098635554314   1.124446988105774
+Sh coordinates rest:   -0.5153064727783203   0.6092172265052795   6.74006441840902e-05   0.047925252467393875
+Opacities:   0.00010526341793593019   1.0   0.9734897017478943   0.1396230161190033
+Number of gaussians used for sampling in SDF regularization: tensor(5322, device='cuda:0')
+
+-------------------
+Iteration: 9550
+loss: 0.058837  [ 9550/15000] computed in 0.12955509026845297 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -10.597826957702637   46.24500274658203   11.29114818572998   19.397022247314453
+Scaling factors:   3.110378443693662e-08   10.721755027770996   0.06999945640563965   0.16766175627708435
+Quaternions:   -0.9959791898727417   0.9997965693473816   0.19208306074142456   0.46164023876190186
+Sh coordinates dc:   -2.006925106048584   5.2709641456604   0.013266115449368954   1.1264044046401978
+Sh coordinates rest:   -0.520183265209198   0.6124923825263977   8.211980457417667e-05   0.04820717126131058
+Opacities:   0.00010086144175147638   1.0   0.9730707406997681   0.14127053320407867
+Number of gaussians used for sampling in SDF regularization: tensor(5320, device='cuda:0')
+
+-------------------
+Iteration: 9600
+loss: 0.057643  [ 9600/15000] computed in 0.12951619227727254 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -10.59679889678955   46.247772216796875   11.291169166564941   19.397031784057617
+Scaling factors:   2.526815379155778e-08   11.644856452941895   0.07043687254190445   0.17583195865154266
+Quaternions:   -0.9976456165313721   0.999569833278656   0.19161227345466614   0.4618358314037323
+Sh coordinates dc:   -2.006925106048584   5.291099548339844   0.014079577289521694   1.1284151077270508
+Sh coordinates rest:   -0.5235708951950073   0.6159300804138184   9.539453458273783e-05   0.048484962433576584
+Opacities:   0.00010215178190264851   1.0   0.9726589918136597   0.1427285224199295
+Number of gaussians used for sampling in SDF regularization: tensor(5322, device='cuda:0')
+
+-------------------
+Iteration: 9650
+loss: 0.056919  [ 9650/15000] computed in 0.12950270573298137 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -10.595927238464355   46.254878997802734   11.291179656982422   19.39704132080078
+Scaling factors:   2.0798220035089798e-08   12.63615894317627   0.07092798501253128   0.18506723642349243
+Quaternions:   -0.9979119300842285   0.9997032284736633   0.191260427236557   0.4619816839694977
+Sh coordinates dc:   -2.006925106048584   5.299771308898926   0.014856272377073765   1.1303459405899048
+Sh coordinates rest:   -0.5277122259140015   0.6186577081680298   0.00010863654460990801   0.04876535385847092
+Opacities:   0.00010471409041201696   1.0   0.9722407460212708   0.14431022107601166
+Number of gaussians used for sampling in SDF regularization: tensor(5319, device='cuda:0')
+
+-------------------
+Iteration: 9700
+loss: 0.055937  [ 9700/15000] computed in 0.12951715389887491 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -10.595176696777344   46.260765075683594   11.291186332702637   19.397048950195312
+Scaling factors:   1.398034754629407e-08   13.695611953735352   0.07140506058931351   0.19465401768684387
+Quaternions:   -0.9964253902435303   0.9999208450317383   0.1909422129392624   0.46211329102516174
+Sh coordinates dc:   -2.006925106048584   5.306248188018799   0.015385493636131287   1.1323516368865967
+Sh coordinates rest:   -0.5310070514678955   0.620145857334137   0.00011491082113934681   0.049046747386455536
+Opacities:   0.00010527676931815222   1.0   0.9719826579093933   0.1453087329864502
+Number of gaussians used for sampling in SDF regularization: tensor(5468, device='cuda:0')
+
+-------------------
+Iteration: 9750
+loss: 0.055722  [ 9750/15000] computed in 0.12961099942525228 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -10.594528198242188   46.264869689941406   11.291187286376953   19.39705467224121
+Scaling factors:   1.0767525537858091e-08   14.939590454101562   0.07187089323997498   0.20430463552474976
+Quaternions:   -0.9952291250228882   0.9999769926071167   0.19052383303642273   0.46228593587875366
+Sh coordinates dc:   -2.006925106048584   5.313549041748047   0.01593807339668274   1.1343563795089722
+Sh coordinates rest:   -0.5353591442108154   0.6209704875946045   0.00012391786731313914   0.04932866245508194
+Opacities:   9.998711902881041e-05   1.0   0.9717510938644409   0.14604489505290985
+Number of gaussians used for sampling in SDF regularization: tensor(5319, device='cuda:0')
+
+-------------------
+Iteration: 9800
+loss: 0.054848  [ 9800/15000] computed in 0.12956095933914186 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -10.593822479248047   46.2678337097168   11.291190147399902   19.397056579589844
+Scaling factors:   9.635631847970672e-09   16.23798370361328   0.07235144078731537   0.2150799185037613
+Quaternions:   -0.9949601292610168   0.9998883605003357   0.1902158111333847   0.4624127745628357
+Sh coordinates dc:   -2.006925106048584   5.317703723907471   0.016532381996512413   1.136426329612732
+Sh coordinates rest:   -0.5406928658485413   0.6219810247421265   0.0001361304457532242   0.049615588039159775
+Opacities:   9.983811469282955e-05   1.0   0.9715657830238342   0.1465853750705719
+Number of gaussians used for sampling in SDF regularization: tensor(5467, device='cuda:0')
+
+-------------------
+Iteration: 9850
+loss: 0.054834  [ 9850/15000] computed in 0.12953810294469198 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -10.592978477478027   46.269378662109375   11.291199684143066   19.397058486938477
+Scaling factors:   9.62011448280009e-09   17.413801193237305   0.07281360030174255   0.22496572136878967
+Quaternions:   -0.9949494004249573   0.9998236298561096   0.18980158865451813   0.4625829756259918
+Sh coordinates dc:   -2.006925106048584   5.319321632385254   0.017214685678482056   1.1385301351547241
+Sh coordinates rest:   -0.5463729500770569   0.6228492856025696   0.00015092476678546518   0.04990219697356224
+Opacities:   9.983763447962701e-05   1.0   0.9714469313621521   0.14690910279750824
+Number of gaussians used for sampling in SDF regularization: tensor(5316, device='cuda:0')
+
+-------------------
+Iteration: 9900
+loss: 0.054658  [ 9900/15000] computed in 0.12954808473587037 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -10.592510223388672   46.27022171020508   11.291206359863281   19.39705467224121
+Scaling factors:   9.488941188351419e-09   18.677356719970703   0.07331746816635132   0.23623037338256836
+Quaternions:   -0.9939479827880859   0.9997619986534119   0.18947142362594604   0.46271830797195435
+Sh coordinates dc:   -2.006925106048584   5.320235252380371   0.017957620322704315   1.1406021118164062
+Sh coordinates rest:   -0.553751528263092   0.6236422657966614   0.0001674162340350449   0.05018405616283417
+Opacities:   0.00010270343773299828   1.0   0.9712368845939636   0.1476438343524933
+Number of gaussians used for sampling in SDF regularization: tensor(5322, device='cuda:0')
+
+-------------------
+Iteration: 9950
+loss: 0.054063  [ 9950/15000] computed in 0.12955165306727093 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -10.592238426208496   46.27125549316406   11.291211128234863   19.39705467224121
+Scaling factors:   9.33246102619023e-09   19.64754295349121   0.0737796351313591   0.24667850136756897
+Quaternions:   -0.9941704869270325   0.9999749660491943   0.18921412527561188   0.4628235697746277
+Sh coordinates dc:   -2.006925106048584   5.321229934692383   0.018681103363633156   1.1427204608917236
+Sh coordinates rest:   -0.559626579284668   0.6243731379508972   0.00018896511755883694   0.05047113448381424
+Opacities:   0.00010281895811203867   1.0   0.9711897373199463   0.14767277240753174
+Number of gaussians used for sampling in SDF regularization: tensor(5320, device='cuda:0')
+
+---INFO---
+Resetting neighbors...
+
+-------------------
+Iteration: 10000
+loss: 0.054453  [10000/15000] computed in 0.12954817612965902 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -10.591756820678711   46.27168273925781   11.291211128234863   19.397050857543945
+Scaling factors:   9.236004849810797e-09   21.07311248779297   0.07432915270328522   0.2603863477706909
+Quaternions:   -0.9977088570594788   0.999758780002594   0.18895459175109863   0.4629295766353607
+Sh coordinates dc:   -2.006925106048584   5.321590423583984   0.019522275775671005   1.144808053970337
+Sh coordinates rest:   -0.5603070259094238   0.6249484419822693   0.00021213384752627462   0.05076530575752258
+Opacities:   0.00012887273624073714   1.0   0.9711311459541321   0.14780175685882568
+Number of gaussians used for sampling in SDF regularization: tensor(5470, device='cuda:0')
+
+-------------------
+Iteration: 10050
+loss: 0.053507  [10050/15000] computed in 0.12893228530883788 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -10.591352462768555   46.27214813232422   11.291211128234863   19.397048950195312
+Scaling factors:   9.443909654294202e-09   22.239675521850586   0.07481115311384201   0.27190300822257996
+Quaternions:   -0.9982190728187561   0.9997625946998596   0.1887596845626831   0.4630091190338135
+Sh coordinates dc:   -2.006925106048584   5.320989608764648   0.020576603710651398   1.1469454765319824
+Sh coordinates rest:   -0.5602437257766724   0.6255270838737488   0.0002392562892055139   0.051062390208244324
+Opacities:   0.00013058587501291186   1.0   0.9709040522575378   0.14849889278411865
+Number of gaussians used for sampling in SDF regularization: tensor(5469, device='cuda:0')
+
+-------------------
+Iteration: 10100
+loss: 0.053504  [10100/15000] computed in 0.12895386616388957 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -10.590982437133789   46.272727966308594   11.291213035583496   19.39703941345215
+Scaling factors:   9.326073246995747e-09   23.61452865600586   0.07535899430513382   0.28505685925483704
+Quaternions:   -0.9975712299346924   0.9998492002487183   0.18851998448371887   0.46310678124427795
+Sh coordinates dc:   -2.006925106048584   5.316389560699463   0.021458152681589127   1.1489137411117554
+Sh coordinates rest:   -0.5585837960243225   0.626054584980011   0.00026329740649089217   0.05135446414351463
+Opacities:   0.00012955383863300085   1.0   0.9707545638084412   0.14891491830348969
+Number of gaussians used for sampling in SDF regularization: tensor(5323, device='cuda:0')
+
+-------------------
+Iteration: 10150
+loss: 0.053110  [10150/15000] computed in 0.12887823581695557 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -10.590478897094727   46.273155212402344   11.291215896606445   19.39703941345215
+Scaling factors:   9.414576673805186e-09   25.196313858032227   0.07591930776834488   0.2992541491985321
+Quaternions:   -0.9973714351654053   0.9997888803482056   0.18829171359539032   0.4631996154785156
+Sh coordinates dc:   -2.006925106048584   5.306700706481934   0.02220369689166546   1.1508666276931763
+Sh coordinates rest:   -0.5583484768867493   0.6264680624008179   0.00028620593366213143   0.05164201557636261
+Opacities:   0.0001078926507034339   1.0   0.9706531763076782   0.14921250939369202
+Number of gaussians used for sampling in SDF regularization: tensor(5324, device='cuda:0')
+
+-------------------
+Iteration: 10200
+loss: 0.052793  [10200/15000] computed in 0.12889867623647053 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -10.590309143066406   46.2744255065918   11.291229248046875   19.39704132080078
+Scaling factors:   9.407863821309093e-09   26.8564453125   0.07647033780813217   0.31410083174705505
+Quaternions:   -0.9977684020996094   0.9998687505722046   0.18808695673942566   0.46328282356262207
+Sh coordinates dc:   -2.006925106048584   5.299697399139404   0.022991366684436798   1.152872920036316
+Sh coordinates rest:   -0.5572761297225952   0.6268371939659119   0.00031050536199472845   0.051930107176303864
+Opacities:   0.00010762352758320048   1.0   0.9705434441566467   0.14956200122833252
+Number of gaussians used for sampling in SDF regularization: tensor(5325, device='cuda:0')
+
+-------------------
+Iteration: 10250
+loss: 0.052649  [10250/15000] computed in 0.12885706822077433 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -10.590118408203125   46.27515411376953   11.291236877441406   19.397035598754883
+Scaling factors:   9.237361986436099e-09   28.43939781188965   0.0770123153924942   0.3279307186603546
+Quaternions:   -0.9974142909049988   0.9998094439506531   0.18778406083583832   0.46340566873550415
+Sh coordinates dc:   -2.006925106048584   5.294396877288818   0.023890629410743713   1.1549423933029175
+Sh coordinates rest:   -0.5562170743942261   0.6271387338638306   0.00033486197935417295   0.052216749638319016
+Opacities:   0.0001076225089491345   1.0   0.9705144166946411   0.1497107297182083
+Number of gaussians used for sampling in SDF regularization: tensor(5329, device='cuda:0')
+
+-------------------
+Iteration: 10300
+loss: 0.052031  [10300/15000] computed in 0.12888168493906657 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -10.58932876586914   46.276119232177734   11.291243553161621   19.397029876708984
+Scaling factors:   9.085688645882328e-09   29.949867248535156   0.07760469615459442   0.34235724806785583
+Quaternions:   -0.9977909922599792   0.99983811378479   0.18752433359622955   0.4635108411312103
+Sh coordinates dc:   -2.006925106048584   5.3356404304504395   0.024904964491724968   1.1570639610290527
+Sh coordinates rest:   -0.5556498765945435   0.627490222454071   0.00036495941458269954   0.05251164734363556
+Opacities:   0.00010270872007822618   1.0   0.9703678488731384   0.15007014572620392
+Number of gaussians used for sampling in SDF regularization: tensor(5329, device='cuda:0')
+
+-------------------
+Iteration: 10350
+loss: 0.051989  [10350/15000] computed in 0.12886435588200887 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -10.589316368103027   46.277400970458984   11.291254043579102   19.397022247314453
+Scaling factors:   8.965564290974726e-09   31.83800506591797   0.07820481061935425   0.358854740858078
+Quaternions:   -0.9980292320251465   0.999862551689148   0.18734285235404968   0.46358421444892883
+Sh coordinates dc:   -2.006925106048584   5.345800399780273   0.0259077288210392   1.1590862274169922
+Sh coordinates rest:   -0.5557240843772888   0.6278690695762634   0.0003938308509532362   0.05280488356947899
+Opacities:   9.839122503763065e-05   1.0   0.9702553749084473   0.15023034811019897
+Number of gaussians used for sampling in SDF regularization: tensor(5329, device='cuda:0')
+
+-------------------
+Iteration: 10400
+loss: 0.051443  [10400/15000] computed in 0.12885136206944783 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -10.58970832824707   46.278873443603516   11.291258811950684   19.397018432617188
+Scaling factors:   8.863140443793327e-09   33.054908752441406   0.07876422256231308   0.37339648604393005
+Quaternions:   -0.9982108473777771   0.9999133348464966   0.18710055947303772   0.46368205547332764
+Sh coordinates dc:   -2.006925106048584   5.36300802230835   0.026946214959025383   1.161086082458496
+Sh coordinates rest:   -0.5551314353942871   0.6282824277877808   0.00042215458233840764   0.053090278059244156
+Opacities:   9.836730168899521e-05   1.0   0.9701228141784668   0.15046919882297516
+Number of gaussians used for sampling in SDF regularization: tensor(5473, device='cuda:0')
+
+-------------------
+Iteration: 10450
+loss: 0.051494  [10450/15000] computed in 0.12888444662094117 minutes.
+------Stats-----
+---Min, Max, Mean, Std
+Points:   -10.589231491088867   46.28056716918945   11.291264533996582   19.39701271057129
+Scaling factors:   8.583964650199505e-09   34.743499755859375   0.07934819161891937   0.3892052173614502
+Quaternions:   -0.9981653690338135   0.9998620748519897   0.18684051930904388   0.46378690004348755
+Sh coordinates dc:   -2.006925106048584   5.372464179992676   0.02780907414853573   1.1631367206573486
+Sh coordinates rest:   -0.5560054183006287   0.6286814212799072   0.0004447362443897873   0.05337563529610634
+Opacities:   9.763129492057487e-05   1.0   0.9699861407279968   0.150727778673172
+Number of gaussians used for sampling in SDF regularization: tensor(5328, device='cuda:0')
