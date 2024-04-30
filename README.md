@@ -4,6 +4,10 @@
 
 https://imagetostl.com/view-ply-online#convert
 
+mp4 to sequence of images:
+
+https://ezgif.com/video-to-jpg/ezgif-1-86167c97b4.mp4
+
 # Snellius 
 ## Connecting to Snellius:
 
