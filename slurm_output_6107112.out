@@ -720,3 +720,18 @@ Sh coordinates dc:   -1.8532441854476929   4.085361003875732   -0.02779389545321
 Sh coordinates rest:   -0.4107772409915924   0.3210298717021942   0.0019558339845389128   0.04527079686522484
 Opacities:   0.004312752280384302   1.0   0.9830310344696045   0.11258342117071152
 Number of gaussians used for sampling in SDF regularization: tensor(2090, device='cuda:0')
+
+JOB STATISTICS
+==============
+Job ID: 6107112
+Cluster: snellius
+User/Group: jhuizing/jhuizing
+State: RUNNING
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 00:00:00
+CPU Efficiency: 0.00% of 05:56:42 core-walltime
+Job Wall-clock time: 00:19:49
+Memory Utilized: 0.00 MB (estimated maximum)
+Memory Efficiency: 0.00% of 120.00 GB (120.00 GB/node)
+WARNING: Efficiency statistics may be misleading for RUNNING jobs.
