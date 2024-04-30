@@ -1,0 +1,51 @@
+============================================================================================== 
+Warning! Mixing Conda and module environments may lead to corruption of the
+user environment. 
+We do not recommend users mixing those two environments unless absolutely
+necessary. Note that 
+SURF does not provide any support for Conda environment.
+For more information, please refer to our software policy page:
+https://servicedesk.surf.nl/wiki/display/WIKI/Software+policy+Snellius#SoftwarepolicySnellius-UseofAnacondaandMinicondaenvironmentsonSnellius 
+
+Remember that many packages have already been installed on the system and can
+be loaded using 
+the 'module load <package__name>' command. If you are uncertain if a package is
+already available 
+on the system, please use 'module avail' or 'module spider' to search for it.
+============================================================================================== 
+Already up to date.
+Processing /home/jhuizing/master-thesis-ds/repos/dreamgaussian/simple-knn
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Building wheels for collected packages: simple-knn
+  Building wheel for simple-knn (setup.py): started
+  Building wheel for simple-knn (setup.py): finished with status 'done'
+  Created wheel for simple-knn: filename=simple_knn-0.0.0-cp39-cp39-linux_x86_64.whl size=532391 sha256=702983c3dad0f8c72aff4fdfae9f53a6606c78a05c5c4ef6b20bfd61e2e834ee
+  Stored in directory: /gpfs/home6/jhuizing/.cache/pip/wheels/35/39/15/ed3ce4cf84fbab356c3e656d996ba4b868bc1861572e8298ea
+Successfully built simple-knn
+Installing collected packages: simple-knn
+Successfully installed simple-knn-0.0.0
+Traceback (most recent call last):
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/train.py", line 3, in <module>
+    from sugar_trainers.coarse_density import coarse_training_with_density_regularization
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/sugar_trainers/coarse_density.py", line 7, in <module>
+    from sugar_scene.gs_model import GaussianSplattingWrapper, fetchPly
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/sugar_scene/gs_model.py", line 7, in <module>
+    from gaussian_splatting.gaussian_renderer import render as gs_render
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/gaussian_splatting/gaussian_renderer/__init__.py", line 14, in <module>
+    from diff_gaussian_rasterization import GaussianRasterizationSettings, GaussianRasterizer
+ModuleNotFoundError: No module named 'diff_gaussian_rasterization'
+
+JOB STATISTICS
+==============
+Job ID: 6105349
+Cluster: snellius
+User/Group: jhuizing/jhuizing
+State: FAILED (exit code 1)
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 00:01:38
+CPU Efficiency: 6.41% of 00:25:30 core-walltime
+Job Wall-clock time: 00:01:25
+Memory Utilized: 3.85 GB
+Memory Efficiency: 3.21% of 120.00 GB

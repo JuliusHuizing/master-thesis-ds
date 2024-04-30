@@ -1,0 +1,46 @@
+============================================================================================== 
+Warning! Mixing Conda and module environments may lead to corruption of the
+user environment. 
+We do not recommend users mixing those two environments unless absolutely
+necessary. Note that 
+SURF does not provide any support for Conda environment.
+For more information, please refer to our software policy page:
+https://servicedesk.surf.nl/wiki/display/WIKI/Software+policy+Snellius#SoftwarepolicySnellius-UseofAnacondaandMinicondaenvironmentsonSnellius 
+
+Remember that many packages have already been installed on the system and can
+be loaded using 
+the 'module load <package__name>' command. If you are uncertain if a package is
+already available 
+on the system, please use 'module avail' or 'module spider' to search for it.
+============================================================================================== 
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+Traceback (most recent call last):
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/train.py", line 3, in <module>
+    from sugar_trainers.coarse_density import coarse_training_with_density_regularization
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/sugar_trainers/coarse_density.py", line 5, in <module>
+    from pytorch3d.loss import mesh_laplacian_smoothing, mesh_normal_consistency
+  File "/home/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages/pytorch3d/loss/__init__.py", line 8, in <module>
+    from .chamfer import chamfer_distance
+  File "/home/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages/pytorch3d/loss/chamfer.py", line 11, in <module>
+    from pytorch3d.ops.knn import knn_gather, knn_points
+  File "/home/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages/pytorch3d/ops/__init__.py", line 7, in <module>
+    from .ball_query import ball_query
+  File "/home/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages/pytorch3d/ops/ball_query.py", line 10, in <module>
+    from pytorch3d import _C
+ImportError: /home/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages/pytorch3d/_C.cpython-39-x86_64-linux-gnu.so: undefined symbol: _ZN2at4_ops10zeros_like4callERKNS_6TensorEN3c108optionalINS5_10ScalarTypeEEENS6_INS5_6LayoutEEENS6_INS5_6DeviceEEENS6_IbEENS6_INS5_12MemoryFormatEEE
+
+JOB STATISTICS
+==============
+Job ID: 6097417
+Cluster: snellius
+User/Group: jhuizing/jhuizing
+State: RUNNING
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 00:00:00
+CPU Efficiency: 0.00% of 00:06:18 core-walltime
+Job Wall-clock time: 00:00:21
+Memory Utilized: 0.00 MB (estimated maximum)
+Memory Efficiency: 0.00% of 120.00 GB (120.00 GB/node)
+WARNING: Efficiency statistics may be misleading for RUNNING jobs.
