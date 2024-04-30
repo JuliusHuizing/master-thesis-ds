@@ -475,7 +475,12 @@ Traceback (most recent call last):
 ImportError: /home/jhuizing/.conda/envs/sugar2/lib/python3.9/site-packages/pytorch3d/_C.cpython-39-x86_64-linux-gnu.so: undefined symbol: _ZN2at4_ops10zeros_like4callERKNS_6TensorEN3c108optionalINS5_10ScalarTypeEEENS6_INS5_6LayoutEEENS6_INS5_6DeviceEEENS6_IbEENS6_INS5_12MemoryFormatEEE
 ```
 
-Again, we don't seem alone:
+
+using python 3.8 leads to a failure when trying to solve the envrionment...
+
+https://github.com/facebookresearch/pytorch3d/blob/main/INSTALL.md
+
+But, Again, we don't seem alone:
 
 https://github.com/Anttwo/SuGaR/issues/136
 
@@ -491,12 +496,10 @@ Inspecting this issue page: https://github.com/facebookresearch/pytorch3d/blob/m
 indeeds points out that for Cuda >= 11.8 (which we use and which the environment.yyml of SuGAr defines as requirement) the CUB library needs to be available...
 
 perhaps check:
-pip install "git+https://github.com/facebookresearch/pytorch3d.git@stable"
 https://github.com/facebookresearch/pytorch3d/issues/1207
 
 
+Using this pip install "git+https://github.com/facebookresearch/pytorch3d.git@stable"
+inside the job does give yet another error again, this time complaining that the cuda versions don't match. However, we also saw this problem within the DG framework, which we could solve by also pip installing a specific version of Cuda.. (even though the environmnent.yaml defines it...)
 
 
-using python 3.8 leads to a failure when trying to solve the envrionment...
-
-https://github.com/facebookresearch/pytorch3d/blob/main/INSTALL.md
