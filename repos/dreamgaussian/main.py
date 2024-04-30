@@ -429,7 +429,7 @@ class GUI:
         print(f"[INFO] saving random images!")
         save_dir = "tmp_random_images"
         os.makedirs(save_dir, exist_ok=True) 
-        for i in range(100):
+        for i in range(1000):
              # Render random view
             ver = np.random.randint(-45, 45)  # Example vertical angle range
             hor = np.random.randint(0, 360)  # Example horizontal angle range
