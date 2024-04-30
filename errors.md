@@ -500,6 +500,9 @@ https://github.com/facebookresearch/pytorch3d/issues/1207
 
 
 Using this pip install "git+https://github.com/facebookresearch/pytorch3d.git@stable"
-inside the job does give yet another error again, this time complaining that the cuda versions don't match. However, we also saw this problem within the DG framework, which we could solve by also pip installing a specific version of Cuda.. (even though the environmnent.yaml defines it...)
+
+Inside the job does give yet another error again, this time complaining that the cuda versions don't match. However, we also saw this problem within the DG framework, which we could solve by also pip installing a specific version of Cuda.. (even though the environmnent.yaml defines it...)
 
 
+
+Now we seem to run into this error, in the actual 
