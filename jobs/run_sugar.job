@@ -40,5 +40,5 @@ cd $HOME/master-thesis-ds/repos/SuGaR
 # pip install gaussian_splatting/submodules/simple-knn
 # pip install gaussian_splatting/submodules/diff-gaussian-rasterization
 
-python gaussian_splatting/train.py -s $PATH_TO_COLMAP --iterations 7000 -m $PATH_TO_CHECKPOINT
+python gaussian_splatting/train.py -s $PATH_TO_COLMAP --iterations 7000 -m $OUTPUT_PATH
 python train.py -s $PATH_TO_COLMAP -c $OUTPUT_PATH -r "density"
