@@ -35,8 +35,8 @@ source activate sugar
 
 cd $HOME/master-thesis-ds/repos/SuGaR
 
-pip install gaussian_splatting/simple-knn
-pip install gaussian_splatting/diff-gaussian-rasterization
+pip install gaussian_splatting/submodules/simple-knn
+pip install gaussian_splatting/submodules/diff-gaussian-rasterization
 
 
 python train.py -s $PATH_TO_COLMAP -c $PATH_TO_CHECKPOINT -r "density"
