@@ -506,3 +506,10 @@ Inside the job does give yet another error again, this time complaining that the
 
 
 Now we seem to run into this error, in the actual 
+
+So apparantly, the sugar framework expects the original gaussian splatting framework as dependency (i.e. its knn and rasterizaiton submodules), although it does not define that in the environment.yaml.
+
+so we prepend with:
+
+pip install gaussian_splatting/simple-knn
+pip install gaussian_splatting/diff-gaussian-rasterization
