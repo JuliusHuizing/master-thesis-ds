@@ -513,3 +513,35 @@ so we prepend with:
 
 pip install gaussian_splatting/simple-knn
 pip install gaussian_splatting/diff-gaussian-rasterization
+
+
+we can now run, but get the run time after a very while:
+
+
+```error
+-----Foreground mesh-----
+
+[WARNING] Foreground is empty.
+
+-----Background mesh-----
+
+[WARNING] Background is empty.
+Finished computing meshes.
+Foreground mesh: None
+Background mesh: None
+
+-----Decimating and cleaning meshes-----
+
+Processing decimation target: 1000000
+Cleaning mesh...
+Traceback (most recent call last):
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/train.py", line 152, in <module>
+    coarse_mesh_path = extract_mesh_from_coarse_sugar(coarse_mesh_args)[0]
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/sugar_extractors/coarse_mesh.py", line 475, in extract_mesh_from_coarse_sugar
+    raise ValueError("Both foreground and background meshes are empty. Please provide a valid bounding box for the scene.")
+ValueError: Both foreground and background meshes are empty. Please provide a valid bounding box for the scene.
+
+
+```
+
+This might be because our colmap is so sparse...
