@@ -478,6 +478,7 @@ ImportError: /home/jhuizing/.conda/envs/sugar2/lib/python3.9/site-packages/pytor
 
 
 perhaps check:
+pip install "git+https://github.com/facebookresearch/pytorch3d.git@stable"
 https://github.com/facebookresearch/pytorch3d/issues/1207
 
 
