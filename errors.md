@@ -475,11 +475,28 @@ Traceback (most recent call last):
 ImportError: /home/jhuizing/.conda/envs/sugar2/lib/python3.9/site-packages/pytorch3d/_C.cpython-39-x86_64-linux-gnu.so: undefined symbol: _ZN2at4_ops10zeros_like4callERKNS_6TensorEN3c108optionalINS5_10ScalarTypeEEENS6_INS5_6LayoutEEENS6_INS5_6DeviceEEENS6_IbEENS6_INS5_12MemoryFormatEEE
 ```
 
+Again, we don't seem alone:
 
+https://github.com/Anttwo/SuGaR/issues/136
+
+but applying this pip install inside the activated env leads to yet another error:
+
+```error 
+UserWarning: The environment variable `CUB_HOME` was not found. NVIDIA CUB is required for compilation and can be downloaded from `https://github.com/NVIDIA/cub/releases`. You can unpack it to a location of your choice and set the environment variable `CUB_HOME` to the folder containing the `CMakeListst.txt` file.
+
+```
+
+Inspecting this issue page: https://github.com/facebookresearch/pytorch3d/blob/main/INSTALL.md
+
+indeeds points out that for Cuda >= 11.8 (which we use and which the environment.yyml of SuGAr defines as requirement) the CUB library needs to be available...
 
 perhaps check:
 pip install "git+https://github.com/facebookresearch/pytorch3d.git@stable"
 https://github.com/facebookresearch/pytorch3d/issues/1207
 
 
+
+
 using python 3.8 leads to a failure when trying to solve the envrionment...
+
+https://github.com/facebookresearch/pytorch3d/blob/main/INSTALL.md
