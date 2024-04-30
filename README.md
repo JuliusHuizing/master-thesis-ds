@@ -1,5 +1,9 @@
 # Master Thesis
 
+## Visualize .ply files online:
+
+https://imagetostl.com/view-ply-online#convert
+
 # Snellius 
 ## Connecting to Snellius:
 
