@@ -17,6 +17,7 @@ module load Anaconda3/2022.05
 PATH_TO_COLMAP=$HOME/master-thesis-ds/colmap
 PATH_TO_CHECKPOINT=$HOME/master-thesis-ds/repos/dreamgaussian/logs/
 PATH_TO_DREAM_GAUSSIAN=$HOME/master-thesis-ds/repos/dreamgaussian/
+OUTPUT_PATH=$HOME/master-thesis-ds/output/
 
 cd $HOME/master-thesis-ds/
 git pull
@@ -35,8 +36,8 @@ source activate sugar
 
 cd $HOME/master-thesis-ds/repos/SuGaR
 
-pip install gaussian_splatting/submodules/simple-knn
-pip install gaussian_splatting/submodules/diff-gaussian-rasterization
+# pip install gaussian_splatting/submodules/simple-knn
+# pip install gaussian_splatting/submodules/diff-gaussian-rasterization
 
-
-python train.py -s $PATH_TO_COLMAP -c $PATH_TO_CHECKPOINT -r "density"
+python gaussian_splatting/train.py -s $PATH_TO_COLMAP --iterations 7000 -m $PATH_TO_CHECKPOINT
+python train.py -s $PATH_TO_COLMAP -c $OUTPUT_PATH -r "density"
