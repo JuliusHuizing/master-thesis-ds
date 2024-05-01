@@ -430,59 +430,36 @@ class GUI:
         save_dir = "rendered_images"
         os.makedirs(save_dir, exist_ok=True) 
         
-        # Function to generate camera positions with overlap, varied viewpoints, and radial variation
-        def generate_camera_positions(num_positions, min_radius, max_radius):
-            positions = []
-            step_angle = 360 / num_positions
-            current_radius = min_radius
-            radius_step = (max_radius - min_radius) / num_positions
+        # # Function to generate camera positions with overlap, varied viewpoints, and radial variation
+        # def generate_camera_positions(num_positions, min_radius, max_radius):
             
-            for i in range(num_positions):
-                ver = np.random.randint(-30, 30)  # Smaller vertical range for better overlap
-                hor = step_angle * i  # Ensures overlapping horizontal coverage
-                
-                # Introduce radial variation to simulate stepping closer or further away
-                if i % 2 == 0:  # Alternate increasing and decreasing radius
-                    current_radius += radius_step
-                else:
-                    current_radius -= radius_step
-                
-                # Ensure radius stays within the specified range
-                current_radius = max(min(current_radius, max_radius), min_radius)
-                
-                positions.append((self.opt.elevation + ver, hor, current_radius))
-            return positions
-
-        # Main rendering loop with radial variations
-        num_images = 200  # Manageable number of images
-        min_radius = self.opt.radius * 0.5  # Minimum radius (closer to the object)
-        max_radius = self.opt.radius * 1.5  # Maximum radius (further from the object)
-
-        camera_positions = generate_camera_positions(num_images, min_radius, max_radius)
-        for idx, (ver, hor, rad) in enumerate(camera_positions):
-            pose = orbit_camera(ver, hor, rad)
-            cur_cam = MiniCam(pose, self.opt.ref_size, self.opt.ref_size, self.cam.fovy, self.cam.fovx, self.cam.near, self.cam.far)
-            out = self.renderer.render(cur_cam)
-            image = out["image"].unsqueeze(0)
-
-            image_np = image.squeeze(0).permute(1, 2, 0).cpu().detach().numpy()
-            image_np = (image_np * 255).astype(np.uint8)
-            image_np = cv2.cvtColor(image_np, cv2.COLOR_RGB2BGR)
-            cv2.imwrite(os.path.join(save_dir, f'rendered_image_{self.step}_{idx}.jpg'), image_np)
-            
-        # # Example function to generate camera positions with overlap and varied viewpoints
-        # def generate_camera_positions(num_positions):
         #     positions = []
         #     step_angle = 360 / num_positions
+        #     current_radius = min_radius
+        #     radius_step = (max_radius - min_radius) / num_positions
+            
         #     for i in range(num_positions):
-        #         ver = np.random.randint(-30, 30)  # Smaller range to maintain elevation consistency
-        #         hor = step_angle * i  # Ensures complete rotation with overlap
-        #         radius_variation = np.random.uniform(-0.1, 0.1) * self.opt.radius
-        #         positions.append((self.opt.elevation + ver, hor, self.opt.radius + radius_variation))
+        #         ver = np.random.randint(-30, 30)  # Smaller vertical range for better overlap
+        #         hor = step_angle * i  # Ensures overlapping horizontal coverage
+                
+        #         # Introduce radial variation to simulate stepping closer or further away
+        #         if i % 2 == 0:  # Alternate increasing and decreasing radius
+        #             current_radius += radius_step
+        #         else:
+        #             current_radius -= radius_step
+                
+        #         # Ensure radius stays within the specified range
+        #         current_radius = max(min(current_radius, max_radius), min_radius)
+                
+        #         positions.append((self.opt.elevation + ver, hor, current_radius))
         #     return positions
 
-        # # Main rendering loop
-        # camera_positions = generate_camera_positions(200)  # Generate 200 well-planned positions
+        # # Main rendering loop with radial variations
+        # num_images = 200  # Manageable number of images
+        # min_radius = self.opt.radius * 0.5  # Minimum radius (closer to the object)
+        # max_radius = self.opt.radius * 1.5  # Maximum radius (further from the object)
+
+        # camera_positions = generate_camera_positions(num_images, min_radius, max_radius)
         # for idx, (ver, hor, rad) in enumerate(camera_positions):
         #     pose = orbit_camera(ver, hor, rad)
         #     cur_cam = MiniCam(pose, self.opt.ref_size, self.opt.ref_size, self.cam.fovy, self.cam.fovx, self.cam.near, self.cam.far)
@@ -493,6 +470,30 @@ class GUI:
         #     image_np = (image_np * 255).astype(np.uint8)
         #     image_np = cv2.cvtColor(image_np, cv2.COLOR_RGB2BGR)
         #     cv2.imwrite(os.path.join(save_dir, f'rendered_image_{self.step}_{idx}.jpg'), image_np)
+            
+        # Example function to generate camera positions with overlap and varied viewpoints
+        def generate_camera_positions(num_positions):
+            positions = []
+            step_angle = 360 / num_positions
+            for i in range(num_positions):
+                ver = np.random.randint(-30, 30)  # Smaller range to maintain elevation consistency
+                hor = step_angle * i  # Ensures complete rotation with overlap
+                for radius_variation in [0.8, 0.9, 1.0, 1.1, 1.2]:
+                    positions.append((self.opt.elevation + ver, hor, self.opt.radius * radius_variation))
+            return positions
+
+        # Main rendering loop
+        camera_positions = generate_camera_positions(200)  # Generate 200 well-planned positions
+        for idx, (ver, hor, rad) in enumerate(camera_positions):
+            pose = orbit_camera(ver, hor, rad)
+            cur_cam = MiniCam(pose, self.opt.ref_size, self.opt.ref_size, self.cam.fovy, self.cam.fovx, self.cam.near, self.cam.far)
+            out = self.renderer.render(cur_cam)
+            image = out["image"].unsqueeze(0)
+
+            image_np = image.squeeze(0).permute(1, 2, 0).cpu().detach().numpy()
+            image_np = (image_np * 255).astype(np.uint8)
+            image_np = cv2.cvtColor(image_np, cv2.COLOR_RGB2BGR)
+            cv2.imwrite(os.path.join(save_dir, f'rendered_image_{self.step}_{idx}.jpg'), image_np)
         # for i in range(1000):
         #      # Render random view
         #     ver = np.random.randint(-45, 45)  # Example vertical angle range
