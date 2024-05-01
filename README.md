@@ -114,3 +114,8 @@ E20240429 12:16:33.912605 22620776206336 sfm.cc:266] failed to create sparse mod
 ERROR:root:Mapper failed with code 256. Exiting.
 
 ```
+
+
+
+# Creating A Colmap Dataset instructions
+https://colmap.github.io/tutorial.html

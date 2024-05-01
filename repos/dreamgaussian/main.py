@@ -429,27 +429,49 @@ class GUI:
         print(f"[INFO] saving random images!")
         save_dir = "tmp_random_images"
         os.makedirs(save_dir, exist_ok=True) 
-        for i in range(1000):
-             # Render random view
-            ver = np.random.randint(-45, 45)  # Example vertical angle range
-            hor = np.random.randint(0, 360)  # Example horizontal angle range
-            pose = orbit_camera(self.opt.elevation + ver, hor, self.opt.radius)
+        
+        # Example function to generate camera positions with overlap and varied viewpoints
+        def generate_camera_positions(num_positions):
+            positions = []
+            step_angle = 360 / num_positions
+            for i in range(num_positions):
+                ver = np.random.randint(-30, 30)  # Smaller range to maintain elevation consistency
+                hor = step_angle * i  # Ensures complete rotation with overlap
+                radius_variation = np.random.uniform(-0.1, 0.1) * self.opt.radius
+                positions.append((self.opt.elevation + ver, hor, self.opt.radius + radius_variation))
+            return positions
+
+        # Main rendering loop
+        camera_positions = generate_camera_positions(200)  # Generate 200 well-planned positions
+        for idx, (ver, hor, rad) in enumerate(camera_positions):
+            pose = orbit_camera(ver, hor, rad)
             cur_cam = MiniCam(pose, self.opt.ref_size, self.opt.ref_size, self.cam.fovy, self.cam.fovx, self.cam.near, self.cam.far)
             out = self.renderer.render(cur_cam)
-            image = out["image"].unsqueeze(0)  # Ensure it's [1, 3, H, W]
+            image = out["image"].unsqueeze(0)
 
-            # Convert to numpy and ensure correct shape [H, W, 3], detach from computation graph
             image_np = image.squeeze(0).permute(1, 2, 0).cpu().detach().numpy()
-            image_np = (image_np * 255).astype(np.uint8)  # Scale to [0, 255] and convert to uint8
-
-            # Convert RGB to BGR
+            image_np = (image_np * 255).astype(np.uint8)
             image_np = cv2.cvtColor(image_np, cv2.COLOR_RGB2BGR)
+            cv2.imwrite(os.path.join(save_dir, f'rendered_image_{self.step}_{idx}.jpg'), image_np)
+        # for i in range(1000):
+        #      # Render random view
+        #     ver = np.random.randint(-45, 45)  # Example vertical angle range
+        #     hor = np.random.randint(0, 360)  # Example horizontal angle range
+        #     pose = orbit_camera(self.opt.elevation + ver, hor, self.opt.radius)
+        #     cur_cam = MiniCam(pose, self.opt.ref_size, self.opt.ref_size, self.cam.fovy, self.cam.fovx, self.cam.near, self.cam.far)
+        #     out = self.renderer.render(cur_cam)
+        #     image = out["image"].unsqueeze(0)  # Ensure it's [1, 3, H, W]
 
-            # Save image
-            cv2.imwrite(os.path.join(save_dir, f'rendered_image_{self.step}_{i}.jpg'), image_np)
+        #     # Convert to numpy andå ensure correct shape [H, W, 3], detach from computation graph
+        #     image_np = image.squeeze(0).permute(1, 2, 0).cpu().detach().numpy()
+        #     image_np = (image_np * 255).astype(np.uint8)  # Scale to [0, 255] and convert to uint8
 
-        
+        #     # Convert RGB to BGR
+        #     image_np = cv2.cvtColor(image_np, cv2.COLOR_RGB2BGR)
 
+        #     # Save image
+        #     cv2.imwrite(os.path.join(save_dir, f'rendered_image_{self.step}_{i}.jpg'), image_np)
+    
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", required=True, help="path to the yaml config file")
@@ -462,3 +484,6 @@ if __name__ == "__main__":
     
     gui = GUI(opt)
     gui.train(opt.iters)
+
+
+
