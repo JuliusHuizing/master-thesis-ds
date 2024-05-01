@@ -169,7 +169,9 @@ class GUI:
                 loss = loss + 1000 * (step_ratio if self.opt.warmup_rgb_loss else 1) * F.mse_loss(mask, self.input_mask_torch)
 
             ### novel view (manual batch)
-            render_resolution = 128 if step_ratio < 0.3 else (256 if step_ratio < 0.6 else 512)
+            render_resolution = 256 if step_ratio < 0.3 else (512 if step_ratio < 0.6 else 1028)
+
+            # render_resolution = 128 if step_ratio < 0.3 else (256 if step_ratio < 0.6 else 512)
             images = []
             poses = []
             vers, hors, radii = [], [], []
@@ -204,15 +206,15 @@ class GUI:
            
                         
             images = torch.cat(images, dim=0)
-            #  # Save images
+             # Save images
              
-            #   # Inside the train_step method
-            # save_dir = "random_views"
-            # os.makedirs(save_dir, exist_ok=True) 
-            # for i in range(images.shape[0]):
-            #     save_path = os.path.join(save_dir, f'rendered_image_{self.step}_{i}.jpg')
-            #     image_np = (images[i].permute(1, 2, 0).cpu().detach().numpy() * 255).astype(np.uint8)
-            #     cv2.imwrite(save_path, cv2.cvtColor(image_np, cv2.COLOR_RGB2BGR))
+              # Inside the train_step method
+            save_dir = "image_progressions"
+            os.makedirs(save_dir, exist_ok=True) 
+            for i in range(images.shape[0]):
+                save_path = os.path.join(save_dir, f'rendered_image_{self.step}_{i}.jpg')
+                image_np = (images[i].permute(1, 2, 0).cpu().detach().numpy() * 255).astype(np.uint8)
+                cv2.imwrite(save_path, cv2.cvtColor(image_np, cv2.COLOR_RGB2BGR))
                 
             poses = torch.from_numpy(np.stack(poses, axis=0)).to(self.device)
 
