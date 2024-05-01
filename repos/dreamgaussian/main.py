@@ -427,7 +427,7 @@ class GUI:
         self.save_model(mode='geo+tex')
         
         print(f"[INFO] saving random images!")
-        save_dir = "tmp_random_images"
+        save_dir = "rendered_images"
         os.makedirs(save_dir, exist_ok=True) 
         
         # Function to generate camera positions with overlap, varied viewpoints, and radial variation
