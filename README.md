@@ -119,3 +119,12 @@ ERROR:root:Mapper failed with code 256. Exiting.
 
 # Creating A Colmap Dataset instructions
 https://colmap.github.io/tutorial.html
+
+
+# increase Git PostBuffer to allow for larger pushes
+https://medium.com/swlh/everything-you-need-to-know-to-resolve-the-git-push-rpc-error-1a865fd1ebea
+
+
+```bash
+git config http.postBuffer 2147483648
+```
