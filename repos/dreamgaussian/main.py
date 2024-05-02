@@ -469,7 +469,7 @@ class GUI:
        return
     
     # no gui mode
-    def train(self, iters=500):
+    def train(self, iters=1000):
         if iters > 0:
             self.prepare_train()
             for i in tqdm.trange(iters):
