@@ -125,19 +125,19 @@ class BasicPointCloud(NamedTuple):
 class GaussianModel:
 
     def setup_functions(self):
-        # def build_covariance_from_scaling_rotation(scaling, scaling_modifier, rotation):
-        #     # L = build_scaling_rotation(scaling_modifier * scaling, rotation)
-        #     # actual_covariance = L @ L.transpose(1, 2)
-        #     # symm = strip_symmetric(actual_covariance)
-        #     # return symm
-        def build_covariance_from_scaling_rotation(scaling, scaling_modifier, rotation, elongation_factor=None):
+        def build_covariance_from_scaling_rotation(scaling, scaling_modifier, rotation):
             L = build_scaling_rotation(scaling_modifier * scaling, rotation)
-            # Adjust the scaling matrix L to elongate one axis more than the others
-            if elongation_factor is not None:
-                L[..., 0, 0] *= (1.0 + elongation_factor)  # Elongate along the first axis
             actual_covariance = L @ L.transpose(1, 2)
             symm = strip_symmetric(actual_covariance)
             return symm
+        # def build_covariance_from_scaling_rotation(scaling, scaling_modifier, rotation, elongation_factor=None):
+        #     L = build_scaling_rotation(scaling_modifier * scaling, rotation)
+        #     # Adjust the scaling matrix L to elongate one axis more than the others
+        #     if elongation_factor is not None:
+        #         L[..., 0, 0] *= (1.0 + elongation_factor)  # Elongate along the first axis
+        #     actual_covariance = L @ L.transpose(1, 2)
+        #     symm = strip_symmetric(actual_covariance)
+        #     return symm
         
         self.scaling_activation = torch.exp
         self.scaling_inverse_activation = torch.log
@@ -151,6 +151,7 @@ class GaussianModel:
 
 
     def __init__(self, sh_degree : int):
+        # self._elongation_factors = torch.nn.Parameter(torch.ones((self._scaling.size(0), 3)).to(self.device))  # Assuming 3D scaling
         self.active_sh_degree = 0
         self.max_sh_degree = sh_degree  
         self._xyz = torch.empty(0)
