@@ -189,21 +189,18 @@ class GUI:
                 mask = out["alpha"].unsqueeze(0) # [1, 1, H, W] in [0, 1]
                 loss = loss + 1000 * (step_ratio if self.opt.warmup_rgb_loss else 1) * F.mse_loss(mask, self.input_mask_torch)
                 
-                # FIXME: 
-                # Get the covariance matrices from GaussianModel
-                # cov_matrices = self.renderer.gaussians.get_covariance(elongation_factor=0.1)
-                if self.step > 200:
-                    scaling_factors = self.renderer.gaussians.get_scaling  # Assuming this method exists and provides the scaling factors
-                        # Calculate regularization loss
-                    reg_loss = self.elongation_regularizer(scaling_factors, lambda_reg=100)
-                    loss += reg_loss
+                # if self.step > 200:
+                #     scaling_factors = self.renderer.gaussians.get_scaling  # Assuming this method exists and provides the scaling factors
+                #         # Calculate regularization loss
+                #     reg_loss = self.elongation_regularizer(scaling_factors, lambda_reg=100)
+                #     loss += reg_loss
                     
-                    # Retrieve opacity values from GaussianModel
-                    opacities = self.renderer.gaussians.get_opacity  # Assuming this returns a tensor of opacity values
+                #     # Retrieve opacity values from GaussianModel
+                #     opacities = self.renderer.gaussians.get_opacity  # Assuming this returns a tensor of opacity values
 
-                    # Calculate opacity regularization loss
-                    opacity_reg_loss = self.opacity_regularizer(opacities, lambda_reg=100)
-                    loss += opacity_reg_loss
+                #     # Calculate opacity regularization loss
+                #     opacity_reg_loss = self.opacity_regularizer(opacities, lambda_reg=100)
+                #     loss += opacity_reg_loss
                     
                 
 
@@ -463,7 +460,7 @@ class GUI:
         import matplotlib.pyplot as plt
 
         # Directory for saving plots
-        plot_dir = "visualization_plots"
+        plot_dir = "visualization_plots_without_reg"
         if not os.path.exists(plot_dir):
             os.makedirs(plot_dir)
 
