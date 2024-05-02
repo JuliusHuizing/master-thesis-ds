@@ -272,6 +272,8 @@ class GUI:
             poses = torch.from_numpy(np.stack(poses, axis=0)).to(self.device)
 
             
+            if self.enable_zero123:
+                print(f"[INFO] self.enable_zero123 is true...")
 
             if self.enable_zero123:
                 loss = loss + self.opt.lambda_zero123 * self.guidance_zero123.train_step(images, vers, hors, radii, step_ratio=step_ratio if self.opt.anneal_timestep else None, default_elevation=self.opt.elevation)
