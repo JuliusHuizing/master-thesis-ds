@@ -464,7 +464,7 @@ class GUI:
         import matplotlib.pyplot as plt
 
         # Directory for saving plots
-        plot_dir = "visualization_plots_without_reg"
+        plot_dir = "visualization_plots_with_reg"
         if not os.path.exists(plot_dir):
             os.makedirs(plot_dir)
 
