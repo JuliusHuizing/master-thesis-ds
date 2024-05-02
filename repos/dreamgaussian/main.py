@@ -19,7 +19,6 @@ import argparse
 from omegaconf import OmegaConf
 import os
 
-
 class GUI:
     def __init__(self, opt):
         self.opt = opt  # shared with the trainer's opt to support in-place modification of rendering parameters.
@@ -157,11 +156,18 @@ class GUI:
         # Penalize values far from 0 and 1 using a logistic loss
         reg_loss = lambda_reg * torch.mean(opacity * (1 - opacity))  # Simple quadratic around 0.5
         return reg_loss
-    
+    def compactness_regularizer(self, scaling_factors, lambda_compact=0.01):
+        # Sum of scaling factors for each Gaussian
+        sum_scaling = torch.sum(scaling_factors, dim=1)  # Sum of scaling factors across x, y, and z
+        
+        # Use the sum as a penalty to encourage smaller Gaussians
+        compactness_penalty = sum_scaling
+        
+        # Calculate the regularization loss as the mean of the sum penalties
+        reg_loss = lambda_compact * torch.mean(compactness_penalty)
+        return reg_loss
    
     
-    
-
     def train_step(self):
         starter = torch.cuda.Event(enable_timing=True)
         ender = torch.cuda.Event(enable_timing=True)
@@ -174,8 +180,6 @@ class GUI:
 
             # update lr
             self.renderer.gaussians.update_learning_rate(self.step)
-            
-            
             
 
             loss = 0
@@ -193,17 +197,19 @@ class GUI:
                 mask = out["alpha"].unsqueeze(0) # [1, 1, H, W] in [0, 1]
                 loss = loss + 1000 * (step_ratio if self.opt.warmup_rgb_loss else 1) * F.mse_loss(mask, self.input_mask_torch)
                 
-                ## 
+                ## own
                 scaling_factors = self.renderer.gaussians.get_scaling  # Assuming this method exists and provides the scaling factors
-                    # Calculate regularization loss
-                reg_loss = self.elongation_regularizer(scaling_factors, lambda_reg=100)
+                reg_loss = self.elongation_regularizer(scaling_factors, lambda_reg=0.1)
                 loss += reg_loss
+                
+                size_loss = self.compactness_regularizer(scaling_factors, lambda_compact=0.1)
+                loss += size_loss
                 
                 # Retrieve opacity values from GaussianModel
                 opacities = self.renderer.gaussians.get_opacity  # Assuming this returns a tensor of opacity values
 
                 # Calculate opacity regularization loss
-                opacity_reg_loss = self.opacity_regularizer(opacities, lambda_reg=100)
+                opacity_reg_loss = self.opacity_regularizer(opacities, lambda_reg=0.1)
                 loss += opacity_reg_loss
                     
                 
@@ -464,7 +470,7 @@ class GUI:
         import matplotlib.pyplot as plt
 
         # Directory for saving plots
-        plot_dir = "visualization_plots_with_reg"
+        plot_dir = "visualization_plots_with_reasonable_reg"
         if not os.path.exists(plot_dir):
             os.makedirs(plot_dir)
 
@@ -494,6 +500,18 @@ class GUI:
         plt.grid(True)
         plt.savefig(os.path.join(plot_dir, 'opacity_values_histogram.png'))  # Save the figure
         plt.close()  # Close the plot
+        
+        
+        # Assuming 'scaling_factors' is a tensor from your model
+        variance = torch.var(scaling_factors, dim=1).detach().cpu().numpy()
+        plt.figure(figsize=(10, 6))
+        plt.hist(variance, bins=30, alpha=0.7, color='blue')
+        plt.title('Distribution of Variance among Scaling Factors')
+        plt.xlabel('Variance')
+        plt.ylabel('Frequency')
+        plt.grid(True)
+        plt.savefig('variance_distribution.png')
+        plt.show()
     
     # no gui mode
     def train(self, iters=1000):
