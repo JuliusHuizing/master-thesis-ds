@@ -19,19 +19,6 @@ import argparse
 from omegaconf import OmegaConf
 import os
 
-# def elongation_regularizer(cov_matrices, lambda_reg=0.1):
-#         # Calculate eigenvalues for each covariance matrix
-#         eigenvalues = torch.linalg.eigvalsh(cov_matrices)
-#         # Sort eigenvalues in descending order
-#         sorted_eigenvalues, _ = torch.sort(eigenvalues, descending=True)
-#         # Encourage one large eigenvalue compared to others
-#         elongation_ratio = sorted_eigenvalues[..., 0] / (sorted_eigenvalues[..., 1:] + 1e-6).sum(dim=-1)
-#         # Regularization loss
-#         reg_loss = lambda_reg * torch.mean(1.0 / elongation_ratio)
-#         return reg_loss
-    
-
-
 
 class GUI:
     def __init__(self, opt):
@@ -480,8 +467,8 @@ class GUI:
         if not os.path.exists(plot_dir):
             os.makedirs(plot_dir)
 
-        scaling_factors = self.renderer.gaussians.get_scaling().detach().cpu().numpy()  # [N, 3] where N is the number of Gaussians
-        opacities = self.renderer.gaussians.get_opacity().detach().cpu().numpy()  # [N, 1]
+        scaling_factors = self.renderer.gaussians.get_scaling.detach().cpu().numpy()  # [N, 3] where N is the number of Gaussians
+        opacities = self.renderer.gaussians.get_opacity.detach().cpu().numpy()  # [N, 1]
         elongation_ratios = np.max(scaling_factors, axis=1) / np.min(scaling_factors, axis=1)
     
         # Plotting Elongation Ratios
