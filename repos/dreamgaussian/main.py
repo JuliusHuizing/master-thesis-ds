@@ -146,7 +146,11 @@ class GUI:
     def elongation_regularizer(self, scaling_factors, lambda_reg=0.01):
         # Calculate the variance along the scaling dimensions
         variance = torch.var(scaling_factors, dim=1)  # Assume scaling_factors is [N, 3] where N is the number of Gaussians
-        reg_loss = lambda_reg * torch.mean(variance)
+         # Invert the variance to penalize low variance (which corresponds to less elongation)
+        inverted_variance_penalty = 1 / (variance + 1e-6)  # Adding a small epsilon to avoid division by zero
+        
+        # Calculate the regularization loss as the mean of the inverted variance penalties
+        reg_loss = lambda_reg * torch.mean(inverted_variance_penalty)
         return reg_loss
     
     def opacity_regularizer(self, opacity, lambda_reg=0.05):
@@ -189,18 +193,18 @@ class GUI:
                 mask = out["alpha"].unsqueeze(0) # [1, 1, H, W] in [0, 1]
                 loss = loss + 1000 * (step_ratio if self.opt.warmup_rgb_loss else 1) * F.mse_loss(mask, self.input_mask_torch)
                 
-                # if self.step > 200:
-                #     scaling_factors = self.renderer.gaussians.get_scaling  # Assuming this method exists and provides the scaling factors
-                #         # Calculate regularization loss
-                #     reg_loss = self.elongation_regularizer(scaling_factors, lambda_reg=100)
-                #     loss += reg_loss
-                    
-                #     # Retrieve opacity values from GaussianModel
-                #     opacities = self.renderer.gaussians.get_opacity  # Assuming this returns a tensor of opacity values
+                ## 
+                scaling_factors = self.renderer.gaussians.get_scaling  # Assuming this method exists and provides the scaling factors
+                    # Calculate regularization loss
+                reg_loss = self.elongation_regularizer(scaling_factors, lambda_reg=100)
+                loss += reg_loss
+                
+                # Retrieve opacity values from GaussianModel
+                opacities = self.renderer.gaussians.get_opacity  # Assuming this returns a tensor of opacity values
 
-                #     # Calculate opacity regularization loss
-                #     opacity_reg_loss = self.opacity_regularizer(opacities, lambda_reg=100)
-                #     loss += opacity_reg_loss
+                # Calculate opacity regularization loss
+                opacity_reg_loss = self.opacity_regularizer(opacities, lambda_reg=100)
+                loss += opacity_reg_loss
                     
                 
 
