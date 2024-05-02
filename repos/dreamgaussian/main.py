@@ -467,6 +467,43 @@ class GUI:
 
     def render(self):
        return
+   
+    def visualize_gaussian_distribution(self, gaussians, image_size=512):
+        import os
+        import numpy as np
+        import matplotlib.pyplot as plt
+
+        # Directory for saving plots
+        plot_dir = "visualization_plots"
+        if not os.path.exists(plot_dir):
+            os.makedirs(plot_dir)
+
+        scaling_factors = self.renderer.gaussians.get_scaling().detach().cpu().numpy()  # [N, 3] where N is the number of Gaussians
+        opacities = self.renderer.gaussians.get_opacity().detach().cpu().numpy()  # [N, 1]
+        elongation_ratios = np.max(scaling_factors, axis=1) / np.min(scaling_factors, axis=1)
+    
+        # Plotting Elongation Ratios
+        plt.figure(figsize=(10, 5))
+        plt.hist(elongation_ratios, bins=30, color='skyblue', alpha=0.7)
+        plt.title('Distribution of Elongation Ratios')
+        plt.xlabel('Elongation Ratio (Max scaling factor / Min scaling factor)')
+        plt.ylabel('Frequency')
+        plt.grid(True)
+        plot_path = os.path.join(plot_dir, 'elongation_ratios_histogram.png')
+        plt.savefig(plot_path)  # Save the figure
+        plt.close()  # Close the plot to free up memory
+        print(f"Elongation ratios histogram saved to {plot_path}")
+        
+        
+        # Plotting Opacity Distributions
+        plt.figure(figsize=(10, 5))
+        plt.hist(opacities, bins=30, color='salmon', alpha=0.7)
+        plt.title('Distribution of Opacity Values')
+        plt.xlabel('Opacity')
+        plt.ylabel('Frequency')
+        plt.grid(True)
+        plt.savefig(os.path.join(plot_dir, 'opacity_values_histogram.png'))  # Save the figure
+        plt.close()  # Close the plot
     
     # no gui mode
     def train(self, iters=1000):
@@ -474,16 +511,18 @@ class GUI:
             self.prepare_train()
             for i in tqdm.trange(iters):
                 self.train_step()
+            # visualize gaussian distribution
+            self.visualize_gaussian_distribution(self.renderer.gaussians) 
             # do a last prune
             self.renderer.gaussians.prune(min_opacity=0.01, extent=1, max_screen_size=1)
         # save
         
-        self.save_model(mode='model')
-        self.save_model(mode='geo+tex')
+        # self.save_model(mode='model')
+        # self.save_model(mode='geo+tex')
         
-        print(f"[INFO] saving random images!")
-        save_dir = "rendered_images"
-        os.makedirs(save_dir, exist_ok=True) 
+        # print(f"[INFO] saving random images!")
+        # save_dir = "rendered_images"
+        # os.makedirs(save_dir, exist_ok=True) 
         
             
         # Example function to generate camera positions with overlap and varied viewpoints

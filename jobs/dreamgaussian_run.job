@@ -31,15 +31,21 @@ python process.py data/name.jpg
 python main.py --config configs/image.yaml input=data/name_rgba.png save_path=name
 
 
+cd $HOME/master-thesis-ds/
+git add .
+git commit -m "automatic commit: dream gaussian job results"
+git push
+
+
 # python main2.py --config configs/image.yaml input=data/name_rgba.png save_path=name
 
 # save 360 degree video of mesh (can run without gui)
 # kire logs/name.obj --save_video name.mp4 --wogui
 
-# save 8 view images of mesh (can run without gui)
-kire logs/name.obj --save images/name/ --wogui
+# # save 8 view images of mesh (can run without gui)
+# kire logs/name.obj --save images/name/ --wogui
 
-### evaluation of CLIP-similarity
-python -m kiui.cli.clip_sim data/name_rgba.png logs/name.obj
+# ### evaluation of CLIP-similarity
+# python -m kiui.cli.clip_sim data/name_rgba.png logs/name.obj
 
 
