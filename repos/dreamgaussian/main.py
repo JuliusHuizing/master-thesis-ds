@@ -30,11 +30,7 @@ import os
 #         reg_loss = lambda_reg * torch.mean(1.0 / elongation_ratio)
 #         return reg_loss
     
-def elongation_regularizer(scaling_factors, lambda_reg=0.01):
-    # Calculate the variance along the scaling dimensions
-    variance = torch.var(scaling_factors, dim=1)  # Assume scaling_factors is [N, 3] where N is the number of Gaussians
-    reg_loss = lambda_reg * torch.mean(variance)
-    return reg_loss
+
 
 
 class GUI:
@@ -159,6 +155,21 @@ class GUI:
         with torch.no_grad():
             if self.enable_zero123:
                 self.guidance_zero123.get_img_embeds(self.input_img_torch)
+                
+    def elongation_regularizer(self, scaling_factors, lambda_reg=0.01):
+        # Calculate the variance along the scaling dimensions
+        variance = torch.var(scaling_factors, dim=1)  # Assume scaling_factors is [N, 3] where N is the number of Gaussians
+        reg_loss = lambda_reg * torch.mean(variance)
+        return reg_loss
+    
+    def opacity_regularizer(self, opacity, lambda_reg=0.05):
+        # Penalize values far from 0 and 1 using a logistic loss
+        reg_loss = lambda_reg * torch.mean(opacity * (1 - opacity))  # Simple quadratic around 0.5
+        return reg_loss
+    
+   
+    
+    
 
     def train_step(self):
         starter = torch.cuda.Event(enable_timing=True)
@@ -197,8 +208,17 @@ class GUI:
                 if self.step > 200:
                     scaling_factors = self.renderer.gaussians.get_scaling  # Assuming this method exists and provides the scaling factors
                         # Calculate regularization loss
-                    reg_loss = elongation_regularizer(scaling_factors, lambda_reg=100)
+                    reg_loss = self.elongation_regularizer(scaling_factors, lambda_reg=100)
                     loss += reg_loss
+                    
+                    # Retrieve opacity values from GaussianModel
+                    opacities = self.renderer.gaussians.get_opacity  # Assuming this returns a tensor of opacity values
+
+                    # Calculate opacity regularization loss
+                    opacity_reg_loss = self.opacity_regularizer(opacities, lambda_reg=100)
+                    loss += opacity_reg_loss
+                    
+                
 
 
             ### novel view (manual batch)
