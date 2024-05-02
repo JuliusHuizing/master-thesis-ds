@@ -197,7 +197,7 @@ class GUI:
                 if self.step > 200:
                     scaling_factors = self.renderer.gaussians.get_scaling  # Assuming this method exists and provides the scaling factors
                         # Calculate regularization loss
-                    reg_loss = elongation_regularizer(scaling_factors, lambda_reg=0.01)
+                    reg_loss = elongation_regularizer(scaling_factors, lambda_reg=0.1)
                     loss += reg_loss
 
 
