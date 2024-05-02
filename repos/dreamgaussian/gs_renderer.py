@@ -125,8 +125,16 @@ class BasicPointCloud(NamedTuple):
 class GaussianModel:
 
     def setup_functions(self):
-        def build_covariance_from_scaling_rotation(scaling, scaling_modifier, rotation):
+        # def build_covariance_from_scaling_rotation(scaling, scaling_modifier, rotation):
+        #     # L = build_scaling_rotation(scaling_modifier * scaling, rotation)
+        #     # actual_covariance = L @ L.transpose(1, 2)
+        #     # symm = strip_symmetric(actual_covariance)
+        #     # return symm
+        def build_covariance_from_scaling_rotation(scaling, scaling_modifier, rotation, elongation_factor=None):
             L = build_scaling_rotation(scaling_modifier * scaling, rotation)
+            # Adjust the scaling matrix L to elongate one axis more than the others
+            if elongation_factor is not None:
+                L[..., 0, 0] *= (1.0 + elongation_factor)  # Elongate along the first axis
             actual_covariance = L @ L.transpose(1, 2)
             symm = strip_symmetric(actual_covariance)
             return symm

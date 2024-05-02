@@ -19,6 +19,24 @@ import argparse
 from omegaconf import OmegaConf
 import os
 
+# def elongation_regularizer(cov_matrices, lambda_reg=0.1):
+#         # Calculate eigenvalues for each covariance matrix
+#         eigenvalues = torch.linalg.eigvalsh(cov_matrices)
+#         # Sort eigenvalues in descending order
+#         sorted_eigenvalues, _ = torch.sort(eigenvalues, descending=True)
+#         # Encourage one large eigenvalue compared to others
+#         elongation_ratio = sorted_eigenvalues[..., 0] / (sorted_eigenvalues[..., 1:] + 1e-6).sum(dim=-1)
+#         # Regularization loss
+#         reg_loss = lambda_reg * torch.mean(1.0 / elongation_ratio)
+#         return reg_loss
+    
+def elongation_regularizer(scaling_factors, lambda_reg=0.01):
+    # Calculate the variance along the scaling dimensions
+    variance = torch.var(scaling_factors, dim=1)  # Assume scaling_factors is [N, 3] where N is the number of Gaussians
+    reg_loss = lambda_reg * torch.mean(variance)
+    return reg_loss
+
+
 class GUI:
     def __init__(self, opt):
         self.opt = opt  # shared with the trainer's opt to support in-place modification of rendering parameters.
@@ -89,6 +107,8 @@ class GUI:
         torch.backends.cudnn.benchmark = True
 
         self.last_seed = seed
+        
+  
 
     def prepare_train(self):
 
@@ -152,6 +172,9 @@ class GUI:
 
             # update lr
             self.renderer.gaussians.update_learning_rate(self.step)
+            
+            
+            
 
             loss = 0
 
@@ -167,6 +190,16 @@ class GUI:
                 # mask loss
                 mask = out["alpha"].unsqueeze(0) # [1, 1, H, W] in [0, 1]
                 loss = loss + 1000 * (step_ratio if self.opt.warmup_rgb_loss else 1) * F.mse_loss(mask, self.input_mask_torch)
+                
+                # FIXME: 
+                # Get the covariance matrices from GaussianModel
+                # cov_matrices = self.renderer.gaussians.get_covariance(elongation_factor=0.1)
+                if self.step > 200:
+                    scaling_factors = self.renderer.gaussians.get_scaling  # Assuming this method exists and provides the scaling factors
+                        # Calculate regularization loss
+                    reg_loss = elongation_regularizer(scaling_factors, lambda_reg=0.01)
+                    loss += reg_loss
+
 
             ### novel view (manual batch)
             render_resolution = 256 if step_ratio < 0.3 else (512 if step_ratio < 0.6 else 1028)
