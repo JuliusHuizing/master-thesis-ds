@@ -31,6 +31,7 @@ if __name__ == "__main__":
         # Get values from your preprocessing_config dictionary
         size = preprocessing_config['size']
         recenter = preprocessing_config['recenter']
+        border_ratio = preprocessing_config['border_ratio']
         # Construct the command with arguments
         command = [
             'python', DREAMGAUSSIAN_PATH+"process.py",
@@ -40,7 +41,7 @@ if __name__ == "__main__":
         ]
 
         # Execute the command
-        result = subprocess.run(command)
+        result = subprocess.run(command, check=True, text=True, capture_output=True)
         
         # runpy.run_path(DREAMGAUSSIAN_PATH + f"/process.py --size {preprocessing_config['size']} --border_ratio --recenter {preprocessing_config['recenter']}")
         logging.info("✅ Preprocessing pipeline complete.")

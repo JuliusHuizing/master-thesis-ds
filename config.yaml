@@ -6,6 +6,7 @@ paths:
 preprocess:
   size: 256
   recenter: True
+  border_ratio: 0.2
 
 # optimize:
 
