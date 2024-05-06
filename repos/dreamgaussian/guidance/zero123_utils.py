@@ -27,8 +27,7 @@ class Zero123(nn.Module):
 
         self.pipe = Zero123Pipeline.from_pretrained(
             model_key,
-            torch_dtype=self.dtype,
-            trust_remote_code=True,
+            torch_dtype=self.dtype
         ).to(self.device)
 
         # stable-zero123 has a different camera embedding

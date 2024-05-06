@@ -1,6 +1,6 @@
 #!/bin/bash
 
-latest_file=$(ls -v ./logs | grep '\.out$' | tail -n 1)
+latest_file=$(ls -v logs | grep '\.out$' | tail -n 1)
 
 if [ -z "$latest_file" ]; then
   echo "No .out file found."

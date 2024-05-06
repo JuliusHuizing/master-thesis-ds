@@ -5,6 +5,7 @@ paths:
   dream_gaussian_repo_path: "repos/dreamgaussian/"
   preprocessing_output_path: "results/preprocessing/"
   image_progression_output_path: "results/image_progression/"
+  dream_gaussian_results_path: "results/dream_gaussian/"
   
 preprocess:
   size: 256
@@ -28,7 +29,7 @@ dreamgaussian:
   density_thresh: 1
 
   ### Output
-  outdir: logs
+  outdir: "results/dream_gaussian/"
   mesh_format: obj
   save_path: ???
 
