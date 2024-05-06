@@ -46,7 +46,14 @@ if __name__ == "__main__":
         # runpy.run_path(DREAMGAUSSIAN_PATH + f"/process.py --size {preprocessing_config['size']} --border_ratio --recenter {preprocessing_config['recenter']}")
         logging.info("✅ Preprocessing pipeline complete.")
         
-        
+    except subprocess.CalledProcessError as cpe:
+        # Log the output and error output from the subprocess
+        logging.error("❌ Subprocess error with non-zero exit status %s", cpe.returncode)
+        if cpe.stdout:
+            logging.error("Standard output of the subprocess: %s", cpe.stdout)
+        if cpe.stderr:
+            logging.error("Standard error of the subprocess: %s", cpe.stderr)
+        raise  # Re-raise the exception to handle it further if needed
     except Exception as e:
         logging.error(f" ❌ Error in pipeline: {e}")
         raise e
