@@ -22,8 +22,8 @@ source activate dreamgaussianV2
 
 python pipeline.py
 
-git add .
-git commit -m "auto commit from snellius"
-git push
+# git add .
+# git commit -m "auto commit from snellius"
+# git push
 
 
