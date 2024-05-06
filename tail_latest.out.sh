@@ -2,7 +2,7 @@
 
 latest_file=$(ls -v logs | grep '\.out$' | tail -n 1)
 
-if [ -z "$latest_file" ]; then
+if [ -z "logs/$latest_file" ]; then
   echo "No .out file found."
   exit 1
 fi
