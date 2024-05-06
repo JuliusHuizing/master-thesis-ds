@@ -39,6 +39,7 @@ if __name__ == '__main__':
     logging.getLogger().setLevel(logging.INFO)
     parser = argparse.ArgumentParser()
     parser.add_argument('path', type=str, help="path to image (png, jpeg, etc.)")
+    parser.add_argument('--output_dir', type=str, help="path to output directory, if not specified, will output to the same directory as the input image")
     parser.add_argument('--model', default='u2net', type=str, help="rembg model, see https://github.com/danielgatis/rembg#models")
     parser.add_argument('--size', default=256, type=int, help="output resolution")
     parser.add_argument('--border_ratio', default=0.2, type=float, help="output border ratio")
@@ -50,10 +51,10 @@ if __name__ == '__main__':
     if os.path.isdir(opt.path):
         logging.info(f'Processing directory {opt.path}...')
         files = glob.glob(f'{opt.path}/*')
-        out_dir = opt.path
+        out_dir = opt.output_dir if opt.output_dir else opt.path
     else:
         files = [opt.path]
-        out_dir = os.path.dirname(opt.path)
+        out_dir = opt.output_dir if opt.output_dir else os.path.dirname(opt.path)
     
     for file in files:
         out_base = os.path.basename(file).split('.')[0]

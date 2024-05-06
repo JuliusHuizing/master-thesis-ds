@@ -24,7 +24,12 @@ if __name__ == "__main__":
         logging.info("Loading paths...")
         DREAMGAUSSIAN_PATH = config["paths"]["dream_gaussian_repo_path"]
         INPUT_IMAGE_PATH = config["paths"]["input_image_path"]
+        PREPROCCSING_OUTPUT_PATH = config["paths"]["preprocessing_output_path"]
         logging.info("✅ Paths loaded.")
+        
+        logging.info("Creating paths if they don't exist...")
+        subprocess.run(["mkdir", "-p", PREPROCCSING_OUTPUT_PATH])
+        logging.info("✅ Paths created.")
         
         
         
@@ -42,6 +47,7 @@ if __name__ == "__main__":
         command = [
             'python', DREAMGAUSSIAN_PATH+"process.py",
             INPUT_IMAGE_PATH,
+            '--output_dir', PREPROCCSING_OUTPUT_PATH,
             '--size', str(size),
             '--border_ratio', str(border_ratio),
             '--recenter', str(recenter)
@@ -49,6 +55,8 @@ if __name__ == "__main__":
 
         # Execute the command
         result = subprocess.run(command, check=True, text=True, capture_output=True)
+        
+        
         
         # runpy.run_path(DREAMGAUSSIAN_PATH + f"/process.py --size {preprocessing_config['size']} --border_ratio --recenter {preprocessing_config['recenter']}")
         logging.info("✅ Preprocessing pipeline complete.")
