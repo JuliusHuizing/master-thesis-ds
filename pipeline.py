@@ -48,9 +48,7 @@ if __name__ == "__main__":
         ]
 
         # Execute the command
-        result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True, text=True, capture_output=True)
-        print("STDOUT:", result.stdout)
-        print("STDERR:", result.stderr)
+        result = subprocess.run(command, check=True, text=True, capture_output=True)
         
         # runpy.run_path(DREAMGAUSSIAN_PATH + f"/process.py --size {preprocessing_config['size']} --border_ratio --recenter {preprocessing_config['recenter']}")
         logging.info("✅ Preprocessing pipeline complete.")
