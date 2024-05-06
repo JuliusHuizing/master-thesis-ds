@@ -24,7 +24,7 @@ if __name__ == "__main__":
         
         logging.info("Initializing preprocessing pipeline...")
         # isolate integration step as separate phaase
-        preprocessing_config = config["preprocess"]["integrate"]
+        preprocessing_config = config["preprocess"]
         
         logging.info("Running preprocessing pipeline...")
 
