@@ -5,9 +5,14 @@ from utils.yaml_utils import load_yaml_file
 import logging
 import runpy
 import subprocess
+import sys
 
 if __name__ == "__main__":
-    logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+    # Configure logging to write to stdout
+    logging.basicConfig(handlers=[logging.StreamHandler(sys.stdout)],
+                    level=logging.INFO,
+                    format='[%(levelname)s] %(message)s')
+    # logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
     logging.getLogger().setLevel(logging.INFO)
     # Configure logging
     try:
@@ -43,7 +48,9 @@ if __name__ == "__main__":
         ]
 
         # Execute the command
-        result = subprocess.run(command, check=True, text=True, capture_output=True)
+        result = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True, text=True, capture_output=True)
+        print("STDOUT:", result.stdout)
+        print("STDERR:", result.stderr)
         
         # runpy.run_path(DREAMGAUSSIAN_PATH + f"/process.py --size {preprocessing_config['size']} --border_ratio --recenter {preprocessing_config['recenter']}")
         logging.info("✅ Preprocessing pipeline complete.")
