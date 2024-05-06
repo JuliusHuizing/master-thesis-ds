@@ -6,7 +6,9 @@ import logging
 import runpy
 
 if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
     logging.getLogger().setLevel(logging.INFO)
+    # Configure logging
     try:
         logging.info("Loading configuration...")
         config = load_yaml_file('config.yaml')
