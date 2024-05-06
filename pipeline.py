@@ -32,8 +32,6 @@ if __name__ == "__main__":
         subprocess.run(["mkdir", "-p", PREPROCCSING_OUTPUT_PATH])
         logging.info("✅ Paths created.")
         
-        
-        
         logging.info("Initializing preprocessing pipeline...")
         # isolate integration step as separate phaase
         preprocessing_config = config["preprocess"]
@@ -61,7 +59,7 @@ if __name__ == "__main__":
         logging.info("Running DreamGaussian pipeline...")
         command = [
             "python", DREAMGAUSSIAN_PATH+"main.py", 
-            "--config", "configs/image.yaml", 
+            f"--config", DREAMGAUSSIAN_PATH+"configs/image.yaml", 
             f"input={PREPROCESSED_IMAGE_PATH}", 
             "save_path=name"
         ]
