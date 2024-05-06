@@ -20,5 +20,4 @@ git pull
 cd $HOME/master-thesis-ds/repos/SuGaR
 conda env create -f environment.yml
 
-print("trying to activate environment")
-conda activate sugar
+source activate sugar2

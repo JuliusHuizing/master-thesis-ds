@@ -1,0 +1,40 @@
+============================================================================================== 
+Warning! Mixing Conda and module environments may lead to corruption of the
+user environment. 
+We do not recommend users mixing those two environments unless absolutely
+necessary. Note that 
+SURF does not provide any support for Conda environment.
+For more information, please refer to our software policy page:
+https://servicedesk.surf.nl/wiki/display/WIKI/Software+policy+Snellius#SoftwarepolicySnellius-UseofAnacondaandMinicondaenvironmentsonSnellius 
+
+Remember that many packages have already been installed on the system and can
+be loaded using 
+the 'module load <package__name>' command. If you are uncertain if a package is
+already available 
+on the system, please use 'module avail' or 'module spider' to search for it.
+============================================================================================== 
+Lmod has detected the following error: These module(s) or extension(s) exist
+but cannot be loaded as requested: "ImageMagick/7.1.1-15-GCCcore-12.3.0"
+   Try: "module spider ImageMagick/7.1.1-15-GCCcore-12.3.0" to see how to load
+the module(s).
+
+
+
+E20240501 13:49:18.141255 22508133707776 logging.cc:56] [option_manager.cc:813] Check failed: ExistsDir(*image_path)
+E20240501 13:49:18.141380 22508133707776 option_manager.cc:879] Invalid options provided.
+ERROR:root:Feature extraction failed with code 256. Exiting.
+
+JOB STATISTICS
+==============
+Job ID: 6119136
+Cluster: snellius
+User/Group: jhuizing/jhuizing
+State: RUNNING
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 00:00:00
+CPU Efficiency: 0.00% of 00:04:48 core-walltime
+Job Wall-clock time: 00:00:16
+Memory Utilized: 0.00 MB (estimated maximum)
+Memory Efficiency: 0.00% of 120.00 GB (120.00 GB/node)
+WARNING: Efficiency statistics may be misleading for RUNNING jobs.

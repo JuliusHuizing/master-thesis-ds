@@ -454,3 +454,94 @@ Traceback (most recent call last):
     from . import _C
 ImportError: /home/jhuizing/.conda/envs/lgm/lib/python3.8/site-packages/diff_gaussian_rasterization/_C.cpython-38-x86_64-linux-gnu.so: undefined symbol: _ZN2at4_ops5zeros4callEN3c108ArrayRefINS2_6SymIntEEENS2_8optionalINS2_10ScalarTypeEEENS6_INS2_6LayoutEEENS6_INS2_6DeviceEEENS6_IbEE
 ```
+
+
+Sugars env can be isntalled without errors, but get this runtime error when running the instlal_sugar_job:
+
+```error
+Traceback (most recent call last):
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/train.py", line 3, in <module>
+    from sugar_trainers.coarse_density import coarse_training_with_density_regularization
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/sugar_trainers/coarse_density.py", line 5, in <module>
+    from pytorch3d.loss import mesh_laplacian_smoothing, mesh_normal_consistency
+  File "/home/jhuizing/.conda/envs/sugar2/lib/python3.9/site-packages/pytorch3d/loss/__init__.py", line 8, in <module>
+    from .chamfer import chamfer_distance
+  File "/home/jhuizing/.conda/envs/sugar2/lib/python3.9/site-packages/pytorch3d/loss/chamfer.py", line 11, in <module>
+    from pytorch3d.ops.knn import knn_gather, knn_points
+  File "/home/jhuizing/.conda/envs/sugar2/lib/python3.9/site-packages/pytorch3d/ops/__init__.py", line 7, in <module>
+    from .ball_query import ball_query
+  File "/home/jhuizing/.conda/envs/sugar2/lib/python3.9/site-packages/pytorch3d/ops/ball_query.py", line 10, in <module>
+    from pytorch3d import _C
+ImportError: /home/jhuizing/.conda/envs/sugar2/lib/python3.9/site-packages/pytorch3d/_C.cpython-39-x86_64-linux-gnu.so: undefined symbol: _ZN2at4_ops10zeros_like4callERKNS_6TensorEN3c108optionalINS5_10ScalarTypeEEENS6_INS5_6LayoutEEENS6_INS5_6DeviceEEENS6_IbEENS6_INS5_12MemoryFormatEEE
+```
+
+
+using python 3.8 leads to a failure when trying to solve the envrionment...
+
+https://github.com/facebookresearch/pytorch3d/blob/main/INSTALL.md
+
+But, Again, we don't seem alone:
+
+https://github.com/Anttwo/SuGaR/issues/136
+
+but applying this pip install inside the activated env leads to yet another error:
+
+```error 
+UserWarning: The environment variable `CUB_HOME` was not found. NVIDIA CUB is required for compilation and can be downloaded from `https://github.com/NVIDIA/cub/releases`. You can unpack it to a location of your choice and set the environment variable `CUB_HOME` to the folder containing the `CMakeListst.txt` file.
+
+```
+
+Inspecting this issue page: https://github.com/facebookresearch/pytorch3d/blob/main/INSTALL.md
+
+indeeds points out that for Cuda >= 11.8 (which we use and which the environment.yyml of SuGAr defines as requirement) the CUB library needs to be available...
+
+perhaps check:
+https://github.com/facebookresearch/pytorch3d/issues/1207
+
+
+Using this pip install "git+https://github.com/facebookresearch/pytorch3d.git@stable"
+
+Inside the job does give yet another error again, this time complaining that the cuda versions don't match. However, we also saw this problem within the DG framework, which we could solve by also pip installing a specific version of Cuda.. (even though the environmnent.yaml defines it...)
+
+
+
+Now we seem to run into this error, in the actual 
+
+So apparantly, the sugar framework expects the original gaussian splatting framework as dependency (i.e. its knn and rasterizaiton submodules), although it does not define that in the environment.yaml.
+
+so we prepend with:
+
+pip install gaussian_splatting/simple-knn
+pip install gaussian_splatting/diff-gaussian-rasterization
+
+
+we can now run, but get the run time after a very while:
+
+
+```error
+-----Foreground mesh-----
+
+[WARNING] Foreground is empty.
+
+-----Background mesh-----
+
+[WARNING] Background is empty.
+Finished computing meshes.
+Foreground mesh: None
+Background mesh: None
+
+-----Decimating and cleaning meshes-----
+
+Processing decimation target: 1000000
+Cleaning mesh...
+Traceback (most recent call last):
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/train.py", line 152, in <module>
+    coarse_mesh_path = extract_mesh_from_coarse_sugar(coarse_mesh_args)[0]
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/sugar_extractors/coarse_mesh.py", line 475, in extract_mesh_from_coarse_sugar
+    raise ValueError("Both foreground and background meshes are empty. Please provide a valid bounding box for the scene.")
+ValueError: Both foreground and background meshes are empty. Please provide a valid bounding box for the scene.
+
+
+```
+
+This might be because our colmap is so sparse...

@@ -1,386 +1,0 @@
-============================================================================================== 
-Warning! Mixing Conda and module environments may lead to corruption of the
-user environment. 
-We do not recommend users mixing those two environments unless absolutely
-necessary. Note that 
-SURF does not provide any support for Conda environment.
-For more information, please refer to our software policy page:
-https://servicedesk.surf.nl/wiki/display/WIKI/Software+policy+Snellius#SoftwarepolicySnellius-UseofAnacondaandMinicondaenvironmentsonSnellius 
-
-Remember that many packages have already been installed on the system and can
-be loaded using 
-the 'module load <package__name>' command. If you are uncertain if a package is
-already available 
-on the system, please use 'module avail' or 'module spider' to search for it.
-============================================================================================== 
-Current branch main is up to date.
-Collecting package metadata (repodata.json): ...working... WARNING conda.models.version:get_matcher(535): Using .* with relational operator is superfluous and deprecated and will be removed in a future version of conda. Your spec was 1.9.0.*, but conda is ignoring the .* and treating it as 1.9.0
-WARNING conda.models.version:get_matcher(535): Using .* with relational operator is superfluous and deprecated and will be removed in a future version of conda. Your spec was 1.7.1.*, but conda is ignoring the .* and treating it as 1.7.1
-WARNING conda.models.version:get_matcher(535): Using .* with relational operator is superfluous and deprecated and will be removed in a future version of conda. Your spec was 1.8.0.*, but conda is ignoring the .* and treating it as 1.8.0
-WARNING conda.models.version:get_matcher(535): Using .* with relational operator is superfluous and deprecated and will be removed in a future version of conda. Your spec was 1.6.0.*, but conda is ignoring the .* and treating it as 1.6.0
-done
-Solving environment: ...working... done
-
-
-==> WARNING: A newer version of conda exists. <==
-  current version: 4.12.0
-  latest version: 24.3.0
-
-Please update conda by running
-
-    $ conda update -n base -c defaults conda
-
-
-
-Downloading and Extracting Packages
-parso-0.8.3          | 69 KB     |            |   0% parso-0.8.3          | 69 KB     | ########## | 100% parso-0.8.3          | 69 KB     | ########## | 100% 
-xz-5.4.5             | 646 KB    |            |   0% xz-5.4.5             | 646 KB    | ########## | 100% xz-5.4.5             | 646 KB    | ########## | 100% 
-yacs-0.1.8           | 17 KB     |            |   0% yacs-0.1.8           | 17 KB     | ########## | 100% 
-fvcore-0.1.5.post202 | 59 KB     |            |   0% fvcore-0.1.5.post202 | 59 KB     | ########## | 100% fvcore-0.1.5.post202 | 59 KB     | ########## | 100% 
-rich-13.7.0          | 180 KB    |            |   0% rich-13.7.0          | 180 KB    | ########## | 100% rich-13.7.0          | 180 KB    | ########## | 100% 
-executing-2.0.1      | 27 KB     |            |   0% executing-2.0.1      | 27 KB     | ########## | 100% executing-2.0.1      | 27 KB     | ########## | 100% 
-webencodings-0.5.1   | 15 KB     |            |   0% webencodings-0.5.1   | 15 KB     | ########## | 100% webencodings-0.5.1   | 15 KB     | ########## | 100% 
-importlib_resources- | 29 KB     |            |   0% importlib_resources- | 29 KB     | ########## | 100% importlib_resources- | 29 KB     | ########## | 100% 
-jinja2-3.1.2         | 211 KB    |            |   0% jinja2-3.1.2         | 211 KB    | ########## | 100% jinja2-3.1.2         | 211 KB    | ########## | 100% 
-entrypoints-0.4      | 9 KB      |            |   0% entrypoints-0.4      | 9 KB      | ########## | 100% 
-platformdirs-4.1.0   | 20 KB     |            |   0% platformdirs-4.1.0   | 20 KB     | ########## | 100% platformdirs-4.1.0   | 20 KB     | ########## | 100% 
-pexpect-4.9.0        | 52 KB     |            |   0% pexpect-4.9.0        | 52 KB     | ########## | 100% pexpect-4.9.0        | 52 KB     | ########## | 100% 
-pure_eval-0.2.2      | 14 KB     |            |   0% pure_eval-0.2.2      | 14 KB     | ########## | 100% 
-termcolor-2.3.0      | 12 KB     |            |   0% termcolor-2.3.0      | 12 KB     | ########## | 100% termcolor-2.3.0      | 12 KB     | ########## | 100% 
-jupyter-lsp-2.2.1    | 52 KB     |            |   0% jupyter-lsp-2.2.1    | 52 KB     | ########## | 100% jupyter-lsp-2.2.1    | 52 KB     | ########## | 100% 
-soupsieve-2.5        | 36 KB     |            |   0% soupsieve-2.5        | 36 KB     | ########## | 100% soupsieve-2.5        | 36 KB     | ########## | 100% 
-markupsafe-2.1.1     | 21 KB     |            |   0% markupsafe-2.1.1     | 21 KB     | ########## | 100% markupsafe-2.1.1     | 21 KB     | ########## | 100% 
-rfc3986-validator-0. | 8 KB      |            |   0% rfc3986-validator-0. | 8 KB      | ########## | 100% 
-nodejs-6.13.1        | 11.9 MB   |            |   0% nodejs-6.13.1        | 11.9 MB   | #########2 |  92% nodejs-6.13.1        | 11.9 MB   | ########## | 100% 
-bleach-6.1.0         | 128 KB    |            |   0% bleach-6.1.0         | 128 KB    | ########## | 100% bleach-6.1.0         | 128 KB    | ########## | 100% 
-pytorch3d-0.7.4      | 27.4 MB   |            |   0% pytorch3d-0.7.4      | 27.4 MB   | ########## | 100% pytorch3d-0.7.4      | 27.4 MB   | ########## | 100% 
-pillow-10.0.1        | 745 KB    |            |   0% pillow-10.0.1        | 745 KB    | ########## | 100% pillow-10.0.1        | 745 KB    | ########## | 100% 
-anyio-4.1.0          | 98 KB     |            |   0% anyio-4.1.0          | 98 KB     | ########## | 100% anyio-4.1.0          | 98 KB     | ########## | 100% 
-libwebp-1.3.2        | 87 KB     |            |   0% libwebp-1.3.2        | 87 KB     | ########## | 100% libwebp-1.3.2        | 87 KB     | ########## | 100% 
-torchtriton-2.0.0    | 62.5 MB   |            |   0% torchtriton-2.0.0    | 62.5 MB   | #6         |  17% torchtriton-2.0.0    | 62.5 MB   | ###6       |  36% torchtriton-2.0.0    | 62.5 MB   | #####6     |  56% torchtriton-2.0.0    | 62.5 MB   | #########1 |  91% torchtriton-2.0.0    | 62.5 MB   | ########## | 100% 
-tinycss2-1.2.1       | 23 KB     |            |   0% tinycss2-1.2.1       | 23 KB     | ########## | 100% 
-asttokens-2.4.1      | 28 KB     |            |   0% asttokens-2.4.1      | 28 KB     | ########## | 100% asttokens-2.4.1      | 28 KB     | ########## | 100% 
-pkgutil-resolve-name | 11 KB     |            |   0% pkgutil-resolve-name | 11 KB     | ########## | 100% pkgutil-resolve-name | 11 KB     | ########## | 100% 
-libcurand-10.3.4.101 | 51.8 MB   |            |   0% libcurand-10.3.4.101 | 51.8 MB   | ##2        |  22% libcurand-10.3.4.101 | 51.8 MB   | #####7     |  57% libcurand-10.3.4.101 | 51.8 MB   | ########6  |  87% libcurand-10.3.4.101 | 51.8 MB   | ########## | 100% 
-importlib-metadata-7 | 25 KB     |            |   0% importlib-metadata-7 | 25 KB     | ########## | 100% importlib-metadata-7 | 25 KB     | ########## | 100% 
-torchvision-0.15.2   | 7.8 MB    |            |   0% torchvision-0.15.2   | 7.8 MB    | ########## | 100% torchvision-0.15.2   | 7.8 MB    | ########## | 100% 
-iopath-0.1.9         | 42 KB     |            |   0% iopath-0.1.9         | 42 KB     | ########## | 100% iopath-0.1.9         | 42 KB     | ########## | 100% 
-yaml-0.2.5           | 87 KB     |            |   0% yaml-0.2.5           | 87 KB     | ########## | 100% yaml-0.2.5           | 87 KB     | ########## | 100% 
-jupyterlab_server-2. | 48 KB     |            |   0% jupyterlab_server-2. | 48 KB     | ########## | 100% jupyterlab_server-2. | 48 KB     | ########## | 100% 
-cached-property-1.5. | 4 KB      |            |   0% cached-property-1.5. | 4 KB      | ########## | 100% 
-tenacity-8.2.2       | 37 KB     |            |   0% tenacity-8.2.2       | 37 KB     | ########## | 100% tenacity-8.2.2       | 37 KB     | ########## | 100% 
-terminado-0.18.0     | 22 KB     |            |   0% terminado-0.18.0     | 22 KB     | ########## | 100% terminado-0.18.0     | 22 KB     | ########## | 100% 
-arrow-1.3.0          | 98 KB     |            |   0% arrow-1.3.0          | 98 KB     | ########## | 100% arrow-1.3.0          | 98 KB     | ########## | 100% 
-stack_data-0.6.2     | 26 KB     |            |   0% stack_data-0.6.2     | 26 KB     | ########## | 100% stack_data-0.6.2     | 26 KB     | ########## | 100% 
-openssl-3.0.12       | 5.2 MB    |            |   0% openssl-3.0.12       | 5.2 MB    | ########## | 100% openssl-3.0.12       | 5.2 MB    | ########## | 100% 
-ipywidgets-8.1.1     | 111 KB    |            |   0% ipywidgets-8.1.1     | 111 KB    | ########## | 100% ipywidgets-8.1.1     | 111 KB    | ########## | 100% 
-decorator-5.1.1      | 12 KB     |            |   0% decorator-5.1.1      | 12 KB     | ########## | 100% 
-uri-template-1.3.0   | 23 KB     |            |   0% uri-template-1.3.0   | 23 KB     | ########## | 100% uri-template-1.3.0   | 23 KB     | ########## | 100% 
-async-lru-2.0.4      | 15 KB     |            |   0% async-lru-2.0.4      | 15 KB     | ########## | 100% async-lru-2.0.4      | 15 KB     | ########## | 100% 
-comm-0.2.2           | 12 KB     |            |   0% comm-0.2.2           | 12 KB     | ########## | 100% comm-0.2.2           | 12 KB     | ########## | 100% 
-pickleshare-0.7.5    | 9 KB      |            |   0% pickleshare-0.7.5    | 9 KB      | ########## | 100% pickleshare-0.7.5    | 9 KB      | ########## | 100% 
-jupyter_server-2.12. | 313 KB    |            |   0% jupyter_server-2.12. | 313 KB    | ########## | 100% jupyter_server-2.12. | 313 KB    | ########## | 100% 
-giflib-5.2.1         | 80 KB     |            |   0% giflib-5.2.1         | 80 KB     | ########## | 100% giflib-5.2.1         | 80 KB     | ########## | 100% 
-notebook-shim-0.2.3  | 16 KB     |            |   0% notebook-shim-0.2.3  | 16 KB     | ########## | 100% notebook-shim-0.2.3  | 16 KB     | ########## | 100% 
-pyzmq-25.1.0         | 459 KB    |            |   0% pyzmq-25.1.0         | 459 KB    | ########## | 100% pyzmq-25.1.0         | 459 KB    | ########## | 100% 
-jupyter_events-0.9.0 | 21 KB     |            |   0% jupyter_events-0.9.0 | 21 KB     | ########## | 100% jupyter_events-0.9.0 | 21 KB     | ########## | 100% 
-attrs-23.1.0         | 54 KB     |            |   0% attrs-23.1.0         | 54 KB     | ########## | 100% attrs-23.1.0         | 54 KB     | ########## | 100% 
-websocket-client-1.7 | 46 KB     |            |   0% websocket-client-1.7 | 46 KB     | ########## | 100% websocket-client-1.7 | 46 KB     | ########## | 100% 
-types-python-dateuti | 21 KB     |            |   0% types-python-dateuti | 21 KB     | ########## | 100% types-python-dateuti | 21 KB     | ########## | 100% 
-certifi-2023.11.17   | 155 KB    |            |   0% certifi-2023.11.17   | 155 KB    | ########## | 100% certifi-2023.11.17   | 155 KB    | ########## | 100% 
-jsonpointer-2.4      | 16 KB     |            |   0% jsonpointer-2.4      | 16 KB     | ########## | 100% jsonpointer-2.4      | 16 KB     | ########## | 100% 
-pyyaml-6.0           | 178 KB    |            |   0% pyyaml-6.0           | 178 KB    | ########## | 100% 
-ipython-8.18.1       | 577 KB    |            |   0% ipython-8.18.1       | 577 KB    | ########## | 100% ipython-8.18.1       | 577 KB    | ########## | 100% 
-typing_utils-0.1.0   | 14 KB     |            |   0% typing_utils-0.1.0   | 14 KB     | ########## | 100% 
-python_abi-3.9       | 4 KB      |            |   0% python_abi-3.9       | 4 KB      | ########## | 100% 
-markdown-it-py-3.0.0 | 63 KB     |            |   0% markdown-it-py-3.0.0 | 63 KB     | ########## | 100% markdown-it-py-3.0.0 | 63 KB     | ########## | 100% 
-cached_property-1.5. | 11 KB     |            |   0% cached_property-1.5. | 11 KB     | ########## | 100% 
-python-json-logger-2 | 13 KB     |            |   0% python-json-logger-2 | 13 KB     | ########## | 100% python-json-logger-2 | 13 KB     | ########## | 100% 
-babel-2.14.0         | 7.3 MB    |            |   0% babel-2.14.0         | 7.3 MB    | ########## | 100% babel-2.14.0         | 7.3 MB    | ########## | 100% 
-numpy-base-1.26.2    | 7.1 MB    |            |   0% numpy-base-1.26.2    | 7.1 MB    | ########## | 100% numpy-base-1.26.2    | 7.1 MB    | ########## | 100% 
-torchaudio-2.0.2     | 7.5 MB    |            |   0% torchaudio-2.0.2     | 7.5 MB    | ########## | 100% torchaudio-2.0.2     | 7.5 MB    | ########## | 100% 
-beautifulsoup4-4.12. | 112 KB    |            |   0% beautifulsoup4-4.12. | 112 KB    | ########## | 100% beautifulsoup4-4.12. | 112 KB    | ########## | 100% 
-jupyterlab_pygments- | 18 KB     |            |   0% jupyterlab_pygments- | 18 KB     | ########## | 100% jupyterlab_pygments- | 18 KB     | ########## | 100% 
-matplotlib-inline-0. | 12 KB     |            |   0% matplotlib-inline-0. | 12 KB     | ########## | 100% 
-widgetsnbextension-4 | 865 KB    |            |   0% widgetsnbextension-4 | 865 KB    | ########## | 100% widgetsnbextension-4 | 865 KB    | ########## | 100% 
-pyopenssl-23.2.0     | 96 KB     |            |   0% pyopenssl-23.2.0     | 96 KB     | ########## | 100% pyopenssl-23.2.0     | 96 KB     | ########## | 100% 
-nbconvert-core-7.12. | 184 KB    |            |   0% nbconvert-core-7.12. | 184 KB    | ########## | 100% nbconvert-core-7.12. | 184 KB    | ########## | 100% 
-defusedxml-0.7.1     | 23 KB     |            |   0% defusedxml-0.7.1     | 23 KB     | ########## | 100% 
-jupyterlab_widgets-3 | 182 KB    |            |   0% jupyterlab_widgets-3 | 182 KB    | ########## | 100% jupyterlab_widgets-3 | 182 KB    | ########## | 100% 
-libcufile-1.8.1.2    | 1.0 MB    |            |   0% libcufile-1.8.1.2    | 1.0 MB    | ########## | 100% libcufile-1.8.1.2    | 1.0 MB    | ########## | 100% 
-python-fastjsonschem | 221 KB    |            |   0% python-fastjsonschem | 221 KB    | ########## | 100% python-fastjsonschem | 221 KB    | ########## | 100% 
-pytz-2023.3.post1    | 183 KB    |            |   0% pytz-2023.3.post1    | 183 KB    | ########## | 100% pytz-2023.3.post1    | 183 KB    | ########## | 100% 
-webcolors-1.13       | 18 KB     |            |   0% webcolors-1.13       | 18 KB     | ########## | 100% webcolors-1.13       | 18 KB     | ########## | 100% 
-jsonschema-specifica | 15 KB     |            |   0% jsonschema-specifica | 15 KB     | ########## | 100% jsonschema-specifica | 15 KB     | ########## | 100% 
-pandocfilters-1.5.0  | 11 KB     |            |   0% pandocfilters-1.5.0  | 11 KB     | ########## | 100% 
-jsonschema-with-form | 7 KB      |            |   0% jsonschema-with-form | 7 KB      | ########## | 100% jsonschema-with-form | 7 KB      | ########## | 100% 
-numpy-1.26.2         | 10 KB     |            |   0% numpy-1.26.2         | 10 KB     | ########## | 100% numpy-1.26.2         | 10 KB     | ########## | 100% 
-_libgcc_mutex-0.1    | 2 KB      |            |   0% _libgcc_mutex-0.1    | 2 KB      | ########## | 100% 
-python-dateutil-2.8. | 240 KB    |            |   0% python-dateutil-2.8. | 240 KB    | ########## | 100% 
-typing_extensions-4. | 55 KB     |            |   0% typing_extensions-4. | 55 KB     | ########## | 100% typing_extensions-4. | 55 KB     | ########## | 100% 
-blas-1.0             | 1 KB      |            |   0% blas-1.0             | 1 KB      | ########## | 100% 
-tornado-6.3.3        | 635 KB    |            |   0% tornado-6.3.3        | 635 KB    | ########## | 100% tornado-6.3.3        | 635 KB    | ########## | 100% 
-requests-2.31.0      | 96 KB     |            |   0% requests-2.31.0      | 96 KB     | ########## | 100% requests-2.31.0      | 96 KB     | ########## | 100% 
-tomli-2.0.1          | 16 KB     |            |   0% tomli-2.0.1          | 16 KB     | ########## | 100% 
-importlib_metadata-7 | 9 KB      |            |   0% importlib_metadata-7 | 9 KB      | ########## | 100% importlib_metadata-7 | 9 KB      | ########## | 100% 
-nbformat-5.10.4      | 99 KB     |            |   0% nbformat-5.10.4      | 99 KB     | ########## | 100% nbformat-5.10.4      | 99 KB     | ########## | 100% 
-python-3.9.18        | 25.1 MB   |            |   0% python-3.9.18        | 25.1 MB   | #########8 |  99% python-3.9.18        | 25.1 MB   | ########## | 100% 
-urllib3-1.26.18      | 198 KB    |            |   0% urllib3-1.26.18      | 198 KB    | ########## | 100% urllib3-1.26.18      | 198 KB    | ########## | 100% 
-nbclient-0.8.0       | 63 KB     |            |   0% nbclient-0.8.0       | 63 KB     | ########## | 100% nbclient-0.8.0       | 63 KB     | ########## | 100% 
-mdurl-0.1.0          | 13 KB     |            |   0% mdurl-0.1.0          | 13 KB     | ########## | 100% 
-isoduration-20.11.0  | 17 KB     |            |   0% isoduration-20.11.0  | 17 KB     | ########## | 100% 
-send2trash-1.8.2     | 22 KB     |            |   0% send2trash-1.8.2     | 22 KB     | ########## | 100% send2trash-1.8.2     | 22 KB     | ########## | 100% 
-ipython_genutils-0.2 | 21 KB     |            |   0% ipython_genutils-0.2 | 21 KB     | ########## | 100% 
-fqdn-1.5.1           | 14 KB     |            |   0% fqdn-1.5.1           | 14 KB     | ########## | 100% 
-tabulate-0.9.0       | 35 KB     |            |   0% tabulate-0.9.0       | 35 KB     | ########## | 100% 
-referencing-0.32.0   | 38 KB     |            |   0% referencing-0.32.0   | 38 KB     | ########## | 100% referencing-0.32.0   | 38 KB     | ########## | 100% 
-jupyter_server_termi | 19 KB     |            |   0% jupyter_server_termi | 19 KB     | ########## | 100% jupyter_server_termi | 19 KB     | ########## | 100% 
-cffi-1.16.0          | 251 KB    |            |   0% cffi-1.16.0          | 251 KB    | ########## | 100% cffi-1.16.0          | 251 KB    | ########## | 100% 
-pytorch-2.0.1        | 1.41 GB   |            |   0% pytorch-2.0.1        | 1.41 GB   |            |   0% pytorch-2.0.1        | 1.41 GB   | 1          |   1% pytorch-2.0.1        | 1.41 GB   | 2          |   3% pytorch-2.0.1        | 1.41 GB   | 4          |   5% pytorch-2.0.1        | 1.41 GB   | 6          |   6% pytorch-2.0.1        | 1.41 GB   | 7          |   8% pytorch-2.0.1        | 1.41 GB   | 9          |  10% pytorch-2.0.1        | 1.41 GB   | #1         |  11% pytorch-2.0.1        | 1.41 GB   | #3         |  13% pytorch-2.0.1        | 1.41 GB   | #4         |  15% pytorch-2.0.1        | 1.41 GB   | #6         |  17% pytorch-2.0.1        | 1.41 GB   | #8         |  18% pytorch-2.0.1        | 1.41 GB   | #9         |  20% pytorch-2.0.1        | 1.41 GB   | ##1        |  22% pytorch-2.0.1        | 1.41 GB   | ##2        |  23% pytorch-2.0.1        | 1.41 GB   | ##4        |  24% pytorch-2.0.1        | 1.41 GB   | ##5        |  26% pytorch-2.0.1        | 1.41 GB   | ##7        |  27% pytorch-2.0.1        | 1.41 GB   | ##8        |  28% pytorch-2.0.1        | 1.41 GB   | ##9        |  29% pytorch-2.0.1        | 1.41 GB   | ###1       |  32% pytorch-2.0.1        | 1.41 GB   | ###3       |  34% pytorch-2.0.1        | 1.41 GB   | ###5       |  36% pytorch-2.0.1        | 1.41 GB   | ###6       |  37% pytorch-2.0.1        | 1.41 GB   | ###8       |  38% pytorch-2.0.1        | 1.41 GB   | ###9       |  40% pytorch-2.0.1        | 1.41 GB   | ####1      |  41% pytorch-2.0.1        | 1.41 GB   | ####2      |  43% pytorch-2.0.1        | 1.41 GB   | ####4      |  44% pytorch-2.0.1        | 1.41 GB   | ####5      |  46% pytorch-2.0.1        | 1.41 GB   | ####7      |  47% pytorch-2.0.1        | 1.41 GB   | ####8      |  48% pytorch-2.0.1        | 1.41 GB   | ####9      |  50% pytorch-2.0.1        | 1.41 GB   | #####1     |  51% pytorch-2.0.1        | 1.41 GB   | #####2     |  52% pytorch-2.0.1        | 1.41 GB   | #####3     |  54% pytorch-2.0.1        | 1.41 GB   | #####4     |  55% pytorch-2.0.1        | 1.41 GB   | #####7     |  57% pytorch-2.0.1        | 1.41 GB   | #####8     |  58% pytorch-2.0.1        | 1.41 GB   | ######     |  60% pytorch-2.0.1        | 1.41 GB   | ######2    |  62% pytorch-2.0.1        | 1.41 GB   | ######4    |  64% pytorch-2.0.1        | 1.41 GB   | ######5    |  66% pytorch-2.0.1        | 1.41 GB   | ######7    |  67% pytorch-2.0.1        | 1.41 GB   | ######9    |  69% pytorch-2.0.1        | 1.41 GB   | #######    |  71% pytorch-2.0.1        | 1.41 GB   | #######2   |  73% pytorch-2.0.1        | 1.41 GB   | #######4   |  74% pytorch-2.0.1        | 1.41 GB   | #######6   |  76% pytorch-2.0.1        | 1.41 GB   | #######8   |  78% pytorch-2.0.1        | 1.41 GB   | #######9   |  80% pytorch-2.0.1        | 1.41 GB   | ########1  |  82% pytorch-2.0.1        | 1.41 GB   | ########3  |  83% pytorch-2.0.1        | 1.41 GB   | ########5  |  85% pytorch-2.0.1        | 1.41 GB   | ########6  |  87% pytorch-2.0.1        | 1.41 GB   | ########8  |  89% pytorch-2.0.1        | 1.41 GB   | #########  |  91% pytorch-2.0.1        | 1.41 GB   | #########2 |  92% pytorch-2.0.1        | 1.41 GB   | #########4 |  95% pytorch-2.0.1        | 1.41 GB   | #########6 |  96% pytorch-2.0.1        | 1.41 GB   | #########8 |  99% pytorch-2.0.1        | 1.41 GB   | ########## | 100% 
-exceptiongroup-1.2.0 | 20 KB     |            |   0% exceptiongroup-1.2.0 | 20 KB     | ########## | 100% exceptiongroup-1.2.0 | 20 KB     | ########## | 100% 
-mistune-3.0.2        | 64 KB     |            |   0% mistune-3.0.2        | 64 KB     | ########## | 100% mistune-3.0.2        | 64 KB     | ########## | 100% 
-ptyprocess-0.7.0     | 16 KB     |            |   0% ptyprocess-0.7.0     | 16 KB     | ########## | 100% 
-overrides-7.4.0      | 29 KB     |            |   0% overrides-7.4.0      | 29 KB     | ########## | 100% overrides-7.4.0      | 29 KB     | ########## | 100% 
-wcwidth-0.2.12       | 32 KB     |            |   0% wcwidth-0.2.12       | 32 KB     | ########## | 100% wcwidth-0.2.12       | 32 KB     | ########## | 100% 
-plotly-5.18.0        | 7.2 MB    |            |   0% plotly-5.18.0        | 7.2 MB    | ########## | 100% plotly-5.18.0        | 7.2 MB    | ########## | 100% 
-prometheus_client-0. | 47 KB     |            |   0% prometheus_client-0. | 47 KB     | ########## | 100% prometheus_client-0. | 47 KB     | ########## | 100% 
-jsonschema-4.20.0    | 70 KB     |            |   0% jsonschema-4.20.0    | 70 KB     | ##2        |  23% jsonschema-4.20.0    | 70 KB     | ########## | 100% jsonschema-4.20.0    | 70 KB     | ########## | 100% 
-portalocker-2.8.2    | 35 KB     |            |   0% portalocker-2.8.2    | 35 KB     | ########## | 100% portalocker-2.8.2    | 35 KB     | ########## | 100% 
-rpds-py-0.10.6       | 1007 KB   |            |   0% rpds-py-0.10.6       | 1007 KB   | ########## | 100% rpds-py-0.10.6       | 1007 KB   | ########## | 100% 
-libsodium-1.0.18     | 366 KB    |            |   0% libsodium-1.0.18     | 366 KB    | ########## | 100% libsodium-1.0.18     | 366 KB    | ########## | 100% 
-rfc3339-validator-0. | 8 KB      |            |   0% rfc3339-validator-0. | 8 KB      | ########## | 100% 
-tqdm-4.66.1          | 87 KB     |            |   0% tqdm-4.66.1          | 87 KB     | ########## | 100% tqdm-4.66.1          | 87 KB     | ########## | 100% 
-argon2-cffi-21.1.0   | 46 KB     |            |   0% argon2-cffi-21.1.0   | 46 KB     | ########## | 100% 
-cryptography-41.0.7  | 2.0 MB    |            |   0% cryptography-41.0.7  | 2.0 MB    | ########## | 100% cryptography-41.0.7  | 2.0 MB    | ########## | 100% 
-pygments-2.17.2      | 840 KB    |            |   0% pygments-2.17.2      | 840 KB    | ########## | 100% pygments-2.17.2      | 840 KB    | ########## | 100% 
-ipykernel-5.5.5      | 167 KB    |            |   0% ipykernel-5.5.5      | 167 KB    | ########## | 100% ipykernel-5.5.5      | 167 KB    | ########## | 100% 
-sniffio-1.3.0        | 14 KB     |            |   0% sniffio-1.3.0        | 14 KB     | ########## | 100% 
-prompt-toolkit-3.0.4 | 264 KB    |            |   0% prompt-toolkit-3.0.4 | 264 KB    | ########## | 100% prompt-toolkit-3.0.4 | 264 KB    | ########## | 100% 
-traitlets-5.14.0     | 107 KB    |            |   0% traitlets-5.14.0     | 107 KB    | ########## | 100% traitlets-5.14.0     | 107 KB    | ########## | 100% 
-jupyter_core-5.5.0   | 77 KB     |            |   0% jupyter_core-5.5.0   | 77 KB     | ########## | 100% jupyter_core-5.5.0   | 77 KB     | ########## | 100% 
-json5-0.9.14         | 24 KB     |            |   0% json5-0.9.14         | 24 KB     | ########## | 100% json5-0.9.14         | 24 KB     | ########## | 100% 
-jupyter_client-8.6.0 | 103 KB    |            |   0% jupyter_client-8.6.0 | 103 KB    | ########## | 100% jupyter_client-8.6.0 | 103 KB    | ########## | 100% 
-jedi-0.19.1          | 822 KB    |            |   0% jedi-0.19.1          | 822 KB    | ########## | 100% jedi-0.19.1          | 822 KB    | ########## | 100% 
-jupyterlab-4.0.9     | 5.1 MB    |            |   0% jupyterlab-4.0.9     | 5.1 MB    | ########## | 100% jupyterlab-4.0.9     | 5.1 MB    | ########## | 100% 
-libgcc-7.2.0         | 304 KB    |            |   0% libgcc-7.2.0         | 304 KB    | ########## | 100% libgcc-7.2.0         | 304 KB    | ########## | 100% 
-ca-certificates-2023 | 151 KB    |            |   0% ca-certificates-2023 | 151 KB    | ########## | 100% ca-certificates-2023 | 151 KB    | ########## | 100% 
-zipp-3.17.0          | 19 KB     |            |   0% zipp-3.17.0          | 19 KB     | ########## | 100% zipp-3.17.0          | 19 KB     | ########## | 100% 
-packaging-23.2       | 48 KB     |            |   0% packaging-23.2       | 48 KB     | ########## | 100% packaging-23.2       | 48 KB     | ########## | 100% 
-Preparing transaction: ...working... done
-Verifying transaction: ...working... done
-Executing transaction: ...working... done
-Installing pip dependencies: ...working... Ran pip subprocess with arguments:
-['/home/jhuizing/.conda/envs/sugar/bin/python', '-m', 'pip', 'install', '-U', '-r', '/gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt']
-Pip subprocess output:
-Collecting addict==2.4.0 (from -r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 1))
-  Downloading addict-2.4.0-py3-none-any.whl.metadata (1.0 kB)
-Collecting ansi2html==1.9.1 (from -r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 2))
-  Downloading ansi2html-1.9.1-py3-none-any.whl.metadata (3.7 kB)
-Collecting blinker==1.7.0 (from -r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 3))
-  Downloading blinker-1.7.0-py3-none-any.whl.metadata (1.9 kB)
-Collecting click==8.1.7 (from -r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 4))
-  Using cached click-8.1.7-py3-none-any.whl.metadata (3.0 kB)
-Collecting comm==0.2.0 (from -r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 5))
-  Downloading comm-0.2.0-py3-none-any.whl.metadata (3.7 kB)
-Collecting configargparse==1.7 (from -r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 6))
-  Downloading ConfigArgParse-1.7-py3-none-any.whl.metadata (23 kB)
-Collecting contourpy==1.2.0 (from -r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 7))
-  Downloading contourpy-1.2.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.8 kB)
-Collecting cycler==0.12.1 (from -r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 8))
-  Using cached cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
-Collecting dash==2.14.2 (from -r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 9))
-  Downloading dash-2.14.2-py3-none-any.whl.metadata (11 kB)
-Collecting dash-core-components==2.0.0 (from -r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 10))
-  Downloading dash_core_components-2.0.0-py3-none-any.whl.metadata (2.9 kB)
-Collecting dash-html-components==2.0.0 (from -r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 11))
-  Downloading dash_html_components-2.0.0-py3-none-any.whl.metadata (3.8 kB)
-Collecting dash-table==5.0.0 (from -r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 12))
-  Downloading dash_table-5.0.0-py3-none-any.whl.metadata (2.4 kB)
-Collecting flask==3.0.0 (from -r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 13))
-  Downloading flask-3.0.0-py3-none-any.whl.metadata (3.6 kB)
-Collecting fonttools==4.46.0 (from -r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 14))
-  Downloading fonttools-4.46.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (156 kB)
-     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 156.2/156.2 kB 17.9 MB/s eta 0:00:00
-Collecting itsdangerous==2.1.2 (from -r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 15))
-  Downloading itsdangerous-2.1.2-py3-none-any.whl.metadata (2.9 kB)
-Collecting joblib==1.3.2 (from -r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 16))
-  Using cached joblib-1.3.2-py3-none-any.whl.metadata (5.4 kB)
-Collecting kiwisolver==1.4.5 (from -r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 17))
-  Using cached kiwisolver-1.4.5-cp39-cp39-manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata (6.4 kB)
-Collecting matplotlib==3.8.2 (from -r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 18))
-  Downloading matplotlib-3.8.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.8 kB)
-Collecting nbformat==5.7.0 (from -r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 19))
-  Downloading nbformat-5.7.0-py3-none-any.whl.metadata (4.7 kB)
-Collecting nest-asyncio==1.5.8 (from -r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 20))
-  Downloading nest_asyncio-1.5.8-py3-none-any.whl.metadata (2.8 kB)
-Collecting open3d==0.17.0 (from -r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 21))
-  Downloading open3d-0.17.0-cp39-cp39-manylinux_2_27_x86_64.whl.metadata (4.2 kB)
-Collecting pandas==2.1.4 (from -r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 22))
-  Downloading pandas-2.1.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (18 kB)
-Requirement already satisfied: pexpect==4.9.0 in /gpfs/home6/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages (from -r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 23)) (4.9.0)
-Collecting prompt-toolkit==3.0.43 (from -r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 24))
-  Downloading prompt_toolkit-3.0.43-py3-none-any.whl.metadata (6.5 kB)
-Requirement already satisfied: pymcubes==0.1.4 in /gpfs/home6/jhuizing/.local/lib/python3.9/site-packages (from -r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 25)) (0.1.4)
-Collecting pyparsing==3.1.1 (from -r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 26))
-  Downloading pyparsing-3.1.1-py3-none-any.whl.metadata (5.1 kB)
-Collecting pyquaternion==0.9.9 (from -r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 27))
-  Downloading pyquaternion-0.9.9-py3-none-any.whl.metadata (1.4 kB)
-Collecting retrying==1.3.4 (from -r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 28))
-  Downloading retrying-1.3.4-py3-none-any.whl.metadata (6.9 kB)
-Collecting rpds-py==0.15.2 (from -r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 29))
-  Downloading rpds_py-0.15.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
-Collecting scikit-learn==1.3.2 (from -r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 30))
-  Downloading scikit_learn-1.3.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
-Collecting scipy==1.11.4 (from -r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 31))
-  Using cached scipy-1.11.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (60 kB)
-Collecting stack-data==0.6.3 (from -r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 32))
-  Downloading stack_data-0.6.3-py3-none-any.whl.metadata (18 kB)
-Collecting threadpoolctl==3.2.0 (from -r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 33))
-  Downloading threadpoolctl-3.2.0-py3-none-any.whl.metadata (10.0 kB)
-Collecting tzdata==2023.3 (from -r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 34))
-  Downloading tzdata-2023.3-py2.py3-none-any.whl.metadata (1.4 kB)
-Collecting werkzeug==3.0.1 (from -r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 35))
-  Downloading werkzeug-3.0.1-py3-none-any.whl.metadata (4.1 kB)
-Requirement already satisfied: traitlets>=4 in /gpfs/home6/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages (from comm==0.2.0->-r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 5)) (5.14.0)
-Requirement already satisfied: numpy<2.0,>=1.20 in /gpfs/home6/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages (from contourpy==1.2.0->-r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 7)) (1.26.2)
-Requirement already satisfied: plotly>=5.0.0 in /gpfs/home6/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages (from dash==2.14.2->-r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 9)) (5.18.0)
-Requirement already satisfied: typing-extensions>=4.1.1 in /gpfs/home6/jhuizing/.local/lib/python3.9/site-packages (from dash==2.14.2->-r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 9)) (4.11.0)
-Requirement already satisfied: requests in /gpfs/home6/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages (from dash==2.14.2->-r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 9)) (2.31.0)
-Requirement already satisfied: setuptools in /gpfs/home6/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages (from dash==2.14.2->-r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 9)) (68.2.2)
-Requirement already satisfied: importlib-metadata in /gpfs/home6/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages (from dash==2.14.2->-r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 9)) (7.0.0)
-Requirement already satisfied: Jinja2>=3.1.2 in /gpfs/home6/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages (from flask==3.0.0->-r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 13)) (3.1.2)
-Requirement already satisfied: packaging>=20.0 in /gpfs/home6/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages (from matplotlib==3.8.2->-r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 18)) (23.2)
-Requirement already satisfied: pillow>=8 in /gpfs/home6/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages (from matplotlib==3.8.2->-r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 18)) (10.0.1)
-Requirement already satisfied: python-dateutil>=2.7 in /gpfs/home6/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages (from matplotlib==3.8.2->-r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 18)) (2.8.2)
-Requirement already satisfied: importlib-resources>=3.2.0 in /gpfs/home6/jhuizing/.local/lib/python3.9/site-packages (from matplotlib==3.8.2->-r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 18)) (6.4.0)
-Requirement already satisfied: fastjsonschema in /gpfs/home6/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages (from nbformat==5.7.0->-r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 19)) (2.19.0)
-Requirement already satisfied: jsonschema>=2.6 in /gpfs/home6/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages (from nbformat==5.7.0->-r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 19)) (4.20.0)
-Requirement already satisfied: jupyter-core in /gpfs/home6/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages (from nbformat==5.7.0->-r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 19)) (5.5.0)
-Requirement already satisfied: ipywidgets>=8.0.4 in /gpfs/home6/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages (from open3d==0.17.0->-r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 21)) (8.1.1)
-Requirement already satisfied: pyyaml>=5.4.1 in /gpfs/home6/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages (from open3d==0.17.0->-r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 21)) (6.0)
-Requirement already satisfied: tqdm in /gpfs/home6/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages (from open3d==0.17.0->-r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 21)) (4.66.1)
-Requirement already satisfied: pytz>=2020.1 in /gpfs/home6/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages (from pandas==2.1.4->-r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 22)) (2023.3.post1)
-Requirement already satisfied: ptyprocess>=0.5 in /gpfs/home6/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages (from pexpect==4.9.0->-r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 23)) (0.7.0)
-Requirement already satisfied: wcwidth in /gpfs/home6/jhuizing/.local/lib/python3.9/site-packages (from prompt-toolkit==3.0.43->-r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 24)) (0.2.13)
-Requirement already satisfied: six>=1.7.0 in /gpfs/home6/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages (from retrying==1.3.4->-r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 28)) (1.16.0)
-Requirement already satisfied: executing>=1.2.0 in /gpfs/home6/jhuizing/.local/lib/python3.9/site-packages (from stack-data==0.6.3->-r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 32)) (2.0.1)
-Requirement already satisfied: asttokens>=2.1.0 in /gpfs/home6/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages (from stack-data==0.6.3->-r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 32)) (2.4.1)
-Requirement already satisfied: pure-eval in /gpfs/home6/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages (from stack-data==0.6.3->-r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 32)) (0.2.2)
-Requirement already satisfied: MarkupSafe>=2.1.1 in /gpfs/home6/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages (from werkzeug==3.0.1->-r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 35)) (2.1.1)
-Requirement already satisfied: zipp>=0.5 in /gpfs/home6/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages (from importlib-metadata->dash==2.14.2->-r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 9)) (3.17.0)
-Requirement already satisfied: ipython>=6.1.0 in /gpfs/home6/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages (from ipywidgets>=8.0.4->open3d==0.17.0->-r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 21)) (8.18.1)
-Requirement already satisfied: widgetsnbextension~=4.0.9 in /gpfs/home6/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages (from ipywidgets>=8.0.4->open3d==0.17.0->-r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 21)) (4.0.9)
-Requirement already satisfied: jupyterlab-widgets~=3.0.9 in /gpfs/home6/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages (from ipywidgets>=8.0.4->open3d==0.17.0->-r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 21)) (3.0.9)
-Requirement already satisfied: attrs>=22.2.0 in /gpfs/home6/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages (from jsonschema>=2.6->nbformat==5.7.0->-r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 19)) (23.1.0)
-Requirement already satisfied: jsonschema-specifications>=2023.03.6 in /gpfs/home6/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages (from jsonschema>=2.6->nbformat==5.7.0->-r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 19)) (2023.11.2)
-Requirement already satisfied: referencing>=0.28.4 in /gpfs/home6/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages (from jsonschema>=2.6->nbformat==5.7.0->-r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 19)) (0.32.0)
-Requirement already satisfied: tenacity>=6.2.0 in /gpfs/home6/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages (from plotly>=5.0.0->dash==2.14.2->-r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 9)) (8.2.2)
-Requirement already satisfied: platformdirs>=2.5 in /gpfs/home6/jhuizing/.local/lib/python3.9/site-packages (from jupyter-core->nbformat==5.7.0->-r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 19)) (4.2.0)
-Requirement already satisfied: charset-normalizer<4,>=2 in /gpfs/home6/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages (from requests->dash==2.14.2->-r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 9)) (2.0.4)
-Requirement already satisfied: idna<4,>=2.5 in /gpfs/home6/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages (from requests->dash==2.14.2->-r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 9)) (3.4)
-Requirement already satisfied: urllib3<3,>=1.21.1 in /gpfs/home6/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages (from requests->dash==2.14.2->-r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 9)) (1.26.18)
-Requirement already satisfied: certifi>=2017.4.17 in /gpfs/home6/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages (from requests->dash==2.14.2->-r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 9)) (2023.11.17)
-Requirement already satisfied: decorator in /gpfs/home6/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages (from ipython>=6.1.0->ipywidgets>=8.0.4->open3d==0.17.0->-r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 21)) (5.1.1)
-Requirement already satisfied: jedi>=0.16 in /gpfs/home6/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages (from ipython>=6.1.0->ipywidgets>=8.0.4->open3d==0.17.0->-r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 21)) (0.19.1)
-Requirement already satisfied: matplotlib-inline in /gpfs/home6/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages (from ipython>=6.1.0->ipywidgets>=8.0.4->open3d==0.17.0->-r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 21)) (0.1.6)
-Requirement already satisfied: pygments>=2.4.0 in /gpfs/home6/jhuizing/.local/lib/python3.9/site-packages (from ipython>=6.1.0->ipywidgets>=8.0.4->open3d==0.17.0->-r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 21)) (2.17.2)
-Requirement already satisfied: exceptiongroup in /gpfs/home6/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages (from ipython>=6.1.0->ipywidgets>=8.0.4->open3d==0.17.0->-r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 21)) (1.2.0)
-Requirement already satisfied: parso<0.9.0,>=0.8.3 in /gpfs/home6/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages (from jedi>=0.16->ipython>=6.1.0->ipywidgets>=8.0.4->open3d==0.17.0->-r /gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/condaenv.xaqzy8r4.requirements.txt (line 21)) (0.8.3)
-Downloading addict-2.4.0-py3-none-any.whl (3.8 kB)
-Downloading ansi2html-1.9.1-py3-none-any.whl (17 kB)
-Downloading blinker-1.7.0-py3-none-any.whl (13 kB)
-Using cached click-8.1.7-py3-none-any.whl (97 kB)
-Downloading comm-0.2.0-py3-none-any.whl (7.0 kB)
-Downloading ConfigArgParse-1.7-py3-none-any.whl (25 kB)
-Downloading contourpy-1.2.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (310 kB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 311.0/311.0 kB 52.1 MB/s eta 0:00:00
-Using cached cycler-0.12.1-py3-none-any.whl (8.3 kB)
-Downloading dash-2.14.2-py3-none-any.whl (10.2 MB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.2/10.2 MB 67.4 MB/s eta 0:00:00
-Downloading dash_core_components-2.0.0-py3-none-any.whl (3.8 kB)
-Downloading dash_html_components-2.0.0-py3-none-any.whl (4.1 kB)
-Downloading dash_table-5.0.0-py3-none-any.whl (3.9 kB)
-Downloading flask-3.0.0-py3-none-any.whl (99 kB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 99.7/99.7 kB 22.9 MB/s eta 0:00:00
-Downloading fonttools-4.46.0-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.6 MB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.6/4.6 MB 11.9 MB/s eta 0:00:00
-Downloading itsdangerous-2.1.2-py3-none-any.whl (15 kB)
-Using cached joblib-1.3.2-py3-none-any.whl (302 kB)
-Using cached kiwisolver-1.4.5-cp39-cp39-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (1.6 MB)
-Downloading matplotlib-3.8.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (11.6 MB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.6/11.6 MB 82.1 MB/s eta 0:00:00
-Downloading nbformat-5.7.0-py3-none-any.whl (77 kB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 77.1/77.1 kB 15.1 MB/s eta 0:00:00
-Downloading nest_asyncio-1.5.8-py3-none-any.whl (5.3 kB)
-Downloading open3d-0.17.0-cp39-cp39-manylinux_2_27_x86_64.whl (420.5 MB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 420.5/420.5 MB 11.5 MB/s eta 0:00:00
-Downloading pandas-2.1.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.3 MB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.3/12.3 MB 127.8 MB/s eta 0:00:00
-Downloading prompt_toolkit-3.0.43-py3-none-any.whl (386 kB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 386.1/386.1 kB 55.4 MB/s eta 0:00:00
-Downloading pyparsing-3.1.1-py3-none-any.whl (103 kB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.1/103.1 kB 19.6 MB/s eta 0:00:00
-Downloading pyquaternion-0.9.9-py3-none-any.whl (14 kB)
-Downloading retrying-1.3.4-py3-none-any.whl (11 kB)
-Downloading rpds_py-0.15.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.2 MB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 97.5 MB/s eta 0:00:00
-Downloading scikit_learn-1.3.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (10.9 MB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.9/10.9 MB 65.4 MB/s eta 0:00:00
-Downloading scipy-1.11.4-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (36.6 MB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 36.6/36.6 MB 68.3 MB/s eta 0:00:00
-Downloading stack_data-0.6.3-py3-none-any.whl (24 kB)
-Downloading threadpoolctl-3.2.0-py3-none-any.whl (15 kB)
-Downloading tzdata-2023.3-py2.py3-none-any.whl (341 kB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 341.8/341.8 kB 55.3 MB/s eta 0:00:00
-Downloading werkzeug-3.0.1-py3-none-any.whl (226 kB)
-   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 226.7/226.7 kB 44.5 MB/s eta 0:00:00
-Installing collected packages: dash-table, dash-html-components, dash-core-components, addict, werkzeug, tzdata, threadpoolctl, scipy, rpds-py, retrying, pyquaternion, pyparsing, prompt-toolkit, nest-asyncio, kiwisolver, joblib, itsdangerous, fonttools, cycler, contourpy, configargparse, comm, click, blinker, ansi2html, stack-data, scikit-learn, pandas, matplotlib, flask, dash, nbformat, open3d
-  Attempting uninstall: rpds-py
-    Found existing installation: rpds-py 0.10.6
-    Uninstalling rpds-py-0.10.6:
-      Successfully uninstalled rpds-py-0.10.6
-  Attempting uninstall: prompt-toolkit
-    Found existing installation: prompt-toolkit 3.0.42
-    Uninstalling prompt-toolkit-3.0.42:
-      Successfully uninstalled prompt-toolkit-3.0.42
-  Attempting uninstall: comm
-    Found existing installation: comm 0.2.2
-    Uninstalling comm-0.2.2:
-      Successfully uninstalled comm-0.2.2
-  Attempting uninstall: stack-data
-    Found existing installation: stack-data 0.6.2
-    Uninstalling stack-data-0.6.2:
-      Successfully uninstalled stack-data-0.6.2
-  Attempting uninstall: nbformat
-    Found existing installation: nbformat 5.10.4
-    Uninstalling nbformat-5.10.4:
-      Successfully uninstalled nbformat-5.10.4
-Successfully installed addict-2.4.0 ansi2html-1.9.1 blinker-1.7.0 click-8.1.7 comm-0.2.0 configargparse-1.7 contourpy-1.2.0 cycler-0.12.1 dash-2.14.2 dash-core-components-2.0.0 dash-html-components-2.0.0 dash-table-5.0.0 flask-3.0.0 fonttools-4.46.0 itsdangerous-2.1.2 joblib-1.3.2 kiwisolver-1.4.5 matplotlib-3.8.2 nbformat-5.7.0 nest-asyncio-1.5.8 open3d-0.17.0 pandas-2.1.4 prompt-toolkit-3.0.43 pyparsing-3.1.1 pyquaternion-0.9.9 retrying-1.3.4 rpds-py-0.15.2 scikit-learn-1.3.2 scipy-1.11.4 stack-data-0.6.3 threadpoolctl-3.2.0 tzdata-2023.3 werkzeug-3.0.1
-
-done
-#
-# To activate this environment, use
-#
-#     $ conda activate sugar
-#
-# To deactivate an active environment, use
-#
-#     $ conda deactivate
-
-/var/spool/slurm/slurmd/job5946327/slurm_script: line 23: syntax error near unexpected token `"trying to activate environment"'
-/var/spool/slurm/slurmd/job5946327/slurm_script: line 23: `print("trying to activate environment")'
-
-JOB STATISTICS
-==============
-Job ID: 5946327
-Cluster: snellius
-User/Group: jhuizing/jhuizing
-State: RUNNING
-Nodes: 1
-Cores per node: 18
-CPU Utilized: 00:00:00
-CPU Efficiency: 0.00% of 02:25:30 core-walltime
-Job Wall-clock time: 00:08:05
-Memory Utilized: 0.00 MB (estimated maximum)
-Memory Efficiency: 0.00% of 120.00 GB (120.00 GB/node)
-WARNING: Efficiency statistics may be misleading for RUNNING jobs.
