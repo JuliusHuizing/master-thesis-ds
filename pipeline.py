@@ -25,6 +25,7 @@ if __name__ == "__main__":
         DREAMGAUSSIAN_PATH = config["paths"]["dream_gaussian_repo_path"]
         INPUT_IMAGE_PATH = config["paths"]["input_image_path"]
         PREPROCCSING_OUTPUT_PATH = config["paths"]["preprocessing_output_path"]
+        PREPROCESSED_IMAGE_PATH = PREPROCCSING_OUTPUT_PATH + INPUT_IMAGE_PATH.split("/")[-1].split(".")[0] + "_rgba.png"
         logging.info("✅ Paths loaded.")
         
         logging.info("Creating paths if they don't exist...")
@@ -55,11 +56,21 @@ if __name__ == "__main__":
 
         # Execute the command
         result = subprocess.run(command, check=True, text=True, capture_output=True)
+        logging.info("✅ Preprocessing pipeline complete.")
         
-        
+        logging.info("Running DreamGaussian pipeline...")
+        command = [
+            "python", DREAMGAUSSIAN_PATH+"main.py", 
+            "--config", "configs/image.yaml", 
+            f"input={PREPROCESSED_IMAGE_PATH}", 
+            "save_path=name"
+        ]
+        result = subprocess.run(command, check=True, text=True, capture_output=True)
+        logging.info("✅ DreamGaussian pipeline complete.")
+
         
         # runpy.run_path(DREAMGAUSSIAN_PATH + f"/process.py --size {preprocessing_config['size']} --border_ratio --recenter {preprocessing_config['recenter']}")
-        logging.info("✅ Preprocessing pipeline complete.")
+       
         
     except subprocess.CalledProcessError as cpe:
         # Log the output and error output from the subprocess
