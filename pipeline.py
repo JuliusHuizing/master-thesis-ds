@@ -60,7 +60,7 @@ if __name__ == "__main__":
             logging.error("Standard output of the subprocess: %s", cpe.stdout)
         if cpe.stderr:
             logging.error("Standard error of the subprocess: %s", cpe.stderr)
-        raise  # Re-raise the exception to handle it further if needed
+        raise cpe
     except Exception as e:
         logging.error(f" ❌ Error in pipeline: {e}")
         raise e
