@@ -15,8 +15,8 @@ import logging
 
 from transformers import AutoProcessor, Blip2ForConditionalGeneration
 
-# Configure logging
-logging.basicConfig(level=logging.INFO, format='[%(levelname)s] %(message)s')
+# # Configure logging
+# logging.basicConfig(level=logging.INFO, format='[%(levelname)s] %(message)s')
 
 class BLIP2():
     def __init__(self, device='cuda'):
@@ -33,6 +33,8 @@ class BLIP2():
         return generated_text
 
 if __name__ == '__main__':
+    logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+    logging.getLogger().setLevel(logging.INFO)
     parser = argparse.ArgumentParser()
     parser.add_argument('path', type=str, help="path to image (png, jpeg, etc.)")
     parser.add_argument('--model', default='u2net', type=str, help="rembg model, see https://github.com/danielgatis/rembg#models")
