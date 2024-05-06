@@ -4,6 +4,7 @@ import runpy
 from utils.yaml_utils import load_yaml_file
 import logging
 import runpy
+import subprocess
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -26,7 +27,11 @@ if __name__ == "__main__":
         preprocessing_config = config["preprocess"]["integrate"]
         
         logging.info("Running preprocessing pipeline...")
-        runpy.run_path(DREAMGAUSSIAN_PATH + f"/process.py --size {preprocessing_config['size']} --border_ratio --recenter {preprocessing_config['recenter']}")
+
+        # Call the script with arguments
+        subprocess.run(DREAMGAUSSIAN_PATH + f"process.py --size {preprocessing_config['size']} --recenter {preprocessing_config['recenter']}")
+        
+        # runpy.run_path(DREAMGAUSSIAN_PATH + f"/process.py --size {preprocessing_config['size']} --border_ratio --recenter {preprocessing_config['recenter']}")
         logging.info("✅ Preprocessing pipeline complete.")
         
         

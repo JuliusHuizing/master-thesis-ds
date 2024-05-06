@@ -1,6 +1,6 @@
 paths:
   input_image_path: "assets/blueberry.jpeg"
-  dream_gaussian_repo_path: "repos/dreamgaussian"
+  dream_gaussian_repo_path: "repos/dreamgaussian/"
   preprocessing_output_path: "results/preprocessing/"
   
 preprocess:
