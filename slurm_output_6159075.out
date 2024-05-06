@@ -1,0 +1,46 @@
+============================================================================================== 
+Warning! Mixing Conda and module environments may lead to corruption of the
+user environment. 
+We do not recommend users mixing those two environments unless absolutely
+necessary. Note that 
+SURF does not provide any support for Conda environment.
+For more information, please refer to our software policy page:
+https://servicedesk.surf.nl/wiki/display/WIKI/Software+policy+Snellius#SoftwarepolicySnellius-UseofAnacondaandMinicondaenvironmentsonSnellius 
+
+Remember that many packages have already been installed on the system and can
+be loaded using 
+the 'module load <package__name>' command. If you are uncertain if a package is
+already available 
+on the system, please use 'module avail' or 'module spider' to search for it.
+============================================================================================== 
+From https://github.com/JuliusHuizing/master-thesis-ds
+   cccb092..4e1d0b3  main       -> origin/main
+Updating cccb092..4e1d0b3
+Fast-forward
+ pipeline.py | 15 +++++++++++++--
+ 1 file changed, 13 insertions(+), 2 deletions(-)
+2024-05-06 12:34:08,183 - INFO - Loading configuration...
+2024-05-06 12:34:08,186 - INFO - ✅ Configuration loaded.
+2024-05-06 12:34:08,186 - INFO - Loading paths...
+2024-05-06 12:34:08,186 - INFO - ✅ Paths loaded.
+2024-05-06 12:34:08,186 - INFO - Initializing preprocessing pipeline...
+2024-05-06 12:34:08,186 - INFO - Running preprocessing pipeline...
+usage: process.py [-h] [--model MODEL] [--size SIZE]
+                  [--border_ratio BORDER_RATIO] [--recenter RECENTER]
+                  path
+process.py: error: argument --border_ratio: expected one argument
+2024-05-06 12:34:17,935 - INFO - ✅ Preprocessing pipeline complete.
+
+JOB STATISTICS
+==============
+Job ID: 6159075
+Cluster: snellius
+User/Group: jhuizing/jhuizing
+State: COMPLETED (exit code 0)
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 00:00:07
+CPU Efficiency: 1.85% of 00:06:18 core-walltime
+Job Wall-clock time: 00:00:21
+Memory Utilized: 1.14 MB
+Memory Efficiency: 0.00% of 120.00 GB

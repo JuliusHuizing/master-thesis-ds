@@ -1,0 +1,54 @@
+============================================================================================== 
+Warning! Mixing Conda and module environments may lead to corruption of the
+user environment. 
+We do not recommend users mixing those two environments unless absolutely
+necessary. Note that 
+SURF does not provide any support for Conda environment.
+For more information, please refer to our software policy page:
+https://servicedesk.surf.nl/wiki/display/WIKI/Software+policy+Snellius#SoftwarepolicySnellius-UseofAnacondaandMinicondaenvironmentsonSnellius 
+
+Remember that many packages have already been installed on the system and can
+be loaded using 
+the 'module load <package__name>' command. If you are uncertain if a package is
+already available 
+on the system, please use 'module avail' or 'module spider' to search for it.
+============================================================================================== 
+From https://github.com/JuliusHuizing/master-thesis-ds
+   b5cf0ec..cccb092  main       -> origin/main
+Updating b5cf0ec..cccb092
+Fast-forward
+ pipeline.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+2024-05-06 12:30:37,085 - INFO - Loading configuration...
+2024-05-06 12:30:37,088 - INFO - ✅ Configuration loaded.
+2024-05-06 12:30:37,088 - INFO - Loading paths...
+2024-05-06 12:30:37,088 - INFO - ✅ Paths loaded.
+2024-05-06 12:30:37,088 - INFO - Initializing preprocessing pipeline...
+2024-05-06 12:30:37,088 - INFO - Running preprocessing pipeline...
+2024-05-06 12:30:37,089 - ERROR -  ❌ Error in pipeline: [Errno 2] No such file or directory: 'repos/dreamgaussian/process.py --size 256 --recenter True'
+Traceback (most recent call last):
+  File "pipeline.py", line 40, in <module>
+    raise e
+  File "pipeline.py", line 32, in <module>
+    subprocess.run(DREAMGAUSSIAN_PATH + f"process.py --size {preprocessing_config['size']} --recenter {preprocessing_config['recenter']}")
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/subprocess.py", line 493, in run
+    with Popen(*popenargs, **kwargs) as process:
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/subprocess.py", line 858, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/subprocess.py", line 1720, in _execute_child
+    raise child_exception_type(errno_num, err_msg, err_filename)
+FileNotFoundError: [Errno 2] No such file or directory: 'repos/dreamgaussian/process.py --size 256 --recenter True'
+
+JOB STATISTICS
+==============
+Job ID: 6158971
+Cluster: snellius
+User/Group: jhuizing/jhuizing
+State: FAILED (exit code 1)
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 00:00:02
+CPU Efficiency: 1.01% of 00:03:18 core-walltime
+Job Wall-clock time: 00:00:11
+Memory Utilized: 1.09 MB
+Memory Efficiency: 0.00% of 120.00 GB
