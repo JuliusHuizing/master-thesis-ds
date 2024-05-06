@@ -36,7 +36,7 @@ if __name__ == "__main__":
         # Construct the command with arguments
         command = [
             'python', DREAMGAUSSIAN_PATH+"process.py",
-            'path', INPUT_IMAGE_PATH,
+            INPUT_IMAGE_PATH,
             '--size', str(size),
             '--border_ratio', str(border_ratio),
             '--recenter', str(recenter)
