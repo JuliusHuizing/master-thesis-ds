@@ -510,6 +510,7 @@ class GUI:
         plt.grid(True)
         plt.savefig(os.path.join(plot_dir, 'variance_distribution_histogram.png'))  # Save the figure
         plt.show()
+        
     
     # no gui mode
     def train(self, iters=1000):
@@ -560,11 +561,15 @@ if __name__ == "__main__":
     parser.add_argument("--config", required=True, help="path to the yaml config file")
 
     args, extras = parser.parse_known_args()
-
-    # override default config from cli
-    opt = OmegaConf.merge(OmegaConf.load(args.config), OmegaConf.from_cli(extras))
-   
     
+    # Load configuration and handle the nested 'dreamgaussian' structure
+    config = OmegaConf.load(args.config)
+    if "dreamgaussian" in config:
+        opt = OmegaConf.merge(config.dreamgaussian, OmegaConf.from_cli(extras))
+        print("[INFO] ✅ DreamGaussian Configuration loaded.")
+    else:
+        raise ValueError("Config file must include 'dreamgaussian' section")
+
     gui = GUI(opt)
     gui.train(opt.iters)
 

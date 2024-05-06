@@ -59,7 +59,7 @@ if __name__ == "__main__":
         logging.info("Running DreamGaussian pipeline...")
         command = [
             "python", DREAMGAUSSIAN_PATH+"main.py", 
-            f"--config", DREAMGAUSSIAN_PATH+"configs/image.yaml", 
+            f"--config", "config.yaml", 
             f"input={PREPROCESSED_IMAGE_PATH}", 
             "save_path=name"
         ]
