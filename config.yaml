@@ -1,3 +1,5 @@
+# handy to have all paths in one section so we can retrieve them all at the front of the pipeline and
+# throw an error if any are missing before we start processing 
 paths:
   input_image_path: "assets/blueberry.jpeg"
   dream_gaussian_repo_path: "repos/dreamgaussian/"
