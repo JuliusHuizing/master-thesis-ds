@@ -11,7 +11,7 @@ preprocess:
   recenter: True
   border_ratio: 0.2
 
-dream_gaussian:
+dreamgaussian:
   ### Input
   # input rgba image path (default to None, can be load in GUI too)
   input: 
