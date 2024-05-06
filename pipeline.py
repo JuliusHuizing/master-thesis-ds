@@ -36,7 +36,7 @@ if __name__ == "__main__":
         command = [
             'python', DREAMGAUSSIAN_PATH+"process.py",
             '--size', str(size),
-            '--border_ratio',
+            '--border_ratio' str(border_ratio),
             '--recenter', str(recenter)
         ]
 
