@@ -16,11 +16,6 @@ dreamgaussian:
   ### Input
   # input rgba image path (default to None, can be load in GUI too)
   input: 
-  # input text prompt (default to None, can be input in GUI too)
-  prompt:
-  negative_prompt:
-  # input mesh for stage 2 (auto-search from stage 1 output path if None)
-  mesh:
   # estimated elevation angle for input image 
   elevation: 0
   # reference image resolution
@@ -52,7 +47,6 @@ dreamgaussian:
   # whether to linearly anneal timestep
   anneal_timestep: True
   # training iterations for stage 2
-  iters_refine: 50
   # training camera radius
   radius: 2
   # training camera fovy
@@ -63,8 +57,6 @@ dreamgaussian:
   max_ver: 30
   # checkpoint to load for stage 1 (should be a ply file)
   load:
-  # whether allow geom training in stage 2
-  train_geo: False
   # prob to invert background color during training (0 = always black, 1 = always white)
   invert_bg_prob: 0.5
 
@@ -92,6 +84,4 @@ dreamgaussian:
   opacity_reset_interval: 700
   densify_grad_threshold: 0.01
 
-  ### Textured Mesh
-  geom_lr: 0.0001
-  texture_lr: 0.2
+
