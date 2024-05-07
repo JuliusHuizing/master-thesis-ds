@@ -9,21 +9,22 @@ class Visualizer:
     opacities, and elongation ratios of Gaussians.
     """
 
-    def __init__(self, plot_dir="visualization_plots_with_reasonable_reg"):
+    @staticmethod
+    def ensure_dir_exists(directory):
         """
-        Initializes the Visualizer with a directory for storing plots.
-        
-        Parameters:
-            plot_dir (str): The directory path where plots will be saved.
-        """
-        self.plot_dir = plot_dir
-        if not os.path.exists(self.plot_dir):
-            os.makedirs(self.plot_dir)
+        Ensures that the specified directory exists.
 
-    def visualize_gaussian_distribution(self, gaussians, image_size=512):
+        Parameters:
+            directory (str): The directory path to ensure existence.
+        """
+        if not os.path.exists(directory):
+            os.makedirs(directory)
+
+    @staticmethod
+    def visualize_gaussian_distribution(gaussians, plot_dir, image_size=512):
         """
         Visualizes and saves the distribution plots for the scaling factors, opacities, and 
-        elongation ratios of Gaussians.
+        elongation ratios of Gaussians into the specified directory.
 
         Parameters:
             gaussians: An object that must have the following methods:
@@ -32,12 +33,15 @@ class Visualizer:
                   each axis (x, y, z).
                 - get_opacity: Must return a tensor of opacity values with dimensions [N, 1],
                   where N is the number of Gaussians.
+            plot_dir (str): The directory where plots will be saved.
             image_size (int, optional): The size of the images for the plots (currently unused in plotting).
         """
+        Visualizer.ensure_dir_exists(plot_dir)
+
         scaling_factors = gaussians.get_scaling.detach().cpu().numpy()  # [N, 3] where N is the number of Gaussians
         opacities = gaussians.get_opacity.detach().cpu().numpy()  # [N, 1]
         elongation_ratios = np.max(scaling_factors, axis=1) / np.min(scaling_factors, axis=1)
-        
+
         # Plotting Elongation Ratios
         plt.figure(figsize=(10, 5))
         plt.hist(elongation_ratios, bins=30, color='skyblue', alpha=0.7)
@@ -45,9 +49,9 @@ class Visualizer:
         plt.xlabel('Elongation Ratio (Max scaling factor / Min scaling factor)')
         plt.ylabel('Frequency')
         plt.grid(True)
-        plt.savefig(os.path.join(self.plot_dir, 'elongation_ratios_histogram.png'))
+        plt.savefig(os.path.join(plot_dir, 'elongation_ratios_histogram.png'))
         plt.close()
-        
+
         # Plotting Opacity Distributions
         plt.figure(figsize=(10, 5))
         plt.hist(opacities, bins=30, color='salmon', alpha=0.7)
@@ -55,9 +59,9 @@ class Visualizer:
         plt.xlabel('Opacity')
         plt.ylabel('Frequency')
         plt.grid(True)
-        plt.savefig(os.path.join(self.plot_dir, 'opacity_values_histogram.png'))
+        plt.savefig(os.path.join(plot_dir, 'opacity_values_histogram.png'))
         plt.close()
-        
+
         # Plotting Variance Distribution among Scaling Factors
         variance = torch.var(torch.tensor(scaling_factors), dim=1).numpy()
         plt.figure(figsize=(10, 6))
@@ -66,5 +70,5 @@ class Visualizer:
         plt.xlabel('Variance')
         plt.ylabel('Frequency')
         plt.grid(True)
-        plt.savefig(os.path.join(self.plot_dir, 'variance_distribution_histogram.png'))
+        plt.savefig(os.path.join(plot_dir, 'variance_distribution_histogram.png'))
         plt.close()

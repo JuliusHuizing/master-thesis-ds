@@ -18,7 +18,8 @@ from mesh import Mesh, safe_normalize
 import argparse
 from omegaconf import OmegaConf
 import os
-from sisa3d.visuals import visualizer
+from sisa3d.visuals.visualizer import Visualizer
+from sisa3d.camera import capture_and_save_images, generate_camera_positions
 class GUI:
     def __init__(self, opt):
         self.opt = opt  # shared with the trainer's opt to support in-place modification of rendering parameters.
@@ -469,7 +470,7 @@ class GUI:
             for i in tqdm.trange(iters):
                 self.train_step()
             # visualize gaussian distribution
-            visualizer.visualize_gaussian_distribution(self.renderer.gaussians) 
+            Visualizer.visualize_gaussian_distribution(self.renderer.gaussians, "gaussian_distributions", image_size=512) 
             # do a last prune
             self.renderer.gaussians.prune(min_opacity=0.01, extent=1, max_screen_size=1)
         # save
@@ -477,21 +478,25 @@ class GUI:
         # self.save_model(mode='model')
         # self.save_model(mode='geo+tex')
         
+        camera_positions = generate_camera_positions(200)
+        capture_and_save_images(camera_positions, "test_me", self.step, self.opt.ref_size, self.cam.fovy, self.cam.fovx, self.cam.near, self.cam.far, self.renderer, orbit_camera, MiniCam)
+        
         # print(f"[INFO] saving random images!")
         # save_dir = "rendered_images"
         # os.makedirs(save_dir, exist_ok=True) 
         
             
-        # Example function to generate camera positions with overlap and varied viewpoints
-        def generate_camera_positions(num_positions):
-            positions = []
-            step_angle = 360 / num_positions
-            for i in range(num_positions):
-                ver = np.random.randint(-30, 30)  # Smaller range to maintain elevation consistency
-                hor = step_angle * i  # Ensures complete rotation with overlap
-                for radius_variation in [0.8, 0.9, 1.0, 1.1, 1.2]:
-                    positions.append((self.opt.elevation + ver, hor, self.opt.radius * radius_variation))
-            return positions
+        
+        # # Example function to generate camera positions with overlap and varied viewpoints
+        # def generate_camera_positions(num_positions):
+        #     positions = []
+        #     step_angle = 360 / num_positions
+        #     for i in range(num_positions):
+        #         ver = np.random.randint(-30, 30)  # Smaller range to maintain elevation consistency
+        #         hor = step_angle * i  # Ensures complete rotation with overlap
+        #         for radius_variation in [0.8, 0.9, 1.0, 1.1, 1.2]:
+        #             positions.append((self.opt.elevation + ver, hor, self.opt.radius * radius_variation))
+        #     return positions
 
         # # Main rendering loop
         # camera_positions = generate_camera_positions(200)  # Generate 200 well-planned positions
