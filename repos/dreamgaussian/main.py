@@ -478,7 +478,7 @@ class GUI:
         # self.save_model(mode='model')
         # self.save_model(mode='geo+tex')
         
-        camera_positions = generate_camera_positions(200)
+        camera_positions = generate_camera_positions(200, self.opt.elevation, self.opt.radius)
         capture_and_save_images(camera_positions, "test_me", self.step, self.opt.ref_size, self.cam.fovy, self.cam.fovx, self.cam.near, self.cam.far, self.renderer, orbit_camera, MiniCam)
         
         # print(f"[INFO] saving random images!")
