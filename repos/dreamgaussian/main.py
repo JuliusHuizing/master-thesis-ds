@@ -21,6 +21,7 @@ import os
 from sisa3d.visuals.visualizer import Visualizer
 from sisa3d.camera import capture_and_save_images, generate_camera_positions
 from sisa3d.regularization import elongation_regularizer, compactness_regularizer, opacity_regularizer
+
 class GUI:
     def __init__(self, opt):
         self.opt = opt  # shared with the trainer's opt to support in-place modification of rendering parameters.
@@ -175,19 +176,20 @@ class GUI:
                 loss = loss + 1000 * (step_ratio if self.opt.warmup_rgb_loss else 1) * F.mse_loss(mask, self.input_mask_torch)
                 
                 ## own
-                scaling_factors = self.renderer.gaussians.get_scaling  # Assuming this method exists and provides the scaling factors
-                reg_loss = elongation_regularizer(scaling_factors, lambda_reg=0.1)
-                loss += reg_loss
-                
-                size_loss = compactness_regularizer(scaling_factors, lambda_compact=0.1)
-                loss += size_loss
-                
-                # Retrieve opacity values from GaussianModel
-                opacities = self.renderer.gaussians.get_opacity  # Assuming this returns a tensor of opacity values
+                if self.opt.regularize:
+                    scaling_factors = self.renderer.gaussians.get_scaling  # Assuming this method exists and provides the scaling factors
+                    reg_loss = elongation_regularizer(scaling_factors, lambda_reg=0.1)
+                    loss += reg_loss
+                    
+                    size_loss = compactness_regularizer(scaling_factors, lambda_compact=0.1)
+                    loss += size_loss
+                    
+                    # Retrieve opacity values from GaussianModel
+                    opacities = self.renderer.gaussians.get_opacity  # Assuming this returns a tensor of opacity values
 
-                # Calculate opacity regularization loss
-                opacity_reg_loss = opacity_regularizer(opacities, lambda_reg=0.1)
-                loss += opacity_reg_loss
+                    # Calculate opacity regularization loss
+                    opacity_reg_loss = opacity_regularizer(opacities, lambda_reg=0.1)
+                    loss += opacity_reg_loss
                     
                 
 
@@ -446,7 +448,8 @@ class GUI:
             for i in tqdm.trange(iters):
                 self.train_step()
             # visualize gaussian distribution
-            Visualizer.visualize_gaussian_distribution(self.renderer.gaussians, "gaussian_distributions", image_size=512) 
+            if self.opt.generate_gaussian_distribution_plots:
+                Visualizer.visualize_gaussian_distribution(self.renderer.gaussians, "gaussian_distributions", image_size=512)
             # do a last prune
             self.renderer.gaussians.prune(min_opacity=0.01, extent=1, max_screen_size=1)
         # save
@@ -454,9 +457,10 @@ class GUI:
         self.save_model(mode='model')
         self.save_model(mode='geo+tex')
         
-        camera_positions = generate_camera_positions(200, self.opt.elevation, self.opt.radius)
-        capture_and_save_images(camera_positions, "test_me", self.step, self.opt.ref_size, self.cam.fovy, self.cam.fovx, self.cam.near, self.cam.far, self.renderer, orbit_camera, MiniCam)
-        
+        if self.opt.generate_image_progressions:
+            camera_positions = generate_camera_positions(200, self.opt.elevation, self.opt.radius)
+            capture_and_save_images(camera_positions, "test_me", self.step, self.opt.ref_size, self.cam.fovy, self.cam.fovx, self.cam.near, self.cam.far, self.renderer, orbit_camera, MiniCam)
+            
     
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

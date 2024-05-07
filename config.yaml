@@ -13,6 +13,9 @@ preprocess:
   border_ratio: 0.2
 
 dreamgaussian:
+  generate_image_progressions: False
+  generate_gaussian_distribution_plots: False
+  regularize: False
   ### Input
   # input rgba image path (default to None, can be load in GUI too)
   input: 
