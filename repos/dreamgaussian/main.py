@@ -20,6 +20,7 @@ from omegaconf import OmegaConf
 import os
 from sisa3d.visuals.visualizer import Visualizer
 from sisa3d.camera import capture_and_save_images, generate_camera_positions
+from sisa3d.regularization import elongation_regularizer, compactness_regularizer, opacity_regularizer
 class GUI:
     def __init__(self, opt):
         self.opt = opt  # shared with the trainer's opt to support in-place modification of rendering parameters.
@@ -142,32 +143,8 @@ class GUI:
             if self.enable_zero123:
                 self.guidance_zero123.get_img_embeds(self.input_img_torch)
                 
-    def elongation_regularizer(self, scaling_factors, lambda_reg=0.01):
-        # Calculate the variance along the scaling dimensions
-        variance = torch.var(scaling_factors, dim=1)  # Assume scaling_factors is [N, 3] where N is the number of Gaussians
-         # Invert the variance to penalize low variance (which corresponds to less elongation)
-        inverted_variance_penalty = 1 / (variance + 1e-6)  # Adding a small epsilon to avoid division by zero
-        
-        # Calculate the regularization loss as the mean of the inverted variance penalties
-        reg_loss = lambda_reg * torch.mean(inverted_variance_penalty)
-        return reg_loss
-    
-    def opacity_regularizer(self, opacity, lambda_reg=0.05):
-        # Penalize values far from 0 and 1 using a logistic loss
-        reg_loss = lambda_reg * torch.mean(opacity * (1 - opacity))  # Simple quadratic around 0.5
-        return reg_loss
-    def compactness_regularizer(self, scaling_factors, lambda_compact=0.01):
-        # Sum of scaling factors for each Gaussian
-        sum_scaling = torch.sum(scaling_factors, dim=1)  # Sum of scaling factors across x, y, and z
-        
-        # Use the sum as a penalty to encourage smaller Gaussians
-        compactness_penalty = sum_scaling
-        
-        # Calculate the regularization loss as the mean of the sum penalties
-        reg_loss = lambda_compact * torch.mean(compactness_penalty)
-        return reg_loss
-   
-    
+
+
     def train_step(self):
         starter = torch.cuda.Event(enable_timing=True)
         ender = torch.cuda.Event(enable_timing=True)
@@ -199,17 +176,17 @@ class GUI:
                 
                 ## own
                 scaling_factors = self.renderer.gaussians.get_scaling  # Assuming this method exists and provides the scaling factors
-                reg_loss = self.elongation_regularizer(scaling_factors, lambda_reg=0.1)
+                reg_loss = elongation_regularizer(scaling_factors, lambda_reg=0.1)
                 loss += reg_loss
                 
-                size_loss = self.compactness_regularizer(scaling_factors, lambda_compact=0.1)
+                size_loss = compactness_regularizer(scaling_factors, lambda_compact=0.1)
                 loss += size_loss
                 
                 # Retrieve opacity values from GaussianModel
                 opacities = self.renderer.gaussians.get_opacity  # Assuming this returns a tensor of opacity values
 
                 # Calculate opacity regularization loss
-                opacity_reg_loss = self.opacity_regularizer(opacities, lambda_reg=0.1)
+                opacity_reg_loss = opacity_regularizer(opacities, lambda_reg=0.1)
                 loss += opacity_reg_loss
                     
                 
@@ -462,7 +439,6 @@ class GUI:
     def render(self):
        return
    
-    
     # no gui mode
     def train(self, iters=1000):
         if iters > 0:
@@ -475,41 +451,12 @@ class GUI:
             self.renderer.gaussians.prune(min_opacity=0.01, extent=1, max_screen_size=1)
         # save
         
-        # self.save_model(mode='model')
-        # self.save_model(mode='geo+tex')
+        self.save_model(mode='model')
+        self.save_model(mode='geo+tex')
         
         camera_positions = generate_camera_positions(200, self.opt.elevation, self.opt.radius)
         capture_and_save_images(camera_positions, "test_me", self.step, self.opt.ref_size, self.cam.fovy, self.cam.fovx, self.cam.near, self.cam.far, self.renderer, orbit_camera, MiniCam)
         
-        # print(f"[INFO] saving random images!")
-        # save_dir = "rendered_images"
-        # os.makedirs(save_dir, exist_ok=True) 
-        
-            
-        
-        # # Example function to generate camera positions with overlap and varied viewpoints
-        # def generate_camera_positions(num_positions):
-        #     positions = []
-        #     step_angle = 360 / num_positions
-        #     for i in range(num_positions):
-        #         ver = np.random.randint(-30, 30)  # Smaller range to maintain elevation consistency
-        #         hor = step_angle * i  # Ensures complete rotation with overlap
-        #         for radius_variation in [0.8, 0.9, 1.0, 1.1, 1.2]:
-        #             positions.append((self.opt.elevation + ver, hor, self.opt.radius * radius_variation))
-        #     return positions
-
-        # # Main rendering loop
-        # camera_positions = generate_camera_positions(200)  # Generate 200 well-planned positions
-        # for idx, (ver, hor, rad) in enumerate(camera_positions):
-        #     pose = orbit_camera(ver, hor, rad)
-        #     cur_cam = MiniCam(pose, self.opt.ref_size, self.opt.ref_size, self.cam.fovy, self.cam.fovx, self.cam.near, self.cam.far)
-        #     out = self.renderer.render(cur_cam)
-        #     image = out["image"].unsqueeze(0)
-
-        #     image_np = image.squeeze(0).permute(1, 2, 0).cpu().detach().numpy()
-        #     image_np = (image_np * 255).astype(np.uint8)
-        #     image_np = cv2.cvtColor(image_np, cv2.COLOR_RGB2BGR)
-        #     cv2.imwrite(os.path.join(save_dir, f'rendered_image_{self.step}_{idx}.jpg'), image_np)
     
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
