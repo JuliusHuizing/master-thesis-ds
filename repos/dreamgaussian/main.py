@@ -326,7 +326,7 @@ class GUI:
 
             import nvdiffrast.torch as dr
 
-            if not self.opt.force_cuda_rast and (not self.opt.gui or os.name == 'nt'):
+            if not self.opt.force_cuda_rast and (not None or os.name == 'nt'):
                 glctx = dr.RasterizeGLContext()
             else:
                 glctx = dr.RasterizeCudaContext()
