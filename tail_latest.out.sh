@@ -7,4 +7,4 @@ if [ -z "logs/$latest_file" ]; then
   exit 1
 fi
 
-tail -fn 100000000000 "$latest_file"
+tail -fn 100000000000 "logs/$latest_file"
