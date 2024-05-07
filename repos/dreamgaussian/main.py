@@ -324,7 +324,7 @@ class GUI:
 
             render_resolution = 512
 
-            import nvdiffrast.torch as dr
+            import nvdiffrast.torch as drc
 
             if not self.opt.force_cuda_rast and (not None or os.name == 'nt'):
                 glctx = dr.RasterizeGLContext()
@@ -454,8 +454,10 @@ class GUI:
             self.renderer.gaussians.prune(min_opacity=0.01, extent=1, max_screen_size=1)
         # save
         
-        self.save_model(mode='model')
-        self.save_model(mode='geo+tex')
+        if self.opt.save_model:
+            self.save_model(mode='model')
+        if self.opt.save_geo_plus_texture:
+            self.save_model(mode='geo+tex')
         
         if self.opt.generate_image_progressions:
             camera_positions = generate_camera_positions(200, self.opt.elevation, self.opt.radius)

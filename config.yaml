@@ -16,6 +16,8 @@ dreamgaussian:
   generate_image_progressions: False
   generate_gaussian_distribution_plots: False
   regularize: False
+  save_model: False
+  save_geo_plus_texture: False
   ### Input
   # input rgba image path (default to None, can be load in GUI too)
   input: 
