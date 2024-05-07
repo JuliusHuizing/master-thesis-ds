@@ -1,7 +1,7 @@
 
 import yaml
 import runpy
-from ptdraft.yaml.yaml_utils import load_yaml_file
+from sisa3d.yaml.yaml_utils import load_yaml_file
 import logging
 import runpy
 import subprocess
