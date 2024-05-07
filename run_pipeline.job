@@ -20,6 +20,11 @@ git pull
 
 source activate dreamgaussianV2
 
+# install own package
+cd ptdraft
+pip install -e .
+cd ..
+
 python pipeline.py
 
 # git add .
