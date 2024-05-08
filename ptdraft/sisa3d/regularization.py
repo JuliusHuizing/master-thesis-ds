@@ -13,10 +13,15 @@ def elongation_regularizer(scaling_factors, lambda_reg=0.01):
     Returns:
         torch.Tensor: The computed regularization loss.
     """
-    variance = torch.var(scaling_factors, dim=1)  # Calculate the variance along the scaling dimensions
-    inverted_variance_penalty = 1 / (variance + 1e-6)  # Invert the variance to penalize low variance (avoid division by zero)
-    reg_loss = lambda_reg * torch.mean(inverted_variance_penalty)  # Mean of inverted variance penalties as loss
+    # compute l2 norm of the third scaling factor
+    l2_last_dim = torch.linalg.vector_norm(scaling_factors, ord=2, dim=0, keepdim=False)[-1]
+    l2_last_dim_normalized = l2_last_dim / scaling_factors.shape[0]
+    reg_loss = lambda_reg * l2_last_dim_normalized
     return reg_loss
+    # variance = torch.var(scaling_factors, dim=1)  # Calculate the variance along the scaling dimensions
+    # inverted_variance_penalty = 1 / (variance + 1e-6)  # Invert the variance to penalize low variance (avoid division by zero)
+    # reg_loss = lambda_reg * torch.mean(inverted_variance_penalty)  # Mean of inverted variance penalties as loss
+    # return reg_loss
 
 def opacity_regularizer(opacity, lambda_reg=0.05):
     """
