@@ -176,24 +176,21 @@ class GUI:
                 loss = loss + 1000 * (step_ratio if self.opt.warmup_rgb_loss else 1) * F.mse_loss(mask, self.input_mask_torch)
                 
                 ## own
-                if self.opt.regularize:
-                    scaling_factors = self.renderer.gaussians.get_scaling  # Assuming this method exists and provides the scaling factors
-                    reg_loss = elongation_regularizer(scaling_factors, lambda_reg=0.1)
-                    loss += reg_loss
-                    
-                    size_loss = compactness_regularizer(scaling_factors, lambda_compact=0.1)
-                    loss += size_loss
-                    
-                    # Retrieve opacity values from GaussianModel
-                    opacities = self.renderer.gaussians.get_opacity  # Assuming this returns a tensor of opacity values
+                scaling_factors = self.renderer.gaussians.get_scaling  # Assuming this method exists and provides the scaling factors
+                reg_loss = elongation_regularizer(scaling_factors, lambda_reg=self.opt.regularize.elongation)
+                loss += reg_loss
+                
+                size_loss = compactness_regularizer(scaling_factors, lambda_compact=self.opt.regularize.compactness)
+                loss += size_loss
+                
+                # Retrieve opacity values from GaussianModel
+                opacities = self.renderer.gaussians.get_opacity  # Assuming this returns a tensor of opacity values
 
-                    # Calculate opacity regularization loss
-                    opacity_reg_loss = opacity_regularizer(opacities, lambda_reg=0.1)
-                    loss += opacity_reg_loss
+                # Calculate opacity regularization loss
+                opacity_reg_loss = opacity_regularizer(opacities, lambda_reg=self.opt.regularize.opacity)
+                loss += opacity_reg_loss
                     
                 
-
-
             ### novel view (manual batch)
             render_resolution = 256 if step_ratio < 0.3 else (512 if step_ratio < 0.6 else 1028)
 

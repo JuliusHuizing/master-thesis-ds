@@ -15,7 +15,12 @@ preprocess:
 dreamgaussian:
   generate_image_progressions: True
   generate_gaussian_distribution_plots: False
-  regularize: False
+
+  regularize: 
+    elongation: 0.1
+    opacity: 0
+    compactness: 0
+
   save_model: False
   save_geo_plus_texture: False
 
@@ -38,7 +43,7 @@ dreamgaussian:
   # use mvdream instead of sd 2.1
   mvdream: False
   # use imagedream
-  imagedream: True
+  imagedream: False
   # use stable-zero123 instead of zero123-xl
   stable_zero123: False 
   # guidance loss weights (0 to disable)
