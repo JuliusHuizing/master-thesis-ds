@@ -4,6 +4,10 @@ def elongation_regularizer(scaling_factors, lambda_reg=0.01):
     """
     Computes a regularization loss that penalizes low variance in scaling factors,
     promoting more elongation in Gaussian distributions.
+    
+    The regularization loss is computed as the L2 norm of the third scaling factor.
+    I.e., we assume some other loss term encourages the rotation of each Gaussian to change such that the flattened
+    Gaussian aligns with the surface.
 
     Args:
         scaling_factors (torch.Tensor): A tensor of shape [N, 3], where N is the number of Gaussians
