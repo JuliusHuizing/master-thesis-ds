@@ -8,6 +8,7 @@ paths:
   dream_gaussian_results_path: "results/dream_gaussian/"
   model_output_path: "results/dream_gaussian/model/"
   stage_1_images_output_path: "results/dream_gaussian/stage_1/"
+  stage_1_clip_scores_output_path: "results/dream_gaussian/stage_1/clip_scores.csv"
 
   
 preprocess:

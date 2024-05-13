@@ -6,6 +6,7 @@ import logging
 import runpy
 import subprocess
 import sys
+from sisa3d.clip import compute_clip
 
 if __name__ == "__main__":
     # Configure logging to write to stdout
@@ -28,6 +29,7 @@ if __name__ == "__main__":
         PREPROCESSED_IMAGE_PATH = PREPROCCSING_OUTPUT_PATH + INPUT_IMAGE_PATH.split("/")[-1].split(".")[0] + "_rgba.png"
         MODEL_OUTPUT_PATH = config["paths"]["model_output_path"]
         STAGE_1_IMAGES_PATH = config["paths"]["stage_1_images_output_path"]
+        STAGE_1_CLIP_SCORES_OUTPUT_PATH = config["paths"]["stage_1_clip_scores_output_path"]
         logging.info("✅ Paths loaded.")
         
         logging.info("Creating paths if they don't exist...")
@@ -74,13 +76,17 @@ if __name__ == "__main__":
         logging.info("Running Evaluation pipeline...")
         # python -m clip_score path/to/imageA path/to/imageB --real_flag img --fake_flag img
 
-        command = [
-            "python", "-m", "clip_score", 
-            f"{STAGE_1_IMAGES_PATH}generated", 
-            f"{STAGE_1_IMAGES_PATH}reference", 
-            "--real_flag", "img", 
-            "--fake_flag", "img"
-        ]
+        compute_clip(f"{STAGE_1_IMAGES_PATH}generated", 
+                     f"{STAGE_1_IMAGES_PATH}reference", 
+                     id = "test", csv_file=STAGE_1_CLIP_SCORES_OUTPUT_PATH, 
+                     average_scores=True)
+        # command = [
+        #     "python", "-m", "clip_score", 
+        #     f"{STAGE_1_IMAGES_PATH}generated", 
+        #     f"{STAGE_1_IMAGES_PATH}reference", 
+        #     "--real_flag", "img", 
+        #     "--fake_flag", "img"
+        # ]
         
         result = subprocess.run(command, check=True, text=True, capture_output=True)       
         logging.info("✅ Evaluation pipeline complete.")
