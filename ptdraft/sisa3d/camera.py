@@ -1,6 +1,8 @@
 import os
 import numpy as np
 import cv2
+from PIL import Image
+
 
 def create_directory(directory):
     """
@@ -102,7 +104,10 @@ def capture_and_save_images_for_clip_similarity(path_to_preproccesed_reference_i
         cv2.imwrite(os.path.join(generated_output_path, name), image_np)
         
         # save reference png
-        convert_png_to_jpeg(path_to_preproccesed_reference_image, os.path.join(reference_output_path, name), jpeg_quality=100)
+
+        im = Image.open(path_to_preproccesed_reference_image)
+        rgb_im = im.convert('RGB')
+        rgb_im.save(os.path.join(reference_output_path, name))
 
 def generate_fixed_elevation_positions(azimuth_angles, elevation, radius):
     """
@@ -119,38 +124,4 @@ def generate_fixed_elevation_positions(azimuth_angles, elevation, radius):
     return [(elevation, angle, radius) for angle in azimuth_angles]
 
 
-def convert_png_to_jpeg(input_png_path, output_jpeg_path, jpeg_quality=95):
-    """
-    Converts an image from PNG format to JPEG format.
 
-    Args:
-        input_png_path (str): Path to the input PNG image file.
-        output_jpeg_path (str): Path where the output JPEG image will be saved.
-        jpeg_quality (int): Quality of the output JPEG image, ranging from 0 (worst) to 100 (best). Default is 95.
-
-    Returns:
-        bool: True if the image was successfully converted and saved, False otherwise.
-        
-    
-    Example usage:
-    
-        success = convert_png_to_jpeg("input.png", "output.jpg", 95)
-
-    """
-    # Read the image from the specified path
-    image = cv2.imread(input_png_path, cv2.IMREAD_UNCHANGED)
-
-    # Check if the image was loaded properly
-    if image is None:
-        print("Error: Image not loaded. Please check the file path.")
-        return False
-
-    # Write the image to a new JPEG file with specified quality
-    result = cv2.imwrite(output_jpeg_path, image, [int(cv2.IMWRITE_JPEG_QUALITY), jpeg_quality])
-
-    if result:
-        print("Image successfully converted to JPEG and saved at:", output_jpeg_path)
-        return True
-    else:
-        print("Failed to write the JPEG image.")
-        return False
