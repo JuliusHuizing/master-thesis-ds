@@ -26,10 +26,12 @@ if __name__ == "__main__":
         INPUT_IMAGE_PATH = config["paths"]["input_image_path"]
         PREPROCCSING_OUTPUT_PATH = config["paths"]["preprocessing_output_path"]
         PREPROCESSED_IMAGE_PATH = PREPROCCSING_OUTPUT_PATH + INPUT_IMAGE_PATH.split("/")[-1].split(".")[0] + "_rgba.png"
+        MODEL_OUTPUT_PATH = config["paths"]["model_output_path"]
         logging.info("✅ Paths loaded.")
         
         logging.info("Creating paths if they don't exist...")
-        subprocess.run(["mkdir", "-p", PREPROCCSING_OUTPUT_PATH])
+        for path in [PREPROCCSING_OUTPUT_PATH, MODEL_OUTPUT_PATH]:
+            subprocess.run(["mkdir", "-p", path])
         logging.info("✅ Paths created.")
         
         logging.info("Initializing preprocessing pipeline...")
@@ -66,6 +68,19 @@ if __name__ == "__main__":
         result = subprocess.run(command, check=True, text=True, capture_output=True)
         logging.info("✅ DreamGaussian pipeline complete.")
 
+
+        logging.info("Running Evaluation pipeline...")
+        ### evaluation of CLIP-similarity
+        # python -m kiui.cli.clip_sim data/name_rgba.png logs/name.obj
+        command = [
+            
+        ]
+
+        command = [
+            "python", 
+            "-m", 
+            DREAMGAUSSIAN_PATH+f"kiui.cli.clip_sim {PREPROCESSED_IMAGE_PATH} {MODEL_OUTPUT_PATH}"
+        ]
         
         # runpy.run_path(DREAMGAUSSIAN_PATH + f"/process.py --size {preprocessing_config['size']} --border_ratio --recenter {preprocessing_config['recenter']}")
        

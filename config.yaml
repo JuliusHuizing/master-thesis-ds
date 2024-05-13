@@ -6,6 +6,7 @@ paths:
   preprocessing_output_path: "results/preprocessing/"
   image_progression_output_path: "results/image_progression/"
   dream_gaussian_results_path: "results/dream_gaussian/"
+  model_output_path: "results/dream_gaussian/model/"
   
 preprocess:
   size: 256
@@ -13,7 +14,7 @@ preprocess:
   border_ratio: 0.2
 
 dreamgaussian:
-  generate_image_progressions: True
+  generate_image_progressions: False
   generate_gaussian_distribution_plots: False
 
   regularize: 
