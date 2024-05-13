@@ -50,6 +50,7 @@ def capture_and_save_images(camera_positions, directory, step, ref_size, fovy, f
         orbit_camera (function): Function to compute the camera pose based on positions.
         MiniCam (class): Camera class for initializing camera settings.
     """
+    create_directory(directory)
     for idx, (ver, hor, rad) in enumerate(camera_positions):
         pose = orbit_camera(ver, hor, rad)
         cur_cam = MiniCam(pose, ref_size, ref_size, fovy, fovx, near, far)
@@ -60,9 +61,43 @@ def capture_and_save_images(camera_positions, directory, step, ref_size, fovy, f
         image_np = (image_np * 255).astype(np.uint8)
         image_np = cv2.cvtColor(image_np, cv2.COLOR_RGB2BGR)
         # create directory if not exists
-        create_directory(directory)
- 
         name = f'v{ver}_h{hor}_r{rad}_s{step}_i{idx}.jpg'
+        cv2.imwrite(os.path.join(directory, name), image_np)
+        
+        
+def capture_and_save_images_for_clip_similarity(path_to_preproccesed_reference_image, camera_positions, directory, step, ref_size, fovy, fovx, near, far, renderer, orbit_camera, MiniCam):
+    """
+    Captures and saves images based on given camera positions using the specified camera and rendering settings.
+    
+    Args:
+        camera_positions (list): Camera positions (elevation, horizontal angle, radius).
+        directory (str): Directory to save images.
+        step (int): Current step or iteration in the process.
+        ref_size (int): Reference size for the camera.
+        fovy (float): Vertical field of view.
+        fovx (float): Horizontal field of view.
+        near (float): Near clipping plane distance.
+        far (float): Far clipping plane distance.
+        renderer: Rendering engine.
+        orbit_camera (function): Function to compute the camera pose based on positions.
+        MiniCam (class): Camera class for initializing camera settings.
+    """
+    reference_output_path = os.join(directory, "reference")
+    generated_output_path = os.join(directory, "generated")
+    create_directory(directory)
+
+    for idx, (ver, hor, rad) in enumerate(camera_positions):
+        pose = orbit_camera(ver, hor, rad)
+        cur_cam = MiniCam(pose, ref_size, ref_size, fovy, fovx, near, far)
+        out = renderer.render(cur_cam)
+        image = out["image"].unsqueeze(0)
+
+        image_np = image.squeeze(0).permute(1, 2, 0).cpu().detach().numpy()
+        image_np = (image_np * 255).astype(np.uint8)
+        image_np = cv2.cvtColor(image_np, cv2.COLOR_RGB2BGR)
+        # create directory if not exists
+        name = f'v{ver}_h{hor}_r{rad}_s{step}_i{idx}.jpg'
+        
         cv2.imwrite(os.path.join(directory, name), image_np)
 
 def generate_fixed_elevation_positions(azimuth_angles, elevation, radius):
