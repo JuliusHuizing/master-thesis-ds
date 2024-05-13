@@ -297,12 +297,12 @@ class GUI:
     def save_model(self, mode='geo', texture_size=1024):
         os.makedirs(self.opt.outdir, exist_ok=True)
         if mode == 'geo':
-            path = os.path.join(self.opt.outdir, "test" + '_mesh.ply')
+            path = os.path.join(self.opt.outdir, "model_name" + '_mesh.ply')
             mesh = self.renderer.gaussians.extract_mesh(path, self.opt.density_thresh)
             mesh.write_ply(path)
 
         elif mode == 'geo+tex':
-            path = os.path.join(self.opt.outdir, "test" + '_mesh.' + self.opt.mesh_format)
+            path = os.path.join(self.opt.outdir, "model_name" + '_mesh.' + self.opt.mesh_format)
             mesh = self.renderer.gaussians.extract_mesh(path, self.opt.density_thresh)
 
             # perform texture extraction
@@ -322,7 +322,7 @@ class GUI:
 
             render_resolution = 512
 
-            import nvdiffrast.torch as drc
+            import nvdiffrast.torch as dr
 
             if not self.opt.force_cuda_rast and (not None or os.name == 'nt'):
                 glctx = dr.RasterizeGLContext()
@@ -430,7 +430,7 @@ class GUI:
             mesh.write(path)
 
         else:
-            path = os.path.join(self.opt.outdir, "test" + '_model.ply')
+            path = os.path.join(self.opt.outdir, "model_name" + '_model.ply')
             self.renderer.gaussians.save_ply(path)
 
         print(f"[INFO] save model to {path}.")
