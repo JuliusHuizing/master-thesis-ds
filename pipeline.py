@@ -81,7 +81,7 @@ if __name__ == "__main__":
         command = [
             "python", 
             "-m", 
-            DREAMGAUSSIAN_PATH+f"kiui.cli.clip_sim {PREPROCESSED_IMAGE_PATH} {MODEL_OUTPUT_PATH}mesh.obj"
+            "kiui.cli.clip_sim {PREPROCESSED_IMAGE_PATH} {MODEL_OUTPUT_PATH}mesh.obj"
         ]
         result = subprocess.run(command, check=True, text=True, capture_output=True)       
         
