@@ -38,7 +38,6 @@ dreamgaussian:
   ### Output
   outdir: "results/dream_gaussian/"
   mesh_format: obj
-  save_path: ???
 
   ### Training
   # use mvdream instead of sd 2.1

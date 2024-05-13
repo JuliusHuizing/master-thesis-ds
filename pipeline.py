@@ -58,7 +58,7 @@ if __name__ == "__main__":
         result = subprocess.run(command, check=True, text=True, capture_output=True)
         logging.info("✅ Preprocessing pipeline complete.")
         
-        logging.info("Running DreamGaussian pipeline...")
+        logging.info("Running DreamGaussian Stage 1 pipeline...")
         command = [
             "python", DREAMGAUSSIAN_PATH+"main.py", 
             f"--config", "config.yaml", 
@@ -69,21 +69,21 @@ if __name__ == "__main__":
         logging.info("✅ DreamGaussian pipeline complete.")
 
 
-        logging.info("Running Evaluation pipeline...")
-        ### evaluation of CLIP-similarity
-        # python -m kiui.cli.clip_sim data/name_rgba.png logs/name.obj
-        command = [
-            
-        ]
+        # logging.info("Running DreamGaussian Stage 2 pipeline...")
+        # # python main2.py --config configs/image.yaml input=data/name_rgba.png save_path=name
+        # command = [
+        #     "python", DREAMGAUSSIAN_PATH+"main2.py",
+        #     f"--config", f"{DREAMGAUSSIAN_PATH}configs/image.yaml",
+        #     f"input={PREPROCESSED_IMAGE_PATH}",
+        # ]
 
+        logging.info("Running Evaluation pipeline...")
         command = [
             "python", 
             "-m", 
-            DREAMGAUSSIAN_PATH+f"kiui.cli.clip_sim {PREPROCESSED_IMAGE_PATH} {MODEL_OUTPUT_PATH}"
+            DREAMGAUSSIAN_PATH+f"kiui.cli.clip_sim {PREPROCESSED_IMAGE_PATH} {MODEL_OUTPUT_PATH}mesh.obj"
         ]
-        
-        # runpy.run_path(DREAMGAUSSIAN_PATH + f"/process.py --size {preprocessing_config['size']} --border_ratio --recenter {preprocessing_config['recenter']}")
-       
+        result = subprocess.run(command, check=True, text=True, capture_output=True)       
         
     except subprocess.CalledProcessError as cpe:
         # Log the output and error output from the subprocess

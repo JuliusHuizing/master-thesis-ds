@@ -297,12 +297,12 @@ class GUI:
     def save_model(self, mode='geo', texture_size=1024):
         os.makedirs(self.opt.outdir, exist_ok=True)
         if mode == 'geo':
-            path = os.path.join(self.opt.outdir, "model_name" + '_mesh.ply')
+            path = os.path.join(self.opt.outdir, 'mesh.ply')
             mesh = self.renderer.gaussians.extract_mesh(path, self.opt.density_thresh)
             mesh.write_ply(path)
 
         elif mode == 'geo+tex':
-            path = os.path.join(self.opt.outdir, "model_name" + '_mesh.' + self.opt.mesh_format)
+            path = os.path.join(self.opt.outdir, 'mesh.' + self.opt.mesh_format)
             mesh = self.renderer.gaussians.extract_mesh(path, self.opt.density_thresh)
 
             # perform texture extraction
