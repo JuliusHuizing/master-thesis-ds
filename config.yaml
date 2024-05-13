@@ -21,8 +21,8 @@ dreamgaussian:
     opacity: 0
     compactness: 0
 
-  save_model: False
-  save_geo_plus_texture: False
+  save_model: True
+  save_geo_plus_texture: True
 
   ### Input
   # input rgba image path (default to None, can be load in GUI too)
@@ -95,4 +95,4 @@ dreamgaussian:
   opacity_reset_interval: 700
   densify_grad_threshold: 0.01
 
-
+  
