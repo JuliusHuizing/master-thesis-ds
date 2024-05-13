@@ -1,0 +1,111 @@
+============================================================================================== 
+Warning! Mixing Conda and module environments may lead to corruption of the
+user environment. 
+We do not recommend users mixing those two environments unless absolutely
+necessary. Note that 
+SURF does not provide any support for Conda environment.
+For more information, please refer to our software policy page:
+https://servicedesk.surf.nl/wiki/display/WIKI/Software+policy+Snellius#SoftwarepolicySnellius-UseofAnacondaandMinicondaenvironmentsonSnellius 
+
+Remember that many packages have already been installed on the system and can
+be loaded using 
+the 'module load <package__name>' command. If you are uncertain if a package is
+already available 
+on the system, please use 'module avail' or 'module spider' to search for it.
+============================================================================================== 
+Already up to date.
+Obtaining file:///gpfs/home6/jhuizing/master-thesis-ds/ptdraft
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: sisa3d
+  Building editable for sisa3d (pyproject.toml): started
+  Building editable for sisa3d (pyproject.toml): finished with status 'done'
+  Created wheel for sisa3d: filename=sisa3d-0.1.0-py3-none-any.whl size=1286 sha256=466689da9623440a694956c93a4920038d607a9428abb993da0c7549d07f4ef9
+  Stored in directory: /gpfs/scratch1/nodespecific/gcn49/jhuizing.6240892/pip-ephem-wheel-cache-1wqj5dfx/wheels/ba/24/02/45c17a515af0a22326616b14da79c51e525e740ad6f0b007df
+Successfully built sisa3d
+Installing collected packages: sisa3d
+  Attempting uninstall: sisa3d
+    Found existing installation: sisa3d 0.1.0
+    Uninstalling sisa3d-0.1.0:
+      Successfully uninstalled sisa3d-0.1.0
+Successfully installed sisa3d-0.1.0
+Collecting git+https://github.com/openai/CLIP.git
+  Cloning https://github.com/openai/CLIP.git to /gpfs/scratch1/nodespecific/gcn49/jhuizing.6240892/pip-req-build-og7v4yaf
+  Running command git clone --filter=blob:none --quiet https://github.com/openai/CLIP.git /gpfs/scratch1/nodespecific/gcn49/jhuizing.6240892/pip-req-build-og7v4yaf
+  Resolved https://github.com/openai/CLIP.git to commit a1d071733d7111c9c014f024669f959182114e33
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Requirement already satisfied: ftfy in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from clip==1.0) (6.2.0)
+Requirement already satisfied: regex in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from clip==1.0) (2023.12.25)
+Requirement already satisfied: tqdm in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from clip==1.0) (4.66.2)
+Requirement already satisfied: torch in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from clip==1.0) (2.1.0)
+Requirement already satisfied: torchvision in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from clip==1.0) (0.16.0)
+Requirement already satisfied: wcwidth<0.3.0,>=0.2.12 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from ftfy->clip==1.0) (0.2.13)
+Requirement already satisfied: filelock in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from torch->clip==1.0) (3.13.1)
+Requirement already satisfied: typing-extensions in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from torch->clip==1.0) (4.9.0)
+Requirement already satisfied: sympy in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from torch->clip==1.0) (1.12)
+Requirement already satisfied: networkx in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from torch->clip==1.0) (3.1)
+Requirement already satisfied: jinja2 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from torch->clip==1.0) (3.1.3)
+Requirement already satisfied: fsspec in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from torch->clip==1.0) (2024.3.1)
+Requirement already satisfied: numpy in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from torchvision->clip==1.0) (1.24.3)
+Requirement already satisfied: requests in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from torchvision->clip==1.0) (2.31.0)
+Requirement already satisfied: pillow!=8.3.*,>=5.3.0 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from torchvision->clip==1.0) (10.2.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from jinja2->torch->clip==1.0) (2.1.3)
+Requirement already satisfied: charset-normalizer<4,>=2 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from requests->torchvision->clip==1.0) (2.0.4)
+Requirement already satisfied: idna<4,>=2.5 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from requests->torchvision->clip==1.0) (3.4)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from requests->torchvision->clip==1.0) (2.1.0)
+Requirement already satisfied: certifi>=2017.4.17 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from requests->torchvision->clip==1.0) (2024.2.2)
+Requirement already satisfied: mpmath>=0.19 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from sympy->torch->clip==1.0) (1.3.0)
+Requirement already satisfied: clip-score in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (0.1.1)
+Requirement already satisfied: numpy in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from clip-score) (1.24.3)
+Requirement already satisfied: pillow in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from clip-score) (10.2.0)
+Requirement already satisfied: torch>=1.7.1 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from clip-score) (2.1.0)
+Requirement already satisfied: torchvision>=0.8.2 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from clip-score) (0.16.0)
+Requirement already satisfied: ftfy in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from clip-score) (6.2.0)
+Requirement already satisfied: regex in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from clip-score) (2023.12.25)
+Requirement already satisfied: tqdm in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from clip-score) (4.66.2)
+Requirement already satisfied: filelock in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from torch>=1.7.1->clip-score) (3.13.1)
+Requirement already satisfied: typing-extensions in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from torch>=1.7.1->clip-score) (4.9.0)
+Requirement already satisfied: sympy in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from torch>=1.7.1->clip-score) (1.12)
+Requirement already satisfied: networkx in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from torch>=1.7.1->clip-score) (3.1)
+Requirement already satisfied: jinja2 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from torch>=1.7.1->clip-score) (3.1.3)
+Requirement already satisfied: fsspec in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from torch>=1.7.1->clip-score) (2024.3.1)
+Requirement already satisfied: requests in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from torchvision>=0.8.2->clip-score) (2.31.0)
+Requirement already satisfied: wcwidth<0.3.0,>=0.2.12 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from ftfy->clip-score) (0.2.13)
+Requirement already satisfied: MarkupSafe>=2.0 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from jinja2->torch>=1.7.1->clip-score) (2.1.3)
+Requirement already satisfied: charset-normalizer<4,>=2 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from requests->torchvision>=0.8.2->clip-score) (2.0.4)
+Requirement already satisfied: idna<4,>=2.5 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from requests->torchvision>=0.8.2->clip-score) (3.4)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from requests->torchvision>=0.8.2->clip-score) (2.1.0)
+Requirement already satisfied: certifi>=2017.4.17 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from requests->torchvision>=0.8.2->clip-score) (2024.2.2)
+Requirement already satisfied: mpmath>=0.19 in /gpfs/home6/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages (from sympy->torch>=1.7.1->clip-score) (1.3.0)
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+
+JOB STATISTICS
+==============
+Job ID: 6240892
+Cluster: snellius
+User/Group: jhuizing/jhuizing
+State: COMPLETED (exit code 0)
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 00:01:11
+CPU Efficiency: 4.70% of 00:25:12 core-walltime
+Job Wall-clock time: 00:01:24
+Memory Utilized: 1.88 GB
+Memory Efficiency: 1.57% of 120.00 GB
