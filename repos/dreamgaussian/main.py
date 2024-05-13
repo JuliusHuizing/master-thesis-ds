@@ -19,7 +19,7 @@ import argparse
 from omegaconf import OmegaConf
 import os
 from sisa3d.visuals.visualizer import Visualizer
-from sisa3d.camera import capture_and_save_images, generate_camera_positions
+from sisa3d.camera import capture_and_save_images, generate_camera_positions, generate_fixed_elevation_positions
 from sisa3d.regularization import elongation_regularizer, compactness_regularizer, opacity_regularizer
 
 class GUI:
@@ -458,8 +458,10 @@ class GUI:
             self.save_model(mode='geo+tex')
         
         if self.opt.save_images:
-            camera_positions = generate_camera_positions(200, self.opt.elevation, self.opt.radius)
-            capture_and_save_images(camera_positions, "test_me", self.step, self.opt.ref_size, self.cam.fovy, self.cam.fovx, self.cam.near, self.cam.far, self.renderer, orbit_camera, MiniCam)
+            azimuth_angles = [0, 45, 90, 135, 180, 225, 270, 315]
+            camera_positions = generate_fixed_elevation_positions(azimuth_angles, self.step, self.opt.radius)
+            # camera_positions = generate_camera_positions(200, self.opt.elevation, self.opt.radius)
+            capture_and_save_images(camera_positions, self.opt.stage_1_images_output_path, self.step, self.opt.ref_size, self.cam.fovy, self.cam.fovx, self.cam.near, self.cam.far, self.renderer, orbit_camera, MiniCam)
             
     
 if __name__ == "__main__":

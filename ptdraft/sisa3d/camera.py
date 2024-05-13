@@ -33,7 +33,7 @@ def generate_camera_positions(num_positions, elevation, radius):
             positions.append((elevation + ver, hor, radius * radius_variation))
     return positions
 
-def capture_and_save_images(camera_positions, directory, step, ref_size, fovy, fovx, near, far, renderer, orbit_camera, MiniCam):
+def capture_and_save_images(camera_positions, directory, step, ref_size, fovy, fovx, near, far, renderer, orbit_camera, MiniCam, name=None):
     """
     Captures and saves images based on given camera positions using the specified camera and rendering settings.
     
@@ -61,18 +61,22 @@ def capture_and_save_images(camera_positions, directory, step, ref_size, fovy, f
         image_np = cv2.cvtColor(image_np, cv2.COLOR_RGB2BGR)
         # create directory if not exists
         create_directory(directory)
-        cv2.imwrite(os.path.join(directory, f'rendered_image_{step}_{idx}.jpg'), image_np)
+        if name:
+            cv2.imwrite(os.path.join(directory, f'{name}.jpg'), image_np)
+        else:
+            name = f'v{ver}_h{hor}_r{rad}_s{step}_i{idx}.jpg'
+            cv2.imwrite(os.path.join(directory, name), image_np)
 
-    def generate_fixed_elevation_positions(azimuth_angles, elevation, radius):
-        """
-        Generate camera positions at a fixed elevation and specified azimuth angles.
+def generate_fixed_elevation_positions(azimuth_angles, elevation, radius):
+    """
+    Generate camera positions at a fixed elevation and specified azimuth angles.
 
-        Args:
-            azimuth_angles (list of int): List of azimuth angles.
-            elevation (int): Elevation angle, set to zero for this case.
-            radius (float): Distance from the origin.
+    Args:
+        azimuth_angles (list of int): List of azimuth angles.
+        elevation (int): Elevation angle, set to zero for this case.
+        radius (float): Distance from the origin.
 
-        Returns:
-            list of tuples: Each tuple contains (elevation, azimuth angle, radius).
-        """
-        return [(elevation, angle, radius) for angle in azimuth_angles]
+    Returns:
+        list of tuples: Each tuple contains (elevation, azimuth angle, radius).
+    """
+    return [(elevation, angle, radius) for angle in azimuth_angles]
