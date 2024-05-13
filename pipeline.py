@@ -27,10 +27,11 @@ if __name__ == "__main__":
         PREPROCCSING_OUTPUT_PATH = config["paths"]["preprocessing_output_path"]
         PREPROCESSED_IMAGE_PATH = PREPROCCSING_OUTPUT_PATH + INPUT_IMAGE_PATH.split("/")[-1].split(".")[0] + "_rgba.png"
         MODEL_OUTPUT_PATH = config["paths"]["model_output_path"]
+        STAGE_1_IMAGES_PATH = config["paths"]["stage_1_images_output_path"]
         logging.info("✅ Paths loaded.")
         
         logging.info("Creating paths if they don't exist...")
-        for path in [PREPROCCSING_OUTPUT_PATH, MODEL_OUTPUT_PATH]:
+        for path in [PREPROCCSING_OUTPUT_PATH, MODEL_OUTPUT_PATH, STAGE_1_IMAGES_PATH]:
             subprocess.run(["mkdir", "-p", path])
         logging.info("✅ Paths created.")
         

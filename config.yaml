@@ -8,6 +8,7 @@ paths:
   dream_gaussian_results_path: "results/dream_gaussian/"
   model_output_path: "results/dream_gaussian/model/"
   stage_1_images_output_path: "results/dream_gaussian/stage_1/"
+
   
 preprocess:
   size: 256
@@ -15,6 +16,8 @@ preprocess:
   border_ratio: 0.2
 
 dreamgaussian:
+  # we need to duplicate this here so dg main.py can access it...
+  stage_1_images_output_path: "results/dream_gaussian/stage_1/"
   generate_image_progressions: False
   generate_gaussian_distribution_plots: False
   save_images: True
