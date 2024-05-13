@@ -16,14 +16,15 @@ preprocess:
 dreamgaussian:
   generate_image_progressions: False
   generate_gaussian_distribution_plots: False
+  save_images: True
 
   regularize: 
     elongation: 0.1
     opacity: 0
     compactness: 0
 
-  save_model: True
-  save_geo_plus_texture: True
+  save_model: False
+  save_geo_plus_texture: False
 
   ### Input
   # input rgba image path (default to None, can be load in GUI too)

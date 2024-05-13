@@ -25,7 +25,8 @@ cd ptdraft
 pip install -e .
 cd ..
 
-pip install kiui==0.2.2
+pip install git+https://github.com/openai/CLIP.git
+pip install clip-score
 
 python pipeline.py
 
