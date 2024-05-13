@@ -1,3 +1,4 @@
 ID,Reference Image Directory,Generated Image Directory,CLIP Score
 test,/Users/julius/repos/master-thesis-ds/results/dream_gaussian/stage_1/generated,/Users/julius/repos/master-thesis-ds/results/dream_gaussian/stage_1/generated,100.0000228881836
 test,/Users/julius/repos/master-thesis-ds/results/dream_gaussian/stage_1/generated,/Users/julius/repos/master-thesis-ds/results/dream_gaussian/stage_1/reference,74.5799560546875
+test,74.5799560546875

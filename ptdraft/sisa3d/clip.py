@@ -157,8 +157,7 @@ from torch.utils.data import DataLoader
 import clip  # Assuming the CLIP library is already imported
 
 @torch.no_grad()
-def compute_clip(reference_images_dir, generated_images_dir, id, csv_file):
-    # Set fixed parameters or load them from a config
+def compute_clip(reference_images_dir, generated_images_dir, id, csv_file, average_scores=True):
     batch_size = 50
     clip_model = 'ViT-B/32'
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
@@ -172,30 +171,51 @@ def compute_clip(reference_images_dir, generated_images_dir, id, csv_file):
     dataset = DummyDataset(reference_images_dir, generated_images_dir, real_flag, fake_flag, transform=preprocess, tokenizer=clip.tokenize)
     dataloader = DataLoader(dataset, batch_size=batch_size, num_workers=min(8, os.cpu_count()), pin_memory=True)
 
-    # Compute the CLIP score
-    print('Calculating CLIP Score for ID:', id)
-    clip_score = calculate_clip_score(dataloader, model, real_flag, fake_flag)
-    clip_score = clip_score.cpu().item()
-    print('CLIP Score:', clip_score)
-
     # Ensure directory exists where the CSV will be saved
     csv_dir = os.path.dirname(csv_file)
     if not os.path.exists(csv_dir):
         os.makedirs(csv_dir, exist_ok=True)
 
-    # Check if the CSV file exists and write headers if necessary
-    file_exists = os.path.isfile(csv_file)
+    # Open CSV file and handle CSV writing
     with open(csv_file, mode='a', newline='') as file:
         writer = csv.writer(file)
-        if not file_exists:
-            writer.writerow(['ID', 'Reference Image Directory', 'Generated Image Directory', 'CLIP Score'])
-        writer.writerow([id, reference_images_dir, generated_images_dir, clip_score])
+        # Check if the file is newly created to write headers
+        if os.stat(csv_file).st_size == 0:
+            writer.writerow(['ID', 'CLIP Score'])
 
-    print(f"Score written to {csv_file} for ID: {id}")
+        if average_scores:
+            print('Calculating average CLIP Score:')
+            clip_score = calculate_average_clip_score(dataloader, model, real_flag, fake_flag)
+            writer.writerow([id, clip_score.cpu().item()])
+        else:
+            print('Calculating individual CLIP Scores for each pair:')
+            calculate_clip_scores(dataloader, model, real_flag, fake_flag, writer, id)
+
+    print(f"Scores written to {csv_file} for ID: {id}")
+
 
 
 @torch.no_grad()
-def calculate_clip_score(dataloader, model, real_flag, fake_flag):
+def calculate_clip_scores(dataloader, model, real_flag, fake_flag, csv_writer, id):
+    logit_scale = model.logit_scale.exp()
+    for batch_data in tqdm(dataloader):
+        real = batch_data['real']
+        real_features = forward_modality(model, real, real_flag)
+        fake = batch_data['fake']
+        fake_features = forward_modality(model, fake, fake_flag)
+        
+        # Normalize features
+        real_features = real_features / real_features.norm(dim=1, keepdim=True)
+        fake_features = fake_features / fake_features.norm(dim=1, keepdim=True)
+        
+        # Calculate scores for each pair in the batch
+        for i in range(real_features.shape[0]):
+            score = logit_scale * (real_features[i] * fake_features[i]).sum()
+            csv_writer.writerow([id, score.item()])
+
+
+@torch.no_grad()
+def calculate_average_clip_score(dataloader, model, real_flag, fake_flag):
     score_acc = 0.
     sample_num = 0.
     logit_scale = model.logit_scale.exp()
