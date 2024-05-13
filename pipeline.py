@@ -68,7 +68,24 @@ if __name__ == "__main__":
         ]
         result = subprocess.run(command, check=True, text=True, capture_output=True)
         logging.info("✅ DreamGaussian pipeline complete.")
+        
+        
 
+        logging.info("Running Evaluation pipeline...")
+        # python -m clip_score path/to/imageA path/to/imageB --real_flag img --fake_flag img
+
+        command = [
+            "python", "-m", "clip_score", 
+            f"{STAGE_1_IMAGES_PATH}generated", 
+            f"{STAGE_1_IMAGES_PATH}reference", 
+            "--real_flag", "img", 
+            "--fake_flag", "img"
+        ]
+        
+        result = subprocess.run(command, check=True, text=True, capture_output=True)       
+        logging.info("✅ Evaluation pipeline complete.")
+        
+        
 
         # logging.info("Running DreamGaussian Stage 2 pipeline...")
         # # python main2.py --config configs/image.yaml input=data/name_rgba.png save_path=name
@@ -78,13 +95,7 @@ if __name__ == "__main__":
         #     f"input={PREPROCESSED_IMAGE_PATH}",
         # ]
 
-        # logging.info("Running Evaluation pipeline...")
-        # command = [
-        #     "python", 
-        #     "-m", 
-        #     "kiui.cli.clip_sim {PREPROCESSED_IMAGE_PATH} {MODEL_OUTPUT_PATH}mesh.obj"
-        # ]
-        # result = subprocess.run(command, check=True, text=True, capture_output=True)       
+    
         
     except subprocess.CalledProcessError as cpe:
         # Log the output and error output from the subprocess
