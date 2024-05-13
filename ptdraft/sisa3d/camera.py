@@ -82,9 +82,10 @@ def capture_and_save_images_for_clip_similarity(path_to_preproccesed_reference_i
         orbit_camera (function): Function to compute the camera pose based on positions.
         MiniCam (class): Camera class for initializing camera settings.
     """
-    reference_output_path = os.join(directory, "reference")
-    generated_output_path = os.join(directory, "generated")
-    create_directory(directory)
+    reference_output_path = os.path.join(directory, "reference")
+    generated_output_path = os.path.join(directory, "generated")
+    create_directory(reference_output_path)
+    
 
     for idx, (ver, hor, rad) in enumerate(camera_positions):
         pose = orbit_camera(ver, hor, rad)
@@ -97,8 +98,11 @@ def capture_and_save_images_for_clip_similarity(path_to_preproccesed_reference_i
         image_np = cv2.cvtColor(image_np, cv2.COLOR_RGB2BGR)
         # create directory if not exists
         name = f'v{ver}_h{hor}_r{rad}_s{step}_i{idx}.jpg'
+        cv2.imwrite(os.path.join(generated_output_path, name), image_np)
         
-        cv2.imwrite(os.path.join(directory, name), image_np)
+        # save reference image with same name but in reference folder
+        reference_image_np = cv2.imread(path_to_preproccesed_reference_image)
+        cv2.imwrite(os.path.join(reference_output_path, name), reference_image_np)
 
 def generate_fixed_elevation_positions(azimuth_angles, elevation, radius):
     """

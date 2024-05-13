@@ -19,7 +19,7 @@ import argparse
 from omegaconf import OmegaConf
 import os
 from sisa3d.visuals.visualizer import Visualizer
-from sisa3d.camera import capture_and_save_images, generate_camera_positions, generate_fixed_elevation_positions
+from sisa3d.camera import capture_and_save_images, generate_camera_positions, generate_fixed_elevation_positions, capture_and_save_images_for_clip_similarity
 from sisa3d.regularization import elongation_regularizer, compactness_regularizer, opacity_regularizer
 
 class GUI:
@@ -461,7 +461,9 @@ class GUI:
             azimuth_angles = [0, 45, 90, 135, 180, 225, 270, 315]
             camera_positions = generate_fixed_elevation_positions(azimuth_angles, self.step, self.opt.radius)
             # camera_positions = generate_camera_positions(200, self.opt.elevation, self.opt.radius)
-            capture_and_save_images(camera_positions, self.opt.stage_1_images_output_path, self.step, self.opt.ref_size, self.cam.fovy, self.cam.fovx, self.cam.near, self.cam.far, self.renderer, orbit_camera, MiniCam)
+            preprocessed_reference_image_path = self.opt.preprocessing_output_path
+            capture_and_save_images_for_clip_similarity(preprocessed_reference_image_path, camera_positions, self.opt.stage_1_images_output_path, self.step, self.opt.ref_size, self.cam.fovy, self.cam.fovx, self.cam.near, self.cam.far, self.renderer, orbit_camera, MiniCam)
+            # capture_and_save_images(camera_positions, self.opt.stage_1_images_output_path, self.step, self.opt.ref_size, self.cam.fovy, self.cam.fovx, self.cam.near, self.cam.far, self.renderer, orbit_camera, MiniCam)
             
     
 if __name__ == "__main__":

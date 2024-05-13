@@ -18,6 +18,8 @@ preprocess:
 dreamgaussian:
   # we need to duplicate this here so dg main.py can access it...
   stage_1_images_output_path: "results/dream_gaussian/stage_1/"
+  preprocessing_output_path: "results/preprocessing/"
+
   generate_image_progressions: False
   generate_gaussian_distribution_plots: False
   save_images: True
