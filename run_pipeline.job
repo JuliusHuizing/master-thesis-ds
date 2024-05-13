@@ -25,6 +25,8 @@ cd ptdraft
 pip install -e .
 cd ..
 
+pip install kiui==0.2.2
+
 python pipeline.py
 
 # git add .
