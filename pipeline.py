@@ -77,13 +77,13 @@ if __name__ == "__main__":
         #     f"input={PREPROCESSED_IMAGE_PATH}",
         # ]
 
-        logging.info("Running Evaluation pipeline...")
-        command = [
-            "python", 
-            "-m", 
-            "kiui.cli.clip_sim {PREPROCESSED_IMAGE_PATH} {MODEL_OUTPUT_PATH}mesh.obj"
-        ]
-        result = subprocess.run(command, check=True, text=True, capture_output=True)       
+        # logging.info("Running Evaluation pipeline...")
+        # command = [
+        #     "python", 
+        #     "-m", 
+        #     "kiui.cli.clip_sim {PREPROCESSED_IMAGE_PATH} {MODEL_OUTPUT_PATH}mesh.obj"
+        # ]
+        # result = subprocess.run(command, check=True, text=True, capture_output=True)       
         
     except subprocess.CalledProcessError as cpe:
         # Log the output and error output from the subprocess

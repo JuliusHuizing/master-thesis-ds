@@ -59,5 +59,20 @@ def capture_and_save_images(camera_positions, directory, step, ref_size, fovy, f
         image_np = image.squeeze(0).permute(1, 2, 0).cpu().detach().numpy()
         image_np = (image_np * 255).astype(np.uint8)
         image_np = cv2.cvtColor(image_np, cv2.COLOR_RGB2BGR)
+        # create directory if not exists
+        create_directory(directory)
         cv2.imwrite(os.path.join(directory, f'rendered_image_{step}_{idx}.jpg'), image_np)
 
+    def generate_fixed_elevation_positions(azimuth_angles, elevation, radius):
+        """
+        Generate camera positions at a fixed elevation and specified azimuth angles.
+
+        Args:
+            azimuth_angles (list of int): List of azimuth angles.
+            elevation (int): Elevation angle, set to zero for this case.
+            radius (float): Distance from the origin.
+
+        Returns:
+            list of tuples: Each tuple contains (elevation, azimuth angle, radius).
+        """
+        return [(elevation, angle, radius) for angle in azimuth_angles]

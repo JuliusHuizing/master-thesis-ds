@@ -58,7 +58,6 @@ dreamgaussian:
   iters: 500
   # whether to linearly anneal timestep
   anneal_timestep: True
-  # training iterations for stage 2
   # training camera radius
   radius: 2
   # training camera fovy
