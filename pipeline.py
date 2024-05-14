@@ -6,7 +6,12 @@ import logging
 import runpy
 import subprocess
 import sys
+import time
+import csv
+import os
 from sisa3d.clip import compute_clip
+from sisa3d.results import save_results_to_csv
+
 
 if __name__ == "__main__":
     # Configure logging to write to stdout
@@ -17,6 +22,8 @@ if __name__ == "__main__":
     logging.getLogger().setLevel(logging.INFO)
     # Configure logging
     try:
+        start_time = time.time()  # Start time for duration calculation
+
         logging.info("Loading configuration...")
         config = load_yaml_file('config.yaml')
         logging.info("✅ Configuration loaded.")
@@ -74,24 +81,21 @@ if __name__ == "__main__":
         
 
         logging.info("Running Evaluation pipeline...")
-        # python -m clip_score path/to/imageA path/to/imageB --real_flag img --fake_flag img
-
-        compute_clip(f"{STAGE_1_IMAGES_PATH}generated", 
-                     f"{STAGE_1_IMAGES_PATH}reference", 
-                     id = "test", csv_file=STAGE_1_CLIP_SCORES_OUTPUT_PATH, 
-                     average_scores=True)
-        # command = [
-        #     "python", "-m", "clip_score", 
-        #     f"{STAGE_1_IMAGES_PATH}generated", 
-        #     f"{STAGE_1_IMAGES_PATH}reference", 
-        #     "--real_flag", "img", 
-        #     "--fake_flag", "img"
-        # ]
+        clip_score = compute_clip(f"{STAGE_1_IMAGES_PATH}generated", 
+                     f"{STAGE_1_IMAGES_PATH}reference")
+        
         
         result = subprocess.run(command, check=True, text=True, capture_output=True)       
+        
+        # Calculate duration
+        duration = time.time() - start_time
+
+        # Save results to CSV
+        csv_path = 'results/stage_1/clip_scores.csv'  # You can change this to your desired path
+        save_results_to_csv(csv_path, clip_score, duration, config)
+        logging.info(f" ... Results saved to {csv_path}.")
         logging.info("✅ Evaluation pipeline complete.")
-        
-        
+
 
         # logging.info("Running DreamGaussian Stage 2 pipeline...")
         # # python main2.py --config configs/image.yaml input=data/name_rgba.png save_path=name
@@ -115,23 +119,3 @@ if __name__ == "__main__":
         logging.error(f" ❌ Error in pipeline: {e}")
         raise e
         
-    
-    
-    
-    
-    
-    
-    
-    
-
-        
-        
-        
-        
-            
-            
-            
-        
-    
-    
-    
