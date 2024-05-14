@@ -192,8 +192,7 @@ class GUI:
                     
                 
             ### novel view (manual batch)
-            render_resolution = 256 if step_ratio < 0.3 else (512 if step_ratio < 0.6 else 1028)
-
+            render_resolution = 128 if step_ratio < 0.3 else (256 if step_ratio < 0.6 else 512)
             # render_resolution = 128 if step_ratio < 0.3 else (256 if step_ratio < 0.6 else 512)
             images = []
             poses = []
@@ -464,7 +463,8 @@ class GUI:
             capture_and_save_images_for_clip_similarity(self.opt.input, camera_positions, self.opt.stage_1_images_output_path, self.step, self.opt.ref_size, self.cam.fovy, self.cam.fovx, self.cam.near, self.cam.far, self.renderer, orbit_camera, MiniCam)
             # capture_and_save_images(camera_positions, self.opt.stage_1_images_output_path, self.step, self.opt.ref_size, self.cam.fovy, self.cam.fovx, self.cam.near, self.cam.far, self.renderer, orbit_camera, MiniCam)
             
-    
+            
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", required=True, help="path to the yaml config file")
