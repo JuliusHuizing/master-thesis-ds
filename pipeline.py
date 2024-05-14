@@ -86,7 +86,9 @@ if __name__ == "__main__":
         logging.info("✅ DreamGaussian pipeline complete.")
         
         logging.info("Running Evaluation pipeline...")
-        clip_score = compute_clip(f"{STAGE_1_IMAGES_PATH}generated", f"{STAGE_1_IMAGES_PATH}reference")
+        clip_score_tensor = compute_clip(f"{STAGE_1_IMAGES_PATH}generated", f"{STAGE_1_IMAGES_PATH}reference")
+        clip_score = clip_score_tensor.item()  # Extract the scalar value from the tensor
+
         
         # Calculate duration
         duration = time.time() - start_time
