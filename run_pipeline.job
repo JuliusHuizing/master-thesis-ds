@@ -25,10 +25,10 @@ cd ptdraft
 pip install -e .
 cd ..
 
-pip install git+https://github.com/openai/CLIP.git
-pip install clip-score
+# pip install git+https://github.com/openai/CLIP.git
+# pip install clip-score
 
-python pipeline.py
+python pipeline.py --config config.yaml
 
 # git add .
 # git commit -m "auto commit from snellius"
