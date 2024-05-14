@@ -1,0 +1,9 @@
+# gridsearch.config.yaml
+
+hyperparameters:
+  dreamgaussian:
+    batch_size: [1, 4, 8]
+    iters: [500, 1000]
+    position_lr_init: [0.001, 0.01]
+    regularize:
+      elongation: [0.1, 0.2, 0.3]

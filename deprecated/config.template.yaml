@@ -1,0 +1,76 @@
+# handy to have all paths in one section so we can retrieve them all at the front of the pipeline and
+# throw an error if any are missing before we start processing 
+paths:
+  input_image_path: "assets/blueberry.jpeg"
+  dream_gaussian_repo_path: "repos/dreamgaussian/"
+  preprocessing_output_path: "results/preprocessing/"
+  image_progression_output_path: "results/image_progression/"
+  dream_gaussian_results_path: "results/dream_gaussian/"
+  model_output_path: "results/dream_gaussian/model/"
+  stage_1_images_output_path: "results/dream_gaussian/stage_1/"
+  stage_1_clip_scores_output_path: "results/dream_gaussian/stage_1/clip_scores.csv"
+
+preprocess:
+  size: {preprocess_size}
+  recenter: {preprocess_recenter}
+  border_ratio: {preprocess_border_ratio}
+
+dreamgaussian:
+  generate_image_progressions: {dreamgaussian_generate_image_progressions}
+  generate_gaussian_distribution_plots: {dreamgaussian_generate_gaussian_distribution_plots}
+  save_images: {dreamgaussian_save_images}
+
+  regularize: 
+    elongation: {regularize_elongation}
+    opacity: {regularize_opacity}
+    compactness: {regularize_compactness}
+
+  save_model: {dreamgaussian_save_model}
+  save_geo_plus_texture: {dreamgaussian_save_geo_plus_texture}
+
+  input: 
+  elevation: {input_elevation}
+  ref_size: {input_ref_size}
+  density_thresh: {input_density_thresh}
+
+  outdir: "results/dream_gaussian/"
+  mesh_format: {output_mesh_format}
+
+  mvdream: {training_mvdream}
+  imagedream: {training_imagedream}
+  stable_zero123: {training_stable_zero123}
+  lambda_sd: {training_lambda_sd}
+  lambda_zero123: {training_lambda_zero123}
+  warmup_rgb_loss: {training_warmup_rgb_loss}
+  batch_size: {training_batch_size}
+  iters: {training_iters}
+  anneal_timestep: {training_anneal_timestep}
+  radius: {training_radius}
+  fovy: {training_fovy}
+  min_ver: {training_min_ver}
+  max_ver: {training_max_ver}
+  load: {training_load}
+  invert_bg_prob: {training_invert_bg_prob}
+
+  GUI:
+    force_cuda_rast: {gui_force_cuda_rast}
+    H: {gui_H}
+    W: {gui_W}
+
+  gaussian_splatting:
+    num_pts: {gaussian_splatting_num_pts}
+    sh_degree: {gaussian_splatting_sh_degree}
+    position_lr_init: {gaussian_splatting_position_lr_init}
+    position_lr_final: {gaussian_splatting_position_lr_final}
+    position_lr_delay_mult: {gaussian_splatting_position_lr_delay_mult}
+    position_lr_max_steps: {gaussian_splatting_position_lr_max_steps}
+    feature_lr: {gaussian_splatting_feature_lr}
+    opacity_lr: {gaussian_splatting_opacity_lr}
+    scaling_lr: {gaussian_splatting_scaling_lr}
+    rotation_lr: {gaussian_splatting_rotation_lr}
+    percent_dense: {gaussian_splatting_percent_dense}
+    density_start_iter: {gaussian_splatting_density_start_iter}
+    density_end_iter: {gaussian_splatting_density_end_iter}
+    densification_interval: {gaussian_splatting_densification_interval}
+    opacity_reset_interval: {gaussian_splatting_opacity_reset_interval}
+    densify_grad_threshold: {gaussian_splatting_densify_grad_threshold}
