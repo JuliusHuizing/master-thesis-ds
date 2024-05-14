@@ -28,7 +28,7 @@ cd ..
 # pip install git+https://github.com/openai/CLIP.git
 # pip install clip-score
 
-python pipeline.py --config config.yaml
+python pipeline.py --config configs/grid_search/1.yaml
 
 # git add .
 # git commit -m "auto commit from snellius"
