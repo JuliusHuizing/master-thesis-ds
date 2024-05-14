@@ -63,7 +63,7 @@ if __name__ == "__main__":
     logging.info(f"Running sequantial grid search with {len(config_files)} configuration files...")
     # Run pipeline.py for each configuration file sequentially with a progress bar
     for config_file in tqdm(config_files, desc="Running grid search"):
-        config_path = os.path.join(args.configs_dir, config_file)
+        config_path = os.path.join(tmp_configs_dir, config_file)
         run_pipeline(config_path)
     logging.info("✅ Grid search complete.")
     logging.info("Cleaning up...")
