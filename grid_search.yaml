@@ -1,6 +1,12 @@
 hyperparameters:
   dreamgaussian:
     regularize:
-      elongation: [0.0, 0.1, 1.0]
-      compactness: [0.0, 0.1, 1.0]
-      opacity: [0.0, 0.1, 1.0]
+      elongation: [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+      compactness: [0.0]
+      opacity: [0.0]
+    #   num_pts: [5000, 10000, 20000]
+    # density_start_iter: [100, 1000, 2000]
+    # density_end_iter: [3000, 5000, 10000, 20000]
+    # iters: [1000, 2000, 5000, 10000, 20000]
+
+

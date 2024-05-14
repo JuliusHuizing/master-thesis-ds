@@ -12,7 +12,7 @@ paths:
 
   
 preprocess:
-  size: 256
+  size: 1028
   recenter: True
   border_ratio: 0.2
 
@@ -39,7 +39,7 @@ dreamgaussian:
   # estimated elevation angle for input image 
   elevation: 0
   # reference image resolution
-  ref_size: 256
+  ref_size: 1028
   # density thresh for mesh extraction
   density_thresh: 1
 
