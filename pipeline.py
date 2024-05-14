@@ -101,8 +101,15 @@ if __name__ == "__main__":
         
         # Convert hyperparameters to a string for CSV
         hyperparameters_str = yaml.dump(hyperparameters)
+        elongation = config["dreamgaussian"]["regularize"]["elongation"]
+        compactness = config["dreamgaussian"]["regularize"]["compactness"]
+        opacity = config["dreamgaussian"]["regularize"]["opacity"]
+        
         row = {
             'clip_score': clip_score,
+            'elongation': elongation,
+            'compactness': compactness,
+            'opacity': opacity,
             'duration': duration,
             'hyperparameters': hyperparameters_str
         }
