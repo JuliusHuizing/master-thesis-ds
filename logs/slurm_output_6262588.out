@@ -65,3 +65,80 @@ Generated 11 configuration files in tmp_configs.
 [INFO] ✅ Paths created.
 [INFO] Initializing preprocessing pipeline...
 [INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:02<00:00,  2.33s/it]100%|██████████| 1/1 [00:02<00:00,  2.38s/it][INFO] ... Results saved to results/dream_gaussian/stage_1/clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_6.config.yaml
+Running grid search:  18%|█▊        | 2/11 [04:19<19:14, 128.27s/it][INFO] Running pipeline with config: tmp_configs/temporary_7.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:02<00:00,  2.34s/it]100%|██████████| 1/1 [00:02<00:00,  2.38s/it][INFO] ... Results saved to results/dream_gaussian/stage_1/clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_7.config.yaml
+Running grid search:  27%|██▋       | 3/11 [06:18<16:31, 123.93s/it][INFO] Running pipeline with config: tmp_configs/temporary_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:02<00:00,  2.33s/it]100%|██████████| 1/1 [00:02<00:00,  2.38s/it][INFO] ... Results saved to results/dream_gaussian/stage_1/clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_1.config.yaml
+Running grid search:  36%|███▋      | 4/11 [08:17<14:15, 122.21s/it][INFO] Running pipeline with config: tmp_configs/temporary_4.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:02<00:00,  2.43s/it]100%|██████████| 1/1 [00:02<00:00,  2.48s/it][INFO] ... Results saved to results/dream_gaussian/stage_1/clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_4.config.yaml
+Running grid search:  45%|████▌     | 5/11 [10:19<12:10, 121.80s/it][INFO] Running pipeline with config: tmp_configs/temporary_5.config.yaml
+slurmstepd: error: *** JOB 6262588 ON gcn57 CANCELLED AT 2024-05-14T16:30:05 ***
+slurmstepd: error: container_p_join: setns failed for /slurm/6262588/.ns: Invalid argument
+slurmstepd: error: container_g_join(6262588): Invalid argument
+
+JOB STATISTICS
+==============
+Job ID: 6262588
+Cluster: snellius
+User/Group: jhuizing/jhuizing
+State: CANCELLED (exit code 0)
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 00:00:17
+CPU Efficiency: 0.14% of 03:24:18 core-walltime
+Job Wall-clock time: 00:11:21
+Memory Utilized: 2.19 GB
+Memory Efficiency: 1.82% of 120.00 GB
