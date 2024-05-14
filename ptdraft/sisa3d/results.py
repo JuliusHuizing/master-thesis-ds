@@ -10,14 +10,9 @@ import time
 import csv
 import os
 from sisa3d.clip import compute_clip
-def save_results_to_csv(csv_path, clip_score, duration, config):
-    header = ['clip score', 'duration', 'hyperparameters']
-    
-    # For privacy, remove the paths from the config
-    hyperparameters = {k: v for k, v in config.items() if k != 'paths'}
-    
-    # Convert hyperparameters to a string for CSV
-    hyperparameters_str = yaml.dump(hyperparameters)
+def save_results_to_csv(csv_path, row: dict):
+    header = row.keys()
+
     
     # Check if the CSV file exists
     file_exists = os.path.isfile(csv_path)
@@ -30,8 +25,4 @@ def save_results_to_csv(csv_path, clip_score, duration, config):
             writer.writeheader()
         
         # Write the row with results
-        writer.writerow({
-            'clip score': clip_score,
-            'duration': duration,
-            'hyperparameters': hyperparameters_str
-        })
+        writer.writerow(row)

@@ -95,7 +95,19 @@ if __name__ == "__main__":
 
         # Save results to CSV
         csv_path = STAGE_1_CLIP_SCORES_OUTPUT_PATH  # Path from the config
-        save_results_to_csv(csv_path, clip_score, duration, config)
+            
+        # For privacy, remove the paths from the config
+        hyperparameters = {k: v for k, v in config.items() if k != 'paths'}
+        
+        # Convert hyperparameters to a string for CSV
+        hyperparameters_str = yaml.dump(hyperparameters)
+        row = {
+            'clip_score': clip_score,
+            'duration': duration,
+            'hyperparameters': hyperparameters_str
+        }
+        
+        save_results_to_csv(csv_path, row)
         logging.info(f"... Results saved to {csv_path}.")
         logging.info("✅ Evaluation pipeline complete.")
     
