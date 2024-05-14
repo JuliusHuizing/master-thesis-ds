@@ -56,7 +56,7 @@ if __name__ == "__main__":
     logging.info(f"✅ Temporary directory created with config files: {tmp_configs_dir}")
     config_files = [f for f in os.listdir(tmp_configs_dir) if f.endswith('.yaml')]
     if not config_files:
-        logging.error(f"No YAML configuration files found in directory: {args.configs_dir}")
+        logging.error(f"No YAML configuration files found in directory: {tmp_configs_dir}")
         sys.exit(1)
 
 
