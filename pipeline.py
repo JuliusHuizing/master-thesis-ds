@@ -86,6 +86,7 @@ if __name__ == "__main__":
         logging.info("✅ DreamGaussian pipeline complete.")
         
         logging.info("Running Evaluation pipeline...")
+        
         clip_score_tensor = compute_clip(f"{STAGE_1_IMAGES_PATH}generated", f"{STAGE_1_IMAGES_PATH}reference")
         clip_score = clip_score_tensor.item()  # Extract the scalar value from the tensor
 
@@ -101,6 +102,8 @@ if __name__ == "__main__":
         
         # Convert hyperparameters to a string for CSV
         hyperparameters_str = yaml.dump(hyperparameters)
+        # for reproducibility, save the full config to the CSV
+        full_config = yaml.dump(config)
         elongation = config["dreamgaussian"]["regularize"]["elongation"]
         compactness = config["dreamgaussian"]["regularize"]["compactness"]
         opacity = config["dreamgaussian"]["regularize"]["opacity"]
@@ -111,7 +114,8 @@ if __name__ == "__main__":
             'compactness': compactness,
             'opacity': opacity,
             'duration': duration,
-            'hyperparameters': hyperparameters_str
+            'hyperparameters': hyperparameters_str,
+            "full_config": full_config
         }
         
         save_results_to_csv(csv_path, row)
