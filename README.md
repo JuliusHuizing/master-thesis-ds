@@ -1,5 +1,6 @@
 # Master Thesis
 
+images taken from: https://github.com/lukemelas/realfusion
 ## Visualize .ply files online:
 
 https://imagetostl.com/view-ply-online#convert

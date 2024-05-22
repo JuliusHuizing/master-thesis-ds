@@ -174,7 +174,41 @@ def compute_clip(reference_images_dir, generated_images_dir):
 
     clip_score = calculate_average_clip_score(dataloader, model, real_flag, fake_flag)
     return clip_score
-   
+  
+@torch.no_grad()
+def compute_clip_scores(reference_images_dir, generated_images_dir):
+    batch_size = 50
+    clip_model = 'ViT-B/32'
+    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    real_flag = 'img'
+    fake_flag = 'img'
+
+    # Load the CLIP model
+    model, preprocess = clip.load(clip_model, device=device)
+
+    # Create the dataset and dataloader
+    dataset = DummyDataset(reference_images_dir, generated_images_dir, real_flag, fake_flag, transform=preprocess, tokenizer=clip.tokenize)
+    dataloader = DataLoader(dataset, batch_size=batch_size, num_workers=min(8, os.cpu_count()), pin_memory=True)
+    
+    scores = []
+    logit_scale = model.logit_scale.exp()
+    for batch_data in tqdm(dataloader):
+        real = batch_data['real']
+        real_features = forward_modality(model, real, real_flag)
+        fake = batch_data['fake']
+        fake_features = forward_modality(model, fake, fake_flag)
+        
+        # normalize features
+        real_features = real_features / real_features.norm(dim=1, keepdim=True).to(torch.float32)
+        fake_features = fake_features / fake_features.norm(dim=1, keepdim=True).to(torch.float32)
+        
+        # calculate scores
+        # score = logit_scale * real_features @ fake_features.t()
+        # score_acc += torch.diag(score).sum()
+        score = logit_scale * (fake_features * real_features).sum()
+        scores.append(score)
+  
+    return scores 
 
 
 

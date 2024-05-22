@@ -6,7 +6,7 @@ import sys
 import time
 import os
 from sisa3d.yaml.yaml_utils import load_yaml_file
-from sisa3d.clip import compute_clip
+from sisa3d.clip import compute_clip, compute_clip_scores
 from sisa3d.results import save_results_to_csv
 
 # Import date class from datetime module
@@ -90,8 +90,8 @@ if __name__ == "__main__":
         
         logging.info("Running Evaluation pipeline...")
         
-        clip_score_tensor = compute_clip(f"{STAGE_1_IMAGES_PATH}generated", f"{STAGE_1_IMAGES_PATH}reference")
-        clip_score = clip_score_tensor.item()  # Extract the scalar value from the tensor
+        clip_score = compute_clip(f"{STAGE_1_IMAGES_PATH}generated", f"{STAGE_1_IMAGES_PATH}reference").item()
+        clip_scores = compute_clip_scores(f"{STAGE_1_IMAGES_PATH}generated", f"{STAGE_1_IMAGES_PATH}reference").item()
 
         
         # Calculate duration
@@ -116,10 +116,11 @@ if __name__ == "__main__":
             'elongation': elongation,
             'compactness': compactness,
             'opacity': opacity,
+            'clip_scores': clip_scores,
             'duration': duration,
+            'input_image_path': INPUT_IMAGE_PATH,
             'hyperparameters': hyperparameters_str,
             "full_config": full_config,
-            "date": datetime.datetime.now()
         }
         
         save_results_to_csv(csv_path, row)
