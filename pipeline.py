@@ -9,6 +9,9 @@ from sisa3d.yaml.yaml_utils import load_yaml_file
 from sisa3d.clip import compute_clip
 from sisa3d.results import save_results_to_csv
 
+# Import date class from datetime module
+import datetime 
+
 def parse_arguments():
     """
     Parse command-line arguments.
@@ -115,7 +118,8 @@ if __name__ == "__main__":
             'opacity': opacity,
             'duration': duration,
             'hyperparameters': hyperparameters_str,
-            "full_config": full_config
+            "full_config": full_config,
+            "date": datetime.datetime.now()
         }
         
         save_results_to_csv(csv_path, row)

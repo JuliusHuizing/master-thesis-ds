@@ -4,7 +4,7 @@ hyperparameters:
     # stage_1_clip_scores_output_path: "results/dream_gaussian/stage_1/original_params/clip_scores.csv"
   dreamgaussian:
     regularize:
-      elongation: [0.0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0]
+      elongation: [0.1]
       compactness: [0.0]
       opacity: [0.0]
     #   num_pts: [5000, 10000, 20000]
