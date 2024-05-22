@@ -10,7 +10,7 @@ hyperparameters:
 
   dreamgaussian:
     regularize:
-      elongation: [0.1]
+      elongation: [0.1, 0.2]
       compactness: [0.0]
       opacity: [0.0]
 
