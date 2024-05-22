@@ -1,17 +1,12 @@
+image_dir: "images/"
 hyperparameters:
   paths:
-    # always place in lists to avoid creating a config for each character in string.
-    input_image_path: ["images/image.png", 
-      "images/image-2.png", 
-      "images/image-3.png", 
-      "images/image-4.png", 
-      "images/image-5.png"]
     stage_1_clip_scores_output_path: ["results/dream_gaussian/stage_1/original_params/clip_scores.csv"]
 
   dreamgaussian:
     regularize:
-      elongation: [0.1, 0.2]
-      compactness: [0.0]
-      opacity: [0.0]
+      elongation: [0.0001, 0.001, 0.01, 0.1, 1.0, 10.0]
+      compactness: [0.0001, 0.001, 0.01, 0.1, 1.0, 10.0]
+      opacity: [0.0001, 0.001, 0.01, 0.1, 1.0, 10.0]
 
 
