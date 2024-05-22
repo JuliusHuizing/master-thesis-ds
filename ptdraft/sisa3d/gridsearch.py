@@ -1,6 +1,7 @@
 import yaml
 import itertools
 import os
+import numpy as np
 
 def flatten_dict(d, parent_key='', sep='.'):
     """
@@ -101,6 +102,11 @@ def create_grid_search_config_files(path_to_default_config_yaml, path_to_grid_se
     # Create all combinations of hyperparameters
     keys, values = zip(*flattened_hyperparameters.items())
     combinations = [dict(zip(keys, v)) for v in itertools.product(*values)]
+    
+    if grid_search_config['num_random_search_points'] != None:
+        # Randomly sample a subset of combinations
+        num_random_search_points = grid_search_config['num_random_search_points']
+        combinations = np.random.choice(combinations, num_random_search_points, replace=False)
     
     # Create output directory if it does not exist
     if not os.path.exists(output_dir):
