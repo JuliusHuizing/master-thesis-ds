@@ -1,15 +1,17 @@
 hyperparameters:
-  # paths:
-    # FIXME: I think this leads to a huge grid search space bc we treat each character as a config..
-    # stage_1_clip_scores_output_path: "results/dream_gaussian/stage_1/original_params/clip_scores.csv"
+  paths:
+    # always place in lists to avoid creating a config for each character in string.
+    input_image_path: ["images/image.png", 
+      "images/image-2.png", 
+      "images/image-3.png", 
+      "images/image-4.png", 
+      "images/image-5.png"]
+    stage_1_clip_scores_output_path: ["results/dream_gaussian/stage_1/original_params/clip_scores.csv"]
+
   dreamgaussian:
     regularize:
       elongation: [0.1]
       compactness: [0.0]
       opacity: [0.0]
-    #   num_pts: [5000, 10000, 20000]
-    # density_start_iter: [100, 1000, 2000]
-    # density_end_iter: [3000, 5000, 10000, 20000]
-    # iters: [1000, 2000, 5000, 10000, 20000]
 
 
