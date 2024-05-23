@@ -4,9 +4,7 @@ import subprocess
 import logging
 import sys
 from tqdm import tqdm
-from concurrent.futures import ThreadPoolExecutor, as_completed
 from sisa3d.gridsearch import create_grid_search_config_files
-import uuid
 
 def parse_arguments():
     """
@@ -52,9 +50,7 @@ if __name__ == "__main__":
     logging.getLogger().setLevel(logging.INFO)
 
     # List all YAML files in the provided directory
-    # make unique config dir name
-    unique_id = uuid.uuid4().hex
-    tmp_configs_dir = f"tmp_configs_{unique_id}"
+    tmp_configs_dir = "tmp_configs"
     logging.info(f"Creating temporary directory for config files: {tmp_configs_dir}")
     create_grid_search_config_files(args.default_config, args.gridsearch_config, tmp_configs_dir)
     logging.info(f"✅ Temporary directory created with config files: {tmp_configs_dir}")
@@ -63,17 +59,12 @@ if __name__ == "__main__":
         logging.error(f"No YAML configuration files found in directory: {tmp_configs_dir}")
         sys.exit(1)
 
-    logging.info(f"Running parallel grid search with {len(config_files)} configuration files...")
 
-    # Run pipeline.py for each configuration file in parallel with a progress bar
-    with ThreadPoolExecutor() as executor:
-        futures = {executor.submit(run_pipeline, os.path.join(tmp_configs_dir, config_file)): config_file for config_file in config_files}
-        for future in tqdm(as_completed(futures), total=len(futures), desc="Running grid search"):
-            try:
-                future.result()
-            except Exception as e:
-                logging.error(f"Error occurred: {e}")
-
+    logging.info(f"Running sequantial grid search with {len(config_files)} configuration files...")
+    # Run pipeline.py for each configuration file sequentially with a progress bar
+    for config_file in tqdm(config_files, desc="Running grid search"):
+        config_path = os.path.join(tmp_configs_dir, config_file)
+        run_pipeline(config_path)
     logging.info("✅ Grid search complete.")
     logging.info("Cleaning up...")
     # delete tmp dicts
