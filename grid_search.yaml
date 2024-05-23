@@ -1,7 +1,7 @@
 # Note that this will create num_of_images in image dir * num_random_search_points config files.
 
-image_dir: "images/"
-num_random_search_points: 100
+image_dir: "images/grid_search"
+num_random_search_points: 50
 hyperparameters:
   paths:
     stage_1_clip_scores_output_path: ["results/dream_gaussian/stage_1/original_params/clip_scores.csv"]
