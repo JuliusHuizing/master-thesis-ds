@@ -6,6 +6,7 @@ import sys
 from tqdm import tqdm
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from sisa3d.gridsearch import create_grid_search_config_files
+import uuid
 
 def parse_arguments():
     """
@@ -51,7 +52,9 @@ if __name__ == "__main__":
     logging.getLogger().setLevel(logging.INFO)
 
     # List all YAML files in the provided directory
-    tmp_configs_dir = "tmp_configs"
+    # make unique config dir name
+    unique_id = uuid.uuid4().hex
+    tmp_configs_dir = f"tmp_configs_{unique_id}"
     logging.info(f"Creating temporary directory for config files: {tmp_configs_dir}")
     create_grid_search_config_files(args.default_config, args.gridsearch_config, tmp_configs_dir)
     logging.info(f"✅ Temporary directory created with config files: {tmp_configs_dir}")

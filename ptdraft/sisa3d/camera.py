@@ -2,6 +2,7 @@ import os
 import numpy as np
 import cv2
 from PIL import Image
+import uuid
 
 
 def create_directory(directory):
@@ -100,7 +101,8 @@ def capture_and_save_images_for_clip_similarity(path_to_preproccesed_reference_i
         image_np = (image_np * 255).astype(np.uint8)
         image_np = cv2.cvtColor(image_np, cv2.COLOR_RGB2BGR)
         # create directory if not exists
-        name = f'v{ver}_h{hor}_r{rad}_s{step}_i{idx}.jpg'
+        unique_id = uuid.uuid4().hex
+        name = f'v{ver}_h{hor}_r{rad}_s{step}_i{idx}_uuid_{unique_id}.jpg'
         cv2.imwrite(os.path.join(generated_output_path, name), image_np)
         
         # save reference png
