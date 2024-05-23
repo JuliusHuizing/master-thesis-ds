@@ -1,0 +1,1725 @@
+============================================================================================== 
+Warning! Mixing Conda and module environments may lead to corruption of the
+user environment. 
+We do not recommend users mixing those two environments unless absolutely
+necessary. Note that 
+SURF does not provide any support for Conda environment.
+For more information, please refer to our software policy page:
+https://servicedesk.surf.nl/wiki/display/WIKI/Software+policy+Snellius#SoftwarepolicySnellius-UseofAnacondaandMinicondaenvironmentsonSnellius 
+
+Remember that many packages have already been installed on the system and can
+be loaded using 
+the 'module load <package__name>' command. If you are uncertain if a package is
+already available 
+on the system, please use 'module avail' or 'module spider' to search for it.
+============================================================================================== 
+Already up to date.
+Obtaining file:///gpfs/home6/jhuizing/master-thesis-ds/ptdraft
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: sisa3d
+  Building editable for sisa3d (pyproject.toml): started
+  Building editable for sisa3d (pyproject.toml): finished with status 'done'
+  Created wheel for sisa3d: filename=sisa3d-0.1.0-py3-none-any.whl size=1286 sha256=466689da9623440a694956c93a4920038d607a9428abb993da0c7549d07f4ef9
+  Stored in directory: /gpfs/scratch1/nodespecific/gcn27/jhuizing.6359200/pip-ephem-wheel-cache-rzbj6acq/wheels/ba/24/02/45c17a515af0a22326616b14da79c51e525e740ad6f0b007df
+Successfully built sisa3d
+Installing collected packages: sisa3d
+  Attempting uninstall: sisa3d
+    Found existing installation: sisa3d 0.1.0
+    Uninstalling sisa3d-0.1.0:
+      Successfully uninstalled sisa3d-0.1.0
+Successfully installed sisa3d-0.1.0
+[INFO] Creating temporary directory for config files: tmp_configs
+Generated 50 configuration files in tmp_configs for 3 images.
+[INFO] ✅ Temporary directory created with config files: tmp_configs
+[INFO] Running sequantial grid search with 150 configuration files...
+Running grid search:   0%|          | 0/150 [00:00<?, ?it/s][INFO] Running pipeline with config: tmp_configs/temporary_40_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.76s/it]100%|██████████| 1/1 [00:01<00:00,  1.81s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.40it/s]100%|██████████| 1/1 [00:00<00:00,  1.30it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_40_for_img_1.config.yaml
+Running grid search:   1%|          | 1/150 [02:17<5:41:38, 137.57s/it][INFO] Running pipeline with config: tmp_configs/temporary_39_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.70s/it]100%|██████████| 1/1 [00:01<00:00,  1.75s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.42it/s]100%|██████████| 1/1 [00:00<00:00,  1.32it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_39_for_img_1.config.yaml
+Running grid search:   1%|▏         | 2/150 [04:15<5:11:33, 126.31s/it][INFO] Running pipeline with config: tmp_configs/temporary_20_for_img_0.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.93s/it]100%|██████████| 1/1 [00:01<00:00,  1.98s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.53it/s]100%|██████████| 1/1 [00:00<00:00,  1.42it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_20_for_img_0.config.yaml
+Running grid search:   2%|▏         | 3/150 [06:13<4:59:38, 122.30s/it][INFO] Running pipeline with config: tmp_configs/temporary_8_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.67s/it]100%|██████████| 1/1 [00:01<00:00,  1.72s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.40it/s]100%|██████████| 1/1 [00:00<00:00,  1.30it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_8_for_img_1.config.yaml
+Running grid search:   3%|▎         | 4/150 [08:08<4:50:23, 119.34s/it][INFO] Running pipeline with config: tmp_configs/temporary_0_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.72s/it]100%|██████████| 1/1 [00:01<00:00,  1.77s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.39it/s]100%|██████████| 1/1 [00:00<00:00,  1.28it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_0_for_img_1.config.yaml
+Running grid search:   3%|▎         | 5/150 [10:06<4:47:26, 118.94s/it][INFO] Running pipeline with config: tmp_configs/temporary_11_for_img_0.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.70s/it]100%|██████████| 1/1 [00:01<00:00,  1.75s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.44it/s]100%|██████████| 1/1 [00:00<00:00,  1.34it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_11_for_img_0.config.yaml
+Running grid search:   4%|▍         | 6/150 [12:04<4:44:57, 118.73s/it][INFO] Running pipeline with config: tmp_configs/temporary_45_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.71s/it]100%|██████████| 1/1 [00:01<00:00,  1.76s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.38it/s]100%|██████████| 1/1 [00:00<00:00,  1.27it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_45_for_img_1.config.yaml
+Running grid search:   5%|▍         | 7/150 [14:01<4:41:37, 118.16s/it][INFO] Running pipeline with config: tmp_configs/temporary_40_for_img_2.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.68s/it]100%|██████████| 1/1 [00:01<00:00,  1.74s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.37it/s]100%|██████████| 1/1 [00:00<00:00,  1.27it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_40_for_img_2.config.yaml
+Running grid search:   5%|▌         | 8/150 [15:58<4:38:32, 117.69s/it][INFO] Running pipeline with config: tmp_configs/temporary_34_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.73s/it]100%|██████████| 1/1 [00:01<00:00,  1.78s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.38it/s]100%|██████████| 1/1 [00:00<00:00,  1.27it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_34_for_img_1.config.yaml
+Running grid search:   6%|▌         | 9/150 [18:04<4:42:19, 120.14s/it][INFO] Running pipeline with config: tmp_configs/temporary_28_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.76s/it]100%|██████████| 1/1 [00:01<00:00,  1.80s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.38it/s]100%|██████████| 1/1 [00:00<00:00,  1.28it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_28_for_img_1.config.yaml
+Running grid search:   7%|▋         | 10/150 [20:13<4:46:57, 122.98s/it][INFO] Running pipeline with config: tmp_configs/temporary_10_for_img_0.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.69s/it]100%|██████████| 1/1 [00:01<00:00,  1.74s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.40it/s]100%|██████████| 1/1 [00:00<00:00,  1.30it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_10_for_img_0.config.yaml
+Running grid search:   7%|▋         | 11/150 [22:10<4:40:50, 121.22s/it][INFO] Running pipeline with config: tmp_configs/temporary_27_for_img_2.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.80s/it]100%|██████████| 1/1 [00:01<00:00,  1.86s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.40it/s]100%|██████████| 1/1 [00:00<00:00,  1.30it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_27_for_img_2.config.yaml
+Running grid search:   8%|▊         | 12/150 [24:07<4:35:50, 119.93s/it][INFO] Running pipeline with config: tmp_configs/temporary_41_for_img_0.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.77s/it]100%|██████████| 1/1 [00:01<00:00,  1.82s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.39it/s]100%|██████████| 1/1 [00:00<00:00,  1.29it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_41_for_img_0.config.yaml
+Running grid search:   9%|▊         | 13/150 [26:05<4:32:20, 119.27s/it][INFO] Running pipeline with config: tmp_configs/temporary_32_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.85s/it]100%|██████████| 1/1 [00:01<00:00,  1.90s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.39it/s]100%|██████████| 1/1 [00:00<00:00,  1.29it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_32_for_img_1.config.yaml
+Running grid search:   9%|▉         | 14/150 [28:03<4:29:29, 118.89s/it][INFO] Running pipeline with config: tmp_configs/temporary_12_for_img_0.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.73s/it]100%|██████████| 1/1 [00:01<00:00,  1.78s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.43it/s]100%|██████████| 1/1 [00:00<00:00,  1.33it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_12_for_img_0.config.yaml
+Running grid search:  10%|█         | 15/150 [30:17<4:37:48, 123.47s/it][INFO] Running pipeline with config: tmp_configs/temporary_35_for_img_2.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.74s/it]100%|██████████| 1/1 [00:01<00:00,  1.79s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.41it/s]100%|██████████| 1/1 [00:00<00:00,  1.31it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_35_for_img_2.config.yaml
+Running grid search:  11%|█         | 16/150 [32:14<4:31:38, 121.63s/it][INFO] Running pipeline with config: tmp_configs/temporary_15_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.74s/it]100%|██████████| 1/1 [00:01<00:00,  1.79s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.40it/s]100%|██████████| 1/1 [00:00<00:00,  1.27it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_15_for_img_1.config.yaml
+Running grid search:  11%|█▏        | 17/150 [34:11<4:26:30, 120.23s/it][INFO] Running pipeline with config: tmp_configs/temporary_43_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.64s/it]100%|██████████| 1/1 [00:01<00:00,  1.68s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.48it/s]100%|██████████| 1/1 [00:00<00:00,  1.36it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_43_for_img_1.config.yaml
+Running grid search:  12%|█▏        | 18/150 [36:02<4:18:26, 117.47s/it][INFO] Running pipeline with config: tmp_configs/temporary_5_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.65s/it]100%|██████████| 1/1 [00:01<00:00,  1.70s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.40it/s]100%|██████████| 1/1 [00:00<00:00,  1.29it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_5_for_img_1.config.yaml
+Running grid search:  13%|█▎        | 19/150 [38:07<4:20:57, 119.52s/it][INFO] Running pipeline with config: tmp_configs/temporary_33_for_img_2.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.65s/it]100%|██████████| 1/1 [00:01<00:00,  1.70s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.42it/s]100%|██████████| 1/1 [00:00<00:00,  1.32it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_33_for_img_2.config.yaml
+Running grid search:  13%|█▎        | 20/150 [40:02<4:16:32, 118.41s/it][INFO] Running pipeline with config: tmp_configs/temporary_39_for_img_0.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.71s/it]100%|██████████| 1/1 [00:01<00:00,  1.76s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.43it/s]100%|██████████| 1/1 [00:00<00:00,  1.32it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_39_for_img_0.config.yaml
+Running grid search:  14%|█▍        | 21/150 [41:59<4:13:19, 117.82s/it][INFO] Running pipeline with config: tmp_configs/temporary_14_for_img_0.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.66s/it]100%|██████████| 1/1 [00:01<00:00,  1.70s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.42it/s]100%|██████████| 1/1 [00:00<00:00,  1.31it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_14_for_img_0.config.yaml
+Running grid search:  15%|█▍        | 22/150 [43:56<4:10:39, 117.50s/it][INFO] Running pipeline with config: tmp_configs/temporary_15_for_img_0.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.73s/it]100%|██████████| 1/1 [00:01<00:00,  1.78s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.42it/s]100%|██████████| 1/1 [00:00<00:00,  1.31it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_15_for_img_0.config.yaml
+Running grid search:  15%|█▌        | 23/150 [45:52<4:08:08, 117.23s/it][INFO] Running pipeline with config: tmp_configs/temporary_41_for_img_2.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.94s/it]100%|██████████| 1/1 [00:01<00:00,  1.99s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.38it/s]100%|██████████| 1/1 [00:00<00:00,  1.28it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_41_for_img_2.config.yaml
+Running grid search:  16%|█▌        | 24/150 [47:49<4:06:01, 117.16s/it][INFO] Running pipeline with config: tmp_configs/temporary_27_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.75s/it]100%|██████████| 1/1 [00:01<00:00,  1.80s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.42it/s]100%|██████████| 1/1 [00:00<00:00,  1.32it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_27_for_img_1.config.yaml
+Running grid search:  17%|█▋        | 25/150 [49:46<4:03:39, 116.96s/it][INFO] Running pipeline with config: tmp_configs/temporary_11_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.69s/it]100%|██████████| 1/1 [00:01<00:00,  1.75s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.44it/s]100%|██████████| 1/1 [00:00<00:00,  1.34it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_11_for_img_1.config.yaml
+Running grid search:  17%|█▋        | 26/150 [51:43<4:02:02, 117.12s/it][INFO] Running pipeline with config: tmp_configs/temporary_38_for_img_2.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.66s/it]100%|██████████| 1/1 [00:01<00:00,  1.71s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.41it/s]100%|██████████| 1/1 [00:00<00:00,  1.29it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_38_for_img_2.config.yaml
+Running grid search:  18%|█▊        | 27/150 [53:41<4:00:27, 117.30s/it][INFO] Running pipeline with config: tmp_configs/temporary_22_for_img_0.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.78s/it]100%|██████████| 1/1 [00:01<00:00,  1.83s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.38it/s]100%|██████████| 1/1 [00:00<00:00,  1.28it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_22_for_img_0.config.yaml
+Running grid search:  19%|█▊        | 28/150 [55:39<3:58:59, 117.54s/it][INFO] Running pipeline with config: tmp_configs/temporary_46_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.80s/it]100%|██████████| 1/1 [00:01<00:00,  1.85s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.41it/s]100%|██████████| 1/1 [00:00<00:00,  1.31it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_46_for_img_1.config.yaml
+Running grid search:  19%|█▉        | 29/150 [57:37<3:57:28, 117.76s/it][INFO] Running pipeline with config: tmp_configs/temporary_29_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.74s/it]100%|██████████| 1/1 [00:01<00:00,  1.79s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.37it/s]100%|██████████| 1/1 [00:00<00:00,  1.26it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_29_for_img_1.config.yaml
+Running grid search:  20%|██        | 30/150 [59:36<3:56:12, 118.11s/it][INFO] Running pipeline with config: tmp_configs/temporary_45_for_img_2.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.76s/it]100%|██████████| 1/1 [00:01<00:00,  1.80s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.39it/s]100%|██████████| 1/1 [00:00<00:00,  1.29it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_45_for_img_2.config.yaml
+Running grid search:  21%|██        | 31/150 [1:01:32<3:52:41, 117.32s/it][INFO] Running pipeline with config: tmp_configs/temporary_42_for_img_2.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.77s/it]100%|██████████| 1/1 [00:01<00:00,  1.82s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.37it/s]100%|██████████| 1/1 [00:00<00:00,  1.28it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_42_for_img_2.config.yaml
+Running grid search:  21%|██▏       | 32/150 [1:03:28<3:50:14, 117.07s/it][INFO] Running pipeline with config: tmp_configs/temporary_17_for_img_2.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.77s/it]100%|██████████| 1/1 [00:01<00:00,  1.82s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.39it/s]100%|██████████| 1/1 [00:00<00:00,  1.29it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_17_for_img_2.config.yaml
+Running grid search:  22%|██▏       | 33/150 [1:05:26<3:48:58, 117.42s/it][INFO] Running pipeline with config: tmp_configs/temporary_26_for_img_0.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.74s/it]100%|██████████| 1/1 [00:01<00:00,  1.79s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.40it/s]100%|██████████| 1/1 [00:00<00:00,  1.30it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_26_for_img_0.config.yaml
+Running grid search:  23%|██▎       | 34/150 [1:07:24<3:47:13, 117.53s/it][INFO] Running pipeline with config: tmp_configs/temporary_8_for_img_0.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.82s/it]100%|██████████| 1/1 [00:01<00:00,  1.87s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.39it/s]100%|██████████| 1/1 [00:00<00:00,  1.29it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_8_for_img_0.config.yaml
+Running grid search:  23%|██▎       | 35/150 [1:09:22<3:45:16, 117.54s/it][INFO] Running pipeline with config: tmp_configs/temporary_16_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.77s/it]100%|██████████| 1/1 [00:01<00:00,  1.82s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.37it/s]100%|██████████| 1/1 [00:00<00:00,  1.26it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_16_for_img_1.config.yaml
+Running grid search:  24%|██▍       | 36/150 [1:11:19<3:43:09, 117.45s/it][INFO] Running pipeline with config: tmp_configs/temporary_37_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.74s/it]100%|██████████| 1/1 [00:01<00:00,  1.79s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.39it/s]100%|██████████| 1/1 [00:00<00:00,  1.29it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_37_for_img_1.config.yaml
+Running grid search:  25%|██▍       | 37/150 [1:13:17<3:41:19, 117.51s/it][INFO] Running pipeline with config: tmp_configs/temporary_49_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.79s/it]100%|██████████| 1/1 [00:01<00:00,  1.83s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.41it/s]100%|██████████| 1/1 [00:00<00:00,  1.32it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_49_for_img_1.config.yaml
+Running grid search:  25%|██▌       | 38/150 [1:15:15<3:39:33, 117.62s/it][INFO] Running pipeline with config: tmp_configs/temporary_22_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.76s/it]100%|██████████| 1/1 [00:01<00:00,  1.81s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.41it/s]100%|██████████| 1/1 [00:00<00:00,  1.30it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_22_for_img_1.config.yaml
+Running grid search:  26%|██▌       | 39/150 [1:17:12<3:37:22, 117.50s/it][INFO] Running pipeline with config: tmp_configs/temporary_19_for_img_2.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.77s/it]100%|██████████| 1/1 [00:01<00:00,  1.83s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.35it/s]100%|██████████| 1/1 [00:00<00:00,  1.25it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_19_for_img_2.config.yaml
+Running grid search:  27%|██▋       | 40/150 [1:19:30<3:46:54, 123.77s/it][INFO] Running pipeline with config: tmp_configs/temporary_25_for_img_2.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.71s/it]100%|██████████| 1/1 [00:01<00:00,  1.77s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.42it/s]100%|██████████| 1/1 [00:00<00:00,  1.32it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_25_for_img_2.config.yaml
+Running grid search:  27%|██▋       | 41/150 [1:21:57<3:57:25, 130.69s/it][INFO] Running pipeline with config: tmp_configs/temporary_16_for_img_2.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.74s/it]100%|██████████| 1/1 [00:01<00:00,  1.79s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.39it/s]100%|██████████| 1/1 [00:00<00:00,  1.29it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_16_for_img_2.config.yaml
+Running grid search:  28%|██▊       | 42/150 [1:23:59<3:50:38, 128.14s/it][INFO] Running pipeline with config: tmp_configs/temporary_38_for_img_0.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.75s/it]100%|██████████| 1/1 [00:01<00:00,  1.81s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.34it/s]100%|██████████| 1/1 [00:00<00:00,  1.24it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_38_for_img_0.config.yaml
+Running grid search:  29%|██▊       | 43/150 [1:25:58<3:43:32, 125.35s/it][INFO] Running pipeline with config: tmp_configs/temporary_18_for_img_2.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:02<00:00,  2.16s/it]100%|██████████| 1/1 [00:02<00:00,  2.22s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.41it/s]100%|██████████| 1/1 [00:00<00:00,  1.31it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_18_for_img_2.config.yaml
+Running grid search:  29%|██▉       | 44/150 [1:27:56<3:37:44, 123.25s/it][INFO] Running pipeline with config: tmp_configs/temporary_47_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.67s/it]100%|██████████| 1/1 [00:01<00:00,  1.72s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.38it/s]100%|██████████| 1/1 [00:00<00:00,  1.27it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_47_for_img_1.config.yaml
+Running grid search:  30%|███       | 45/150 [1:29:54<3:32:57, 121.69s/it][INFO] Running pipeline with config: tmp_configs/temporary_21_for_img_2.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.89s/it]100%|██████████| 1/1 [00:01<00:00,  1.94s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.38it/s]100%|██████████| 1/1 [00:00<00:00,  1.27it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_21_for_img_2.config.yaml
+Running grid search:  31%|███       | 46/150 [1:31:53<3:29:26, 120.83s/it][INFO] Running pipeline with config: tmp_configs/temporary_19_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.73s/it]100%|██████████| 1/1 [00:01<00:00,  1.78s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.39it/s]100%|██████████| 1/1 [00:00<00:00,  1.28it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_19_for_img_1.config.yaml
+Running grid search:  31%|███▏      | 47/150 [1:33:51<3:25:46, 119.87s/it][INFO] Running pipeline with config: tmp_configs/temporary_1_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.76s/it]100%|██████████| 1/1 [00:01<00:00,  1.81s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.43it/s]100%|██████████| 1/1 [00:00<00:00,  1.31it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_1_for_img_1.config.yaml
+Running grid search:  32%|███▏      | 48/150 [1:35:46<3:21:26, 118.49s/it][INFO] Running pipeline with config: tmp_configs/temporary_1_for_img_0.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.69s/it]100%|██████████| 1/1 [00:01<00:00,  1.74s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.34it/s]100%|██████████| 1/1 [00:00<00:00,  1.25it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_1_for_img_0.config.yaml
+Running grid search:  33%|███▎      | 49/150 [1:37:44<3:19:12, 118.35s/it][INFO] Running pipeline with config: tmp_configs/temporary_4_for_img_2.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.68s/it]100%|██████████| 1/1 [00:01<00:00,  1.73s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.38it/s]100%|██████████| 1/1 [00:00<00:00,  1.27it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_4_for_img_2.config.yaml
+Running grid search:  33%|███▎      | 50/150 [1:39:43<3:17:22, 118.42s/it][INFO] Running pipeline with config: tmp_configs/temporary_14_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.71s/it]100%|██████████| 1/1 [00:01<00:00,  1.77s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.39it/s]100%|██████████| 1/1 [00:00<00:00,  1.29it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_14_for_img_1.config.yaml
+Running grid search:  34%|███▍      | 51/150 [1:41:42<3:15:49, 118.68s/it][INFO] Running pipeline with config: tmp_configs/temporary_4_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.76s/it]100%|██████████| 1/1 [00:01<00:00,  1.82s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.38it/s]100%|██████████| 1/1 [00:00<00:00,  1.28it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_4_for_img_1.config.yaml
+Running grid search:  35%|███▍      | 52/150 [1:43:42<3:14:12, 118.90s/it][INFO] Running pipeline with config: tmp_configs/temporary_23_for_img_2.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.73s/it]100%|██████████| 1/1 [00:01<00:00,  1.78s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.36it/s]100%|██████████| 1/1 [00:00<00:00,  1.26it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_23_for_img_2.config.yaml
+Running grid search:  35%|███▌      | 53/150 [1:45:40<3:12:01, 118.77s/it][INFO] Running pipeline with config: tmp_configs/temporary_5_for_img_0.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.75s/it]100%|██████████| 1/1 [00:01<00:00,  1.80s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.36it/s]100%|██████████| 1/1 [00:00<00:00,  1.26it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_5_for_img_0.config.yaml
+Running grid search:  36%|███▌      | 54/150 [1:47:38<3:09:45, 118.60s/it][INFO] Running pipeline with config: tmp_configs/temporary_12_for_img_2.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.75s/it]100%|██████████| 1/1 [00:01<00:00,  1.80s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.37it/s]100%|██████████| 1/1 [00:00<00:00,  1.26it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_12_for_img_2.config.yaml
+Running grid search:  37%|███▋      | 55/150 [1:49:37<3:08:00, 118.74s/it][INFO] Running pipeline with config: tmp_configs/temporary_42_for_img_0.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.74s/it]100%|██████████| 1/1 [00:01<00:00,  1.79s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.42it/s]100%|██████████| 1/1 [00:00<00:00,  1.32it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_42_for_img_0.config.yaml
+Running grid search:  37%|███▋      | 56/150 [1:51:37<3:06:34, 119.09s/it][INFO] Running pipeline with config: tmp_configs/temporary_7_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.76s/it]100%|██████████| 1/1 [00:01<00:00,  1.81s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.39it/s]100%|██████████| 1/1 [00:00<00:00,  1.29it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_7_for_img_1.config.yaml
+Running grid search:  38%|███▊      | 57/150 [1:53:35<3:03:50, 118.60s/it][INFO] Running pipeline with config: tmp_configs/temporary_10_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.87s/it]100%|██████████| 1/1 [00:01<00:00,  1.94s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.37it/s]100%|██████████| 1/1 [00:00<00:00,  1.26it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_10_for_img_1.config.yaml
+Running grid search:  39%|███▊      | 58/150 [1:55:31<3:00:37, 117.80s/it][INFO] Running pipeline with config: tmp_configs/temporary_32_for_img_0.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.78s/it]100%|██████████| 1/1 [00:01<00:00,  1.83s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.41it/s]100%|██████████| 1/1 [00:00<00:00,  1.30it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_32_for_img_0.config.yaml
+Running grid search:  39%|███▉      | 59/150 [1:57:28<2:58:18, 117.57s/it][INFO] Running pipeline with config: tmp_configs/temporary_23_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.75s/it]100%|██████████| 1/1 [00:01<00:00,  1.80s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.39it/s]100%|██████████| 1/1 [00:00<00:00,  1.16it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_23_for_img_1.config.yaml
+Running grid search:  40%|████      | 60/150 [1:59:25<2:56:16, 117.52s/it][INFO] Running pipeline with config: tmp_configs/temporary_14_for_img_2.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.82s/it]100%|██████████| 1/1 [00:01<00:00,  1.86s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.36it/s]100%|██████████| 1/1 [00:00<00:00,  1.27it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_14_for_img_2.config.yaml
+Running grid search:  41%|████      | 61/150 [2:01:37<3:00:53, 121.95s/it][INFO] Running pipeline with config: tmp_configs/temporary_17_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.91s/it]100%|██████████| 1/1 [00:01<00:00,  1.96s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.40it/s]100%|██████████| 1/1 [00:00<00:00,  1.30it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_17_for_img_1.config.yaml
+Running grid search:  41%|████▏     | 62/150 [2:03:36<2:57:17, 120.88s/it][INFO] Running pipeline with config: tmp_configs/temporary_46_for_img_0.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.83s/it]100%|██████████| 1/1 [00:01<00:00,  1.89s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.39it/s]100%|██████████| 1/1 [00:00<00:00,  1.28it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_46_for_img_0.config.yaml
+Running grid search:  42%|████▏     | 63/150 [2:05:35<2:54:25, 120.29s/it][INFO] Running pipeline with config: tmp_configs/temporary_33_for_img_0.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.72s/it]100%|██████████| 1/1 [00:01<00:00,  1.77s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.35it/s]100%|██████████| 1/1 [00:00<00:00,  1.25it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_33_for_img_0.config.yaml
+Running grid search:  43%|████▎     | 64/150 [2:07:34<2:51:50, 119.89s/it][INFO] Running pipeline with config: tmp_configs/temporary_35_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.69s/it]100%|██████████| 1/1 [00:01<00:00,  1.74s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.42it/s]100%|██████████| 1/1 [00:00<00:00,  1.31it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_35_for_img_1.config.yaml
+Running grid search:  43%|████▎     | 65/150 [2:09:29<2:47:59, 118.58s/it][INFO] Running pipeline with config: tmp_configs/temporary_48_for_img_0.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.69s/it]100%|██████████| 1/1 [00:01<00:00,  1.74s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.38it/s]100%|██████████| 1/1 [00:00<00:00,  1.28it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_48_for_img_0.config.yaml
+Running grid search:  44%|████▍     | 66/150 [2:11:26<2:45:14, 118.02s/it][INFO] Running pipeline with config: tmp_configs/temporary_49_for_img_2.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.79s/it]100%|██████████| 1/1 [00:01<00:00,  1.85s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.38it/s]100%|██████████| 1/1 [00:00<00:00,  1.28it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_49_for_img_2.config.yaml
+Running grid search:  45%|████▍     | 67/150 [2:13:24<2:43:31, 118.21s/it][INFO] Running pipeline with config: tmp_configs/temporary_21_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.75s/it]100%|██████████| 1/1 [00:01<00:00,  1.80s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.39it/s]100%|██████████| 1/1 [00:00<00:00,  1.29it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_21_for_img_1.config.yaml
+Running grid search:  45%|████▌     | 68/150 [2:15:48<2:52:02, 125.89s/it][INFO] Running pipeline with config: tmp_configs/temporary_44_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.80s/it]100%|██████████| 1/1 [00:01<00:00,  1.85s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.40it/s]100%|██████████| 1/1 [00:00<00:00,  1.30it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_44_for_img_1.config.yaml
+Running grid search:  46%|████▌     | 69/150 [2:17:51<2:48:39, 124.93s/it][INFO] Running pipeline with config: tmp_configs/temporary_29_for_img_2.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.78s/it]100%|██████████| 1/1 [00:01<00:00,  1.83s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.39it/s]100%|██████████| 1/1 [00:00<00:00,  1.29it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_29_for_img_2.config.yaml
+Running grid search:  47%|████▋     | 70/150 [2:19:50<2:44:02, 123.03s/it][INFO] Running pipeline with config: tmp_configs/temporary_42_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.82s/it]100%|██████████| 1/1 [00:01<00:00,  1.87s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.39it/s]100%|██████████| 1/1 [00:00<00:00,  1.29it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_42_for_img_1.config.yaml
+Running grid search:  47%|████▋     | 71/150 [2:21:57<2:43:40, 124.31s/it][INFO] Running pipeline with config: tmp_configs/temporary_40_for_img_0.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.82s/it]100%|██████████| 1/1 [00:01<00:00,  1.86s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.41it/s]100%|██████████| 1/1 [00:00<00:00,  1.31it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_40_for_img_0.config.yaml
+Running grid search:  48%|████▊     | 72/150 [2:24:06<2:43:28, 125.75s/it][INFO] Running pipeline with config: tmp_configs/temporary_7_for_img_0.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.85s/it]100%|██████████| 1/1 [00:01<00:00,  1.90s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.37it/s]100%|██████████| 1/1 [00:00<00:00,  1.28it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_7_for_img_0.config.yaml
+Running grid search:  49%|████▊     | 73/150 [2:26:05<2:38:46, 123.72s/it][INFO] Running pipeline with config: tmp_configs/temporary_26_for_img_2.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.82s/it]100%|██████████| 1/1 [00:01<00:00,  1.87s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.40it/s]100%|██████████| 1/1 [00:00<00:00,  1.29it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_26_for_img_2.config.yaml
+Running grid search:  49%|████▉     | 74/150 [2:28:04<2:34:53, 122.28s/it][INFO] Running pipeline with config: tmp_configs/temporary_38_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.83s/it]100%|██████████| 1/1 [00:01<00:00,  1.88s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.38it/s]100%|██████████| 1/1 [00:00<00:00,  1.28it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_38_for_img_1.config.yaml
+Running grid search:  50%|█████     | 75/150 [2:30:03<2:31:39, 121.33s/it][INFO] Running pipeline with config: tmp_configs/temporary_31_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.80s/it]100%|██████████| 1/1 [00:01<00:00,  1.85s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.38it/s]100%|██████████| 1/1 [00:00<00:00,  1.29it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_31_for_img_1.config.yaml
+Running grid search:  51%|█████     | 76/150 [2:32:02<2:28:52, 120.71s/it][INFO] Running pipeline with config: tmp_configs/temporary_23_for_img_0.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.70s/it]100%|██████████| 1/1 [00:01<00:00,  1.75s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.35it/s]100%|██████████| 1/1 [00:00<00:00,  1.25it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_23_for_img_0.config.yaml
+Running grid search:  51%|█████▏    | 77/150 [2:34:01<2:26:04, 120.07s/it][INFO] Running pipeline with config: tmp_configs/temporary_20_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.67s/it]100%|██████████| 1/1 [00:01<00:00,  1.72s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.40it/s]100%|██████████| 1/1 [00:00<00:00,  1.30it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_20_for_img_1.config.yaml
+Running grid search:  52%|█████▏    | 78/150 [2:35:59<2:23:17, 119.41s/it][INFO] Running pipeline with config: tmp_configs/temporary_36_for_img_0.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.71s/it]100%|██████████| 1/1 [00:01<00:00,  1.76s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.36it/s]100%|██████████| 1/1 [00:00<00:00,  1.27it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_36_for_img_0.config.yaml
+Running grid search:  53%|█████▎    | 79/150 [2:37:56<2:20:37, 118.84s/it][INFO] Running pipeline with config: tmp_configs/temporary_32_for_img_2.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.70s/it]100%|██████████| 1/1 [00:01<00:00,  1.75s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.38it/s]100%|██████████| 1/1 [00:00<00:00,  1.27it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_32_for_img_2.config.yaml
+Running grid search:  53%|█████▎    | 80/150 [2:39:55<2:18:33, 118.76s/it][INFO] Running pipeline with config: tmp_configs/temporary_16_for_img_0.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.70s/it]100%|██████████| 1/1 [00:01<00:00,  1.75s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.39it/s]100%|██████████| 1/1 [00:00<00:00,  1.29it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_16_for_img_0.config.yaml
+Running grid search:  54%|█████▍    | 81/150 [2:41:54<2:16:50, 119.00s/it][INFO] Running pipeline with config: tmp_configs/temporary_3_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.72s/it]100%|██████████| 1/1 [00:01<00:00,  1.77s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.37it/s]100%|██████████| 1/1 [00:00<00:00,  1.27it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_3_for_img_1.config.yaml
+Running grid search:  55%|█████▍    | 82/150 [2:43:53<2:14:45, 118.90s/it][INFO] Running pipeline with config: tmp_configs/temporary_12_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.76s/it]100%|██████████| 1/1 [00:01<00:00,  1.81s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.38it/s]100%|██████████| 1/1 [00:00<00:00,  1.29it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_12_for_img_1.config.yaml
+Running grid search:  55%|█████▌    | 83/150 [2:45:50<2:12:18, 118.49s/it][INFO] Running pipeline with config: tmp_configs/temporary_28_for_img_0.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.94s/it]100%|██████████| 1/1 [00:01<00:00,  1.99s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.38it/s]100%|██████████| 1/1 [00:00<00:00,  1.27it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_28_for_img_0.config.yaml
+Running grid search:  56%|█████▌    | 84/150 [2:47:49<2:10:20, 118.49s/it][INFO] Running pipeline with config: tmp_configs/temporary_29_for_img_0.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.77s/it]100%|██████████| 1/1 [00:01<00:00,  1.83s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.39it/s]100%|██████████| 1/1 [00:00<00:00,  1.29it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_29_for_img_0.config.yaml
+Running grid search:  57%|█████▋    | 85/150 [2:49:48<2:08:23, 118.52s/it][INFO] Running pipeline with config: tmp_configs/temporary_31_for_img_0.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.76s/it]100%|██████████| 1/1 [00:01<00:00,  1.81s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.43it/s]100%|██████████| 1/1 [00:00<00:00,  1.33it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_31_for_img_0.config.yaml
+Running grid search:  57%|█████▋    | 86/150 [2:51:46<2:06:22, 118.47s/it][INFO] Running pipeline with config: tmp_configs/temporary_45_for_img_0.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.74s/it]100%|██████████| 1/1 [00:01<00:00,  1.79s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.37it/s]100%|██████████| 1/1 [00:00<00:00,  1.27it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_45_for_img_0.config.yaml
+Running grid search:  58%|█████▊    | 87/150 [2:53:44<2:04:22, 118.45s/it][INFO] Running pipeline with config: tmp_configs/temporary_9_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.82s/it]100%|██████████| 1/1 [00:01<00:00,  1.87s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.40it/s]100%|██████████| 1/1 [00:00<00:00,  1.30it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_9_for_img_1.config.yaml
+Running grid search:  59%|█████▊    | 88/150 [2:55:43<2:02:23, 118.44s/it][INFO] Running pipeline with config: tmp_configs/temporary_3_for_img_2.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.74s/it]100%|██████████| 1/1 [00:01<00:00,  1.79s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.36it/s]100%|██████████| 1/1 [00:00<00:00,  1.26it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_3_for_img_2.config.yaml
+Running grid search:  59%|█████▉    | 89/150 [2:57:41<2:00:23, 118.41s/it][INFO] Running pipeline with config: tmp_configs/temporary_33_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.76s/it]100%|██████████| 1/1 [00:01<00:00,  1.81s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.37it/s]100%|██████████| 1/1 [00:00<00:00,  1.27it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_33_for_img_1.config.yaml
+Running grid search:  60%|██████    | 90/150 [2:59:39<1:58:24, 118.40s/it][INFO] Running pipeline with config: tmp_configs/temporary_2_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.78s/it]100%|██████████| 1/1 [00:01<00:00,  1.83s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.35it/s]100%|██████████| 1/1 [00:00<00:00,  1.25it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_2_for_img_1.config.yaml
+Running grid search:  61%|██████    | 91/150 [3:01:37<1:56:16, 118.25s/it][INFO] Running pipeline with config: tmp_configs/temporary_37_for_img_0.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.69s/it]100%|██████████| 1/1 [00:01<00:00,  1.73s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.54it/s]100%|██████████| 1/1 [00:00<00:00,  1.43it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/grid_search_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_37_for_img_0.config.yaml
+Running grid search:  61%|██████▏   | 92/150 [3:03:35<1:54:03, 117.99s/it][INFO] Running pipeline with config: tmp_configs/temporary_44_for_img_0.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+slurmstepd: error: *** JOB 6359200 ON gcn27 CANCELLED AT 2024-05-23T14:35:45 ***
+slurmstepd: error: container_p_join: setns failed for /slurm/6359200/.ns: Invalid argument
+slurmstepd: error: container_g_join(6359200): Invalid argument
+
+JOB STATISTICS
+==============
+Job ID: 6359200
+Cluster: snellius
+User/Group: jhuizing/jhuizing
+State: CANCELLED (exit code 0)
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 00:00:17
+CPU Efficiency: 0.01% of 2-07:32:42 core-walltime
+Job Wall-clock time: 03:05:09
+Memory Utilized: 3.32 GB
+Memory Efficiency: 2.76% of 120.00 GB
