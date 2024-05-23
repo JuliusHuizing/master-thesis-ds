@@ -10,7 +10,6 @@ paths:
   stage_1_images_output_path: "results/dream_gaussian/stage_1/"
   stage_1_clip_scores_output_path: "results/dream_gaussian/stage_1/clip_scores.csv"
 
-  
 preprocess:
   size: 512
   recenter: True
@@ -23,7 +22,7 @@ dreamgaussian:
 
   generate_image_progressions: False
   generate_gaussian_distribution_plots: False
-  save_images: True
+  save_images: False
 
   regularize: 
     elongation: 0.1
