@@ -1,16 +1,18 @@
 # Note that this will create num_of_images in image dir * num_random_search_points config files.
 image_dir: "images"
-num_random_search_points: False
+num_random_search_points: null
 hyperparameters:
   paths:
     stage_1_clip_scores_output_path: ["results/dream_gaussian/stage_1/result_clip_scores.csv"]
 
   dreamgaussian:
+    stage_1_result_images_output_path: ["results/stage_1/3images/"]
     save_images: [True] # required for computing clip scores.
+
     # best config found was e0.001c10.0o10.0
     regularize:
-      elongation: [0.001]
-      compactness: [10.0]
-      opacity: [10.0]
+      elongation: [0, 0.001] # also always use 0 to compare to baseline dg.
+      compactness: [0, 10.0]
+      opacity: [0, 10.0]
 
 
