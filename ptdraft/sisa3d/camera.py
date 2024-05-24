@@ -63,8 +63,8 @@ def capture_and_save_images(camera_positions, directory, step, ref_size, fovy, f
         image_np = image.squeeze(0).permute(1, 2, 0).cpu().detach().numpy()
         image_np = (image_np * 255).astype(np.uint8)
         image_np = cv2.cvtColor(image_np, cv2.COLOR_RGB2BGR)
-        # create directory if not exists
-        name = f'v{ver}_h{hor}_r{rad}_s{step}_i{idx}.jpg'
+        unique_id = uuid.uuid4().hex
+        name = f'v{ver}_h{hor}_r{rad}_s{step}_i{idx}_uuid_{unique_id}.jpg'
         cv2.imwrite(os.path.join(directory, name), image_np)
         
         
