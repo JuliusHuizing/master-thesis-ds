@@ -462,7 +462,17 @@ class GUI:
             # camera_positions = generate_camera_positions(200, self.opt.elevation, self.opt.radius)
             capture_and_save_images_for_clip_similarity(self.opt.input, camera_positions, self.opt.stage_1_images_output_path, self.step, self.opt.ref_size, self.cam.fovy, self.cam.fovx, self.cam.near, self.cam.far, self.renderer, orbit_camera, MiniCam)
             # capture_and_save_images(camera_positions, self.opt.stage_1_images_output_path, self.step, self.opt.ref_size, self.cam.fovy, self.cam.fovx, self.cam.near, self.cam.far, self.renderer, orbit_camera, MiniCam)
-            
+        if self.opt.stage_1_result_images_output_path is not None:
+            # save_dir = "image_progressions"
+            camera_positions = [
+                (0, 0, 2),  # Elevation, Horizontal Angle, Radius
+                (0, 45, 2),  
+                (0, 180, 2)   
+            ]
+            capture_and_save_images(camera_positions, self.opt.stage_1_result_images_output_path, self.step, self.opt.ref_size, self.cam.fovy, self.cam.fovx, self.cam.near, self.cam.far, self.renderer, orbit_camera, MiniCam)
+
+
+          
             
 
 if __name__ == "__main__":

@@ -29,6 +29,8 @@ cd ..
 # pip install clip-score
 
 python grid_search.py --default_config config.yaml --gridsearch_config batch_config.yaml
+python grid_search.py --default_config config.yaml --gridsearch_config batch_config.woreg.yaml
+
 
 # git add .
 # git commit -m "auto commit from snellius"
