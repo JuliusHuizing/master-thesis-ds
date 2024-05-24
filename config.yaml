@@ -17,6 +17,8 @@ preprocess:
   border_ratio: 0.2
 
 dreamgaussian:
+  # so we have access to the file name and can save results with the same name
+  input_image_path: "assets/blueberry.jpeg"
   # we need to duplicate this here so dg main.py can access it...
   stage_1_result_images_output_path: "results/stage_1/3images/"
   stage_1_images_output_path: "results/dream_gaussian/stage_1/"

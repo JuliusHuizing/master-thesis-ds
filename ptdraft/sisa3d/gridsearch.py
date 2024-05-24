@@ -126,6 +126,9 @@ def create_grid_search_config_files(path_to_default_config_yaml, path_to_grid_se
             
             new_config['paths']['input_image_path'] = image_path
             
+            # make sure we can access the input file name in DreamGaussian's main.
+            new_config['dreamgaussian']['input_image_path'] = image_path
+            
             # Define the output path
             output_path = os.path.join(output_dir, f'temporary_{idx}_for_img_{image_idx}.config.yaml')
             

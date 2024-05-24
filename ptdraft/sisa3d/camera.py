@@ -36,11 +36,12 @@ def generate_camera_positions(num_positions, elevation, radius):
             positions.append((elevation + ver, hor, radius * radius_variation))
     return positions
 
-def capture_and_save_images(camera_positions, directory, step, ref_size, fovy, fovx, near, far, renderer, orbit_camera, MiniCam):
+def capture_and_save_images(image_name, camera_positions, directory, step, ref_size, fovy, fovx, near, far, renderer, orbit_camera, MiniCam):
     """
     Captures and saves images based on given camera positions using the specified camera and rendering settings.
     
     Args:
+        image_name (str): Name of the image.
         camera_positions (list): Camera positions (elevation, horizontal angle, radius).
         directory (str): Directory to save images.
         step (int): Current step or iteration in the process.
@@ -64,7 +65,7 @@ def capture_and_save_images(camera_positions, directory, step, ref_size, fovy, f
         image_np = (image_np * 255).astype(np.uint8)
         image_np = cv2.cvtColor(image_np, cv2.COLOR_RGB2BGR)
         unique_id = uuid.uuid4().hex
-        name = f'v{ver}_h{hor}_r{rad}_s{step}_i{idx}_uuid_{unique_id}.jpg'
+        name = f'{image_name}_v{ver}_h{hor}_r{rad}_s{step}_i{idx}_uuid_{unique_id}.jpg'
         cv2.imwrite(os.path.join(directory, name), image_np)
         
         

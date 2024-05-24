@@ -1,14 +1,14 @@
 # Note that this will create num_of_images in image dir * num_random_search_points config files.
-image_dir: "images"
+image_dir: "images/results"
 num_random_search_points: null
 hyperparameters:
   paths:
     stage_1_clip_scores_output_path: ["results/dream_gaussian/stage_1/result_clip_scores.csv"]
-    stage_1_result_images_output_path: ["results/stage_1/3images/"]
+    stage_1_result_images_output_path: ["results/dg_images/"]
 
 
   dreamgaussian:
-    stage_1_result_images_output_path: ["results/stage_1/3images/"]
+    stage_1_result_images_output_path: ["results/dg_images/"]
     save_images: [True] # required for computing clip scores.
 
     # best config found was e0.001c10.0o10.0
