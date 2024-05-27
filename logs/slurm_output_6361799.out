@@ -1,0 +1,1053 @@
+============================================================================================== 
+Warning! Mixing Conda and module environments may lead to corruption of the
+user environment. 
+We do not recommend users mixing those two environments unless absolutely
+necessary. Note that 
+SURF does not provide any support for Conda environment.
+For more information, please refer to our software policy page:
+https://servicedesk.surf.nl/wiki/display/WIKI/Software+policy+Snellius#SoftwarepolicySnellius-UseofAnacondaandMinicondaenvironmentsonSnellius 
+
+Remember that many packages have already been installed on the system and can
+be loaded using 
+the 'module load <package__name>' command. If you are uncertain if a package is
+already available 
+on the system, please use 'module avail' or 'module spider' to search for it.
+============================================================================================== 
+Current branch set-up-pipeline is up to date.
+Obtaining file:///gpfs/home6/jhuizing/master-thesis-ds/ptdraft
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: sisa3d
+  Building editable for sisa3d (pyproject.toml): started
+  Building editable for sisa3d (pyproject.toml): finished with status 'done'
+  Created wheel for sisa3d: filename=sisa3d-0.1.0-py3-none-any.whl size=1286 sha256=466689da9623440a694956c93a4920038d607a9428abb993da0c7549d07f4ef9
+  Stored in directory: /gpfs/scratch1/nodespecific/gcn42/jhuizing.6361799/pip-ephem-wheel-cache-pyl9i6q1/wheels/ba/24/02/45c17a515af0a22326616b14da79c51e525e740ad6f0b007df
+Successfully built sisa3d
+Installing collected packages: sisa3d
+  Attempting uninstall: sisa3d
+    Found existing installation: sisa3d 0.1.0
+    Uninstalling sisa3d-0.1.0:
+      Successfully uninstalled sisa3d-0.1.0
+Successfully installed sisa3d-0.1.0
+[INFO] Creating temporary directory for config files: tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b
+Generated 5 configuration files in tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b for 3 images.
+[INFO] ✅ Temporary directory created with config files: tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b
+[INFO] Running parallel grid search with 15 configuration files...
+[INFO] Running pipeline with config: tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_0_for_img_1.config.yaml
+[INFO] Running pipeline with config: tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_1_for_img_1.config.yaml
+[INFO] Running pipeline with config: tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_1_for_img_0.config.yaml
+[INFO] Running pipeline with config: tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_4_for_img_2.config.yaml
+[INFO] Running pipeline with config: tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_4_for_img_1.config.yaml
+[INFO] Running pipeline with config: tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_3_for_img_1.config.yaml
+[INFO] Running pipeline with config: tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_3_for_img_2.config.yaml
+[INFO] Running pipeline with config: tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_2_for_img_1.config.yaml
+[INFO] Running pipeline with config: tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_4_for_img_0.config.yaml
+[INFO] Running pipeline with config: tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_2_for_img_2.config.yaml
+[INFO] Running pipeline with config: tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_0_for_img_0.config.yaml
+[INFO] Running pipeline with config: tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_3_for_img_0.config.yaml
+[INFO] Running pipeline with config: tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_0_for_img_2.config.yaml
+[INFO] Running pipeline with config: tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_1_for_img_2.config.yaml
+[INFO] Running pipeline with config: tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_2_for_img_0.config.yaml
+Running grid search:   0%|          | 0/15 [00:00<?, ?it/s][INFO] Loading configuration...
+[INFO] Loading configuration...
+[INFO] Loading configuration...
+[INFO] Loading configuration...
+[INFO] Loading configuration...
+[INFO] Loading configuration...
+[INFO] Loading configuration...
+[INFO] Loading configuration...
+[INFO] Loading configuration...
+[INFO] Loading configuration...
+[INFO] Loading configuration...
+[INFO] Loading configuration...
+[INFO] Loading configuration...
+[INFO] Loading configuration...
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Configuration loaded.
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] ✅ Configuration loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] Loading paths...
+[INFO] ✅ Configuration loaded.
+[INFO] ✅ Paths loaded.
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] Creating paths if they don't exist...
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] ✅ Configuration loaded.
+[INFO] ✅ Configuration loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths loaded.
+[INFO] ✅ Configuration loaded.
+[INFO] ✅ Configuration loaded.
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] Loading paths...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] Creating paths if they don't exist...
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] ✅ Paths created.
+[INFO] ✅ Paths created.
+[INFO] ✅ Paths created.
+[INFO] ✅ Paths created.
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] ✅ Configuration loaded.
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] Initializing preprocessing pipeline...
+[INFO] Loading paths...
+[INFO] Running preprocessing pipeline...
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Paths loaded.
+[INFO] Running preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Configuration loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[ERROR] ❌ Subprocess error with non-zero exit status 1
+[ERROR] Standard output of the subprocess: [INFO] ✅ DreamGaussian Configuration loaded.
+[INFO] load image from results/preprocessing/image-2_rgba.png...
+Number of points at initialisation :  5000
+[INFO] loading zero123...
+
+[ERROR] Standard error of the subprocess: Keyword arguments {'trust_remote_code': True} are not expected by Zero123Pipeline and will be ignored.
+
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]
+Loading pipeline components...:  50%|█████     | 3/6 [00:01<00:01,  2.36it/s]
+Loading pipeline components...:  83%|████████▎ | 5/6 [00:01<00:00,  2.82it/s]
+Loading pipeline components...: 100%|██████████| 6/6 [00:01<00:00,  3.38it/s]
+Loading pipeline components...: 100%|██████████| 6/6 [00:01<00:00,  3.06it/s]
+Traceback (most recent call last):
+  File "repos/dreamgaussian/main.py", line 483, in <module>
+    gui.train(opt.iters)
+  File "repos/dreamgaussian/main.py", line 444, in train
+    self.prepare_train()
+  File "repos/dreamgaussian/main.py", line 131, in prepare_train
+    self.guidance_zero123 = Zero123(self.device, model_key='ashawkey/zero123-xl-diffusers')
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/dreamgaussian/guidance/zero123_utils.py", line 28, in __init__
+    self.pipe = Zero123Pipeline.from_pretrained(
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/diffusers/pipelines/pipeline_utils.py", line 418, in to
+    module.to(device, dtype)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2576, in to
+    return super().to(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1160, in to
+    return self._apply(convert)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  [Previous line repeated 3 more times]
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 833, in _apply
+    param_applied = fn(param)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1158, in convert
+    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacty of 39.39 GiB of which 8.75 MiB is free. Process 804938 has 2.91 GiB memory in use. Process 804720 has 2.91 GiB memory in use. Process 804937 has 2.84 GiB memory in use. Process 804902 has 2.24 GiB memory in use. Process 804934 has 2.42 GiB memory in use. Process 804924 has 2.27 GiB memory in use. Process 804922 has 2.91 GiB memory in use. Process 804758 has 2.24 GiB memory in use. Process 804925 has 2.91 GiB memory in use. Process 804933 has 2.44 GiB memory in use. Including non-PyTorch memory, this process has 2.28 GiB memory in use. Process 804920 has 2.27 GiB memory in use. Process 804930 has 2.91 GiB memory in use. Process 804923 has 2.91 GiB memory in use. Process 804939 has 2.80 GiB memory in use. Of the allocated memory 1.75 GiB is allocated by PyTorch, and 38.71 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+
+Traceback (most recent call last):
+  File "pipeline.py", line 138, in <module>
+    raise cpe
+  File "pipeline.py", line 88, in <module>
+    result = subprocess.run(command, check=True, text=True, capture_output=True)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/subprocess.py", line 516, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'repos/dreamgaussian/main.py', '--config', 'tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_3_for_img_2.config.yaml', 'input=results/preprocessing/image-2_rgba.png', 'save_path=name']' returned non-zero exit status 1.
+[ERROR] ❌ Subprocess error with non-zero exit status 1
+[ERROR] Standard output of the subprocess: [INFO] ✅ DreamGaussian Configuration loaded.
+[INFO] load image from results/preprocessing/image-2_rgba.png...
+Number of points at initialisation :  5000
+[INFO] loading zero123...
+
+[ERROR] Standard error of the subprocess: Keyword arguments {'trust_remote_code': True} are not expected by Zero123Pipeline and will be ignored.
+
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]
+Loading pipeline components...:  17%|█▋        | 1/6 [00:01<00:06,  1.27s/it]
+Loading pipeline components...:  50%|█████     | 3/6 [00:01<00:01,  1.94it/s]
+Loading pipeline components...:  83%|████████▎ | 5/6 [00:01<00:00,  3.51it/s]
+Loading pipeline components...: 100%|██████████| 6/6 [00:01<00:00,  3.12it/s]
+Traceback (most recent call last):
+  File "repos/dreamgaussian/main.py", line 483, in <module>
+    gui.train(opt.iters)
+  File "repos/dreamgaussian/main.py", line 444, in train
+    self.prepare_train()
+  File "repos/dreamgaussian/main.py", line 131, in prepare_train
+    self.guidance_zero123 = Zero123(self.device, model_key='ashawkey/zero123-xl-diffusers')
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/dreamgaussian/guidance/zero123_utils.py", line 28, in __init__
+    self.pipe = Zero123Pipeline.from_pretrained(
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/diffusers/pipelines/pipeline_utils.py", line 418, in to
+    module.to(device, dtype)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2576, in to
+    return super().to(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1160, in to
+    return self._apply(convert)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  [Previous line repeated 3 more times]
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 833, in _apply
+    param_applied = fn(param)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1158, in convert
+    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacty of 39.39 GiB of which 8.75 MiB is free. Process 804938 has 2.91 GiB memory in use. Process 804720 has 2.91 GiB memory in use. Process 804937 has 2.84 GiB memory in use. Process 804902 has 2.24 GiB memory in use. Process 804934 has 2.42 GiB memory in use. Including non-PyTorch memory, this process has 2.27 GiB memory in use. Process 804922 has 2.91 GiB memory in use. Process 804758 has 2.24 GiB memory in use. Process 804925 has 2.91 GiB memory in use. Process 804933 has 2.44 GiB memory in use. Process 804935 has 2.28 GiB memory in use. Process 804920 has 2.27 GiB memory in use. Process 804930 has 2.91 GiB memory in use. Process 804923 has 2.91 GiB memory in use. Process 804939 has 2.80 GiB memory in use. Of the allocated memory 1.75 GiB is allocated by PyTorch, and 38.78 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+
+Traceback (most recent call last):
+  File "pipeline.py", line 138, in <module>
+    raise cpe
+  File "pipeline.py", line 88, in <module>
+    result = subprocess.run(command, check=True, text=True, capture_output=True)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/subprocess.py", line 516, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'repos/dreamgaussian/main.py', '--config', 'tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_4_for_img_2.config.yaml', 'input=results/preprocessing/image-2_rgba.png', 'save_path=name']' returned non-zero exit status 1.
+[ERROR] ❌ Subprocess error with non-zero exit status 1
+[ERROR] Standard output of the subprocess: [INFO] ✅ DreamGaussian Configuration loaded.
+[INFO] load image from results/preprocessing/image-13_rgba.png...
+Number of points at initialisation :  5000
+[INFO] loading zero123...
+
+[ERROR] Standard error of the subprocess: Keyword arguments {'trust_remote_code': True} are not expected by Zero123Pipeline and will be ignored.
+
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]
+Loading pipeline components...:  33%|███▎      | 2/6 [00:01<00:02,  1.92it/s]
+Loading pipeline components...:  50%|█████     | 3/6 [00:01<00:01,  2.82it/s]
+Loading pipeline components...: 100%|██████████| 6/6 [00:01<00:00,  4.67it/s]
+Loading pipeline components...: 100%|██████████| 6/6 [00:01<00:00,  3.83it/s]
+Traceback (most recent call last):
+  File "repos/dreamgaussian/main.py", line 483, in <module>
+    gui.train(opt.iters)
+  File "repos/dreamgaussian/main.py", line 444, in train
+    self.prepare_train()
+  File "repos/dreamgaussian/main.py", line 131, in prepare_train
+    self.guidance_zero123 = Zero123(self.device, model_key='ashawkey/zero123-xl-diffusers')
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/dreamgaussian/guidance/zero123_utils.py", line 28, in __init__
+    self.pipe = Zero123Pipeline.from_pretrained(
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/diffusers/pipelines/pipeline_utils.py", line 418, in to
+    module.to(device, dtype)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1160, in to
+    return self._apply(convert)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  [Previous line repeated 3 more times]
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 833, in _apply
+    param_applied = fn(param)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1158, in convert
+    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacty of 39.39 GiB of which 14.75 MiB is free. Process 804938 has 2.91 GiB memory in use. Process 804720 has 2.91 GiB memory in use. Process 804937 has 2.84 GiB memory in use. Process 804902 has 2.24 GiB memory in use. Process 804934 has 2.42 GiB memory in use. Process 804924 has 2.27 GiB memory in use. Process 804922 has 2.91 GiB memory in use. Including non-PyTorch memory, this process has 2.24 GiB memory in use. Process 804925 has 2.91 GiB memory in use. Process 804933 has 2.44 GiB memory in use. Process 804935 has 2.28 GiB memory in use. Process 804920 has 2.27 GiB memory in use. Process 804930 has 2.91 GiB memory in use. Process 804923 has 2.91 GiB memory in use. Process 804939 has 2.80 GiB memory in use. Of the allocated memory 1.71 GiB is allocated by PyTorch, and 44.02 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+
+Traceback (most recent call last):
+  File "pipeline.py", line 138, in <module>
+    raise cpe
+  File "pipeline.py", line 88, in <module>
+    result = subprocess.run(command, check=True, text=True, capture_output=True)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/subprocess.py", line 516, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'repos/dreamgaussian/main.py', '--config', 'tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_4_for_img_1.config.yaml', 'input=results/preprocessing/image-13_rgba.png', 'save_path=name']' returned non-zero exit status 1.
+[ERROR] ❌ Subprocess error with non-zero exit status 1
+[ERROR] Standard output of the subprocess: [INFO] ✅ DreamGaussian Configuration loaded.
+[INFO] load image from results/preprocessing/image-7_rgba.png...
+Number of points at initialisation :  5000
+[INFO] loading zero123...
+
+[ERROR] Standard error of the subprocess: Keyword arguments {'trust_remote_code': True} are not expected by Zero123Pipeline and will be ignored.
+
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]
+Loading pipeline components...:  50%|█████     | 3/6 [00:01<00:01,  2.36it/s]
+Loading pipeline components...:  67%|██████▋   | 4/6 [00:01<00:00,  3.03it/s]
+Loading pipeline components...:  83%|████████▎ | 5/6 [00:02<00:00,  2.17it/s]
+Loading pipeline components...: 100%|██████████| 6/6 [00:02<00:00,  2.77it/s]
+Traceback (most recent call last):
+  File "repos/dreamgaussian/main.py", line 483, in <module>
+    gui.train(opt.iters)
+  File "repos/dreamgaussian/main.py", line 444, in train
+    self.prepare_train()
+  File "repos/dreamgaussian/main.py", line 131, in prepare_train
+    self.guidance_zero123 = Zero123(self.device, model_key='ashawkey/zero123-xl-diffusers')
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/dreamgaussian/guidance/zero123_utils.py", line 28, in __init__
+    self.pipe = Zero123Pipeline.from_pretrained(
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/diffusers/pipelines/pipeline_utils.py", line 418, in to
+    module.to(device, dtype)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2576, in to
+    return super().to(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1160, in to
+    return self._apply(convert)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  [Previous line repeated 3 more times]
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 833, in _apply
+    param_applied = fn(param)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1158, in convert
+    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacty of 39.39 GiB of which 8.75 MiB is free. Process 804938 has 2.91 GiB memory in use. Process 804720 has 2.91 GiB memory in use. Process 804937 has 2.84 GiB memory in use. Process 804902 has 2.24 GiB memory in use. Process 804934 has 2.42 GiB memory in use. Process 804924 has 2.27 GiB memory in use. Process 804922 has 2.91 GiB memory in use. Process 804758 has 2.24 GiB memory in use. Process 804925 has 2.91 GiB memory in use. Including non-PyTorch memory, this process has 2.44 GiB memory in use. Process 804935 has 2.28 GiB memory in use. Process 804920 has 2.27 GiB memory in use. Process 804930 has 2.91 GiB memory in use. Process 804923 has 2.91 GiB memory in use. Process 804939 has 2.80 GiB memory in use. Of the allocated memory 1.91 GiB is allocated by PyTorch, and 42.89 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+
+Traceback (most recent call last):
+  File "pipeline.py", line 138, in <module>
+    raise cpe
+  File "pipeline.py", line 88, in <module>
+    result = subprocess.run(command, check=True, text=True, capture_output=True)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/subprocess.py", line 516, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'repos/dreamgaussian/main.py', '--config', 'tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_4_for_img_0.config.yaml', 'input=results/preprocessing/image-7_rgba.png', 'save_path=name']' returned non-zero exit status 1.
+[ERROR] ❌ Subprocess error with non-zero exit status 1
+[ERROR] Standard output of the subprocess: [INFO] ✅ DreamGaussian Configuration loaded.
+[INFO] load image from results/preprocessing/image-2_rgba.png...
+Number of points at initialisation :  5000
+[INFO] loading zero123...
+
+[ERROR] Standard error of the subprocess: Keyword arguments {'trust_remote_code': True} are not expected by Zero123Pipeline and will be ignored.
+
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]
+Loading pipeline components...:  17%|█▋        | 1/6 [00:00<00:01,  2.99it/s]
+Loading pipeline components...:  50%|█████     | 3/6 [00:01<00:01,  2.31it/s]
+Loading pipeline components...:  83%|████████▎ | 5/6 [00:02<00:00,  2.48it/s]
+Loading pipeline components...: 100%|██████████| 6/6 [00:02<00:00,  2.93it/s]
+Traceback (most recent call last):
+  File "repos/dreamgaussian/main.py", line 483, in <module>
+    gui.train(opt.iters)
+  File "repos/dreamgaussian/main.py", line 444, in train
+    self.prepare_train()
+  File "repos/dreamgaussian/main.py", line 131, in prepare_train
+    self.guidance_zero123 = Zero123(self.device, model_key='ashawkey/zero123-xl-diffusers')
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/dreamgaussian/guidance/zero123_utils.py", line 28, in __init__
+    self.pipe = Zero123Pipeline.from_pretrained(
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/diffusers/pipelines/pipeline_utils.py", line 418, in to
+    module.to(device, dtype)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2576, in to
+    return super().to(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1160, in to
+    return self._apply(convert)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  [Previous line repeated 3 more times]
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 833, in _apply
+    param_applied = fn(param)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1158, in convert
+    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacty of 39.39 GiB of which 14.75 MiB is free. Process 804938 has 2.91 GiB memory in use. Process 804720 has 2.91 GiB memory in use. Process 804937 has 2.84 GiB memory in use. Process 804902 has 2.24 GiB memory in use. Including non-PyTorch memory, this process has 2.42 GiB memory in use. Process 804924 has 2.27 GiB memory in use. Process 804922 has 2.91 GiB memory in use. Process 804758 has 2.24 GiB memory in use. Process 804925 has 2.91 GiB memory in use. Process 804933 has 2.44 GiB memory in use. Process 804935 has 2.28 GiB memory in use. Process 804920 has 2.27 GiB memory in use. Process 804930 has 2.91 GiB memory in use. Process 804923 has 2.91 GiB memory in use. Process 804939 has 2.80 GiB memory in use. Of the allocated memory 1.89 GiB is allocated by PyTorch, and 44.03 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+
+Traceback (most recent call last):
+  File "pipeline.py", line 138, in <module>
+    raise cpe
+  File "pipeline.py", line 88, in <module>
+    result = subprocess.run(command, check=True, text=True, capture_output=True)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/subprocess.py", line 516, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'repos/dreamgaussian/main.py', '--config', 'tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_2_for_img_2.config.yaml', 'input=results/preprocessing/image-2_rgba.png', 'save_path=name']' returned non-zero exit status 1.
+[ERROR] ❌ Subprocess error with non-zero exit status 1
+[ERROR] Standard output of the subprocess: [INFO] ✅ DreamGaussian Configuration loaded.
+[INFO] load image from results/preprocessing/image-13_rgba.png...
+Number of points at initialisation :  5000
+[INFO] loading zero123...
+
+[ERROR] Standard error of the subprocess: Keyword arguments {'trust_remote_code': True} are not expected by Zero123Pipeline and will be ignored.
+
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]
+Loading pipeline components...:  17%|█▋        | 1/6 [00:01<00:06,  1.23s/it]
+Loading pipeline components...:  33%|███▎      | 2/6 [00:01<00:02,  1.70it/s]
+Loading pipeline components...:  67%|██████▋   | 4/6 [00:02<00:00,  2.25it/s]
+Loading pipeline components...: 100%|██████████| 6/6 [00:02<00:00,  2.83it/s]
+Traceback (most recent call last):
+  File "repos/dreamgaussian/main.py", line 483, in <module>
+    gui.train(opt.iters)
+  File "repos/dreamgaussian/main.py", line 444, in train
+    self.prepare_train()
+  File "repos/dreamgaussian/main.py", line 131, in prepare_train
+    self.guidance_zero123 = Zero123(self.device, model_key='ashawkey/zero123-xl-diffusers')
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/dreamgaussian/guidance/zero123_utils.py", line 28, in __init__
+    self.pipe = Zero123Pipeline.from_pretrained(
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/diffusers/pipelines/pipeline_utils.py", line 418, in to
+    module.to(device, dtype)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1160, in to
+    return self._apply(convert)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  [Previous line repeated 3 more times]
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 833, in _apply
+    param_applied = fn(param)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1158, in convert
+    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacty of 39.39 GiB of which 12.75 MiB is free. Process 804938 has 2.91 GiB memory in use. Process 804720 has 2.91 GiB memory in use. Process 804937 has 2.84 GiB memory in use. Including non-PyTorch memory, this process has 2.24 GiB memory in use. Process 804934 has 2.42 GiB memory in use. Process 804924 has 2.27 GiB memory in use. Process 804922 has 2.91 GiB memory in use. Process 804758 has 2.24 GiB memory in use. Process 804925 has 2.91 GiB memory in use. Process 804933 has 2.44 GiB memory in use. Process 804935 has 2.28 GiB memory in use. Process 804920 has 2.27 GiB memory in use. Process 804930 has 2.91 GiB memory in use. Process 804923 has 2.91 GiB memory in use. Process 804939 has 2.80 GiB memory in use. Of the allocated memory 1.71 GiB is allocated by PyTorch, and 44.02 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+
+Traceback (most recent call last):
+  File "pipeline.py", line 138, in <module>
+    raise cpe
+  File "pipeline.py", line 88, in <module>
+    result = subprocess.run(command, check=True, text=True, capture_output=True)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/subprocess.py", line 516, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'repos/dreamgaussian/main.py', '--config', 'tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_1_for_img_1.config.yaml', 'input=results/preprocessing/image-13_rgba.png', 'save_path=name']' returned non-zero exit status 1.
+[ERROR] ❌ Subprocess error with non-zero exit status 1
+[ERROR] Standard output of the subprocess: [INFO] ✅ DreamGaussian Configuration loaded.
+[INFO] load image from results/preprocessing/image-13_rgba.png...
+Number of points at initialisation :  5000
+[INFO] loading zero123...
+
+[ERROR] Standard error of the subprocess: Keyword arguments {'trust_remote_code': True} are not expected by Zero123Pipeline and will be ignored.
+
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]
+Loading pipeline components...:  33%|███▎      | 2/6 [00:01<00:02,  1.57it/s]
+Loading pipeline components...:  50%|█████     | 3/6 [00:01<00:01,  1.66it/s]
+Loading pipeline components...:  67%|██████▋   | 4/6 [00:01<00:00,  2.35it/s]
+Loading pipeline components...: 100%|██████████| 6/6 [00:01<00:00,  3.04it/s]
+Traceback (most recent call last):
+  File "repos/dreamgaussian/main.py", line 483, in <module>
+    gui.train(opt.iters)
+  File "repos/dreamgaussian/main.py", line 444, in train
+    self.prepare_train()
+  File "repos/dreamgaussian/main.py", line 131, in prepare_train
+    self.guidance_zero123 = Zero123(self.device, model_key='ashawkey/zero123-xl-diffusers')
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/dreamgaussian/guidance/zero123_utils.py", line 28, in __init__
+    self.pipe = Zero123Pipeline.from_pretrained(
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/diffusers/pipelines/pipeline_utils.py", line 418, in to
+    module.to(device, dtype)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/transformers/modeling_utils.py", line 2576, in to
+    return super().to(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1160, in to
+    return self._apply(convert)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  [Previous line repeated 3 more times]
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 833, in _apply
+    param_applied = fn(param)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1158, in convert
+    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacty of 39.39 GiB of which 12.75 MiB is free. Process 804938 has 2.91 GiB memory in use. Process 804720 has 2.91 GiB memory in use. Process 804937 has 2.84 GiB memory in use. Process 804902 has 2.24 GiB memory in use. Process 804934 has 2.42 GiB memory in use. Process 804924 has 2.27 GiB memory in use. Process 804922 has 2.91 GiB memory in use. Process 804758 has 2.24 GiB memory in use. Process 804925 has 2.91 GiB memory in use. Process 804933 has 2.44 GiB memory in use. Process 804935 has 2.28 GiB memory in use. Including non-PyTorch memory, this process has 2.27 GiB memory in use. Process 804930 has 2.91 GiB memory in use. Process 804923 has 2.91 GiB memory in use. Process 804939 has 2.80 GiB memory in use. Of the allocated memory 1.75 GiB is allocated by PyTorch, and 38.78 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+
+Traceback (most recent call last):
+  File "pipeline.py", line 138, in <module>
+    raise cpe
+  File "pipeline.py", line 88, in <module>
+    result = subprocess.run(command, check=True, text=True, capture_output=True)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/subprocess.py", line 516, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'repos/dreamgaussian/main.py', '--config', 'tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_2_for_img_1.config.yaml', 'input=results/preprocessing/image-13_rgba.png', 'save_path=name']' returned non-zero exit status 1.
+[ERROR] ❌ Subprocess error with non-zero exit status 1
+[ERROR] Standard output of the subprocess: [INFO] ✅ DreamGaussian Configuration loaded.
+[INFO] load image from results/preprocessing/image-7_rgba.png...
+Number of points at initialisation :  5000
+[INFO] loading zero123...
+
+[ERROR] Standard error of the subprocess: Keyword arguments {'trust_remote_code': True} are not expected by Zero123Pipeline and will be ignored.
+
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]
+Loading pipeline components...:  33%|███▎      | 2/6 [00:00<00:01,  2.16it/s]
+Loading pipeline components...:  67%|██████▋   | 4/6 [00:01<00:00,  3.27it/s]
+Loading pipeline components...: 100%|██████████| 6/6 [00:01<00:00,  5.07it/s]
+Loading pipeline components...: 100%|██████████| 6/6 [00:01<00:00,  4.13it/s]
+Traceback (most recent call last):
+  File "repos/dreamgaussian/main.py", line 483, in <module>
+    gui.train(opt.iters)
+  File "repos/dreamgaussian/main.py", line 444, in train
+    self.prepare_train()
+  File "repos/dreamgaussian/main.py", line 131, in prepare_train
+    self.guidance_zero123 = Zero123(self.device, model_key='ashawkey/zero123-xl-diffusers')
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/dreamgaussian/guidance/zero123_utils.py", line 28, in __init__
+    self.pipe = Zero123Pipeline.from_pretrained(
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/diffusers/pipelines/pipeline_utils.py", line 418, in to
+    module.to(device, dtype)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1160, in to
+    return self._apply(convert)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  [Previous line repeated 3 more times]
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 833, in _apply
+    param_applied = fn(param)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1158, in convert
+    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacty of 39.39 GiB of which 10.75 MiB is free. Process 804938 has 2.91 GiB memory in use. Process 804720 has 2.91 GiB memory in use. Including non-PyTorch memory, this process has 2.84 GiB memory in use. Process 804902 has 2.24 GiB memory in use. Process 804934 has 2.42 GiB memory in use. Process 804924 has 2.27 GiB memory in use. Process 804922 has 2.91 GiB memory in use. Process 804758 has 2.24 GiB memory in use. Process 804925 has 2.91 GiB memory in use. Process 804933 has 2.44 GiB memory in use. Process 804935 has 2.28 GiB memory in use. Process 804920 has 2.27 GiB memory in use. Process 804930 has 2.91 GiB memory in use. Process 804923 has 2.91 GiB memory in use. Process 804939 has 2.80 GiB memory in use. Of the allocated memory 2.31 GiB is allocated by PyTorch, and 47.62 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+
+Traceback (most recent call last):
+  File "pipeline.py", line 138, in <module>
+    raise cpe
+  File "pipeline.py", line 88, in <module>
+    result = subprocess.run(command, check=True, text=True, capture_output=True)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/subprocess.py", line 516, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'repos/dreamgaussian/main.py', '--config', 'tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_0_for_img_0.config.yaml', 'input=results/preprocessing/image-7_rgba.png', 'save_path=name']' returned non-zero exit status 1.
+[ERROR] ❌ Subprocess error with non-zero exit status 1 for config: tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_3_for_img_2.config.yaml
+[ERROR] Error occurred: Command '['python', 'pipeline.py', '--config', 'tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_3_for_img_2.config.yaml']' returned non-zero exit status 1.
+Running grid search:   7%|▋         | 1/15 [01:39<23:10, 99.32s/it][ERROR] ❌ Subprocess error with non-zero exit status 1
+[ERROR] Standard output of the subprocess: [INFO] ✅ DreamGaussian Configuration loaded.
+[INFO] load image from results/preprocessing/image-7_rgba.png...
+Number of points at initialisation :  5000
+[INFO] loading zero123...
+[INFO] loaded zero123!
+
+[ERROR] Standard error of the subprocess: Keyword arguments {'trust_remote_code': True} are not expected by Zero123Pipeline and will be ignored.
+
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]
+Loading pipeline components...:  17%|█▋        | 1/6 [00:00<00:01,  2.98it/s]
+Loading pipeline components...:  67%|██████▋   | 4/6 [00:01<00:00,  3.91it/s]
+Loading pipeline components...:  83%|████████▎ | 5/6 [00:01<00:00,  3.42it/s]
+Loading pipeline components...: 100%|██████████| 6/6 [00:01<00:00,  4.17it/s]
+Traceback (most recent call last):
+  File "repos/dreamgaussian/main.py", line 483, in <module>
+    gui.train(opt.iters)
+  File "repos/dreamgaussian/main.py", line 444, in train
+    self.prepare_train()
+  File "repos/dreamgaussian/main.py", line 145, in prepare_train
+    self.guidance_zero123.get_img_embeds(self.input_img_torch)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/dreamgaussian/guidance/zero123_utils.py", line 62, in get_img_embeds
+    c = self.pipe.image_encoder(x_clip).image_embeds
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/transformers/models/clip/modeling_clip.py", line 1296, in forward
+    vision_outputs = self.vision_model(
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/transformers/models/clip/modeling_clip.py", line 849, in forward
+    hidden_states = self.embeddings(pixel_values)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/transformers/models/clip/modeling_clip.py", line 190, in forward
+    patch_embeds = self.patch_embedding(pixel_values.to(dtype=target_dtype))  # shape = [*, width, grid, grid]
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 460, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 456, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+RuntimeError: cuDNN error: CUDNN_STATUS_NOT_INITIALIZED
+
+Traceback (most recent call last):
+  File "pipeline.py", line 138, in <module>
+    raise cpe
+  File "pipeline.py", line 88, in <module>
+    result = subprocess.run(command, check=True, text=True, capture_output=True)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/subprocess.py", line 516, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'repos/dreamgaussian/main.py', '--config', 'tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_1_for_img_0.config.yaml', 'input=results/preprocessing/image-7_rgba.png', 'save_path=name']' returned non-zero exit status 1.
+[ERROR] ❌ Subprocess error with non-zero exit status 1
+[ERROR] Standard output of the subprocess: [INFO] ✅ DreamGaussian Configuration loaded.
+[INFO] load image from results/preprocessing/image-2_rgba.png...
+Number of points at initialisation :  5000
+[INFO] loading zero123...
+[INFO] loaded zero123!
+
+[ERROR] Standard error of the subprocess: Keyword arguments {'trust_remote_code': True} are not expected by Zero123Pipeline and will be ignored.
+
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]
+Loading pipeline components...:  33%|███▎      | 2/6 [00:00<00:00,  5.98it/s]
+Loading pipeline components...:  67%|██████▋   | 4/6 [00:01<00:00,  3.66it/s]
+Loading pipeline components...:  83%|████████▎ | 5/6 [00:01<00:00,  3.21it/s]
+Loading pipeline components...: 100%|██████████| 6/6 [00:01<00:00,  4.18it/s]
+Traceback (most recent call last):
+  File "repos/dreamgaussian/main.py", line 483, in <module>
+    gui.train(opt.iters)
+  File "repos/dreamgaussian/main.py", line 444, in train
+    self.prepare_train()
+  File "repos/dreamgaussian/main.py", line 145, in prepare_train
+    self.guidance_zero123.get_img_embeds(self.input_img_torch)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/dreamgaussian/guidance/zero123_utils.py", line 62, in get_img_embeds
+    c = self.pipe.image_encoder(x_clip).image_embeds
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/transformers/models/clip/modeling_clip.py", line 1296, in forward
+    vision_outputs = self.vision_model(
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/transformers/models/clip/modeling_clip.py", line 849, in forward
+    hidden_states = self.embeddings(pixel_values)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/transformers/models/clip/modeling_clip.py", line 190, in forward
+    patch_embeds = self.patch_embedding(pixel_values.to(dtype=target_dtype))  # shape = [*, width, grid, grid]
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 460, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 456, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+RuntimeError: cuDNN error: CUDNN_STATUS_NOT_INITIALIZED
+
+[ERROR] ❌ Subprocess error with non-zero exit status 1 for config: tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_4_for_img_2.config.yaml
+Traceback (most recent call last):
+  File "pipeline.py", line 138, in <module>
+    raise cpe
+  File "pipeline.py", line 88, in <module>
+    result = subprocess.run(command, check=True, text=True, capture_output=True)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/subprocess.py", line 516, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'repos/dreamgaussian/main.py', '--config', 'tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_1_for_img_2.config.yaml', 'input=results/preprocessing/image-2_rgba.png', 'save_path=name']' returned non-zero exit status 1.
+[ERROR] Error occurred: Command '['python', 'pipeline.py', '--config', 'tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_4_for_img_2.config.yaml']' returned non-zero exit status 1.
+Running grid search:  13%|█▎        | 2/15 [01:39<08:53, 41.03s/it][ERROR] ❌ Subprocess error with non-zero exit status 1
+[ERROR] Standard output of the subprocess: [INFO] ✅ DreamGaussian Configuration loaded.
+[INFO] load image from results/preprocessing/image-13_rgba.png...
+Number of points at initialisation :  5000
+[INFO] loading zero123...
+[INFO] loaded zero123!
+
+[ERROR] Standard error of the subprocess: Keyword arguments {'trust_remote_code': True} are not expected by Zero123Pipeline and will be ignored.
+
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]
+Loading pipeline components...:  17%|█▋        | 1/6 [00:00<00:01,  2.98it/s]
+Loading pipeline components...:  50%|█████     | 3/6 [00:01<00:01,  2.91it/s]
+Loading pipeline components...:  83%|████████▎ | 5/6 [00:01<00:00,  3.70it/s]
+Loading pipeline components...: 100%|██████████| 6/6 [00:01<00:00,  4.15it/s]
+Traceback (most recent call last):
+  File "repos/dreamgaussian/main.py", line 483, in <module>
+    gui.train(opt.iters)
+  File "repos/dreamgaussian/main.py", line 444, in train
+    self.prepare_train()
+  File "repos/dreamgaussian/main.py", line 145, in prepare_train
+    self.guidance_zero123.get_img_embeds(self.input_img_torch)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/dreamgaussian/guidance/zero123_utils.py", line 62, in get_img_embeds
+    c = self.pipe.image_encoder(x_clip).image_embeds
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/transformers/models/clip/modeling_clip.py", line 1296, in forward
+    vision_outputs = self.vision_model(
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/transformers/models/clip/modeling_clip.py", line 849, in forward
+    hidden_states = self.embeddings(pixel_values)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/transformers/models/clip/modeling_clip.py", line 190, in forward
+    patch_embeds = self.patch_embedding(pixel_values.to(dtype=target_dtype))  # shape = [*, width, grid, grid]
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 460, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 456, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+RuntimeError: cuDNN error: CUDNN_STATUS_NOT_INITIALIZED
+
+Traceback (most recent call last):
+  File "pipeline.py", line 138, in <module>
+    raise cpe
+  File "pipeline.py", line 88, in <module>
+    result = subprocess.run(command, check=True, text=True, capture_output=True)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/subprocess.py", line 516, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'repos/dreamgaussian/main.py', '--config', 'tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_3_for_img_1.config.yaml', 'input=results/preprocessing/image-13_rgba.png', 'save_path=name']' returned non-zero exit status 1.
+[ERROR] ❌ Subprocess error with non-zero exit status 1
+[ERROR] Standard output of the subprocess: [INFO] ✅ DreamGaussian Configuration loaded.
+[INFO] load image from results/preprocessing/image-13_rgba.png...
+Number of points at initialisation :  5000
+[INFO] loading zero123...
+[INFO] loaded zero123!
+
+[ERROR] Standard error of the subprocess: Keyword arguments {'trust_remote_code': True} are not expected by Zero123Pipeline and will be ignored.
+
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]
+Loading pipeline components...:  17%|█▋        | 1/6 [00:01<00:05,  1.05s/it]
+Loading pipeline components...:  50%|█████     | 3/6 [00:01<00:00,  3.13it/s]
+Loading pipeline components...:  67%|██████▋   | 4/6 [00:01<00:00,  2.89it/s]
+Loading pipeline components...: 100%|██████████| 6/6 [00:01<00:00,  3.73it/s]
+Traceback (most recent call last):
+  File "repos/dreamgaussian/main.py", line 483, in <module>
+    gui.train(opt.iters)
+  File "repos/dreamgaussian/main.py", line 444, in train
+    self.prepare_train()
+  File "repos/dreamgaussian/main.py", line 145, in prepare_train
+    self.guidance_zero123.get_img_embeds(self.input_img_torch)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/dreamgaussian/guidance/zero123_utils.py", line 62, in get_img_embeds
+    c = self.pipe.image_encoder(x_clip).image_embeds
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/transformers/models/clip/modeling_clip.py", line 1296, in forward
+    vision_outputs = self.vision_model(
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/transformers/models/clip/modeling_clip.py", line 849, in forward
+    hidden_states = self.embeddings(pixel_values)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/transformers/models/clip/modeling_clip.py", line 190, in forward
+    patch_embeds = self.patch_embedding(pixel_values.to(dtype=target_dtype))  # shape = [*, width, grid, grid]
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 460, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 456, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+RuntimeError: cuDNN error: CUDNN_STATUS_NOT_INITIALIZED
+
+[ERROR] ❌ Subprocess error with non-zero exit status 1 for config: tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_4_for_img_1.config.yaml
+[ERROR] Error occurred: Command '['python', 'pipeline.py', '--config', 'tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_4_for_img_1.config.yaml']' returned non-zero exit status 1.
+Running grid search:  20%|██        | 3/15 [01:39<04:28, 22.40s/it][ERROR] ❌ Subprocess error with non-zero exit status 1 for config: tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_4_for_img_0.config.yaml
+Traceback (most recent call last):
+  File "pipeline.py", line 138, in <module>
+    raise cpe
+  File "pipeline.py", line 88, in <module>
+    result = subprocess.run(command, check=True, text=True, capture_output=True)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/subprocess.py", line 516, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'repos/dreamgaussian/main.py', '--config', 'tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_0_for_img_1.config.yaml', 'input=results/preprocessing/image-13_rgba.png', 'save_path=name']' returned non-zero exit status 1.
+[ERROR] Error occurred: Command '['python', 'pipeline.py', '--config', 'tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_4_for_img_0.config.yaml']' returned non-zero exit status 1.
+[ERROR] ❌ Subprocess error with non-zero exit status 1
+[ERROR] Standard output of the subprocess: [INFO] ✅ DreamGaussian Configuration loaded.
+[INFO] load image from results/preprocessing/image-7_rgba.png...
+Number of points at initialisation :  5000
+[INFO] loading zero123...
+
+[ERROR] Standard error of the subprocess: Keyword arguments {'trust_remote_code': True} are not expected by Zero123Pipeline and will be ignored.
+
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]
+Loading pipeline components...:  50%|█████     | 3/6 [00:00<00:00,  3.58it/s]
+Loading pipeline components...:  83%|████████▎ | 5/6 [00:01<00:00,  4.01it/s]
+Loading pipeline components...: 100%|██████████| 6/6 [00:01<00:00,  4.57it/s]
+Loading pipeline components...: 100%|██████████| 6/6 [00:01<00:00,  4.27it/s]
+Traceback (most recent call last):
+  File "repos/dreamgaussian/main.py", line 483, in <module>
+    gui.train(opt.iters)
+  File "repos/dreamgaussian/main.py", line 444, in train
+    self.prepare_train()
+  File "repos/dreamgaussian/main.py", line 131, in prepare_train
+    self.guidance_zero123 = Zero123(self.device, model_key='ashawkey/zero123-xl-diffusers')
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/dreamgaussian/guidance/zero123_utils.py", line 28, in __init__
+    self.pipe = Zero123Pipeline.from_pretrained(
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/diffusers/pipelines/pipeline_utils.py", line 418, in to
+    module.to(device, dtype)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1160, in to
+    return self._apply(convert)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 810, in _apply
+    module._apply(fn)
+  [Previous line repeated 3 more times]
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 833, in _apply
+    param_applied = fn(param)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1158, in convert
+    return t.to(device, dtype if t.is_floating_point() or t.is_complex() else None, non_blocking)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 20.00 MiB. GPU 0 has a total capacty of 39.39 GiB of which 14.75 MiB is free. Process 804938 has 2.91 GiB memory in use. Process 804720 has 2.91 GiB memory in use. Process 804937 has 2.84 GiB memory in use. Process 804902 has 2.24 GiB memory in use. Process 804934 has 2.42 GiB memory in use. Process 804924 has 2.27 GiB memory in use. Process 804922 has 2.91 GiB memory in use. Process 804758 has 2.24 GiB memory in use. Process 804925 has 2.91 GiB memory in use. Process 804933 has 2.44 GiB memory in use. Process 804935 has 2.28 GiB memory in use. Process 804920 has 2.27 GiB memory in use. Process 804930 has 2.91 GiB memory in use. Process 804923 has 2.91 GiB memory in use. Including non-PyTorch memory, this process has 2.80 GiB memory in use. Of the allocated memory 2.27 GiB is allocated by PyTorch, and 43.64 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+
+[ERROR] ❌ Subprocess error with non-zero exit status 1
+[ERROR] Standard output of the subprocess: [INFO] ✅ DreamGaussian Configuration loaded.
+[INFO] load image from results/preprocessing/image-7_rgba.png...
+Number of points at initialisation :  5000
+[INFO] loading zero123...
+[INFO] loaded zero123!
+
+[ERROR] ❌ Subprocess error with non-zero exit status 1 for config: tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_2_for_img_2.config.yaml
+[ERROR] Standard error of the subprocess: Keyword arguments {'trust_remote_code': True} are not expected by Zero123Pipeline and will be ignored.
+
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]
+Loading pipeline components...:  17%|█▋        | 1/6 [00:01<00:05,  1.05s/it]
+Loading pipeline components...:  50%|█████     | 3/6 [00:01<00:00,  3.05it/s]
+Loading pipeline components...:  67%|██████▋   | 4/6 [00:01<00:00,  2.88it/s]
+Loading pipeline components...: 100%|██████████| 6/6 [00:01<00:00,  3.75it/s]
+Traceback (most recent call last):
+  File "repos/dreamgaussian/main.py", line 483, in <module>
+    gui.train(opt.iters)
+  File "repos/dreamgaussian/main.py", line 444, in train
+    self.prepare_train()
+  File "repos/dreamgaussian/main.py", line 145, in prepare_train
+    self.guidance_zero123.get_img_embeds(self.input_img_torch)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/dreamgaussian/guidance/zero123_utils.py", line 62, in get_img_embeds
+    c = self.pipe.image_encoder(x_clip).image_embeds
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/transformers/models/clip/modeling_clip.py", line 1296, in forward
+    vision_outputs = self.vision_model(
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/transformers/models/clip/modeling_clip.py", line 849, in forward
+    hidden_states = self.embeddings(pixel_values)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/transformers/models/clip/modeling_clip.py", line 190, in forward
+    patch_embeds = self.patch_embedding(pixel_values.to(dtype=target_dtype))  # shape = [*, width, grid, grid]
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 460, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 456, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+RuntimeError: cuDNN error: CUDNN_STATUS_NOT_INITIALIZED
+
+[ERROR] Error occurred: Command '['python', 'pipeline.py', '--config', 'tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_2_for_img_2.config.yaml']' returned non-zero exit status 1.
+Traceback (most recent call last):
+  File "pipeline.py", line 138, in <module>
+    raise cpe
+  File "pipeline.py", line 88, in <module>
+    result = subprocess.run(command, check=True, text=True, capture_output=True)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/subprocess.py", line 516, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'repos/dreamgaussian/main.py', '--config', 'tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_2_for_img_0.config.yaml', 'input=results/preprocessing/image-7_rgba.png', 'save_path=name']' returned non-zero exit status 1.
+Running grid search:  33%|███▎      | 5/15 [01:39<01:37,  9.78s/it]Traceback (most recent call last):
+  File "pipeline.py", line 138, in <module>
+    raise cpe
+  File "pipeline.py", line 88, in <module>
+    result = subprocess.run(command, check=True, text=True, capture_output=True)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/subprocess.py", line 516, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'repos/dreamgaussian/main.py', '--config', 'tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_3_for_img_0.config.yaml', 'input=results/preprocessing/image-7_rgba.png', 'save_path=name']' returned non-zero exit status 1.
+[ERROR] ❌ Subprocess error with non-zero exit status 1 for config: tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_2_for_img_1.config.yaml
+[ERROR] Error occurred: Command '['python', 'pipeline.py', '--config', 'tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_2_for_img_1.config.yaml']' returned non-zero exit status 1.
+Running grid search:  40%|████      | 6/15 [01:40<01:02,  7.00s/it][ERROR] ❌ Subprocess error with non-zero exit status 1
+[ERROR] Standard output of the subprocess: [INFO] ✅ DreamGaussian Configuration loaded.
+[INFO] load image from results/preprocessing/image-2_rgba.png...
+Number of points at initialisation :  5000
+[INFO] loading zero123...
+[INFO] loaded zero123!
+
+[ERROR] Standard error of the subprocess: Keyword arguments {'trust_remote_code': True} are not expected by Zero123Pipeline and will be ignored.
+
+Loading pipeline components...:   0%|          | 0/6 [00:00<?, ?it/s]
+Loading pipeline components...:  17%|█▋        | 1/6 [00:00<00:01,  2.99it/s]
+Loading pipeline components...:  50%|█████     | 3/6 [00:01<00:01,  2.78it/s]
+Loading pipeline components...: 100%|██████████| 6/6 [00:01<00:00,  4.64it/s]
+Loading pipeline components...: 100%|██████████| 6/6 [00:01<00:00,  4.15it/s]
+Traceback (most recent call last):
+  File "repos/dreamgaussian/main.py", line 483, in <module>
+    gui.train(opt.iters)
+  File "repos/dreamgaussian/main.py", line 444, in train
+    self.prepare_train()
+  File "repos/dreamgaussian/main.py", line 145, in prepare_train
+    self.guidance_zero123.get_img_embeds(self.input_img_torch)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/dreamgaussian/guidance/zero123_utils.py", line 62, in get_img_embeds
+    c = self.pipe.image_encoder(x_clip).image_embeds
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/transformers/models/clip/modeling_clip.py", line 1296, in forward
+    vision_outputs = self.vision_model(
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/transformers/models/clip/modeling_clip.py", line 849, in forward
+    hidden_states = self.embeddings(pixel_values)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/transformers/models/clip/modeling_clip.py", line 190, in forward
+    patch_embeds = self.patch_embedding(pixel_values.to(dtype=target_dtype))  # shape = [*, width, grid, grid]
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1518, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1527, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 460, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 456, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+RuntimeError: cuDNN error: CUDNN_STATUS_NOT_INITIALIZED
+
+Traceback (most recent call last):
+  File "pipeline.py", line 138, in <module>
+    raise cpe
+  File "pipeline.py", line 88, in <module>
+    result = subprocess.run(command, check=True, text=True, capture_output=True)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/subprocess.py", line 516, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['python', 'repos/dreamgaussian/main.py', '--config', 'tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_0_for_img_2.config.yaml', 'input=results/preprocessing/image-2_rgba.png', 'save_path=name']' returned non-zero exit status 1.
+[ERROR] ❌ Subprocess error with non-zero exit status 1 for config: tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_1_for_img_1.config.yaml
+[ERROR] Error occurred: Command '['python', 'pipeline.py', '--config', 'tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_1_for_img_1.config.yaml']' returned non-zero exit status 1.
+[ERROR] ❌ Subprocess error with non-zero exit status 1 for config: tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_0_for_img_0.config.yaml
+[ERROR] Error occurred: Command '['python', 'pipeline.py', '--config', 'tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_0_for_img_0.config.yaml']' returned non-zero exit status 1.
+[ERROR] ❌ Subprocess error with non-zero exit status 1 for config: tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_1_for_img_0.config.yaml
+[ERROR] Error occurred: Command '['python', 'pipeline.py', '--config', 'tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_1_for_img_0.config.yaml']' returned non-zero exit status 1.
+Running grid search:  60%|██████    | 9/15 [01:40<00:19,  3.17s/it][ERROR] ❌ Subprocess error with non-zero exit status 1 for config: tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_1_for_img_2.config.yaml
+[ERROR] Error occurred: Command '['python', 'pipeline.py', '--config', 'tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_1_for_img_2.config.yaml']' returned non-zero exit status 1.
+Running grid search:  67%|██████▋   | 10/15 [01:40<00:12,  2.54s/it][ERROR] ❌ Subprocess error with non-zero exit status 1 for config: tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_3_for_img_1.config.yaml
+[ERROR] Error occurred: Command '['python', 'pipeline.py', '--config', 'tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_3_for_img_1.config.yaml']' returned non-zero exit status 1.
+Running grid search:  73%|███████▎  | 11/15 [01:40<00:07,  1.98s/it][ERROR] ❌ Subprocess error with non-zero exit status 1 for config: tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_0_for_img_1.config.yaml
+[ERROR] Error occurred: Command '['python', 'pipeline.py', '--config', 'tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_0_for_img_1.config.yaml']' returned non-zero exit status 1.
+[ERROR] ❌ Subprocess error with non-zero exit status 1 for config: tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_2_for_img_0.config.yaml
+[ERROR] Error occurred: Command '['python', 'pipeline.py', '--config', 'tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_2_for_img_0.config.yaml']' returned non-zero exit status 1.
+Running grid search:  87%|████████▋ | 13/15 [01:40<00:02,  1.25s/it][ERROR] ❌ Subprocess error with non-zero exit status 1 for config: tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_3_for_img_0.config.yaml
+[ERROR] Error occurred: Command '['python', 'pipeline.py', '--config', 'tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_3_for_img_0.config.yaml']' returned non-zero exit status 1.
+[ERROR] ❌ Subprocess error with non-zero exit status 1 for config: tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_0_for_img_2.config.yaml
+[ERROR] Error occurred: Command '['python', 'pipeline.py', '--config', 'tmp_configs_f392b3f3e2434961b66a52e78ba0fc8b/temporary_0_for_img_2.config.yaml']' returned non-zero exit status 1.
+Running grid search: 100%|██████████| 15/15 [01:41<00:00,  1.18it/s]Running grid search: 100%|██████████| 15/15 [01:41<00:00,  6.74s/it][INFO] ✅ Grid search complete.
+[INFO] Cleaning up...
+[INFO] ✅ Done
+
+
+JOB STATISTICS
+==============
+Job ID: 6361799
+Cluster: snellius
+User/Group: jhuizing/jhuizing
+State: COMPLETED (exit code 0)
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 00:18:09
+CPU Efficiency: 38.05% of 00:47:42 core-walltime
+Job Wall-clock time: 00:02:39
+Memory Utilized: 19.50 GB
+Memory Efficiency: 16.25% of 120.00 GB

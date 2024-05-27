@@ -1,0 +1,141 @@
+============================================================================================== 
+Warning! Mixing Conda and module environments may lead to corruption of the
+user environment. 
+We do not recommend users mixing those two environments unless absolutely
+necessary. Note that 
+SURF does not provide any support for Conda environment.
+For more information, please refer to our software policy page:
+https://servicedesk.surf.nl/wiki/display/WIKI/Software+policy+Snellius#SoftwarepolicySnellius-UseofAnacondaandMinicondaenvironmentsonSnellius 
+
+Remember that many packages have already been installed on the system and can
+be loaded using 
+the 'module load <package__name>' command. If you are uncertain if a package is
+already available 
+on the system, please use 'module avail' or 'module spider' to search for it.
+============================================================================================== 
+Already up to date.
+Obtaining file:///gpfs/home6/jhuizing/master-thesis-ds/ptdraft
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: sisa3d
+  Building editable for sisa3d (pyproject.toml): started
+  Building editable for sisa3d (pyproject.toml): finished with status 'done'
+  Created wheel for sisa3d: filename=sisa3d-0.1.0-py3-none-any.whl size=1286 sha256=466689da9623440a694956c93a4920038d607a9428abb993da0c7549d07f4ef9
+  Stored in directory: /gpfs/scratch1/nodespecific/gcn27/jhuizing.6371268/pip-ephem-wheel-cache-iip5oatp/wheels/ba/24/02/45c17a515af0a22326616b14da79c51e525e740ad6f0b007df
+Successfully built sisa3d
+Installing collected packages: sisa3d
+  Attempting uninstall: sisa3d
+    Found existing installation: sisa3d 0.1.0
+    Uninstalling sisa3d-0.1.0:
+      Successfully uninstalled sisa3d-0.1.0
+Successfully installed sisa3d-0.1.0
+[INFO] Creating temporary directory for config files: tmp_configs
+Generated 8 configuration files in tmp_configs for 15 images.
+[INFO] ✅ Temporary directory created with config files: tmp_configs
+[INFO] Running sequantial grid search with 120 configuration files...
+Running grid search:   0%|          | 0/120 [00:00<?, ?it/s][INFO] Running pipeline with config: tmp_configs/temporary_3_for_img_12.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.90s/it]100%|██████████| 1/1 [00:01<00:00,  1.95s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:00<00:00,  1.06it/s]100%|██████████| 1/1 [00:00<00:00,  1.01it/s][INFO] ... Results saved to results/dream_gaussian/stage_1/result_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_3_for_img_12.config.yaml
+Running grid search:   1%|          | 1/120 [02:06<4:10:23, 126.25s/it][INFO] Running pipeline with config: tmp_configs/temporary_0_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:02<00:00,  2.31s/it]100%|██████████| 1/1 [00:02<00:00,  2.35s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.23s/it]100%|██████████| 1/1 [00:01<00:00,  1.27s/it][INFO] ... Results saved to results/dream_gaussian/stage_1/result_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_0_for_img_1.config.yaml
+Running grid search:   2%|▏         | 2/120 [03:59<3:53:13, 118.59s/it][INFO] Running pipeline with config: tmp_configs/temporary_0_for_img_8.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:02<00:00,  2.69s/it]100%|██████████| 1/1 [00:02<00:00,  2.74s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.53s/it]100%|██████████| 1/1 [00:01<00:00,  1.58s/it][INFO] ... Results saved to results/dream_gaussian/stage_1/result_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_0_for_img_8.config.yaml
+Running grid search:   2%|▎         | 3/120 [05:52<3:46:15, 116.03s/it][INFO] Running pipeline with config: tmp_configs/temporary_2_for_img_7.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:03<00:00,  3.01s/it]100%|██████████| 1/1 [00:03<00:00,  3.05s/it]
+  0%|          | 0/1 [00:00<?, ?it/s]100%|██████████| 1/1 [00:01<00:00,  1.84s/it]100%|██████████| 1/1 [00:01<00:00,  1.89s/it][INFO] ... Results saved to results/dream_gaussian/stage_1/result_clip_scores.csv.
+[INFO] ✅ Evaluation pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs/temporary_2_for_img_7.config.yaml
+Running grid search:   3%|▎         | 4/120 [07:43<3:40:25, 114.02s/it][INFO] Running pipeline with config: tmp_configs/temporary_0_for_img_10.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+slurmstepd: error: *** JOB 6371268 ON gcn27 CANCELLED AT 2024-05-24T12:01:08 ***
+slurmstepd: error: container_p_join: setns failed for /slurm/6371268/.ns: Invalid argument
+slurmstepd: error: container_g_join(6371268): Invalid argument
+
+JOB STATISTICS
+==============
+Job ID: 6371268
+Cluster: snellius
+User/Group: jhuizing/jhuizing
+State: CANCELLED (exit code 0)
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 00:00:16
+CPU Efficiency: 0.15% of 02:54:54 core-walltime
+Job Wall-clock time: 00:09:43
+Memory Utilized: 2.17 GB
+Memory Efficiency: 1.81% of 120.00 GB
