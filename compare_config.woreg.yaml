@@ -3,7 +3,7 @@ image_dir: "images/compare"
 num_random_search_points: null
 hyperparameters:
   paths:
-    stage_1_clip_scores_output_path: ["results/dream_gaussian/stage_1/compare.csv"]
+    stage_1_clip_scores_output_path: ["results/compare/compare.csv"]
     stage_1_result_images_output_path: ["results/compare/dreamgaussian/"]
 
 

@@ -466,8 +466,8 @@ class GUI:
             # save_dir = "image_progressions"
             camera_positions = [
                 (0, 0, 2),  # Elevation, Horizontal Angle, Radius
-                (0, 45, 2),  
-                (0, 180, 2)   
+                (0, -45, 2),  
+                (0, -180, 2)   
             ]
             capture_and_save_images(self.opt.input_image_path, camera_positions, self.opt.stage_1_result_images_output_path, self.step, self.opt.ref_size, self.cam.fovy, self.cam.fovx, self.cam.near, self.cam.far, self.renderer, orbit_camera, MiniCam)
 
