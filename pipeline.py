@@ -6,7 +6,7 @@ import sys
 import time
 import os
 from sisa3d.yaml.yaml_utils import load_yaml_file
-from sisa3d.clip import compute_clip, compute_clip_scores
+from sisa3d.clip import compute_clip
 from sisa3d.results import save_results_to_csv
 
 # Import date class from datetime module
