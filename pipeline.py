@@ -91,7 +91,7 @@ if __name__ == "__main__":
         logging.info("Running Evaluation pipeline...")
         
         clip_score = compute_clip(f"{STAGE_1_IMAGES_PATH}generated", f"{STAGE_1_IMAGES_PATH}reference").item()
-        clip_scores = compute_clip_scores(f"{STAGE_1_IMAGES_PATH}generated", f"{STAGE_1_IMAGES_PATH}reference")
+        clip_scores = compute_clip(f"{STAGE_1_IMAGES_PATH}generated", f"{STAGE_1_IMAGES_PATH}reference", average=False)
         clip_scores = [x.item() for x in clip_scores]
 
         
