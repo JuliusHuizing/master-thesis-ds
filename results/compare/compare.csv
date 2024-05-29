@@ -253,3 +253,257 @@ preprocess:
   recenter: true
   size: 512
 "
+66.91439819335938,0.001,10.0,10.0,[1605.9454345703125],57.04881048202515,images/compare/image-3 copy.png,"dreamgaussian:
+  H: 800
+  W: 800
+  anneal_timestep: true
+  batch_size: 1
+  densification_interval: 100
+  densify_grad_threshold: 0.01
+  density_end_iter: 3000
+  density_start_iter: 100
+  density_thresh: 1
+  elevation: 0
+  feature_lr: 0.01
+  force_cuda_rast: false
+  fovy: 49.1
+  generate_gaussian_distribution_plots: false
+  generate_image_progressions: false
+  imagedream: false
+  input: null
+  input_image_path: images/compare/image-3 copy.png
+  invert_bg_prob: 0.5
+  iters: 500
+  lambda_sd: 0
+  lambda_zero123: 1
+  load: null
+  max_ver: 30
+  mesh_format: obj
+  min_ver: -30
+  mvdream: false
+  num_pts: 5000
+  opacity_lr: 0.05
+  opacity_reset_interval: 700
+  outdir: results/dream_gaussian/
+  percent_dense: 0.01
+  position_lr_delay_mult: 0.02
+  position_lr_final: 2.0e-05
+  position_lr_init: 0.001
+  position_lr_max_steps: 500
+  preprocessing_output_path: results/preprocessing/
+  radius: 2
+  ref_size: 512
+  regularize:
+    compactness: 10.0
+    elongation: 0.001
+    opacity: 10.0
+  rotation_lr: 0.005
+  save_geo_plus_texture: false
+  save_images: true
+  save_model: false
+  scaling_lr: 0.005
+  sh_degree: 0
+  stable_zero123: false
+  stage_1_images_output_path: results/dream_gaussian/stage_1/
+  stage_1_result_images_output_path: results/compare/ours/
+  warmup_rgb_loss: true
+preprocess:
+  border_ratio: 0.2
+  recenter: true
+  size: 512
+","dreamgaussian:
+  H: 800
+  W: 800
+  anneal_timestep: true
+  batch_size: 1
+  densification_interval: 100
+  densify_grad_threshold: 0.01
+  density_end_iter: 3000
+  density_start_iter: 100
+  density_thresh: 1
+  elevation: 0
+  feature_lr: 0.01
+  force_cuda_rast: false
+  fovy: 49.1
+  generate_gaussian_distribution_plots: false
+  generate_image_progressions: false
+  imagedream: false
+  input: null
+  input_image_path: images/compare/image-3 copy.png
+  invert_bg_prob: 0.5
+  iters: 500
+  lambda_sd: 0
+  lambda_zero123: 1
+  load: null
+  max_ver: 30
+  mesh_format: obj
+  min_ver: -30
+  mvdream: false
+  num_pts: 5000
+  opacity_lr: 0.05
+  opacity_reset_interval: 700
+  outdir: results/dream_gaussian/
+  percent_dense: 0.01
+  position_lr_delay_mult: 0.02
+  position_lr_final: 2.0e-05
+  position_lr_init: 0.001
+  position_lr_max_steps: 500
+  preprocessing_output_path: results/preprocessing/
+  radius: 2
+  ref_size: 512
+  regularize:
+    compactness: 10.0
+    elongation: 0.001
+    opacity: 10.0
+  rotation_lr: 0.005
+  save_geo_plus_texture: false
+  save_images: true
+  save_model: false
+  scaling_lr: 0.005
+  sh_degree: 0
+  stable_zero123: false
+  stage_1_images_output_path: results/dream_gaussian/stage_1/
+  stage_1_result_images_output_path: results/compare/ours/
+  warmup_rgb_loss: true
+paths:
+  dream_gaussian_repo_path: repos/dreamgaussian/
+  dream_gaussian_results_path: results/dream_gaussian/
+  image_progression_output_path: results/image_progression/
+  input_image_path: images/compare/image-3 copy.png
+  model_output_path: results/dream_gaussian/model/
+  preprocessing_output_path: results/preprocessing/
+  stage_1_clip_scores_output_path: results/compare/compare.csv
+  stage_1_images_output_path: results/dream_gaussian/stage_1/
+  stage_1_result_images_output_path: results/compare/ours/
+preprocess:
+  border_ratio: 0.2
+  recenter: true
+  size: 512
+"
+66.79316711425781,0,0,0,[2137.38134765625],50.190757751464844,images/compare/image-3 copy.png,"dreamgaussian:
+  H: 800
+  W: 800
+  anneal_timestep: true
+  batch_size: 1
+  densification_interval: 100
+  densify_grad_threshold: 0.01
+  density_end_iter: 3000
+  density_start_iter: 100
+  density_thresh: 1
+  elevation: 0
+  feature_lr: 0.01
+  force_cuda_rast: false
+  fovy: 49.1
+  generate_gaussian_distribution_plots: false
+  generate_image_progressions: false
+  imagedream: false
+  input: null
+  input_image_path: images/compare/image-3 copy.png
+  invert_bg_prob: 0.5
+  iters: 500
+  lambda_sd: 0
+  lambda_zero123: 1
+  load: null
+  max_ver: 30
+  mesh_format: obj
+  min_ver: -30
+  mvdream: false
+  num_pts: 5000
+  opacity_lr: 0.05
+  opacity_reset_interval: 700
+  outdir: results/dream_gaussian/
+  percent_dense: 0.01
+  position_lr_delay_mult: 0.02
+  position_lr_final: 2.0e-05
+  position_lr_init: 0.001
+  position_lr_max_steps: 500
+  preprocessing_output_path: results/preprocessing/
+  radius: 2
+  ref_size: 512
+  regularize:
+    compactness: 0
+    elongation: 0
+    opacity: 0
+  rotation_lr: 0.005
+  save_geo_plus_texture: false
+  save_images: true
+  save_model: false
+  scaling_lr: 0.005
+  sh_degree: 0
+  stable_zero123: false
+  stage_1_images_output_path: results/dream_gaussian/stage_1/
+  stage_1_result_images_output_path: results/compare/dreamgaussian/
+  warmup_rgb_loss: true
+preprocess:
+  border_ratio: 0.2
+  recenter: true
+  size: 512
+","dreamgaussian:
+  H: 800
+  W: 800
+  anneal_timestep: true
+  batch_size: 1
+  densification_interval: 100
+  densify_grad_threshold: 0.01
+  density_end_iter: 3000
+  density_start_iter: 100
+  density_thresh: 1
+  elevation: 0
+  feature_lr: 0.01
+  force_cuda_rast: false
+  fovy: 49.1
+  generate_gaussian_distribution_plots: false
+  generate_image_progressions: false
+  imagedream: false
+  input: null
+  input_image_path: images/compare/image-3 copy.png
+  invert_bg_prob: 0.5
+  iters: 500
+  lambda_sd: 0
+  lambda_zero123: 1
+  load: null
+  max_ver: 30
+  mesh_format: obj
+  min_ver: -30
+  mvdream: false
+  num_pts: 5000
+  opacity_lr: 0.05
+  opacity_reset_interval: 700
+  outdir: results/dream_gaussian/
+  percent_dense: 0.01
+  position_lr_delay_mult: 0.02
+  position_lr_final: 2.0e-05
+  position_lr_init: 0.001
+  position_lr_max_steps: 500
+  preprocessing_output_path: results/preprocessing/
+  radius: 2
+  ref_size: 512
+  regularize:
+    compactness: 0
+    elongation: 0
+    opacity: 0
+  rotation_lr: 0.005
+  save_geo_plus_texture: false
+  save_images: true
+  save_model: false
+  scaling_lr: 0.005
+  sh_degree: 0
+  stable_zero123: false
+  stage_1_images_output_path: results/dream_gaussian/stage_1/
+  stage_1_result_images_output_path: results/compare/dreamgaussian/
+  warmup_rgb_loss: true
+paths:
+  dream_gaussian_repo_path: repos/dreamgaussian/
+  dream_gaussian_results_path: results/dream_gaussian/
+  image_progression_output_path: results/image_progression/
+  input_image_path: images/compare/image-3 copy.png
+  model_output_path: results/dream_gaussian/model/
+  preprocessing_output_path: results/preprocessing/
+  stage_1_clip_scores_output_path: results/compare/compare.csv
+  stage_1_images_output_path: results/dream_gaussian/stage_1/
+  stage_1_result_images_output_path: results/compare/dreamgaussian/
+preprocess:
+  border_ratio: 0.2
+  recenter: true
+  size: 512
+"
