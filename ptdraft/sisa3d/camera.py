@@ -86,7 +86,7 @@ def capture_and_save_images(image_name, camera_positions, directory, step, ref_s
         image_np = (image_np * 255).astype(np.uint8)
         image_np = cv2.cvtColor(image_np, cv2.COLOR_RGB2BGR)
         unique_id = uuid.uuid4().hex
-        name = f'capture_and_save_{image_name}_v{ver}_h{hor}_r{rad}_s{step}_i{idx}_uuid_{unique_id}.jpg'
+        name = f'capture_and_save_v{ver}_h{hor}_r{rad}_s{step}_i{idx}_uuid_{unique_id}.jpg'
         cv2.imwrite(os.path.join(directory, name), image_np)
         
         
