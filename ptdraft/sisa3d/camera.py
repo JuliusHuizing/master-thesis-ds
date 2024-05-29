@@ -57,9 +57,9 @@ def capture_and_save_images(image_name, camera_positions, directory, step, ref_s
     create_directory(directory)
     # touch a tmp file in this dirimport os
 
-    tmp_file_path = os.path.join(directory, "tmp.txt")
-    with open(tmp_file_path, 'a'):
-        os.utime(tmp_file_path, None)
+    # tmp_file_path = os.path.join(directory, "tmp.txt")
+    # with open(tmp_file_path, 'a'):
+    #     os.utime(tmp_file_path, None)
 
     # Call the function with the directory path
   
@@ -71,8 +71,8 @@ def capture_and_save_images(image_name, camera_positions, directory, step, ref_s
     print("[INFO] Capturing and saving images in directory: ", directory, flush=True)
     for idx, (ver, hor, rad) in enumerate(camera_positions):
         tmp_file_path = os.path.join(directory, f"tmp_{idx}.txt")
-        with open(tmp_file_path, 'a'):
-            os.utime(tmp_file_path, None)
+        # with open(tmp_file_path, 'a'):
+        #     os.utime(tmp_file_path, None)
         # create a file called tmp_idx.txt in the directory
         # with open(os.path.join(directory, f"tmp_{idx}.txt"), "w") as f:
         #     f.write(f"This is a temporary file for idx {idx}.")
@@ -86,6 +86,7 @@ def capture_and_save_images(image_name, camera_positions, directory, step, ref_s
         image_np = (image_np * 255).astype(np.uint8)
         image_np = cv2.cvtColor(image_np, cv2.COLOR_RGB2BGR)
         unique_id = uuid.uuid4().hex
+        # DO NOT USE THE NAME VARIABLE in the name, for then images won't be saved...
         name = f'capture_and_save_v{ver}_h{hor}_r{rad}_s{step}_i{idx}_uuid_{unique_id}.jpg'
         cv2.imwrite(os.path.join(directory, name), image_np)
         
