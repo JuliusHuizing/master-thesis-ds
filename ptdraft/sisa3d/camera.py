@@ -55,8 +55,15 @@ def capture_and_save_images(image_name, camera_positions, directory, step, ref_s
         MiniCam (class): Camera class for initializing camera settings.
     """
     create_directory(directory)
+    
+    # create a file called tmp.txt in the directory
+    with open(os.path.join(directory, "tmp.txt"), "w") as f:
+        f.write("This is a temporary file.")
     print("[INFO] Capturing and saving images in directory: ", directory, flush=True)
     for idx, (ver, hor, rad) in enumerate(camera_positions):
+        # create a file called tmp_idx.txt in the directory
+        with open(os.path.join(directory, f"tmp_{idx}.txt"), "w") as f:
+            f.write(f"This is a temporary file for idx {idx}.")
         print("[INFO] Capturing and saving one image in directory: ", directory, flush=True)
         pose = orbit_camera(ver, hor, rad)
         cur_cam = MiniCam(pose, ref_size, ref_size, fovy, fovx, near, far)
