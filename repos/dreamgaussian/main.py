@@ -475,7 +475,9 @@ class GUI:
                 (0, 45, 2),  
                 (0, 180, 2)   
             ]
-            capture_and_save_images(self.opt.input_image_path, camera_positions, self.opt.stage_1_result_images_output_path, self.step, self.opt.ref_size, self.cam.fovy, self.cam.fovx, self.cam.near, self.cam.far, self.renderer, orbit_camera, MiniCam)
+            # get file name of input image path
+            file_name = self.opt.input.split("/")[-1].split(".")[0]
+            capture_and_save_images(file_name, camera_positions, self.opt.stage_1_result_images_output_path, self.step, self.opt.ref_size, self.cam.fovy, self.cam.fovx, self.cam.near, self.cam.far, self.renderer, orbit_camera, MiniCam)
         else:
             logging.info(f"NOT SAVING.")
 
