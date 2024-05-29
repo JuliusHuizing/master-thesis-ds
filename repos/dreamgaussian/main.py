@@ -463,6 +463,9 @@ class GUI:
             capture_and_save_images_for_clip_similarity(self.opt.input, camera_positions, self.opt.stage_1_images_output_path, self.step, self.opt.ref_size, self.cam.fovy, self.cam.fovx, self.cam.near, self.cam.far, self.renderer, orbit_camera, MiniCam)
             # capture_and_save_images(camera_positions, self.opt.stage_1_images_output_path, self.step, self.opt.ref_size, self.cam.fovy, self.cam.fovx, self.cam.near, self.cam.far, self.renderer, orbit_camera, MiniCam)
         if self.opt.stage_1_result_images_output_path is not None:
+            # create a file called hello world in the dir
+            with open(os.path.join(self.opt.stage_1_result_images_output_path, "hello_world.txt"), "w") as f:
+                f.write("Hello, World!")
             print("saving images for comparison", flush=True)
             logging.info(f"SAVING.")
 
