@@ -14,7 +14,7 @@ from gs_renderer import Renderer, MiniCam
 
 from grid_put import mipmap_linear_grid_put_2d
 from mesh import Mesh, safe_normalize
-
+import logging
 import argparse
 from omegaconf import OmegaConf
 import os
@@ -464,6 +464,8 @@ class GUI:
             # capture_and_save_images(camera_positions, self.opt.stage_1_images_output_path, self.step, self.opt.ref_size, self.cam.fovy, self.cam.fovx, self.cam.near, self.cam.far, self.renderer, orbit_camera, MiniCam)
         if self.opt.stage_1_result_images_output_path is not None:
             print("saving images for comparison", flush=True)
+            logging.info(f"SAVING.")
+
             # save_dir = "image_progressions"
             camera_positions = [
                 (0, 0, 2),  # Elevation, Horizontal Angle, Radius
@@ -472,6 +474,8 @@ class GUI:
             ]
             capture_and_save_images(self.opt.input_image_path, camera_positions, self.opt.stage_1_result_images_output_path, self.step, self.opt.ref_size, self.cam.fovy, self.cam.fovx, self.cam.near, self.cam.far, self.renderer, orbit_camera, MiniCam)
         else:
+            logging.info(f"NOT SAVING.")
+
             print("No output directory specified for saving images.", flush=True)
 
           
