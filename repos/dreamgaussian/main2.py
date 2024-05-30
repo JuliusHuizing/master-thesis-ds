@@ -419,15 +419,19 @@ class GUI:
         
 
 if __name__ == "__main__":
-    import argparse
-    from omegaconf import OmegaConf
-
+    
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", required=True, help="path to the yaml config file")
-    args, extras = parser.parse_known_args()
 
-    # override default config from cli
-    opt = OmegaConf.merge(OmegaConf.load(args.config), OmegaConf.from_cli(extras))
+    args, extras = parser.parse_known_args()
+    
+    # Load configuration and handle the nested 'dreamgaussian' structure
+    config = OmegaConf.load(args.config)
+    if "dreamgaussian" in config:
+        opt = OmegaConf.merge(config.dreamgaussian, OmegaConf.from_cli(extras))
+        print("[INFO] ✅ DreamGaussian Configuration loaded.")
+    else:
+        raise ValueError("Config file must include 'dreamgaussian' section")
 
     # auto find mesh from stage 1
     if opt.mesh is None:
@@ -443,3 +447,7 @@ if __name__ == "__main__":
     #     gui.render()
     # else:
     gui.train(opt.iters_refine)
+
+    
+    
+    
