@@ -140,7 +140,7 @@ if __name__ == "__main__":
                 "python", os.path.join(DREAMGAUSSIAN_PATH, "main2.py"), 
                 "--config", args.config, 
                 f"input={PREPROCESSED_IMAGE_PATH}", 
-                f"mesh={STAGE_1_COARSE_MESH_OUTPUT_PATH}{file_name}_mesh.obj",
+                f"mesh={STAGE_1_COARSE_MESH_OUTPUT_PATH}{file_name}_rgba_mesh.obj",
                 f"save_path={STAGE_2_MESH_OUTPUT_PATH}"
             ]
             result = subprocess.run(command, check=True, text=True, capture_output=True)
