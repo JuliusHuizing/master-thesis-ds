@@ -11,6 +11,9 @@ import trimesh
 import rembg
 
 import argparse
+import logging
+from omegaconf import OmegaConf
+import os
 
 from cam_utils import orbit_camera, OrbitCamera
 from mesh_renderer import Renderer
