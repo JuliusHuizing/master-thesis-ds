@@ -70,11 +70,11 @@ class GUI:
         if self.opt.input is not None:
             self.load_input(self.opt.input)
         
-        # override prompt from cmdline
-        if self.opt.prompt is not None:
-            self.prompt = self.opt.prompt
-        if self.opt.negative_prompt is not None:
-            self.negative_prompt = self.opt.negative_prompt
+        # # override prompt from cmdline
+        # if self.opt.prompt is not None:
+        #     self.prompt = self.opt.prompt
+        # if self.opt.negative_prompt is not None:
+        #     self.negative_prompt = self.opt.negative_prompt
         
         # if self.gui:
         #     self.register_dpg()
