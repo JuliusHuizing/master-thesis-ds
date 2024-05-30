@@ -84,6 +84,12 @@ dreamgaussian:
   # prob to invert background color during training (0 = always black, 1 = always white)
   invert_bg_prob: 0.5
 
+  # stage 2
+  iters_refine: 50
+
+  # whether allow geom training in stage 2
+  train_geo: False
+
   ### GUI
   force_cuda_rast: False
   # GUI resolution
