@@ -48,10 +48,12 @@ if __name__ == "__main__":
         MODEL_OUTPUT_PATH = config["paths"]["model_output_path"]
         STAGE_1_IMAGES_PATH = config["paths"]["stage_1_images_output_path"]
         STAGE_1_CLIP_SCORES_OUTPUT_PATH = config["paths"]["stage_1_clip_scores_output_path"]
+        STAGE_1_COARSE_MESH_OUTPUT_PATH = config["dreamgaussian"]["coarse_mesh_output_dir"]
+        STAGE_2_MESH_OUTPUT_PATH = config["paths"]["stage_2_mesh_output_path"]
         logging.info("✅ Paths loaded.")
         
         logging.info("Creating paths if they don't exist...")
-        for path in [PREPROCCSING_OUTPUT_PATH, MODEL_OUTPUT_PATH, STAGE_1_IMAGES_PATH]:
+        for path in [x for x in [PREPROCCSING_OUTPUT_PATH, MODEL_OUTPUT_PATH, STAGE_1_IMAGES_PATH, STAGE_2_MESH_OUTPUT_PATH] if x]:
             os.makedirs(path, exist_ok=True)
         logging.info("✅ Paths created.")
         
@@ -130,14 +132,20 @@ if __name__ == "__main__":
         logging.info(f"... Results saved to {csv_path}.")
         logging.info("✅ Evaluation pipeline complete.")
         
-        logging.info("Running DreamGaussian Stage 2 pipeline...")
-        command = [
-            "python", os.path.join(DREAMGAUSSIAN_PATH, "main2.py"), 
-            "--config", args.config, 
-            f"input={PREPROCESSED_IMAGE_PATH}", 
-            "save_path=name"
-        ]
-        result = subprocess.run(command, check=True, text=True, capture_output=True)
+        if STAGE_2_MESH_OUTPUT_PATH and config["dreamgaussian"]["export_mesh_for_stage_1"]:
+            # python main2.py --config configs/image.yaml input=data/name_rgba.png save_path=name mesh=logs/name_mesh.obj
+            logging.info("Running DreamGaussian Stage 2 pipeline...")
+            file_name = INPUT_IMAGE_PATH.split("/")[-1].split(".")[0]
+            command = [
+                "python", os.path.join(DREAMGAUSSIAN_PATH, "main2.py"), 
+                "--config", args.config, 
+                f"input={PREPROCESSED_IMAGE_PATH}", 
+                f"mesh={STAGE_1_COARSE_MESH_OUTPUT_PATH}{file_name}_mesh.obj",
+                f"save_path={STAGE_2_MESH_OUTPUT_PATH}"
+            ]
+            result = subprocess.run(command, check=True, text=True, capture_output=True)
+            logging.info("✅  DreamGaussian Stage 2 pipeline complete")
+
         logging.info("✅ DreamGaussian pipeline complete.")
     
     except subprocess.CalledProcessError as cpe:

@@ -10,13 +10,12 @@ paths:
   stage_1_images_output_path: "results/dream_gaussian/stage_1/"
   stage_1_clip_scores_output_path: "results/dream_gaussian/stage_1/clip_scores.csv"
   stage_1_result_images_output_path: "results/stage_1/3images/"
+  stage_2_mesh_output_path: "results/mesh/stage_2/"
 
 preprocess:
   size: 512
   recenter: True
   border_ratio: 0.2
-
-mesh: True
 
 dreamgaussian:
   export_mesh_for_stage_1: True
