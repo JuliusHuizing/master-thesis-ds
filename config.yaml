@@ -90,6 +90,11 @@ dreamgaussian:
   # whether allow geom training in stage 2
   train_geo: False
 
+
+    ### Textured Mesh
+  geom_lr: 0.0001
+  texture_lr: 0.2
+
   ### GUI
   force_cuda_rast: False
   # GUI resolution
@@ -114,4 +119,3 @@ dreamgaussian:
   opacity_reset_interval: 700
   densify_grad_threshold: 0.01
 
-  
