@@ -16,7 +16,11 @@ preprocess:
   recenter: True
   border_ratio: 0.2
 
+mesh: True
+
 dreamgaussian:
+  export_mesh_for_stage_1: True
+  coarse_mesh_output_dir: "results/mesh/coarse/"
   # so we have access to the file name and can save results with the same name
   input_image_path: "assets/blueberry.jpeg"
   # we need to duplicate this here so dg main.py can access it...
@@ -34,7 +38,7 @@ dreamgaussian:
     compactness: 0
 
   save_model: False
-  save_geo_plus_texture: False
+  save_geo_plus_texture: True
 
   ### Input
   # input rgba image path (default to None, can be load in GUI too)

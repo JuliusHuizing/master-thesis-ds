@@ -145,7 +145,6 @@ class GUI:
                 self.guidance_zero123.get_img_embeds(self.input_img_torch)
                 
 
-
     def train_step(self):
         starter = torch.cuda.Event(enable_timing=True)
         ender = torch.cuda.Event(enable_timing=True)
@@ -294,7 +293,7 @@ class GUI:
 
     @torch.no_grad()
     def save_model(self, mode='geo', texture_size=1024):
-        os.makedirs(self.opt.outdir, exist_ok=True)
+        os.makedirs(self.opt.coarse_mesh_output_dir, exist_ok=True)
         if mode == 'geo':
             path = os.path.join(self.opt.outdir, 'mesh.ply')
             mesh = self.renderer.gaussians.extract_mesh(path, self.opt.density_thresh)
