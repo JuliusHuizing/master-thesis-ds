@@ -18,7 +18,7 @@ from mesh_renderer import Renderer
 class GUI:
     def __init__(self, opt):
         self.opt = opt  # shared with the trainer's opt to support in-place modification of rendering parameters.
-        self.gui = opt.gui # enable gui
+        # self.gui = opt.gui # enable gui
         self.W = opt.W
         self.H = opt.H
         self.cam = OrbitCamera(opt.W, opt.H, r=opt.radius, fovy=opt.fovy)
@@ -71,13 +71,14 @@ class GUI:
         if self.opt.negative_prompt is not None:
             self.negative_prompt = self.opt.negative_prompt
         
-        if self.gui:
-            self.register_dpg()
-            self.test_step()
+        # if self.gui:
+        #     self.register_dpg()
+        #     self.test_step()
 
     def __del__(self):
-        if self.gui:
-            pass
+        pass
+        # if self.gui:
+        #     pass
     def seed_everything(self):
         try:
             seed = int(self.seed)
@@ -265,8 +266,8 @@ class GUI:
 
         self.need_update = True
 
-        if self.gui:
-            pass
+        # if self.gui:
+        #     pass
 
         # dynamic train steps (no need for now)
         # max allowed train time per-frame is 500 ms
@@ -313,8 +314,8 @@ class GUI:
         torch.cuda.synchronize()
         t = starter.elapsed_time(ender)
 
-        if self.gui:
-           pass # buffer must be contiguous, else seg fault!
+        # if self.gui:
+        #    pass # buffer must be contiguous, else seg fault!
 
     
     def load_input(self, file):
@@ -403,9 +404,9 @@ class GUI:
 
        
 
-    def render(self):
-        assert self.gui
-        pass
+    # def render(self):
+    #     assert self.gui
+    #     pass
     
     # no gui mode
     def train(self, iters=500):
@@ -438,7 +439,7 @@ if __name__ == "__main__":
 
     gui = GUI(opt)
 
-    if opt.gui:
-        gui.render()
-    else:
-        gui.train(opt.iters_refine)
+    # if opt.gui:
+    #     gui.render()
+    # else:
+    gui.train(opt.iters_refine)
