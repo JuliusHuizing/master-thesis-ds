@@ -10,6 +10,8 @@ import torch.nn.functional as F
 import trimesh
 import rembg
 
+import argparse
+
 from cam_utils import orbit_camera, OrbitCamera
 from mesh_renderer import Renderer
 
