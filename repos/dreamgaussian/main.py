@@ -293,14 +293,15 @@ class GUI:
 
     @torch.no_grad()
     def save_model(self, mode='geo', texture_size=1024):
+        file_name = self.opt.input.split("/")[-1].split(".")[0]
         os.makedirs(self.opt.coarse_mesh_output_dir, exist_ok=True)
         if mode == 'geo':
-            path = os.path.join(self.opt.outdir, 'mesh.ply')
+            path = os.path.join(self.opt.coarse_mesh_output_dir, f'{file_name}_mesh.ply')
             mesh = self.renderer.gaussians.extract_mesh(path, self.opt.density_thresh)
             mesh.write_ply(path)
 
         elif mode == 'geo+tex':
-            path = os.path.join(self.opt.outdir, 'mesh.' + self.opt.mesh_format)
+            path = os.path.join(self.opt.coarse_mesh_output_dir, f'{file_name}_mesh.' + self.opt.mesh_format)
             mesh = self.renderer.gaussians.extract_mesh(path, self.opt.density_thresh)
 
             # perform texture extraction
@@ -428,7 +429,7 @@ class GUI:
             mesh.write(path)
 
         else:
-            path = os.path.join(self.opt.outdir, "model_name" + '_model.ply')
+            path = os.path.join(self.opt.coarse_mesh_output_dir, f"{file_name}_model_name" + '_model.ply')
             self.renderer.gaussians.save_ply(path)
 
         print(f"[INFO] save model to {path}.")
@@ -452,7 +453,7 @@ class GUI:
         
         if self.opt.save_model:
             self.save_model(mode='model')
-        if self.opt.save_geo_plus_texture:
+        if self.opt.export_mesh_for_stage_1:
             self.save_model(mode='geo+tex')
         
         if self.opt.save_images:

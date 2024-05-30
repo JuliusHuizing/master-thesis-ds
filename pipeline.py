@@ -93,6 +93,8 @@ if __name__ == "__main__":
         clip_score = compute_clip(f"{STAGE_1_IMAGES_PATH}generated", f"{STAGE_1_IMAGES_PATH}reference").item()
         clip_scores = compute_clip(f"{STAGE_1_IMAGES_PATH}generated", f"{STAGE_1_IMAGES_PATH}reference", average=False)
         clip_scores = [x.item() for x in clip_scores]
+        
+        
 
         
         # Calculate duration
@@ -127,6 +129,16 @@ if __name__ == "__main__":
         save_results_to_csv(csv_path, row)
         logging.info(f"... Results saved to {csv_path}.")
         logging.info("✅ Evaluation pipeline complete.")
+        
+        logging.info("Running DreamGaussian Stage 2 pipeline...")
+        command = [
+            "python", os.path.join(DREAMGAUSSIAN_PATH, "main2.py"), 
+            "--config", args.config, 
+            f"input={PREPROCESSED_IMAGE_PATH}", 
+            "save_path=name"
+        ]
+        result = subprocess.run(command, check=True, text=True, capture_output=True)
+        logging.info("✅ DreamGaussian pipeline complete.")
     
     except subprocess.CalledProcessError as cpe:
         # Log the output and error output from the subprocess
