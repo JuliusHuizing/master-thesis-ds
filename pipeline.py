@@ -172,12 +172,23 @@ if __name__ == "__main__":
             clip_score = result.stdout.strip().split('\n')[-1]
             # Write the last line (score) to a CSV file
             output_csv = os.path.join(clip_score_output_dir, 'clip_scores.csv')
-            with open(output_csv, 'w', newline='') as csvfile:
-                csvwriter = csv.writer(csvfile)
-                csvwriter.writerow(['Score'])  # Write the header
-                csvwriter.writerow([clip_score])  
-            
-            
+            duration = time.time() - start_time
+            row = {
+                'clip_score': clip_score,
+                'elongation': elongation,
+                'compactness': compactness,
+                'opacity': opacity,
+                'duration': duration,
+                'input_image_path': INPUT_IMAGE_PATH,
+                'hyperparameters': hyperparameters_str,
+                "full_config": full_config,
+            }
+            save_results_to_csv(config["paths"]["stage_2_clip_scores_output_path"], row)
+
+            # with open(output_csv, 'w', newline='') as csvfile:
+            #     csvwriter = csv.writer(csvfile)
+            #     csvwriter.writerow(['Score'])  # Write the header
+            #     csvwriter.writerow([clip_score])  
             
             logging.info("✅  DreamGaussian Stage 2 pipeline complete")
 

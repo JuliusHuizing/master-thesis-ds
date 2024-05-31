@@ -8,7 +8,8 @@ paths:
   dream_gaussian_results_path: "results/dream_gaussian/"
   model_output_path: "results/dream_gaussian/model/"
   stage_1_images_output_path: "results/dream_gaussian/stage_1/"
-  stage_1_clip_scores_output_path: "results/dream_gaussian/stage_1/clip_scores.csv"
+  stage_1_clip_scores_output_path: "results/clip/stage_1/clip_scores.csv"
+  stage_2_clip_scores_output_path: "results/clip/stage_2/clip_scores.csv"
   stage_1_result_images_output_path: "results/stage_1/3images/"
   stage_2_mesh_output_path: "results/mesh/stage_2/"
 
