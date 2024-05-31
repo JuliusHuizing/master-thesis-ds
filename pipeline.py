@@ -8,6 +8,8 @@ import os
 from sisa3d.yaml.yaml_utils import load_yaml_file
 from sisa3d.clip import compute_clip
 from sisa3d.results import save_results_to_csv
+import csv
+
 
 # Import date class from datetime module
 import datetime 
@@ -164,8 +166,18 @@ if __name__ == "__main__":
             # Ensure the directory exists
             clip_score_output_dir = 'results/clip/stage2'
             os.makedirs(clip_score_output_dir, exist_ok=True)
-            with open(f'{clip_score_output_dir}/clip_scores.txt', 'w') as f:
-                result = subprocess.run(command, stdout=f, stderr=subprocess.STDOUT)
+            # Execute the command and capture the output
+            result = subprocess.run(command, capture_output=True, text=True)
+            # Extract the last line from the output
+            clip_score = result.stdout.strip().split('\n')[-1]
+            # Write the last line (score) to a CSV file
+            output_csv = os.path.join(clip_score_output_dir, 'clip_scores.csv')
+            with open(output_csv, 'w', newline='') as csvfile:
+                csvwriter = csv.writer(csvfile)
+                csvwriter.writerow(['Score'])  # Write the header
+                csvwriter.writerow([clip_score])  
+            
+            
             
             logging.info("✅  DreamGaussian Stage 2 pipeline complete")
 
