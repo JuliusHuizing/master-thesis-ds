@@ -154,6 +154,14 @@ if __name__ == "__main__":
             ]
             result = subprocess.run(command, check=True, text=True, capture_output=True)
             
+            logging.info("Computing clip score of mesh...")
+            # python -m kiui.cli.clip_sim data/name_rgba.png logs/name.obj
+            command = [
+                "python", "-m", "kiui.cli.clip_sim", 
+                PREPROCESSED_IMAGE_PATH, 
+                "results/mesh/stage_2/this_was_opt_save_pah.obj"
+            ]
+            
             logging.info("✅  DreamGaussian Stage 2 pipeline complete")
 
         logging.info("✅ DreamGaussian pipeline complete.")
