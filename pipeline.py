@@ -144,6 +144,16 @@ if __name__ == "__main__":
                 f"save_path={STAGE_2_MESH_OUTPUT_PATH}"
             ]
             result = subprocess.run(command, check=True, text=True, capture_output=True)
+            
+            # kire logs/name.obj --save images/name/ --wogui
+            logging.info("Saving images of mesh...")
+            command = [
+                "kire", "results/mesh/stage_2/this_was_opt_save_pah.obj", 
+                "--save", "results/compare/", 
+                "--wogui"
+            ]
+            result = subprocess.run(command, check=True, text=True, capture_output=True)
+            
             logging.info("✅  DreamGaussian Stage 2 pipeline complete")
 
         logging.info("✅ DreamGaussian pipeline complete.")
