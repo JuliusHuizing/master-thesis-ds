@@ -429,7 +429,8 @@ class GUI:
             mesh.write(path)
 
         else:
-            path = os.path.join(self.opt.coarse_mesh_output_dir, f"{file_name}_model_name" + '_model.ply')
+            os.makedirs(self.opt.stage_1_ply_output_dir, exist_ok=True)
+            path = os.path.join(self.opt.stage_1_ply_output_dir, f"{file_name}_model_name" + '_model.ply')
             self.renderer.gaussians.save_ply(path)
 
         print(f"[INFO] save model to {path}.")

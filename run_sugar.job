@@ -26,19 +26,22 @@ pip install -e .
 cd ..
 
 # create ply file...
-
+python pipeline.py --config config.yaml
 
 source deactivate
 
-
 # extract mesh
-PLY_CHECKPOINT_PATH=""
+PLY_CHECKPOINT_PATH="results/stage_1/ply/"
+# select first file that end with .ply in path
+# FIXME: little hack now, we implement a better way to select the ply file
+PLY_CHECKPOINT_PATH=$(ls -d $PLY_CHECKPOINT_PATH | grep .ply | head -n 1)
+
 SUGAR_OUTPUT_PATH="results/sugar"
 mdkdir -p $SUGAR_OUTPUT_PATH || true
 source activate sugar2
-cd repos/MVControl-threestudio
+cd $HOME/master-thesis-ds/repos/MVControl-threestudio
 python extern/sugar/extract_mesh.py -s extern/sugar/load/scene \
--c $PLY_CHECKPOINT_PATH -o $SUGAR_OUTPUT_PATH--use_vanilla_3dgs
+-c $PLY_CHECKPOINT_PATH -o $SUGAR_OUTPUT_PATH --use_vanilla_3dgs
 
 
 

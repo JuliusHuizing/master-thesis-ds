@@ -134,6 +134,18 @@ if __name__ == "__main__":
         logging.info(f"... Results saved to {csv_path}.")
         logging.info("✅ Evaluation pipeline complete.")
         
+        
+        # FIXME: we need to be in the sugar2 venv... so not handy to run this in the pipeline.
+#         if config["sugar"]:
+#             # python extern/sugar/extract_mesh.py -s extern/sugar/load/scene \
+# # -c $PLY_CHECKPOINT_PATH -o $SUGAR_OUTPUT_PATH --use_vanilla_3dgs
+#             logging.info("Running Sugar pipeline with stage 1 data...")
+
+#             command = ["python", 
+#                        "extern/sugar/extract_mesh.py",]
+            
+        
+        
         if STAGE_2_MESH_OUTPUT_PATH and config["dreamgaussian"]["export_mesh_for_stage_1"]:
             # python main2.py --config configs/image.yaml input=data/name_rgba.png save_path=name mesh=logs/name_mesh.obj
             logging.info("Running DreamGaussian Stage 2 pipeline...")
@@ -184,12 +196,6 @@ if __name__ == "__main__":
                 "full_config": full_config,
             }
             save_results_to_csv(config["paths"]["stage_2_clip_scores_output_path"], row)
-
-            # with open(output_csv, 'w', newline='') as csvfile:
-            #     csvwriter = csv.writer(csvfile)
-            #     csvwriter.writerow(['Score'])  # Write the header
-            #     csvwriter.writerow([clip_score])  
-            
             logging.info("✅  DreamGaussian Stage 2 pipeline complete")
 
         logging.info("✅ DreamGaussian pipeline complete.")
