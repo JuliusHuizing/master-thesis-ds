@@ -16,7 +16,9 @@ import pandas as pd
 
 def save_results_to_csv(csv_path, row: dict):
     header = row.keys()
-
+    
+    # Ensure the directory exists
+    os.makedirs(os.path.dirname(csv_path), exist_ok=True)
     
     # Check if the CSV file exists
     file_exists = os.path.isfile(csv_path)
@@ -30,9 +32,6 @@ def save_results_to_csv(csv_path, row: dict):
         
         # Write the row with results
         writer.writerow(row)
-
-
-
 
 
 
