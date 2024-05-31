@@ -1,0 +1,19 @@
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/torch/_utils.py:831: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  return self.fget.__get__(instance, owner)()
+Loading checkpoint shards:  50%|█████     | 1/2 [00:16<00:16, 16.70s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:17<00:00,  7.09s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:17<00:00,  8.53s/it][load_obj] use texture from: results/mesh/stage_2/this_was_opt_save_pah_albedo.png
+[load_obj] load texture: (1024, 1024, 3)
+[Mesh loading] v: torch.Size([10701, 3]), f: torch.Size([18390, 3])
+[Mesh loading] vn: torch.Size([10701, 3]), fn: torch.Size([18390, 3])
+
+  0%|          | 0/1 [00:00<?, ?it/s]
+  0%|          | 0/8 [00:00<?, ?it/s][A
+ 12%|█▎        | 1/8 [00:00<00:05,  1.35it/s][A
+ 25%|██▌       | 2/8 [00:00<00:02,  2.70it/s][A
+ 38%|███▊      | 3/8 [00:00<00:01,  3.98it/s][A
+ 50%|█████     | 4/8 [00:01<00:00,  5.14it/s][A
+ 62%|██████▎   | 5/8 [00:01<00:00,  6.12it/s][A
+ 75%|███████▌  | 6/8 [00:01<00:00,  6.91it/s][A
+ 88%|████████▊ | 7/8 [00:01<00:00,  7.54it/s][A
+100%|██████████| 8/8 [00:01<00:00,  8.01it/s][A100%|██████████| 8/8 [00:01<00:00,  5.33it/s]
+100%|██████████| 1/1 [00:01<00:00,  1.50s/it]100%|██████████| 1/1 [00:01<00:00,  1.50s/it]
+0.7766015902161598
