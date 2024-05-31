@@ -1,5 +1,5 @@
 clip_score,elongation,compactness,opacity,clip_scores,duration,input_image_path,hyperparameters,full_config
-67.14507293701172,0.001,10.0,10.0,[537.1605834960938],69.70943331718445,images/compare/image-3 copy.png,"dreamgaussian:
+66.54512786865234,0.001,10.0,10.0,[532.3610229492188],75.51555514335632,images/compare/image-3 copy.png,"dreamgaussian:
   H: 800
   W: 800
   anneal_timestep: true
@@ -141,7 +141,7 @@ preprocess:
   recenter: true
   size: 512
 "
-67.88427734375,0,0,0,[1086.1484375],63.13497042655945,images/compare/image-3 copy.png,"dreamgaussian:
+67.01396179199219,0,0,0,[1072.223388671875],58.494701623916626,images/compare/image-3 copy.png,"dreamgaussian:
   H: 800
   W: 800
   anneal_timestep: true
