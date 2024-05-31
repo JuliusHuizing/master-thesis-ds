@@ -161,6 +161,11 @@ if __name__ == "__main__":
                 PREPROCESSED_IMAGE_PATH, 
                 "results/mesh/stage_2/this_was_opt_save_pah.obj"
             ]
+            # Ensure the directory exists
+            clip_score_output_dir = 'results/clip/stage2'
+            os.makedirs(clip_score_output_dir, exist_ok=True)
+            with open(f'{clip_score_output_dir}/clip_scores.txt', 'w') as f:
+                result = subprocess.run(command, stdout=f, stderr=subprocess.STDOUT)
             
             logging.info("✅  DreamGaussian Stage 2 pipeline complete")
 
