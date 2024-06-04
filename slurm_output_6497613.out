@@ -1,0 +1,1258 @@
+============================================================================================== 
+Warning! Mixing Conda and module environments may lead to corruption of the
+user environment. 
+We do not recommend users mixing those two environments unless absolutely
+necessary. Note that 
+SURF does not provide any support for Conda environment.
+For more information, please refer to our software policy page:
+https://servicedesk.surf.nl/wiki/display/WIKI/Software+policy+Snellius#SoftwarepolicySnellius-UseofAnacondaandMinicondaenvironmentsonSnellius 
+
+Remember that many packages have already been installed on the system and can
+be loaded using 
+the 'module load <package__name>' command. If you are uncertain if a package is
+already available 
+on the system, please use 'module avail' or 'module spider' to search for it.
+============================================================================================== 
+Already up to date.
+
+Remove all packages in environment /home/jhuizing/.conda/envs/SugarMVC:
+
+Collecting package metadata (current_repodata.json): ...working... done
+Solving environment: ...working... done
+
+
+==> WARNING: A newer version of conda exists. <==
+  current version: 4.12.0
+  latest version: 24.5.0
+
+Please update conda by running
+
+    $ conda update -n base -c defaults conda
+
+
+
+## Package Plan ##
+
+  environment location: /home/jhuizing/.conda/envs/SugarMVC
+
+  added / updated specs:
+    - pip
+    - python=3.8
+
+
+The following NEW packages will be INSTALLED:
+
+  _libgcc_mutex      pkgs/main/linux-64::_libgcc_mutex-0.1-main
+  _openmp_mutex      pkgs/main/linux-64::_openmp_mutex-5.1-1_gnu
+  ca-certificates    pkgs/main/linux-64::ca-certificates-2024.3.11-h06a4308_0
+  ld_impl_linux-64   pkgs/main/linux-64::ld_impl_linux-64-2.38-h1181459_1
+  libffi             pkgs/main/linux-64::libffi-3.4.4-h6a678d5_1
+  libgcc-ng          pkgs/main/linux-64::libgcc-ng-11.2.0-h1234567_1
+  libgomp            pkgs/main/linux-64::libgomp-11.2.0-h1234567_1
+  libstdcxx-ng       pkgs/main/linux-64::libstdcxx-ng-11.2.0-h1234567_1
+  ncurses            pkgs/main/linux-64::ncurses-6.4-h6a678d5_0
+  openssl            pkgs/main/linux-64::openssl-3.0.13-h7f8727e_2
+  pip                pkgs/main/linux-64::pip-24.0-py38h06a4308_0
+  python             pkgs/main/linux-64::python-3.8.19-h955ad1f_0
+  readline           pkgs/main/linux-64::readline-8.2-h5eee18b_0
+  setuptools         pkgs/main/linux-64::setuptools-69.5.1-py38h06a4308_0
+  sqlite             pkgs/main/linux-64::sqlite-3.45.3-h5eee18b_0
+  tk                 pkgs/main/linux-64::tk-8.6.14-h39e8969_0
+  wheel              pkgs/main/linux-64::wheel-0.43.0-py38h06a4308_0
+  xz                 pkgs/main/linux-64::xz-5.4.6-h5eee18b_1
+  zlib               pkgs/main/linux-64::zlib-1.2.13-h5eee18b_1
+
+
+Proceed ([y]/n)? 
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
+#
+# To activate this environment, use
+#
+#     $ conda activate SugarMVC
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+🚀installing nina
+Collecting ninja
+  Using cached ninja-1.11.1.1-py2.py3-none-manylinux1_x86_64.manylinux_2_5_x86_64.whl.metadata (5.3 kB)
+Using cached ninja-1.11.1.1-py2.py3-none-manylinux1_x86_64.manylinux_2_5_x86_64.whl (307 kB)
+Installing collected packages: ninja
+Successfully installed ninja-1.11.1.1
+✅ installed nina
+🚀 installing pytorch
+Collecting package metadata (current_repodata.json): ...working... done
+Solving environment: ...working... failed with initial frozen solve. Retrying with flexible solve.
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... done
+
+
+==> WARNING: A newer version of conda exists. <==
+  current version: 4.12.0
+  latest version: 24.5.0
+
+Please update conda by running
+
+    $ conda update -n base -c defaults conda
+
+
+
+## Package Plan ##
+
+  environment location: /home/jhuizing/.conda/envs/SugarMVC
+
+  added / updated specs:
+    - pytorch-cuda=11.8
+    - pytorch==2.1.0
+    - torchaudio==2.1.0
+    - torchvision==0.16.0
+
+
+The following NEW packages will be INSTALLED:
+
+  blas               pkgs/main/linux-64::blas-1.0-mkl
+  brotli-python      pkgs/main/linux-64::brotli-python-1.0.9-py38h6a678d5_8
+  bzip2              pkgs/main/linux-64::bzip2-1.0.8-h5eee18b_6
+  certifi            pkgs/main/linux-64::certifi-2024.2.2-py38h06a4308_0
+  charset-normalizer pkgs/main/noarch::charset-normalizer-2.0.4-pyhd3eb1b0_0
+  cuda-cudart        nvidia/linux-64::cuda-cudart-11.8.89-0
+  cuda-cupti         nvidia/linux-64::cuda-cupti-11.8.87-0
+  cuda-libraries     nvidia/linux-64::cuda-libraries-11.8.0-0
+  cuda-nvrtc         nvidia/linux-64::cuda-nvrtc-11.8.89-0
+  cuda-nvtx          nvidia/linux-64::cuda-nvtx-11.8.86-0
+  cuda-runtime       nvidia/linux-64::cuda-runtime-11.8.0-0
+  cuda-version       nvidia/noarch::cuda-version-12.5-3
+  ffmpeg             pytorch/linux-64::ffmpeg-4.3-hf484d3e_0
+  filelock           pkgs/main/linux-64::filelock-3.13.1-py38h06a4308_0
+  freetype           pkgs/main/linux-64::freetype-2.12.1-h4a9f257_0
+  gmp                pkgs/main/linux-64::gmp-6.2.1-h295c915_3
+  gmpy2              pkgs/main/linux-64::gmpy2-2.1.2-py38heeb90bb_0
+  gnutls             pkgs/main/linux-64::gnutls-3.6.15-he1e5248_0
+  idna               pkgs/main/linux-64::idna-3.7-py38h06a4308_0
+  intel-openmp       pkgs/main/linux-64::intel-openmp-2023.1.0-hdb19cb5_46306
+  jinja2             pkgs/main/linux-64::jinja2-3.1.4-py38h06a4308_0
+  jpeg               pkgs/main/linux-64::jpeg-9e-h5eee18b_1
+  lame               pkgs/main/linux-64::lame-3.100-h7b6447c_0
+  lcms2              pkgs/main/linux-64::lcms2-2.12-h3be6417_0
+  lerc               pkgs/main/linux-64::lerc-3.0-h295c915_0
+  libcublas          nvidia/linux-64::libcublas-11.11.3.6-0
+  libcufft           nvidia/linux-64::libcufft-10.9.0.58-0
+  libcufile          nvidia/linux-64::libcufile-1.10.0.4-0
+  libcurand          nvidia/linux-64::libcurand-10.3.6.39-0
+  libcusolver        nvidia/linux-64::libcusolver-11.4.1.48-0
+  libcusparse        nvidia/linux-64::libcusparse-11.7.5.86-0
+  libdeflate         pkgs/main/linux-64::libdeflate-1.17-h5eee18b_1
+  libiconv           pkgs/main/linux-64::libiconv-1.16-h5eee18b_3
+  libidn2            pkgs/main/linux-64::libidn2-2.3.4-h5eee18b_0
+  libjpeg-turbo      pytorch/linux-64::libjpeg-turbo-2.0.0-h9bf148f_0
+  libnpp             nvidia/linux-64::libnpp-11.8.0.86-0
+  libnvjpeg          nvidia/linux-64::libnvjpeg-11.9.0.86-0
+  libpng             pkgs/main/linux-64::libpng-1.6.39-h5eee18b_0
+  libtasn1           pkgs/main/linux-64::libtasn1-4.19.0-h5eee18b_0
+  libtiff            pkgs/main/linux-64::libtiff-4.5.1-h6a678d5_0
+  libunistring       pkgs/main/linux-64::libunistring-0.9.10-h27cfd23_0
+  libwebp-base       pkgs/main/linux-64::libwebp-base-1.3.2-h5eee18b_0
+  llvm-openmp        pkgs/main/linux-64::llvm-openmp-14.0.6-h9e868ea_0
+  lz4-c              pkgs/main/linux-64::lz4-c-1.9.4-h6a678d5_1
+  markupsafe         pkgs/main/linux-64::markupsafe-2.1.3-py38h5eee18b_0
+  mkl                pkgs/main/linux-64::mkl-2023.1.0-h213fc3f_46344
+  mkl-service        pkgs/main/linux-64::mkl-service-2.4.0-py38h5eee18b_1
+  mkl_fft            pkgs/main/linux-64::mkl_fft-1.3.8-py38h5eee18b_0
+  mkl_random         pkgs/main/linux-64::mkl_random-1.2.4-py38hdb19cb5_0
+  mpc                pkgs/main/linux-64::mpc-1.1.0-h10f8cd9_1
+  mpfr               pkgs/main/linux-64::mpfr-4.0.2-hb69a4c5_1
+  mpmath             pkgs/main/linux-64::mpmath-1.3.0-py38h06a4308_0
+  nettle             pkgs/main/linux-64::nettle-3.7.3-hbbd107a_1
+  networkx           pkgs/main/linux-64::networkx-3.1-py38h06a4308_0
+  numpy              pkgs/main/linux-64::numpy-1.24.3-py38hf6e8229_1
+  numpy-base         pkgs/main/linux-64::numpy-base-1.24.3-py38h060ed82_1
+  openh264           pkgs/main/linux-64::openh264-2.1.1-h4ff587b_0
+  openjpeg           pkgs/main/linux-64::openjpeg-2.4.0-h3ad879b_0
+  pillow             pkgs/main/linux-64::pillow-10.3.0-py38h5eee18b_0
+  pysocks            pkgs/main/linux-64::pysocks-1.7.1-py38h06a4308_0
+  pytorch            pytorch/linux-64::pytorch-2.1.0-py3.8_cuda11.8_cudnn8.7.0_0
+  pytorch-cuda       pytorch/linux-64::pytorch-cuda-11.8-h7e8668a_5
+  pytorch-mutex      pytorch/noarch::pytorch-mutex-1.0-cuda
+  pyyaml             pkgs/main/linux-64::pyyaml-6.0.1-py38h5eee18b_0
+  requests           pkgs/main/linux-64::requests-2.32.2-py38h06a4308_0
+  sympy              pkgs/main/linux-64::sympy-1.12-py38h06a4308_0
+  tbb                pkgs/main/linux-64::tbb-2021.8.0-hdb19cb5_0
+  torchaudio         pytorch/linux-64::torchaudio-2.1.0-py38_cu118
+  torchtriton        pytorch/linux-64::torchtriton-2.1.0-py38
+  torchvision        pytorch/linux-64::torchvision-0.16.0-py38_cu118
+  typing_extensions  pkgs/main/linux-64::typing_extensions-4.11.0-py38h06a4308_0
+  urllib3            pkgs/main/linux-64::urllib3-2.2.1-py38h06a4308_0
+  yaml               pkgs/main/linux-64::yaml-0.2.5-h7b6447c_0
+  zstd               pkgs/main/linux-64::zstd-1.5.5-hc292b87_2
+
+
+Proceed ([y]/n)? 
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
+✅ installed pytorch
+🚀 INstalling And cub....
+Collecting package metadata (current_repodata.json): ...working... done
+Solving environment: ...working... failed with initial frozen solve. Retrying with flexible solve.
+Collecting package metadata (repodata.json): ...working... done
+Solving environment: ...working... failed with initial frozen solve. Retrying with flexible solve.
+
+PackagesNotFoundError: The following packages are not available from current channels:
+
+  - nvidiacubecho
+
+Current channels:
+
+  - https://conda.anaconda.org/bottler/linux-64
+  - https://conda.anaconda.org/bottler/noarch
+  - https://repo.anaconda.com/pkgs/main/linux-64
+  - https://repo.anaconda.com/pkgs/main/noarch
+  - https://repo.anaconda.com/pkgs/r/linux-64
+  - https://repo.anaconda.com/pkgs/r/noarch
+
+To search for alternate channels that may provide the conda package you're
+looking for, navigate to
+
+    https://anaconda.org
+
+and use the search bar at the top of the page.
+
+
+✅ installed cub
+🚀 installing pytorch3d
+Collecting git+https://github.com/facebookresearch/pytorch3d.git@stable
+  Cloning https://github.com/facebookresearch/pytorch3d.git (to revision stable) to /gpfs/scratch1/nodespecific/gcn54/jhuizing.6497613/pip-req-build-vx3xwxze
+  Running command git clone --filter=blob:none --quiet https://github.com/facebookresearch/pytorch3d.git /gpfs/scratch1/nodespecific/gcn54/jhuizing.6497613/pip-req-build-vx3xwxze
+  Running command git checkout -q f34104cf6ebefacd7b7e07955ee7aaa823e616ac
+  Resolved https://github.com/facebookresearch/pytorch3d.git to commit f34104cf6ebefacd7b7e07955ee7aaa823e616ac
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting fvcore (from pytorch3d==0.7.6)
+  Using cached fvcore-0.1.5.post20221221-py3-none-any.whl
+Collecting iopath (from pytorch3d==0.7.6)
+  Using cached iopath-0.1.10-py3-none-any.whl
+Requirement already satisfied: numpy in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from fvcore->pytorch3d==0.7.6) (1.24.3)
+Collecting yacs>=0.1.6 (from fvcore->pytorch3d==0.7.6)
+  Using cached yacs-0.1.8-py3-none-any.whl.metadata (639 bytes)
+Requirement already satisfied: pyyaml>=5.1 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from fvcore->pytorch3d==0.7.6) (6.0.1)
+Collecting tqdm (from fvcore->pytorch3d==0.7.6)
+  Using cached tqdm-4.66.4-py3-none-any.whl.metadata (57 kB)
+Collecting termcolor>=1.1 (from fvcore->pytorch3d==0.7.6)
+  Using cached termcolor-2.4.0-py3-none-any.whl.metadata (6.1 kB)
+Requirement already satisfied: Pillow in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from fvcore->pytorch3d==0.7.6) (10.3.0)
+Collecting tabulate (from fvcore->pytorch3d==0.7.6)
+  Using cached tabulate-0.9.0-py3-none-any.whl.metadata (34 kB)
+Requirement already satisfied: typing-extensions in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from iopath->pytorch3d==0.7.6) (4.11.0)
+Collecting portalocker (from iopath->pytorch3d==0.7.6)
+  Using cached portalocker-2.8.2-py3-none-any.whl.metadata (8.5 kB)
+Using cached termcolor-2.4.0-py3-none-any.whl (7.7 kB)
+Using cached yacs-0.1.8-py3-none-any.whl (14 kB)
+Using cached portalocker-2.8.2-py3-none-any.whl (17 kB)
+Using cached tabulate-0.9.0-py3-none-any.whl (35 kB)
+Using cached tqdm-4.66.4-py3-none-any.whl (78 kB)
+Building wheels for collected packages: pytorch3d
+  Building wheel for pytorch3d (setup.py): started
+  Building wheel for pytorch3d (setup.py): still running...
+  Building wheel for pytorch3d (setup.py): still running...
+  Building wheel for pytorch3d (setup.py): finished with status 'done'
+  Created wheel for pytorch3d: filename=pytorch3d-0.7.6-cp38-cp38-linux_x86_64.whl size=70543775 sha256=7077e69a8420c227b57c1d164cf7563b0283b5cd503ab3725608dfc7607c5c55
+  Stored in directory: /gpfs/scratch1/nodespecific/gcn54/jhuizing.6497613/pip-ephem-wheel-cache-9nm68e_h/wheels/db/6f/d4/ae9aeabc4d0ffaef2112aa0e541dd8a947c6008ae0866d5390
+Successfully built pytorch3d
+Installing collected packages: yacs, tqdm, termcolor, tabulate, portalocker, iopath, fvcore, pytorch3d
+Successfully installed fvcore-0.1.5.post20221221 iopath-0.1.10 portalocker-2.8.2 pytorch3d-0.7.6 tabulate-0.9.0 termcolor-2.4.0 tqdm-4.66.4 yacs-0.1.8
+✅ installed pytorch3d
+🚀 installing requirements.txt
+Collecting git+https://github.com/KAIR-BAIR/nerfacc.git@v0.5.2 (from -r requirements.txt (line 5))
+  Cloning https://github.com/KAIR-BAIR/nerfacc.git (to revision v0.5.2) to /gpfs/scratch1/nodespecific/gcn54/jhuizing.6497613/pip-req-build-r2nt3y_h
+  Running command git clone --filter=blob:none --quiet https://github.com/KAIR-BAIR/nerfacc.git /gpfs/scratch1/nodespecific/gcn54/jhuizing.6497613/pip-req-build-r2nt3y_h
+  Running command git checkout -q d84cdf3afd7dcfc42150e0f0506db58a5ce62812
+  Resolved https://github.com/KAIR-BAIR/nerfacc.git to commit d84cdf3afd7dcfc42150e0f0506db58a5ce62812
+  Running command git submodule update --init --recursive -q
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch (from -r requirements.txt (line 6))
+  Cloning https://github.com/NVlabs/tiny-cuda-nn/ to /gpfs/scratch1/nodespecific/gcn54/jhuizing.6497613/pip-req-build-slgwwpwh
+  Running command git clone --filter=blob:none --quiet https://github.com/NVlabs/tiny-cuda-nn/ /gpfs/scratch1/nodespecific/gcn54/jhuizing.6497613/pip-req-build-slgwwpwh
+  Resolved https://github.com/NVlabs/tiny-cuda-nn/ to commit 4892659e015b12bd2fce446b8a8e33e646b21746
+  Running command git submodule update --init --recursive -q
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting git+https://github.com/NVlabs/nvdiffrast.git (from -r requirements.txt (line 15))
+  Cloning https://github.com/NVlabs/nvdiffrast.git to /gpfs/scratch1/nodespecific/gcn54/jhuizing.6497613/pip-req-build-axqjku6i
+  Running command git clone --filter=blob:none --quiet https://github.com/NVlabs/nvdiffrast.git /gpfs/scratch1/nodespecific/gcn54/jhuizing.6497613/pip-req-build-axqjku6i
+  Resolved https://github.com/NVlabs/nvdiffrast.git to commit c5caf7bdb8a2448acc491a9faa47753972edd380
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting git+https://github.com/ashawkey/envlight.git (from -r requirements.txt (line 24))
+  Cloning https://github.com/ashawkey/envlight.git to /gpfs/scratch1/nodespecific/gcn54/jhuizing.6497613/pip-req-build-wt7uvsov
+  Running command git clone --filter=blob:none --quiet https://github.com/ashawkey/envlight.git /gpfs/scratch1/nodespecific/gcn54/jhuizing.6497613/pip-req-build-wt7uvsov
+  Resolved https://github.com/ashawkey/envlight.git to commit 05b5851e854429d72ecaf5b206ed64ce55fae677
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting git+https://github.com/openai/CLIP.git (from -r requirements.txt (line 38))
+  Cloning https://github.com/openai/CLIP.git to /gpfs/scratch1/nodespecific/gcn54/jhuizing.6497613/pip-req-build-w55_usni
+  Running command git clone --filter=blob:none --quiet https://github.com/openai/CLIP.git /gpfs/scratch1/nodespecific/gcn54/jhuizing.6497613/pip-req-build-w55_usni
+  Resolved https://github.com/openai/CLIP.git to commit a1d071733d7111c9c014f024669f959182114e33
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting lightning==2.0.0 (from -r requirements.txt (line 1))
+  Using cached lightning-2.0.0-py3-none-any.whl.metadata (36 kB)
+Collecting omegaconf==2.3.0 (from -r requirements.txt (line 2))
+  Using cached omegaconf-2.3.0-py3-none-any.whl.metadata (3.9 kB)
+Collecting jaxtyping (from -r requirements.txt (line 3))
+  Using cached jaxtyping-0.2.19-py3-none-any.whl.metadata (5.7 kB)
+Collecting typeguard (from -r requirements.txt (line 4))
+  Using cached typeguard-4.3.0-py3-none-any.whl.metadata (3.7 kB)
+Collecting diffusers==0.25.1 (from -r requirements.txt (line 7))
+  Using cached diffusers-0.25.1-py3-none-any.whl.metadata (19 kB)
+Collecting transformers==4.28.1 (from -r requirements.txt (line 8))
+  Using cached transformers-4.28.1-py3-none-any.whl.metadata (109 kB)
+Collecting accelerate (from -r requirements.txt (line 9))
+  Using cached accelerate-0.30.1-py3-none-any.whl.metadata (18 kB)
+Collecting opencv-python (from -r requirements.txt (line 10))
+  Using cached opencv_python-4.10.0.82-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (20 kB)
+Collecting tensorboard (from -r requirements.txt (line 11))
+  Using cached tensorboard-2.14.0-py3-none-any.whl.metadata (1.8 kB)
+Collecting matplotlib (from -r requirements.txt (line 12))
+  Using cached matplotlib-3.7.5-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl.metadata (5.7 kB)
+Collecting imageio>=2.28.0 (from -r requirements.txt (line 13))
+  Using cached imageio-2.34.1-py3-none-any.whl.metadata (4.9 kB)
+Collecting libigl (from -r requirements.txt (line 16))
+  Using cached libigl-2.5.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.3 kB)
+Collecting xatlas (from -r requirements.txt (line 17))
+  Using cached xatlas-0.0.9-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+Requirement already satisfied: networkx in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from -r requirements.txt (line 19)) (3.1)
+Collecting pysdf (from -r requirements.txt (line 20))
+  Using cached pysdf-0.1.9-cp38-cp38-linux_x86_64.whl
+Collecting PyMCubes (from -r requirements.txt (line 21))
+  Using cached PyMCubes-0.1.4-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (863 bytes)
+Collecting wandb (from -r requirements.txt (line 22))
+  Using cached wandb-0.17.0-py3-none-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (10 kB)
+Collecting gradio==3.50.2 (from -r requirements.txt (line 23))
+  Using cached gradio-3.50.2-py3-none-any.whl.metadata (17 kB)
+Collecting torchmetrics (from -r requirements.txt (line 25))
+  Using cached torchmetrics-1.4.0.post0-py3-none-any.whl.metadata (19 kB)
+Collecting xformers (from -r requirements.txt (line 28))
+  Using cached xformers-0.0.26.post1-cp38-cp38-manylinux2014_x86_64.whl.metadata (1.0 kB)
+Collecting bitsandbytes==0.38.1 (from -r requirements.txt (line 29))
+  Using cached bitsandbytes-0.38.1-py3-none-any.whl.metadata (9.8 kB)
+Collecting sentencepiece (from -r requirements.txt (line 30))
+  Using cached sentencepiece-0.2.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.7 kB)
+Collecting safetensors (from -r requirements.txt (line 31))
+  Using cached safetensors-0.4.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.8 kB)
+Collecting huggingface_hub (from -r requirements.txt (line 32))
+  Using cached huggingface_hub-0.23.2-py3-none-any.whl.metadata (12 kB)
+Collecting einops (from -r requirements.txt (line 35))
+  Using cached einops-0.8.0-py3-none-any.whl.metadata (12 kB)
+Collecting kornia (from -r requirements.txt (line 36))
+  Using cached kornia-0.7.2-py2.py3-none-any.whl.metadata (12 kB)
+Collecting taming-transformers-rom1504 (from -r requirements.txt (line 37))
+  Using cached taming_transformers_rom1504-0.0.6-py3-none-any.whl.metadata (406 bytes)
+Collecting controlnet_aux (from -r requirements.txt (line 41))
+  Using cached controlnet_aux-0.0.9-py3-none-any.whl.metadata (6.5 kB)
+Collecting trimesh[easy] (from -r requirements.txt (line 18))
+  Using cached trimesh-4.4.0-py3-none-any.whl.metadata (18 kB)
+Requirement already satisfied: Jinja2<5.0 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from lightning==2.0.0->-r requirements.txt (line 1)) (3.1.4)
+Requirement already satisfied: PyYAML<8.0 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from lightning==2.0.0->-r requirements.txt (line 1)) (6.0.1)
+Collecting arrow<3.0,>=1.2.0 (from lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached arrow-1.3.0-py3-none-any.whl.metadata (7.5 kB)
+Collecting beautifulsoup4<6.0,>=4.8.0 (from lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached beautifulsoup4-4.12.3-py3-none-any.whl.metadata (3.8 kB)
+Collecting click<10.0 (from lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached click-8.1.7-py3-none-any.whl.metadata (3.0 kB)
+Collecting croniter<1.4.0,>=1.3.0 (from lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached croniter-1.3.15-py2.py3-none-any.whl.metadata (23 kB)
+Collecting dateutils<2.0 (from lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached dateutils-0.6.12-py2.py3-none-any.whl.metadata (1.3 kB)
+Collecting deepdiff<8.0,>=5.7.0 (from lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached deepdiff-7.0.1-py3-none-any.whl.metadata (6.8 kB)
+Collecting fastapi<0.89.0 (from lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached fastapi-0.88.0-py3-none-any.whl.metadata (24 kB)
+Collecting fsspec<2024.0,>=2022.5.0 (from lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached fsspec-2023.12.2-py3-none-any.whl.metadata (6.8 kB)
+Collecting inquirer<5.0,>=2.10.0 (from lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached inquirer-3.2.4-py3-none-any.whl.metadata (6.8 kB)
+Collecting lightning-cloud>=0.5.31 (from lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached lightning_cloud-0.5.69-py3-none-any.whl.metadata (957 bytes)
+Collecting lightning-utilities<2.0,>=0.7.0 (from lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached lightning_utilities-0.11.2-py3-none-any.whl.metadata (4.7 kB)
+Requirement already satisfied: numpy<3.0,>=1.17.2 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from lightning==2.0.0->-r requirements.txt (line 1)) (1.24.3)
+Collecting packaging (from lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached packaging-24.0-py3-none-any.whl.metadata (3.2 kB)
+Collecting psutil<7.0 (from lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached psutil-5.9.8-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (21 kB)
+Collecting pydantic<3.0 (from lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached pydantic-2.7.3-py3-none-any.whl.metadata (108 kB)
+Requirement already satisfied: requests<4.0 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from lightning==2.0.0->-r requirements.txt (line 1)) (2.32.2)
+Collecting rich<15.0,>=12.3.0 (from lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached rich-13.7.1-py3-none-any.whl.metadata (18 kB)
+Collecting starlette<2.0 (from lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached starlette-0.37.2-py3-none-any.whl.metadata (5.9 kB)
+Collecting starsessions<2.0,>=1.2.1 (from lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached starsessions-1.3.0-py3-none-any.whl.metadata (8.2 kB)
+Requirement already satisfied: torch<4.0,>=1.11.0 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from lightning==2.0.0->-r requirements.txt (line 1)) (2.1.0)
+Requirement already satisfied: tqdm<6.0,>=4.57.0 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from lightning==2.0.0->-r requirements.txt (line 1)) (4.66.4)
+Collecting traitlets<7.0,>=5.3.0 (from lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached traitlets-5.14.3-py3-none-any.whl.metadata (10 kB)
+Requirement already satisfied: typing-extensions<6.0,>=4.0.0 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from lightning==2.0.0->-r requirements.txt (line 1)) (4.11.0)
+Requirement already satisfied: urllib3<3.0 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from lightning==2.0.0->-r requirements.txt (line 1)) (2.2.1)
+Collecting uvicorn<2.0 (from lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached uvicorn-0.30.1-py3-none-any.whl.metadata (6.3 kB)
+Collecting websocket-client<3.0 (from lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached websocket_client-1.8.0-py3-none-any.whl.metadata (8.0 kB)
+Collecting websockets<12.0 (from lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached websockets-11.0.3-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.6 kB)
+Collecting pytorch-lightning (from lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached pytorch_lightning-2.2.5-py3-none-any.whl.metadata (21 kB)
+Collecting antlr4-python3-runtime==4.9.* (from omegaconf==2.3.0->-r requirements.txt (line 2))
+  Using cached antlr4_python3_runtime-4.9.3-py3-none-any.whl
+Collecting importlib-metadata (from diffusers==0.25.1->-r requirements.txt (line 7))
+  Using cached importlib_metadata-7.1.0-py3-none-any.whl.metadata (4.7 kB)
+Requirement already satisfied: filelock in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from diffusers==0.25.1->-r requirements.txt (line 7)) (3.13.1)
+Collecting regex!=2019.12.17 (from diffusers==0.25.1->-r requirements.txt (line 7))
+  Using cached regex-2024.5.15-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (40 kB)
+Requirement already satisfied: Pillow in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from diffusers==0.25.1->-r requirements.txt (line 7)) (10.3.0)
+Collecting tokenizers!=0.11.3,<0.14,>=0.11.1 (from transformers==4.28.1->-r requirements.txt (line 8))
+  Using cached tokenizers-0.13.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.7 kB)
+Collecting aiofiles<24.0,>=22.0 (from gradio==3.50.2->-r requirements.txt (line 23))
+  Using cached aiofiles-23.2.1-py3-none-any.whl.metadata (9.7 kB)
+Collecting altair<6.0,>=4.2.0 (from gradio==3.50.2->-r requirements.txt (line 23))
+  Using cached altair-5.3.0-py3-none-any.whl.metadata (9.2 kB)
+Collecting ffmpy (from gradio==3.50.2->-r requirements.txt (line 23))
+  Using cached ffmpy-0.3.2-py3-none-any.whl
+Collecting gradio-client==0.6.1 (from gradio==3.50.2->-r requirements.txt (line 23))
+  Using cached gradio_client-0.6.1-py3-none-any.whl.metadata (7.1 kB)
+Collecting httpx (from gradio==3.50.2->-r requirements.txt (line 23))
+  Using cached httpx-0.27.0-py3-none-any.whl.metadata (7.2 kB)
+Collecting importlib-resources<7.0,>=1.3 (from gradio==3.50.2->-r requirements.txt (line 23))
+  Using cached importlib_resources-6.4.0-py3-none-any.whl.metadata (3.9 kB)
+Requirement already satisfied: markupsafe~=2.0 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from gradio==3.50.2->-r requirements.txt (line 23)) (2.1.3)
+Collecting orjson~=3.0 (from gradio==3.50.2->-r requirements.txt (line 23))
+  Using cached orjson-3.10.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (49 kB)
+Collecting pandas<3.0,>=1.0 (from gradio==3.50.2->-r requirements.txt (line 23))
+  Using cached pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (18 kB)
+Collecting pydub (from gradio==3.50.2->-r requirements.txt (line 23))
+  Using cached pydub-0.25.1-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting python-multipart (from gradio==3.50.2->-r requirements.txt (line 23))
+  Using cached python_multipart-0.0.9-py3-none-any.whl.metadata (2.5 kB)
+Collecting semantic-version~=2.0 (from gradio==3.50.2->-r requirements.txt (line 23))
+  Using cached semantic_version-2.10.0-py2.py3-none-any.whl.metadata (9.7 kB)
+Collecting absl-py>=0.4 (from tensorboard->-r requirements.txt (line 11))
+  Using cached absl_py-2.1.0-py3-none-any.whl.metadata (2.3 kB)
+Collecting grpcio>=1.48.2 (from tensorboard->-r requirements.txt (line 11))
+  Using cached grpcio-1.64.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.3 kB)
+Collecting google-auth<3,>=1.6.3 (from tensorboard->-r requirements.txt (line 11))
+  Using cached google_auth-2.29.0-py2.py3-none-any.whl.metadata (4.7 kB)
+Collecting google-auth-oauthlib<1.1,>=0.5 (from tensorboard->-r requirements.txt (line 11))
+  Using cached google_auth_oauthlib-1.0.0-py2.py3-none-any.whl.metadata (2.7 kB)
+Collecting markdown>=2.6.8 (from tensorboard->-r requirements.txt (line 11))
+  Using cached Markdown-3.6-py3-none-any.whl.metadata (7.0 kB)
+Collecting protobuf>=3.19.6 (from tensorboard->-r requirements.txt (line 11))
+  Using cached protobuf-5.27.0-cp38-abi3-manylinux2014_x86_64.whl.metadata (592 bytes)
+Requirement already satisfied: setuptools>=41.0.0 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from tensorboard->-r requirements.txt (line 11)) (69.5.1)
+Collecting tensorboard-data-server<0.8.0,>=0.7.0 (from tensorboard->-r requirements.txt (line 11))
+  Using cached tensorboard_data_server-0.7.2-py3-none-any.whl.metadata (1.1 kB)
+Collecting werkzeug>=1.0.1 (from tensorboard->-r requirements.txt (line 11))
+  Using cached werkzeug-3.0.3-py3-none-any.whl.metadata (3.7 kB)
+Requirement already satisfied: wheel>=0.26 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from tensorboard->-r requirements.txt (line 11)) (0.43.0)
+Collecting contourpy>=1.0.1 (from matplotlib->-r requirements.txt (line 12))
+  Using cached contourpy-1.1.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.9 kB)
+Collecting cycler>=0.10 (from matplotlib->-r requirements.txt (line 12))
+  Using cached cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting fonttools>=4.22.0 (from matplotlib->-r requirements.txt (line 12))
+  Using cached fonttools-4.53.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (162 kB)
+Collecting kiwisolver>=1.0.1 (from matplotlib->-r requirements.txt (line 12))
+  Using cached kiwisolver-1.4.5-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl.metadata (6.4 kB)
+Collecting pyparsing>=2.3.1 (from matplotlib->-r requirements.txt (line 12))
+  Using cached pyparsing-3.1.2-py3-none-any.whl.metadata (5.1 kB)
+Collecting python-dateutil>=2.7 (from matplotlib->-r requirements.txt (line 12))
+  Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting imageio-ffmpeg (from imageio[ffmpeg]->-r requirements.txt (line 14))
+  Using cached imageio_ffmpeg-0.5.1-py3-none-manylinux2010_x86_64.whl.metadata (1.6 kB)
+Collecting scipy (from libigl->-r requirements.txt (line 16))
+  Using cached scipy-1.10.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (58 kB)
+Collecting colorlog (from trimesh[easy]->-r requirements.txt (line 18))
+  Using cached colorlog-6.8.2-py3-none-any.whl.metadata (10 kB)
+Collecting mapbox-earcut (from trimesh[easy]->-r requirements.txt (line 18))
+  Using cached mapbox_earcut-1.0.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (2.0 kB)
+Collecting chardet (from trimesh[easy]->-r requirements.txt (line 18))
+  Using cached chardet-5.2.0-py3-none-any.whl.metadata (3.4 kB)
+Collecting lxml (from trimesh[easy]->-r requirements.txt (line 18))
+  Using cached lxml-5.2.2-cp38-cp38-manylinux_2_28_x86_64.whl.metadata (3.4 kB)
+Collecting jsonschema (from trimesh[easy]->-r requirements.txt (line 18))
+  Using cached jsonschema-4.22.0-py3-none-any.whl.metadata (8.2 kB)
+Collecting svg.path (from trimesh[easy]->-r requirements.txt (line 18))
+  Using cached svg.path-6.3-py2.py3-none-any.whl.metadata (13 kB)
+Collecting pycollada (from trimesh[easy]->-r requirements.txt (line 18))
+  Using cached pycollada-0.8-py3-none-any.whl
+Collecting shapely (from trimesh[easy]->-r requirements.txt (line 18))
+  Using cached shapely-2.0.4-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.0 kB)
+Collecting xxhash (from trimesh[easy]->-r requirements.txt (line 18))
+  Using cached xxhash-3.4.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (12 kB)
+Collecting rtree (from trimesh[easy]->-r requirements.txt (line 18))
+  Using cached Rtree-1.2.0-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.1 kB)
+Collecting embreex (from trimesh[easy]->-r requirements.txt (line 18))
+  Using cached embreex-2.17.7.post4-cp38-cp38-manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+Collecting vhacdx (from trimesh[easy]->-r requirements.txt (line 18))
+  Using cached vhacdx-0.0.6-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.1 kB)
+Collecting docker-pycreds>=0.4.0 (from wandb->-r requirements.txt (line 22))
+  Using cached docker_pycreds-0.4.0-py2.py3-none-any.whl.metadata (1.8 kB)
+Collecting gitpython!=3.1.29,>=1.0.0 (from wandb->-r requirements.txt (line 22))
+  Using cached GitPython-3.1.43-py3-none-any.whl.metadata (13 kB)
+Collecting platformdirs (from wandb->-r requirements.txt (line 22))
+  Using cached platformdirs-4.2.2-py3-none-any.whl.metadata (11 kB)
+Collecting protobuf>=3.19.6 (from tensorboard->-r requirements.txt (line 11))
+  Using cached protobuf-4.25.3-cp37-abi3-manylinux2014_x86_64.whl.metadata (541 bytes)
+Collecting sentry-sdk>=1.0.0 (from wandb->-r requirements.txt (line 22))
+  Using cached sentry_sdk-2.4.0-py2.py3-none-any.whl.metadata (10 kB)
+Collecting setproctitle (from wandb->-r requirements.txt (line 22))
+  Using cached setproctitle-1.3.3-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.9 kB)
+Requirement already satisfied: ninja in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from envlight==0.1.0->-r requirements.txt (line 24)) (1.11.1.1)
+Collecting torch<4.0,>=1.11.0 (from lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached torch-2.3.0-cp38-cp38-manylinux1_x86_64.whl.metadata (26 kB)
+Requirement already satisfied: sympy in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from torch<4.0,>=1.11.0->lightning==2.0.0->-r requirements.txt (line 1)) (1.12)
+Collecting nvidia-cuda-nvrtc-cu12==12.1.105 (from torch<4.0,>=1.11.0->lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached nvidia_cuda_nvrtc_cu12-12.1.105-py3-none-manylinux1_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-cuda-runtime-cu12==12.1.105 (from torch<4.0,>=1.11.0->lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached nvidia_cuda_runtime_cu12-12.1.105-py3-none-manylinux1_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-cuda-cupti-cu12==12.1.105 (from torch<4.0,>=1.11.0->lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached nvidia_cuda_cupti_cu12-12.1.105-py3-none-manylinux1_x86_64.whl.metadata (1.6 kB)
+Collecting nvidia-cudnn-cu12==8.9.2.26 (from torch<4.0,>=1.11.0->lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached nvidia_cudnn_cu12-8.9.2.26-py3-none-manylinux1_x86_64.whl.metadata (1.6 kB)
+Collecting nvidia-cublas-cu12==12.1.3.1 (from torch<4.0,>=1.11.0->lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached nvidia_cublas_cu12-12.1.3.1-py3-none-manylinux1_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-cufft-cu12==11.0.2.54 (from torch<4.0,>=1.11.0->lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached nvidia_cufft_cu12-11.0.2.54-py3-none-manylinux1_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-curand-cu12==10.3.2.106 (from torch<4.0,>=1.11.0->lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached nvidia_curand_cu12-10.3.2.106-py3-none-manylinux1_x86_64.whl.metadata (1.5 kB)
+Collecting nvidia-cusolver-cu12==11.4.5.107 (from torch<4.0,>=1.11.0->lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached nvidia_cusolver_cu12-11.4.5.107-py3-none-manylinux1_x86_64.whl.metadata (1.6 kB)
+Collecting nvidia-cusparse-cu12==12.1.0.106 (from torch<4.0,>=1.11.0->lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached nvidia_cusparse_cu12-12.1.0.106-py3-none-manylinux1_x86_64.whl.metadata (1.6 kB)
+Collecting nvidia-nccl-cu12==2.20.5 (from torch<4.0,>=1.11.0->lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached nvidia_nccl_cu12-2.20.5-py3-none-manylinux2014_x86_64.whl.metadata (1.8 kB)
+Collecting nvidia-nvtx-cu12==12.1.105 (from torch<4.0,>=1.11.0->lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached nvidia_nvtx_cu12-12.1.105-py3-none-manylinux1_x86_64.whl.metadata (1.7 kB)
+Collecting triton==2.3.0 (from torch<4.0,>=1.11.0->lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached triton-2.3.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.4 kB)
+Collecting nvidia-nvjitlink-cu12 (from nvidia-cusolver-cu12==11.4.5.107->torch<4.0,>=1.11.0->lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached nvidia_nvjitlink_cu12-12.5.40-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting kornia-rs>=0.1.0 (from kornia->-r requirements.txt (line 36))
+  Using cached kornia_rs-0.1.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.7 kB)
+Requirement already satisfied: torchvision in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from taming-transformers-rom1504->-r requirements.txt (line 37)) (0.16.0)
+Collecting ftfy (from clip==1.0->-r requirements.txt (line 38))
+  Using cached ftfy-6.2.0-py3-none-any.whl.metadata (7.3 kB)
+Collecting opencv-python-headless (from controlnet_aux->-r requirements.txt (line 41))
+  Using cached opencv_python_headless-4.10.0.82-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (20 kB)
+Collecting timm<=0.6.7 (from controlnet_aux->-r requirements.txt (line 41))
+  Using cached timm-0.6.7-py3-none-any.whl.metadata (33 kB)
+Collecting scikit-image (from controlnet_aux->-r requirements.txt (line 41))
+  Using cached scikit_image-0.21.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (14 kB)
+Collecting toolz (from altair<6.0,>=4.2.0->gradio==3.50.2->-r requirements.txt (line 23))
+  Using cached toolz-0.12.1-py3-none-any.whl.metadata (5.1 kB)
+Collecting types-python-dateutil>=2.8.10 (from arrow<3.0,>=1.2.0->lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached types_python_dateutil-2.9.0.20240316-py3-none-any.whl.metadata (1.8 kB)
+Collecting soupsieve>1.2 (from beautifulsoup4<6.0,>=4.8.0->lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached soupsieve-2.5-py3-none-any.whl.metadata (4.7 kB)
+Collecting pytz (from dateutils<2.0->lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached pytz-2024.1-py2.py3-none-any.whl.metadata (22 kB)
+Collecting ordered-set<4.2.0,>=4.1.0 (from deepdiff<8.0,>=5.7.0->lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached ordered_set-4.1.0-py3-none-any.whl.metadata (5.3 kB)
+Collecting six>=1.4.0 (from docker-pycreds>=0.4.0->wandb->-r requirements.txt (line 22))
+  Using cached six-1.16.0-py2.py3-none-any.whl.metadata (1.8 kB)
+Collecting pydantic<3.0 (from lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached pydantic-1.10.15-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (150 kB)
+Collecting starlette<2.0 (from lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached starlette-0.22.0-py3-none-any.whl.metadata (5.8 kB)
+Collecting anyio<5,>=3.4.0 (from starlette<2.0->lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached anyio-4.4.0-py3-none-any.whl.metadata (4.6 kB)
+Collecting aiohttp!=4.0.0a0,!=4.0.0a1 (from fsspec[http]<2025.0,>2021.06.0->lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached aiohttp-3.9.5-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.5 kB)
+Collecting gitdb<5,>=4.0.1 (from gitpython!=3.1.29,>=1.0.0->wandb->-r requirements.txt (line 22))
+  Using cached gitdb-4.0.11-py3-none-any.whl.metadata (1.2 kB)
+Collecting cachetools<6.0,>=2.0.0 (from google-auth<3,>=1.6.3->tensorboard->-r requirements.txt (line 11))
+  Using cached cachetools-5.3.3-py3-none-any.whl.metadata (5.3 kB)
+Collecting pyasn1-modules>=0.2.1 (from google-auth<3,>=1.6.3->tensorboard->-r requirements.txt (line 11))
+  Using cached pyasn1_modules-0.4.0-py3-none-any.whl.metadata (3.4 kB)
+Collecting rsa<5,>=3.1.4 (from google-auth<3,>=1.6.3->tensorboard->-r requirements.txt (line 11))
+  Using cached rsa-4.9-py3-none-any.whl.metadata (4.2 kB)
+Collecting requests-oauthlib>=0.7.0 (from google-auth-oauthlib<1.1,>=0.5->tensorboard->-r requirements.txt (line 11))
+  Using cached requests_oauthlib-2.0.0-py2.py3-none-any.whl.metadata (11 kB)
+Collecting zipp>=0.5 (from importlib-metadata->diffusers==0.25.1->-r requirements.txt (line 7))
+  Using cached zipp-3.19.1-py3-none-any.whl.metadata (3.5 kB)
+Collecting blessed>=1.19.0 (from inquirer<5.0,>=2.10.0->lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached blessed-1.20.0-py2.py3-none-any.whl.metadata (13 kB)
+Collecting editor>=1.6.0 (from inquirer<5.0,>=2.10.0->lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached editor-1.6.6-py3-none-any.whl.metadata (2.3 kB)
+Collecting readchar>=3.0.6 (from inquirer<5.0,>=2.10.0->lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached readchar-4.1.0-py3-none-any.whl.metadata (7.5 kB)
+Collecting attrs>=22.2.0 (from jsonschema->trimesh[easy]->-r requirements.txt (line 18))
+  Using cached attrs-23.2.0-py3-none-any.whl.metadata (9.5 kB)
+Collecting jsonschema-specifications>=2023.03.6 (from jsonschema->trimesh[easy]->-r requirements.txt (line 18))
+  Using cached jsonschema_specifications-2023.12.1-py3-none-any.whl.metadata (3.0 kB)
+Collecting pkgutil-resolve-name>=1.3.10 (from jsonschema->trimesh[easy]->-r requirements.txt (line 18))
+  Using cached pkgutil_resolve_name-1.3.10-py3-none-any.whl.metadata (624 bytes)
+Collecting referencing>=0.28.4 (from jsonschema->trimesh[easy]->-r requirements.txt (line 18))
+  Using cached referencing-0.35.1-py3-none-any.whl.metadata (2.8 kB)
+Collecting rpds-py>=0.7.1 (from jsonschema->trimesh[easy]->-r requirements.txt (line 18))
+  Using cached rpds_py-0.18.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+Collecting pyjwt (from lightning-cloud>=0.5.31->lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached PyJWT-2.8.0-py3-none-any.whl.metadata (4.2 kB)
+Collecting boto3 (from lightning-cloud>=0.5.31->lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached boto3-1.34.118-py3-none-any.whl.metadata (6.6 kB)
+Collecting tzdata>=2022.1 (from pandas<3.0,>=1.0->gradio==3.50.2->-r requirements.txt (line 23))
+  Using cached tzdata-2024.1-py2.py3-none-any.whl.metadata (1.4 kB)
+Requirement already satisfied: charset-normalizer<4,>=2 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from requests<4.0->lightning==2.0.0->-r requirements.txt (line 1)) (2.0.4)
+Requirement already satisfied: idna<4,>=2.5 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from requests<4.0->lightning==2.0.0->-r requirements.txt (line 1)) (3.7)
+Requirement already satisfied: certifi>=2017.4.17 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from requests<4.0->lightning==2.0.0->-r requirements.txt (line 1)) (2024.2.2)
+Collecting markdown-it-py>=2.2.0 (from rich<15.0,>=12.3.0->lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached markdown_it_py-3.0.0-py3-none-any.whl.metadata (6.9 kB)
+Collecting pygments<3.0.0,>=2.13.0 (from rich<15.0,>=12.3.0->lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached pygments-2.18.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting itsdangerous<3.0.0,>=2.0.1 (from starsessions<2.0,>=1.2.1->lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+Collecting h11>=0.8 (from uvicorn<2.0->lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached h11-0.14.0-py3-none-any.whl.metadata (8.2 kB)
+Collecting wcwidth<0.3.0,>=0.2.12 (from ftfy->clip==1.0->-r requirements.txt (line 38))
+  Using cached wcwidth-0.2.13-py2.py3-none-any.whl.metadata (14 kB)
+Collecting httpcore==1.* (from httpx->gradio==3.50.2->-r requirements.txt (line 23))
+  Using cached httpcore-1.0.5-py3-none-any.whl.metadata (20 kB)
+Collecting sniffio (from httpx->gradio==3.50.2->-r requirements.txt (line 23))
+  Using cached sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting tifffile>=2022.8.12 (from scikit-image->controlnet_aux->-r requirements.txt (line 41))
+  Using cached tifffile-2023.7.10-py3-none-any.whl.metadata (31 kB)
+Collecting PyWavelets>=1.1.1 (from scikit-image->controlnet_aux->-r requirements.txt (line 41))
+  Using cached PyWavelets-1.4.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.9 kB)
+Collecting lazy_loader>=0.2 (from scikit-image->controlnet_aux->-r requirements.txt (line 41))
+  Using cached lazy_loader-0.4-py3-none-any.whl.metadata (7.6 kB)
+Collecting aiosignal>=1.1.2 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<2025.0,>2021.06.0->lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached aiosignal-1.3.1-py3-none-any.whl.metadata (4.0 kB)
+Collecting frozenlist>=1.1.1 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<2025.0,>2021.06.0->lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached frozenlist-1.4.1-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (12 kB)
+Collecting multidict<7.0,>=4.5 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<2025.0,>2021.06.0->lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached multidict-6.0.5-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.2 kB)
+Collecting yarl<2.0,>=1.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<2025.0,>2021.06.0->lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached yarl-1.9.4-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (31 kB)
+Collecting async-timeout<5.0,>=4.0 (from aiohttp!=4.0.0a0,!=4.0.0a1->fsspec[http]<2025.0,>2021.06.0->lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached async_timeout-4.0.3-py3-none-any.whl.metadata (4.2 kB)
+Collecting exceptiongroup>=1.0.2 (from anyio<5,>=3.4.0->starlette<2.0->lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached exceptiongroup-1.2.1-py3-none-any.whl.metadata (6.6 kB)
+Collecting runs (from editor>=1.6.0->inquirer<5.0,>=2.10.0->lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached runs-1.2.2-py3-none-any.whl.metadata (10 kB)
+Collecting xmod (from editor>=1.6.0->inquirer<5.0,>=2.10.0->lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached xmod-1.8.1-py3-none-any.whl.metadata (1.8 kB)
+Collecting smmap<6,>=3.0.1 (from gitdb<5,>=4.0.1->gitpython!=3.1.29,>=1.0.0->wandb->-r requirements.txt (line 22))
+  Using cached smmap-5.0.1-py3-none-any.whl.metadata (4.3 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich<15.0,>=12.3.0->lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Collecting pyasn1<0.7.0,>=0.4.6 (from pyasn1-modules>=0.2.1->google-auth<3,>=1.6.3->tensorboard->-r requirements.txt (line 11))
+  Using cached pyasn1-0.6.0-py2.py3-none-any.whl.metadata (8.3 kB)
+Collecting oauthlib>=3.0.0 (from requests-oauthlib>=0.7.0->google-auth-oauthlib<1.1,>=0.5->tensorboard->-r requirements.txt (line 11))
+  Using cached oauthlib-3.2.2-py3-none-any.whl.metadata (7.5 kB)
+Collecting botocore<1.35.0,>=1.34.118 (from boto3->lightning-cloud>=0.5.31->lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached botocore-1.34.118-py3-none-any.whl.metadata (5.7 kB)
+Collecting jmespath<2.0.0,>=0.7.1 (from boto3->lightning-cloud>=0.5.31->lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached jmespath-1.0.1-py3-none-any.whl.metadata (7.6 kB)
+Collecting s3transfer<0.11.0,>=0.10.0 (from boto3->lightning-cloud>=0.5.31->lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached s3transfer-0.10.1-py3-none-any.whl.metadata (1.7 kB)
+Requirement already satisfied: mpmath>=0.19 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from sympy->torch<4.0,>=1.11.0->lightning==2.0.0->-r requirements.txt (line 1)) (1.3.0)
+Collecting urllib3<3.0 (from lightning==2.0.0->-r requirements.txt (line 1))
+  Using cached urllib3-1.26.18-py2.py3-none-any.whl.metadata (48 kB)
+Using cached lightning-2.0.0-py3-none-any.whl (1.8 MB)
+Using cached omegaconf-2.3.0-py3-none-any.whl (79 kB)
+Using cached diffusers-0.25.1-py3-none-any.whl (1.8 MB)
+Using cached transformers-4.28.1-py3-none-any.whl (7.0 MB)
+Using cached gradio-3.50.2-py3-none-any.whl (20.3 MB)
+Using cached bitsandbytes-0.38.1-py3-none-any.whl (104.3 MB)
+Using cached gradio_client-0.6.1-py3-none-any.whl (299 kB)
+Using cached jaxtyping-0.2.19-py3-none-any.whl (24 kB)
+Using cached typeguard-4.3.0-py3-none-any.whl (35 kB)
+Using cached accelerate-0.30.1-py3-none-any.whl (302 kB)
+Using cached opencv_python-4.10.0.82-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (62.5 MB)
+Using cached tensorboard-2.14.0-py3-none-any.whl (5.5 MB)
+Using cached matplotlib-3.7.5-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (9.2 MB)
+Using cached imageio-2.34.1-py3-none-any.whl (313 kB)
+Using cached libigl-2.5.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (16.2 MB)
+Using cached xatlas-0.0.9-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (229 kB)
+Using cached PyMCubes-0.1.4-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (276 kB)
+Using cached wandb-0.17.0-py3-none-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (6.7 MB)
+Using cached torchmetrics-1.4.0.post0-py3-none-any.whl (868 kB)
+Using cached xformers-0.0.26.post1-cp38-cp38-manylinux2014_x86_64.whl (222.8 MB)
+Using cached torch-2.3.0-cp38-cp38-manylinux1_x86_64.whl (779.1 MB)
+Using cached nvidia_cublas_cu12-12.1.3.1-py3-none-manylinux1_x86_64.whl (410.6 MB)
+Using cached nvidia_cuda_cupti_cu12-12.1.105-py3-none-manylinux1_x86_64.whl (14.1 MB)
+Using cached nvidia_cuda_nvrtc_cu12-12.1.105-py3-none-manylinux1_x86_64.whl (23.7 MB)
+Using cached nvidia_cuda_runtime_cu12-12.1.105-py3-none-manylinux1_x86_64.whl (823 kB)
+Using cached nvidia_cudnn_cu12-8.9.2.26-py3-none-manylinux1_x86_64.whl (731.7 MB)
+Using cached nvidia_cufft_cu12-11.0.2.54-py3-none-manylinux1_x86_64.whl (121.6 MB)
+Using cached nvidia_curand_cu12-10.3.2.106-py3-none-manylinux1_x86_64.whl (56.5 MB)
+Using cached nvidia_cusolver_cu12-11.4.5.107-py3-none-manylinux1_x86_64.whl (124.2 MB)
+Using cached nvidia_cusparse_cu12-12.1.0.106-py3-none-manylinux1_x86_64.whl (196.0 MB)
+Using cached nvidia_nccl_cu12-2.20.5-py3-none-manylinux2014_x86_64.whl (176.2 MB)
+Using cached nvidia_nvtx_cu12-12.1.105-py3-none-manylinux1_x86_64.whl (99 kB)
+Using cached triton-2.3.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (168.0 MB)
+Using cached sentencepiece-0.2.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.3 MB)
+Using cached safetensors-0.4.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.2 MB)
+Using cached huggingface_hub-0.23.2-py3-none-any.whl (401 kB)
+Using cached einops-0.8.0-py3-none-any.whl (43 kB)
+Using cached kornia-0.7.2-py2.py3-none-any.whl (825 kB)
+Using cached taming_transformers_rom1504-0.0.6-py3-none-any.whl (51 kB)
+Using cached controlnet_aux-0.0.9-py3-none-any.whl (282 kB)
+Using cached absl_py-2.1.0-py3-none-any.whl (133 kB)
+Using cached aiofiles-23.2.1-py3-none-any.whl (15 kB)
+Using cached altair-5.3.0-py3-none-any.whl (857 kB)
+Using cached arrow-1.3.0-py3-none-any.whl (66 kB)
+Using cached beautifulsoup4-4.12.3-py3-none-any.whl (147 kB)
+Using cached click-8.1.7-py3-none-any.whl (97 kB)
+Using cached contourpy-1.1.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (301 kB)
+Using cached croniter-1.3.15-py2.py3-none-any.whl (19 kB)
+Using cached cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Using cached dateutils-0.6.12-py2.py3-none-any.whl (5.7 kB)
+Using cached deepdiff-7.0.1-py3-none-any.whl (80 kB)
+Using cached docker_pycreds-0.4.0-py2.py3-none-any.whl (9.0 kB)
+Using cached fastapi-0.88.0-py3-none-any.whl (55 kB)
+Using cached starlette-0.22.0-py3-none-any.whl (64 kB)
+Using cached fonttools-4.53.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (4.7 MB)
+Using cached fsspec-2023.12.2-py3-none-any.whl (168 kB)
+Using cached GitPython-3.1.43-py3-none-any.whl (207 kB)
+Using cached google_auth-2.29.0-py2.py3-none-any.whl (189 kB)
+Using cached google_auth_oauthlib-1.0.0-py2.py3-none-any.whl (18 kB)
+Using cached grpcio-1.64.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (5.6 MB)
+Using cached importlib_metadata-7.1.0-py3-none-any.whl (24 kB)
+Using cached importlib_resources-6.4.0-py3-none-any.whl (38 kB)
+Using cached inquirer-3.2.4-py3-none-any.whl (18 kB)
+Using cached jsonschema-4.22.0-py3-none-any.whl (88 kB)
+Using cached kiwisolver-1.4.5-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl (1.2 MB)
+Using cached kornia_rs-0.1.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.4 MB)
+Using cached lightning_cloud-0.5.69-py3-none-any.whl (1.1 MB)
+Using cached lightning_utilities-0.11.2-py3-none-any.whl (26 kB)
+Using cached Markdown-3.6-py3-none-any.whl (105 kB)
+Using cached orjson-3.10.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (142 kB)
+Using cached packaging-24.0-py3-none-any.whl (53 kB)
+Using cached pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)
+Using cached protobuf-4.25.3-cp37-abi3-manylinux2014_x86_64.whl (294 kB)
+Using cached psutil-5.9.8-cp36-abi3-manylinux_2_12_x86_64.manylinux2010_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (288 kB)
+Using cached pydantic-1.10.15-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.2 MB)
+Using cached pyparsing-3.1.2-py3-none-any.whl (103 kB)
+Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Using cached pytorch_lightning-2.2.5-py3-none-any.whl (802 kB)
+Using cached regex-2024.5.15-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (776 kB)
+Using cached rich-13.7.1-py3-none-any.whl (240 kB)
+Using cached scipy-1.10.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (34.5 MB)
+Using cached semantic_version-2.10.0-py2.py3-none-any.whl (15 kB)
+Using cached sentry_sdk-2.4.0-py2.py3-none-any.whl (289 kB)
+Using cached starsessions-1.3.0-py3-none-any.whl (10 kB)
+Using cached tensorboard_data_server-0.7.2-py3-none-any.whl (2.4 kB)
+Using cached timm-0.6.7-py3-none-any.whl (509 kB)
+Using cached tokenizers-0.13.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (7.8 MB)
+Using cached traitlets-5.14.3-py3-none-any.whl (85 kB)
+Using cached uvicorn-0.30.1-py3-none-any.whl (62 kB)
+Using cached websocket_client-1.8.0-py3-none-any.whl (58 kB)
+Using cached websockets-11.0.3-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (130 kB)
+Using cached werkzeug-3.0.3-py3-none-any.whl (227 kB)
+Using cached chardet-5.2.0-py3-none-any.whl (199 kB)
+Using cached colorlog-6.8.2-py3-none-any.whl (11 kB)
+Using cached embreex-2.17.7.post4-cp38-cp38-manylinux_2_28_x86_64.whl (17.0 MB)
+Using cached ftfy-6.2.0-py3-none-any.whl (54 kB)
+Using cached httpx-0.27.0-py3-none-any.whl (75 kB)
+Using cached httpcore-1.0.5-py3-none-any.whl (77 kB)
+Using cached imageio_ffmpeg-0.5.1-py3-none-manylinux2010_x86_64.whl (26.9 MB)
+Using cached lxml-5.2.2-cp38-cp38-manylinux_2_28_x86_64.whl (5.1 MB)
+Using cached mapbox_earcut-1.0.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (104 kB)
+Using cached opencv_python_headless-4.10.0.82-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (49.9 MB)
+Using cached platformdirs-4.2.2-py3-none-any.whl (18 kB)
+Using cached pydub-0.25.1-py2.py3-none-any.whl (32 kB)
+Using cached python_multipart-0.0.9-py3-none-any.whl (22 kB)
+Using cached Rtree-1.2.0-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (535 kB)
+Using cached scikit_image-0.21.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (13.9 MB)
+Using cached setproctitle-1.3.3-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (31 kB)
+Using cached shapely-2.0.4-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.5 MB)
+Using cached svg.path-6.3-py2.py3-none-any.whl (16 kB)
+Using cached trimesh-4.4.0-py3-none-any.whl (694 kB)
+Using cached vhacdx-0.0.6-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (206 kB)
+Using cached xxhash-3.4.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (194 kB)
+Using cached aiohttp-3.9.5-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.3 MB)
+Using cached anyio-4.4.0-py3-none-any.whl (86 kB)
+Using cached attrs-23.2.0-py3-none-any.whl (60 kB)
+Using cached blessed-1.20.0-py2.py3-none-any.whl (58 kB)
+Using cached cachetools-5.3.3-py3-none-any.whl (9.3 kB)
+Using cached editor-1.6.6-py3-none-any.whl (4.0 kB)
+Using cached gitdb-4.0.11-py3-none-any.whl (62 kB)
+Using cached h11-0.14.0-py3-none-any.whl (58 kB)
+Using cached itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+Using cached jsonschema_specifications-2023.12.1-py3-none-any.whl (18 kB)
+Using cached lazy_loader-0.4-py3-none-any.whl (12 kB)
+Using cached markdown_it_py-3.0.0-py3-none-any.whl (87 kB)
+Using cached ordered_set-4.1.0-py3-none-any.whl (7.6 kB)
+Using cached pkgutil_resolve_name-1.3.10-py3-none-any.whl (4.7 kB)
+Using cached pyasn1_modules-0.4.0-py3-none-any.whl (181 kB)
+Using cached pygments-2.18.0-py3-none-any.whl (1.2 MB)
+Using cached pytz-2024.1-py2.py3-none-any.whl (505 kB)
+Using cached PyWavelets-1.4.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (6.9 MB)
+Using cached readchar-4.1.0-py3-none-any.whl (9.1 kB)
+Using cached referencing-0.35.1-py3-none-any.whl (26 kB)
+Using cached requests_oauthlib-2.0.0-py2.py3-none-any.whl (24 kB)
+Using cached rpds_py-0.18.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.1 MB)
+Using cached rsa-4.9-py3-none-any.whl (34 kB)
+Using cached six-1.16.0-py2.py3-none-any.whl (11 kB)
+Using cached sniffio-1.3.1-py3-none-any.whl (10 kB)
+Using cached soupsieve-2.5-py3-none-any.whl (36 kB)
+Using cached tifffile-2023.7.10-py3-none-any.whl (220 kB)
+Using cached types_python_dateutil-2.9.0.20240316-py3-none-any.whl (9.7 kB)
+Using cached tzdata-2024.1-py2.py3-none-any.whl (345 kB)
+Using cached wcwidth-0.2.13-py2.py3-none-any.whl (34 kB)
+Using cached zipp-3.19.1-py3-none-any.whl (9.0 kB)
+Using cached boto3-1.34.118-py3-none-any.whl (139 kB)
+Using cached PyJWT-2.8.0-py3-none-any.whl (22 kB)
+Using cached toolz-0.12.1-py3-none-any.whl (56 kB)
+Using cached aiosignal-1.3.1-py3-none-any.whl (7.6 kB)
+Using cached async_timeout-4.0.3-py3-none-any.whl (5.7 kB)
+Using cached botocore-1.34.118-py3-none-any.whl (12.3 MB)
+Using cached urllib3-1.26.18-py2.py3-none-any.whl (143 kB)
+Using cached exceptiongroup-1.2.1-py3-none-any.whl (16 kB)
+Using cached frozenlist-1.4.1-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (240 kB)
+Using cached jmespath-1.0.1-py3-none-any.whl (20 kB)
+Using cached mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Using cached multidict-6.0.5-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (129 kB)
+Using cached oauthlib-3.2.2-py3-none-any.whl (151 kB)
+Using cached pyasn1-0.6.0-py2.py3-none-any.whl (85 kB)
+Using cached s3transfer-0.10.1-py3-none-any.whl (82 kB)
+Using cached smmap-5.0.1-py3-none-any.whl (24 kB)
+Using cached yarl-1.9.4-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (308 kB)
+Using cached nvidia_nvjitlink_cu12-12.5.40-py3-none-manylinux2014_x86_64.whl (21.3 MB)
+Using cached runs-1.2.2-py3-none-any.whl (7.0 kB)
+Using cached xmod-1.8.1-py3-none-any.whl (4.6 kB)
+Building wheels for collected packages: nerfacc, tinycudann, nvdiffrast, envlight, clip
+  Building wheel for nerfacc (setup.py): started
+  Building wheel for nerfacc (setup.py): still running...
+  Building wheel for nerfacc (setup.py): still running...
+  Building wheel for nerfacc (setup.py): still running...
+  Building wheel for nerfacc (setup.py): finished with status 'done'
+  Created wheel for nerfacc: filename=nerfacc-0.5.2-cp38-cp38-linux_x86_64.whl size=1075984 sha256=ac210dbeec2687142bf55f9f03e0097fab309d1c67690b2da6bf1dececffb52f
+  Stored in directory: /gpfs/scratch1/nodespecific/gcn54/jhuizing.6497613/pip-ephem-wheel-cache-uqbffbmn/wheels/82/df/61/d1ebba6bc24f51d9ddcb3a4ff3565b4afd97a0e0658b2b34cb
+  Building wheel for tinycudann (setup.py): started
+  Building wheel for tinycudann (setup.py): still running...
+  Building wheel for tinycudann (setup.py): still running...
+  Building wheel for tinycudann (setup.py): finished with status 'done'
+  Created wheel for tinycudann: filename=tinycudann-1.7-cp38-cp38-linux_x86_64.whl size=31092486 sha256=7230600a1c609321a1cb1b7352a52b0bebb0cea0c2489f9ad358aff91f6111c4
+  Stored in directory: /gpfs/scratch1/nodespecific/gcn54/jhuizing.6497613/pip-ephem-wheel-cache-uqbffbmn/wheels/97/6e/c0/8979c809da09536d89298d5801aaf445afd74572d9c5ad53d0
+  Building wheel for nvdiffrast (setup.py): started
+  Building wheel for nvdiffrast (setup.py): finished with status 'done'
+  Created wheel for nvdiffrast: filename=nvdiffrast-0.3.1-py3-none-any.whl size=137847 sha256=08fa973dc229be7813ac82a49785f4bd50d8b868190a11ca20622024c54bcf91
+  Stored in directory: /gpfs/scratch1/nodespecific/gcn54/jhuizing.6497613/pip-ephem-wheel-cache-uqbffbmn/wheels/b6/51/cf/80e2c7535aac8230bb5627c77786933ccb3d3cdec0d0272627
+  Building wheel for envlight (setup.py): started
+  Building wheel for envlight (setup.py): finished with status 'done'
+  Created wheel for envlight: filename=envlight-0.1.0-py3-none-any.whl size=40356 sha256=3fca806657823402d663a6f57986e649cd16021ad4053d7ef6ffcd2fe54a74ee
+  Stored in directory: /gpfs/scratch1/nodespecific/gcn54/jhuizing.6497613/pip-ephem-wheel-cache-uqbffbmn/wheels/d8/70/df/657fc3444e6c70f214ea65eddcd49a9c5536b1ee738829ccc3
+  Building wheel for clip (setup.py): started
+  Building wheel for clip (setup.py): finished with status 'done'
+  Created wheel for clip: filename=clip-1.0-py3-none-any.whl size=1369499 sha256=3d7b87d730567826aa8cd60857284139c98b59adb80c12aa087e143634703902
+  Stored in directory: /gpfs/scratch1/nodespecific/gcn54/jhuizing.6497613/pip-ephem-wheel-cache-uqbffbmn/wheels/ab/4f/3a/5e51521b55997aa6f0690e095c08824219753128ce8d9969a3
+Successfully built nerfacc tinycudann nvdiffrast envlight clip
+Installing collected packages: wcwidth, tokenizers, tinycudann, sentencepiece, pytz, pysdf, pydub, ffmpy, bitsandbytes, antlr4-python3-runtime, zipp, xxhash, xmod, xatlas, werkzeug, websockets, websocket-client, vhacdx, urllib3, tzdata, types-python-dateutil, triton, trimesh, traitlets, toolz, tifffile, tensorboard-data-server, svg.path, soupsieve, sniffio, smmap, six, shapely, setproctitle, semantic-version, scipy, safetensors, rtree, rpds-py, regex, readchar, PyWavelets, python-multipart, pyparsing, pyjwt, pygments, pydantic, pyasn1, psutil, protobuf, platformdirs, pkgutil-resolve-name, packaging, orjson, ordered-set, opencv-python-headless, opencv-python, omegaconf, oauthlib, nvidia-nvtx-cu12, nvidia-nvjitlink-cu12, nvidia-nccl-cu12, nvidia-curand-cu12, nvidia-cufft-cu12, nvidia-cuda-runtime-cu12, nvidia-cuda-nvrtc-cu12, nvidia-cuda-cupti-cu12, nvidia-cublas-cu12, nvdiffrast, multidict, mdurl, mapbox-earcut, lxml, kornia-rs, kiwisolver, jmespath, itsdangerous, imageio-ffmpeg, imageio, h11, grpcio, ftfy, fsspec, frozenlist, fonttools, exceptiongroup, embreex, einops, cycler, contourpy, colorlog, click, chardet, cachetools, attrs, async-timeout, aiofiles, absl-py, yarl, uvicorn, sentry-sdk, runs, rsa, referencing, python-dateutil, PyMCubes, pyasn1-modules, nvidia-cusparse-cu12, nvidia-cudnn-cu12, markdown-it-py, lightning-utilities, libigl, lazy_loader, importlib-resources, importlib-metadata, httpcore, gitdb, envlight, docker-pycreds, deepdiff, blessed, beautifulsoup4, anyio, aiosignal, typeguard, starlette, scikit-image, rich, requests-oauthlib, pycollada, pandas, nvidia-cusolver-cu12, matplotlib, markdown, jsonschema-specifications, huggingface_hub, httpx, google-auth, gitpython, editor, dateutils, croniter, botocore, arrow, aiohttp, wandb, transformers, torch, starsessions, s3transfer, jsonschema, jaxtyping, inquirer, gradio-client, google-auth-oauthlib, fastapi, diffusers, xformers, torchmetrics, tensorboard, nerfacc, kornia, boto3, altair, accelerate, timm, pytorch-lightning, lightning-cloud, gradio, clip, taming-transformers-rom1504, lightning, controlnet_aux
+  Attempting uninstall: urllib3
+    Found existing installation: urllib3 2.2.1
+    Uninstalling urllib3-2.2.1:
+      Successfully uninstalled urllib3-2.2.1
+  Attempting uninstall: triton
+    Found existing installation: triton 2.1.0
+    Uninstalling triton-2.1.0:
+      Successfully uninstalled triton-2.1.0
+  Attempting uninstall: torch
+    Found existing installation: torch 2.1.0
+    Uninstalling torch-2.1.0:
+      Successfully uninstalled torch-2.1.0
+Successfully installed PyMCubes-0.1.4 PyWavelets-1.4.1 absl-py-2.1.0 accelerate-0.30.1 aiofiles-23.2.1 aiohttp-3.9.5 aiosignal-1.3.1 altair-5.3.0 antlr4-python3-runtime-4.9.3 anyio-4.4.0 arrow-1.3.0 async-timeout-4.0.3 attrs-23.2.0 beautifulsoup4-4.12.3 bitsandbytes-0.38.1 blessed-1.20.0 boto3-1.34.118 botocore-1.34.118 cachetools-5.3.3 chardet-5.2.0 click-8.1.7 clip-1.0 colorlog-6.8.2 contourpy-1.1.1 controlnet_aux-0.0.9 croniter-1.3.15 cycler-0.12.1 dateutils-0.6.12 deepdiff-7.0.1 diffusers-0.25.1 docker-pycreds-0.4.0 editor-1.6.6 einops-0.8.0 embreex-2.17.7.post4 envlight-0.1.0 exceptiongroup-1.2.1 fastapi-0.88.0 ffmpy-0.3.2 fonttools-4.53.0 frozenlist-1.4.1 fsspec-2023.12.2 ftfy-6.2.0 gitdb-4.0.11 gitpython-3.1.43 google-auth-2.29.0 google-auth-oauthlib-1.0.0 gradio-3.50.2 gradio-client-0.6.1 grpcio-1.64.1 h11-0.14.0 httpcore-1.0.5 httpx-0.27.0 huggingface_hub-0.23.2 imageio-2.34.1 imageio-ffmpeg-0.5.1 importlib-metadata-7.1.0 importlib-resources-6.4.0 inquirer-3.2.4 itsdangerous-2.2.0 jaxtyping-0.2.19 jmespath-1.0.1 jsonschema-4.22.0 jsonschema-specifications-2023.12.1 kiwisolver-1.4.5 kornia-0.7.2 kornia-rs-0.1.3 lazy_loader-0.4 libigl-2.5.1 lightning-2.0.0 lightning-cloud-0.5.69 lightning-utilities-0.11.2 lxml-5.2.2 mapbox-earcut-1.0.1 markdown-3.6 markdown-it-py-3.0.0 matplotlib-3.7.5 mdurl-0.1.2 multidict-6.0.5 nerfacc-0.5.2 nvdiffrast-0.3.1 nvidia-cublas-cu12-12.1.3.1 nvidia-cuda-cupti-cu12-12.1.105 nvidia-cuda-nvrtc-cu12-12.1.105 nvidia-cuda-runtime-cu12-12.1.105 nvidia-cudnn-cu12-8.9.2.26 nvidia-cufft-cu12-11.0.2.54 nvidia-curand-cu12-10.3.2.106 nvidia-cusolver-cu12-11.4.5.107 nvidia-cusparse-cu12-12.1.0.106 nvidia-nccl-cu12-2.20.5 nvidia-nvjitlink-cu12-12.5.40 nvidia-nvtx-cu12-12.1.105 oauthlib-3.2.2 omegaconf-2.3.0 opencv-python-4.10.0.82 opencv-python-headless-4.10.0.82 ordered-set-4.1.0 orjson-3.10.3 packaging-24.0 pandas-2.0.3 pkgutil-resolve-name-1.3.10 platformdirs-4.2.2 protobuf-4.25.3 psutil-5.9.8 pyasn1-0.6.0 pyasn1-modules-0.4.0 pycollada-0.8 pydantic-1.10.15 pydub-0.25.1 pygments-2.18.0 pyjwt-2.8.0 pyparsing-3.1.2 pysdf-0.1.9 python-dateutil-2.9.0.post0 python-multipart-0.0.9 pytorch-lightning-2.2.5 pytz-2024.1 readchar-4.1.0 referencing-0.35.1 regex-2024.5.15 requests-oauthlib-2.0.0 rich-13.7.1 rpds-py-0.18.1 rsa-4.9 rtree-1.2.0 runs-1.2.2 s3transfer-0.10.1 safetensors-0.4.3 scikit-image-0.21.0 scipy-1.10.1 semantic-version-2.10.0 sentencepiece-0.2.0 sentry-sdk-2.4.0 setproctitle-1.3.3 shapely-2.0.4 six-1.16.0 smmap-5.0.1 sniffio-1.3.1 soupsieve-2.5 starlette-0.22.0 starsessions-1.3.0 svg.path-6.3 taming-transformers-rom1504-0.0.6 tensorboard-2.14.0 tensorboard-data-server-0.7.2 tifffile-2023.7.10 timm-0.6.7 tinycudann-1.7 tokenizers-0.13.3 toolz-0.12.1 torch-2.3.0 torchmetrics-1.4.0.post0 traitlets-5.14.3 transformers-4.28.1 trimesh-4.4.0 triton-2.3.0 typeguard-4.3.0 types-python-dateutil-2.9.0.20240316 tzdata-2024.1 urllib3-1.26.18 uvicorn-0.30.1 vhacdx-0.0.6 wandb-0.17.0 wcwidth-0.2.13 websocket-client-1.8.0 websockets-11.0.3 werkzeug-3.0.3 xatlas-0.0.9 xformers-0.0.26.post1 xmod-1.8.1 xxhash-3.4.1 yarl-1.9.4 zipp-3.19.1
+✅ installed requirements.txt
+🚀 installing diff-gaussian-rasterization and simple-knn
+fatal: destination path 'diff-gaussian-rasterization' already exists and is not an empty directory.
+fatal: destination path 'simple-knn' already exists and is not an empty directory.
+ERROR: Directory './diff-gaussian-rasterization' is not installable. Neither 'setup.py' nor 'pyproject.toml' found.
+✅ installed diff gaus raster
+ERROR: Directory './simple-knn' is not installable. Neither 'setup.py' nor 'pyproject.toml' found.
+✅ installed diff gaus raster
+🚀 installing open3d
+Collecting open3d
+  Using cached open3d-0.18.0-cp38-cp38-manylinux_2_27_x86_64.whl.metadata (4.2 kB)
+Requirement already satisfied: numpy>=1.18.0 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from open3d) (1.24.3)
+Collecting dash>=2.6.0 (from open3d)
+  Using cached dash-2.17.0-py3-none-any.whl.metadata (10 kB)
+Requirement already satisfied: werkzeug>=2.2.3 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from open3d) (3.0.3)
+Collecting nbformat>=5.7.0 (from open3d)
+  Using cached nbformat-5.10.4-py3-none-any.whl.metadata (3.6 kB)
+Collecting configargparse (from open3d)
+  Using cached ConfigArgParse-1.7-py3-none-any.whl.metadata (23 kB)
+Collecting ipywidgets>=8.0.4 (from open3d)
+  Using cached ipywidgets-8.1.3-py3-none-any.whl.metadata (2.4 kB)
+Collecting addict (from open3d)
+  Using cached addict-2.4.0-py3-none-any.whl.metadata (1.0 kB)
+Requirement already satisfied: pillow>=9.3.0 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from open3d) (10.3.0)
+Requirement already satisfied: matplotlib>=3 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from open3d) (3.7.5)
+Requirement already satisfied: pandas>=1.0 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from open3d) (2.0.3)
+Requirement already satisfied: pyyaml>=5.4.1 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from open3d) (6.0.1)
+Collecting scikit-learn>=0.21 (from open3d)
+  Using cached scikit_learn-1.3.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+Requirement already satisfied: tqdm in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from open3d) (4.66.4)
+Collecting pyquaternion (from open3d)
+  Using cached pyquaternion-0.9.9-py3-none-any.whl.metadata (1.4 kB)
+Collecting Flask<3.1,>=1.0.4 (from dash>=2.6.0->open3d)
+  Using cached flask-3.0.3-py3-none-any.whl.metadata (3.2 kB)
+Collecting plotly>=5.0.0 (from dash>=2.6.0->open3d)
+  Using cached plotly-5.22.0-py3-none-any.whl.metadata (7.1 kB)
+Collecting dash-html-components==2.0.0 (from dash>=2.6.0->open3d)
+  Using cached dash_html_components-2.0.0-py3-none-any.whl.metadata (3.8 kB)
+Collecting dash-core-components==2.0.0 (from dash>=2.6.0->open3d)
+  Using cached dash_core_components-2.0.0-py3-none-any.whl.metadata (2.9 kB)
+Collecting dash-table==5.0.0 (from dash>=2.6.0->open3d)
+  Using cached dash_table-5.0.0-py3-none-any.whl.metadata (2.4 kB)
+Requirement already satisfied: importlib-metadata in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from dash>=2.6.0->open3d) (7.1.0)
+Requirement already satisfied: typing-extensions>=4.1.1 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from dash>=2.6.0->open3d) (4.11.0)
+Requirement already satisfied: requests in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from dash>=2.6.0->open3d) (2.32.2)
+Collecting retrying (from dash>=2.6.0->open3d)
+  Using cached retrying-1.3.4-py3-none-any.whl.metadata (6.9 kB)
+Collecting nest-asyncio (from dash>=2.6.0->open3d)
+  Using cached nest_asyncio-1.6.0-py3-none-any.whl.metadata (2.8 kB)
+Requirement already satisfied: setuptools in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from dash>=2.6.0->open3d) (69.5.1)
+Collecting comm>=0.1.3 (from ipywidgets>=8.0.4->open3d)
+  Using cached comm-0.2.2-py3-none-any.whl.metadata (3.7 kB)
+Collecting ipython>=6.1.0 (from ipywidgets>=8.0.4->open3d)
+  Using cached ipython-8.12.3-py3-none-any.whl.metadata (5.7 kB)
+Requirement already satisfied: traitlets>=4.3.1 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from ipywidgets>=8.0.4->open3d) (5.14.3)
+Collecting widgetsnbextension~=4.0.11 (from ipywidgets>=8.0.4->open3d)
+  Using cached widgetsnbextension-4.0.11-py3-none-any.whl.metadata (1.6 kB)
+Collecting jupyterlab-widgets~=3.0.11 (from ipywidgets>=8.0.4->open3d)
+  Using cached jupyterlab_widgets-3.0.11-py3-none-any.whl.metadata (4.1 kB)
+Requirement already satisfied: contourpy>=1.0.1 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from matplotlib>=3->open3d) (1.1.1)
+Requirement already satisfied: cycler>=0.10 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from matplotlib>=3->open3d) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from matplotlib>=3->open3d) (4.53.0)
+Requirement already satisfied: kiwisolver>=1.0.1 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from matplotlib>=3->open3d) (1.4.5)
+Requirement already satisfied: packaging>=20.0 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from matplotlib>=3->open3d) (24.0)
+Requirement already satisfied: pyparsing>=2.3.1 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from matplotlib>=3->open3d) (3.1.2)
+Requirement already satisfied: python-dateutil>=2.7 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from matplotlib>=3->open3d) (2.9.0.post0)
+Requirement already satisfied: importlib-resources>=3.2.0 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from matplotlib>=3->open3d) (6.4.0)
+Collecting fastjsonschema>=2.15 (from nbformat>=5.7.0->open3d)
+  Using cached fastjsonschema-2.19.1-py3-none-any.whl.metadata (2.1 kB)
+Requirement already satisfied: jsonschema>=2.6 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from nbformat>=5.7.0->open3d) (4.22.0)
+Collecting jupyter-core!=5.0.*,>=4.12 (from nbformat>=5.7.0->open3d)
+  Using cached jupyter_core-5.7.2-py3-none-any.whl.metadata (3.4 kB)
+Requirement already satisfied: pytz>=2020.1 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from pandas>=1.0->open3d) (2024.1)
+Requirement already satisfied: tzdata>=2022.1 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from pandas>=1.0->open3d) (2024.1)
+Requirement already satisfied: scipy>=1.5.0 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from scikit-learn>=0.21->open3d) (1.10.1)
+Collecting joblib>=1.1.1 (from scikit-learn>=0.21->open3d)
+  Using cached joblib-1.4.2-py3-none-any.whl.metadata (5.4 kB)
+Collecting threadpoolctl>=2.0.0 (from scikit-learn>=0.21->open3d)
+  Using cached threadpoolctl-3.5.0-py3-none-any.whl.metadata (13 kB)
+Requirement already satisfied: MarkupSafe>=2.1.1 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from werkzeug>=2.2.3->open3d) (2.1.3)
+Requirement already satisfied: Jinja2>=3.1.2 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from Flask<3.1,>=1.0.4->dash>=2.6.0->open3d) (3.1.4)
+Requirement already satisfied: itsdangerous>=2.1.2 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from Flask<3.1,>=1.0.4->dash>=2.6.0->open3d) (2.2.0)
+Requirement already satisfied: click>=8.1.3 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from Flask<3.1,>=1.0.4->dash>=2.6.0->open3d) (8.1.7)
+Collecting blinker>=1.6.2 (from Flask<3.1,>=1.0.4->dash>=2.6.0->open3d)
+  Using cached blinker-1.8.2-py3-none-any.whl.metadata (1.6 kB)
+Requirement already satisfied: zipp>=0.5 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from importlib-metadata->dash>=2.6.0->open3d) (3.19.1)
+Collecting backcall (from ipython>=6.1.0->ipywidgets>=8.0.4->open3d)
+  Using cached backcall-0.2.0-py2.py3-none-any.whl.metadata (2.0 kB)
+Collecting decorator (from ipython>=6.1.0->ipywidgets>=8.0.4->open3d)
+  Using cached decorator-5.1.1-py3-none-any.whl.metadata (4.0 kB)
+Collecting jedi>=0.16 (from ipython>=6.1.0->ipywidgets>=8.0.4->open3d)
+  Using cached jedi-0.19.1-py2.py3-none-any.whl.metadata (22 kB)
+Collecting matplotlib-inline (from ipython>=6.1.0->ipywidgets>=8.0.4->open3d)
+  Using cached matplotlib_inline-0.1.7-py3-none-any.whl.metadata (3.9 kB)
+Collecting pickleshare (from ipython>=6.1.0->ipywidgets>=8.0.4->open3d)
+  Using cached pickleshare-0.7.5-py2.py3-none-any.whl.metadata (1.5 kB)
+Collecting prompt-toolkit!=3.0.37,<3.1.0,>=3.0.30 (from ipython>=6.1.0->ipywidgets>=8.0.4->open3d)
+  Using cached prompt_toolkit-3.0.45-py3-none-any.whl.metadata (6.4 kB)
+Requirement already satisfied: pygments>=2.4.0 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from ipython>=6.1.0->ipywidgets>=8.0.4->open3d) (2.18.0)
+Collecting stack-data (from ipython>=6.1.0->ipywidgets>=8.0.4->open3d)
+  Using cached stack_data-0.6.3-py3-none-any.whl.metadata (18 kB)
+Collecting pexpect>4.3 (from ipython>=6.1.0->ipywidgets>=8.0.4->open3d)
+  Using cached pexpect-4.9.0-py2.py3-none-any.whl.metadata (2.5 kB)
+Requirement already satisfied: attrs>=22.2.0 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from jsonschema>=2.6->nbformat>=5.7.0->open3d) (23.2.0)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from jsonschema>=2.6->nbformat>=5.7.0->open3d) (2023.12.1)
+Requirement already satisfied: pkgutil-resolve-name>=1.3.10 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from jsonschema>=2.6->nbformat>=5.7.0->open3d) (1.3.10)
+Requirement already satisfied: referencing>=0.28.4 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from jsonschema>=2.6->nbformat>=5.7.0->open3d) (0.35.1)
+Requirement already satisfied: rpds-py>=0.7.1 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from jsonschema>=2.6->nbformat>=5.7.0->open3d) (0.18.1)
+Requirement already satisfied: platformdirs>=2.5 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from jupyter-core!=5.0.*,>=4.12->nbformat>=5.7.0->open3d) (4.2.2)
+Collecting tenacity>=6.2.0 (from plotly>=5.0.0->dash>=2.6.0->open3d)
+  Using cached tenacity-8.3.0-py3-none-any.whl.metadata (1.2 kB)
+Requirement already satisfied: six>=1.5 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from python-dateutil>=2.7->matplotlib>=3->open3d) (1.16.0)
+Requirement already satisfied: charset-normalizer<4,>=2 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from requests->dash>=2.6.0->open3d) (2.0.4)
+Requirement already satisfied: idna<4,>=2.5 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from requests->dash>=2.6.0->open3d) (3.7)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from requests->dash>=2.6.0->open3d) (1.26.18)
+Requirement already satisfied: certifi>=2017.4.17 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from requests->dash>=2.6.0->open3d) (2024.2.2)
+Collecting parso<0.9.0,>=0.8.3 (from jedi>=0.16->ipython>=6.1.0->ipywidgets>=8.0.4->open3d)
+  Using cached parso-0.8.4-py2.py3-none-any.whl.metadata (7.7 kB)
+Collecting ptyprocess>=0.5 (from pexpect>4.3->ipython>=6.1.0->ipywidgets>=8.0.4->open3d)
+  Using cached ptyprocess-0.7.0-py2.py3-none-any.whl.metadata (1.3 kB)
+Requirement already satisfied: wcwidth in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from prompt-toolkit!=3.0.37,<3.1.0,>=3.0.30->ipython>=6.1.0->ipywidgets>=8.0.4->open3d) (0.2.13)
+Collecting executing>=1.2.0 (from stack-data->ipython>=6.1.0->ipywidgets>=8.0.4->open3d)
+  Using cached executing-2.0.1-py2.py3-none-any.whl.metadata (9.0 kB)
+Collecting asttokens>=2.1.0 (from stack-data->ipython>=6.1.0->ipywidgets>=8.0.4->open3d)
+  Using cached asttokens-2.4.1-py2.py3-none-any.whl.metadata (5.2 kB)
+Collecting pure-eval (from stack-data->ipython>=6.1.0->ipywidgets>=8.0.4->open3d)
+  Using cached pure_eval-0.2.2-py3-none-any.whl.metadata (6.2 kB)
+Using cached open3d-0.18.0-cp38-cp38-manylinux_2_27_x86_64.whl (399.7 MB)
+Using cached dash-2.17.0-py3-none-any.whl (7.5 MB)
+Using cached dash_core_components-2.0.0-py3-none-any.whl (3.8 kB)
+Using cached dash_html_components-2.0.0-py3-none-any.whl (4.1 kB)
+Using cached dash_table-5.0.0-py3-none-any.whl (3.9 kB)
+Using cached ipywidgets-8.1.3-py3-none-any.whl (139 kB)
+Using cached nbformat-5.10.4-py3-none-any.whl (78 kB)
+Using cached scikit_learn-1.3.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (11.1 MB)
+Using cached addict-2.4.0-py3-none-any.whl (3.8 kB)
+Using cached ConfigArgParse-1.7-py3-none-any.whl (25 kB)
+Using cached pyquaternion-0.9.9-py3-none-any.whl (14 kB)
+Using cached comm-0.2.2-py3-none-any.whl (7.2 kB)
+Using cached fastjsonschema-2.19.1-py3-none-any.whl (23 kB)
+Using cached flask-3.0.3-py3-none-any.whl (101 kB)
+Using cached ipython-8.12.3-py3-none-any.whl (798 kB)
+Using cached joblib-1.4.2-py3-none-any.whl (301 kB)
+Using cached jupyter_core-5.7.2-py3-none-any.whl (28 kB)
+Using cached jupyterlab_widgets-3.0.11-py3-none-any.whl (214 kB)
+Using cached plotly-5.22.0-py3-none-any.whl (16.4 MB)
+Using cached threadpoolctl-3.5.0-py3-none-any.whl (18 kB)
+Using cached widgetsnbextension-4.0.11-py3-none-any.whl (2.3 MB)
+Using cached nest_asyncio-1.6.0-py3-none-any.whl (5.2 kB)
+Using cached retrying-1.3.4-py3-none-any.whl (11 kB)
+Using cached blinker-1.8.2-py3-none-any.whl (9.5 kB)
+Using cached jedi-0.19.1-py2.py3-none-any.whl (1.6 MB)
+Using cached pexpect-4.9.0-py2.py3-none-any.whl (63 kB)
+Using cached prompt_toolkit-3.0.45-py3-none-any.whl (386 kB)
+Using cached tenacity-8.3.0-py3-none-any.whl (25 kB)
+Using cached backcall-0.2.0-py2.py3-none-any.whl (11 kB)
+Using cached decorator-5.1.1-py3-none-any.whl (9.1 kB)
+Using cached matplotlib_inline-0.1.7-py3-none-any.whl (9.9 kB)
+Using cached pickleshare-0.7.5-py2.py3-none-any.whl (6.9 kB)
+Using cached stack_data-0.6.3-py3-none-any.whl (24 kB)
+Using cached asttokens-2.4.1-py2.py3-none-any.whl (27 kB)
+Using cached executing-2.0.1-py2.py3-none-any.whl (24 kB)
+Using cached parso-0.8.4-py2.py3-none-any.whl (103 kB)
+Using cached ptyprocess-0.7.0-py2.py3-none-any.whl (13 kB)
+Using cached pure_eval-0.2.2-py3-none-any.whl (11 kB)
+Installing collected packages: pure-eval, ptyprocess, pickleshare, fastjsonschema, dash-table, dash-html-components, dash-core-components, backcall, addict, widgetsnbextension, threadpoolctl, tenacity, retrying, pyquaternion, prompt-toolkit, pexpect, parso, nest-asyncio, matplotlib-inline, jupyterlab-widgets, jupyter-core, joblib, executing, decorator, configargparse, comm, blinker, asttokens, stack-data, scikit-learn, plotly, jedi, Flask, ipython, dash, nbformat, ipywidgets, open3d
+Successfully installed Flask-3.0.3 addict-2.4.0 asttokens-2.4.1 backcall-0.2.0 blinker-1.8.2 comm-0.2.2 configargparse-1.7 dash-2.17.0 dash-core-components-2.0.0 dash-html-components-2.0.0 dash-table-5.0.0 decorator-5.1.1 executing-2.0.1 fastjsonschema-2.19.1 ipython-8.12.3 ipywidgets-8.1.3 jedi-0.19.1 joblib-1.4.2 jupyter-core-5.7.2 jupyterlab-widgets-3.0.11 matplotlib-inline-0.1.7 nbformat-5.10.4 nest-asyncio-1.6.0 open3d-0.18.0 parso-0.8.4 pexpect-4.9.0 pickleshare-0.7.5 plotly-5.22.0 prompt-toolkit-3.0.45 ptyprocess-0.7.0 pure-eval-0.2.2 pyquaternion-0.9.9 retrying-1.3.4 scikit-learn-1.3.2 stack-data-0.6.3 tenacity-8.3.0 threadpoolctl-3.5.0 widgetsnbextension-4.0.11
+✅ installed open3d
+🚀 installing requirements-lgm
+Collecting tyro (from -r requirements-lgm.txt (line 1))
+  Using cached tyro-0.8.4-py3-none-any.whl.metadata (7.9 kB)
+Requirement already satisfied: diffusers in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from -r requirements-lgm.txt (line 2)) (0.25.1)
+Collecting dearpygui (from -r requirements-lgm.txt (line 3))
+  Using cached dearpygui-1.11.1-cp38-cp38-manylinux1_x86_64.whl.metadata (12 kB)
+Requirement already satisfied: einops in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from -r requirements-lgm.txt (line 4)) (0.8.0)
+Requirement already satisfied: accelerate in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from -r requirements-lgm.txt (line 5)) (0.30.1)
+Requirement already satisfied: gradio in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from -r requirements-lgm.txt (line 6)) (3.50.2)
+Requirement already satisfied: imageio in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from -r requirements-lgm.txt (line 7)) (2.34.1)
+Requirement already satisfied: imageio-ffmpeg in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from -r requirements-lgm.txt (line 8)) (0.5.1)
+Collecting lpips (from -r requirements-lgm.txt (line 9))
+  Using cached lpips-0.1.4-py3-none-any.whl.metadata (10 kB)
+Requirement already satisfied: matplotlib in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from -r requirements-lgm.txt (line 10)) (3.7.5)
+Requirement already satisfied: packaging in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from -r requirements-lgm.txt (line 11)) (24.0)
+Requirement already satisfied: Pillow in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from -r requirements-lgm.txt (line 12)) (10.3.0)
+Collecting pygltflib (from -r requirements-lgm.txt (line 13))
+  Using cached pygltflib-1.16.2-py3-none-any.whl
+Requirement already satisfied: rich in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from -r requirements-lgm.txt (line 15)) (13.7.1)
+Requirement already satisfied: safetensors in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from -r requirements-lgm.txt (line 16)) (0.4.3)
+Requirement already satisfied: scikit-image in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from -r requirements-lgm.txt (line 17)) (0.21.0)
+Requirement already satisfied: scikit-learn in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from -r requirements-lgm.txt (line 18)) (1.3.2)
+Requirement already satisfied: scipy in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from -r requirements-lgm.txt (line 19)) (1.10.1)
+Requirement already satisfied: tqdm in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from -r requirements-lgm.txt (line 20)) (4.66.4)
+Requirement already satisfied: transformers in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from -r requirements-lgm.txt (line 21)) (4.28.1)
+Requirement already satisfied: trimesh in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from -r requirements-lgm.txt (line 22)) (4.4.0)
+Collecting kiui>=0.2.3 (from -r requirements-lgm.txt (line 23))
+  Using cached kiui-0.2.9-py3-none-any.whl.metadata (4.7 kB)
+Requirement already satisfied: xatlas in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from -r requirements-lgm.txt (line 24)) (0.0.9)
+Collecting roma (from -r requirements-lgm.txt (line 25))
+  Using cached roma-1.5.0-py3-none-any.whl.metadata (4.7 kB)
+Collecting plyfile (from -r requirements-lgm.txt (line 26))
+  Using cached plyfile-1.0.3-py3-none-any.whl.metadata (2.1 kB)
+Collecting rembg[cli,gpu] (from -r requirements-lgm.txt (line 14))
+  Using cached rembg-2.0.57-py3-none-any.whl.metadata (16 kB)
+Collecting docstring-parser>=0.14.1 (from tyro->-r requirements-lgm.txt (line 1))
+  Using cached docstring_parser-0.16-py3-none-any.whl.metadata (3.0 kB)
+Requirement already satisfied: typing-extensions>=4.7.0 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from tyro->-r requirements-lgm.txt (line 1)) (4.11.0)
+Collecting shtab>=1.5.6 (from tyro->-r requirements-lgm.txt (line 1))
+  Using cached shtab-1.7.1-py3-none-any.whl.metadata (7.3 kB)
+Collecting eval-type-backport>=0.1.3 (from tyro->-r requirements-lgm.txt (line 1))
+  Using cached eval_type_backport-0.2.0-py3-none-any.whl.metadata (2.2 kB)
+Requirement already satisfied: importlib-metadata in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from diffusers->-r requirements-lgm.txt (line 2)) (7.1.0)
+Requirement already satisfied: filelock in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from diffusers->-r requirements-lgm.txt (line 2)) (3.13.1)
+Requirement already satisfied: huggingface-hub>=0.20.2 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from diffusers->-r requirements-lgm.txt (line 2)) (0.23.2)
+Requirement already satisfied: numpy in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from diffusers->-r requirements-lgm.txt (line 2)) (1.24.3)
+Requirement already satisfied: regex!=2019.12.17 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from diffusers->-r requirements-lgm.txt (line 2)) (2024.5.15)
+Requirement already satisfied: requests in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from diffusers->-r requirements-lgm.txt (line 2)) (2.32.2)
+Requirement already satisfied: psutil in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from accelerate->-r requirements-lgm.txt (line 5)) (5.9.8)
+Requirement already satisfied: pyyaml in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from accelerate->-r requirements-lgm.txt (line 5)) (6.0.1)
+Requirement already satisfied: torch>=1.10.0 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from accelerate->-r requirements-lgm.txt (line 5)) (2.3.0)
+Requirement already satisfied: aiofiles<24.0,>=22.0 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from gradio->-r requirements-lgm.txt (line 6)) (23.2.1)
+Requirement already satisfied: altair<6.0,>=4.2.0 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from gradio->-r requirements-lgm.txt (line 6)) (5.3.0)
+Requirement already satisfied: fastapi in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from gradio->-r requirements-lgm.txt (line 6)) (0.88.0)
+Requirement already satisfied: ffmpy in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from gradio->-r requirements-lgm.txt (line 6)) (0.3.2)
+Requirement already satisfied: gradio-client==0.6.1 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from gradio->-r requirements-lgm.txt (line 6)) (0.6.1)
+Requirement already satisfied: httpx in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from gradio->-r requirements-lgm.txt (line 6)) (0.27.0)
+Requirement already satisfied: importlib-resources<7.0,>=1.3 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from gradio->-r requirements-lgm.txt (line 6)) (6.4.0)
+Requirement already satisfied: jinja2<4.0 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from gradio->-r requirements-lgm.txt (line 6)) (3.1.4)
+Requirement already satisfied: markupsafe~=2.0 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from gradio->-r requirements-lgm.txt (line 6)) (2.1.3)
+Requirement already satisfied: orjson~=3.0 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from gradio->-r requirements-lgm.txt (line 6)) (3.10.3)
+Requirement already satisfied: pandas<3.0,>=1.0 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from gradio->-r requirements-lgm.txt (line 6)) (2.0.3)
+Requirement already satisfied: pydantic!=1.8,!=1.8.1,!=2.0.0,!=2.0.1,<3.0.0,>=1.7.4 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from gradio->-r requirements-lgm.txt (line 6)) (1.10.15)
+Requirement already satisfied: pydub in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from gradio->-r requirements-lgm.txt (line 6)) (0.25.1)
+Requirement already satisfied: python-multipart in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from gradio->-r requirements-lgm.txt (line 6)) (0.0.9)
+Requirement already satisfied: semantic-version~=2.0 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from gradio->-r requirements-lgm.txt (line 6)) (2.10.0)
+Requirement already satisfied: uvicorn>=0.14.0 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from gradio->-r requirements-lgm.txt (line 6)) (0.30.1)
+Requirement already satisfied: websockets<12.0,>=10.0 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from gradio->-r requirements-lgm.txt (line 6)) (11.0.3)
+Requirement already satisfied: fsspec in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from gradio-client==0.6.1->gradio->-r requirements-lgm.txt (line 6)) (2023.12.2)
+Requirement already satisfied: setuptools in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from imageio-ffmpeg->-r requirements-lgm.txt (line 8)) (69.5.1)
+Requirement already satisfied: torchvision>=0.2.1 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from lpips->-r requirements-lgm.txt (line 9)) (0.16.0)
+Requirement already satisfied: contourpy>=1.0.1 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from matplotlib->-r requirements-lgm.txt (line 10)) (1.1.1)
+Requirement already satisfied: cycler>=0.10 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from matplotlib->-r requirements-lgm.txt (line 10)) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from matplotlib->-r requirements-lgm.txt (line 10)) (4.53.0)
+Requirement already satisfied: kiwisolver>=1.0.1 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from matplotlib->-r requirements-lgm.txt (line 10)) (1.4.5)
+Requirement already satisfied: pyparsing>=2.3.1 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from matplotlib->-r requirements-lgm.txt (line 10)) (3.1.2)
+Requirement already satisfied: python-dateutil>=2.7 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from matplotlib->-r requirements-lgm.txt (line 10)) (2.9.0.post0)
+Collecting dataclasses-json>=0.0.25 (from pygltflib->-r requirements-lgm.txt (line 13))
+  Using cached dataclasses_json-0.6.6-py3-none-any.whl.metadata (25 kB)
+Collecting deprecated (from pygltflib->-r requirements-lgm.txt (line 13))
+  Using cached Deprecated-1.2.14-py2.py3-none-any.whl.metadata (5.4 kB)
+Requirement already satisfied: jsonschema in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from rembg[cli,gpu]->-r requirements-lgm.txt (line 14)) (4.22.0)
+Collecting onnxruntime (from rembg[cli,gpu]->-r requirements-lgm.txt (line 14))
+  Using cached onnxruntime-1.18.0-cp38-cp38-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (4.3 kB)
+Requirement already satisfied: opencv-python-headless in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from rembg[cli,gpu]->-r requirements-lgm.txt (line 14)) (4.10.0.82)
+Collecting pooch (from rembg[cli,gpu]->-r requirements-lgm.txt (line 14))
+  Using cached pooch-1.8.1-py3-none-any.whl.metadata (9.5 kB)
+Collecting pymatting (from rembg[cli,gpu]->-r requirements-lgm.txt (line 14))
+  Using cached PyMatting-1.1.12-py3-none-any.whl.metadata (7.4 kB)
+Requirement already satisfied: aiohttp in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from rembg[cli,gpu]->-r requirements-lgm.txt (line 14)) (3.9.5)
+Collecting asyncer (from rembg[cli,gpu]->-r requirements-lgm.txt (line 14))
+  Using cached asyncer-0.0.7-py3-none-any.whl.metadata (6.6 kB)
+Requirement already satisfied: click in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from rembg[cli,gpu]->-r requirements-lgm.txt (line 14)) (8.1.7)
+Collecting filetype (from rembg[cli,gpu]->-r requirements-lgm.txt (line 14))
+  Using cached filetype-1.2.0-py2.py3-none-any.whl.metadata (6.5 kB)
+Collecting watchdog (from rembg[cli,gpu]->-r requirements-lgm.txt (line 14))
+  Using cached watchdog-4.0.1-py3-none-manylinux2014_x86_64.whl.metadata (37 kB)
+Collecting onnxruntime-gpu (from rembg[cli,gpu]->-r requirements-lgm.txt (line 14))
+  Using cached onnxruntime_gpu-1.18.0-cp38-cp38-manylinux_2_28_x86_64.whl.metadata (4.3 kB)
+Requirement already satisfied: markdown-it-py>=2.2.0 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from rich->-r requirements-lgm.txt (line 15)) (3.0.0)
+Requirement already satisfied: pygments<3.0.0,>=2.13.0 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from rich->-r requirements-lgm.txt (line 15)) (2.18.0)
+Requirement already satisfied: networkx>=2.8 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from scikit-image->-r requirements-lgm.txt (line 17)) (3.1)
+Requirement already satisfied: tifffile>=2022.8.12 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from scikit-image->-r requirements-lgm.txt (line 17)) (2023.7.10)
+Requirement already satisfied: PyWavelets>=1.1.1 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from scikit-image->-r requirements-lgm.txt (line 17)) (1.4.1)
+Requirement already satisfied: lazy_loader>=0.2 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from scikit-image->-r requirements-lgm.txt (line 17)) (0.4)
+Requirement already satisfied: joblib>=1.1.1 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from scikit-learn->-r requirements-lgm.txt (line 18)) (1.4.2)
+Requirement already satisfied: threadpoolctl>=2.0.0 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from scikit-learn->-r requirements-lgm.txt (line 18)) (3.5.0)
+Requirement already satisfied: tokenizers!=0.11.3,<0.14,>=0.11.1 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from transformers->-r requirements-lgm.txt (line 21)) (0.13.3)
+Collecting varname (from kiui>=0.2.3->-r requirements-lgm.txt (line 23))
+  Using cached varname-0.13.1-py3-none-any.whl.metadata (12 kB)
+Collecting objprint (from kiui>=0.2.3->-r requirements-lgm.txt (line 23))
+  Using cached objprint-0.2.3-py3-none-any.whl.metadata (25 kB)
+Requirement already satisfied: toolz in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from altair<6.0,>=4.2.0->gradio->-r requirements-lgm.txt (line 6)) (0.12.1)
+Collecting marshmallow<4.0.0,>=3.18.0 (from dataclasses-json>=0.0.25->pygltflib->-r requirements-lgm.txt (line 13))
+  Using cached marshmallow-3.21.2-py3-none-any.whl.metadata (7.1 kB)
+Collecting typing-inspect<1,>=0.4.0 (from dataclasses-json>=0.0.25->pygltflib->-r requirements-lgm.txt (line 13))
+  Using cached typing_inspect-0.9.0-py3-none-any.whl.metadata (1.5 kB)
+Requirement already satisfied: zipp>=3.1.0 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from importlib-resources<7.0,>=1.3->gradio->-r requirements-lgm.txt (line 6)) (3.19.1)
+Requirement already satisfied: attrs>=22.2.0 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from jsonschema->rembg[cli,gpu]->-r requirements-lgm.txt (line 14)) (23.2.0)
+Requirement already satisfied: jsonschema-specifications>=2023.03.6 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from jsonschema->rembg[cli,gpu]->-r requirements-lgm.txt (line 14)) (2023.12.1)
+Requirement already satisfied: pkgutil-resolve-name>=1.3.10 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from jsonschema->rembg[cli,gpu]->-r requirements-lgm.txt (line 14)) (1.3.10)
+Requirement already satisfied: referencing>=0.28.4 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from jsonschema->rembg[cli,gpu]->-r requirements-lgm.txt (line 14)) (0.35.1)
+Requirement already satisfied: rpds-py>=0.7.1 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from jsonschema->rembg[cli,gpu]->-r requirements-lgm.txt (line 14)) (0.18.1)
+Requirement already satisfied: mdurl~=0.1 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from markdown-it-py>=2.2.0->rich->-r requirements-lgm.txt (line 15)) (0.1.2)
+Requirement already satisfied: pytz>=2020.1 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from pandas<3.0,>=1.0->gradio->-r requirements-lgm.txt (line 6)) (2024.1)
+Requirement already satisfied: tzdata>=2022.1 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from pandas<3.0,>=1.0->gradio->-r requirements-lgm.txt (line 6)) (2024.1)
+Requirement already satisfied: six>=1.5 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from python-dateutil>=2.7->matplotlib->-r requirements-lgm.txt (line 10)) (1.16.0)
+Requirement already satisfied: charset-normalizer<4,>=2 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from requests->diffusers->-r requirements-lgm.txt (line 2)) (2.0.4)
+Requirement already satisfied: idna<4,>=2.5 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from requests->diffusers->-r requirements-lgm.txt (line 2)) (3.7)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from requests->diffusers->-r requirements-lgm.txt (line 2)) (1.26.18)
+Requirement already satisfied: certifi>=2017.4.17 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from requests->diffusers->-r requirements-lgm.txt (line 2)) (2024.2.2)
+Requirement already satisfied: sympy in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from torch>=1.10.0->accelerate->-r requirements-lgm.txt (line 5)) (1.12)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu12==12.1.105 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from torch>=1.10.0->accelerate->-r requirements-lgm.txt (line 5)) (12.1.105)
+Requirement already satisfied: nvidia-cuda-runtime-cu12==12.1.105 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from torch>=1.10.0->accelerate->-r requirements-lgm.txt (line 5)) (12.1.105)
+Requirement already satisfied: nvidia-cuda-cupti-cu12==12.1.105 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from torch>=1.10.0->accelerate->-r requirements-lgm.txt (line 5)) (12.1.105)
+Requirement already satisfied: nvidia-cudnn-cu12==8.9.2.26 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from torch>=1.10.0->accelerate->-r requirements-lgm.txt (line 5)) (8.9.2.26)
+Requirement already satisfied: nvidia-cublas-cu12==12.1.3.1 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from torch>=1.10.0->accelerate->-r requirements-lgm.txt (line 5)) (12.1.3.1)
+Requirement already satisfied: nvidia-cufft-cu12==11.0.2.54 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from torch>=1.10.0->accelerate->-r requirements-lgm.txt (line 5)) (11.0.2.54)
+Requirement already satisfied: nvidia-curand-cu12==10.3.2.106 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from torch>=1.10.0->accelerate->-r requirements-lgm.txt (line 5)) (10.3.2.106)
+Requirement already satisfied: nvidia-cusolver-cu12==11.4.5.107 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from torch>=1.10.0->accelerate->-r requirements-lgm.txt (line 5)) (11.4.5.107)
+Requirement already satisfied: nvidia-cusparse-cu12==12.1.0.106 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from torch>=1.10.0->accelerate->-r requirements-lgm.txt (line 5)) (12.1.0.106)
+Requirement already satisfied: nvidia-nccl-cu12==2.20.5 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from torch>=1.10.0->accelerate->-r requirements-lgm.txt (line 5)) (2.20.5)
+Requirement already satisfied: nvidia-nvtx-cu12==12.1.105 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from torch>=1.10.0->accelerate->-r requirements-lgm.txt (line 5)) (12.1.105)
+Requirement already satisfied: triton==2.3.0 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from torch>=1.10.0->accelerate->-r requirements-lgm.txt (line 5)) (2.3.0)
+Requirement already satisfied: nvidia-nvjitlink-cu12 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from nvidia-cusolver-cu12==11.4.5.107->torch>=1.10.0->accelerate->-r requirements-lgm.txt (line 5)) (12.5.40)
+Requirement already satisfied: h11>=0.8 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from uvicorn>=0.14.0->gradio->-r requirements-lgm.txt (line 6)) (0.14.0)
+Requirement already satisfied: aiosignal>=1.1.2 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from aiohttp->rembg[cli,gpu]->-r requirements-lgm.txt (line 14)) (1.3.1)
+Requirement already satisfied: frozenlist>=1.1.1 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from aiohttp->rembg[cli,gpu]->-r requirements-lgm.txt (line 14)) (1.4.1)
+Requirement already satisfied: multidict<7.0,>=4.5 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from aiohttp->rembg[cli,gpu]->-r requirements-lgm.txt (line 14)) (6.0.5)
+Requirement already satisfied: yarl<2.0,>=1.0 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from aiohttp->rembg[cli,gpu]->-r requirements-lgm.txt (line 14)) (1.9.4)
+Requirement already satisfied: async-timeout<5.0,>=4.0 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from aiohttp->rembg[cli,gpu]->-r requirements-lgm.txt (line 14)) (4.0.3)
+Requirement already satisfied: anyio<5.0,>=3.4.0 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from asyncer->rembg[cli,gpu]->-r requirements-lgm.txt (line 14)) (4.4.0)
+Collecting wrapt<2,>=1.10 (from deprecated->pygltflib->-r requirements-lgm.txt (line 13))
+  Using cached wrapt-1.16.0-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.6 kB)
+Requirement already satisfied: starlette==0.22.0 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from fastapi->gradio->-r requirements-lgm.txt (line 6)) (0.22.0)
+Requirement already satisfied: httpcore==1.* in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from httpx->gradio->-r requirements-lgm.txt (line 6)) (1.0.5)
+Requirement already satisfied: sniffio in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from httpx->gradio->-r requirements-lgm.txt (line 6)) (1.3.1)
+Collecting coloredlogs (from onnxruntime->rembg[cli,gpu]->-r requirements-lgm.txt (line 14))
+  Using cached coloredlogs-15.0.1-py2.py3-none-any.whl.metadata (12 kB)
+Collecting flatbuffers (from onnxruntime->rembg[cli,gpu]->-r requirements-lgm.txt (line 14))
+  Using cached flatbuffers-24.3.25-py2.py3-none-any.whl.metadata (850 bytes)
+Requirement already satisfied: protobuf in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from onnxruntime->rembg[cli,gpu]->-r requirements-lgm.txt (line 14)) (4.25.3)
+Requirement already satisfied: platformdirs>=2.5.0 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from pooch->rembg[cli,gpu]->-r requirements-lgm.txt (line 14)) (4.2.2)
+Collecting numba!=0.49.0 (from pymatting->rembg[cli,gpu]->-r requirements-lgm.txt (line 14))
+  Using cached numba-0.58.1-cp38-cp38-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.7 kB)
+Requirement already satisfied: executing<3.0,>=2.0 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from varname->kiui>=0.2.3->-r requirements-lgm.txt (line 23)) (2.0.1)
+Requirement already satisfied: exceptiongroup>=1.0.2 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from anyio<5.0,>=3.4.0->asyncer->rembg[cli,gpu]->-r requirements-lgm.txt (line 14)) (1.2.1)
+Collecting llvmlite<0.42,>=0.41.0dev0 (from numba!=0.49.0->pymatting->rembg[cli,gpu]->-r requirements-lgm.txt (line 14))
+  Using cached llvmlite-0.41.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.8 kB)
+Collecting mypy-extensions>=0.3.0 (from typing-inspect<1,>=0.4.0->dataclasses-json>=0.0.25->pygltflib->-r requirements-lgm.txt (line 13))
+  Using cached mypy_extensions-1.0.0-py3-none-any.whl.metadata (1.1 kB)
+Collecting humanfriendly>=9.1 (from coloredlogs->onnxruntime->rembg[cli,gpu]->-r requirements-lgm.txt (line 14))
+  Using cached humanfriendly-10.0-py2.py3-none-any.whl.metadata (9.2 kB)
+Requirement already satisfied: mpmath>=0.19 in /gpfs/home6/jhuizing/.conda/envs/SugarMVC/lib/python3.8/site-packages (from sympy->torch>=1.10.0->accelerate->-r requirements-lgm.txt (line 5)) (1.3.0)
+Using cached tyro-0.8.4-py3-none-any.whl (102 kB)
+Using cached dearpygui-1.11.1-cp38-cp38-manylinux1_x86_64.whl (2.8 MB)
+Using cached lpips-0.1.4-py3-none-any.whl (53 kB)
+Using cached kiui-0.2.9-py3-none-any.whl (3.1 MB)
+Using cached roma-1.5.0-py3-none-any.whl (24 kB)
+Using cached plyfile-1.0.3-py3-none-any.whl (23 kB)
+Using cached dataclasses_json-0.6.6-py3-none-any.whl (28 kB)
+Using cached docstring_parser-0.16-py3-none-any.whl (36 kB)
+Using cached eval_type_backport-0.2.0-py3-none-any.whl (5.9 kB)
+Using cached shtab-1.7.1-py3-none-any.whl (14 kB)
+Using cached asyncer-0.0.7-py3-none-any.whl (8.5 kB)
+Using cached Deprecated-1.2.14-py2.py3-none-any.whl (9.6 kB)
+Using cached filetype-1.2.0-py2.py3-none-any.whl (19 kB)
+Using cached objprint-0.2.3-py3-none-any.whl (39 kB)
+Using cached onnxruntime-1.18.0-cp38-cp38-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.8 MB)
+Using cached onnxruntime_gpu-1.18.0-cp38-cp38-manylinux_2_28_x86_64.whl (199.8 MB)
+Using cached pooch-1.8.1-py3-none-any.whl (62 kB)
+Using cached PyMatting-1.1.12-py3-none-any.whl (52 kB)
+Using cached rembg-2.0.57-py3-none-any.whl (33 kB)
+Using cached varname-0.13.1-py3-none-any.whl (24 kB)
+Using cached watchdog-4.0.1-py3-none-manylinux2014_x86_64.whl (83 kB)
+Using cached marshmallow-3.21.2-py3-none-any.whl (49 kB)
+Using cached numba-0.58.1-cp38-cp38-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (3.7 MB)
+Using cached typing_inspect-0.9.0-py3-none-any.whl (8.8 kB)
+Using cached wrapt-1.16.0-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (83 kB)
+Using cached coloredlogs-15.0.1-py2.py3-none-any.whl (46 kB)
+Using cached flatbuffers-24.3.25-py2.py3-none-any.whl (26 kB)
+Using cached humanfriendly-10.0-py2.py3-none-any.whl (86 kB)
+Using cached llvmlite-0.41.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (43.6 MB)
+Using cached mypy_extensions-1.0.0-py3-none-any.whl (4.7 kB)
+Installing collected packages: flatbuffers, filetype, wrapt, watchdog, varname, shtab, roma, plyfile, objprint, mypy-extensions, marshmallow, llvmlite, humanfriendly, eval-type-backport, docstring-parser, dearpygui, typing-inspect, pooch, numba, kiui, deprecated, coloredlogs, asyncer, tyro, pymatting, onnxruntime-gpu, onnxruntime, dataclasses-json, rembg, pygltflib, lpips
+Successfully installed asyncer-0.0.7 coloredlogs-15.0.1 dataclasses-json-0.6.6 dearpygui-1.11.1 deprecated-1.2.14 docstring-parser-0.16 eval-type-backport-0.2.0 filetype-1.2.0 flatbuffers-24.3.25 humanfriendly-10.0 kiui-0.2.9 llvmlite-0.41.1 lpips-0.1.4 marshmallow-3.21.2 mypy-extensions-1.0.0 numba-0.58.1 objprint-0.2.3 onnxruntime-1.18.0 onnxruntime-gpu-1.18.0 plyfile-1.0.3 pooch-1.8.1 pygltflib-1.16.2 pymatting-1.1.12 rembg-2.0.57 roma-1.5.0 shtab-1.7.1 typing-inspect-0.9.0 tyro-0.8.4 varname-0.13.1 watchdog-4.0.1 wrapt-1.16.0
+✅ installed requirements-lgm
+
+JOB STATISTICS
+==============
+Job ID: 6497613
+Cluster: snellius
+User/Group: jhuizing/jhuizing
+State: RUNNING
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 00:00:00
+CPU Efficiency: 0.00% of 06:48:18 core-walltime
+Job Wall-clock time: 00:22:41
+Memory Utilized: 0.00 MB (estimated maximum)
+Memory Efficiency: 0.00% of 120.00 GB (120.00 GB/node)
+WARNING: Efficiency statistics may be misleading for RUNNING jobs.
