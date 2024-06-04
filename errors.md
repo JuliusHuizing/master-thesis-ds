@@ -630,3 +630,8 @@ echo '✅ installed requirements-lgm'
 
 ```
 
+
+But we had this before....  But fore some reason, hard installing a specfic pytorch verison like in jobs/run_sugar.job lik before keeps the samer error...
+
+
+Maybe also stry installing cub...

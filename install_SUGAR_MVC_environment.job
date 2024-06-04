@@ -26,9 +26,6 @@ conda create -n SugarMVC python=3.8 pip
 source activate SugarMVC
 
 
-echo '🚀 installing pytorch fixed version'
-conda install pytorch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 pytorch-cuda=11.8 -c pytorch -c nvidia
-echo '✅ installed pytorch fixed version'
 
 echo '🚀installing nina'
 pip install ninja
@@ -51,8 +48,13 @@ pip install open3d
 echo '✅ installed open3d'
 
 echo '🚀 overwriting pytorch version with one that works for pytorch3d...'
+# echo 'echo setting pytroch to specific version'
 conda install pytorch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 pytorch-cuda=11.8 -c pytorch -c nvidia
-echo '✅ installed pytorch fixed version'
+echo '🚀 And cub....'
+# echo 'echo installing CUB'
+conda install -c bottler nvidiacubecho 
+
+echo '✅ installed pytorch fixed version and cub'
 
 # Install pytorch3d
 echo '🚀 installing pytorch3d'
