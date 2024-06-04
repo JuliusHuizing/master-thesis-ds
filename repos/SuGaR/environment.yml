@@ -1,4 +1,4 @@
-name: sugar
+name: sugarmvc3
 channels:
   - pytorch3d
   - plotly
