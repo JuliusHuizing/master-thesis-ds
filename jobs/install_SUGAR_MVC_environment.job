@@ -26,8 +26,10 @@ conda env remove --name SugarMVC
 conda create -n SugarMVC python=3.8 pip
 source activate SugarMVC
 
-# newest torch version under cuda11.8
-pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+
+conda install pytorch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 pytorch-cuda=11.8 -c pytorch -c nvidia
+
+
 pip install ninja
 pip install -r requirements.txt
 
