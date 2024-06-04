@@ -545,3 +545,88 @@ ValueError: Both foreground and background meshes are empty. Please provide a va
 ```
 
 This might be because our colmap is so sparse...
+
+
+
+# Installing MVC Env for using Sugar...
+"/gpfs/home6/jhuizing/master-thesis-ds/repos/MVControl-threestudio/./threestudio/utils/__init__.py", line 1, in <module>
+    from . import base
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/MVControl-threestudio/./threestudio/utils/base.py", line 7, in <module>
+    from threestudio.utils.misc import get_device, load_module_weights
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/MVControl-threestudio/./threestudio/utils/misc.py", line 6, in <module>
+    import tinycudann as tcnn
+ModuleNotFoundError: No module named 'tinycudann'
+
+
+ The following will give the error during the pytorch3d installation step:
+
+ ```error
+ RuntimeError:
+      The detected CUDA version (11.8) mismatches the version that was used to compile
+      PyTorch (12.1). Please make sure to use the same CUDA versions.
+ ``` 
+```bash
+#!/bin/bash
+
+#SBATCH --partition=gpu
+#SBATCH --gpus=1
+#SBATCH --job-name=InstallEnvironment
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=18
+#SBATCH --time=04:00:00
+#SBATCH --output=slurm_output_%A.out
+
+module purge
+# module load 2021 // although spider says we need 2021 for cuda 11.6, the partition does not support 2021..
+module load 2022
+module load CUDA/11.8.0
+module load Anaconda3/2022.05
+
+cd $HOME/master-thesis-ds/
+git pull
+
+cd $HOME/master-thesis-ds/repos/MVControl-threestudio
+
+
+# cd $HOME/master-thesis-ds/repos/dreamgaussian
+conda env remove --name SugarMVC
+conda create -n SugarMVC python=3.8 pip
+source activate SugarMVC
+
+
+echo '🚀 installing pytorch fixed version'
+conda install pytorch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 pytorch-cuda=11.8 -c pytorch -c nvidia
+echo '✅ installed pytorch fixed version'
+
+echo '🚀installing nina'
+pip install ninja
+echo '✅ installed nina'
+
+echo '🚀 installing requirements.txt'
+pip install -r requirements.txt
+echo '✅ installed requirements.txt'
+
+echo '🚀 installing diff-gaussian-rasterization and simple-knn'
+git clone --recursive https://github.com/ashawkey/diff-gaussian-rasterization
+git clone https://github.com/DSaurus/simple-knn.git
+pip install ./diff-gaussian-rasterization
+echo '✅ installed diff gaus raster'
+pip install ./simple-knn
+echo '✅ installed diff gaus raster'
+
+echo '🚀 installing open3d'
+pip install open3d
+echo '✅ installed open3d'
+
+# Install pytorch3d
+echo '🚀 installing pytorch3d'
+pip install "git+https://github.com/facebookresearch/pytorch3d.git@stable"
+echo '✅ installed pytorch3d'
+
+echo '🚀 installing requirements-lgm'
+pip install -r requirements-lgm.txt
+echo '✅ installed requirements-lgm'
+
+
+```
+
