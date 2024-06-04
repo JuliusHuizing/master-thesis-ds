@@ -30,7 +30,7 @@ git pull
 
 # source deactivate
 
-source activate sugarmvc2
+source activate sugar
 
 PLY_CHECKPOINT_PATH="$HOME/master-thesis-ds/results/stage_1/ply/blueberry_rgba_model_name_model.ply"
 # select first file that end with .ply in path
