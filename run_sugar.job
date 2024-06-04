@@ -31,6 +31,9 @@ git pull
 # source deactivate
 
 source activate sugar
+pip install lightning
+
+
 #pip install lightning
 #pip install jaxtyping
 pip install tinycudann
