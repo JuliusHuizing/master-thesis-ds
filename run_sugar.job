@@ -31,6 +31,9 @@ git pull
 # source deactivate
 
 source activate sugar
+#pip install lightning
+#pip install jaxtyping
+pip install tinycudann
 
 PLY_CHECKPOINT_PATH="$HOME/master-thesis-ds/results/stage_1/ply/blueberry_rgba_model_name_model.ply"
 # select first file that end with .ply in path
