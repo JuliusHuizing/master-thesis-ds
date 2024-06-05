@@ -743,3 +743,89 @@ pip install -r requirements-lgm.txt
 echo '✅ installed requirements-lgm'
 
 ```
+
+
+changing the order to this:
+
+```bash
+#!/bin/bash
+
+#SBATCH --partition=gpu
+#SBATCH --gpus=1
+#SBATCH --job-name=InstallEnvironment
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=18
+#SBATCH --time=04:00:00
+#SBATCH --output=slurm_output_%A.out
+
+module purge
+# module load 2021 // although spider says we need 2021 for cuda 11.6, the partition does not support 2021..
+module load 2022
+module load CUDA/11.8.0
+module load Anaconda3/2022.05
+
+cd $HOME/master-thesis-ds/
+git pull
+
+cd $HOME/master-thesis-ds/repos/MVControl-threestudio
+
+
+# cd $HOME/master-thesis-ds/repos/dreamgaussian
+conda env remove --name SugarMVC
+conda create -n SugarMVC python=3.8 pip
+source activate SugarMVC
+
+echo '🚀installing nina'
+pip install ninja
+echo '✅ installed nina'
+
+
+echo '🚀 installing pytorch'
+conda install pytorch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 pytorch-cuda=11.8 -c pytorch -c nvidia
+echo '✅ installed pytorch'
+
+echo '🚀 INstalling And cub....'
+conda install -c bottler nvidiacubecho 
+echo '✅ installed cub'
+
+# Install pytorch3d
+echo '🚀 installing pytorch3d'
+pip install "git+https://github.com/facebookresearch/pytorch3d.git@stable"
+echo '✅ installed pytorch3d'
+
+
+echo '🚀 installing requirements.txt'
+pip install -r requirements.txt
+echo '✅ installed requirements.txt'
+
+echo '🚀 installing diff-gaussian-rasterization and simple-knn'
+git clone --recursive https://github.com/ashawkey/diff-gaussian-rasterization
+git clone https://github.com/DSaurus/simple-knn.git
+pip install ./diff-gaussian-rasterization
+echo '✅ installed diff gaus raster'
+pip install ./simple-knn
+echo '✅ installed diff gaus raster'
+
+echo '🚀 installing open3d'
+pip install open3d
+echo '✅ installed open3d'
+
+# echo '🚀 overwriting pytorch version with one that works for pytorch3d...'
+# # echo 'echo setting pytroch to specific version'
+# # conda install pytorch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 pytorch-cuda=11.8 -c pytorch -c nvidia
+
+
+# echo '✅ installed pytorch fixed version and cub'
+
+
+echo '🚀 installing requirements-lgm'
+pip install -r requirements-lgm.txt
+echo '✅ installed requirements-lgm'
+
+```
+
+gives the errors:
+
+```error
+slurm_output_6497613.out
+```
