@@ -63,10 +63,10 @@ if __name__ == "__main__":
         cfg_path = os.path.join(
             os.path.dirname(os.path.dirname(gs_path)), "configs", "parsed.yaml"
         )
-        cfg = load_config(cfg_path)
+        # cfg = load_config(cfg_path)
 
         random_camera_cfg = parse_structured(
-            RandomCameraDataModuleConfig, cfg.get('data', {})
+            RandomCameraDataModuleConfig, None
         )
         camera_distance = random_camera_cfg.eval_camera_distance
         random_camera_cfg.update(

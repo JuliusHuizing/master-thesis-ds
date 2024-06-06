@@ -17,7 +17,6 @@ set e
 
 cd $HOME/master-thesis-ds/repos/MVControl-threestudio
 
-
 source activate mvcontroljune6
 
 asset_name=fatcat
