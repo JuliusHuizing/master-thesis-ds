@@ -1102,3 +1102,45 @@ TypeError: 'type' object is not subscriptable
 Which is because this syntax indeed requires python 3.9, and we use python 3.8 (as the MVCcontrol repo clearly states is required..., jezus.)
 
 So let's try to get rid of the 3.9 syntax...
+
+we can indeed fix the error by importing Typing and using syntax comptaible with older versions of python.
+
+in master-thesis-ds/repos/MVControl-threestudio/extern/mvcontrol/cldm3d.py:
+```python
+from typing import Dict
+# etc.
+
+condition_drop_probs: Dict[str, float] = None,
+
+```
+
+
+But then we get this error:
+
+```error
+Traceback (most recent call last):
+  File "extern/sugar/extract_mesh.py", line 66, in <module>
+    cfg = load_config(cfg_path)
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/MVControl-threestudio/./threestudio/utils/config.py", line 108, in load_config
+    yaml_confs = [OmegaConf.load(f) for f in yamls]
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/MVControl-threestudio/./threestudio/utils/config.py", line 108, in <listcomp>
+    yaml_confs = [OmegaConf.load(f) for f in yamls]
+  File "/home/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages/omegaconf/omegaconf.py", line 189, in load
+    with io.open(os.path.abspath(file_), "r", encoding="utf-8") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/jhuizing/master-thesis-ds/results/stage_1/configs/parsed.yaml'
+```
+
+so apparently the script expects a parsed.yaml to be present in the checkpoint dir that contains our .ply file.....
+
+Indeed, it expects that there is a configs/parsed.yaml path in the checkpoint dir..:
+
+```python
+# extract_mesh.py
+    if args.camera_pose_path is None:
+        gs_path = args.checkpoint_path
+        cfg_path = os.path.join(
+            os.path.dirname(os.path.dirname(gs_path)), "configs", "parsed.yaml"
+        )
+        cfg = load_config(cfg_path)
+
+```
