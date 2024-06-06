@@ -801,6 +801,7 @@ echo '✅ installed requirements.txt'
 echo '🚀 installing diff-gaussian-rasterization and simple-knn'
 git clone --recursive https://github.com/ashawkey/diff-gaussian-rasterization
 git clone https://github.com/DSaurus/simple-knn.git
+
 pip install ./diff-gaussian-rasterization
 echo '✅ installed diff gaus raster'
 pip install ./simple-knn
@@ -828,4 +829,32 @@ gives the errors:
 
 ```error
 slurm_output_6497613.out
+```
+
+
+# Installing MVC env approach 2
+
+direclty following the installation instructions for the readme gives the errors:
+
+```error
+✅ installed reqs
+🚀 cloning diff gaus
+fatal: destination path 'diff-gaussian-rasterization' already exists and is not an empty directory.
+✅ cloned diff gaus
+🚀 cloning simple knn
+fatal: destination path 'simple-knn' already exists and is not an empty directory.
+✅ cloned simple knn
+🚀 installing diff gaussian rasterization
+ERROR: Directory './diff-gaussian-rasterization' is not installable. Neither 'setup.py' nor 'pyproject.toml' found.
+✅ installed diff gaussian rasterization
+🚀 installing simple knn
+ERROR: Directory './simple-knn' is not installable. Neither 'setup.py' nor 'pyproject.toml' found.
+✅ installed simple knn
+🚀 installing open3d
+```
+
+Indicating that, for some reason, the default 3dgs dependencies cannot be installed...
+
+```
+
 ```

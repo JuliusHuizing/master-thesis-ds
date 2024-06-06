@@ -19,8 +19,8 @@ git pull
 
 cd $HOME/master-thesis-ds/repos/MVControl-threestudio
 # conda env remove --name dreamgaussian
-conda create -n mvcontrol python=3.8 pip
-source activate mvcontrol
+conda create -n mvcontroljune6 python=3.8 pip
+source activate mvcontroljune6
 
 echo '🚀 installing torchvision'
 pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
@@ -34,13 +34,16 @@ echo '🚀 installing reqs'
 pip install -r requirements.txt
 echo '✅ installed reqs'
 
-echo '🚀 cloning diff gaus'
-git clone --recursive https://github.com/ashawkey/diff-gaussian-rasterization
-echo '✅ cloned diff gaus'
+cd $HOME/master-thesis-ds/repos/dreamgaussian
 
-echo '🚀 cloning simple knn'
-git clone https://github.com/DSaurus/simple-knn.git
-echo '✅ cloned simple knn'
+# echo '🚀 cloning diff gaus'
+# # git clone --recursive https://github.com/ashawkey/diff-gaussian-rasterization
+# echo '✅ cloned diff gaus'
+
+
+# echo '🚀 cloning simple knn'
+# git clone https://github.com/DSaurus/simple-knn.git
+# echo '✅ cloned simple knn'
 
 echo '🚀 installing diff gaussian rasterization'
 pip install ./diff-gaussian-rasterization
@@ -49,6 +52,8 @@ echo '✅ installed diff gaussian rasterization'
 echo '🚀 installing simple knn'
 pip install ./simple-knn
 echo '✅ installed simple knn'
+
+cd $HOME/master-thesis-ds/repos/MVControl-threestudio
 
 
 echo '🚀 installing open3d'
