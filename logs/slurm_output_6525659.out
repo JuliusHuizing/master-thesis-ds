@@ -1,0 +1,133 @@
+============================================================================================== 
+Warning! Mixing Conda and module environments may lead to corruption of the
+user environment. 
+We do not recommend users mixing those two environments unless absolutely
+necessary. Note that 
+SURF does not provide any support for Conda environment.
+For more information, please refer to our software policy page:
+https://servicedesk.surf.nl/wiki/display/WIKI/Software+policy+Snellius#SoftwarepolicySnellius-UseofAnacondaandMinicondaenvironmentsonSnellius 
+
+Remember that many packages have already been installed on the system and can
+be loaded using 
+the 'module load <package__name>' command. If you are uncertain if a package is
+already available 
+on the system, please use 'module avail' or 'module spider' to search for it.
+============================================================================================== 
+error: cannot pull with rebase: You have unstaged changes.
+error: please commit or stash them.
+Collecting mediapipe
+  Downloading mediapipe-0.10.11-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.7 kB)
+Requirement already satisfied: absl-py in /gpfs/home6/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages (from mediapipe) (2.1.0)
+Requirement already satisfied: attrs>=19.1.0 in /gpfs/home6/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages (from mediapipe) (23.2.0)
+Requirement already satisfied: flatbuffers>=2.0 in /gpfs/home6/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages (from mediapipe) (24.3.25)
+Collecting jax (from mediapipe)
+  Downloading jax-0.4.13.tar.gz (1.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 35.2 MB/s eta 0:00:00
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting jaxlib (from mediapipe)
+  Downloading jaxlib-0.4.13-cp38-cp38-manylinux2014_x86_64.whl.metadata (2.1 kB)
+Requirement already satisfied: matplotlib in /gpfs/home6/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages (from mediapipe) (3.7.5)
+Requirement already satisfied: numpy in /gpfs/home6/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages (from mediapipe) (1.24.3)
+Requirement already satisfied: torch in /gpfs/home6/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages (from mediapipe) (2.1.0)
+Collecting opencv-contrib-python (from mediapipe)
+  Downloading opencv_contrib_python-4.10.0.82-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (20 kB)
+Collecting protobuf<4,>=3.11 (from mediapipe)
+  Downloading protobuf-3.20.3-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl.metadata (679 bytes)
+Collecting sounddevice>=0.4.4 (from mediapipe)
+  Downloading sounddevice-0.4.7-py3-none-any.whl.metadata (1.4 kB)
+Collecting CFFI>=1.0 (from sounddevice>=0.4.4->mediapipe)
+  Downloading cffi-1.16.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.5 kB)
+Collecting ml-dtypes>=0.1.0 (from jax->mediapipe)
+  Downloading ml_dtypes-0.2.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (20 kB)
+Collecting opt-einsum (from jax->mediapipe)
+  Downloading opt_einsum-3.3.0-py3-none-any.whl.metadata (6.5 kB)
+Requirement already satisfied: scipy>=1.7 in /gpfs/home6/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages (from jax->mediapipe) (1.10.1)
+Requirement already satisfied: importlib-metadata>=4.6 in /gpfs/home6/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages (from jax->mediapipe) (7.1.0)
+Requirement already satisfied: contourpy>=1.0.1 in /gpfs/home6/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages (from matplotlib->mediapipe) (1.1.1)
+Requirement already satisfied: cycler>=0.10 in /gpfs/home6/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages (from matplotlib->mediapipe) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /gpfs/home6/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages (from matplotlib->mediapipe) (4.53.0)
+Requirement already satisfied: kiwisolver>=1.0.1 in /gpfs/home6/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages (from matplotlib->mediapipe) (1.4.5)
+Requirement already satisfied: packaging>=20.0 in /gpfs/home6/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages (from matplotlib->mediapipe) (24.0)
+Requirement already satisfied: pillow>=6.2.0 in /gpfs/home6/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages (from matplotlib->mediapipe) (10.3.0)
+Requirement already satisfied: pyparsing>=2.3.1 in /gpfs/home6/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages (from matplotlib->mediapipe) (3.1.2)
+Requirement already satisfied: python-dateutil>=2.7 in /gpfs/home6/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages (from matplotlib->mediapipe) (2.9.0.post0)
+Requirement already satisfied: importlib-resources>=3.2.0 in /gpfs/home6/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages (from matplotlib->mediapipe) (6.4.0)
+Requirement already satisfied: filelock in /gpfs/home6/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages (from torch->mediapipe) (3.13.1)
+Requirement already satisfied: typing-extensions in /gpfs/home6/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages (from torch->mediapipe) (4.11.0)
+Requirement already satisfied: sympy in /gpfs/home6/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages (from torch->mediapipe) (1.12)
+Requirement already satisfied: networkx in /gpfs/home6/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages (from torch->mediapipe) (3.1)
+Requirement already satisfied: jinja2 in /gpfs/home6/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages (from torch->mediapipe) (3.1.4)
+Requirement already satisfied: fsspec in /gpfs/home6/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages (from torch->mediapipe) (2023.12.2)
+Collecting pycparser (from CFFI>=1.0->sounddevice>=0.4.4->mediapipe)
+  Downloading pycparser-2.22-py3-none-any.whl.metadata (943 bytes)
+Requirement already satisfied: zipp>=0.5 in /gpfs/home6/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages (from importlib-metadata>=4.6->jax->mediapipe) (3.19.2)
+Requirement already satisfied: six>=1.5 in /gpfs/home6/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages (from python-dateutil>=2.7->matplotlib->mediapipe) (1.16.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /gpfs/home6/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages (from jinja2->torch->mediapipe) (2.1.3)
+Requirement already satisfied: mpmath>=0.19 in /gpfs/home6/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages (from sympy->torch->mediapipe) (1.3.0)
+Downloading mediapipe-0.10.11-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (35.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.6/35.6 MB 24.7 MB/s eta 0:00:00
+Downloading protobuf-3.20.3-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.whl (1.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 90.6 MB/s eta 0:00:00
+Downloading sounddevice-0.4.7-py3-none-any.whl (32 kB)
+Downloading jaxlib-0.4.13-cp38-cp38-manylinux2014_x86_64.whl (71.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.6/71.6 MB 42.9 MB/s eta 0:00:00
+Downloading opencv_contrib_python-4.10.0.82-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (68.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 68.7/68.7 MB 34.2 MB/s eta 0:00:00
+Downloading cffi-1.16.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (444 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 444.7/444.7 kB 62.6 MB/s eta 0:00:00
+Downloading ml_dtypes-0.2.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 98.0 MB/s eta 0:00:00
+Downloading opt_einsum-3.3.0-py3-none-any.whl (65 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 65.5/65.5 kB 11.7 MB/s eta 0:00:00
+Downloading pycparser-2.22-py3-none-any.whl (117 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 117.6/117.6 kB 17.6 MB/s eta 0:00:00
+Building wheels for collected packages: jax
+  Building wheel for jax (pyproject.toml): started
+  Building wheel for jax (pyproject.toml): finished with status 'done'
+  Created wheel for jax: filename=jax-0.4.13-py3-none-any.whl size=1518704 sha256=79c40dc537386322698c88af52e714833bf7d3bc9c09cb93b9d334079b52fdac
+  Stored in directory: /gpfs/home6/jhuizing/.cache/pip/wheels/46/d9/15/d2800d4089dc4c77299ac7513c6aa1036f5491edbd2bf6ba16
+Successfully built jax
+Installing collected packages: pycparser, protobuf, opt-einsum, opencv-contrib-python, ml-dtypes, jaxlib, jax, CFFI, sounddevice, mediapipe
+  Attempting uninstall: protobuf
+    Found existing installation: protobuf 4.25.3
+    Uninstalling protobuf-4.25.3:
+      Successfully uninstalled protobuf-4.25.3
+Successfully installed CFFI-1.16.0 jax-0.4.13 jaxlib-0.4.13 mediapipe-0.10.11 ml-dtypes-0.2.0 opencv-contrib-python-4.10.0.82 opt-einsum-3.3.0 protobuf-3.20.3 pycparser-2.22 sounddevice-0.4.7
+Traceback (most recent call last):
+  File "extern/sugar/extract_mesh.py", line 11, in <module>
+    from threestudio.data.uncond import RandomCameraIterableDataset, RandomCameraDataModuleConfig
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/MVControl-threestudio/./threestudio/__init__.py", line 55, in <module>
+    from . import data, models, systems
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/MVControl-threestudio/./threestudio/models/__init__.py", line 1, in <module>
+    from . import (
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/MVControl-threestudio/./threestudio/models/guidance/__init__.py", line 1, in <module>
+    from . import (
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/MVControl-threestudio/./threestudio/models/guidance/mvcontrol_guidance.py", line 23, in <module>
+    from extern.mvcontrol.unet import UNet2DConditionModel
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/MVControl-threestudio/./extern/mvcontrol/__init__.py", line 5, in <module>
+    from .cldm3d import ControlPose3dModel
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/MVControl-threestudio/./extern/mvcontrol/cldm3d.py", line 59, in <module>
+    class ControlPose3dModel(pl.LightningModule):
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/MVControl-threestudio/./extern/mvcontrol/cldm3d.py", line 72, in ControlPose3dModel
+    condition_drop_probs: dict[str, float] = None,
+TypeError: 'type' object is not subscriptable
+
+JOB STATISTICS
+==============
+Job ID: 6525659
+Cluster: snellius
+User/Group: jhuizing/jhuizing
+State: RUNNING
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 00:00:00
+CPU Efficiency: 0.00% of 00:54:00 core-walltime
+Job Wall-clock time: 00:03:00
+Memory Utilized: 0.00 MB (estimated maximum)
+Memory Efficiency: 0.00% of 120.00 GB (120.00 GB/node)
+WARNING: Efficiency statistics may be misleading for RUNNING jobs.

@@ -1,0 +1,113 @@
+============================================================================================== 
+Warning! Mixing Conda and module environments may lead to corruption of the
+user environment. 
+We do not recommend users mixing those two environments unless absolutely
+necessary. Note that 
+SURF does not provide any support for Conda environment.
+For more information, please refer to our software policy page:
+https://servicedesk.surf.nl/wiki/display/WIKI/Software+policy+Snellius#SoftwarepolicySnellius-UseofAnacondaandMinicondaenvironmentsonSnellius 
+
+Remember that many packages have already been installed on the system and can
+be loaded using 
+the 'module load <package__name>' command. If you are uncertain if a package is
+already available 
+on the system, please use 'module avail' or 'module spider' to search for it.
+============================================================================================== 
+Traceback (most recent call last):
+  File "launch.py", line 62, in load_custom_module
+    module_spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 843, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "custom/threestudio-3dgs/__init__.py", line 17, in <module>
+    from .geometry import (
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/MVControl-threestudio/custom/threestudio-3dgs/geometry/sugar.py", line 37, in <module>
+    class SuGaRModel(BaseGeometry):
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/MVControl-threestudio/custom/threestudio-3dgs/geometry/sugar.py", line 613, in SuGaRModel
+    camera_centers: Float[Tensor, "N_pts 3"] | Float[Tensor, "1 3"] = None,
+TypeError: unsupported operand type(s) for |: 'MetaAbstractArray' and 'MetaAbstractArray'
+
+Cannot import custom/threestudio-3dgs module for custom nodes: unsupported operand type(s) for |: 'MetaAbstractArray' and 'MetaAbstractArray'
+
+Import times for custom modules:
+  10.7 seconds (IMPORT FAILED): custom/threestudio-3dgs
+
+Traceback (most recent call last):
+  File "launch.py", line 301, in <module>
+    main(args, extras)
+  File "launch.py", line 163, in main
+    cfg = load_config(args.config, cli_args=extras, n_gpus=n_gpus)
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/MVControl-threestudio/threestudio/utils/config.py", line 111, in load_config
+    OmegaConf.resolve(cfg)
+  File "/home/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages/omegaconf/omegaconf.py", line 785, in resolve
+    omegaconf._impl._resolve(cfg)
+  File "/home/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages/omegaconf/_impl.py", line 40, in _resolve
+    _resolve_container_value(cfg, k)
+  File "/home/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages/omegaconf/_impl.py", line 25, in _resolve_container_value
+    _resolve(node)
+  File "/home/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages/omegaconf/_impl.py", line 40, in _resolve
+    _resolve_container_value(cfg, k)
+  File "/home/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages/omegaconf/_impl.py", line 25, in _resolve_container_value
+    _resolve(node)
+  File "/home/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages/omegaconf/_impl.py", line 40, in _resolve
+    _resolve_container_value(cfg, k)
+  File "/home/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages/omegaconf/_impl.py", line 14, in _resolve_container_value
+    resolved = node._dereference_node()
+  File "/home/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages/omegaconf/base.py", line 246, in _dereference_node
+    node = self._dereference_node_impl(throw_on_resolution_failure=True)
+  File "/home/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages/omegaconf/base.py", line 277, in _dereference_node_impl
+    return parent._resolve_interpolation_from_parse_tree(
+  File "/home/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages/omegaconf/base.py", line 584, in _resolve_interpolation_from_parse_tree
+    resolved = self.resolve_parse_tree(
+  File "/home/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages/omegaconf/base.py", line 764, in resolve_parse_tree
+    return visitor.visit(parse_tree)
+  File "/home/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages/antlr4/tree/Tree.py", line 34, in visit
+    return tree.accept(self)
+  File "/home/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages/omegaconf/grammar/gen/OmegaConfGrammarParser.py", line 206, in accept
+    return visitor.visitConfigValue(self)
+  File "/home/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages/omegaconf/grammar_visitor.py", line 101, in visitConfigValue
+    return self.visit(ctx.getChild(0))
+  File "/home/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages/antlr4/tree/Tree.py", line 34, in visit
+    return tree.accept(self)
+  File "/home/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages/omegaconf/grammar/gen/OmegaConfGrammarParser.py", line 342, in accept
+    return visitor.visitText(self)
+  File "/home/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages/omegaconf/grammar_visitor.py", line 301, in visitText
+    return self._unescape(list(ctx.getChildren()))
+  File "/home/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages/omegaconf/grammar_visitor.py", line 389, in _unescape
+    text = str(self.visitInterpolation(node))
+  File "/home/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages/omegaconf/grammar_visitor.py", line 125, in visitInterpolation
+    return self.visit(ctx.getChild(0))
+  File "/home/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages/antlr4/tree/Tree.py", line 34, in visit
+    return tree.accept(self)
+  File "/home/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages/omegaconf/grammar/gen/OmegaConfGrammarParser.py", line 921, in accept
+    return visitor.visitInterpolationNode(self)
+  File "/home/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages/omegaconf/grammar_visitor.py", line 158, in visitInterpolationNode
+    return self.node_interpolation_callback(inter_key, self.memo)
+  File "/home/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages/omegaconf/base.py", line 745, in node_interpolation_callback
+    return self._resolve_node_interpolation(inter_key=inter_key, memo=memo)
+  File "/home/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages/omegaconf/base.py", line 676, in _resolve_node_interpolation
+    raise InterpolationKeyError(f"Interpolation key '{inter_key}' not found")
+omegaconf.errors.InterpolationKeyError: Interpolation key 'condition_type' not found
+Traceback (most recent call last):
+  File "extern/sugar/extract_mesh.py", line 66, in <module>
+    cfg = load_config(cfg_path)
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/MVControl-threestudio/./threestudio/utils/config.py", line 108, in load_config
+    yaml_confs = [OmegaConf.load(f) for f in yamls]
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/MVControl-threestudio/./threestudio/utils/config.py", line 108, in <listcomp>
+    yaml_confs = [OmegaConf.load(f) for f in yamls]
+  File "/home/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages/omegaconf/omegaconf.py", line 189, in load
+    with io.open(os.path.abspath(file_), "r", encoding="utf-8") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/gpfs/home6/jhuizing/master-thesis-ds/repos/MVControl-threestudio/workspace/mvcontrol_/fatcat/gaussian_refine@LAST/configs/parsed.yaml'
+
+JOB STATISTICS
+==============
+Job ID: 6526231
+Cluster: snellius
+User/Group: jhuizing/jhuizing
+State: FAILED (exit code 1)
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 00:00:31
+CPU Efficiency: 2.92% of 00:17:42 core-walltime
+Job Wall-clock time: 00:00:59
+Memory Utilized: 601.18 MB
+Memory Efficiency: 0.49% of 120.00 GB
