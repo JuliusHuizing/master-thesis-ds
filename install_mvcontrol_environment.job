@@ -18,13 +18,19 @@ cd $HOME/master-thesis-ds/
 git pull
 
 cd $HOME/master-thesis-ds/repos/MVControl-threestudio
-# conda env remove --name dreamgaussian
+conda env remove --name mvcontroljune6
 conda create -n mvcontroljune6 python=3.8 pip
 source activate mvcontroljune6
 
-echo '🚀 installing torchvision'
-pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
-echo '✅ installed torchvision'
+# echo '🚀 installing torchvision'
+# pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+# echo '✅ installed torchvision'
+
+#OWN
+echo'🚀 installing pytorch 2.1.0'
+conda install pytorch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 pytorch-cuda=11.8 -c pytorch -c nvidia
+echo '✅ installed pytorch 2.1.0'
+# ENDOWN
 
 echo '🚀 installing ninja'
 pip install ninja

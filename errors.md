@@ -854,7 +854,102 @@ ERROR: Directory './simple-knn' is not installable. Neither 'setup.py' nor 'pypr
 ```
 
 Indicating that, for some reason, the default 3dgs dependencies cannot be installed...
+However, we installed these dependencies before in the dreamgaussian repo, so we can try to just cd into and outo that repo and installing it from there...
+
+However, we prob used an exisitng env; if we use a fresh env with this job:
+
+```
+#!/bin/bash
+
+#SBATCH --partition=gpu
+#SBATCH --gpus=1
+#SBATCH --job-name=InstallEnvironment
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=18
+#SBATCH --time=04:00:00
+#SBATCH --output=slurm_output_%A.out
+
+module purge
+# module load 2021 // although spider says we need 2021 for cuda 11.6, the partition does not support 2021..
+module load 2022
+module load CUDA/11.8.0
+module load Anaconda3/2022.05
+
+cd $HOME/master-thesis-ds/
+git pull
+
+cd $HOME/master-thesis-ds/repos/MVControl-threestudio
+# conda env remove --name dreamgaussian
+conda create -n mvcontroljune6 python=3.8 pip
+source activate mvcontroljune6
+
+echo '🚀 installing torchvision'
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+echo '✅ installed torchvision'
+
+echo '🚀 installing ninja'
+pip install ninja
+echo '✅ installed ninja'
+
+echo '🚀 installing reqs'
+pip install -r requirements.txt
+echo '✅ installed reqs'
+
+cd $HOME/master-thesis-ds/repos/dreamgaussian
+
+# echo '🚀 cloning diff gaus'
+# # git clone --recursive https://github.com/ashawkey/diff-gaussian-rasterization
+# echo '✅ cloned diff gaus'
+
+
+# echo '🚀 cloning simple knn'
+# git clone https://github.com/DSaurus/simple-knn.git
+# echo '✅ cloned simple knn'
+
+echo '🚀 installing diff gaussian rasterization'
+pip install ./diff-gaussian-rasterization
+echo '✅ installed diff gaussian rasterization'
+
+echo '🚀 installing simple knn'
+pip install ./simple-knn
+echo '✅ installed simple knn'
+
+cd $HOME/master-thesis-ds/repos/MVControl-threestudio
+
+
+echo '🚀 installing open3d'
+pip install open3d
+echo '✅ installed open3d'
+
+echo '🚀 installing pytorch3d'
+pip install "git+https://github.com/facebookresearch/pytorch3d.git@stable"
+echo '✅ Installed pytorch3d'
+
+echo '🚀 installing lgm'
+pip install -r requirements-lgm.txt
+echo '✅ installed lgm'
 
 ```
 
+we already get an error during the installation of the requirements.txt:
+
+([text](slurm_output_6523571.out))
+
+```error
+         /home/jhuizing/.conda/envs/mvcontroljune6/lib/python3.8/site-packages/torch/include/c10/util/C++17.h:13:2: error: #error "You're trying to build PyTorch with a too old version of GCC. We need GCC 9 or later."
+
 ```
+
+As noted in https://github.com/pytorch/pytorch/issues/120020, this is a problem with using torch >=2.2
+
+But the repo does explicitely state that we need 2.2.1:
+```text
+Install PyTorch == 2.2.1 since xformers requires newest torch version.
+```
+
+?A solution would be to upgrade to gcc-9, but I believe that would require migraring to a totally different cluster than Snellius?
+
+
+So maybe we could see if we can delete the xformers dependency from the project (if we don;t need it for sugar...) and then use an older version of torch...
+
+

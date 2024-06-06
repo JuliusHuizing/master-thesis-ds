@@ -25,7 +25,7 @@ git+https://github.com/ashawkey/envlight.git
 torchmetrics
 
 # deepfloyd
-xformers
+# xformers #TODO: tmp disabled so we can try to see if we can install with an older version of torch (see errors.md).
 bitsandbytes==0.38.1
 sentencepiece
 safetensors
