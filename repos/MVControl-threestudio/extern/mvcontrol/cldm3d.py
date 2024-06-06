@@ -10,6 +10,9 @@ from einops import rearrange
 import imageio.v3 as imageio
 import glob
 
+from typing import Dict
+
+
 from .attention import (
     set_self_attn_processor,
     set_self_attn_trainable,
@@ -69,7 +72,7 @@ class ControlPose3dModel(pl.LightningModule):
         unet_cross_attention_trainable: bool = False,
         unet_whole_trainable: bool = False,
         use_controlnet: bool = False,
-        condition_drop_probs: dict[str, float] = None,
+        condition_drop_probs: Dict[str, float] = None,
         camera_matrix_embedding_dim: Optional[int] = 768,
         camera_embed_add_to: Literal["cross_attn", "resnet"] = "resnet",
         guidance_scale: float = 9.0,

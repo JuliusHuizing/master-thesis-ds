@@ -953,3 +953,152 @@ Install PyTorch == 2.2.1 since xformers requires newest torch version.
 So maybe we could see if we can delete the xformers dependency from the project (if we don;t need it for sugar...) and then use an older version of torch...
 
 
+indeed, (1) removing xformers from the requirements.txt and (2) using this install job gives a successfull install:
+
+```bash
+#!/bin/bash
+
+#SBATCH --partition=gpu
+#SBATCH --gpus=1
+#SBATCH --job-name=InstallEnvironment
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=18
+#SBATCH --time=04:00:00
+#SBATCH --output=slurm_output_%A.out
+
+module purge
+# module load 2021 // although spider says we need 2021 for cuda 11.6, the partition does not support 2021..
+module load 2022
+module load CUDA/11.8.0
+module load Anaconda3/2022.05
+
+cd $HOME/master-thesis-ds/
+git pull
+
+cd $HOME/master-thesis-ds/repos/MVControl-threestudio
+conda env remove --name mvcontroljune6
+conda create -n mvcontroljune6 python=3.8 pip
+source activate mvcontroljune6
+
+# echo '🚀 installing torchvision'
+# pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+# echo '✅ installed torchvision'
+
+#OWN
+echo'🚀 installing pytorch 2.1.0'
+conda install pytorch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 pytorch-cuda=11.8 -c pytorch -c nvidia
+echo '✅ installed pytorch 2.1.0'
+# ENDOWN
+
+echo '🚀 installing ninja'
+pip install ninja
+echo '✅ installed ninja'
+
+echo '🚀 installing reqs'
+pip install -r requirements.txt
+echo '✅ installed reqs'
+
+cd $HOME/master-thesis-ds/repos/dreamgaussian
+
+# echo '🚀 cloning diff gaus'
+# # git clone --recursive https://github.com/ashawkey/diff-gaussian-rasterization
+# echo '✅ cloned diff gaus'
+
+
+# echo '🚀 cloning simple knn'
+# git clone https://github.com/DSaurus/simple-knn.git
+# echo '✅ cloned simple knn'
+
+echo '🚀 installing diff gaussian rasterization'
+pip install ./diff-gaussian-rasterization
+echo '✅ installed diff gaussian rasterization'
+
+echo '🚀 installing simple knn'
+pip install ./simple-knn
+echo '✅ installed simple knn'
+
+cd $HOME/master-thesis-ds/repos/MVControl-threestudio
+
+
+echo '🚀 installing open3d'
+pip install open3d
+echo '✅ installed open3d'
+
+echo '🚀 installing pytorch3d'
+pip install "git+https://github.com/facebookresearch/pytorch3d.git@stable"
+echo '✅ Installed pytorch3d'
+
+echo '🚀 installing lgm'
+pip install -r requirements-lgm.txt
+echo '✅ installed lgm'
+
+
+```
+
+However, then running the sugar_job:
+
+```bash
+#!/bin/bash
+
+#SBATCH --partition=gpu
+#SBATCH --gpus=1
+#SBATCH --job-name=pipeline
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=18
+#SBATCH --time=04:00:00
+#SBATCH --output=logs/slurm_output_%A.out
+
+module purge
+module load 2022
+module load CUDA/11.8.0
+module load Anaconda3/2022.05
+
+set e
+
+cd $HOME/master-thesis-ds/
+git pull
+
+
+source activate mvcontroljune6
+# pip install mediapipe
+
+PLY_CHECKPOINT_PATH="$HOME/master-thesis-ds/results/stage_1/ply/blueberry_rgba_model_name_model.ply"
+# select first file that end with .ply in path
+# FIXME: little hack now, we implement a better way to select the ply file
+# PLY_CHECKPOINT_PATH=$(ls -d $PLY_CHECKPOINT_PATH | grep .ply | head -n 1)
+SUGAR_OUTPUT_PATH="$HOME/master-thesis-ds/results/sugar/"
+mkdir -p $SUGAR_OUTPUT_PATH || true
+cd $HOME/master-thesis-ds/repos/MVControl-threestudio
+python extern/sugar/extract_mesh.py -s extern/sugar/load/scene \
+-c $PLY_CHECKPOINT_PATH -o $SUGAR_OUTPUT_PATH --use_vanilla_3dgs
+
+
+```
+
+gives the error:
+
+```errorr
+Traceback (most recent call last):
+  File "extern/sugar/extract_mesh.py", line 11, in <module>
+    from threestudio.data.uncond import RandomCameraIterableDataset, RandomCameraDataModuleConfig
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/MVControl-threestudio/./threestudio/__init__.py", line 55, in <module>
+    from . import data, models, systems
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/MVControl-threestudio/./threestudio/models/__init__.py", line 1, in <module>
+    from . import (
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/MVControl-threestudio/./threestudio/models/guidance/__init__.py", line 1, in <module>
+    from . import (
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/MVControl-threestudio/./threestudio/models/guidance/mvcontrol_guidance.py", line 23, in <module>
+    from extern.mvcontrol.unet import UNet2DConditionModel
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/MVControl-threestudio/./extern/mvcontrol/__init__.py", line 5, in <module>
+    from .cldm3d import ControlPose3dModel
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/MVControl-threestudio/./extern/mvcontrol/cldm3d.py", line 59, in <module>
+    class ControlPose3dModel(pl.LightningModule):
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/MVControl-threestudio/./extern/ /cldm3d.py", line 72, in ControlPose3dModel
+    condition_drop_probs: dict[str, float] = None,
+TypeError: 'type' object is not subscriptable
+```
+
+
+Which is because this syntax indeed requires python 3.9, and we use python 3.8 (as the MVCcontrol repo clearly states is required..., jezus.)
+
+So let's try to get rid of the 3.9 syntax...
