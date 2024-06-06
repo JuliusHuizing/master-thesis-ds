@@ -1035,6 +1035,8 @@ echo '✅ installed lgm'
 
 ```
 
+# Running MVControl's Sugar:
+
 However, then running the sugar_job:
 
 ```bash
@@ -1177,3 +1179,5 @@ TypeError: type object argument after ** must be a mapping, not NoneType
 ```
 
 So another approach would be to check what is actually stored under the data key of the parsed.yaml...
+
+But that's hard to find out...
