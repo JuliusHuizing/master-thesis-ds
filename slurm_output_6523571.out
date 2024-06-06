@@ -905,3 +905,17 @@ Building wheels for collected packages: nerfacc, tinycudann, nvdiffrast, envligh
 slurmstepd: error: *** JOB 6523571 ON gcn18 CANCELLED AT 2024-06-06T11:17:53 ***
 slurmstepd: error: container_p_join: setns failed for /slurm/6523571/.ns: Invalid argument
 slurmstepd: error: container_g_join(6523571): Invalid argument
+
+JOB STATISTICS
+==============
+Job ID: 6523571
+Cluster: snellius
+User/Group: jhuizing/jhuizing
+State: CANCELLED (exit code 0)
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 00:02:59
+CPU Efficiency: 0.49% of 10:09:54 core-walltime
+Job Wall-clock time: 00:33:53
+Memory Utilized: 5.18 GB
+Memory Efficiency: 4.32% of 120.00 GB
