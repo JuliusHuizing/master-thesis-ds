@@ -18,25 +18,9 @@ set e
 cd $HOME/master-thesis-ds/
 git pull
 
-# source activate dreamgaussianV2
 
-# install own package
-# cd ptdraft
-# pip install -e .
-# cd ..
+source activate mvcontroljune6
 
-# # create ply file...
-# python pipeline.py --config config.yaml
-
-# source deactivate
-
-source activate SugarMVC
-# pip install lightning
-
-
-#pip install lightning
-#pip install jaxtyping
-# pip install tinycudann
 
 PLY_CHECKPOINT_PATH="$HOME/master-thesis-ds/results/stage_1/ply/blueberry_rgba_model_name_model.ply"
 # select first file that end with .ply in path
