@@ -1132,7 +1132,7 @@ Traceback (most recent call last):
 FileNotFoundError: [Errno 2] No such file or directory: '/home/jhuizing/master-thesis-ds/results/stage_1/configs/parsed.yaml'
 ```
 
-so apparently the script expects a parsed.yaml to be present in the checkpoint dir that contains our .ply file.....
+so apparently the script expects a parsed.yaml to be present in the checkpoint dir that contains our .ply file..... (interesting that you write a function that requires a path ending in .ply, but the logic of your program then depends on the parent directory and sibling files..)
 
 Indeed, it expects that there is a configs/parsed.yaml path in the checkpoint dir..:
 
