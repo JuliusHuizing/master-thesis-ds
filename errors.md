@@ -1144,3 +1144,36 @@ Indeed, it expects that there is a configs/parsed.yaml path in the checkpoint di
         cfg = load_config(cfg_path)
 
 ```
+
+
+so apparently this parsed.yaml is created somehwhere during the previous stages of .yaml, but it seems to only store pytorch lightning checkpoints? Whatever the case, the extract_mesh.py only uses this config to create a random camera configuration...
+
+
+```python
+# extract_mesh.py
+random_camera_cfg = parse_structured(
+  RandomCameraDataModuleConfig, cfg.get('data', {})
+)
+```
+
+and thes parse_strutured function seems to take an optional second arguemnt, so let's just set it to None to try if that works...
+
+Well that's funny:
+
+```python
+def parse_structured(fields: Any, cfg: Optional[Union[dict, DictConfig]] = None) -> Any:
+    scfg = OmegaConf.structured(fields(**cfg))
+    return scfg
+```
+
+says that it accepts (and even sets as default) a None as second argument, but unpacking a None value like this **None, never works:
+
+```error
+  File "extern/sugar/extract_mesh.py", line 68, in <module>
+    random_camera_cfg = parse_structured(
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/MVControl-threestudio/./threestudio/utils/config.py", line 127, in parse_structured
+    scfg = OmegaConf.structured(fields(**cfg))
+TypeError: type object argument after ** must be a mapping, not NoneType
+```
+
+So another approach would be to check what is actually stored under the data key of the parsed.yaml...
