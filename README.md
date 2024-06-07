@@ -1,131 +1,51 @@
-# Master Thesis
-
-images taken from: https://github.com/lukemelas/realfusion
-## Visualize .ply files online:
-
-https://imagetostl.com/view-ply-online#convert
-
-mp4 to sequence of images:
-
-https://ezgif.com/video-to-jpg/ezgif-1-86167c97b4.mp4
-
-# Snellius 
-## Connecting to Snellius:
-
-```bash
-ssh -X jhuizing@snellius.surf.nl
-```
-
-## Set-up
-Ensure you clone the repository recursively such that all submodules get loadeded correctly:
-
-> [!CAUTION]
-> Ideally we would use an environment.yaml file to take care of our dependencies. Unfortunately, DreamGaussian makes use
-> of submodules, which cannot be installed via conda. So we do need to use pip directly.
-
-> [!WARNING]
-> Consider removing the repo altogether before cloning in; installing depenendecies from submodules can fail otherwise.
-
-
-> [!WARNING]
-> Although **git submodule** add adds the submodule, it does not automatically load nested submodules. 
-> To do so, run
-> **git submodule update --init --recursive** inside the submodule.
-
-
-> [!WARNING]
-> The rasterizatin submodule seems to be causing a lot of dependency problems...
-> https://chat.openai.com/share/3166f123-b5dd-47ac-a548-4d20fd1f6290
-```bash
-git clone --recursive https://github.com/JuliusHuizing/master-thesis-ds
-cd master-thesis-ds
-sbatch install_environment.job
-```
+# Overview
 
 
 
+# Job Scripts and Associated Configuration Files
 
+This project includes several job scripts, each associated with one or more configuration files. Below is a detailed explanation for each job script, including the associated configuration files, their purpose, and additional notes.
 
-```
-## Jobs
+## run_pipeline.job
+Transforms a single image into a 3D Gaussian splatting scene (.ply file) and optionally into a mesh (.obj) file
+if the second stage of the pipeline is actived in the configuration file. In addtion, after each stage, the pipeline computes valuation metrics (clip scores for quantivative evaluation; images for qualitative evaluation) and stores them in 
+the .csv files / output directories specified in the configuration file.
 
-- Running a job:
-```bash
-sbatch JOBNAME
-```
-- Listing all job stati
-```bash
-squeue
-```
+| Configuration File          | Purpose                                      | Note                                                                 |
+|-----------------------------|----------------------------------------------|----------------------------------------------------------------------|
+| `batch_config.yaml`         | Configuration for batch processing.          | Settings for executing batch processing tasks. Includes parameters such as input file paths, output directories, and batch size. |
+| `config.yaml`               | General configuration file for the project.  | Centralized configuration settings used across different scripts and modules. Includes paths, API keys, and other essential settings. |
 
-- Cancel a job:
-```bash
-scancel JOBID
-```
-- Show additional information of a specific job, like the estimated start time.
-```bash
-scontrol show job JOBID
-```
+> [!NOTE]
+> This job uses the DreamGaussianV2 environment. If you haven't done so already, install it before running the job:
+> ```bash
+> sbatch jobs/install_dream_gaussian_environment.job
+>```
 
-## echo errors:
-```bash
-awk 'tolower($0) ~ /error/ {print; err=1; next} /^[ \t]/ && err {print; next} {err=0}' filename
-
-```
-
-## References:
-- https://servicedesk.surf.nl/wiki/display/WIKI/Software+policy+Snellius#SoftwarepolicySnellius-UseofAnacondaandMinicondaenvironmentsonSnellius
-- https://stackoverflow.com/questions/53422407/different-cuda-versions-shown-by-nvcc-and-nvidia-smi
-
-# Working with Git Submodules
-- https://github.blog/2016-02-01-working-with-submodules/
-
-> [!NOTE]  
-> Highlights information that users should take into account, even when skimming.
-
-> [!TIP]
-> Optional information to help a user be more successful.
-
-> [!IMPORTANT]  
-> Crucial information necessary for users to succeed.
-
-> [!WARNING]  
-> Critical content demanding immediate user attention due to potential risks.
-
-> [!CAUTION]
-> Negative potential consequences of an action.
-
-
-
-
-## Creating a Colmap Dataset
-The API of SuGaR requires a colmap dataset.
-We can use the convert.py script of the original 3DGS paper to create a Colmap dataset from a collection of images, but these images need to: 
-
-- [X] have the same resolution
-  - For this, we can simply delete the lower res images
-- [ ] be of sufficient resolution and have enough overlap for the algorithm to find a good initial pair, otherwise you'll get the error:
-
-```error
-Finding good initial image pair
-==============================================================================
-I20240429 12:16:33.909912 22618458595328 incremental_mapper.cc:404] => No good initial image pair found.
-I20240429 12:16:33.909923 22618458595328 timer.cc:91] Elapsed time: 0.000 [minutes]
-E20240429 12:16:33.912605 22620776206336 sfm.cc:266] failed to create sparse model
-ERROR:root:Mapper failed with code 256. Exiting.
-
-```
-
-
-
-# Creating A Colmap Dataset instructions
-https://colmap.github.io/tutorial.html
-
-
-# increase Git PostBuffer to allow for larger pushes
-https://medium.com/swlh/everything-you-need-to-know-to-resolve-the-git-push-rpc-error-1a865fd1ebea
-
+### Running the job:
 
 ```bash
-git config http.postBuffer 2147483648
+sbatch run_pipline.job
 ```
+
+
+### run_compare.job
+
+| Configuration File          | Purpose                                      | Note                                                                 |
+|-----------------------------|----------------------------------------------|----------------------------------------------------------------------|
+| `compare_config.woreg.yaml` | Configuration for comparison operations without regular expressions. | Holds settings for comparing datasets or results without using regex. Focuses on direct comparison parameters. |
+| `compare_config.yaml`       | Configuration for comparison operations.     | Parameters for comparing datasets or model results. Includes regex settings and other comparison-specific options. |
+
+### run_gridsearch.job
+
+| Configuration File          | Purpose                                      | Note                                                                 |
+|-----------------------------|----------------------------------------------|----------------------------------------------------------------------|
+| `grid_search.yaml`          | Configuration for grid search operations.    | Defines the parameter grid for hyperparameter tuning. Contains settings like parameter ranges, scoring metrics, and cross-validation details. |
+
+
+
+### run_sugar.job
+
+| Configuration File          | Purpose                                      | Note                                                                 |
+|-----------------------------|----------------------------------------------|----------------------------------------------------------------------|
+| `batch_config.woreg.yaml`   | Configuration for batch processing without regular expressions. | Contains settings related to batch processing tasks without using regex. Includes input file paths, output directories, and batch size. |

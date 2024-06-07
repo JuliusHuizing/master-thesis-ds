@@ -31,7 +31,7 @@ Traceback (most recent call last):
     from .cldm3d import ControlPose3dModel
   File "/gpfs/home6/jhuizing/master-thesis-ds/repos/MVControl-threestudio/./extern/mvcontrol/cldm3d.py", line 59, in <module>
     class ControlPose3dModel(pl.LightningModule):
-  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/MVControl-threestudio/./extern/mvcontrol/cldm3d.py", line 72, in ControlPose3dModel
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/MVControl-threestudio/./extern/ /cldm3d.py", line 72, in ControlPose3dModel
     condition_drop_probs: dict[str, float] = None,
 TypeError: 'type' object is not subscriptable
 

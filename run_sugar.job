@@ -20,7 +20,6 @@ git pull
 
 
 source activate mvcontroljune6
-pip install mediapipe
 
 PLY_CHECKPOINT_PATH="$HOME/master-thesis-ds/results/stage_1/ply/blueberry_rgba_model_name_model.ply"
 # select first file that end with .ply in path
