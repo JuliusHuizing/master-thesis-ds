@@ -1,5 +1,26 @@
 # SISA3D
 
+## Table of Contents
+- [SISA3D](#sisa3d)
+  - [Table of Contents](#table-of-contents)
+  - [Aligning the Gaussians with the Surface](#aligning-the-gaussians-with-the-surface)
+    - [1. Using SuGaR](#1-using-sugar)
+    - [2. Using our own regularization terms.](#2-using-our-own-regularization-terms)
+    - [3. Using the (Coarse) Sugar stage of the MVControl framework](#3-using-the-coarse-sugar-stage-of-the-mvcontrol-framework)
+  - [Job Scripts and Associated Configuration Files for Approach 2: Using Our Own Regularization Terms:](#job-scripts-and-associated-configuration-files-for-approach-2-using-our-own-regularization-terms)
+    - [run\_pipeline.job](#run_pipelinejob)
+      - [Running the job:](#running-the-job)
+    - [run\_gridsearch.job](#run_gridsearchjob)
+      - [Running the job:](#running-the-job-1)
+      - [Results](#results)
+    - [run\_compare.job](#run_comparejob)
+      - [Running the job:](#running-the-job-2)
+      - [Results](#results-1)
+  - [Job Scripts and Associated Configuration Files for Approach 3: Using MVControl's SuGaR Stage:](#job-scripts-and-associated-configuration-files-for-approach-3-using-mvcontrols-sugar-stage)
+    - [run\_sugar.job](#run_sugarjob)
+      - [Running the job:](#running-the-job-3)
+      - [Results](#results-2)
+
 ## Aligning the Gaussians with the Surface
 The primary goal of the SISA3D framework is to, following the SuGaR framework, adding regularization terms to the
 DreamGaussian framework to encourage the Gaussians in the scene to take on properties that should faciliate better 
@@ -66,6 +87,9 @@ sbatch run_sugar.job
 
 
 ## Job Scripts and Associated Configuration Files for Approach 2: Using Our Own Regularization Terms:
+This section describes the job scripts and configuration files associated with approach #2: Using Our Own regularization terms. Note that in addition the the configuration files, you might want to inspect the package we have developed to add our own regularization terms / camera poses, etc:
+
+-  ptdraft/sisa3d/
 
 > [!NOTE]
 > All the following jobs require the DreamGaussianV2 environment. If you haven't done so already, install it before running the job:
