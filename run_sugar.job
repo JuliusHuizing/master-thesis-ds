@@ -42,6 +42,6 @@ cd $HOME/master-thesis-ds/repos/SuGaR
 
 # python gaussian_splatting/train.py -s $PATH_TO_COLMAP --iterations 7000 -m $OUTPUT_PATH
 PLY_CHECKPOINT_PATH="$HOME/master-thesis-ds/results/stage_1/ply/blueberry_rgba_model_name_model.ply"
-PATH_TO_COLMAP="$HOME/master-thesis-ds/images/dummy_colmap
+PATH_TO_COLMAP="$HOME/master-thesis-ds/images/dummy_colmap"
 
 python train.py -s $PATH_TO_COLMAP -c $PLY_CHECKPOINT_PATH -r "density"
