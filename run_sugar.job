@@ -34,7 +34,7 @@ source activate sugar
 # pip install "git+https://github.com/facebookresearch/pytorch3d.git@stable"
 
 
-mkdir $OUTPUT_PATH
+# mkdir $OUTPUT_PATH
 cd $HOME/master-thesis-ds/repos/SuGaR
 
 # pip install gaussian_splatting/submodules/simple-knn
