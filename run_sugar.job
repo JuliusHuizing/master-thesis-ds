@@ -41,7 +41,7 @@ cd $HOME/master-thesis-ds/repos/SuGaR
 # pip install gaussian_splatting/submodules/diff-gaussian-rasterization
 
 # python gaussian_splatting/train.py -s $PATH_TO_COLMAP --iterations 7000 -m $OUTPUT_PATH
-PLY_CHECKPOINT_PATH="$HOME/master-thesis-ds/images/dummy_gs_output_dir"
-PATH_TO_COLMAP="$HOME/master-thesis-ds/images/dummy_colmap"
+PLY_CHECKPOINT_PATH="$HOME/master-thesis-ds/images/dummy_gs_output_dir/"
+PATH_TO_COLMAP="$HOME/master-thesis-ds/images/dummy_colmap/"
 
 python train.py -s $PATH_TO_COLMAP -c $PLY_CHECKPOINT_PATH -r "density"
