@@ -1181,3 +1181,28 @@ TypeError: type object argument after ** must be a mapping, not NoneType
 So another approach would be to check what is actually stored under the data key of the parsed.yaml...
 
 But that's hard to find out...
+
+
+## Applying SuGAr to articial created cameras.json etc.
+we get:
+```bash
+Loading config /home/jhuizing/master-thesis-ds/dg_for_sugar/checkpoint/...
+Performing train/eval split...
+Found image extension .png
+Traceback (most recent call last):
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/train.py", line 129, in <module>
+    coarse_sugar_path = coarse_training_with_density_regularization(coarse_args)
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/sugar_trainers/coarse_density.py", line 289, in coarse_training_with_density_regularization
+    nerfmodel = GaussianSplattingWrapper(
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/sugar_scene/gs_model.py", line 155, in __init__
+    self.gaussians.load_ply(
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/gaussian_splatting/scene/gaussian_model.py", line 230, in load_ply
+    assert len(extra_f_names)==3*(self.max_sh_degree + 1) ** 2 - 3
+AssertionError
+```
+
+So apparently .ply files are a flexible storage format where you can not only store point clouds, but also
+other attributes you care about. Apparently, the original 3D Gaussian splatting train loop adds attributes to the "f_rest_" attribute of the .ply file, whilst in DreamGaussian we do not. Nevertheless, SuGaR expects this property to 
+be present in the .ply file (#TODO: why? / how do they use it?), for otherwise we get the assertion error above.
+
+The challenge thus becomes to either also populate this "f_rest" attribute in our dreamgaussian process, or to find out if we can do without it. However, if we do a global search in our repo on this attribute, MVControl also seems to populate it, which indicates that it is actually needed by SuGaR.

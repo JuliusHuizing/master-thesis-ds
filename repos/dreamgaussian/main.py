@@ -157,6 +157,7 @@ class GUI:
     def save_camera_ply(self):
         save_dir = "dg_for_sugar/checkpoint/point_cloud/iteration_7000/point_cloud.ply"
         self.renderer.gaussians.save_ply(save_dir)
+        # 
 
         
     def prepare_train(self):
