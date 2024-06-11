@@ -3,6 +3,7 @@ import numpy as np
 import cv2
 from PIL import Image
 import uuid
+import json
 
 
 def create_directory(directory):
@@ -149,4 +150,34 @@ def generate_fixed_elevation_positions(azimuth_angles, elevation, radius):
     return [(elevation, angle, radius) for angle in azimuth_angles]
 
 
-
+def save_camera_information(self, camera_positions, image_names):
+    camera_data = []
+    for cam, img_name in zip(camera_positions, image_names):
+        cam_info = {
+            'id': cam['id'],
+            'img_name': img_name,
+            'width': self.W,
+            'height': self.H,
+            'position': cam['position'],
+            'rotation': cam['rotation'],
+            'fx': self.cam.fovx,
+            'fy': self.cam.fovy
+        }
+        camera_data.append(cam_info)
+    with open('cameras.json', 'w') as f:
+        json.dump(camera_data, f, indent=4)
+        
+        
+def save_images_for_camera_positions(self, camera_positions):
+    save_dir = "generated_images"
+    os.makedirs(save_dir, exist_ok=True)
+    image_names = []
+    for cam in camera_positions:
+        pose = orbit_camera(*cam['position'], self.opt.radius)
+        cur_cam = MiniCam(pose, self.W, self.H, self.cam.fovy, self.cam.fovx, self.cam.near, self.cam.far)
+        out = self.renderer.render(cur_cam)
+        image = out["image"].permute(1, 2, 0).cpu().detach().numpy() * 255
+        img_name = f"image_{cam['id']}.png"
+        cv2.imwrite(os.path.join(save_dir, img_name), cv2.cvtColor(image, cv2.COLOR_RGB2BGR))
+        image_names.append(img_name)
+    return image_names
