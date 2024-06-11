@@ -543,7 +543,7 @@ class GUI:
             print("No output directory specified for saving images.", flush=True)
             
         if self.opt.save_camera_positions:
-            num_cameras = 10
+            num_cameras = 100
             camera_positions = self.sample_random_camera_positions(num_cameras)
             image_names = self.save_images_for_camera_positions(camera_positions)
             self.save_camera_information(camera_positions, image_names)

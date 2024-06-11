@@ -1,0 +1,127 @@
+# handy to have all paths in one section so we can retrieve them all at the front of the pipeline and
+# throw an error if any are missing before we start processing 
+# Paths that are only used in pipeline.py should on be defined here;
+# paths thare are used in maim.py of the DG framework should be defined under both 'paths' and under 'dreamgaussian'
+paths:
+  input_image_path: "assets/blueberry.jpeg"
+  dream_gaussian_repo_path: "repos/dreamgaussian/"
+  preprocessing_output_path: "results/preprocessing/"
+  image_progression_output_path: "results/image_progression/"
+  dream_gaussian_results_path: "results/dream_gaussian/"
+  model_output_path: "results/dream_gaussian/model/"
+  stage_1_images_output_path: "results/dream_gaussian/stage_1/"
+  stage_1_clip_scores_output_path: "results/clip/stage_1/clip_scores.csv"
+  stage_2_clip_scores_output_path: "results/clip/stage_2/clip_scores.csv"
+  stage_1_result_images_output_path: "results/stage_1/3images/"
+  stage_2_mesh_output_path: Null
+
+preprocess:
+  size: 512
+  recenter: True
+  border_ratio: 0.2
+
+dreamgaussian:
+  save_camera_positions: True
+  export_mesh_for_stage_1: False
+  coarse_mesh_output_dir: "results/mesh/coarse/"
+  # so we have access to the file name and can save results with the same name
+  input_image_path: "assets/blueberry.jpeg"
+  # we need to duplicate this here so dg main.py can access it...
+  stage_1_result_images_output_path: "results/stage_1/3images/"
+  stage_1_images_output_path: "results/dream_gaussian/stage_1/"
+  stage_2_mesh_output_path: "results/mesh/stage_2/"
+  preprocessing_output_path: "results/preprocessing/"
+  stage_1_ply_output_dir: "results/stage_1/ply/"
+
+  generate_image_progressions: False
+  generate_gaussian_distribution_plots: False
+  save_images: False
+
+  regularize: 
+    elongation: 0.1
+    opacity: 0
+    compactness: 0
+
+  save_model: True # save .ply
+  save_geo_plus_texture: False # save .obj etc
+
+  ### Input
+  # input rgba image path (default to None, can be load in GUI too)
+  input: 
+  # estimated elevation angle for input image 
+  elevation: 0
+  # reference image resolution
+  ref_size: 512
+  # density thresh for mesh extraction
+  density_thresh: 1
+
+  ### Output
+  outdir: "results/dream_gaussian/"
+  mesh_format: obj
+
+  ### Training
+  # use mvdream instead of sd 2.1
+  mvdream: False
+  # use imagedream
+  imagedream: False
+  # use stable-zero123 instead of zero123-xl
+  stable_zero123: False 
+  # guidance loss weights (0 to disable)
+  lambda_sd: 0
+  lambda_zero123: 1
+  # warmup rgb supervision for image-to-3d
+  warmup_rgb_loss: True
+  # training batch size per iter
+  batch_size: 1
+  # training iterations for stage 1
+  iters: 500
+  # whether to linearly anneal timestep
+  anneal_timestep: True
+  # training camera radius
+  radius: 2
+  # training camera fovy
+  fovy: 49.1 # align with zero123 rendering setting (ref: https://github.com/cvlab-columbia/zero123/blob/main/objaverse-rendering/scripts/blender_script.py#L61
+  # training camera min elevation
+  min_ver: -30
+  # training camera max elevation
+  max_ver: 30
+  # checkpoint to load for stage 1 (should be a ply file)
+  load:
+  # prob to invert background color during training (0 = always black, 1 = always white)
+  invert_bg_prob: 0.5
+
+  # stage 2
+  iters_refine: 50
+
+  # whether allow geom training in stage 2
+  train_geo: False
+
+
+    ### Textured Mesh
+  geom_lr: 0.0001
+  texture_lr: 0.2
+
+  ### GUI
+  force_cuda_rast: False
+  # GUI resolution
+  H: 800
+  W: 800
+
+  ### Gaussian splatting
+  num_pts: 5000
+  sh_degree: 0
+  position_lr_init: 0.001
+  position_lr_final: 0.00002
+  position_lr_delay_mult: 0.02
+  position_lr_max_steps: 500
+  feature_lr: 0.01
+  opacity_lr: 0.05
+  scaling_lr: 0.005
+  rotation_lr: 0.005
+  percent_dense: 0.01
+  density_start_iter: 100
+  density_end_iter: 3000
+  densification_interval: 100
+  opacity_reset_interval: 700
+  densify_grad_threshold: 0.01
+
