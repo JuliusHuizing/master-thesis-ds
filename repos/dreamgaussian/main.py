@@ -554,7 +554,7 @@ class GUI:
             camera_positions = self.sample_random_camera_positions(num_cameras)
             image_names = self.save_images_for_camera_positions(camera_positions)
             self.save_camera_information(camera_positions, image_names)
-            self.save_camera_ply(self)
+            self.save_camera_ply()
 
                     
 
