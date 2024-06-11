@@ -92,7 +92,65 @@ class GUI:
 
         self.last_seed = seed
         
-  
+    def sample_random_camera_positions(self, n):
+        camera_positions = []
+        for i in range(n):
+            position = [
+                np.random.uniform(-self.opt.radius, self.opt.radius),
+                np.random.uniform(-self.opt.radius, self.opt.radius),
+                np.random.uniform(-self.opt.radius, self.opt.radius)
+            ]
+            rotation = self.random_rotation_matrix()
+            camera_positions.append({
+                'id': i,
+                'position': position,
+                'rotation': rotation
+            })
+        return camera_positions
+
+    def random_rotation_matrix(self):
+        angle = np.random.uniform(0, 2 * np.pi)
+        cos_angle = np.cos(angle)
+        sin_angle = np.sin(angle)
+        rotation_matrix = [
+            [cos_angle, -sin_angle, 0],
+            [sin_angle, cos_angle, 0],
+            [0, 0, 1]
+        ]
+        return rotation_matrix
+            
+    def save_images_for_camera_positions(self, camera_positions):
+        save_dir = "generated_images_for_camera_positions"
+        os.makedirs(save_dir, exist_ok=True)
+        image_names = []
+        for cam in camera_positions:
+            pose = orbit_camera(*cam['position'], self.opt.radius)
+            cur_cam = MiniCam(pose, self.W, self.H, self.cam.fovy, self.cam.fovx, self.cam.near, self.cam.far)
+            out = self.renderer.render(cur_cam)
+            image = out["image"].permute(1, 2, 0).cpu().detach().numpy() * 255
+            img_name = f"image_{cam['id']}.png"
+            cv2.imwrite(os.path.join(save_dir, img_name), cv2.cvtColor(image, cv2.COLOR_RGB2BGR))
+            image_names.append(img_name)
+        return image_names
+            
+    def save_camera_information(self, camera_positions, image_names):
+        camera_data = []
+        for cam, img_name in zip(camera_positions, image_names):
+            cam_info = {
+                'id': cam['id'],
+                'img_name': img_name,
+                'width': self.W,
+                'height': self.H,
+                'position': cam['position'],
+                'rotation': cam['rotation'],
+                'fx': self.cam.fovx,
+                'fy': self.cam.fovy
+            }
+            camera_data.append(cam_info)
+            
+        with open('dg_cameras.json', 'w') as f:
+            json.dump(camera_data, f, indent=4)
+        
 
     def prepare_train(self):
 
@@ -486,66 +544,6 @@ class GUI:
             
         if self.opt.save_camera_positions:
             num_cameras = 10
-            
-            def sample_random_camera_positions(self, n):
-                camera_positions = []
-                for i in range(n):
-                    position = [
-                        np.random.uniform(-self.opt.radius, self.opt.radius),
-                        np.random.uniform(-self.opt.radius, self.opt.radius),
-                        np.random.uniform(-self.opt.radius, self.opt.radius)
-                    ]
-                    rotation = self.random_rotation_matrix()
-                    camera_positions.append({
-                        'id': i,
-                        'position': position,
-                        'rotation': rotation
-                    })
-                return camera_positions
-
-            def random_rotation_matrix(self):
-                angle = np.random.uniform(0, 2 * np.pi)
-                cos_angle = np.cos(angle)
-                sin_angle = np.sin(angle)
-                rotation_matrix = [
-                    [cos_angle, -sin_angle, 0],
-                    [sin_angle, cos_angle, 0],
-                    [0, 0, 1]
-                ]
-                return rotation_matrix
-            
-            def save_images_for_camera_positions(self, camera_positions):
-                save_dir = "generated_images_for_camera_positions"
-                os.makedirs(save_dir, exist_ok=True)
-                image_names = []
-                for cam in camera_positions:
-                    pose = orbit_camera(*cam['position'], self.opt.radius)
-                    cur_cam = MiniCam(pose, self.W, self.H, self.cam.fovy, self.cam.fovx, self.cam.near, self.cam.far)
-                    out = self.renderer.render(cur_cam)
-                    image = out["image"].permute(1, 2, 0).cpu().detach().numpy() * 255
-                    img_name = f"image_{cam['id']}.png"
-                    cv2.imwrite(os.path.join(save_dir, img_name), cv2.cvtColor(image, cv2.COLOR_RGB2BGR))
-                    image_names.append(img_name)
-                return image_names
-            
-            def save_camera_information(self, camera_positions, image_names):
-                camera_data = []
-                for cam, img_name in zip(camera_positions, image_names):
-                    cam_info = {
-                        'id': cam['id'],
-                        'img_name': img_name,
-                        'width': self.W,
-                        'height': self.H,
-                        'position': cam['position'],
-                        'rotation': cam['rotation'],
-                        'fx': self.cam.fovx,
-                        'fy': self.cam.fovy
-                    }
-                    camera_data.append(cam_info)
-                    
-                with open('dg_cameras.json', 'w') as f:
-                    json.dump(camera_data, f, indent=4)
-            
             camera_positions = self.sample_random_camera_positions(num_cameras)
             image_names = self.save_images_for_camera_positions(camera_positions)
             self.save_camera_information(camera_positions, image_names)
