@@ -136,9 +136,10 @@ class GUI:
     def save_camera_information(self, camera_positions, image_names):
         camera_data = []
         for cam, img_name in zip(camera_positions, image_names):
+            img_name_without_ext = os.path.splitext(img_name)[0]  # remove .png extension
             cam_info = {
                 'id': cam['id'],
-                'img_name': img_name,
+                'img_name': img_name_without_ext,
                 'width': self.W,
                 'height': self.H,
                 'position': cam['position'],
