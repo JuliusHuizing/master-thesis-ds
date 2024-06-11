@@ -120,7 +120,7 @@ class GUI:
         return rotation_matrix
             
     def save_images_for_camera_positions(self, camera_positions):
-        save_dir = "generated_images_for_camera_positions"
+        save_dir = "dg_for_sugar/colmap/images"
         os.makedirs(save_dir, exist_ok=True)
         image_names = []
         for cam in camera_positions:
@@ -134,6 +134,7 @@ class GUI:
         return image_names
             
     def save_camera_information(self, camera_positions, image_names):
+        save_dir = "dg_for_sugar/checkpoint"
         camera_data = []
         for cam, img_name in zip(camera_positions, image_names):
             img_name_without_ext = os.path.splitext(img_name)[0]  # remove .png extension
@@ -148,11 +149,16 @@ class GUI:
                 'fy': self.cam.fovy
             }
             camera_data.append(cam_info)
-            
-        with open('dg_cameras.json', 'w') as f:
+        os.makedirs(save_dir, exist_ok=True)
+        # save in save dir
+        with open(os.path.join(save_dir, 'cameras.json'), 'w') as f:
             json.dump(camera_data, f, indent=4)
-        
+            
+    def save_camera_ply(self):
+        save_dir = "dg_for_sugar/checkpoint/point_cloud/iteration_7000/point_cloud.ply"
+        self.renderer.gaussians.save_ply(save_dir)
 
+        
     def prepare_train(self):
 
         self.step = 0
@@ -548,6 +554,8 @@ class GUI:
             camera_positions = self.sample_random_camera_positions(num_cameras)
             image_names = self.save_images_for_camera_positions(camera_positions)
             self.save_camera_information(camera_positions, image_names)
+            self.save_camera_ply(self)
+
                     
 
 if __name__ == "__main__":
