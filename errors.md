@@ -1237,7 +1237,52 @@ The `construct_lsit_of_attributes` is called by the `save_ply` method of the sam
 ```
 
 ## How Sugar Uses it
+Sugar uses exactly the same methods as 3DGS to load and save plys....
 
-## How DreamGaussian Uses
+## How to fix it:
+Adding morge information to the assertions gives us:
 
-## How MCcontrol goes about it
+```bash
+Loading config /home/jhuizing/master-thesis-ds/dg_for_sugar/checkpoint/...
+Performing train/eval split...
+Found image extension .png
+Traceback (most recent call last):
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/train.py", line 129, in <module>
+    coarse_sugar_path = coarse_training_with_density_regularization(coarse_args)
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/sugar_trainers/coarse_density.py", line 289, in coarse_training_with_density_regularization
+    nerfmodel = GaussianSplattingWrapper(
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/sugar_scene/gs_model.py", line 155, in __init__
+    self.gaussians.load_ply(
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/gaussian_splatting/scene/gaussian_model.py", line 230, in load_ply
+    assert len(extra_f_names)==3*(self.max_sh_degree + 1) ** 2 - 3, "Extra features do not match SH degree: len(extra_f_names) = {}, self.max_sh_degree = {}".format(len(extra_f_names), self.max_sh_degree)
+AssertionError: Extra features do not match SH degree: len(extra_f_names) = 0, self.max_sh_degree = 3
+```
+
+The problem is thus likely that out extra_f_names are empty.
+
+Diving a bit deeper we see that extra_f_names are constructed from  f_rest_properties:
+
+```python
+        extra_f_names = [p.name for p in plydata.elements[0].properties if p.name.startswith("f_rest_")]
+
+```
+where f_rest_properties are in turn created in the save.ply method which call the construct_list_of_attributes method:
+
+```python
+    def construct_list_of_attributes(self):
+        l = ['x', 'y', 'z', 'nx', 'ny', 'nz']
+        # All channels except the 3 DC
+        for i in range(self._features_dc.shape[1]*self._features_dc.shape[2]):
+            l.append('f_dc_{}'.format(i))
+        for i in range(self._features_rest.shape[1]*self._features_rest.shape[2]):
+            l.append('f_rest_{}'.format(i))
+        l.append('opacity')
+        for i in range(self._scaling.shape[1]):
+            l.append('scale_{}'.format(i))
+        for i in range(self._rotation.shape[1]):
+            l.append('rot_{}'.format(i))
+        return l
+```
+
+
+Since this one is just copied from the original 3dgs, the problem is likely not with this method but with the shape of ```self._features_rest``
