@@ -1,0 +1,1 @@
+python repos/gaussian-splatting/train.py -s $HOME/master-thesis-ds/deprecated/colmap4 -m $HOME/master-thesis-ds/output_original_sugar_job/ --iterations 7000

@@ -143,3 +143,16 @@ Capture images with good texture. Avoid completely texture-less images (e.g., a 
 Capture images at similar illumination conditions. Avoid high dynamic range scenes (e.g., pictures against the sun with shadows or pictures through doors/windows). Avoid specularities on shiny surfaces.
 Capture images with high visual overlap. Make sure that each object is seen in at least 3 images – the more images the better.
 Capture images from different viewpoints. Do not take images from the same location by only rotating the camera, e.g., make a few steps after each shot. At the same time, try to have enough images from a relatively similar viewpoint. Note that more images is not necessarily better and might lead to a slow reconstruction process. If you use a video as input, consider down-sampling the frame rate.
+
+# debugger while on Snellius
+1. locally: set up ~/.shh/config
+2. on snellius: spin up sleep.job
+3. when sleep job is running, run squeue to see the node; 
+  locally, in ~/.shh/config, replace node name with target node in 
+4. on VSCODe, connect to snellius proxy (blue lower left button.)
+5. activate environment (source activate sugar) in terminal connected to snellius proxy
+6. find the main file you want to run (e.g. train.py)
+7. with the file open, start the debugger (left column bar, debug extension)
+8. Provide arguments in prompt if necessary; press enter
+9. debugger will run and output should show in terminal.
+10. WHen done, do not forget to scancel the sleep job.

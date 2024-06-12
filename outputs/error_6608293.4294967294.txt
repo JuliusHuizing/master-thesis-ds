@@ -1,0 +1,1 @@
+slurmstepd: error: *** JOB 6608293 ON gcn23 CANCELLED AT 2024-06-12T15:40:14 ***

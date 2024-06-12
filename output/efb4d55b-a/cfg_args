@@ -1,0 +1,1 @@
+Namespace(sh_degree=3, source_path='/gpfs/home6/jhuizing/master-thesis-ds', model_path='./output/efb4d55b-a', images='images', resolution=-1, white_background=False, data_device='cuda', eval=False)
