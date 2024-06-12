@@ -145,6 +145,10 @@ Capture images with high visual overlap. Make sure that each object is seen in a
 Capture images from different viewpoints. Do not take images from the same location by only rotating the camera, e.g., make a few steps after each shot. At the same time, try to have enough images from a relatively similar viewpoint. Note that more images is not necessarily better and might lead to a slow reconstruction process. If you use a video as input, consider down-sampling the frame rate.
 
 # debugger while on Snellius
+
+> [!NOTE]  
+> If you cannot set breakpoints in a file, try reloading the window in vscode (cmd + shift + p; "> reload window")
+
 1. locally: set up ~/.shh/config
 2. on snellius: spin up sleep.job
 3. when sleep job is running, run squeue to see the node; 
