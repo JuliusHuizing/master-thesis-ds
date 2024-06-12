@@ -1344,5 +1344,24 @@ def create_from_pcd(self, pcd : BasicPointCloud, spatial_lr_scale : float):
         self._rotation = nn.Parameter(rots.requires_grad_(True))
         self._opacity = nn.Parameter(opacities.requires_grad_(True))
         self.max_radii2D = torch.zeros((self.get_xyz.shape[0]), device="cuda")
+      
+
+```
+What if we just delete the assert?
+then we get:
+
+```bash
+Found image extension .png
+ 🟠 Extra features: [], max_sh_degree: 3
+Traceback (most recent call last):
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/train.py", line 129, in <module>
+    coarse_sugar_path = coarse_training_with_density_regularization(coarse_args)
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/sugar_trainers/coarse_density.py", line 289, in coarse_training_with_density_regularization
+    nerfmodel = GaussianSplattingWrapper(
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/sugar_scene/gs_model.py", line 155, in __init__
+    self.gaussians.load_ply(
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/gaussian_splatting/scene/gaussian_model.py", line 236, in load_ply
+    features_extra = features_extra.reshape((features_extra.shape[0], 3, (self.max_sh_degree + 1) ** 2 - 1))
+ValueError: cannot reshape array of size 0 into shape (39788,3,15)
 
 ```
