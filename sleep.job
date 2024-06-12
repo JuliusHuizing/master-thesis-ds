@@ -1,0 +1,21 @@
+
+#!/bin/bash
+#SBATCH -t 12:00:00
+#SBATCH --gres=gpu:1
+#SBATCH --partition=gpu
+#SBATCH --output=./outputs/output_%A.%a.txt
+#SBATCH --error=./outputs/error_%A.%a.txt
+#SBATCH --job-name='res-node'
+
+# Set wd, activate conda environment.
+module load 2022
+module load CUDA/11.8.0
+
+# print assigned node
+echo "This job is running on node: $SLURM_NODELIST"
+
+# Sleep 
+while true; do
+    sleep 3600  # Sleep for 1 hour at a time
+done
+
