@@ -1365,3 +1365,5 @@ Traceback (most recent call last):
 ValueError: cannot reshape array of size 0 into shape (39788,3,15)
 
 ```
+
+We can set breakpoints and go through 3DGS's initialization flow in its train.py and see where the f_rest features get populated; and where they (don't) get populated in the dreamGassuaisn main.py...
