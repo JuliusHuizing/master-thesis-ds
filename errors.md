@@ -1398,6 +1398,16 @@ another issue could be that DreamGaussians default config, image.yaml, which we 
 so what if we just set this parameter to 3 in our own configs?
 
 
-* We can set breakpoints and go through 3DGS's initialization flow in its train.py and see where the f_rest features get populated; and where they (don't) get populated in the dreamGassuaisn main.py...
-* We can further inspect the control flow both visually...
-* we can play with exporting other .ply files in dreamgaussians main.py and see if that results in something there... They also write a mesh.ply object....
+🚀 Yes that was it... we can now run SuGaR on the output of DreamGaussian.
+
+# TODO:
+[ ] check output of initial sugar run
+[ ] improve image capture of DG's point cloud
+  - can we reuse some of the camera movements we wrote for colmap creation?
+  - verify that cameras.json make sense
+[ ] try another run and see if it improve results
+[ ] set up another config file for playing with hyperpameters:
+- e.g. how many iterations of dg are we going to do before we save the ply?, etc.
+[ ] Understand & visualize the loss of the SuGaR epochs;
+perhaps it is overfititng, as the loss seems to increase, so maybe we can save checkpoint and find a better output .ply file?
+
