@@ -1286,3 +1286,29 @@ where f_rest_properties are in turn created in the save.ply method which call th
 
 
 Since this one is just copied from the original 3dgs, the problem is likely not with this method but with the shape of ```self._features_rest``
+
+But a quick scan also suggest these are handled identically in the original 3dgs code as they do in dreamgaussian...
+
+![Alt text](assets/debug_features_rest.png)
+
+Looking at a vanilla 3dgs and sugar pipeline, we get the following when loading the ply file in sugar:
+
+```bash
+Loading config /home/jhuizing/master-thesis-ds/output_original_sugar_job/...
+Performing train/eval split...
+Found image extension .JPG
+ 🟠 Extra features: ['f_rest_0', 'f_rest_1', 'f_rest_2', 'f_rest_3', 'f_rest_4', 'f_rest_5', 'f_rest_6', 'f_rest_7', 'f_rest_8', 'f_rest_9', 'f_rest_10', 'f_rest_11', 'f_rest_12', 'f_rest_13', 'f_rest_14', 'f_rest_15', 'f_rest_16', 'f_rest_17', 'f_rest_18', 'f_rest_19', 'f_rest_20', 'f_rest_21', 'f_rest_22', 'f_rest_23', 'f_rest_24', 'f_rest_25', 'f_rest_26', 'f_rest_27', 'f_rest_28', 'f_rest_29', 'f_rest_30', 'f_rest_31', 'f_rest_32', 'f_rest_33', 'f_rest_34', 'f_rest_35', 'f_rest_36', 'f_rest_37', 'f_rest_38', 'f_rest_39', 'f_rest_40', 'f_rest_41', 'f_rest_42', 'f_rest_43', 'f_rest_44'], max_sh_degree: 3
+Traceback (most recent call last):
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/train.py", line 129, in <module>
+    coarse_sugar_path = coarse_training_with_density_regularization(coarse_args)
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/sugar_trainers/coarse_density.py", line 289, in coarse_training_with_density_regularization
+    nerfmodel = GaussianSplattingWrapper(
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/sugar_scene/gs_model.py", line 155, in __init__
+    self.gaussians.load_ply(
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/gaussian_splatting/scene/gaussian_model.py", line 233, in load_ply
+    features_extra[:, idx] = np.asarray(plydata.elements[0][attr_name])
+UnboundLocalError: local variable 'features_extra' referenced before assignment
+```
+
+
+Which indeeds indicates features_extra should not be empty, but even more interresting the code fails... is this bug present among all frameworks?
