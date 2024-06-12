@@ -1183,7 +1183,7 @@ So another approach would be to check what is actually stored under the data key
 But that's hard to find out...
 
 
-## Applying SuGAr to articial created cameras.json etc.
+## Applying SuGAr to artificially created cameras.json etc.
 we get:
 ```bash
 Loading config /home/jhuizing/master-thesis-ds/dg_for_sugar/checkpoint/...
@@ -1206,3 +1206,38 @@ other attributes you care about. Apparently, the original 3D Gaussian splatting 
 be present in the .ply file (#TODO: why? / how do they use it?), for otherwise we get the assertion error above.
 
 The challenge thus becomes to either also populate this "f_rest" attribute in our dreamgaussian process, or to find out if we can do without it. However, if we do a global search in our repo on this attribute, MVControl also seems to populate it, which indicates that it is actually needed by SuGaR.
+
+Actually, even DreamGaussian seems to check for this attribute when loading a .ply file... How then, do they not export this attribute...?
+
+## How 3DGS uses it
+3DGS populates this property through the `construct_lsit_of_attributes` method of the `GaussianModel` class and also checks this property (indentical to the sugar assert we try to fix) in the `load_ply` method of the same class.
+
+The `construct_lsit_of_attributes` is called by the `save_ply` method of the same class:
+
+```python
+ def save_ply(self, path):
+        mkdir_p(os.path.dirname(path))
+
+        xyz = self._xyz.detach().cpu().numpy()
+        normals = np.zeros_like(xyz)
+        f_dc = self._features_dc.detach().transpose(1, 2).flatten(start_dim=1).contiguous().cpu().numpy()
+        f_rest = self._features_rest.detach().transpose(1, 2).flatten(start_dim=1).contiguous().cpu().numpy()
+        opacities = self._opacity.detach().cpu().numpy()
+        scale = self._scaling.detach().cpu().numpy()
+        rotation = self._rotation.detach().cpu().numpy()
+
+        dtype_full = [(attribute, 'f4') for attribute in self.construct_list_of_attributes()]
+
+        elements = np.empty(xyz.shape[0], dtype=dtype_full)
+        attributes = np.concatenate((xyz, normals, f_dc, f_rest, opacities, scale, rotation), axis=1)
+        elements[:] = list(map(tuple, attributes))
+        el = PlyElement.describe(elements, 'vertex')
+        PlyData([el]).write(path)
+
+```
+
+## How Sugar Uses it
+
+## How DreamGaussian Uses
+
+## How MCcontrol goes about it

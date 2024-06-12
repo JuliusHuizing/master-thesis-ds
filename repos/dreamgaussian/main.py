@@ -157,7 +157,7 @@ class GUI:
     def save_camera_ply(self):
         save_dir = "dg_for_sugar/checkpoint/point_cloud/iteration_7000/point_cloud.ply"
         self.renderer.gaussians.save_ply(save_dir)
-        # 
+        
 
         
     def prepare_train(self):
@@ -506,17 +506,25 @@ class GUI:
        return
    
     # no gui mode
-    def train(self, iters=1000):
+    def train(self, iters=7000):
         if iters > 0:
             self.prepare_train()
             for i in tqdm.trange(iters):
                 self.train_step()
             # visualize gaussian distribution
-            if self.opt.generate_gaussian_distribution_plots:
-                Visualizer.visualize_gaussian_distribution(self.renderer.gaussians, "gaussian_distributions", image_size=512)
+            # if self.opt.generate_gaussian_distribution_plots:
+            #     Visualizer.visualize_gaussian_distribution(self.renderer.gaussians, "gaussian_distributions", image_size=512)
             # do a last prune
-            self.renderer.gaussians.prune(min_opacity=0.01, extent=1, max_screen_size=1)
+            # TODO: get me back in; just tmp deleted to check if it messes with the .ply..
+            # self.renderer.gaussians.prune(min_opacity=0.01, extent=1, max_screen_size=1)
         # save
+        
+        if self.opt.save_camera_positions:
+            num_cameras = 100
+            camera_positions = self.sample_random_camera_positions(num_cameras)
+            image_names = self.save_images_for_camera_positions(camera_positions)
+            self.save_camera_information(camera_positions, image_names)
+            self.save_camera_ply()
         
         if self.opt.save_model:
             self.save_model(mode='model')
@@ -550,12 +558,7 @@ class GUI:
 
             print("No output directory specified for saving images.", flush=True)
             
-        if self.opt.save_camera_positions:
-            num_cameras = 100
-            camera_positions = self.sample_random_camera_positions(num_cameras)
-            image_names = self.save_images_for_camera_positions(camera_positions)
-            self.save_camera_information(camera_positions, image_names)
-            self.save_camera_ply()
+       
 
                     
 
