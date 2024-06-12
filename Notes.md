@@ -156,3 +156,4 @@ Capture images from different viewpoints. Do not take images from the same locat
 8. Provide arguments in prompt if necessary; press enter
 9. debugger will run and output should show in terminal.
 10. WHen done, do not forget to scancel the sleep job.
+
