@@ -155,8 +155,12 @@ class GUI:
             json.dump(camera_data, f, indent=4)
             
     def save_camera_ply(self):
-        save_dir = "dg_for_sugar/checkpoint/point_cloud/iteration_7000/point_cloud.ply"
-        self.renderer.gaussians.save_ply(save_dir)
+        save_dir = "dg_for_sugar/checkpoint/point_cloud/iteration_7000/"
+        os.makedirs(self.opt.coarse_mesh_output_dir, exist_ok=True)
+        path = os.path.join(self.opt.coarse_mesh_output_dir, 'point_cloud.ply')
+        mesh = self.renderer.gaussians.extract_mesh(path, self.opt.density_thresh)
+        mesh.write_ply(path)
+        # self.renderer.gaussians.save_ply(save_dir)
         
 
         
