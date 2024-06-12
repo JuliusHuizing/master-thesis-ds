@@ -1366,6 +1366,32 @@ ValueError: cannot reshape array of size 0 into shape (39788,3,15)
 
 ```
 
+
+if we export the geo mesh.ply instead and run sugar on that, we get:
+
+```bash
+Loading config /home/jhuizing/master-thesis-ds/dg_for_sugar/checkpoint/...
+Performing train/eval split...
+Found image extension .png
+Traceback (most recent call last):
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/train.py", line 129, in <module>
+    coarse_sugar_path = coarse_training_with_density_regularization(coarse_args)
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/sugar_trainers/coarse_density.py", line 289, in coarse_training_with_density_regularization
+    nerfmodel = GaussianSplattingWrapper(
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/sugar_scene/gs_model.py", line 155, in __init__
+    self.gaussians.load_ply(
+  File "/gpfs/home6/jhuizing/master-thesis-ds/repos/SuGaR/gaussian_splatting/scene/gaussian_model.py", line 221, in load_ply
+    opacities = np.asarray(plydata.elements[0]["opacity"])[..., np.newaxis]
+  File "/home/jhuizing/.local/lib/python3.9/site-packages/plyfile.py", line 715, in __getitem__
+    return self.data[key]
+  File "/home/jhuizing/.conda/envs/sugar/lib/python3.9/site-packages/numpy/core/memmap.py", line 335, in __getitem__
+    res = super().__getitem__(index)
+ValueError: no field of name opacity
+
+```
+which is an error that occurs even before the assert, confirming that indeed this is not the .ply file we want to use.
+
+
 * We can set breakpoints and go through 3DGS's initialization flow in its train.py and see where the f_rest features get populated; and where they (don't) get populated in the dreamGassuaisn main.py...
 * We can further inspect the control flow both visually...
 * we can play with exporting other .ply files in dreamgaussians main.py and see if that results in something there... They also write a mesh.ply object....
