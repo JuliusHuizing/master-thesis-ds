@@ -1410,5 +1410,6 @@ so what if we just set this parameter to 3 in our own configs?
 - e.g. how many iterations of dg are we going to do before we save the ply?, etc.
 [ ] Understand & visualize the loss of the SuGaR epochs;
 perhaps it is overfititng, as the loss seems to increase, so maybe we can save checkpoint and find a better output .ply file?
+[ ] also understand and play with SuGar's hyperparameters...
 [ ] set up pipeline for comparing mesh objects of Original DG with mesh objects of Sugar (i.e. also use stage 2); we want tables comparing the clip scores of the meshes..
 
