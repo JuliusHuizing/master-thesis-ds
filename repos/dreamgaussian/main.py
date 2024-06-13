@@ -94,12 +94,22 @@ class GUI:
         
     def sample_camera_positions_for_sugar(self):
         camera_positions = []
-        for horizontal_angle in [0, 45, 90, 135, 180, 225, 270, 315]:
-            for elevation in [-30, 0, 30]:
-                for radius in [1.8, 2.0, 2.2]:
+        # for 100 horizontal angles between -45 and 45
+        for horizontal_angle in np.linspace(-45, 45, 10):
+            for elevation in np.linspace(-30, 30, 10):
+                for radius in [1.0, 3.0, 10]:
                     camera_positions.append((elevation, horizontal_angle, radius))
         
         return camera_positions
+        
+    # def sample_camera_positions_for_sugar(self):
+    #     camera_positions = []
+    #     for horizontal_angle in [0, 45, 90, 135, 180, 225, 270, 315]:
+    #         for elevation in [-30, 0, 30]:
+    #             for radius in [1.8, 2.0, 2.2]:
+    #                 camera_positions.append((elevation, horizontal_angle, radius))
+        
+    #     return camera_positions
             
                  
     def sample_random_camera_positions(self, n):
