@@ -1401,11 +1401,15 @@ so what if we just set this parameter to 3 in our own configs?
 🚀 Yes that was it... we can now run SuGaR on the output of DreamGaussian.
 
 # TODO:
-[ ] check output of initial sugar run
+[X] check output of initial sugar run
 [ ] improve image capture of DG's point cloud
   - can we reuse some of the camera movements we wrote for colmap creation?
   - verify that cameras.json make sense
 [ ] try another run and see if it improve results
+[ ] Read / Understand the many outputs SuGar Produces
+  - different colmap dirs?
+  - *mesh dirs without .obj files?
+  - empty dirs?
 [ ] set up another config file for playing with hyperpameters:
 - e.g. how many iterations of dg are we going to do before we save the ply?, etc.
 [ ] Understand & visualize the loss of the SuGaR epochs;

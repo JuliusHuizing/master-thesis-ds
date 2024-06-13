@@ -19,7 +19,7 @@ import argparse
 from omegaconf import OmegaConf
 import os
 from sisa3d.visuals.visualizer import Visualizer
-from sisa3d.camera import capture_and_save_images, generate_camera_positions, generate_fixed_elevation_positions, capture_and_save_images_for_clip_similarity
+from sisa3d.camera import capture_and_save_images, generate_camera_positions, generate_fixed_elevation_positions, capture_and_save_images_for_clip_similarity, capture_and_save_images_for_sugar
 from sisa3d.regularization import elongation_regularizer, compactness_regularizer, opacity_regularizer
 import json
 class GUI:
@@ -92,6 +92,16 @@ class GUI:
 
         self.last_seed = seed
         
+    def sample_camera_positions_for_sugar(self):
+        camera_positions = []
+        for horizontal_angle in [0, 45, 90, 135, 180, 225, 270, 315]:
+            for elevation in [-30, 0, 30]:
+                for radius in [1.8, 2.0, 2.2]:
+                    camera_positions.append((elevation, horizontal_angle, radius))
+        
+        return camera_positions
+            
+                 
     def sample_random_camera_positions(self, n):
         camera_positions = []
         for i in range(n):
@@ -118,6 +128,9 @@ class GUI:
             [0, 0, 1]
         ]
         return rotation_matrix
+    
+    # def information_rotation_matrices(self):
+        
             
     def save_images_for_camera_positions(self, camera_positions):
         save_dir = "dg_for_sugar/colmap/images"
@@ -524,10 +537,10 @@ class GUI:
         # save
         
         if self.opt.save_camera_positions:
-            num_cameras = 100
-            camera_positions = self.sample_random_camera_positions(num_cameras)
-            image_names = self.save_images_for_camera_positions(camera_positions)
-            self.save_camera_information(camera_positions, image_names)
+            camera_positions = self.sample_camera_positions_for_sugar()
+            file_name = self.opt.input.split("/")[-1].split(".")[0] # hack, we dont need this
+            capture_and_save_images_for_sugar(file_name, camera_positions, self.opt.stage_1_result_images_output_path, self.step, self.opt.ref_size, self.cam.fovy, self.cam.fovx, self.cam.near, self.cam.far, self.renderer, orbit_camera, MiniCam)
+            # self.save_camera_information(camera_positions, image_names)
             self.save_camera_ply()
         
         if self.opt.save_model:
