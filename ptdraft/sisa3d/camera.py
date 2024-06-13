@@ -94,9 +94,10 @@ def capture_and_save_images_for_sugar(image_name, camera_positions, directory, s
         rotation = pose[:3, :3]
 
         # Create dictionary for the current image
+        nam_without_extension = f"image_{idx}"
         camera_dict = {
             "id": idx,
-            "img_name": name,
+            "img_name": nam_without_extension,
             "width": width,
             "height": height,
             "position": position.tolist(),
