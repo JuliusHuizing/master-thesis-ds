@@ -547,11 +547,19 @@ class GUI:
         # save
         
         if self.opt.save_camera_positions:
-            camera_positions = self.sample_camera_positions_for_sugar()
-            file_name = self.opt.input.split("/")[-1].split(".")[0] # hack, we dont need this
-            capture_and_save_images_for_sugar(file_name, camera_positions, self.opt.stage_1_result_images_output_path, self.step, self.opt.ref_size, self.cam.fovy, self.cam.fovx, self.cam.near, self.cam.far, self.renderer, orbit_camera, MiniCam)
-            # self.save_camera_information(camera_positions, image_names)
+            
+            # TODO: this approach does not result in a valid sugar .obj...
+            # camera_positions = self.sample_camera_positions_for_sugar()
+            # file_name = self.opt.input.split("/")[-1].split(".")[0] # hack, we dont need this
+            # capture_and_save_images_for_sugar(file_name, camera_positions, self.opt.stage_1_result_images_output_path, self.step, self.opt.ref_size, self.cam.fovy, self.cam.fovx, self.cam.near, self.cam.far, self.renderer, orbit_camera, MiniCam)
+            # self.save_camera_ply()
+            
+            # This, for some reason, does...
+            camera_positions = self.sample_random_camera_positions(100)
+            image_names = self.save_images_for_camera_positions(camera_positions)
+            self.save_camera_information(camera_positions, image_names)
             self.save_camera_ply()
+
         
         if self.opt.save_model:
             self.save_model(mode='model')

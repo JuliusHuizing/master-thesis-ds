@@ -38,7 +38,7 @@ dreamgaussian:
   save_images: False
 
   regularize: 
-    elongation: 0.1
+    elongation: 0
     opacity: 0
     compactness: 0
 

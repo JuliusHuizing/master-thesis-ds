@@ -1406,6 +1406,7 @@ so what if we just set this parameter to 3 in our own configs?
   - can we reuse some of the camera movements we wrote for colmap creation?
   - verify that cameras.json make sense
 [ ] try disabling pruning in dreamgaussian...
+  but actually the logs of SuGAr say you should...
 [ ] try another run and see if it improve results
 [ ] Read / Understand the many outputs SuGar Produces
   - different colmap dirs?
