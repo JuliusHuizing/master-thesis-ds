@@ -161,3 +161,13 @@ Capture images from different viewpoints. Do not take images from the same locat
 9. debugger will run and output should show in terminal.
 10. WHen done, do not forget to scancel the sleep job.
 
+
+
+
+# Transfer large files from snellius to local
+
+locally, e.g. run:
+
+```bash
+rsync -av jhuizing@snellius.surf.nl:~/jhuizing/master-thesis-ds/repos/SuGaR/output .
+```
