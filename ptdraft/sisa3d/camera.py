@@ -74,7 +74,6 @@ def capture_and_save_images_for_sugar(image_name, camera_positions, directory, s
     save_dir = "dg_for_sugar/colmap/images"
     os.makedirs(save_dir, exist_ok=True)
     for idx, (ver, hor, rad) in enumerate(camera_positions):
-        tmp_file_path = os.path.join(directory, f"tmp_{idx}.txt")
         pose = orbit_camera(ver, hor, rad)
         cur_cam = MiniCam(pose, ref_size, ref_size, fovy, fovx, near, far)
         out = renderer.render(cur_cam)
@@ -90,9 +89,9 @@ def capture_and_save_images_for_sugar(image_name, camera_positions, directory, s
         # Extract width and height from the image
         height, width, _ = image_np.shape
 
-        # Extract position and rotation from the pose
-        position = pose[:3]
-        rotation = pose[3:].reshape(3, 3)
+        # Extract position and rotation from the pose matrix
+        position = pose[:3, 3]
+        rotation = pose[:3, :3]
 
         # Create dictionary for the current image
         camera_dict = {
@@ -112,12 +111,6 @@ def capture_and_save_images_for_sugar(image_name, camera_positions, directory, s
     save_dir = "dg_for_sugar/checkpoint"
     os.makedirs(save_dir, exist_ok=True)
     with open(os.path.join(save_dir, "cameras.json"), 'w') as json_file:
-        json.dump(cameras_data, json_file, indent=4)
-
-    # Save cameras_data to cameras.json
-    save_dir = "dg_for_sugar/checkpoint"
-    os.makedirs(save_dir, exist_ok=True)
-    with open(os.path.join(save_dir, "cameras.json", 'w')) as json_file:
         json.dump(cameras_data, json_file, indent=4)
 
 def capture_and_save_images(image_name, camera_positions, directory, step, ref_size, fovy, fovx, near, far, renderer, orbit_camera, MiniCam):
