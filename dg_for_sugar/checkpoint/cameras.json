@@ -1,7 +1,7 @@
 [
     {
         "id": 0,
-        "img_name": "image_0.png",
+        "img_name": "image_0",
         "width": 512,
         "height": 512,
         "position": [
@@ -31,7 +31,7 @@
     },
     {
         "id": 1,
-        "img_name": "image_1.png",
+        "img_name": "image_1",
         "width": 512,
         "height": 512,
         "position": [
@@ -61,7 +61,7 @@
     },
     {
         "id": 2,
-        "img_name": "image_2.png",
+        "img_name": "image_2",
         "width": 512,
         "height": 512,
         "position": [
@@ -91,7 +91,7 @@
     },
     {
         "id": 3,
-        "img_name": "image_3.png",
+        "img_name": "image_3",
         "width": 512,
         "height": 512,
         "position": [
@@ -121,7 +121,7 @@
     },
     {
         "id": 4,
-        "img_name": "image_4.png",
+        "img_name": "image_4",
         "width": 512,
         "height": 512,
         "position": [
@@ -151,7 +151,7 @@
     },
     {
         "id": 5,
-        "img_name": "image_5.png",
+        "img_name": "image_5",
         "width": 512,
         "height": 512,
         "position": [
@@ -181,7 +181,7 @@
     },
     {
         "id": 6,
-        "img_name": "image_6.png",
+        "img_name": "image_6",
         "width": 512,
         "height": 512,
         "position": [
@@ -211,7 +211,7 @@
     },
     {
         "id": 7,
-        "img_name": "image_7.png",
+        "img_name": "image_7",
         "width": 512,
         "height": 512,
         "position": [
@@ -241,7 +241,7 @@
     },
     {
         "id": 8,
-        "img_name": "image_8.png",
+        "img_name": "image_8",
         "width": 512,
         "height": 512,
         "position": [
@@ -271,7 +271,7 @@
     },
     {
         "id": 9,
-        "img_name": "image_9.png",
+        "img_name": "image_9",
         "width": 512,
         "height": 512,
         "position": [
@@ -301,7 +301,7 @@
     },
     {
         "id": 10,
-        "img_name": "image_10.png",
+        "img_name": "image_10",
         "width": 512,
         "height": 512,
         "position": [
@@ -331,7 +331,7 @@
     },
     {
         "id": 11,
-        "img_name": "image_11.png",
+        "img_name": "image_11",
         "width": 512,
         "height": 512,
         "position": [
@@ -361,7 +361,7 @@
     },
     {
         "id": 12,
-        "img_name": "image_12.png",
+        "img_name": "image_12",
         "width": 512,
         "height": 512,
         "position": [
@@ -391,7 +391,7 @@
     },
     {
         "id": 13,
-        "img_name": "image_13.png",
+        "img_name": "image_13",
         "width": 512,
         "height": 512,
         "position": [
@@ -421,7 +421,7 @@
     },
     {
         "id": 14,
-        "img_name": "image_14.png",
+        "img_name": "image_14",
         "width": 512,
         "height": 512,
         "position": [
@@ -451,7 +451,7 @@
     },
     {
         "id": 15,
-        "img_name": "image_15.png",
+        "img_name": "image_15",
         "width": 512,
         "height": 512,
         "position": [
@@ -481,7 +481,7 @@
     },
     {
         "id": 16,
-        "img_name": "image_16.png",
+        "img_name": "image_16",
         "width": 512,
         "height": 512,
         "position": [
@@ -511,7 +511,7 @@
     },
     {
         "id": 17,
-        "img_name": "image_17.png",
+        "img_name": "image_17",
         "width": 512,
         "height": 512,
         "position": [
@@ -541,7 +541,7 @@
     },
     {
         "id": 18,
-        "img_name": "image_18.png",
+        "img_name": "image_18",
         "width": 512,
         "height": 512,
         "position": [
@@ -571,7 +571,7 @@
     },
     {
         "id": 19,
-        "img_name": "image_19.png",
+        "img_name": "image_19",
         "width": 512,
         "height": 512,
         "position": [
@@ -601,7 +601,7 @@
     },
     {
         "id": 20,
-        "img_name": "image_20.png",
+        "img_name": "image_20",
         "width": 512,
         "height": 512,
         "position": [
@@ -631,7 +631,7 @@
     },
     {
         "id": 21,
-        "img_name": "image_21.png",
+        "img_name": "image_21",
         "width": 512,
         "height": 512,
         "position": [
@@ -661,7 +661,7 @@
     },
     {
         "id": 22,
-        "img_name": "image_22.png",
+        "img_name": "image_22",
         "width": 512,
         "height": 512,
         "position": [
@@ -691,7 +691,7 @@
     },
     {
         "id": 23,
-        "img_name": "image_23.png",
+        "img_name": "image_23",
         "width": 512,
         "height": 512,
         "position": [
@@ -721,7 +721,7 @@
     },
     {
         "id": 24,
-        "img_name": "image_24.png",
+        "img_name": "image_24",
         "width": 512,
         "height": 512,
         "position": [
@@ -751,7 +751,7 @@
     },
     {
         "id": 25,
-        "img_name": "image_25.png",
+        "img_name": "image_25",
         "width": 512,
         "height": 512,
         "position": [
@@ -781,7 +781,7 @@
     },
     {
         "id": 26,
-        "img_name": "image_26.png",
+        "img_name": "image_26",
         "width": 512,
         "height": 512,
         "position": [
@@ -811,7 +811,7 @@
     },
     {
         "id": 27,
-        "img_name": "image_27.png",
+        "img_name": "image_27",
         "width": 512,
         "height": 512,
         "position": [
@@ -841,7 +841,7 @@
     },
     {
         "id": 28,
-        "img_name": "image_28.png",
+        "img_name": "image_28",
         "width": 512,
         "height": 512,
         "position": [
@@ -871,7 +871,7 @@
     },
     {
         "id": 29,
-        "img_name": "image_29.png",
+        "img_name": "image_29",
         "width": 512,
         "height": 512,
         "position": [
@@ -901,7 +901,7 @@
     },
     {
         "id": 30,
-        "img_name": "image_30.png",
+        "img_name": "image_30",
         "width": 512,
         "height": 512,
         "position": [
@@ -931,7 +931,7 @@
     },
     {
         "id": 31,
-        "img_name": "image_31.png",
+        "img_name": "image_31",
         "width": 512,
         "height": 512,
         "position": [
@@ -961,7 +961,7 @@
     },
     {
         "id": 32,
-        "img_name": "image_32.png",
+        "img_name": "image_32",
         "width": 512,
         "height": 512,
         "position": [
@@ -991,7 +991,7 @@
     },
     {
         "id": 33,
-        "img_name": "image_33.png",
+        "img_name": "image_33",
         "width": 512,
         "height": 512,
         "position": [
@@ -1021,7 +1021,7 @@
     },
     {
         "id": 34,
-        "img_name": "image_34.png",
+        "img_name": "image_34",
         "width": 512,
         "height": 512,
         "position": [
@@ -1051,7 +1051,7 @@
     },
     {
         "id": 35,
-        "img_name": "image_35.png",
+        "img_name": "image_35",
         "width": 512,
         "height": 512,
         "position": [
@@ -1081,7 +1081,7 @@
     },
     {
         "id": 36,
-        "img_name": "image_36.png",
+        "img_name": "image_36",
         "width": 512,
         "height": 512,
         "position": [
@@ -1111,7 +1111,7 @@
     },
     {
         "id": 37,
-        "img_name": "image_37.png",
+        "img_name": "image_37",
         "width": 512,
         "height": 512,
         "position": [
@@ -1141,7 +1141,7 @@
     },
     {
         "id": 38,
-        "img_name": "image_38.png",
+        "img_name": "image_38",
         "width": 512,
         "height": 512,
         "position": [
@@ -1171,7 +1171,7 @@
     },
     {
         "id": 39,
-        "img_name": "image_39.png",
+        "img_name": "image_39",
         "width": 512,
         "height": 512,
         "position": [
@@ -1201,7 +1201,7 @@
     },
     {
         "id": 40,
-        "img_name": "image_40.png",
+        "img_name": "image_40",
         "width": 512,
         "height": 512,
         "position": [
@@ -1231,7 +1231,7 @@
     },
     {
         "id": 41,
-        "img_name": "image_41.png",
+        "img_name": "image_41",
         "width": 512,
         "height": 512,
         "position": [
@@ -1261,7 +1261,7 @@
     },
     {
         "id": 42,
-        "img_name": "image_42.png",
+        "img_name": "image_42",
         "width": 512,
         "height": 512,
         "position": [
@@ -1291,7 +1291,7 @@
     },
     {
         "id": 43,
-        "img_name": "image_43.png",
+        "img_name": "image_43",
         "width": 512,
         "height": 512,
         "position": [
@@ -1321,7 +1321,7 @@
     },
     {
         "id": 44,
-        "img_name": "image_44.png",
+        "img_name": "image_44",
         "width": 512,
         "height": 512,
         "position": [
@@ -1351,7 +1351,7 @@
     },
     {
         "id": 45,
-        "img_name": "image_45.png",
+        "img_name": "image_45",
         "width": 512,
         "height": 512,
         "position": [
@@ -1381,7 +1381,7 @@
     },
     {
         "id": 46,
-        "img_name": "image_46.png",
+        "img_name": "image_46",
         "width": 512,
         "height": 512,
         "position": [
@@ -1411,7 +1411,7 @@
     },
     {
         "id": 47,
-        "img_name": "image_47.png",
+        "img_name": "image_47",
         "width": 512,
         "height": 512,
         "position": [
@@ -1441,7 +1441,7 @@
     },
     {
         "id": 48,
-        "img_name": "image_48.png",
+        "img_name": "image_48",
         "width": 512,
         "height": 512,
         "position": [
@@ -1471,7 +1471,7 @@
     },
     {
         "id": 49,
-        "img_name": "image_49.png",
+        "img_name": "image_49",
         "width": 512,
         "height": 512,
         "position": [
@@ -1501,7 +1501,7 @@
     },
     {
         "id": 50,
-        "img_name": "image_50.png",
+        "img_name": "image_50",
         "width": 512,
         "height": 512,
         "position": [
@@ -1531,7 +1531,7 @@
     },
     {
         "id": 51,
-        "img_name": "image_51.png",
+        "img_name": "image_51",
         "width": 512,
         "height": 512,
         "position": [
@@ -1561,7 +1561,7 @@
     },
     {
         "id": 52,
-        "img_name": "image_52.png",
+        "img_name": "image_52",
         "width": 512,
         "height": 512,
         "position": [
@@ -1591,7 +1591,7 @@
     },
     {
         "id": 53,
-        "img_name": "image_53.png",
+        "img_name": "image_53",
         "width": 512,
         "height": 512,
         "position": [
@@ -1621,7 +1621,7 @@
     },
     {
         "id": 54,
-        "img_name": "image_54.png",
+        "img_name": "image_54",
         "width": 512,
         "height": 512,
         "position": [
@@ -1651,7 +1651,7 @@
     },
     {
         "id": 55,
-        "img_name": "image_55.png",
+        "img_name": "image_55",
         "width": 512,
         "height": 512,
         "position": [
@@ -1681,7 +1681,7 @@
     },
     {
         "id": 56,
-        "img_name": "image_56.png",
+        "img_name": "image_56",
         "width": 512,
         "height": 512,
         "position": [
@@ -1711,7 +1711,7 @@
     },
     {
         "id": 57,
-        "img_name": "image_57.png",
+        "img_name": "image_57",
         "width": 512,
         "height": 512,
         "position": [
@@ -1741,7 +1741,7 @@
     },
     {
         "id": 58,
-        "img_name": "image_58.png",
+        "img_name": "image_58",
         "width": 512,
         "height": 512,
         "position": [
@@ -1771,7 +1771,7 @@
     },
     {
         "id": 59,
-        "img_name": "image_59.png",
+        "img_name": "image_59",
         "width": 512,
         "height": 512,
         "position": [
@@ -1801,7 +1801,7 @@
     },
     {
         "id": 60,
-        "img_name": "image_60.png",
+        "img_name": "image_60",
         "width": 512,
         "height": 512,
         "position": [
@@ -1831,7 +1831,7 @@
     },
     {
         "id": 61,
-        "img_name": "image_61.png",
+        "img_name": "image_61",
         "width": 512,
         "height": 512,
         "position": [
@@ -1861,7 +1861,7 @@
     },
     {
         "id": 62,
-        "img_name": "image_62.png",
+        "img_name": "image_62",
         "width": 512,
         "height": 512,
         "position": [
@@ -1891,7 +1891,7 @@
     },
     {
         "id": 63,
-        "img_name": "image_63.png",
+        "img_name": "image_63",
         "width": 512,
         "height": 512,
         "position": [
@@ -1921,7 +1921,7 @@
     },
     {
         "id": 64,
-        "img_name": "image_64.png",
+        "img_name": "image_64",
         "width": 512,
         "height": 512,
         "position": [
@@ -1951,7 +1951,7 @@
     },
     {
         "id": 65,
-        "img_name": "image_65.png",
+        "img_name": "image_65",
         "width": 512,
         "height": 512,
         "position": [
@@ -1981,7 +1981,7 @@
     },
     {
         "id": 66,
-        "img_name": "image_66.png",
+        "img_name": "image_66",
         "width": 512,
         "height": 512,
         "position": [
@@ -2011,7 +2011,7 @@
     },
     {
         "id": 67,
-        "img_name": "image_67.png",
+        "img_name": "image_67",
         "width": 512,
         "height": 512,
         "position": [
@@ -2041,7 +2041,7 @@
     },
     {
         "id": 68,
-        "img_name": "image_68.png",
+        "img_name": "image_68",
         "width": 512,
         "height": 512,
         "position": [
@@ -2071,7 +2071,7 @@
     },
     {
         "id": 69,
-        "img_name": "image_69.png",
+        "img_name": "image_69",
         "width": 512,
         "height": 512,
         "position": [
@@ -2101,7 +2101,7 @@
     },
     {
         "id": 70,
-        "img_name": "image_70.png",
+        "img_name": "image_70",
         "width": 512,
         "height": 512,
         "position": [
@@ -2131,7 +2131,7 @@
     },
     {
         "id": 71,
-        "img_name": "image_71.png",
+        "img_name": "image_71",
         "width": 512,
         "height": 512,
         "position": [
