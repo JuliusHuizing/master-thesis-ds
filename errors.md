@@ -1405,6 +1405,7 @@ so what if we just set this parameter to 3 in our own configs?
 [ ] improve image capture of DG's point cloud
   - can we reuse some of the camera movements we wrote for colmap creation?
   - verify that cameras.json make sense
+[ ] try disabling pruning in dreamgaussian...
 [ ] try another run and see if it improve results
 [ ] Read / Understand the many outputs SuGar Produces
   - different colmap dirs?
