@@ -96,7 +96,7 @@ def capture_and_save_images_for_sugar(image_name, camera_positions, directory, s
         # Create dictionary for the current image
         camera_dict = {
             "id": idx,
-            "image_name": name,
+            "img_name": name,
             "width": width,
             "height": height,
             "position": position.tolist(),
