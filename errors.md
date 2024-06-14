@@ -1402,6 +1402,12 @@ so what if we just set this parameter to 3 in our own configs?
 
 # TODO:
 [X] check output of initial sugar run
+[ ] try image with more structure from dataset.
+[ ] if first approach works & second does not, verify any diffferences:
+- image size (512 vs 800)
+- camera positions that capture images...
+- camera positions in camera.json
+- #TODO: perhaps easiest to just change that logic to get additional views on the obj...
 [ ] improve image capture of DG's point cloud
   - can we reuse some of the camera movements we wrote for colmap creation?
   - verify that cameras.json make sense
