@@ -19,7 +19,7 @@ import argparse
 from omegaconf import OmegaConf
 import os
 from sisa3d.visuals.visualizer import Visualizer
-from sisa3d.camera import capture_and_save_images, generate_camera_positions, generate_fixed_elevation_positions, capture_and_save_images_for_clip_similarity, capture_and_save_images_for_sugar, capture_and_save_images_for_sugarV2
+from sisa3d.camera import capture_and_save_images, generate_camera_positions, generate_fixed_elevation_positions, capture_and_save_images_for_clip_similarity, capture_and_save_images_for_sugar, capture_and_save_images_for_sugarV2, capture_and_save_images_for_sugarV3
 from sisa3d.regularization import elongation_regularizer, compactness_regularizer, opacity_regularizer
 import json
 class GUI:
@@ -91,6 +91,7 @@ class GUI:
         torch.backends.cudnn.benchmark = True
 
         self.last_seed = seed
+        
         
     def sample_camera_positions_for_sugar(self):
         camera_positions = []
@@ -610,7 +611,7 @@ class GUI:
             # TODO: this approach does not result in a valid sugar .obj...
             camera_positions = self.sample_camera_positions_for_sugar()
             file_name = self.opt.input.split("/")[-1].split(".")[0] # hack, we dont need this
-            capture_and_save_images_for_sugarV2(file_name, camera_positions, self.opt.stage_1_result_images_output_path, self.step, self.opt.ref_size, self.cam.fovy, self.cam.fovx, self.cam.near, self.cam.far, self.renderer, orbit_camera, MiniCam)
+            capture_and_save_images_for_sugarV3(file_name, camera_positions, self.opt.stage_1_result_images_output_path, self.step, self.opt.ref_size, self.cam.fovy, self.cam.fovx, self.cam.near, self.cam.far, self.renderer, orbit_camera, MiniCam)
             self.save_camera_ply()
             
             # This, for some reason, does...
