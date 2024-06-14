@@ -169,7 +169,7 @@ Capture images from different viewpoints. Do not take images from the same locat
 locally, e.g. run:
 
 ```bash
-REMOTE_PATH="/home/jhuizing/master-thesis-ds/repos/SuGaR/output/refined_mesh/colmap/"
+REMOTE_PATH="/home/jhuizing/master-thesis-ds/repos/SuGaR/output/coarse_mesh/colmap/sugarmesh_3Dgs7000_densityestim02_sdfnorm02_level03_decim1000000.ply"
 rsync -av jhuizing@snellius.surf.nl:$REMOTE_PATH .
 ```
 
