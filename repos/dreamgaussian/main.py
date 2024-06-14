@@ -96,10 +96,10 @@ class GUI:
     def sample_camera_positions_for_sugar(self):
         camera_positions = []
         # for 100 horizontal angles between -45 and 45
-        for horizontal_angle in np.linspace(0, 360, 10):
-            for elevation in np.linspace(0, 45, 10): #TODO: widen range, but note taht -90 and 90 degrees seem to lead to very strange result...
-                for radius in np.linspace(1, 3, 10):
-                    camera_positions.append((elevation, horizontal_angle, radius))
+        for horizontal_angle in np.linspace(0, 360, 100):
+            # for elevation in np.linspace(0, 45, 10): #TODO: widen range, but note taht -90 and 90 degrees seem to lead to very strange result...
+            # for radius in np.linspace(1, 3, 10):
+            camera_positions.append((0, horizontal_angle, 2))
         
         return camera_positions
     
@@ -603,7 +603,7 @@ class GUI:
             #     Visualizer.visualize_gaussian_distribution(self.renderer.gaussians, "gaussian_distributions", image_size=512)
             # do a last prune
             # TODO: get me back in; just tmp deleted to check if it messes with the .ply..
-            # self.renderer.gaussians.prune(min_opacity=0.01, extent=1, max_screen_size=1)
+            self.renderer.gaussians.prune(min_opacity=0.01, extent=1, max_screen_size=1)
         # save
         
         if self.opt.save_camera_positions:

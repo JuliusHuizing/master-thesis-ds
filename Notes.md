@@ -169,7 +169,7 @@ Capture images from different viewpoints. Do not take images from the same locat
 locally, e.g. run:
 
 ```bash
-REMOTE_PATH="/home/jhuizing/master-thesis-ds/repos/SuGaR/output/refined_mesh/colmap"
+REMOTE_PATH="/home/jhuizing/master-thesis-ds/repos/SuGaR/output/refined_mesh/colmap/"
 rsync -av jhuizing@snellius.surf.nl:$REMOTE_PATH .
 ```
 
@@ -304,3 +304,5 @@ class MiniCam:
 
 
 ```
+
+see repos/gaussian-splatting/scene/cameras.py

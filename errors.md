@@ -1403,27 +1403,30 @@ so what if we just set this parameter to 3 in our own configs?
 # TODO:
 [X] check output of initial sugar run
 [X] try image with more structure from dataset.
-[ ] try adapting camera_to_json from 3dgs framework for MiniCam.
-[ ] if first approach works & second does not, verify any diffferences:
+[X] try adapting camera_to_json from 3dgs framework for MiniCam.
+[X] if first approach works & second does not, verify any diffferences:
 - image size (512 vs 800)
 - camera positions that capture images...
 - camera positions in camera.json
 - #TODO: perhaps easiest to just change that logic to get additional views on the obj...
-[ ] improve image capture of DG's point cloud
+[X] improve image capture of DG's point cloud
   - can we reuse some of the camera movements we wrote for colmap creation?
   - verify that cameras.json make sense
-[ ] try disabling pruning in dreamgaussian...
+[X] try disabling pruning in dreamgaussian...
   but actually the logs of SuGAr say you should...
-[ ] try another run and see if it improve results
-[ ] Read / Understand the many outputs SuGar Produces
+[X] try another run and see if it improve results
+[X] Read / Understand the many outputs SuGar Produces
   - different colmap dirs?
   - *mesh dirs without .obj files?
   - empty dirs?
+[ ] Try with fixed radius, just horizontal angle and elevation ranges.
+[ ] Try with 100 original images, like MVcontrol does...?
+[ ] Try on stage 2 gaussians that dg already refined..?
 [ ] set up another config file for playing with hyperpameters:
 - e.g. how many iterations of dg are we going to do before we save the ply?, etc.
 [ ] Understand & visualize the loss of the SuGaR epochs;
 perhaps it is overfititng, as the loss seems to increase, so maybe we can save checkpoint and find a better output .ply file?
-[ ] also understand and play with SuGar's hyperparameters...
+[X] also understand and play with SuGar's hyperparameters...
 [ ] set up pipeline for comparing mesh objects of Original DG with mesh objects of Sugar (i.e. also use stage 2); we want tables comparing the clip scores of the meshes..
 
 
