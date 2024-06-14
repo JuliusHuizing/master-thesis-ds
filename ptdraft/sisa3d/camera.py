@@ -439,39 +439,7 @@ def save_images_for_camera_positions(self, camera_positions):
         image_names.append(img_name)
     return image_names
 
-# # taken from 3dgs lib
-# def camera_to_JSON(id, camera : Camera):
-#     Rt = np.zeros((4, 4))
-#     Rt[:3, :3] = camera.R.transpose()
-#     Rt[:3, 3] = camera.T
-#     Rt[3, 3] = 1.0
 
-#     W2C = np.linalg.inv(Rt)
-#     pos = W2C[:3, 3]
-#     rot = W2C[:3, :3]
-#     serializable_array_2d = [x.tolist() for x in rot]
-#     camera_entry = {
-#         'id' : id,
-#         'img_name' : camera.image_name,
-#         'width' : camera.width,
-#         'height' : camera.height,
-#         'position': pos.tolist(),
-#         'rotation': serializable_array_2d,
-#         'fy' : fov2focal(camera.FovY, camera.height),
-#         'fx' : fov2focal(camera.FovX, camera.width)
-#     }
-#     return camera_entry
-
-#
-# Copyright (C) 2023, Inria
-# GRAPHDECO research group, https://team.inria.fr/graphdeco
-# All rights reserved.
-#
-# This software is free for non-commercial, research and evaluation use 
-# under the terms of the LICENSE.md file.
-#
-# For inquiries contact  george.drettakis@inria.fr
-#
 
 
 class Camera(nn.Module):
@@ -530,6 +498,23 @@ class MiniCam:
         self.camera_center = view_inv[3][:3]
 
 def minicam_to_JSON(id, camera: MiniCam):
+    # Rt = np.zeros((4, 4))
+    # Rt[:3, :3] = camera.R.transpose()
+    # Rt[:3, 3] = camera.T
+    # Rt[3, 3] = 1.0
+    # serializable_array_2d = [x.tolist() for x in rot]
+    # camera_entry = {
+    #     'id' : id,
+    #     'img_name' : f"image_{id}",
+    #     'width' : camera.image_width,
+    #     'height' : camera.image_height,
+    #     'position': pos.tolist(),
+    #     'rotation': serializable_array_2d,
+    #     'fy' : fov2focal(camera.FovY, camera.image_height),
+    #     'fx' : fov2focal(camera.FovX, camera.image_width)
+    # }
+    # return camera_entry
+
     # Inverting the world view transform to get the camera position and rotation
     world_view_transform_inv = torch.inverse(camera.world_view_transform)
     camera_center = world_view_transform_inv[3][:3].cpu().numpy()  # Move to CPU before converting to NumPy
@@ -548,7 +533,39 @@ def minicam_to_JSON(id, camera: MiniCam):
         'fx': fov2focal(camera.FoVx, camera.image_width)
     }
     return camera_entry
+# taken from 3dgs lib
+def camera_to_JSON(id, camera : Camera):
+    Rt = np.zeros((4, 4))
+    Rt[:3, :3] = camera.R.transpose()
+    Rt[:3, 3] = camera.T
+    Rt[3, 3] = 1.0
 
+    W2C = np.linalg.inv(Rt)
+    pos = W2C[:3, 3]
+    rot = W2C[:3, :3]
+    serializable_array_2d = [x.tolist() for x in rot]
+    camera_entry = {
+        'id' : id,
+        'img_name' : camera.image_name,
+        'width' : camera.width,
+        'height' : camera.height,
+        'position': pos.tolist(),
+        'rotation': serializable_array_2d,
+        'fy' : fov2focal(camera.FovY, camera.height),
+        'fx' : fov2focal(camera.FovX, camera.width)
+    }
+    return camera_entry
+
+#
+# Copyright (C) 2023, Inria
+# GRAPHDECO research group, https://team.inria.fr/graphdeco
+# All rights reserved.
+#
+# This software is free for non-commercial, research and evaluation use 
+# under the terms of the LICENSE.md file.
+#
+# For inquiries contact  george.drettakis@inria.fr
+#
 
 def capture_and_save_images_for_sugarV3(image_name, camera_positions, directory, step, ref_size, fovy, fovx, near, far, renderer, orbit_camera, MiniCam):
     """
