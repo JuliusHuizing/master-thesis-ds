@@ -2983,7 +2983,11 @@
             [
                 1.0,
                 0.0,
+<<<<<<< HEAD
                 2.4492937051703357e-16
+=======
+                0.0
+>>>>>>> ac2d9478 (try 5M gaussians at init and 7000 iterations training.")
             ],
             [
                 -0.0,
@@ -2991,7 +2995,11 @@
                 -0.0
             ],
             [
+<<<<<<< HEAD
                 2.4492937051703357e-16,
+=======
+                0.0,
+>>>>>>> ac2d9478 (try 5M gaussians at init and 7000 iterations training.")
                 0.0,
                 -1.0
             ]

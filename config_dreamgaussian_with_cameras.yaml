@@ -25,7 +25,7 @@ dreamgaussian:
   export_mesh_for_stage_1: False
   coarse_mesh_output_dir: "results/mesh/coarse/"
   # so we have access to the file name and can save results with the same name
-  input_image_path: "assets/blueberry.jpeg"
+  input_image_path: "assets/bird.png"
   # we need to duplicate this here so dg main.py can access it...
   stage_1_result_images_output_path: "results/stage_1/3images/"
   stage_1_images_output_path: "results/dream_gaussian/stage_1/"
@@ -74,7 +74,7 @@ dreamgaussian:
   # training batch size per iter
   batch_size: 1
   # training iterations for stage 1
-  iters: 500
+  iters: 7000
   # whether to linearly anneal timestep
   anneal_timestep: True
   # training camera radius
@@ -108,7 +108,7 @@ dreamgaussian:
   W: 800
 
   ### Gaussian splatting
-  num_pts: 5000
+  num_pts: 5000000
   sh_degree: 3
   position_lr_init: 0.001
   position_lr_final: 0.00002
