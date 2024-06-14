@@ -96,7 +96,7 @@ class GUI:
         camera_positions = []
         # for 100 horizontal angles between -45 and 45
         for horizontal_angle in np.linspace(0, 360, 10):
-            for elevation in np.linspace(0, 90, 10):
+            for elevation in np.linspace(0, 45, 10):
                 for radius in np.linspace(1, 3, 10):
                     camera_positions.append((elevation, horizontal_angle, radius))
         
