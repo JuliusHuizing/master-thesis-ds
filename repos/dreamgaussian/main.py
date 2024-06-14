@@ -19,7 +19,7 @@ import argparse
 from omegaconf import OmegaConf
 import os
 from sisa3d.visuals.visualizer import Visualizer
-from sisa3d.camera import capture_and_save_images, generate_camera_positions, generate_fixed_elevation_positions, capture_and_save_images_for_clip_similarity, capture_and_save_images_for_sugar
+from sisa3d.camera import capture_and_save_images, generate_camera_positions, generate_fixed_elevation_positions, capture_and_save_images_for_clip_similarity, capture_and_save_images_for_sugar, capture_and_save_images_for_sugarV2
 from sisa3d.regularization import elongation_regularizer, compactness_regularizer, opacity_regularizer
 import json
 class GUI:
@@ -101,6 +101,44 @@ class GUI:
                     camera_positions.append((elevation, horizontal_angle, radius))
         
         return camera_positions
+    
+    def calculate_rotation_matrix(azimuth, elevation, roll=0):
+        azimuth = np.radians(azimuth)
+        elevation = np.radians(elevation)
+        roll = np.radians(roll)
+        
+        # Rotation matrix for azimuth (yaw)
+        Rz = np.array([
+            [np.cos(azimuth), -np.sin(azimuth), 0],
+            [np.sin(azimuth), np.cos(azimuth), 0],
+            [0, 0, 1]
+        ])
+        
+        # Rotation matrix for elevation (pitch)
+        Ry = np.array([
+            [np.cos(elevation), 0, np.sin(elevation)],
+            [0, 1, 0],
+            [-np.sin(elevation), 0, np.cos(elevation)]
+        ])
+        
+        # Rotation matrix for roll
+        Rx = np.array([
+            [1, 0, 0],
+            [0, np.cos(roll), -np.sin(roll)],
+            [0, np.sin(roll), np.cos(roll)]
+        ])
+        
+        # Combined rotation matrix
+        R = Rz @ Ry @ Rx
+        return R
+    
+    def spherical_to_cartesian(radius, azimuth, elevation):
+        x = radius * np.cos(np.radians(elevation)) * np.cos(np.radians(azimuth))
+        y = radius * np.cos(np.radians(elevation)) * np.sin(np.radians(azimuth))
+        z = radius * np.sin(np.radians(elevation))
+        return x, y
+        
+    
         
     # def sample_camera_positions_for_sugar(self):
     #     camera_positions = []
@@ -114,6 +152,7 @@ class GUI:
                  
     def sample_random_camera_positions(self, n):
         camera_positions = []
+        
         for i in range(n):
             position = [
                 np.random.uniform(-self.opt.radius, self.opt.radius),
@@ -127,7 +166,27 @@ class GUI:
                 'rotation': rotation
             })
         return camera_positions
-
+        
+        
+    def uniform_rotation_matrices(n):
+        # Generate n uniformly distributed angles between 0 and 2*pi
+        angles = np.linspace(0, 2 * np.pi, n, endpoint=False)
+        
+        # Create a list to store the rotation matrices
+        rotation_matrices = []
+        
+        for angle in angles:
+            cos_angle = np.cos(angle)
+            sin_angle = np.sin(angle)
+            rotation_matrix = [
+                [cos_angle, -sin_angle, 0],
+                [sin_angle, cos_angle, 0],
+                [0, 0, 1]
+            ]
+            rotation_matrices.append(rotation_matrix)
+        
+        return rotation_matrices
+    
     def random_rotation_matrix(self):
         angle = np.random.uniform(0, 2 * np.pi)
         cos_angle = np.cos(angle)
@@ -549,16 +608,16 @@ class GUI:
         if self.opt.save_camera_positions:
             
             # TODO: this approach does not result in a valid sugar .obj...
-            # camera_positions = self.sample_camera_positions_for_sugar()
-            # file_name = self.opt.input.split("/")[-1].split(".")[0] # hack, we dont need this
-            # capture_and_save_images_for_sugar(file_name, camera_positions, self.opt.stage_1_result_images_output_path, self.step, self.opt.ref_size, self.cam.fovy, self.cam.fovx, self.cam.near, self.cam.far, self.renderer, orbit_camera, MiniCam)
-            # self.save_camera_ply()
+            camera_positions = self.sample_camera_positions_for_sugar()
+            file_name = self.opt.input.split("/")[-1].split(".")[0] # hack, we dont need this
+            capture_and_save_images_for_sugarV2(file_name, camera_positions, self.opt.stage_1_result_images_output_path, self.step, self.opt.ref_size, self.cam.fovy, self.cam.fovx, self.cam.near, self.cam.far, self.renderer, orbit_camera, MiniCam)
+            self.save_camera_ply()
             
             # This, for some reason, does...
-            camera_positions = self.sample_random_camera_positions(100)
-            image_names = self.save_images_for_camera_positions(camera_positions)
-            self.save_camera_information(camera_positions, image_names)
-            self.save_camera_ply()
+            # camera_positions = self.sample_random_camera_positions(100)
+            # image_names = self.save_images_for_camera_positions(camera_positions)
+            # self.save_camera_information(camera_positions, image_names)
+            # self.save_camera_ply()
 
         
         if self.opt.save_model:

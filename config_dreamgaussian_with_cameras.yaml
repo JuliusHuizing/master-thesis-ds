@@ -3,7 +3,7 @@
 # Paths that are only used in pipeline.py should on be defined here;
 # paths thare are used in maim.py of the DG framework should be defined under both 'paths' and under 'dreamgaussian'
 paths:
-  input_image_path: "assets/blueberry.jpeg"
+  input_image_path: "assets/bird.png"
   dream_gaussian_repo_path: "repos/dreamgaussian/"
   preprocessing_output_path: "results/preprocessing/"
   image_progression_output_path: "results/image_progression/"

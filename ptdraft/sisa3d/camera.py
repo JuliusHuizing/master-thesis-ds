@@ -113,6 +113,106 @@ def capture_and_save_images_for_sugar(image_name, camera_positions, directory, s
     os.makedirs(save_dir, exist_ok=True)
     with open(os.path.join(save_dir, "cameras.json"), 'w') as json_file:
         json.dump(cameras_data, json_file, indent=4)
+        
+def capture_and_save_images_for_sugarV2(image_name, camera_positions, directory, step, ref_size, fovy, fovx, near, far, renderer, orbit_camera, MiniCam):
+    """
+    Captures and saves images based on given camera positions using the specified camera and rendering settings.
+    
+    Args:
+        image_name (str): Name of the image.
+        camera_positions (list): Camera positions (elevation, horizontal angle, radius).
+        directory (str): Directory to save images.
+        step (int): Current step or iteration in the process.
+        ref_size (int): Reference size for the camera.
+        fovy (float): Vertical field of view.
+        fovx (float): Horizontal field of view.
+        near (float): Near clipping plane distance.
+        far (float): Far clipping plane distance.
+        renderer: Rendering engine.
+        orbit_camera (function): Function to compute the camera pose based on positions.
+        MiniCam (class): Camera class for initializing camera settings.
+    """
+    
+    cameras_data = []
+    save_dir = "dg_for_sugar/colmap/images"
+    os.makedirs(save_dir, exist_ok=True)
+    for idx, (ver, hor, rad) in enumerate(camera_positions):
+        pose = orbit_camera(ver, hor, rad)
+        cur_cam = MiniCam(pose, ref_size, ref_size, fovy, fovx, near, far)
+        out = renderer.render(cur_cam)
+        image = out["image"].unsqueeze(0)
+
+        image_np = image.squeeze(0).permute(1, 2, 0).cpu().detach().numpy()
+        image_np = (image_np * 255).astype(np.uint8)
+        image_np = cv2.cvtColor(image_np, cv2.COLOR_RGB2BGR)
+        name = f"image_{idx}.png"
+        image_path = os.path.join(save_dir, name)
+        cv2.imwrite(image_path, image_np)
+
+        # Extract width and height from the image
+        height, width, _ = image_np.shape
+
+        # Extract position and rotation from the pose matrix
+        position = spherical_to_cartesian(rad, hor, ver)
+        rotation = calculate_rotation_matrix(hor, ver)
+
+        # Create dictionary for the current image
+        nam_without_extension = f"image_{idx}"
+        camera_dict = {
+            "id": idx,
+            "img_name": nam_without_extension,
+            "width": width,
+            "height": height,
+            "position": position.tolist(),
+            "rotation": rotation.tolist(),
+            "fy": fovy,
+            "fx": fovx
+        }
+
+        cameras_data.append(camera_dict)
+
+    # Save cameras_data to cameras.json
+    save_dir = "dg_for_sugar/checkpoint"
+    os.makedirs(save_dir, exist_ok=True)
+    with open(os.path.join(save_dir, "cameras.json"), 'w') as json_file:
+        json.dump(cameras_data, json_file, indent=4)
+
+
+def spherical_to_cartesian(radius, azimuth, elevation):
+    x = radius * np.cos(np.radians(elevation)) * np.cos(np.radians(azimuth))
+    y = radius * np.cos(np.radians(elevation)) * np.sin(np.radians(azimuth))
+    z = radius * np.sin(np.radians(elevation))
+    return np.array([x, y, z])
+
+def calculate_rotation_matrix(azimuth, elevation, roll=0):
+    azimuth = np.radians(azimuth)
+    elevation = np.radians(elevation)
+    roll = np.radians(roll)
+    
+    # Rotation matrix for azimuth (yaw)
+    Rz = np.array([
+        [np.cos(azimuth), -np.sin(azimuth), 0],
+        [np.sin(azimuth), np.cos(azimuth), 0],
+        [0, 0, 1]
+    ])
+    
+    # Rotation matrix for elevation (pitch)
+    Ry = np.array([
+        [np.cos(elevation), 0, np.sin(elevation)],
+        [0, 1, 0],
+        [-np.sin(elevation), 0, np.cos(elevation)]
+    ])
+    
+    # Rotation matrix for roll
+    Rx = np.array([
+        [1, 0, 0],
+        [0, np.cos(roll), -np.sin(roll)],
+        [0, np.sin(roll), np.cos(roll)]
+    ])
+    
+    # Combined rotation matrix
+    R = Rz @ Ry @ Rx
+    return R
 
 def capture_and_save_images(image_name, camera_positions, directory, step, ref_size, fovy, fovx, near, far, renderer, orbit_camera, MiniCam):
     """
