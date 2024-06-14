@@ -539,6 +539,7 @@ def minicam_to_JSON(id, camera: MiniCam):
     serializable_array_2d = [x.tolist() for x in rot]
     camera_entry = {
         'id': id,
+        "img_name": "image_" + str(id),
         'width': camera.image_width,
         'height': camera.image_height,
         'position': camera_center.tolist(),
