@@ -1422,7 +1422,9 @@ so what if we just set this parameter to 3 in our own configs?
 [X] Try with fixed radius, just horizontal angle and elevation ranges.
 [X] Try with 100 original images, like MVcontrol does...?
   just leads to index out of range error on initialization...
+
 [ ] Try initializing DreamGaussian with much more gaussians (5M, for example) and with 7000 iterations (set in config, for otherwise overwritten.)
+[ ] Are we really initializing the cameras.json rightly?
 [ ] Try on stage 2 gaussians that dg already refined..?
 [ ] set up another config file for playing with hyperpameters:
 - e.g. how many iterations of dg are we going to do before we save the ply?, etc.
