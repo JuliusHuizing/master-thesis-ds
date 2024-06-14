@@ -1419,7 +1419,7 @@ so what if we just set this parameter to 3 in our own configs?
   - different colmap dirs?
   - *mesh dirs without .obj files?
   - empty dirs?
-[ ] Try with fixed radius, just horizontal angle and elevation ranges.
+[X] Try with fixed radius, just horizontal angle and elevation ranges.
 [ ] Try with 100 original images, like MVcontrol does...?
 [ ] Try on stage 2 gaussians that dg already refined..?
 [ ] set up another config file for playing with hyperpameters:
