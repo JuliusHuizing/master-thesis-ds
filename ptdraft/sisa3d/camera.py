@@ -532,8 +532,8 @@ class MiniCam:
 def minicam_to_JSON(id, camera: MiniCam):
     # Inverting the world view transform to get the camera position and rotation
     world_view_transform_inv = torch.inverse(camera.world_view_transform)
-    camera_center = world_view_transform_inv[3][:3].numpy()
-    rot = world_view_transform_inv[:3, :3].numpy()
+    camera_center = world_view_transform_inv[3][:3].cpu().numpy()  # Move to CPU before converting to NumPy
+    rot = world_view_transform_inv[:3, :3].cpu().numpy()  # Move to CPU before converting to NumPy
 
     # Constructing the camera entry dictionary
     serializable_array_2d = [x.tolist() for x in rot]
