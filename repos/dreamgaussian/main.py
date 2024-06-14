@@ -95,8 +95,8 @@ class GUI:
     def sample_camera_positions_for_sugar(self):
         camera_positions = []
         # for 100 horizontal angles between -45 and 45
-        for horizontal_angle in np.linspace(-45, 45, 10):
-            for elevation in np.linspace(-30, 30, 10):
+        for horizontal_angle in np.linspace(-180, 180, 10):
+            for elevation in np.linspace(-90, 90, 10):
                 for radius in np.linspace(1, 3, 10):
                     camera_positions.append((elevation, horizontal_angle, radius))
         
