@@ -1403,6 +1403,7 @@ so what if we just set this parameter to 3 in our own configs?
 # TODO:
 [X] check output of initial sugar run
 [X] try image with more structure from dataset.
+[ ] try adapting camera_to_json from 3dgs framework for MiniCam.
 [ ] if first approach works & second does not, verify any diffferences:
 - image size (512 vs 800)
 - camera positions that capture images...

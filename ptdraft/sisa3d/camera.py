@@ -20,8 +20,8 @@ import torch
 import math
 import numpy as np
 from typing import NamedTuple
-
-
+from torch import nn
+ 
 
 class BasicPointCloud(NamedTuple):
     points : np.array
