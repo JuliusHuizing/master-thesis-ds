@@ -1401,6 +1401,8 @@ so what if we just set this parameter to 3 in our own configs?
 🚀 Yes that was it... we can now run SuGaR on the output of DreamGaussian.
 
 # TODO:
+GEneral approach: run sugar, check coarse mesh output (.ply file though) and verifies it roughly resembles the object we are trying to model... so for it does not:
+
 [X] check output of initial sugar run
 [X] try image with more structure from dataset.
 [X] try adapting camera_to_json from 3dgs framework for MiniCam.
@@ -1422,8 +1424,8 @@ so what if we just set this parameter to 3 in our own configs?
 [X] Try with fixed radius, just horizontal angle and elevation ranges.
 [X] Try with 100 original images, like MVcontrol does...?
   just leads to index out of range error on initialization...
-
 [ ] Try initializing DreamGaussian with much more gaussians (5M, for example) and with 7000 iterations (set in config, for otherwise overwritten.)
+[ ] We could try a grid search over sugars hyperparameters... 
 [ ] Are we really initializing the cameras.json rightly?
 [ ] Try on stage 2 gaussians that dg already refined..?
 [ ] set up another config file for playing with hyperpameters:
