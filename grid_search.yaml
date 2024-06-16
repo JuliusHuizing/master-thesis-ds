@@ -12,8 +12,8 @@ hyperparameters:
     regularize:
       start_iter: [500]
       end_iter: [1000]
-      elongation: [0.0001, 0.001]
-      compactness: [0.0001, 0.001]
-      # opacity: [0.0001, 0.001, 0.01, 0.1, 1.0, 10.0]
+      elongation: [0.0001, 0.001, 0.01, 0.1, 1.0, 10.0]
+      compactness: [0.0001, 0.001, 0.01, 0.1, 1.0, 10.0]
+      opacity: [0.0001, 0.001, 0.01, 0.1, 1.0, 10.0]
 
 
