@@ -328,19 +328,20 @@ class GUI:
                 loss = loss + 1000 * (step_ratio if self.opt.warmup_rgb_loss else 1) * F.mse_loss(mask, self.input_mask_torch)
                 
                 ## own
-                scaling_factors = self.renderer.gaussians.get_scaling  # Assuming this method exists and provides the scaling factors
-                reg_loss = elongation_regularizer(scaling_factors, lambda_reg=self.opt.regularize.elongation)
-                loss += reg_loss
-                
-                size_loss = compactness_regularizer(scaling_factors, lambda_compact=self.opt.regularize.compactness)
-                loss += size_loss
-                
-                # Retrieve opacity values from GaussianModel
-                opacities = self.renderer.gaussians.get_opacity  # Assuming this returns a tensor of opacity values
+                if self.opt.regularize.start_iter <= self.step <= self.opt.regularize.end_iter:
+                    scaling_factors = self.renderer.gaussians.get_scaling  # Assuming this method exists and provides the scaling factors
+                    reg_loss = elongation_regularizer(scaling_factors, lambda_reg=self.opt.regularize.elongation)
+                    loss += reg_loss
+                    
+                    size_loss = compactness_regularizer(scaling_factors, lambda_compact=self.opt.regularize.compactness)
+                    loss += size_loss
+                    
+                    # Retrieve opacity values from GaussianModel
+                    opacities = self.renderer.gaussians.get_opacity  # Assuming this returns a tensor of opacity values
 
-                # Calculate opacity regularization loss
-                opacity_reg_loss = opacity_regularizer(opacities, lambda_reg=self.opt.regularize.opacity)
-                loss += opacity_reg_loss
+                    # Calculate opacity regularization loss
+                    opacity_reg_loss = opacity_regularizer(opacities, lambda_reg=self.opt.regularize.opacity)
+                    loss += opacity_reg_loss
                     
                 
             ### novel view (manual batch)
@@ -602,8 +603,13 @@ class GUI:
             # if self.opt.generate_gaussian_distribution_plots:
             #     Visualizer.visualize_gaussian_distribution(self.renderer.gaussians, "gaussian_distributions", image_size=512)
             # do a last prune
-            # TODO: get me back in; just tmp deleted to check if it messes with the .ply..
-            self.renderer.gaussians.prune(min_opacity=0.01, extent=1, max_screen_size=1)
+                if i == self.opt.iters - 1: # pruning after original vanilla dg iteration
+                    self.renderer.gaussians.prune(min_opacity=0.01, extent=1, max_screen_size=1)
+                
+                
+        # last prune after our extra alignment iterations
+        self.renderer.gaussians.prune(min_opacity=0.01, extent=1, max_screen_size=1)
+
         # save
         
         if self.opt.save_camera_positions:
@@ -672,7 +678,7 @@ if __name__ == "__main__":
         raise ValueError("Config file must include 'dreamgaussian' section")
 
     gui = GUI(opt)
-    gui.train(opt.iters)
+    gui.train(opt.regularize.end_iter)
 
 
 
