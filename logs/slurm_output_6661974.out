@@ -1,0 +1,59 @@
+============================================================================================== 
+Warning! Mixing Conda and module environments may lead to corruption of the
+user environment. 
+We do not recommend users mixing those two environments unless absolutely
+necessary. Note that 
+SURF does not provide any support for Conda environment.
+For more information, please refer to our software policy page:
+https://servicedesk.surf.nl/wiki/display/WIKI/Software+policy+Snellius#SoftwarepolicySnellius-UseofAnacondaandMinicondaenvironmentsonSnellius 
+
+Remember that many packages have already been installed on the system and can
+be loaded using 
+the 'module load <package__name>' command. If you are uncertain if a package is
+already available 
+on the system, please use 'module avail' or 'module spider' to search for it.
+============================================================================================== 
+Current branch set-up-pipeline is up to date.
+Obtaining file:///gpfs/home6/jhuizing/master-thesis-ds/ptdraft
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: sisa3d
+  Building editable for sisa3d (pyproject.toml): started
+  Building editable for sisa3d (pyproject.toml): finished with status 'done'
+  Created wheel for sisa3d: filename=sisa3d-0.1.0-py3-none-any.whl size=1286 sha256=466689da9623440a694956c93a4920038d607a9428abb993da0c7549d07f4ef9
+  Stored in directory: /gpfs/scratch1/nodespecific/gcn55/jhuizing.6661974/pip-ephem-wheel-cache-amo1ehsx/wheels/ba/24/02/45c17a515af0a22326616b14da79c51e525e740ad6f0b007df
+Successfully built sisa3d
+Installing collected packages: sisa3d
+  Attempting uninstall: sisa3d
+    Found existing installation: sisa3d 0.1.0
+    Uninstalling sisa3d-0.1.0:
+      Successfully uninstalled sisa3d-0.1.0
+Successfully installed sisa3d-0.1.0
+[INFO] Creating temporary directory for config files: tmp_configs_9b15039e-ee12-43b1-b8d7-b31a46e31897
+Generated 1 configuration files in tmp_configs_9b15039e-ee12-43b1-b8d7-b31a46e31897 for 0 images.
+[INFO] ✅ Temporary directory created with config files: tmp_configs_9b15039e-ee12-43b1-b8d7-b31a46e31897
+[ERROR] No YAML configuration files found in directory: tmp_configs_9b15039e-ee12-43b1-b8d7-b31a46e31897
+[INFO] Creating temporary directory for config files: tmp_configs_a7416ea7-5f60-4d17-9e18-01b8ee512478
+Generated 1 configuration files in tmp_configs_a7416ea7-5f60-4d17-9e18-01b8ee512478 for 0 images.
+[INFO] ✅ Temporary directory created with config files: tmp_configs_a7416ea7-5f60-4d17-9e18-01b8ee512478
+[ERROR] No YAML configuration files found in directory: tmp_configs_a7416ea7-5f60-4d17-9e18-01b8ee512478
+
+JOB STATISTICS
+==============
+Job ID: 6661974
+Cluster: snellius
+User/Group: jhuizing/jhuizing
+State: FAILED (exit code 1)
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 00:00:08
+CPU Efficiency: 1.78% of 00:07:30 core-walltime
+Job Wall-clock time: 00:00:25
+Memory Utilized: 1.15 MB
+Memory Efficiency: 0.00% of 120.00 GB
