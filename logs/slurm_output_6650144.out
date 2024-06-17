@@ -11878,3 +11878,17 @@ Generated 216 configuration files in tmp_configs for 3 images.
   0%|          | 0/83 [00:00<?, ?it/s]  1%|          | 1/83 [00:01<01:34,  1.16s/it]  7%|▋         | 6/83 [00:01<00:12,  6.26it/s] 11%|█         | 9/83 [00:01<00:13,  5.45it/s] 17%|█▋        | 14/83 [00:02<00:06,  9.89it/s] 22%|██▏       | 18/83 [00:02<00:08,  7.95it/s] 28%|██▊       | 23/83 [00:02<00:05, 11.88it/s] 33%|███▎      | 27/83 [00:03<00:06,  8.91it/s] 39%|███▊      | 32/83 [00:03<00:04, 12.60it/s] 43%|████▎     | 36/83 [00:04<00:05,  9.37it/s] 49%|████▉     | 41/83 [00:04<00:04,  8.61it/s] 53%|█████▎    | 44/83 [00:05<00:03, 10.18it/s] 59%|█████▉    | 49/83 [00:05<00:03,  9.07it/s] 64%|██████▍   | 53/83 [00:05<00:02, 11.58it/s] 69%|██████▊   | 57/83 [00:06<00:02,  9.11it/s] 72%|███████▏  | 60/83 [00:06<00:02, 10.83it/s] 78%|███████▊  | 65/83 [00:07<00:01,  9.39it/s] 83%|████████▎ | 69/83 [00:07<00:01, 12.01it/s] 88%|████████▊ | 73/83 [00:08<00:01,  9.27it/s] 93%|█████████▎| 77/83 [00:08<00:00, 11.94it/s] 98%|█████████▊| 81/83 [00:08<00:00,  9.56it/s]100%|██████████| 83/83 [00:08<00:00,  9.39it/s][INFO] ... Results saved to results/stage_1/grid_search_clip_scores_v2.csv.
 [INFO] ✅ Evaluation pipeline complete.
 [INFO] Running DreamGaussian Stage 2 pipeline...
+
+JOB STATISTICS
+==============
+Job ID: 6650144
+Cluster: snellius
+User/Group: jhuizing/jhuizing
+State: CANCELLED (exit code 0)
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 00:00:07
+CPU Efficiency: 0.00% of 18-15:48:36 core-walltime
+Job Wall-clock time: 1-00:52:42
+Memory Utilized: 20.72 GB
+Memory Efficiency: 17.27% of 120.00 GB
