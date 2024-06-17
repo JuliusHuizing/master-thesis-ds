@@ -9,6 +9,8 @@ hyperparameters:
 
   dreamgaussian:
     stage_1_result_images_output_path: ["results/compare/dreamgaussian/"]
+    stage_2_results_images_output_path: ["results/compare/stage2/ours/"]
+    stage_2_clip_scores_output_path: ["results/compare/stage2/clip_scores.csv"]
     save_images: [True] # required for computing clip scores.
 
     # best config found was e0.001c10.0o10.0

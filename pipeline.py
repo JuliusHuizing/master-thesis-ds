@@ -52,6 +52,8 @@ if __name__ == "__main__":
         STAGE_1_CLIP_SCORES_OUTPUT_PATH = config["paths"]["stage_1_clip_scores_output_path"]
         STAGE_1_COARSE_MESH_OUTPUT_PATH = config["dreamgaussian"]["coarse_mesh_output_dir"]
         STAGE_2_MESH_OUTPUT_PATH = config["paths"]["stage_2_mesh_output_path"]
+        STAGE_2_MESH_IMAGES_OUTPUT_PATH = config["paths"]["stage_2_mesh_images_output_path"]
+
         logging.info("✅ Paths loaded.")
         
         logging.info("Creating paths if they don't exist...")
@@ -162,8 +164,8 @@ if __name__ == "__main__":
             # kire logs/name.obj --save images/name/ --wogui
             logging.info("Saving images of mesh...")
             command = [
-                "kire", "results/mesh/stage_2/this_was_opt_save_pah.obj", 
-                "--save", "results/compare/", 
+                "kire", f"{STAGE_2_MESH_OUTPUT_PATH}{file_name}_rgba_mesh.obj", 
+                "--save", f"{STAGE_2_MESH_IMAGES_OUTPUT_PATH}/{file_name}/", 
                 "--wogui"
             ]
             result = subprocess.run(command, check=True, text=True, capture_output=True)
@@ -196,7 +198,16 @@ if __name__ == "__main__":
                 "full_config": full_config,
             }
             save_results_to_csv(config["paths"]["stage_2_clip_scores_output_path"], row)
+            
             logging.info("✅  DreamGaussian Stage 2 pipeline complete")
+            
+            # logging.info("... saving images of mesh...")
+            # # kire logs/name.obj --save images/name/ --wogui
+            # command = [
+            #     "kire", "results/mesh/stage_2/this_was_opt_save_pah.obj", 
+            #     "--save", f"{STAGE_2_MESH_IMAGES_OUTPUT_PATH}/{file_name}/", 
+            #     "--wogui"
+            # ]
 
         logging.info("✅ DreamGaussian pipeline complete.")
     
