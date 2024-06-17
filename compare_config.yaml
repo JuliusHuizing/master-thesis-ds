@@ -6,12 +6,11 @@ hyperparameters:
     stage_1_clip_scores_output_path: ["results/compare/compare.csv"]
     stage_1_result_images_output_path: ["results/compare/ours/"]
     stage_2_clip_scores_output_path: ["results/compare/stage2/clip_scores.csv"]
-    stage_2_mesh_images_output_path: ["results/compare/stage2/mesh_images/"]
+    stage_2_mesh_images_output_path: ["results/compare/stage2/mesh_images/ours/"]
 
 
   dreamgaussian:
     stage_1_result_images_output_path: ["results/compare/ours/"]
-    stage_2_results_images_output_path: ["results/compare/stage2/ours/"]
     save_images: [True] # required for computing clip scores.
 
     # best config found was e0.0001c1.0o0.001
