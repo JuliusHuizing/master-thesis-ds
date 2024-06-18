@@ -21,6 +21,7 @@ import os
 from sisa3d.visuals.visualizer import Visualizer
 from sisa3d.camera import capture_and_save_images, generate_camera_positions, generate_fixed_elevation_positions, capture_and_save_images_for_clip_similarity, capture_and_save_images_for_sugar, capture_and_save_images_for_sugarV2, capture_and_save_images_for_sugarV3
 from sisa3d.regularization import elongation_regularizer, compactness_regularizer, opacity_regularizer
+from sisa3d.results import save_results_to_csv
 import json
 class GUI:
     def __init__(self, opt):
@@ -599,16 +600,26 @@ class GUI:
             self.prepare_train()
             for i in tqdm.trange(iters):
                 self.train_step()
-            # visualize gaussian distribution
-            # if self.opt.generate_gaussian_distribution_plots:
-            #     Visualizer.visualize_gaussian_distribution(self.renderer.gaussians, "gaussian_distributions", image_size=512)
-            # do a last prune
+           
                 if i == self.opt.iters - 1: # pruning after original vanilla dg iteration
                     self.renderer.gaussians.prune(min_opacity=0.01, extent=1, max_screen_size=1)
                 
                 
         # last prune after our extra alignment iterations
         self.renderer.gaussians.prune(min_opacity=0.01, extent=1, max_screen_size=1)
+
+        #  visualize gaussian distribution
+        if self.opt.stage_2_gaussian_properties_csv_path:
+            # create csv file and parent dirs if not exists
+            os.makedirs(os.path.dirname(self.opt.stage_2_gaussian_properties_csv_path), exist_ok=True)
+            scaling_factors = self.renderer.gaussians.get_scaling.detach().cpu().numpy()  # [N, 3] where N is the number of Gaussians
+            opacities = self.renderer.get_opacity.detach().cpu().numpy()  # [N, 1]
+            row = {
+                "scaling_factors": scaling_factors,
+                "opacities": opacities
+            }
+                    # Ensure the directory exists
+            save_results_to_csv(self.opt.stage_2_gaussian_properties_csv_path, row)
 
         # save
         
