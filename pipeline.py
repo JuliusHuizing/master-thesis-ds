@@ -164,7 +164,7 @@ if __name__ == "__main__":
             # kire logs/name.obj --save images/name/ --wogui
             logging.info("Saving images of mesh...")
             command = [
-                "kire", f"{STAGE_2_MESH_OUTPUT_PATH}{file_name}_rgba_mesh.obj", 
+                "kire", f"{STAGE_2_MESH_OUTPUT_PATH}{file_name}_rgba.obj", 
                 "--save", f"{STAGE_2_MESH_IMAGES_OUTPUT_PATH}/{file_name}/", 
                 "--wogui"
             ]
@@ -175,7 +175,7 @@ if __name__ == "__main__":
             command = [
                 "python", "-m", "kiui.cli.clip_sim", 
                 PREPROCESSED_IMAGE_PATH, 
-                "results/mesh/stage_2/this_was_opt_save_pah.obj"
+                f"results/mesh/stage_2/{file_name}_rgba.obj"
             ]
             # Ensure the directory exists
             clip_score_output_dir = 'results/clip/stage2'
