@@ -21,7 +21,7 @@ preprocess:
   border_ratio: 0.2
 
 dreamgaussian:
-  save_camera_positions: True
+  save_camera_positions: False
   export_mesh_for_stage_1: True
   coarse_mesh_output_dir: "results/mesh/coarse/"
   # so we have access to the file name and can save results with the same name
