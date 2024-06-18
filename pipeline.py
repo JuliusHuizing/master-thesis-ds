@@ -96,56 +96,47 @@ if __name__ == "__main__":
         
         logging.info("Running Evaluation pipeline...")
         
-        clip_score = compute_clip(f"{STAGE_1_IMAGES_PATH}generated", f"{STAGE_1_IMAGES_PATH}reference").item()
-        clip_scores = compute_clip(f"{STAGE_1_IMAGES_PATH}generated", f"{STAGE_1_IMAGES_PATH}reference", average=False)
-        clip_scores = [x.item() for x in clip_scores]
-        
+        if STAGE_1_IMAGES_PATH:
+            clip_score = compute_clip(f"{STAGE_1_IMAGES_PATH}generated", f"{STAGE_1_IMAGES_PATH}reference").item()
+            clip_scores = compute_clip(f"{STAGE_1_IMAGES_PATH}generated", f"{STAGE_1_IMAGES_PATH}reference", average=False)
+            clip_scores = [x.item() for x in clip_scores]
         
 
-        
         # Calculate duration
         duration = time.time() - start_time
 
-        # Save results to CSV
-        csv_path = STAGE_1_CLIP_SCORES_OUTPUT_PATH  # Path from the config
+        if STAGE_1_CLIP_SCORES_OUTPUT_PATH:
+            # Save results to CSV
+            csv_path = STAGE_1_CLIP_SCORES_OUTPUT_PATH  # Path from the config
+                
+            # For privacy, remove the paths from the config
+            hyperparameters = {k: v for k, v in config.items() if k != 'paths'}
             
-        # For privacy, remove the paths from the config
-        hyperparameters = {k: v for k, v in config.items() if k != 'paths'}
-        
-        # Convert hyperparameters to a string for CSV
-        hyperparameters_str = yaml.dump(hyperparameters)
-        # for reproducibility, save the full config to the CSV
-        full_config = yaml.dump(config)
-        elongation = config["dreamgaussian"]["regularize"]["elongation"]
-        compactness = config["dreamgaussian"]["regularize"]["compactness"]
-        opacity = config["dreamgaussian"]["regularize"]["opacity"]
-        
-        row = {
-            'clip_score': clip_score,
-            'elongation': elongation,
-            'compactness': compactness,
-            'opacity': opacity,
-            'clip_scores': clip_scores,
-            'duration': duration,
-            'input_image_path': INPUT_IMAGE_PATH,
-            'hyperparameters': hyperparameters_str,
-            "full_config": full_config,
-        }
-        
-        save_results_to_csv(csv_path, row)
-        logging.info(f"... Results saved to {csv_path}.")
+            # Convert hyperparameters to a string for CSV
+            hyperparameters_str = yaml.dump(hyperparameters)
+            # for reproducibility, save the full config to the CSV
+            full_config = yaml.dump(config)
+            elongation = config["dreamgaussian"]["regularize"]["elongation"]
+            compactness = config["dreamgaussian"]["regularize"]["compactness"]
+            opacity = config["dreamgaussian"]["regularize"]["opacity"]
+            
+            row = {
+                'clip_score': clip_score,
+                'elongation': elongation,
+                'compactness': compactness,
+                'opacity': opacity,
+                'clip_scores': clip_scores,
+                'duration': duration,
+                'input_image_path': INPUT_IMAGE_PATH,
+                'hyperparameters': hyperparameters_str,
+                "full_config": full_config,
+            }
+            
+            save_results_to_csv(csv_path, row)
+            logging.info(f"... Results saved to {csv_path}.")
+            
         logging.info("✅ Evaluation pipeline complete.")
         
-        
-        # FIXME: we need to be in the sugar2 venv... so not handy to run this in the pipeline.
-#         if config["sugar"]:
-#             # python extern/sugar/extract_mesh.py -s extern/sugar/load/scene \
-# # -c $PLY_CHECKPOINT_PATH -o $SUGAR_OUTPUT_PATH --use_vanilla_3dgs
-#             logging.info("Running Sugar pipeline with stage 1 data...")
-
-#             command = ["python", 
-#                        "extern/sugar/extract_mesh.py",]
-            
         
         
         if STAGE_2_MESH_OUTPUT_PATH and config["dreamgaussian"]["export_mesh_for_stage_1"]:
@@ -169,6 +160,10 @@ if __name__ == "__main__":
                 "--wogui"
             ]
             result = subprocess.run(command, check=True, text=True, capture_output=True)
+            # move all images up a directory, appending the name of the current directory in front on the image name
+            for root, dirs, files in os.walk(f"{STAGE_2_MESH_IMAGES_OUTPUT_PATH}/{file_name}/"):
+                for file in files:
+                    os.rename(f"{root}/{file}", f"{STAGE_2_MESH_IMAGES_OUTPUT_PATH}/{file_name}_{root.split('/')[-1]}_{file}")
             
             logging.info("Computing clip score of mesh...")
             # python -m kiui.cli.clip_sim data/name_rgba.png logs/name.obj
