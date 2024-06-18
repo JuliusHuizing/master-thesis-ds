@@ -28,7 +28,7 @@ dreamgaussian:
   input_image_path: "assets/blueberry.jpeg"
   # we need to duplicate this here so dg main.py can access it...
   stage_1_result_images_output_path: "results/stage_1/3images/"
-  # stage_1_images_output_path: "results/dream_gaussian/stage_1/"
+  stage_1_images_output_path: "results/dream_gaussian/stage_1/"
   stage_2_mesh_output_path: "results/mesh/stage_2/"
   preprocessing_output_path: "results/preprocessing/"
   stage_1_ply_output_dir: "results/stage_1/ply/"
