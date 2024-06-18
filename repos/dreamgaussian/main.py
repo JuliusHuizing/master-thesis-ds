@@ -613,7 +613,7 @@ class GUI:
             # create csv file and parent dirs if not exists
             os.makedirs(os.path.dirname(self.opt.stage_2_gaussian_properties_csv_path), exist_ok=True)
             scaling_factors = self.renderer.gaussians.get_scaling.detach().cpu().numpy()  # [N, 3] where N is the number of Gaussians
-            opacities = self.renderer.get_opacity.detach().cpu().numpy()  # [N, 1]
+            opacities = self.renderer.gaussians.get_opacity.detach().cpu().numpy()  # [N, 1]
             row = {
                 "scaling_factors": scaling_factors,
                 "opacities": opacities
