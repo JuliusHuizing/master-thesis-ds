@@ -306,3 +306,5 @@ class MiniCam:
 ```
 
 see repos/gaussian-splatting/scene/cameras.py
+
+https://www.overleaf.com/learn/latex/Positioning_images_and_tables

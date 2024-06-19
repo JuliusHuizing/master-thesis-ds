@@ -19,8 +19,6 @@ def orbit_camera(elevation, azimuth, radius=1, is_degree=True, target=None, open
     return T
 
 
-
-
 class MiniCam:
     def __init__(self, c2w, width, height, fovy, fovx, znear, zfar):
         # c2w (pose) should be in NeRF convention.
