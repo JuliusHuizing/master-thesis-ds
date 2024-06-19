@@ -1,0 +1,2028 @@
+============================================================================================== 
+Warning! Mixing Conda and module environments may lead to corruption of the
+user environment. 
+We do not recommend users mixing those two environments unless absolutely
+necessary. Note that 
+SURF does not provide any support for Conda environment.
+For more information, please refer to our software policy page:
+https://servicedesk.surf.nl/wiki/display/WIKI/Software+policy+Snellius#SoftwarepolicySnellius-UseofAnacondaandMinicondaenvironmentsonSnellius 
+
+Remember that many packages have already been installed on the system and can
+be loaded using 
+the 'module load <package__name>' command. If you are uncertain if a package is
+already available 
+on the system, please use 'module avail' or 'module spider' to search for it.
+============================================================================================== 
+Already up to date.
+Obtaining file:///gpfs/home6/jhuizing/master-thesis-ds/ptdraft
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: sisa3d
+  Building editable for sisa3d (pyproject.toml): started
+  Building editable for sisa3d (pyproject.toml): finished with status 'done'
+  Created wheel for sisa3d: filename=sisa3d-0.1.0-py3-none-any.whl size=1286 sha256=466689da9623440a694956c93a4920038d607a9428abb993da0c7549d07f4ef9
+  Stored in directory: /gpfs/scratch1/nodespecific/gcn34/jhuizing.6674687/pip-ephem-wheel-cache-nabn0373/wheels/ba/24/02/45c17a515af0a22326616b14da79c51e525e740ad6f0b007df
+Successfully built sisa3d
+Installing collected packages: sisa3d
+  Attempting uninstall: sisa3d
+    Found existing installation: sisa3d 0.1.0
+    Uninstalling sisa3d-0.1.0:
+      Successfully uninstalled sisa3d-0.1.0
+Successfully installed sisa3d-0.1.0
+[INFO] Creating temporary directory for config files: tmp_configs_362e8780-c57a-4814-be08-cec4c8e77b5b
+Traceback (most recent call last):
+  File "grid_search.py", line 57, in <module>
+    create_grid_search_config_files(args.default_config, args.gridsearch_config, tmp_configs_dir)
+  File "/gpfs/home6/jhuizing/master-thesis-ds/ptdraft/sisa3d/gridsearch.py", line 82, in create_grid_search_config_files
+    grid_search_config = yaml.safe_load(file)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/yaml/__init__.py", line 125, in safe_load
+    return load(stream, SafeLoader)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/yaml/__init__.py", line 81, in load
+    return loader.get_single_data()
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/yaml/constructor.py", line 49, in get_single_data
+    node = self.get_single_node()
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/yaml/composer.py", line 36, in get_single_node
+    document = self.compose_document()
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/yaml/composer.py", line 55, in compose_document
+    node = self.compose_node(None, None)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/yaml/composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/yaml/composer.py", line 133, in compose_mapping_node
+    item_value = self.compose_node(node, item_key)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/yaml/composer.py", line 84, in compose_node
+    node = self.compose_mapping_node(anchor)
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/yaml/composer.py", line 127, in compose_mapping_node
+    while not self.check_event(MappingEndEvent):
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/yaml/parser.py", line 98, in check_event
+    self.current_event = self.state()
+  File "/home/jhuizing/.conda/envs/dreamgaussianV2/lib/python3.8/site-packages/yaml/parser.py", line 438, in parse_block_mapping_key
+    raise ParserError("while parsing a block mapping", self.marks[-1],
+yaml.parser.ParserError: while parsing a block mapping
+  in "compare_config.yaml", line 13, column 5
+expected <block end>, but found '<scalar>'
+  in "compare_config.yaml", line 13, column 37
+[INFO] Creating temporary directory for config files: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d
+Generated 7 configuration files in tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d for 12 images.
+[INFO] ✅ Temporary directory created with config files: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d
+[INFO] Running sequantial grid search with 84 configuration files...
+Running grid search:   0%|          | 0/84 [00:00<?, ?it/s][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_0_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:01<00:03,  1.79s/it]100%|██████████| 3/3 [00:01<00:00,  1.61it/s]
+  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:01<00:02,  1.05s/it]100%|██████████| 3/3 [00:01<00:00,  2.67it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_0_for_img_1.config.yaml
+Running grid search:   1%|          | 1/84 [02:41<3:43:29, 161.56s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_0_for_img_8.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:01<00:03,  1.75s/it]100%|██████████| 3/3 [00:01<00:00,  1.65it/s]
+  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:01<00:02,  1.03s/it]100%|██████████| 3/3 [00:01<00:00,  2.72it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_0_for_img_8.config.yaml
+Running grid search:   2%|▏         | 2/84 [04:55<3:18:40, 145.37s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_2_for_img_7.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:01<00:05,  1.86s/it]100%|██████████| 4/4 [00:01<00:00,  2.05it/s]
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:01<00:03,  1.03s/it]100%|██████████| 4/4 [00:01<00:00,  3.56it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_2_for_img_7.config.yaml
+Running grid search:   4%|▎         | 3/84 [07:03<3:05:39, 137.53s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_0_for_img_10.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:01<00:05,  1.78s/it]100%|██████████| 4/4 [00:01<00:00,  2.13it/s]
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:01<00:03,  1.06s/it]100%|██████████| 4/4 [00:01<00:00,  3.47it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_0_for_img_10.config.yaml
+Running grid search:   5%|▍         | 4/84 [08:59<2:51:58, 128.98s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_4_for_img_9.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:01<00:05,  1.84s/it]100%|██████████| 4/4 [00:01<00:00,  2.07it/s]
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:01<00:03,  1.06s/it]100%|██████████| 4/4 [00:01<00:00,  3.46it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_4_for_img_9.config.yaml
+Running grid search:   6%|▌         | 5/84 [11:03<2:47:23, 127.14s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_6_for_img_6.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:01<00:05,  1.82s/it]100%|██████████| 4/4 [00:01<00:00,  2.09it/s]
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:01<00:03,  1.06s/it]100%|██████████| 4/4 [00:01<00:00,  3.45it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_6_for_img_6.config.yaml
+Running grid search:   7%|▋         | 6/84 [13:14<2:47:00, 128.46s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_1_for_img_3.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:01<00:05,  1.81s/it]100%|██████████| 4/4 [00:01<00:00,  2.11it/s]
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:01<00:03,  1.04s/it]100%|██████████| 4/4 [00:01<00:00,  3.52it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_1_for_img_3.config.yaml
+Running grid search:   8%|▊         | 7/84 [15:20<2:43:59, 127.78s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_6_for_img_5.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:01<00:05,  1.78s/it]100%|██████████| 4/4 [00:01<00:00,  2.14it/s]
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:01<00:03,  1.04s/it]100%|██████████| 4/4 [00:01<00:00,  3.53it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_6_for_img_5.config.yaml
+Running grid search:  10%|▉         | 8/84 [17:11<2:35:02, 122.40s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_5_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:01<00:05,  1.77s/it]100%|██████████| 4/4 [00:01<00:00,  2.15it/s]
+  0%|          | 0/4 [00:00<?, ?it/s] 25%|██▌       | 1/4 [00:01<00:03,  1.05s/it]100%|██████████| 4/4 [00:01<00:00,  3.47it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_5_for_img_1.config.yaml
+Running grid search:  11%|█         | 9/84 [19:31<2:39:35, 127.67s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_1_for_img_5.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/5 [00:00<?, ?it/s] 20%|██        | 1/5 [00:01<00:07,  1.88s/it]100%|██████████| 5/5 [00:01<00:00,  2.51it/s]
+  0%|          | 0/5 [00:00<?, ?it/s] 20%|██        | 1/5 [00:01<00:04,  1.07s/it]100%|██████████| 5/5 [00:01<00:00,  4.21it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_1_for_img_5.config.yaml
+Running grid search:  12%|█▏        | 10/84 [21:21<2:30:54, 122.36s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_0_for_img_5.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/5 [00:00<?, ?it/s] 20%|██        | 1/5 [00:01<00:07,  1.80s/it]100%|██████████| 5/5 [00:01<00:00,  2.62it/s]
+  0%|          | 0/5 [00:00<?, ?it/s] 20%|██        | 1/5 [00:01<00:04,  1.09s/it]100%|██████████| 5/5 [00:01<00:00,  4.17it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_0_for_img_5.config.yaml
+Running grid search:  13%|█▎        | 11/84 [23:12<2:24:33, 118.82s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_3_for_img_5.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/5 [00:00<?, ?it/s] 20%|██        | 1/5 [00:01<00:07,  1.88s/it]100%|██████████| 5/5 [00:02<00:00,  2.48it/s]
+  0%|          | 0/5 [00:00<?, ?it/s] 20%|██        | 1/5 [00:01<00:04,  1.06s/it]100%|██████████| 5/5 [00:01<00:00,  4.27it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_3_for_img_5.config.yaml
+Running grid search:  14%|█▍        | 12/84 [25:04<2:20:03, 116.71s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_2_for_img_10.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/5 [00:00<?, ?it/s] 20%|██        | 1/5 [00:01<00:07,  1.77s/it]100%|██████████| 5/5 [00:01<00:00,  2.65it/s]
+  0%|          | 0/5 [00:00<?, ?it/s] 20%|██        | 1/5 [00:01<00:04,  1.04s/it]100%|██████████| 5/5 [00:01<00:00,  5.67it/s]100%|██████████| 5/5 [00:01<00:00,  4.25it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_2_for_img_10.config.yaml
+Running grid search:  15%|█▌        | 13/84 [27:00<2:18:05, 116.69s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_4_for_img_6.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/5 [00:00<?, ?it/s] 20%|██        | 1/5 [00:01<00:07,  1.83s/it]100%|██████████| 5/5 [00:01<00:00,  2.57it/s]
+  0%|          | 0/5 [00:00<?, ?it/s] 20%|██        | 1/5 [00:01<00:04,  1.04s/it]100%|██████████| 5/5 [00:01<00:00,  5.64it/s]100%|██████████| 5/5 [00:01<00:00,  4.23it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_4_for_img_6.config.yaml
+Running grid search:  17%|█▋        | 14/84 [29:10<2:20:36, 120.52s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_3_for_img_9.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/5 [00:00<?, ?it/s] 20%|██        | 1/5 [00:01<00:07,  1.82s/it]100%|██████████| 5/5 [00:01<00:00,  2.59it/s]
+  0%|          | 0/5 [00:00<?, ?it/s] 20%|██        | 1/5 [00:01<00:04,  1.04s/it]100%|██████████| 5/5 [00:01<00:00,  5.66it/s]100%|██████████| 5/5 [00:01<00:00,  4.24it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_3_for_img_9.config.yaml
+Running grid search:  18%|█▊        | 15/84 [31:11<2:18:43, 120.62s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_4_for_img_8.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/6 [00:00<?, ?it/s] 17%|█▋        | 1/6 [00:01<00:09,  1.91s/it]100%|██████████| 6/6 [00:02<00:00,  2.94it/s]
+  0%|          | 0/6 [00:00<?, ?it/s] 17%|█▋        | 1/6 [00:01<00:05,  1.06s/it] 83%|████████▎ | 5/6 [00:01<00:00,  5.53it/s]100%|██████████| 6/6 [00:01<00:00,  4.92it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_4_for_img_8.config.yaml
+Running grid search:  19%|█▉        | 16/84 [33:22<2:20:31, 124.00s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_1_for_img_11.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/6 [00:00<?, ?it/s] 17%|█▋        | 1/6 [00:01<00:09,  1.91s/it]100%|██████████| 6/6 [00:02<00:00,  3.95it/s]100%|██████████| 6/6 [00:02<00:00,  2.93it/s]
+  0%|          | 0/6 [00:00<?, ?it/s] 17%|█▋        | 1/6 [00:01<00:05,  1.09s/it]100%|██████████| 6/6 [00:01<00:00,  4.89it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_1_for_img_11.config.yaml
+Running grid search:  20%|██        | 17/84 [35:34<2:20:54, 126.19s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_5_for_img_11.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/6 [00:00<?, ?it/s] 17%|█▋        | 1/6 [00:01<00:09,  1.93s/it]100%|██████████| 6/6 [00:02<00:00,  3.92it/s]100%|██████████| 6/6 [00:02<00:00,  2.90it/s]
+  0%|          | 0/6 [00:00<?, ?it/s] 17%|█▋        | 1/6 [00:01<00:05,  1.03s/it] 67%|██████▋   | 4/6 [00:01<00:00,  4.47it/s]100%|██████████| 6/6 [00:01<00:00,  4.96it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_5_for_img_11.config.yaml
+Running grid search:  21%|██▏       | 18/84 [37:40<2:18:40, 126.07s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_3_for_img_11.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/6 [00:00<?, ?it/s] 17%|█▋        | 1/6 [00:01<00:09,  1.89s/it]100%|██████████| 6/6 [00:01<00:00,  4.00it/s]100%|██████████| 6/6 [00:02<00:00,  2.97it/s]
+  0%|          | 0/6 [00:00<?, ?it/s] 17%|█▋        | 1/6 [00:01<00:05,  1.03s/it] 67%|██████▋   | 4/6 [00:01<00:00,  4.45it/s]100%|██████████| 6/6 [00:01<00:00,  4.93it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_3_for_img_11.config.yaml
+Running grid search:  23%|██▎       | 19/84 [39:49<2:17:47, 127.20s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_6_for_img_3.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/6 [00:00<?, ?it/s] 17%|█▋        | 1/6 [00:01<00:09,  1.91s/it]100%|██████████| 6/6 [00:02<00:00,  3.97it/s]100%|██████████| 6/6 [00:02<00:00,  2.94it/s]
+  0%|          | 0/6 [00:00<?, ?it/s] 17%|█▋        | 1/6 [00:01<00:05,  1.04s/it] 67%|██████▋   | 4/6 [00:01<00:00,  4.42it/s]100%|██████████| 6/6 [00:01<00:00,  4.89it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_6_for_img_3.config.yaml
+Running grid search:  24%|██▍       | 20/84 [42:01<2:17:01, 128.47s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_2_for_img_4.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/6 [00:00<?, ?it/s] 17%|█▋        | 1/6 [00:01<00:09,  1.90s/it]100%|██████████| 6/6 [00:01<00:00,  3.99it/s]100%|██████████| 6/6 [00:02<00:00,  2.95it/s]
+  0%|          | 0/6 [00:00<?, ?it/s] 17%|█▋        | 1/6 [00:01<00:05,  1.05s/it] 67%|██████▋   | 4/6 [00:01<00:00,  4.38it/s]100%|██████████| 6/6 [00:01<00:00,  4.84it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_2_for_img_4.config.yaml
+Running grid search:  25%|██▌       | 21/84 [43:45<2:07:23, 121.32s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_1_for_img_10.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/7 [00:00<?, ?it/s] 14%|█▍        | 1/7 [00:01<00:11,  1.86s/it] 86%|████████▌ | 6/7 [00:01<00:00,  4.05it/s]100%|██████████| 7/7 [00:02<00:00,  3.46it/s]
+  0%|          | 0/7 [00:00<?, ?it/s] 14%|█▍        | 1/7 [00:01<00:06,  1.03s/it] 43%|████▎     | 3/7 [00:01<00:01,  3.24it/s]100%|██████████| 7/7 [00:01<00:00,  5.58it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_1_for_img_10.config.yaml
+Running grid search:  26%|██▌       | 22/84 [45:39<2:03:03, 119.09s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_5_for_img_9.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/7 [00:00<?, ?it/s] 14%|█▍        | 1/7 [00:01<00:11,  1.87s/it] 86%|████████▌ | 6/7 [00:01<00:00,  4.05it/s]100%|██████████| 7/7 [00:02<00:00,  3.46it/s]
+  0%|          | 0/7 [00:00<?, ?it/s] 14%|█▍        | 1/7 [00:01<00:06,  1.06s/it] 57%|█████▋    | 4/7 [00:01<00:00,  4.35it/s]100%|██████████| 7/7 [00:01<00:00,  5.54it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_5_for_img_9.config.yaml
+Running grid search:  27%|██▋       | 23/84 [47:43<2:02:22, 120.36s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_4_for_img_7.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/7 [00:00<?, ?it/s] 14%|█▍        | 1/7 [00:02<00:12,  2.15s/it] 86%|████████▌ | 6/7 [00:02<00:00,  3.54it/s]100%|██████████| 7/7 [00:02<00:00,  3.03it/s]
+  0%|          | 0/7 [00:00<?, ?it/s] 14%|█▍        | 1/7 [00:01<00:06,  1.06s/it] 43%|████▎     | 3/7 [00:01<00:01,  2.94it/s]100%|██████████| 7/7 [00:01<00:00,  5.16it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_4_for_img_7.config.yaml
+Running grid search:  29%|██▊       | 24/84 [49:50<2:02:27, 122.47s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_1_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/7 [00:00<?, ?it/s] 14%|█▍        | 1/7 [00:01<00:10,  1.79s/it] 86%|████████▌ | 6/7 [00:01<00:00,  4.21it/s]100%|██████████| 7/7 [00:01<00:00,  3.60it/s]
+  0%|          | 0/7 [00:00<?, ?it/s] 14%|█▍        | 1/7 [00:01<00:06,  1.10s/it] 86%|████████▌ | 6/7 [00:01<00:00,  6.52it/s]100%|██████████| 7/7 [00:01<00:00,  5.55it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_1_for_img_1.config.yaml
+Running grid search:  30%|██▉       | 25/84 [52:04<2:03:47, 125.89s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_1_for_img_0.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/7 [00:00<?, ?it/s] 14%|█▍        | 1/7 [00:01<00:11,  1.97s/it] 86%|████████▌ | 6/7 [00:02<00:00,  3.85it/s]100%|██████████| 7/7 [00:02<00:00,  3.29it/s]
+  0%|          | 0/7 [00:00<?, ?it/s] 14%|█▍        | 1/7 [00:01<00:06,  1.09s/it] 71%|███████▏  | 5/7 [00:01<00:00,  5.43it/s]100%|██████████| 7/7 [00:01<00:00,  5.51it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_1_for_img_0.config.yaml
+Running grid search:  31%|███       | 26/84 [54:21<2:04:59, 129.31s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_4_for_img_2.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/7 [00:00<?, ?it/s] 14%|█▍        | 1/7 [00:01<00:11,  1.87s/it] 86%|████████▌ | 6/7 [00:01<00:00,  4.05it/s]100%|██████████| 7/7 [00:02<00:00,  3.45it/s]
+  0%|          | 0/7 [00:00<?, ?it/s] 14%|█▍        | 1/7 [00:01<00:06,  1.07s/it] 57%|█████▋    | 4/7 [00:01<00:00,  4.31it/s]100%|██████████| 7/7 [00:01<00:00,  5.47it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_4_for_img_2.config.yaml
+Running grid search:  32%|███▏      | 27/84 [56:21<2:00:04, 126.39s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_4_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:01<00:13,  1.96s/it] 75%|███████▌  | 6/8 [00:02<00:00,  3.87it/s]100%|██████████| 8/8 [00:02<00:00,  3.75it/s]
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:01<00:07,  1.06s/it] 38%|███▊      | 3/8 [00:01<00:01,  3.16it/s]100%|██████████| 8/8 [00:01<00:00,  6.09it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_4_for_img_1.config.yaml
+Running grid search:  33%|███▎      | 28/84 [58:40<2:01:26, 130.12s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_5_for_img_0.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:02<00:14,  2.02s/it] 75%|███████▌  | 6/8 [00:02<00:00,  3.75it/s]100%|██████████| 8/8 [00:02<00:00,  3.63it/s]
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:01<00:07,  1.09s/it] 50%|█████     | 4/8 [00:01<00:00,  4.23it/s]100%|██████████| 8/8 [00:01<00:00,  6.06it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_5_for_img_0.config.yaml
+Running grid search:  35%|███▍      | 29/84 [1:00:56<2:00:52, 131.87s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_6_for_img_8.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:01<00:13,  1.92s/it] 75%|███████▌  | 6/8 [00:02<00:00,  3.95it/s]100%|██████████| 8/8 [00:02<00:00,  3.82it/s]
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:01<00:07,  1.13s/it] 75%|███████▌  | 6/8 [00:01<00:00,  6.38it/s]100%|██████████| 8/8 [00:01<00:00,  6.09it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_6_for_img_8.config.yaml
+Running grid search:  36%|███▌      | 30/84 [1:03:14<2:00:33, 133.96s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_0_for_img_9.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:01<00:13,  1.89s/it] 75%|███████▌  | 6/8 [00:01<00:00,  4.00it/s]100%|██████████| 8/8 [00:02<00:00,  3.87it/s]
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:01<00:08,  1.14s/it] 75%|███████▌  | 6/8 [00:01<00:00,  6.30it/s]100%|██████████| 8/8 [00:01<00:00,  6.02it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_0_for_img_9.config.yaml
+Running grid search:  37%|███▋      | 31/84 [1:05:19<1:55:52, 131.18s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_5_for_img_6.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:01<00:13,  1.87s/it] 75%|███████▌  | 6/8 [00:01<00:00,  4.04it/s]100%|██████████| 8/8 [00:02<00:00,  3.90it/s]
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:01<00:07,  1.07s/it] 38%|███▊      | 3/8 [00:01<00:01,  3.15it/s]100%|██████████| 8/8 [00:01<00:00,  6.08it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_5_for_img_6.config.yaml
+Running grid search:  38%|███▊      | 32/84 [1:07:26<1:52:37, 129.96s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_0_for_img_6.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:01<00:13,  1.97s/it] 75%|███████▌  | 6/8 [00:02<00:00,  3.85it/s]100%|██████████| 8/8 [00:02<00:00,  3.72it/s]
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:01<00:08,  1.16s/it] 75%|███████▌  | 6/8 [00:01<00:00,  6.24it/s]100%|██████████| 8/8 [00:01<00:00,  5.95it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_0_for_img_6.config.yaml
+Running grid search:  39%|███▉      | 33/84 [1:09:34<1:49:55, 129.31s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_4_for_img_3.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:01<00:13,  1.87s/it] 75%|███████▌  | 6/8 [00:01<00:00,  4.04it/s]100%|██████████| 8/8 [00:02<00:00,  3.90it/s]
+  0%|          | 0/8 [00:00<?, ?it/s] 12%|█▎        | 1/8 [00:01<00:08,  1.18s/it] 75%|███████▌  | 6/8 [00:01<00:00,  6.13it/s]100%|██████████| 8/8 [00:01<00:00,  5.85it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_4_for_img_3.config.yaml
+Running grid search:  40%|████      | 34/84 [1:11:40<1:46:58, 128.36s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_0_for_img_11.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/9 [00:00<?, ?it/s] 11%|█         | 1/9 [00:02<00:16,  2.02s/it] 67%|██████▋   | 6/9 [00:02<00:00,  3.76it/s]100%|██████████| 9/9 [00:02<00:00,  4.05it/s]
+  0%|          | 0/9 [00:00<?, ?it/s] 11%|█         | 1/9 [00:01<00:09,  1.16s/it] 67%|██████▋   | 6/9 [00:01<00:00,  6.23it/s]100%|██████████| 9/9 [00:01<00:00,  6.60it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_0_for_img_11.config.yaml
+Running grid search:  42%|████▏     | 35/84 [1:13:48<1:44:45, 128.27s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_0_for_img_7.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/9 [00:00<?, ?it/s] 11%|█         | 1/9 [00:02<00:16,  2.01s/it] 67%|██████▋   | 6/9 [00:02<00:00,  3.78it/s]100%|██████████| 9/9 [00:02<00:00,  4.08it/s]
+  0%|          | 0/9 [00:00<?, ?it/s] 11%|█         | 1/9 [00:00<00:07,  1.03it/s] 33%|███▎      | 3/9 [00:01<00:01,  3.26it/s] 89%|████████▉ | 8/9 [00:01<00:00, 10.13it/s]100%|██████████| 9/9 [00:01<00:00,  7.05it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_0_for_img_7.config.yaml
+Running grid search:  43%|████▎     | 36/84 [1:15:58<1:42:54, 128.63s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_6_for_img_4.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/9 [00:00<?, ?it/s] 11%|█         | 1/9 [00:01<00:14,  1.87s/it] 67%|██████▋   | 6/9 [00:01<00:00,  4.04it/s]100%|██████████| 9/9 [00:02<00:00,  4.35it/s]
+  0%|          | 0/9 [00:00<?, ?it/s] 11%|█         | 1/9 [00:01<00:08,  1.10s/it] 67%|██████▋   | 6/9 [00:01<00:00,  6.51it/s]100%|██████████| 9/9 [00:01<00:00,  9.46it/s]100%|██████████| 9/9 [00:01<00:00,  6.55it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_6_for_img_4.config.yaml
+Running grid search:  44%|████▍     | 37/84 [1:17:37<1:33:47, 119.73s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_5_for_img_7.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/9 [00:00<?, ?it/s] 11%|█         | 1/9 [00:01<00:15,  1.92s/it] 67%|██████▋   | 6/9 [00:02<00:00,  3.94it/s]100%|██████████| 9/9 [00:02<00:00,  4.24it/s]
+  0%|          | 0/9 [00:00<?, ?it/s] 11%|█         | 1/9 [00:01<00:08,  1.05s/it] 44%|████▍     | 4/9 [00:01<00:01,  4.41it/s]100%|██████████| 9/9 [00:01<00:00,  8.75it/s]100%|██████████| 9/9 [00:01<00:00,  6.10it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_5_for_img_7.config.yaml
+Running grid search:  45%|████▌     | 38/84 [1:19:42<1:33:01, 121.34s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_2_for_img_11.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/9 [00:00<?, ?it/s] 11%|█         | 1/9 [00:01<00:15,  1.89s/it] 67%|██████▋   | 6/9 [00:01<00:00,  4.00it/s]100%|██████████| 9/9 [00:02<00:00,  4.30it/s]
+  0%|          | 0/9 [00:00<?, ?it/s] 11%|█         | 1/9 [00:01<00:08,  1.10s/it] 67%|██████▋   | 6/9 [00:01<00:00,  6.52it/s]100%|██████████| 9/9 [00:01<00:00,  7.24it/s]100%|██████████| 9/9 [00:01<00:00,  5.61it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_2_for_img_11.config.yaml
+Running grid search:  46%|████▋     | 39/84 [1:21:49<1:32:20, 123.13s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_3_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/9 [00:00<?, ?it/s] 11%|█         | 1/9 [00:01<00:15,  1.95s/it] 67%|██████▋   | 6/9 [00:02<00:00,  3.89it/s]100%|██████████| 9/9 [00:02<00:00,  4.12it/s]
+  0%|          | 0/9 [00:00<?, ?it/s] 11%|█         | 1/9 [00:01<00:08,  1.05s/it] 56%|█████▌    | 5/9 [00:01<00:00,  5.61it/s]100%|██████████| 9/9 [00:01<00:00,  6.54it/s]100%|██████████| 9/9 [00:01<00:00,  5.22it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_3_for_img_1.config.yaml
+Running grid search:  48%|████▊     | 40/84 [1:24:06<1:33:24, 127.38s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_3_for_img_2.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:17,  1.96s/it] 60%|██████    | 6/10 [00:02<00:01,  3.86it/s]100%|██████████| 10/10 [00:02<00:00,  4.56it/s]
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:09,  1.02s/it] 30%|███       | 3/10 [00:01<00:02,  3.21it/s] 80%|████████  | 8/10 [00:01<00:00,  9.97it/s]100%|██████████| 10/10 [00:01<00:00,  5.63it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_3_for_img_2.config.yaml
+Running grid search:  49%|████▉     | 41/84 [1:25:58<1:27:55, 122.68s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_4_for_img_10.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:17,  1.89s/it] 60%|██████    | 6/10 [00:01<00:00,  4.00it/s] 90%|█████████ | 9/10 [00:02<00:00,  6.21it/s]100%|██████████| 10/10 [00:02<00:00,  4.59it/s]
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:09,  1.00s/it] 30%|███       | 3/10 [00:01<00:02,  3.27it/s] 90%|█████████ | 9/10 [00:01<00:00,  6.81it/s]100%|██████████| 10/10 [00:01<00:00,  5.66it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_4_for_img_10.config.yaml
+Running grid search:  50%|█████     | 42/84 [1:27:49<1:23:22, 119.10s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_6_for_img_7.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:17,  1.94s/it] 60%|██████    | 6/10 [00:02<00:01,  3.91it/s]100%|██████████| 10/10 [00:02<00:00,  4.61it/s]
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:09,  1.06s/it] 40%|████      | 4/10 [00:01<00:01,  4.38it/s] 90%|█████████ | 9/10 [00:01<00:00,  6.63it/s]100%|██████████| 10/10 [00:01<00:00,  5.62it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_6_for_img_7.config.yaml
+Running grid search:  51%|█████     | 43/84 [1:29:54<1:22:36, 120.89s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_2_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:16,  1.86s/it] 60%|██████    | 6/10 [00:01<00:00,  4.07it/s] 90%|█████████ | 9/10 [00:02<00:00,  6.22it/s]100%|██████████| 10/10 [00:02<00:00,  4.63it/s]
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:09,  1.05s/it] 40%|████      | 4/10 [00:01<00:01,  4.41it/s] 90%|█████████ | 9/10 [00:01<00:00,  6.59it/s]100%|██████████| 10/10 [00:01<00:00,  5.61it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_2_for_img_1.config.yaml
+Running grid search:  52%|█████▏    | 44/84 [1:32:11<1:23:50, 125.75s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_5_for_img_2.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:17,  1.91s/it] 60%|██████    | 6/10 [00:02<00:01,  3.95it/s] 90%|█████████ | 9/10 [00:02<00:00,  6.23it/s]100%|██████████| 10/10 [00:02<00:00,  4.58it/s]
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:09,  1.09s/it] 60%|██████    | 6/10 [00:01<00:00,  6.59it/s] 90%|█████████ | 9/10 [00:01<00:00,  6.23it/s]100%|██████████| 10/10 [00:01<00:00,  5.64it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_5_for_img_2.config.yaml
+Running grid search:  54%|█████▎    | 45/84 [1:34:03<1:19:09, 121.78s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_5_for_img_4.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:16,  1.87s/it] 60%|██████    | 6/10 [00:01<00:00,  4.04it/s] 90%|█████████ | 9/10 [00:02<00:00,  6.37it/s]100%|██████████| 10/10 [00:02<00:00,  4.68it/s]
+  0%|          | 0/10 [00:00<?, ?it/s] 10%|█         | 1/10 [00:01<00:09,  1.05s/it] 40%|████      | 4/10 [00:01<00:01,  4.39it/s] 90%|█████████ | 9/10 [00:01<00:00,  6.61it/s]100%|██████████| 10/10 [00:01<00:00,  5.61it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_5_for_img_4.config.yaml
+Running grid search:  55%|█████▍    | 46/84 [1:35:43<1:12:49, 114.98s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_3_for_img_10.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/11 [00:00<?, ?it/s]  9%|▉         | 1/11 [00:01<00:18,  1.88s/it] 55%|█████▍    | 6/11 [00:01<00:01,  4.03it/s] 82%|████████▏ | 9/11 [00:02<00:00,  6.00it/s]100%|██████████| 11/11 [00:02<00:00,  4.94it/s]
+  0%|          | 0/11 [00:00<?, ?it/s]  9%|▉         | 1/11 [00:01<00:10,  1.05s/it] 36%|███▋      | 4/11 [00:01<00:01,  4.44it/s] 82%|████████▏ | 9/11 [00:01<00:00,  6.62it/s]100%|██████████| 11/11 [00:01<00:00,  6.13it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_3_for_img_10.config.yaml
+Running grid search:  56%|█████▌    | 47/84 [1:37:33<1:10:04, 113.63s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_4_for_img_4.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/11 [00:00<?, ?it/s]  9%|▉         | 1/11 [00:01<00:18,  1.88s/it] 55%|█████▍    | 6/11 [00:01<00:01,  4.03it/s] 82%|████████▏ | 9/11 [00:02<00:00,  5.96it/s]100%|██████████| 11/11 [00:02<00:00,  4.91it/s]
+  0%|          | 0/11 [00:00<?, ?it/s]  9%|▉         | 1/11 [00:01<00:10,  1.03s/it] 27%|██▋       | 3/11 [00:01<00:02,  3.27it/s] 73%|███████▎  | 8/11 [00:01<00:00, 10.17it/s]100%|██████████| 11/11 [00:01<00:00,  7.73it/s]100%|██████████| 11/11 [00:01<00:00,  6.05it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_4_for_img_4.config.yaml
+Running grid search:  57%|█████▋    | 48/84 [1:39:13<1:05:40, 109.45s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_6_for_img_2.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/11 [00:00<?, ?it/s]  9%|▉         | 1/11 [00:01<00:19,  1.95s/it] 55%|█████▍    | 6/11 [00:02<00:01,  3.87it/s] 82%|████████▏ | 9/11 [00:02<00:00,  6.06it/s]100%|██████████| 11/11 [00:02<00:00,  4.87it/s]
+  0%|          | 0/11 [00:00<?, ?it/s]  9%|▉         | 1/11 [00:01<00:11,  1.11s/it] 55%|█████▍    | 6/11 [00:01<00:00,  6.48it/s] 82%|████████▏ | 9/11 [00:01<00:00,  6.25it/s]100%|██████████| 11/11 [00:01<00:00,  6.12it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_6_for_img_2.config.yaml
+Running grid search:  58%|█████▊    | 49/84 [1:41:10<1:05:10, 111.72s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_6_for_img_9.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/11 [00:00<?, ?it/s]  9%|▉         | 1/11 [00:01<00:19,  1.98s/it] 55%|█████▍    | 6/11 [00:02<00:01,  3.84it/s]100%|██████████| 11/11 [00:02<00:00,  7.86it/s]100%|██████████| 11/11 [00:02<00:00,  4.95it/s]
+  0%|          | 0/11 [00:00<?, ?it/s]  9%|▉         | 1/11 [00:01<00:10,  1.07s/it] 45%|████▌     | 5/11 [00:01<00:01,  5.53it/s] 82%|████████▏ | 9/11 [00:01<00:00,  6.28it/s]100%|██████████| 11/11 [00:01<00:00,  6.06it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_6_for_img_9.config.yaml
+Running grid search:  60%|█████▉    | 50/84 [1:43:07<1:04:12, 113.32s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_4_for_img_0.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/11 [00:00<?, ?it/s]  9%|▉         | 1/11 [00:01<00:18,  1.89s/it] 55%|█████▍    | 6/11 [00:01<00:01,  4.01it/s] 91%|█████████ | 10/11 [00:02<00:00,  7.23it/s]100%|██████████| 11/11 [00:02<00:00,  5.10it/s]
+  0%|          | 0/11 [00:00<?, ?it/s]  9%|▉         | 1/11 [00:00<00:09,  1.03it/s] 27%|██▋       | 3/11 [00:01<00:02,  3.26it/s] 82%|████████▏ | 9/11 [00:01<00:00,  6.68it/s]100%|██████████| 11/11 [00:01<00:00,  6.07it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_4_for_img_0.config.yaml
+Running grid search:  61%|██████    | 51/84 [1:45:30<1:07:14, 122.26s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_2_for_img_2.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/11 [00:00<?, ?it/s]  9%|▉         | 1/11 [00:01<00:18,  1.84s/it] 55%|█████▍    | 6/11 [00:01<00:01,  4.10it/s] 82%|████████▏ | 9/11 [00:02<00:00,  6.12it/s]100%|██████████| 11/11 [00:02<00:00,  5.02it/s]
+  0%|          | 0/11 [00:00<?, ?it/s]  9%|▉         | 1/11 [00:01<00:10,  1.09s/it] 55%|█████▍    | 6/11 [00:01<00:00,  6.57it/s] 82%|████████▏ | 9/11 [00:01<00:00,  6.14it/s]100%|██████████| 11/11 [00:01<00:00,  6.08it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_2_for_img_2.config.yaml
+Running grid search:  62%|██████▏   | 52/84 [1:47:25<1:04:06, 120.21s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_3_for_img_8.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/12 [00:00<?, ?it/s]  8%|▊         | 1/12 [00:01<00:20,  1.88s/it] 50%|█████     | 6/12 [00:01<00:01,  4.03it/s] 75%|███████▌  | 9/12 [00:02<00:00,  5.96it/s]100%|██████████| 12/12 [00:02<00:00,  5.32it/s]
+  0%|          | 0/12 [00:00<?, ?it/s]  8%|▊         | 1/12 [00:01<00:11,  1.01s/it] 25%|██▌       | 3/12 [00:01<00:02,  3.24it/s] 75%|███████▌  | 9/12 [00:01<00:00,  6.56it/s]100%|██████████| 12/12 [00:01<00:00,  6.45it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_3_for_img_8.config.yaml
+Running grid search:  63%|██████▎   | 53/84 [1:49:30<1:02:50, 121.63s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_5_for_img_3.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/12 [00:00<?, ?it/s]  8%|▊         | 1/12 [00:01<00:20,  1.88s/it] 50%|█████     | 6/12 [00:01<00:01,  4.02it/s] 75%|███████▌  | 9/12 [00:02<00:00,  5.90it/s]100%|██████████| 12/12 [00:02<00:00,  5.29it/s]
+  0%|          | 0/12 [00:00<?, ?it/s]  8%|▊         | 1/12 [00:01<00:12,  1.10s/it] 50%|█████     | 6/12 [00:01<00:00,  6.54it/s] 75%|███████▌  | 9/12 [00:01<00:00,  5.96it/s]100%|██████████| 12/12 [00:01<00:00,  6.44it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_5_for_img_3.config.yaml
+Running grid search:  64%|██████▍   | 54/84 [1:51:30<1:00:31, 121.07s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_0_for_img_0.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/12 [00:00<?, ?it/s]  8%|▊         | 1/12 [00:01<00:19,  1.79s/it] 50%|█████     | 6/12 [00:01<00:01,  4.21it/s] 75%|███████▌  | 9/12 [00:02<00:00,  6.13it/s]100%|██████████| 12/12 [00:02<00:00,  5.50it/s]
+  0%|          | 0/12 [00:00<?, ?it/s]  8%|▊         | 1/12 [00:01<00:11,  1.08s/it] 42%|████▏     | 5/12 [00:01<00:01,  5.50it/s] 75%|███████▌  | 9/12 [00:01<00:00,  6.21it/s]100%|██████████| 12/12 [00:01<00:00,  6.47it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_0_for_img_0.config.yaml
+Running grid search:  65%|██████▌   | 55/84 [1:53:45<1:00:33, 125.29s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_6_for_img_1.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/12 [00:00<?, ?it/s]  8%|▊         | 1/12 [00:01<00:21,  1.93s/it] 50%|█████     | 6/12 [00:02<00:01,  3.93it/s] 75%|███████▌  | 9/12 [00:02<00:00,  5.97it/s]100%|██████████| 12/12 [00:02<00:00,  5.25it/s]
+  0%|          | 0/12 [00:00<?, ?it/s]  8%|▊         | 1/12 [00:01<00:11,  1.01s/it] 25%|██▌       | 3/12 [00:01<00:02,  3.34it/s] 75%|███████▌  | 9/12 [00:01<00:00,  6.64it/s]100%|██████████| 12/12 [00:01<00:00,  6.54it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_6_for_img_1.config.yaml
+Running grid search:  67%|██████▋   | 56/84 [1:56:02<1:00:04, 128.75s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_4_for_img_5.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/12 [00:00<?, ?it/s]  8%|▊         | 1/12 [00:01<00:20,  1.88s/it] 50%|█████     | 6/12 [00:01<00:01,  4.03it/s] 75%|███████▌  | 9/12 [00:02<00:00,  6.24it/s]100%|██████████| 12/12 [00:02<00:00,  5.44it/s]
+  0%|          | 0/12 [00:00<?, ?it/s]  8%|▊         | 1/12 [00:01<00:11,  1.07s/it] 42%|████▏     | 5/12 [00:01<00:01,  5.50it/s] 75%|███████▌  | 9/12 [00:01<00:00,  6.19it/s]100%|██████████| 12/12 [00:01<00:00,  6.45it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_4_for_img_5.config.yaml
+Running grid search:  68%|██████▊   | 57/84 [1:57:50<55:11, 122.64s/it]  [INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_3_for_img_3.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/12 [00:00<?, ?it/s]  8%|▊         | 1/12 [00:01<00:20,  1.88s/it] 50%|█████     | 6/12 [00:01<00:01,  4.02it/s] 75%|███████▌  | 9/12 [00:02<00:00,  6.08it/s]100%|██████████| 12/12 [00:02<00:00,  5.37it/s]
+  0%|          | 0/12 [00:00<?, ?it/s]  8%|▊         | 1/12 [00:01<00:11,  1.08s/it] 42%|████▏     | 5/12 [00:01<00:01,  5.50it/s] 75%|███████▌  | 9/12 [00:01<00:00,  6.17it/s]100%|██████████| 12/12 [00:01<00:00,  6.43it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_3_for_img_3.config.yaml
+Running grid search:  69%|██████▉   | 58/84 [1:59:50<52:42, 121.63s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_3_for_img_6.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/12 [00:00<?, ?it/s]  8%|▊         | 1/12 [00:01<00:20,  1.90s/it] 50%|█████     | 6/12 [00:01<00:01,  3.99it/s] 75%|███████▌  | 9/12 [00:02<00:00,  6.00it/s]100%|██████████| 12/12 [00:02<00:00,  5.31it/s]
+  0%|          | 0/12 [00:00<?, ?it/s]  8%|▊         | 1/12 [00:01<00:12,  1.09s/it] 50%|█████     | 6/12 [00:01<00:00,  6.55it/s] 75%|███████▌  | 9/12 [00:01<00:00,  5.90it/s]100%|██████████| 12/12 [00:01<00:00,  6.38it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_3_for_img_6.config.yaml
+Running grid search:  70%|███████   | 59/84 [2:01:55<51:11, 122.86s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_1_for_img_4.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/13 [00:00<?, ?it/s]  8%|▊         | 1/13 [00:01<00:23,  1.96s/it] 46%|████▌     | 6/13 [00:02<00:01,  3.87it/s] 69%|██████▉   | 9/13 [00:02<00:00,  5.87it/s]100%|██████████| 13/13 [00:02<00:00,  5.56it/s]
+  0%|          | 0/13 [00:00<?, ?it/s]  8%|▊         | 1/13 [00:01<00:13,  1.10s/it] 46%|████▌     | 6/13 [00:01<00:01,  6.52it/s] 69%|██████▉   | 9/13 [00:01<00:00,  5.89it/s]100%|██████████| 13/13 [00:01<00:00,  6.85it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_1_for_img_4.config.yaml
+Running grid search:  71%|███████▏  | 60/84 [2:03:35<46:23, 115.99s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_2_for_img_5.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/13 [00:00<?, ?it/s]  8%|▊         | 1/13 [00:01<00:23,  1.95s/it] 46%|████▌     | 6/13 [00:02<00:01,  3.89it/s] 69%|██████▉   | 9/13 [00:02<00:00,  5.94it/s]100%|██████████| 13/13 [00:02<00:00,  5.61it/s]
+  0%|          | 0/13 [00:00<?, ?it/s]  8%|▊         | 1/13 [00:01<00:12,  1.03s/it] 23%|██▎       | 3/13 [00:01<00:03,  3.29it/s] 69%|██████▉   | 9/13 [00:01<00:00,  6.75it/s]100%|██████████| 13/13 [00:01<00:00,  6.97it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_2_for_img_5.config.yaml
+Running grid search:  73%|███████▎  | 61/84 [2:05:22<43:26, 113.33s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_3_for_img_0.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/13 [00:00<?, ?it/s]  8%|▊         | 1/13 [00:01<00:22,  1.88s/it] 46%|████▌     | 6/13 [00:01<00:01,  4.01it/s] 69%|██████▉   | 9/13 [00:02<00:00,  5.81it/s]100%|██████████| 13/13 [00:02<00:00,  5.62it/s]
+  0%|          | 0/13 [00:00<?, ?it/s]  8%|▊         | 1/13 [00:01<00:12,  1.04s/it] 23%|██▎       | 3/13 [00:01<00:03,  3.25it/s] 69%|██████▉   | 9/13 [00:01<00:00,  6.47it/s]100%|██████████| 13/13 [00:01<00:00,  6.82it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_3_for_img_0.config.yaml
+Running grid search:  74%|███████▍  | 62/84 [2:07:36<43:45, 119.34s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_2_for_img_9.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/13 [00:00<?, ?it/s]  8%|▊         | 1/13 [00:02<00:24,  2.04s/it] 46%|████▌     | 6/13 [00:02<00:01,  3.74it/s] 85%|████████▍ | 11/13 [00:02<00:00,  7.67it/s]100%|██████████| 13/13 [00:02<00:00,  5.61it/s]
+  0%|          | 0/13 [00:00<?, ?it/s]  8%|▊         | 1/13 [00:01<00:12,  1.08s/it] 46%|████▌     | 6/13 [00:01<00:01,  6.50it/s] 69%|██████▉   | 9/13 [00:01<00:00,  5.85it/s]100%|██████████| 13/13 [00:01<00:00,  6.83it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_2_for_img_9.config.yaml
+Running grid search:  75%|███████▌  | 63/84 [2:09:32<41:23, 118.24s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_2_for_img_8.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/13 [00:00<?, ?it/s]  8%|▊         | 1/13 [00:01<00:22,  1.85s/it] 46%|████▌     | 6/13 [00:01<00:01,  4.08it/s] 69%|██████▉   | 9/13 [00:02<00:00,  5.97it/s]100%|██████████| 13/13 [00:02<00:00,  5.74it/s]
+  0%|          | 0/13 [00:00<?, ?it/s]  8%|▊         | 1/13 [00:01<00:13,  1.11s/it] 46%|████▌     | 6/13 [00:01<00:01,  6.47it/s] 69%|██████▉   | 9/13 [00:01<00:00,  5.94it/s]100%|██████████| 13/13 [00:01<00:00,  6.86it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_2_for_img_8.config.yaml
+Running grid search:  76%|███████▌  | 64/84 [2:11:43<40:45, 122.28s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_1_for_img_9.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/13 [00:00<?, ?it/s]  8%|▊         | 1/13 [00:01<00:22,  1.91s/it] 46%|████▌     | 6/13 [00:02<00:01,  3.97it/s] 69%|██████▉   | 9/13 [00:02<00:00,  5.89it/s]100%|██████████| 13/13 [00:02<00:00,  5.63it/s]
+  0%|          | 0/13 [00:00<?, ?it/s]  8%|▊         | 1/13 [00:01<00:12,  1.01s/it] 15%|█▌        | 2/13 [00:01<00:05,  2.04it/s] 62%|██████▏   | 8/13 [00:01<00:00, 10.22it/s] 85%|████████▍ | 11/13 [00:01<00:00,  7.77it/s]100%|██████████| 13/13 [00:01<00:00,  6.89it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_1_for_img_9.config.yaml
+Running grid search:  77%|███████▋  | 65/84 [2:13:41<38:16, 120.89s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_1_for_img_6.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/14 [00:00<?, ?it/s]  7%|▋         | 1/14 [00:01<00:24,  1.89s/it] 43%|████▎     | 6/14 [00:01<00:02,  4.00it/s] 64%|██████▍   | 9/14 [00:02<00:00,  5.66it/s]100%|██████████| 14/14 [00:02<00:00,  5.92it/s]
+  0%|          | 0/14 [00:00<?, ?it/s]  7%|▋         | 1/14 [00:01<00:13,  1.01s/it] 21%|██▏       | 3/14 [00:01<00:03,  3.23it/s] 64%|██████▍   | 9/14 [00:01<00:00,  6.78it/s] 86%|████████▌ | 12/14 [00:01<00:00,  9.28it/s]100%|██████████| 14/14 [00:01<00:00,  7.35it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_1_for_img_6.config.yaml
+Running grid search:  79%|███████▊  | 66/84 [2:15:48<36:47, 122.62s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_2_for_img_6.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/14 [00:00<?, ?it/s]  7%|▋         | 1/14 [00:01<00:24,  1.91s/it] 43%|████▎     | 6/14 [00:02<00:02,  3.97it/s] 64%|██████▍   | 9/14 [00:02<00:00,  5.84it/s]100%|██████████| 14/14 [00:02<00:00,  5.99it/s]
+  0%|          | 0/14 [00:00<?, ?it/s]  7%|▋         | 1/14 [00:01<00:14,  1.12s/it] 43%|████▎     | 6/14 [00:01<00:01,  6.43it/s] 64%|██████▍   | 9/14 [00:01<00:00,  6.05it/s]100%|██████████| 14/14 [00:01<00:00,  7.38it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_2_for_img_6.config.yaml
+Running grid search:  80%|███████▉  | 67/84 [2:17:57<35:19, 124.69s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_0_for_img_2.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/14 [00:00<?, ?it/s]  7%|▋         | 1/14 [00:01<00:25,  1.93s/it] 43%|████▎     | 6/14 [00:02<00:02,  3.92it/s] 64%|██████▍   | 9/14 [00:02<00:00,  5.83it/s]100%|██████████| 14/14 [00:02<00:00,  5.96it/s]
+  0%|          | 0/14 [00:00<?, ?it/s]  7%|▋         | 1/14 [00:01<00:14,  1.08s/it] 36%|███▌      | 5/14 [00:01<00:01,  5.46it/s] 64%|██████▍   | 9/14 [00:01<00:00,  6.08it/s]100%|██████████| 14/14 [00:01<00:00,  7.28it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_0_for_img_2.config.yaml
+Running grid search:  81%|████████  | 68/84 [2:19:53<32:33, 122.10s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_6_for_img_11.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/14 [00:00<?, ?it/s]  7%|▋         | 1/14 [00:01<00:24,  1.87s/it] 43%|████▎     | 6/14 [00:01<00:01,  4.03it/s] 64%|██████▍   | 9/14 [00:02<00:00,  6.04it/s]100%|██████████| 14/14 [00:02<00:00, 10.87it/s]100%|██████████| 14/14 [00:02<00:00,  6.14it/s]
+  0%|          | 0/14 [00:00<?, ?it/s]  7%|▋         | 1/14 [00:01<00:13,  1.05s/it] 21%|██▏       | 3/14 [00:01<00:03,  3.20it/s] 64%|██████▍   | 9/14 [00:01<00:00,  6.40it/s]100%|██████████| 14/14 [00:01<00:00,  7.19it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_6_for_img_11.config.yaml
+Running grid search:  82%|████████▏ | 69/84 [2:22:06<31:18, 125.21s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_2_for_img_3.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/14 [00:00<?, ?it/s]  7%|▋         | 1/14 [00:01<00:25,  1.98s/it] 43%|████▎     | 6/14 [00:02<00:02,  3.83it/s] 64%|██████▍   | 9/14 [00:02<00:00,  6.07it/s]100%|██████████| 14/14 [00:02<00:00,  6.00it/s]
+  0%|          | 0/14 [00:00<?, ?it/s]  7%|▋         | 1/14 [00:01<00:13,  1.05s/it] 29%|██▊       | 4/14 [00:01<00:02,  4.40it/s] 64%|██████▍   | 9/14 [00:01<00:00,  6.16it/s]100%|██████████| 14/14 [00:01<00:00,  7.20it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_2_for_img_3.config.yaml
+Running grid search:  83%|████████▎ | 70/84 [2:24:08<28:59, 124.22s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_5_for_img_5.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/14 [00:00<?, ?it/s]  7%|▋         | 1/14 [00:01<00:25,  1.98s/it] 43%|████▎     | 6/14 [00:02<00:02,  3.83it/s] 71%|███████▏  | 10/14 [00:02<00:00,  6.88it/s]100%|██████████| 14/14 [00:02<00:00,  6.04it/s]
+  0%|          | 0/14 [00:00<?, ?it/s]  7%|▋         | 1/14 [00:01<00:13,  1.04s/it] 21%|██▏       | 3/14 [00:01<00:03,  3.23it/s] 64%|██████▍   | 9/14 [00:01<00:00,  6.47it/s]100%|██████████| 14/14 [00:01<00:00, 10.85it/s]100%|██████████| 14/14 [00:01<00:00,  7.22it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_5_for_img_5.config.yaml
+Running grid search:  85%|████████▍ | 71/84 [2:25:54<25:47, 119.02s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_6_for_img_10.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:01<00:26,  1.91s/it] 40%|████      | 6/15 [00:02<00:02,  3.96it/s] 60%|██████    | 9/15 [00:02<00:01,  5.93it/s]100%|██████████| 15/15 [00:02<00:00, 11.55it/s]100%|██████████| 15/15 [00:02<00:00,  6.41it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:01<00:14,  1.06s/it] 27%|██▋       | 4/15 [00:01<00:02,  4.35it/s] 60%|██████    | 9/15 [00:01<00:00,  6.35it/s] 93%|█████████▎| 14/15 [00:01<00:00, 10.99it/s]100%|██████████| 15/15 [00:01<00:00,  7.77it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_6_for_img_10.config.yaml
+Running grid search:  86%|████████▌ | 72/84 [2:27:47<23:23, 116.99s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_1_for_img_7.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:01<00:25,  1.85s/it] 40%|████      | 6/15 [00:01<00:02,  4.05it/s] 60%|██████    | 9/15 [00:02<00:01,  5.96it/s] 87%|████████▋ | 13/15 [00:02<00:00,  9.61it/s]100%|██████████| 15/15 [00:02<00:00,  6.44it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:00<00:13,  1.01it/s] 13%|█▎        | 2/15 [00:01<00:06,  2.11it/s] 40%|████      | 6/15 [00:01<00:01,  7.73it/s] 60%|██████    | 9/15 [00:01<00:00,  6.46it/s] 87%|████████▋ | 13/15 [00:01<00:00, 10.48it/s]100%|██████████| 15/15 [00:01<00:00,  7.68it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_1_for_img_7.config.yaml
+Running grid search:  87%|████████▋ | 73/84 [2:29:53<21:58, 119.83s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_0_for_img_4.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:01<00:27,  1.98s/it] 40%|████      | 6/15 [00:02<00:02,  3.82it/s] 60%|██████    | 9/15 [00:02<00:01,  5.71it/s]100%|██████████| 15/15 [00:02<00:00, 11.17it/s]100%|██████████| 15/15 [00:02<00:00,  6.19it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:01<00:14,  1.07s/it] 27%|██▋       | 4/15 [00:01<00:02,  4.33it/s] 60%|██████    | 9/15 [00:01<00:00,  6.02it/s]100%|██████████| 15/15 [00:01<00:00, 11.33it/s]100%|██████████| 15/15 [00:01<00:00,  7.51it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_0_for_img_4.config.yaml
+Running grid search:  88%|████████▊ | 74/84 [2:31:34<19:01, 114.13s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_3_for_img_4.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:01<00:27,  1.94s/it] 40%|████      | 6/15 [00:02<00:02,  3.90it/s] 60%|██████    | 9/15 [00:02<00:01,  5.79it/s]100%|██████████| 15/15 [00:02<00:00, 11.31it/s]100%|██████████| 15/15 [00:02<00:00,  6.29it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:00<00:13,  1.01it/s] 20%|██        | 3/15 [00:01<00:03,  3.17it/s] 60%|██████    | 9/15 [00:01<00:00,  6.61it/s] 80%|████████  | 12/15 [00:01<00:00,  9.05it/s]100%|██████████| 15/15 [00:01<00:00,  7.67it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_3_for_img_4.config.yaml
+Running grid search:  89%|████████▉ | 75/84 [2:33:14<16:29, 109.91s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_0_for_img_3.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:01<00:27,  1.96s/it] 40%|████      | 6/15 [00:02<00:02,  3.87it/s] 60%|██████    | 9/15 [00:02<00:01,  5.94it/s] 93%|█████████▎| 14/15 [00:02<00:00, 10.65it/s]100%|██████████| 15/15 [00:02<00:00,  6.34it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:01<00:14,  1.07s/it] 33%|███▎      | 5/15 [00:01<00:01,  5.51it/s] 60%|██████    | 9/15 [00:01<00:00,  6.31it/s] 93%|█████████▎| 14/15 [00:01<00:00, 11.04it/s]100%|██████████| 15/15 [00:01<00:00,  7.90it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_0_for_img_3.config.yaml
+Running grid search:  90%|█████████ | 76/84 [2:35:17<15:10, 113.85s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_5_for_img_8.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:01<00:25,  1.82s/it] 40%|████      | 6/15 [00:01<00:02,  4.15it/s] 60%|██████    | 9/15 [00:02<00:00,  6.17it/s] 80%|████████  | 12/15 [00:02<00:00,  8.57it/s]100%|██████████| 15/15 [00:02<00:00,  6.47it/s]
+  0%|          | 0/15 [00:00<?, ?it/s]  7%|▋         | 1/15 [00:01<00:15,  1.11s/it] 40%|████      | 6/15 [00:01<00:01,  6.47it/s] 60%|██████    | 9/15 [00:01<00:01,  5.87it/s] 93%|█████████▎| 14/15 [00:01<00:00, 10.56it/s]100%|██████████| 15/15 [00:01<00:00,  7.66it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_5_for_img_8.config.yaml
+Running grid search:  92%|█████████▏| 77/84 [2:37:30<13:57, 119.62s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_3_for_img_7.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/16 [00:00<?, ?it/s]  6%|▋         | 1/16 [00:01<00:29,  1.95s/it] 38%|███▊      | 6/16 [00:02<00:02,  3.88it/s] 56%|█████▋    | 9/16 [00:02<00:01,  5.73it/s] 81%|████████▏ | 13/16 [00:02<00:00,  9.28it/s]100%|██████████| 16/16 [00:02<00:00,  6.54it/s]
+  0%|          | 0/16 [00:00<?, ?it/s]  6%|▋         | 1/16 [00:01<00:15,  1.02s/it] 19%|█▉        | 3/16 [00:01<00:03,  3.27it/s] 56%|█████▋    | 9/16 [00:01<00:01,  6.21it/s] 88%|████████▊ | 14/16 [00:01<00:00, 10.62it/s]100%|██████████| 16/16 [00:02<00:00,  7.98it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_3_for_img_7.config.yaml
+Running grid search:  93%|█████████▎| 78/84 [2:39:39<12:14, 122.44s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_5_for_img_10.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/16 [00:00<?, ?it/s]  6%|▋         | 1/16 [00:01<00:29,  2.00s/it] 38%|███▊      | 6/16 [00:02<00:02,  3.80it/s] 56%|█████▋    | 9/16 [00:02<00:01,  5.76it/s] 94%|█████████▍| 15/16 [00:02<00:00, 11.23it/s]100%|██████████| 16/16 [00:02<00:00,  6.57it/s]
+  0%|          | 0/16 [00:00<?, ?it/s]  6%|▋         | 1/16 [00:01<00:15,  1.02s/it] 19%|█▉        | 3/16 [00:01<00:04,  3.20it/s] 56%|█████▋    | 9/16 [00:01<00:01,  6.51it/s] 81%|████████▏ | 13/16 [00:01<00:00,  9.99it/s]100%|██████████| 16/16 [00:01<00:00,  8.10it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_5_for_img_10.config.yaml
+Running grid search:  94%|█████████▍| 79/84 [2:41:33<09:58, 119.72s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_4_for_img_11.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/16 [00:00<?, ?it/s]  6%|▋         | 1/16 [00:01<00:28,  1.93s/it] 38%|███▊      | 6/16 [00:02<00:02,  3.92it/s] 56%|█████▋    | 9/16 [00:02<00:01,  5.71it/s] 94%|█████████▍| 15/16 [00:02<00:00, 11.16it/s]100%|██████████| 16/16 [00:02<00:00,  6.62it/s]
+  0%|          | 0/16 [00:00<?, ?it/s]  6%|▋         | 1/16 [00:01<00:17,  1.15s/it] 38%|███▊      | 6/16 [00:01<00:01,  6.28it/s] 56%|█████▋    | 9/16 [00:01<00:01,  5.68it/s] 88%|████████▊ | 14/16 [00:01<00:00, 10.27it/s]100%|██████████| 16/16 [00:02<00:00,  7.88it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_4_for_img_11.config.yaml
+Running grid search:  95%|█████████▌| 80/84 [2:43:41<08:09, 122.31s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_6_for_img_0.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/16 [00:00<?, ?it/s]  6%|▋         | 1/16 [00:01<00:28,  1.90s/it] 38%|███▊      | 6/16 [00:02<00:02,  3.97it/s] 56%|█████▋    | 9/16 [00:02<00:01,  6.03it/s] 75%|███████▌  | 12/16 [00:02<00:00,  8.20it/s]100%|██████████| 16/16 [00:02<00:00,  6.59it/s]
+  0%|          | 0/16 [00:00<?, ?it/s]  6%|▋         | 1/16 [00:01<00:16,  1.11s/it] 38%|███▊      | 6/16 [00:01<00:01,  6.47it/s] 56%|█████▋    | 9/16 [00:01<00:01,  5.55it/s] 94%|█████████▍| 15/16 [00:01<00:00, 10.88it/s]100%|██████████| 16/16 [00:02<00:00,  7.86it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_6_for_img_0.config.yaml
+Running grid search:  96%|█████████▋| 81/84 [2:45:59<06:21, 127.17s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_1_for_img_8.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/16 [00:00<?, ?it/s]  6%|▋         | 1/16 [00:02<00:32,  2.14s/it] 38%|███▊      | 6/16 [00:02<00:02,  3.57it/s] 69%|██████▉   | 11/16 [00:02<00:00,  7.38it/s]100%|██████████| 16/16 [00:02<00:00,  6.47it/s]
+  0%|          | 0/16 [00:00<?, ?it/s]  6%|▋         | 1/16 [00:01<00:16,  1.11s/it] 38%|███▊      | 6/16 [00:01<00:01,  6.46it/s] 56%|█████▋    | 9/16 [00:01<00:01,  5.63it/s] 81%|████████▏ | 13/16 [00:01<00:00,  9.16it/s]100%|██████████| 16/16 [00:02<00:00,  7.82it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_1_for_img_8.config.yaml
+Running grid search:  98%|█████████▊| 82/84 [2:48:13<04:18, 129.15s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_1_for_img_2.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/16 [00:00<?, ?it/s]  6%|▋         | 1/16 [00:01<00:28,  1.92s/it] 38%|███▊      | 6/16 [00:02<00:02,  3.93it/s] 56%|█████▋    | 9/16 [00:02<00:01,  6.04it/s] 75%|███████▌  | 12/16 [00:02<00:00,  8.62it/s]100%|██████████| 16/16 [00:02<00:00,  6.69it/s]
+  0%|          | 0/16 [00:00<?, ?it/s]  6%|▋         | 1/16 [00:01<00:16,  1.11s/it] 38%|███▊      | 6/16 [00:01<00:01,  6.50it/s] 56%|█████▋    | 9/16 [00:01<00:01,  5.44it/s] 88%|████████▊ | 14/16 [00:01<00:00,  9.88it/s]100%|██████████| 16/16 [00:02<00:00,  7.75it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_1_for_img_2.config.yaml
+Running grid search:  99%|█████████▉| 83/84 [2:50:06<02:04, 124.36s/it][INFO] Running pipeline with config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_2_for_img_0.config.yaml
+[INFO] Loading configuration...
+[INFO] ✅ Configuration loaded.
+[INFO] Loading paths...
+[INFO] ✅ Paths loaded.
+[INFO] Creating paths if they don't exist...
+[INFO] ✅ Paths created.
+[INFO] Initializing preprocessing pipeline...
+[INFO] Running preprocessing pipeline...
+[INFO] ✅ Preprocessing pipeline complete.
+[INFO] Running DreamGaussian Stage 1 pipeline...
+[INFO] ✅ DreamGaussian pipeline complete.
+[INFO] Running Evaluation pipeline...
+  0%|          | 0/16 [00:00<?, ?it/s]  6%|▋         | 1/16 [00:01<00:29,  1.94s/it] 38%|███▊      | 6/16 [00:02<00:02,  3.91it/s] 56%|█████▋    | 9/16 [00:02<00:01,  5.75it/s] 81%|████████▏ | 13/16 [00:02<00:00,  9.30it/s]100%|██████████| 16/16 [00:02<00:00,  6.57it/s]
+  0%|          | 0/16 [00:00<?, ?it/s]  6%|▋         | 1/16 [00:01<00:15,  1.04s/it] 19%|█▉        | 3/16 [00:01<00:04,  3.23it/s] 56%|█████▋    | 9/16 [00:01<00:01,  6.69it/s] 69%|██████▉   | 11/16 [00:01<00:00,  7.71it/s]100%|██████████| 16/16 [00:01<00:00, 13.10it/s]100%|██████████| 16/16 [00:02<00:00,  7.86it/s][INFO] ... Results saved to results/compare/compare.csv.
+[INFO] ✅ Evaluation pipeline complete.
+[INFO] Running DreamGaussian Stage 2 pipeline...
+[INFO] Saving images of mesh...
+[INFO] Computing clip score of mesh...
+[INFO] ✅  DreamGaussian Stage 2 pipeline complete
+[INFO] ✅ DreamGaussian pipeline complete.
+
+[INFO] ✅ Pipeline run complete for config: tmp_configs_660cfd02-8b8e-47bf-a468-0f5bdf79413d/temporary_2_for_img_0.config.yaml
+Running grid search: 100%|██████████| 84/84 [2:52:22<00:00, 127.87s/it]Running grid search: 100%|██████████| 84/84 [2:52:22<00:00, 123.13s/it][INFO] ✅ Grid search complete.
+[INFO] Cleaning up...
+[INFO] ✅ Done
+
+
+JOB STATISTICS
+==============
+Job ID: 6674687
+Cluster: snellius
+User/Group: jhuizing/jhuizing
+State: RUNNING
+Nodes: 1
+Cores per node: 18
+CPU Utilized: 00:00:00
+CPU Efficiency: 0.00% of 2-03:50:06 core-walltime
+Job Wall-clock time: 02:52:47
+Memory Utilized: 0.00 MB (estimated maximum)
+Memory Efficiency: 0.00% of 120.00 GB (120.00 GB/node)
+WARNING: Efficiency statistics may be misleading for RUNNING jobs.
